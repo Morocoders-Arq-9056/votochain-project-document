@@ -522,27 +522,29 @@ La matriz evidencia dos tensiones que deben trasladarse a requisitos. Primero, l
 
 ### **2.3.3. Empathy Mapping.**
 
-#### Empathy Map: Directiva / administradora
+El **Empathy Mapping** es una herramienta de síntesis visual que permite profundizar en la comprensión emocional y cognitiva de los usuarios, conectando sus comportamientos observables con sus motivaciones internas, frustraciones y aspiraciones.
 
-| Dimensión | Contenido |
-|---|---|
-| Piensa y siente | Necesita que la asamblea sea defendible; teme que un acuerdo importante sea cuestionado por errores de padrón, cuórum o conteo. |
-| Ve | Listas de asistencia, chats de vecinos, actas, reclamos posteriores y propietarios que no asisten pero cuestionan decisiones. |
-| Dice y hace | Convoca, recuerda pagos o participación, coordina actas, pide confirmaciones y explica resultados. |
-| Oye | Reclamos sobre falta de transparencia, dudas sobre representación, quejas por horarios y exigencias de mayor evidencia. |
-| Dolores | Trabajo manual, presión social, exposición a conflictos, dificultad para probar que el proceso fue correcto. |
-| Ganancias esperadas | Menos controversias, evidencia consultable, conteo automatizado, reglas aplicadas de forma consistente. |
+---
 
-#### Empathy Map: Propietario votante
+#### **Empathy Map 1: Directiva / administradora de comunidad (User Persona 1: Patricia Salas)**
 
-| Dimensión | Contenido |
-|---|---|
-| Piensa y siente | Quiere que su voto cuente, pero no desea exponerse a procesos largos ni entregar datos sin explicación. |
-| Ve | Convocatorias en chats, actas tardías, discusiones por cuotas u obras, decisiones tomadas por pocos asistentes. |
-| Dice y hace | Pregunta por el resultado, delega asistencia si no puede ir, evita asambleas extensas o participa solo en temas críticos. |
-| Oye | Comentarios de vecinos sobre manipulación, morosidad, falta de cuórum o decisiones tomadas sin suficiente participación. |
-| Dolores | Desconfianza, falta de tiempo, incomodidad con tecnología desconocida, preocupación por biometría y documentos. |
-| Ganancias esperadas | Votar desde el celular, recibir confirmación, verificar resultado y mantener control sobre sus datos. |
+Representa a quien gestiona la copropiedad, convoca las asambleas y asume la responsabilidad operativa y legal de garantizar cuórum y validez en los acuerdos.
+
+<p align="center">
+  <img src="./assets/EmpathyMap_Patricia_Salas.png" alt="Empathy Map 1: Directiva / administradora" width="700"/>
+</p>
+
+---
+
+#### **Empathy Map 2: Propietario / socio votante (User Persona 2: Miguel Herrera)**
+
+Representa al copropietario o socio que desea participar en las decisiones de su comunidad y proteger el valor de su inmueble, pero enfrenta limitaciones de tiempo y barreras de confianza en el proceso tradicional.
+
+<p align="center">
+  <img src="./assets/EmpathyMap_Miguel_Herrera.png" alt="Empathy Map 2: Propietario votante" width="700"/>
+</p>
+
+---
 
 ### **2.3.4. As-is Scenario Mapping.**
 

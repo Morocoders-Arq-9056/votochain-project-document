@@ -491,29 +491,15 @@ El Needfinding traduce la información del problema y de la investigación propu
 
 #### User Persona 1: Directiva o administradora de comunidad
 
-| Campo | Descripción |
-|---|---|
-| Nombre referencial | Patricia Salas |
-| Segmento | Directiva / administradora de junta de propietarios |
-| Contexto | Gestiona convocatorias, asistencia, cuórum, acuerdos y comunicación con propietarios. No necesariamente tiene formación técnica, pero sí responsabilidad frente a reclamos. |
-| Objetivos | Organizar votaciones defendibles, reducir discusiones posteriores, demostrar que se respetó el padrón y conservar evidencia ordenada. |
-| Frustraciones | Conteo manual lento, propietarios ausentes, actas cuestionadas, dificultad para verificar representación o identidad en reuniones híbridas. |
-| Necesidades funcionales | Crear comunidad, configurar reglas de votación, administrar miembros, abrir propuestas, consultar cuórum y revisar resultados. |
-| Necesidades no funcionales | Auditabilidad, disponibilidad durante asamblea, trazabilidad de cambios, privacidad y facilidad de uso para propietarios. |
-| Relación con bounded contexts | `Community Management`, `Membership`, `Voting & Verifiable Ledger`, `Notifications`, `Consent & Compliance`. |
+<p align="center">
+  <img src="./assets/UserPersona_Patricia_Salas.png" alt="User Persona 1" width="700"/>
+</p>
 
 #### User Persona 2: Propietario votante
 
-| Campo | Descripción |
-|---|---|
-| Nombre referencial | Miguel Herrera |
-| Segmento | Propietario / socio con derecho a voto |
-| Contexto | Participa en decisiones de su edificio, pero puede no asistir por trabajo, viaje o limitaciones de horario. Usa aplicaciones móviles cotidianas, aunque no conoce blockchain. |
-| Objetivos | Votar sin desplazarse, confirmar que su voto fue registrado, evitar que otra persona vote por él y entender el resultado. |
-| Frustraciones | Asambleas largas, poca transparencia del conteo, dudas sobre el padrón, desconfianza en actas que circulan después. |
-| Necesidades funcionales | Iniciar sesión, aceptar consentimiento, validar identidad, votar sobre una propuesta abierta y recibir comprobante. |
-| Necesidades no funcionales | Baja fricción, accesibilidad móvil, claridad lingüística, seguridad percibida y protección de datos biométricos. |
-| Relación con bounded contexts | `IAM`, `Verification (OTP)`, `Biometric Identity Verification`, `Voting & Verifiable Ledger`, `Cryptographic Wallet Custody`, `Notifications`. |
+<p align="center">
+  <img src="./assets/UserPersona_Miguel_Herrera.png" alt="User Persona 2" width="700"/>
+</p>
 
 ### **2.3.2. User Task Matrix.**
 

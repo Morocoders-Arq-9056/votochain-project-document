@@ -524,6 +524,7 @@ La matriz evidencia dos tensiones que deben trasladarse a requisitos. Primero, l
 
 El **Empathy Mapping** es una herramienta de síntesis visual que permite profundizar en la comprensión emocional y cognitiva de los usuarios, conectando sus comportamientos observables con sus motivaciones internas, frustraciones y aspiraciones.
 
+
 ---
 
 #### **Empathy Map 1: Directiva / administradora de comunidad (User Persona 1: Patricia Salas)**
@@ -544,25 +545,42 @@ Representa al copropietario o socio que desea participar en las decisiones de su
   <img src="./assets/EmpathyMap_Miguel_Herrera.png" alt="Empathy Map 2: Propietario votante" width="700"/>
 </p>
 
+
 ---
 
 ### **2.3.4. As-is Scenario Mapping.**
 
-El escenario actual se describe desde la perspectiva de una junta de propietarios que convoca una asamblea y necesita aprobar un acuerdo. La tabla explicita acciones, puntos de dolor y oportunidades para el diseño futuro.
+El **As-is Scenario Mapping** permite modelar la experiencia de los usuarios en su estado actual, identificando las secuencias de acciones que llevan a cabo, sus pensamientos, emociones y los puntos de fricción durante el proceso tradicional de votación y toma de decisiones en asambleas de juntas de propietarios y cooperativas de vivienda.
 
-| Etapa | Actor principal | Acción actual | Puntos de dolor | Oportunidad para VotoChain |
-|---|---|---|---|---|
-| Convocatoria | Directiva / administradora | Envía citación por correo, chat o aviso físico. | Confirmación informal de recepción; propietarios ausentes pueden alegar desconocimiento. | Notificaciones trazables y asociadas a una comunidad/propuesta. |
-| Preparación del padrón | Directiva / administradora | Revisa lista de propietarios y posibles restricciones de participación. | Padrón desactualizado; morosidad o representación no siempre se refleja con claridad. | `Membership` como fuente de elegibilidad y snapshot al momento de autorizar voto. |
-| Inicio de asamblea | Directiva / administradora | Registra asistencia y calcula cuórum manualmente. | Errores de conteo; dificultad para asambleas híbridas. | `VotingPolicy` y `QuorumSnapshot` para evaluar reglas congeladas. |
-| Verificación de identidad | Directiva / administradora | Reconoce a vecinos o revisa documentos manualmente. | Suplantación posible; proceso lento en comunidades grandes. | Biometría con liveness y comparación facial, previa al voto. |
-| Presentación de propuesta | Directiva | Explica el acuerdo y abre votación. | Cambios de última hora pueden quedar mal documentados. | `Proposal` con ciclo de vida explícito: draft, open, closed, tallied. |
-| Emisión del voto | Propietario | Vota levantando la mano, firmando lista, por chat o mediante conteo manual. | Falta de evidencia individual verificable; riesgo de voto duplicado o representación ambigua. | `VoteAuthorization` de uso único y firma EIP-712 por wallet individual. |
-| Conteo | Directiva / administradora | Suma votos manualmente y registra resultado en acta. | Cuestionamientos por error, sesgo o falta de observabilidad. | Confirmación on-chain y tally basado solo en votos confirmados. |
-| Comunicación de resultado | Directiva / administradora | Comparte acta o resumen por canales informales. | La evidencia puede dispersarse o ser difícil de auditar. | Vista de resultado, recibo de votante y bitácora de hechos relevantes. |
-| Reclamo posterior | Propietario / directiva | Solicita o atiende la revisión del acta, padrón o conteo. | Investigación lenta; evidencia incompleta o no neutral. | Auditoría por eventos, separación de responsabilidades y lenguaje ubicuo consistente. |
 
-**Conclusión del As-is.** El proceso actual concentra demasiada confianza en procedimientos manuales y en la directiva que administra la votación. VotoChain debe rediseñar ese flujo sin trasladar la complejidad al propietario: la arquitectura debe encargarse de identidad, elegibilidad, firma, entrega y confirmación; la interfaz debe mostrar tareas comprensibles y evidencia suficiente.
+
+A continuación, se presentan los As-Is Scenario Mappings desarrollados de manera independiente para cada uno de los dos segmentos objetivo del proyecto:
+
+---
+
+#### **As-Is Scenario Mapping 1: Directiva / administradora de comunidad (User Persona 1: Patricia Salas)**
+
+Este escenario describe el recorrido que experimenta quien organiza, convoca y modera la asamblea comunitaria, asumiendo la carga operativa y la responsabilidad legal de los acuerdos.
+
+<p align="center">
+  <img src="./assets/As-Is-1.jpg" alt="as-is 1" width="700"/>
+</p>
+
+---
+
+#### **As-Is Scenario Mapping 2: Propietario / socio votante (User Persona 2: Miguel Herrera)**
+
+Este escenario modela la experiencia del copropietario o socio que busca ejercer su derecho cívico y patrimonial, enfrentando barreras de tiempo, acceso y falta de trazabilidad.
+
+<p align="center">
+  <img src="./assets/As-Is-2.jpg" alt="as-is 2" width="700"/>
+</p>
+
+
+
+
+
+
 
 ## **2.4. Ubiquitous Language.**
 

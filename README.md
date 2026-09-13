@@ -640,6 +640,34 @@ Este lenguaje ubicuo será la base para las user stories del Capítulo III, los 
 
 ## **3.1. To-Be Scenario Mapping.**
 
+El **To-Be Scenario Mapping** proyecta el estado futuro deseado tras la adopción de **VotoChain**, modelando la transformación del recorrido de los usuarios al incorporar verificación biométrica de identidad, elegibilidad formalizada y registro de votos inmutable en blockchain. Este mapeo permite validar que las soluciones técnicas planteadas en la arquitectura resuelvan de forma efectiva las fricciones y riesgos identificados en el estado actual (*As-Is*).
+
+
+
+A continuación, se presentan los To-Be Scenario Mappings elaborados para cada uno de los segmentos objetivo:
+
+---
+
+#### **To-Be Scenario Mapping 1: Directiva / administradora de comunidad (User Persona 1: Patricia Salas)**
+
+Este escenario modela la experiencia de la directiva al gestionar una asamblea respaldada por VotoChain, pasando de una sobrecarga operativa manual y vulnerable a un rol de supervisión ágil, transparente y legalmente blindado.
+
+<p align="center">
+  <img src="./assets/To-Be-1.jpg" alt="To-Be Scenario Mapping 1: Directiva / administradora" width="700"/>
+</p>
+
+
+---
+
+#### **To-Be Scenario Mapping 2: Propietario / socio votante (User Persona 2: Miguel Herrera)**
+
+Este escenario describe el recorrido del copropietario que ejerce su voto mediante VotoChain, superando las barreras de horario y distancia con una experiencia segura, privada y transparente.
+
+<p align="center">
+  <img src="./assets/To-Be-2.jpg" alt="To-Be Scenario Mapping 2: Propietario votante" width="700"/>
+</p>
+
+
 ## **3.2. User Stories.**
 
 ## **3.3. Impact Mapping.**

@@ -246,7 +246,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 | Foto | Nombres y Apellidos | Código | Carrera | Resumen de habilidades |
 |---|---|---|---|---|
 | `[foto]` | `[Nombre Apellido 1]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
-| `[foto]` | `[Nombre Apellido 2]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
+| ![alt text](assets/FotoHector.png) | Héctor Javier Ríos Pacheco | u20231c540 | Ingeniería de Software | Cuento con formación en desarrollo de software, incluyendo estructuras de datos, algoritmos y arquitecturas orientadas a servicios. Trabajo con lenguajes como Java, TypeScript, JavaScript, HTML5 y CSS3, y utilizo herramientas y frameworks como Angular, Spring Boot, Git/GitHub, Swagger y bases de datos relacionales. Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles |
 | `[foto]` | `[Nombre Apellido 3]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
 | `[foto]` | `[Nombre Apellido 4]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
 

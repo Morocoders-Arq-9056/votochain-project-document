@@ -247,7 +247,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 |---|---|---|---|---|
 | `[foto]` | `[Nombre Apellido 1]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
 | ![alt text](assets/FotoHector.png) | Héctor Javier Ríos Pacheco | u20231c540 | Ingeniería de Software | Cuento con formación en desarrollo de software, incluyendo estructuras de datos, algoritmos y arquitecturas orientadas a servicios. Trabajo con lenguajes como Java, TypeScript, JavaScript, HTML5 y CSS3, y utilizo herramientas y frameworks como Angular, Spring Boot, Git/GitHub, Swagger y bases de datos relacionales. Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles |
-| `[foto]` | `[Nombre Apellido 3]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
+| ![alt text](assets/FotoSebastian.png) | Sebastián Rodriguez Macedo | u202310199 | Ingeniería de Software | Cuento con formación en desarrollo de software y conocimientos en arquitectura de sistemas, APIs REST, microservicios y bases de datos relacionales. Trabajo principalmente con Spring Boot, Angular, TypeScript y SQL Server, utilizando tecnologías relacionadas con integración y procesamiento de datos como procesos ETL. Me gusta involucrarme activamente en los proyectos, aportar ideas y proponer mejoras técnicas |
 | `[foto]` | `[Nombre Apellido 4]` | `[código]` | `[carrera]` | `[breve resumen de conocimientos técnicos/habilidades]` |
 
 ---
@@ -452,22 +452,48 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 | Código | Fecha | Segmento | Entrevistado | Rol / relación con el problema | Modalidad | Evidencia | Estado |
 |---|---|---|---|---|---|---|---|
-| ENT-01 | `[fecha]` | Directivas / administradores | `[nombre o seudónimo]` | `[rol]` | `[videollamada/presencial]` | `[enlace a grabación/transcripción]` | `[estado]` |
-| ENT-02 | `[fecha]` | Directivas / administradores | `[nombre o seudónimo]` | `[rol]` | `[videollamada/presencial]` | `[enlace a grabación/transcripción]` | `[estado]` |
-| ENT-03 | `[fecha]` | Propietarios / socios votantes | `[nombre o seudónimo]` | `[rol]` | `[videollamada/presencial]` | `[enlace a grabación/transcripción]` | `[estado]` |
-| ENT-04 | `[fecha]` | Propietarios / socios votantes | `[nombre o seudónimo]` | `[rol]` | `[videollamada/presencial]` | `[enlace a grabación/transcripción]` | `[estado]` |
+| ENT-01 | 18/09/2026 | Directivas | Daniel Huatuco Franco |Directivo y apoyo ocasional en actividades relacionadas con la gestión de la comunidad | Videollamada | https://youtu.be/fv2x8oQX6y8 | Completada |
+| ENT-02 | 18/09/2026  | Socios votantes | Carlos Gabriel Mendoza | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Completada |
+| ENT-03 | 18/09/2026  | Socios votantes | Leonardo Prieto Mantari | Socio votante |Videollamada | https://youtu.be/JR1lHGZW5GY | Completada |
+| ENT-04 | `[fecha]` | Directivas / administradores | `[nombre o seudónimo]` | `[rol]` | `[videollamada/presencial]` | `[enlace a grabación/transcripción]` | `[estado]` |
 
 **Formato de ficha individual para cada entrevista.**
 
+**Ficha individual - ENT-01**
+
 | Campo | Contenido esperado |
 |---|---|
-| Código de entrevista | Identificador único, por ejemplo `ENT-01`. |
-| Datos del participante | Nombre o seudónimo, rol, segmento, edad aproximada si acepta compartirla. |
-| Consentimiento | Confirmación de autorización para registrar audio/video o tomar notas. |
-| Contexto narrado | Descripción breve del tipo de comunidad, frecuencia de asambleas y experiencia previa. |
-| Citas relevantes | Fragmentos breves para sustentar hallazgos, evitando exponer datos personales innecesarios. |
-| Hallazgos | Necesidades, frustraciones, restricciones y oportunidades identificadas. |
-| Implicancia para requisitos | Requisito funcional, no funcional, restricción o pregunta abierta derivada. |
+| Código de entrevista | **ENT-01** |
+| Datos del participante | Daniel Huatuco Franco.  Segmento relacionado con directivas y administración de comunidades. Tiene cercanía con el proceso debido a que un familiar participa en la gestión y ha tenido contacto con actividades relacionadas con las asambleas. |
+| Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
+| Contexto narrado | El participante describió, desde su experiencia cercana a la administración, aspectos relacionados con la organización de asambleas, participación de propietarios, conteo de votos y utilización de herramientas digitales. |
+| Citas relevantes | La percepción general expresada durante la entrevista fue favorable hacia la digitalización de las votaciones y hacia mecanismos que permitan demostrar posteriormente que el proceso se realizó correctamente. |
+| Hallazgos | Se identificó aceptación hacia una solución que facilite la administración de las votaciones, reduzca el trabajo manual y permita disponer de evidencia del resultado. La confianza y la facilidad de uso fueron consideradas aspectos importantes para su adopción.|
+| Implicancia para requisitos | El sistema debe proporcionar mecanismos de registro y consulta de resultados, identificación de participantes y evidencia verificable del proceso de votación, manteniendo una interacción sencilla para administradores y propietarios. |
+
+**Ficha individual - ENT-02**
+
+| Campo | Contenido esperado |
+|---|---|
+| Código de entrevista | **ENT-02** |
+| Datos del participante | Carlos Gabriel Mendoza. Propietario / socio votante. |
+| Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
+| Contexto narrado | El participante respondió preguntas relacionadas con su participación en asambleas, confianza en el proceso de votación, uso de aplicaciones digitales, verificación de identidad y posibilidad de recibir evidencia del voto. |
+| Citas relevantes | El participante mostró una percepción favorable hacia la propuesta, aunque señaló la necesidad de considerar una alternativa cuando una persona mayor tenga dificultades con el uso del celular o disponga de una cámara de baja calidad. |
+| Hallazgos | Existe aceptación del voto digital y de la validación de identidad, pero la dependencia exclusiva de un smartphone con cámara puede convertirse en una barrera para ciertos propietarios.|
+| Implicancia para requisitos | Debe contemplarse un mecanismo alternativo o asistido de verificación para usuarios que no puedan completar correctamente el proceso biométrico mediante su dispositivo. También debe priorizarse una interfaz sencilla y accesible. |
+
+**Ficha individual - ENT-03**
+
+| Campo | Contenido esperado |
+|---|---|
+| Código de entrevista | **ENT-03** |
+| Datos del participante | Leonardo Prieto Mantari. Propietario / socio votante. |
+| Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
+| Contexto narrado | El participante evaluó aspectos relacionados con participación, confianza en los resultados, identificación del votante, uso de aplicaciones con cámara y accesibilidad para diferentes tipos de usuarios. |
+| Citas relevantes | El participante consideró favorable la propuesta, pero también manifestó que debería existir una alternativa para personas mayores o para quienes dispongan de dispositivos cuya cámara no permita realizar adecuadamente la validación. |
+| Hallazgos | La propuesta genera una percepción positiva de seguridad y trazabilidad, pero se identificó nuevamente una posible barrera relacionada con la accesibilidad tecnológica y la calidad del dispositivo utilizado.|
+| Implicancia para requisitos | El sistema debe considerar accesibilidad digital y mecanismos de contingencia cuando la verificación biométrica no pueda realizarse correctamente por limitaciones del dispositivo o del usuario. |
 
 **Criterio ético de registro.** Los nombres reales, documentos de identidad, direcciones, números de unidad, grabaciones y cualquier dato sensible deben almacenarse fuera del informe público o anonimizarse antes de su publicación. Esta decisión es coherente con el bounded context `Consent & Compliance`, que separa el registro de consentimiento de los datos personales que pertenecen a otros contextos.
 
@@ -477,11 +503,11 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 | Tema de análisis | Hallazgo identificado | Evidencia / cita breve | Segmento relacionado | Implicancia para requisitos |
 |---|---|---|---|---|
-| `[tema]` | `[hallazgo]` | `[cita o evidencia]` | `[Directivas / administradores o Propietarios / socios votantes]` | `[RF/RNF/restricción/pregunta abierta]` |
-| `[tema]` | `[hallazgo]` | `[cita o evidencia]` | `[Directivas / administradores o Propietarios / socios votantes]` | `[RF/RNF/restricción/pregunta abierta]` |
-| `[tema]` | `[hallazgo]` | `[cita o evidencia]` | `[Directivas / administradores o Propietarios / socios votantes]` | `[RF/RNF/restricción/pregunta abierta]` |
+| Confianza en la votación digital | Los entrevistados mostraron una percepción generalmente favorable hacia un sistema que permita identificar al votante y comprobar posteriormente el resultado. | Las tres entrevistas reflejaron aceptación general de mecanismos destinados a mejorar la confianza y trazabilidad del proceso. | Ambos segmentos | RF: registrar y permitir consultar evidencia verificable de las votaciones realizadas. |
+| Verificación de identidad | La utilización de mecanismos de identificación antes del voto fue considerada aceptable mientras el procedimiento sea comprensible y no genere una dificultad excesiva para el usuario. | Los participantes no expresaron una oposición general al uso de validación de identidad mediante dispositivos digitales. | Propietarios / socios votantes | RNF – Usabilidad: el proceso de verificación debe ser sencillo, guiado y comprensible para usuarios con diferentes niveles de experiencia digital. |
+| Evidencia del voto | La posibilidad de comprobar que una votación fue registrada correctamente aporta confianza frente a desacuerdos o cuestionamientos posteriores. | En las entrevistas se valoró positivamente disponer de evidencia que permita sustentar el resultado de una votación. | Ambos segmentos | RF: generar una confirmación o comprobante del registro del voto sin revelar información sensible innecesaria. |
 
-**Síntesis del análisis:** `[Completar con una síntesis breve una vez procesadas las entrevistas.]`
+**Síntesis del análisis:** Las entrevistas muestran una aceptación general favorable hacia la propuesta de VotoChain y respaldan preliminarmente las hipótesis relacionadas con confianza, verificación de identidad y disponibilidad de evidencia sobre el resultado. Los participantes valoran que el proceso pueda realizarse digitalmente y que exista una forma de comprobar posteriormente que la votación fue registrada correctamente. Sin embargo, las entrevistas a Carlos Gabriel Mendoza y Leonardo Prieto Mantari permitieron identificar una consideración relevante de accesibilidad: el uso obligatorio de una cámara puede convertirse en una barrera para adultos mayores, usuarios con poca experiencia digital o personas que dispongan de dispositivos de baja calidad. Por ello, la solución debería contemplar mecanismos de asistencia o alternativas de validación que permitan mantener la seguridad del proceso sin excluir a estos usuarios. Estos resultados permiten conservar la orientación general de la propuesta, incorporando la accesibilidad y la facilidad de uso como aspectos relevantes para el diseño posterior.`
 
 ## **2.3. Needfinding**
 

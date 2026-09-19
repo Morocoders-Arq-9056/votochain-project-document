@@ -788,6 +788,16 @@ Se emplean los roles **visitante**, **directiva o administradora de comunidad**,
 
 ## **3.3. Impact Mapping.**
 
+El Impact Mapping de VotoChain conecta directamente los objetivos estratégicos de negocio (Business Goals) estructurados bajo la metodología SMART, con los actores clave del sistema, los cambios de comportamiento o impactos buscados (Impacts), los entregables del producto (Deliverables) y las historias de usuario (User Stories) especificadas en el Product Backlog.
+
+<p align="center">
+  <img src="./assets/ImpactMap_1.png" alt="Impact Mapping 1" width="700"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ImpactMap_2.png" alt="Impact Mapping 2" width="700"/>
+</p>
+
 ## **3.4. Product Backlog.**
 
 El Product Backlog prioriza valor de negocio y aprendizaje del producto. Por esa razón comienza con la comunicación de la propuesta de valor y con el recorrido mínimo que permite a una comunidad organizar una votación verificable; no antepone automáticamente autenticación o seguridad a las capacidades que validan la necesidad del mercado. Las historias de la Landing Page se consideran desde el primer sprint. Los Story Points emplean la escala Fibonacci permitida **1, 2, 3, 5 y 8** y expresan complejidad relativa, incertidumbre e integración, no duración.

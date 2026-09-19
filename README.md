@@ -455,7 +455,10 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | ENT-01 | 18/09/2026 | Directivas | Daniel Huatuco Franco |Directivo y apoyo ocasional en actividades relacionadas con la gestión de la comunidad | Videollamada | https://youtu.be/fv2x8oQX6y8 | Completada |
 | ENT-02 | 18/09/2026  | Socios votantes | Carlos Gabriel Mendoza | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Completada |
 | ENT-03 | 18/09/2026  | Socios votantes | Leonardo Prieto Mantari | Socio votante |Videollamada | https://youtu.be/JR1lHGZW5GY | Completada |
-| ENT-04 | `[fecha]` | Directivas / administradores | `[nombre o seudónimo]` | `[rol]` | `[videollamada/presencial]` | `[enlace a grabación/transcripción]` | `[estado]` |
+| ENT-04 | 18/09/2026 | Directivas  | Fabrizio Díaz | Directiva | Videollamada | https://youtu.be/eGaMt-ZOPhg | Completada |
+| ENT-05 | 18/09/2026 | Directivas  | Miguel Salas | Directiva | Videollamada | https://youtu.be/8EnQxSFYI-0 | Completada |
+| ENT-06 | 19/09/2026 | Socios Votantes  | Cristina Sihuas | Socio Votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Completada |
+
 
 **Formato de ficha individual para cada entrevista.**
 
@@ -495,19 +498,57 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Hallazgos | La propuesta genera una percepción positiva de seguridad y trazabilidad, pero se identificó nuevamente una posible barrera relacionada con la accesibilidad tecnológica y la calidad del dispositivo utilizado.|
 | Implicancia para requisitos | El sistema debe considerar accesibilidad digital y mecanismos de contingencia cuando la verificación biométrica no pueda realizarse correctamente por limitaciones del dispositivo o del usuario. |
 
+**Ficha individual - ENT-04**
+
+| Campo | Contenido esperado |
+|---|---|
+| Código de entrevista | **ENT-04** |
+| Datos del participante | Fabrizio Díaz Enriquez. Segmento relacionado con directivas y administración de comunidades. |
+| Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
+| Contexto narrado | El participante describió cómo convoca asambleas mediante correo y carta física, y cómo calcula el cuórum sumando coeficientes en Excel. Relató que enfrenta conflictos por actas impugnadas y cartas poder de dudosa procedencia. Además, mencionó que el uso de Zoom y Formularios de Google durante la pandemia no ofreció validez legal ni certeza sobre la identidad de los votantes. |
+| Citas relevantes | El participante indicó que necesita "un reporte consolidado con marca de tiempo, desglose de coeficientes por unidad y firmas digitales que pueda anexar directamente al libro de actas para presentarlo ante notaría o SUNARP". |
+| Hallazgos | Existe una necesidad imperativa de otorgar validez legal estricta al proceso y garantizar que los votantes sean los verdaderos titulares para evitar asambleas caóticas. Se anticipan objeciones sobre el uso de datos biométricos, especialmente por parte de los propietarios de mayor edad |
+| Implicancia para requisitos | El sistema debe generar reportes automáticos con firmas digitales, desgloses de coeficientes y marcas de tiempo que tengan validez para entidades legales (SUNARP o notarías). Además, la plataforma debe facilitar la comunicación sobre la privacidad de datos mediante circulares formales |
+
+**Ficha individual - ENT-05**
+
+| Campo | Contenido esperado |
+|---|---|
+| Código de entrevista | **ENT-05** |
+| Datos del participante | Miguel Salas Guillen. Segmento relacionado con directivas y administración de comunidades. |
+| Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
+| Contexto narrado | El participante organiza asambleas presenciales donde verifica la asistencia con firmas en papel y cuenta los votos a mano alzada. Señaló que esto genera discusiones y paraliza proyectos. También relató un intento fallido de votar mediante encuestas de WhatsApp, el cual no funcionó debido a votos dobles y borrado de mensajes. |
+| Citas relevantes | Considera como evidencia suficiente "un documento resumen firmado digitalmente o con un código de verificación que pueda imprimir y pegar en la vitrina del ascensor". |
+| Hallazgos | Los procesos manuales y las adaptaciones informales generan desconfianza y conflictos vecinales por sospechas de mal conteo. Existe un temor latente a las estafas digitales entre los propietarios. |
+| Implicancia para requisitos | La aplicación debe garantizar la inmutabilidad de los votos, impidiendo borrados o votaciones múltiples por departamento. El sistema debe emitir un resumen verificable públicamente. Se recomienda integrar flujos educativos (como videos cortos explicativos) para mitigar la desconfianza inicial. |
+
+**Ficha individual - ENT-06**
+
+| Campo | Contenido esperado |
+|---|---|
+| Código de entrevista | **ENT-06** |
+| Datos del participante | Cristina Sihuas Diaz. Propietario / socio votante. |
+| Consentimiento | La participante autorizó la realización y grabación de la entrevista con fines académicos. |
+| Contexto narrado | La participante indicó que asiste con poca frecuencia debido a incompatibilidad de horarios y a que las asambleas son largas y desordenadas. Desconfía fuertemente del conteo a mano alzada y teme que se utilicen votos sin autorización o que representantes no acreditados tomen decisiones. |
+| Citas relevantes | Manifestó que aceptaría el uso de prueba de vida "siempre que al inicio me aparezca un aviso claro de protección de datos confirmando que la imagen no se almacenará ni compartirá con terceros". |
+| Hallazgos | Existe familiaridad y disposición favorable hacia el uso de tecnologías biométricas en usuarios más jóvenes, pero exigen transparencia absoluta sobre el manejo de privacidad. Se ratifica la preocupación por las barreras tecnológicas que podrían enfrentar los adultos mayores. |
+| Implicancia para requisitos | La interfaz debe mostrar un aviso de privacidad claro y explícito inmediatamente antes de utilizar la cámara. El sistema debe emitir un comprobante digital (en la app o por correo) confirmando fecha, hora y mociones, resguardando el secreto del voto. El flujo debe ser lo suficientemente intuitivo y contemplar asistencia para usuarios con dispositivos limitados o poca destreza digital. |
+
 **Criterio ético de registro.** La información obtenida durante las entrevistas será utilizada únicamente con fines académicos. Los datos personales que no sean necesarios para sustentar los hallazgos deberán evitarse o anonimizarse en la documentación pública del proyecto. Del mismo modo, la solución deberá minimizar el tratamiento de información biométrica y mantener claramente separado el consentimiento del usuario de los demás datos gestionados por el sistema.
 
 ### **2.2.3. Análisis de entrevistas.**
 
-> Completar esta sección después de ejecutar y registrar las entrevistas. El análisis debe basarse en patrones observados, citas breves y evidencias verificables, no en supuestos del equipo.
+
 
 | Tema de análisis | Hallazgo identificado | Evidencia / cita breve | Segmento relacionado | Implicancia para requisitos |
 |---|---|---|---|---|
-| Confianza en la votación digital | Los entrevistados mostraron una percepción generalmente favorable hacia un sistema que permita identificar al votante y comprobar posteriormente el resultado. | Las tres entrevistas reflejaron aceptación general de mecanismos destinados a mejorar la confianza y trazabilidad del proceso. | Ambos segmentos | RF: registrar y permitir consultar evidencia verificable de las votaciones realizadas. |
-| Verificación de identidad | La utilización de mecanismos de identificación antes del voto fue considerada aceptable mientras el procedimiento sea comprensible y no genere una dificultad excesiva para el usuario. | Los participantes no expresaron una oposición general al uso de validación de identidad mediante dispositivos digitales. | Propietarios / socios votantes | RNF – Usabilidad: el proceso de verificación debe ser sencillo, guiado y comprensible para usuarios con diferentes niveles de experiencia digital. |
-| Evidencia del voto | La posibilidad de comprobar que una votación fue registrada correctamente aporta confianza frente a desacuerdos o cuestionamientos posteriores. | En las entrevistas se valoró positivamente disponer de evidencia que permita sustentar el resultado de una votación. | Ambos segmentos | RF: generar una confirmación o comprobante del registro del voto sin revelar información sensible innecesaria. |
+| Confianza en la votación digital | Existe un fuerte rechazo a los métodos informales actuales (a mano alzada, encuestas de WhatsApp) por generar desconfianza, disputas e imprecisión en el cuórum. Se busca un sistema inalterable con validez legal. | Los entrevistados reportan conflictos vecinales y asambleas caóticas por conteos dudosos. Se necesita un reporte consolidado para presentar ante SUNARP o notarías. | Ambos segmentos | RF: Generar reportes consolidados automáticos que incluyan marca de tiempo, desglose de coeficientes por unidad y firmas digitales. |
+| Verificación de identidad | La validación biométrica es bien recibida por usuarios habituados a la tecnología, pero el temor a las estafas o al mal uso de los datos personales es una barrera inicial importante. | Una propietaria afirmó que necesita ver un aviso claro de protección de datos garantizando que no se almacenan imágenes. Los administradores prevén desconfianza inicial | Ambos segmentos | RNF – Privacidad y Usabilidad: Mostrar un aviso legal claro y explícito antes de la verificación biométrica. Incorporar educación al usuario (ej. videos cortos explicativos). |
+| Evidencia del voto | Disponer de evidencia física o digital comprobable es vital para prevenir impugnaciones posteriores y otorgar tranquilidad al votante | Se valoró positivamente recibir un comprobante digital confidencial (por app o correo). También se solicitó un "documento resumen" para publicar en áreas comunes. | Ambos segmentos | RF: Emitir un comprobante digital de votación para el propietario y generar un documento resumen inmutable para que la administración lo exhiba. |
 
-**Síntesis del análisis:** Las entrevistas muestran una aceptación general favorable hacia la propuesta de VotoChain y respaldan preliminarmente las hipótesis relacionadas con confianza, verificación de identidad y disponibilidad de evidencia sobre el resultado. Los participantes valoran que el proceso pueda realizarse digitalmente y que exista una forma de comprobar posteriormente que la votación fue registrada correctamente. Sin embargo, las entrevistas a Carlos Gabriel Mendoza y Leonardo Prieto Mantari permitieron identificar una consideración relevante de accesibilidad: el uso obligatorio de una cámara puede convertirse en una barrera para adultos mayores, usuarios con poca experiencia digital o personas que dispongan de dispositivos de baja calidad. Por ello, la solución debería contemplar mecanismos de asistencia o alternativas de validación que permitan mantener la seguridad del proceso sin excluir a estos usuarios. Estos resultados permiten conservar la orientación general de la propuesta, incorporando la accesibilidad y la facilidad de uso como aspectos relevantes para el diseño posterior.`
+**Síntesis del análisis:** Las entrevistas muestran una aceptación general favorable hacia la propuesta, destacando que los métodos tradicionales y las adaptaciones informales (como Zoom o WhatsApp) generan desconfianza, conflictos vecinales y carecen de validez estricta. Los participantes respaldan firmemente las hipótesis relacionadas con la necesidad de un conteo inalterable y la disponibilidad de evidencia sobre el resultado. Para la administración, es crucial que el sistema emita reportes con desglose de coeficientes y marcas de tiempo que sirvan ante entidades legales como SUNARP.  
+
+ Por otro lado, se identificaron dos consideraciones críticas para el diseño. En primer lugar, la privacidad: participantes como Cristina Sihuas y Fabricio Diaz enfatizan que la adopción de la biometría (selfie/prueba de vida) dependerá de que existan avisos de protección de datos sumamente claros para mitigar el temor a estafas. En segundo lugar, se ratifica la barrera de accesibilidad identificada en entrevistas anteriores: el uso de cámaras y flujos digitales puede excluir a los adultos mayores o a personas con dispositivos de baja calidad. Por ello, la solución debe incorporar interfaces muy intuitivas, mecanismos de asistencia o alternativas de validación, y apoyarse en material educativo sencillo para garantizar que ningún propietario pierda su derecho a voto. 
 
 ## **2.3. Needfinding**
 

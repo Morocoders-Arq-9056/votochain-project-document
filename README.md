@@ -495,7 +495,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Hallazgos | La propuesta genera una percepción positiva de seguridad y trazabilidad, pero se identificó nuevamente una posible barrera relacionada con la accesibilidad tecnológica y la calidad del dispositivo utilizado.|
 | Implicancia para requisitos | El sistema debe considerar accesibilidad digital y mecanismos de contingencia cuando la verificación biométrica no pueda realizarse correctamente por limitaciones del dispositivo o del usuario. |
 
-**Criterio ético de registro.** Los nombres reales, documentos de identidad, direcciones, números de unidad, grabaciones y cualquier dato sensible deben almacenarse fuera del informe público o anonimizarse antes de su publicación. Esta decisión es coherente con el bounded context `Consent & Compliance`, que separa el registro de consentimiento de los datos personales que pertenecen a otros contextos.
+**Criterio ético de registro.** La información obtenida durante las entrevistas será utilizada únicamente con fines académicos. Los datos personales que no sean necesarios para sustentar los hallazgos deberán evitarse o anonimizarse en la documentación pública del proyecto. Del mismo modo, la solución deberá minimizar el tratamiento de información biométrica y mantener claramente separado el consentimiento del usuario de los demás datos gestionados por el sistema.
 
 ### **2.2.3. Análisis de entrevistas.**
 

@@ -318,16 +318,9 @@ Esta problemática constituye la base sobre la cual se desarrolla la solución d
 
 #### 1.2.2.4. Lean UX Canvas
 
-| # | Elemento | Contenido |
-|---|---|---|
-| 1 | **Business Problem** | Las juntas de propietarios y cooperativas carecen de un mecanismo de votación confiable, verificable y accesible; esto genera desconfianza, impugnaciones y baja participación, y limita la disposición a pagar por soluciones de gestión digital para su comunidad. |
-| 2 | **Business Outcomes** | Adopción de VotoChain por comunidades piloto en Lima; ingresos recurrentes por suscripción/tarifa por asamblea; reducción medible de impugnaciones y aumento de cuórum en las comunidades que usan la plataforma. |
-| 3 | **Users** | (a) Directivas / administradores de juntas de propietarios y cooperativas; (b) propietarios / socios votantes. |
-| 4 | **User Outcomes & Benefits** | Directivas: menos impugnaciones, menos trabajo manual de conteo y verificación, evidencia defendible ante conflictos. Propietarios: pueden votar de forma remota, confían en que su voto se contó correctamente, no necesitan entender blockchain. |
-| 5 | **Solutions** | Verificación biométrica pre-voto (OCR de DNI + liveness + comparación facial); wallet individual derivada por usuario (Modelo B, HD/BIP-32); firma EIP-712 del voto server-side; envío de la transacción vía wallet relayer; verificación on-chain con `ecrecover()`. |
-| 6 | **Hypotheses** | Ver H1–H4 en la sección 1.2.2.3. |
-| 7 | **Lo más importante que aprender primero** | Si las directivas de juntas de propietarios están realmente dispuestas a delegar el control de la votación a una plataforma externa, y si los propietarios aceptan el paso de verificación biométrica sin fricción significativa. |
-| 8 | **Mínimo esfuerzo para aprender lo siguiente más importante** | Entrevistas de Needfinding con directivas/administradores y propietarios de 2–3 edificios, seguidas de un prototipo navegable (sin blockchain real) que simule el flujo de selfie + confirmación de voto, para validar percepción de confianza y fricción de uso. |
+<p align="center">
+  <img src="./assets/Lean_UX_Canvas.jpg" alt="Empathy Map 2: Propietario votante" width="700"/>
+</p>
 
 ---
 

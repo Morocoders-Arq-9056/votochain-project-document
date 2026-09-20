@@ -214,10 +214,6 @@ En Ingeniería de Software, un Student Outcome representa las capacidades, conoc
 
 ### Criterios específicos
 
-- 3.c1. Comunica oralmente con efectividad a diferentes rangos de audiencia.
-
-- 3.c2. Comunica por escrito con efectividad a diferentes rangos de audiencia.
-
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---|---|---|
 | Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Jiménez Rosas, Arturo Eduardo**<br>**TB1**<br>Morbi vel tortor id eros dictum venenatis id ut dui.<br>Mauris quis tellus sed nunc hendrerit vehicula ac id mauris.<br>Pellentesque volutpat tellus non ligula blandit ullamcorper quis sodales erat.<br>**TB2**<br>…<br><br>**Rodríguez Peña, Jorge Andrés**<br>**TB1**<br>…<br> | Fusce cursus dolor et nulla suscipit, sit amet ullamcorper nibh vestibulum.<br>Nam ornare massa eu lobortis porttitor.<br>Nam ut erat feugiat libero pretium semper at ac metus.<br>Sed at eros dapibus, fermentum quam ut, bibendum lacus.<br>Curabitur eget orci eget urna varius commodo.<br>… |

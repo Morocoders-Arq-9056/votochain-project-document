@@ -799,7 +799,7 @@ Los inputs del diseño ADD son de tres tipos: funcionalidad primaria (historias 
 
 #### **4.1.2.1. Primary Functionality (Primary User Stories).**
 
-Se seleccionan 12 historias (10 US + 2 TS) que concentran el riesgo arquitectónico: atraviesan límites de contextos, imponen invariantes criptográficas o congelan decisiones. No es un duplicado del cuadro del Capítulo III; solo se incluyen las relevantes para el diseño. Los criterios se resumen manteniendo la semántica Given-When-Then original.
+Se seleccionan 12 historias (10 US + 2 TS) que concentran el riesgo arquitectónico: atraviesan límites de contextos, imponen invariantes criptográficas o congelan decisiones. No es un duplicado del cuadro del Capítulo III, solo se incluyen las relevantes para el diseño. Los criterios se resumen manteniendo la semántica Given-When-Then original.
 
 | Epic / User Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 |---|---|---|---|---|
@@ -820,7 +820,7 @@ Se seleccionan 12 historias (10 US + 2 TS) que concentran el riesgo arquitectón
 
 #### **4.1.2.2. Quality attribute Scenarios.**
 
-rimera versión de escenarios de atributos de calidad con mayor impacto arquitectónico. Sirven de input al diseño; se refinan y priorizan en 4.1.5.
+rimera versión de escenarios de atributos de calidad con mayor impacto arquitectónico. Sirven de input al diseño, se refinan y priorizan en 4.1.5.
 
 | Atributo | Fuente | Estímulo | Artefacto | Entorno | Respuesta | Medida |
 |---|---|---|---|---|---|---|
@@ -1036,63 +1036,6 @@ Se organizaron sesiones de 1–2 horas por contexto (Core primero, luego pares M
 
 Eventos pivote detectados (señales de frontera): `Proposal Opened`, `VoteAuthorization Granted`, `Vote Signed`, `VoteConfirmedOnChain`, `Proposal Closed`. Marcan dónde cambia la fuente de verdad (off-chain intent → on-chain fact) y dónde deben congelarse copias.
 
-#### Síntesis por contexto
-
-**1. Voting & Verifiable Ledger**
-- **Límite:** Agregados `Proposal`, `VoteAuthorization` y `Vote` por referencia; posee la intención verificable y el hecho on-chain, excluye firma, delivery, padrón y biometría.
-- **Eventos clave:** `ProposalOpened`, `VoteAuthorizationGranted`, `VoteCast`, `VoteConfirmedOnChain`, `ProposalTallied`.
-- **Justificación:** Separa intent (`VoteCast`) de fact (`VoteConfirmedOnChain`) y evita la contención transaccional de un `Proposal` gigante con votos embebidos.
-
-**2. Cryptographic Wallet Custody**
-- **Límite:** Agregado `UserWallet`; custodia la capacidad de firma por persona con reconstrucción efímera, excluye pago y envío.
-- **Eventos clave:** `WalletProvisioned`, `KeyReconstructed`, `KeyForgotten`, `WalletSuspended`, `WalletRetired`.
-- **Justificación:** Nada guardado puede firmar por sí solo y signer/payer nunca se mezclan (R6, C-03), por eso se separa de Relay.
-
-**3. Biometric Identity Verification**
-- **Límite:** Agregados `BiometricProfile` y `VerificationAttempt`; prueba persona viva contra referencia duradera, excluye examen documental y posesión de canal.
-- **Eventos clave:** `BiometricEnrolled`, `LivenessPassed`, `IdentityVerified`, `VerificationAttemptExpired`, `BiometricProfileRevoked`.
-- **Justificación:** Liveness primero y veredicto binario fresco que Voting consume como `verified-now` (R3); ritmo de minutos distinto al voto.
-
-**4. Blockchain Relay & Transaction Delivery**
-- **Límite:** Agregado `DeliveryOrder`; transporta solo contenido ya firmado al ledger, excluye firma y conteo.
-- **Eventos clave:** `AcceptedForDelivery`, `OrderedForSending`, `SendingRecorded`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryAbandoned`.
-- **Justificación:** Orden secuencial por pagador con confirmación terminal y un reintento acotado; solo `DeliveryConfirmed` cuenta para el tally (R5).
-
-**5. IAM**
-- **Límite:** Agregado `User` (1 por persona); identidad técnica, sesión única y roles de sistema, excluye membresía, comunidad e identidad física.
-- **Eventos clave:** `UserSignedUp`, `UserSignedIn`, `UserSignedOut`, `EmailVerified`, `AccessSuspended`, `AccessRestored`.
-- **Justificación:** Suspender acceso técnico nunca reescribe membresía ni comunidad (R13, Separate Ways); la ejecución de pruebas vive fuera y el juicio dentro.
-
-**6. Community Management**
-- **Límite:** Agregado `Community`; standing, datos, `VotingPolicy` y administradores, excluye el padrón de miembros.
-- **Eventos clave:** `CommunityRegistered`, `CommunityActivated`, `VotingPolicyDefined`, `CommunitySuspended`, `CommunityArchived`.
-- **Justificación:** La política evoluciona en Community y Voting solo congela una copia al abrir (`QuorumSnapshot`, R1); ritmos de cambio distintos.
-
-**7. Membership**
-- **Límite:** Agregado `Membership` (un par persona-comunidad); standing, unidad y rol comunitario, excluye configuración de comunidad y voto.
-- **Eventos clave:** `MembershipActivated`, `MemberMarkedDelinquent`, `MembershipSuspended`, `MembershipTerminated`, `EligibilityJudged`.
-- **Justificación:** Solo `ACTIVE` integra el roster y la elegibilidad se congela al autorizar (`EligibilitySnapshot`, R2); cambios posteriores no reescriben juicios.
-
-**8. Consent & Compliance**
-- **Límite:** Agregados `ConsentRecord`, `DataSubjectRequest` y `RetentionPolicy`; opt-in por alcance y coordinación de erasure (Ley 29733), excluye datos ajenos.
-- **Eventos clave:** `ConsentGranted`, `ConsentRevoked`, `ErasureRequested`, `ErasureConfirmed`, `ErasureCompleted`.
-- **Justificación:** Contexto ortogonal que veta (`may-process/contact-now?`) y coordina, pero completa solo cuando cada dueño confirma su borrado (R12).
-
-**9. Document OCR & Face Match Provider**
-- **Límite:** Agregado `DocumentExamination` efímero; examen documental con veredicto único, excluye referencia viva y prueba de presencia.
-- **Eventos clave:** `ExaminationRequested`, `DocumentExtracted`, `FacesCompared`, `ExaminationConcluded (MATCH / NO_MATCH / UNREADABLE)`.
-- **Justificación:** El examen nace y muere en minutos mientras la referencia biométrica perdura; el `MATCH` cruza una sola vez hacia Biometric (R7).
-
-**10. Verification (OTP)**
-- **Límite:** Agregado `VerificationChallenge` por (persona, propósito); prueba posesión de canal, excluye identidad física y autorización de voto.
-- **Eventos clave:** `ChallengeRequested`, `ChallengeConfirmed`, `ChallengeAttemptFailed`, `ChallengeInvalidated`, `ChallengeExpired`.
-- **Justificación:** Propósitos cerrados en 3 y código que nunca cruza legible; solo el hecho `ChallengeConfirmed` llega a IAM (R9).
-
-**11. Notifications**
-- **Límite:** Agregado `NotificationDispatch`; sink de entrega email-only por intent, excluye reglas de negocio ajenas.
-- **Eventos clave:** `DeliveryRequested`, `DeliveryRefused`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryRetried`.
-- **Justificación:** Todos dependen de él y él de nadie; la misma idempotency key nunca entrega dos veces y el reintento es un intento nuevo (R11).
-
 ### **4.2.2. Candidate Context Discovery.**
 
 Sesión de 2h sobre el EventStorming. 
@@ -1120,6 +1063,118 @@ Decisión: 11 candidatos promovidos a Bounded Contexts (se excluyó Legacy/RPA p
 <p align="center">
   <img src="./assets/candidate-discovery.png" alt="Candidate Context Discovery" width="700"/>
 </p>
+
+**1. Voting & Verifiable Ledger**
+
+<p align="center">
+  <img src="./assets/voting-candidate-discovery.png" alt="Voting Candidate Context Discovery" width="700"/>
+</p>
+
+
+- **Límite:** Agregados `Proposal`, `VoteAuthorization` y `Vote` por referencia; posee la intención verificable y el hecho on-chain, excluye firma, delivery, padrón y biometría.
+- **Eventos clave:** `ProposalOpened`, `VoteAuthorizationGranted`, `VoteCast`, `VoteConfirmedOnChain`, `ProposalTallied`.
+- **Justificación:** Separa intent (`VoteCast`) de fact (`VoteConfirmedOnChain`) y evita la contención transaccional de un `Proposal` gigante con votos embebidos.
+
+
+**2. Cryptographic Wallet Custody**
+
+<p align="center">
+  <img src="./assets/wallet-candidate-discovery.png" alt="Wallet Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `UserWallet`; custodia la capacidad de firma por persona con reconstrucción efímera, excluye pago y envío.
+- **Eventos clave:** `WalletProvisioned`, `KeyReconstructed`, `KeyForgotten`, `WalletSuspended`, `WalletRetired`.
+- **Justificación:** Nada guardado puede firmar por sí solo y signer/payer nunca se mezclan (R6, C-03), por eso se separa de Relay.
+
+**3. Biometric Identity Verification**
+
+<p align="center">
+  <img src="./assets/biometric-candidate-discovery.png" alt="Biometric Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregados `BiometricProfile` y `VerificationAttempt`; prueba persona viva contra referencia duradera, excluye examen documental y posesión de canal.
+- **Eventos clave:** `BiometricEnrolled`, `LivenessPassed`, `IdentityVerified`, `VerificationAttemptExpired`, `BiometricProfileRevoked`.
+- **Justificación:** Liveness primero y veredicto binario fresco que Voting consume como `verified-now` (R3); ritmo de minutos distinto al voto.
+
+**4. Blockchain Relay & Transaction Delivery**
+
+<p align="center">
+  <img src="./assets/relay-candidate-discovery.png" alt="Relay Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `DeliveryOrder`; transporta solo contenido ya firmado al ledger, excluye firma y conteo.
+- **Eventos clave:** `AcceptedForDelivery`, `OrderedForSending`, `SendingRecorded`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryAbandoned`.
+- **Justificación:** Orden secuencial por pagador con confirmación terminal y un reintento acotado; solo `DeliveryConfirmed` cuenta para el tally (R5).
+
+**5. IAM**
+
+<p align="center">
+  <img src="./assets/iam-candidate-discovery.png" alt="IAM Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `User` (1 por persona); identidad técnica, sesión única y roles de sistema, excluye membresía, comunidad e identidad física.
+- **Eventos clave:** `UserSignedUp`, `UserSignedIn`, `UserSignedOut`, `EmailVerified`, `AccessSuspended`, `AccessRestored`.
+- **Justificación:** Suspender acceso técnico nunca reescribe membresía ni comunidad (R13, Separate Ways); la ejecución de pruebas vive fuera y el juicio dentro.
+
+**6. Community Management**
+
+<p align="center">
+  <img src="./assets/community-candidate-discovery.png" alt="Community Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `Community`; standing, datos, `VotingPolicy` y administradores, excluye el padrón de miembros.
+- **Eventos clave:** `CommunityRegistered`, `CommunityActivated`, `VotingPolicyDefined`, `CommunitySuspended`, `CommunityArchived`.
+- **Justificación:** La política evoluciona en Community y Voting solo congela una copia al abrir (`QuorumSnapshot`, R1); ritmos de cambio distintos.
+
+**7. Membership**
+
+<p align="center">
+  <img src="./assets/membership-candidate-discovery.png" alt="Membership Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `Membership` (un par persona-comunidad); standing, unidad y rol comunitario, excluye configuración de comunidad y voto.
+- **Eventos clave:** `MembershipActivated`, `MemberMarkedDelinquent`, `MembershipSuspended`, `MembershipTerminated`, `EligibilityJudged`.
+- **Justificación:** Solo `ACTIVE` integra el roster y la elegibilidad se congela al autorizar (`EligibilitySnapshot`, R2); cambios posteriores no reescriben juicios.
+
+**8. Consent & Compliance**
+
+<p align="center">
+  <img src="./assets/consent-candidate-discovery.png" alt="Consent Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregados `ConsentRecord`, `DataSubjectRequest` y `RetentionPolicy`; opt-in por alcance y coordinación de erasure (Ley 29733), excluye datos ajenos.
+- **Eventos clave:** `ConsentGranted`, `ConsentRevoked`, `ErasureRequested`, `ErasureConfirmed`, `ErasureCompleted`.
+- **Justificación:** Contexto ortogonal que veta (`may-process/contact-now?`) y coordina, pero completa solo cuando cada dueño confirma su borrado (R12).
+
+**9. Document OCR & Face Match Provider**
+
+<p align="center">
+  <img src="./assets/ocr-candidate-discovery.png" alt="OCR Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `DocumentExamination` efímero; examen documental con veredicto único, excluye referencia viva y prueba de presencia.
+- **Eventos clave:** `ExaminationRequested`, `DocumentExtracted`, `FacesCompared`, `ExaminationConcluded (MATCH / NO_MATCH / UNREADABLE)`.
+- **Justificación:** El examen nace y muere en minutos mientras la referencia biométrica perdura; el `MATCH` cruza una sola vez hacia Biometric (R7).
+
+**10. Verification (OTP)**
+
+<p align="center">
+  <img src="./assets/otp-candidate-discovery.png" alt="OTP Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `VerificationChallenge` por (persona, propósito); prueba posesión de canal, excluye identidad física y autorización de voto.
+- **Eventos clave:** `ChallengeRequested`, `ChallengeConfirmed`, `ChallengeAttemptFailed`, `ChallengeInvalidated`, `ChallengeExpired`.
+- **Justificación:** Propósitos cerrados en 3 y código que nunca cruza legible; solo el hecho `ChallengeConfirmed` llega a IAM (R9).
+
+**11. Notifications**
+
+<p align="center">
+  <img src="./assets/notifications-candidate-discovery.png" alt="Notifications Candidate Context Discovery" width="700"/>
+</p>
+
+- **Límite:** Agregado `NotificationDispatch`; sink de entrega email-only por intent, excluye reglas de negocio ajenas.
+- **Eventos clave:** `DeliveryRequested`, `DeliveryRefused`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryRetried`.
+- **Justificación:** Todos dependen de él y él de nadie; la misma idempotency key nunca entrega dos veces y el reintento es un intento nuevo (R11).
 
 ### **4.2.3. Domain Message Flows Modeling.**
 
@@ -1284,7 +1339,6 @@ Un recuadro = “VotoChain Platform”; alrededor, usuarios y sistemas externos.
 | OCR DNI | Platform → Document AI | HTTPS tras puerto `DocumentExamination` (C-07) | D-14 examen con purga, D-19 reemplazable |
 | Liveness + comparación | Platform → Rekognition | HTTPS tras puerto `VerificationAttempt` (C-07) | D-09 liveness-first, D-06 privacidad |
 | Email | Platform → SMTP | SMTP tras puerto `NotificationDispatch`, email-only (C-07) | D-16 sin duplicados (R11) |
-
 
 ### **4.3.3. Software Architecture Container Level Diagrams.**
 

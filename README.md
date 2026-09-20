@@ -915,6 +915,12 @@ El Product Backlog prioriza valor de negocio y aprendizaje del producto. Por esa
 
 ## **7.4. Video About-the-Product.**
 
+## **7.5. Conclusiones**
+
+En el aspecto arquitectónico y de ingeniería, la aplicación de principios de Domain-Driven Design (DDD) garantizó que el sistema mantenga una separación estricta de responsabilidades, aislando el núcleo de Voting & Verifiable Ledger de los servicios de soporte como membresías, custodia de wallets y cumplimiento. La implementación de artefactos inmutables como QuorumSnapshot y EligibilitySnapshot asegura que los acuerdos queden blindados frente a modificaciones posteriores en el padrón. Asimismo, la distinción técnica entre la intención del voto (VoteCast) y su confirmación en red (VoteConfirmedOnChain) dota al MVP de un no repudio confiable y reduce las causas de impugnación de actas.   
+
+Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfica y experiencia de usuario mediante el modelo de wallet custodio (Modelo B), permitiendo que los propietarios firmen digitalmente sus decisiones sin necesidad de gestionar claves privadas ni pagar costos de transacción (gas). Complementado con un diseño enfocado en la privacidad que descarta imágenes biométricas crudas y procesa únicamente veredictos y consentimientos explícitos, este MVP establece una base sólida, escalable y éticamente responsable para futuras iteraciones y para su validación empírica en asambleas piloto reales
+
 # **Referencias**
 
 | Referencia | Uso en el informe |

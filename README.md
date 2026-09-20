@@ -77,8 +77,8 @@
 | ------- | ---------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0.1     | 12/09/2026 | Morocoders                | Elaboración del Capítulo I y estructura general del informe.                                                                                          |
 | 0.2     | 12/09/2026 | Morocoders                | Desarrollo del Capítulo II: análisis competitivo, diseño de entrevistas, Needfinding y Ubiquitous Language.                                            |
-| Vacio    | Vacio | Vacio                  | Vacio                                            |
-| Vacio     | Vacio | Vacio                    | Vacio                                                           |
+| 0.3    | 14/09/2026 | Morocoders                  | Desarrollo del Capítulo III: Requirements Specification, User Stories, Product Backlog                                             |
+| 0.4     | 16/09/2026 | Morocoders                    | Desarrollo del Capítulo IV: Capítulo IV: Strategic-Level Software Design., Event Storming, Attribute Driven-Design, C4 model diagrams |
 
 
 
@@ -240,8 +240,6 @@ La propuesta de valor de la startup se resume en tres pilares:
 El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripción o tarifa por asamblea a administradoras de edificios y a juntas directivas (cliente pagador), mientras que el propietario final (usuario votante) accede sin costo directo.
 
 ### 1.1.2. Perfiles de integrantes del equipo
-
-> Completar con los datos reales de cada integrante (nombre y apellidos, código de estudiante, carrera, foto, y un párrafo de resumen de conocimientos técnicos/habilidades que aporta al equipo), siguiendo la estructura pedida en el enunciado.
 
 | Foto | Nombres y Apellidos | Código | Carrera | Resumen de habilidades |
 |---|---|---|---|---|

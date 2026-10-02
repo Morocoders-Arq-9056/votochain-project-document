@@ -1466,11 +1466,186 @@ Despliegue MVP en **Google Cloud Platform** (región `southamerica-east1` sugeri
 
 # **Capítulo VI: Solution UX Design**
 
+El diseño de experiencia de VotoChain sigue un enfoque de **diseño centrado en el usuario** y toma como referencia a los dos segmentos definidos en los Capítulos I y II: Patricia Salas, directiva o administradora de comunidad, y Miguel Herrera, propietario votante. La experiencia debe hacer comprensibles la verificación de identidad, la elegibilidad, el cuórum y la evidencia auditable, sin trasladar al usuario conceptos operativos como wallets, claves privadas, gas o RPC.
+
+Este capítulo distingue deliberadamente entre lo **implementado** y lo **proyectado**. A la fecha de revisión, el repositorio de software contiene una API modular en NestJS para IAM, verificación OTP y gestión de comunidades; el frontend Next.js descrito en la arquitectura, la votación, la biometría, el ledger y las superficies públicas todavía forman parte del diseño y del roadmap. Por ello, las reglas siguientes son especificaciones objetivo que deberán validarse mediante prototipos, pruebas de usabilidad y auditorías de accesibilidad antes de declararse cumplidas.
+
+---
+
 ## **6.1. Style Guidelines.**
+
+Las directrices de estilo conforman la especificación inicial del **VotoChain Design System (VDS)**. Su propósito es centralizar tokens, tipografías, iconografía, componentes, patrones de interacción y criterios editoriales para la Landing Page y la aplicación web responsive prevista en Next.js. Los tokens se mantendrán independientes de una librería concreta; si durante la implementación se adoptan Tailwind CSS, Radix UI u otras herramientas, estas deberán mapearse al VDS y no convertirse por sí mismas en la fuente de verdad.
+
+La meta de accesibilidad es **[WCAG 2.2 nivel AA](https://www.w3.org/TR/WCAG22/)**. “Accesible” no se utilizará como una garantía previa: el cumplimiento se verificará con revisión de contraste, navegación por teclado, lectores de pantalla, zoom al 200 %, reflow a 320 CSS px y pruebas con usuarios. Los assets definitivos —logotipo, íconos, archivos de fuentes y componentes— deberán versionarse junto con el frontend cuando este sea creado.
+
+---
 
 ### **6.1.1. General Style Guidelines.**
 
+#### **1. Principios de Diseño de VotoChain**
+
+Las decisiones estéticas y funcionales del sistema de diseño se sustentan en cuatro principios rectores:
+
+1. **Claridad Institucional y Confiabilidad Cívica**: Las interfaces deben transmitir seriedad, orden y formalidad cívica. Los usuarios toman decisiones patrimoniales y normativas que afectan a sus comunidades; por ello, se evitan decoraciones superfluas y gamificación.
+2. **Transparencia Técnica sin Fricción**: El flujo principal no exige comprender gas, mempool, claves privadas o RPC. Cuando el ledger sea implementado, esos detalles permanecerán disponibles en una vista de auditoría, mientras la tarea principal utilizará estados y constancias legibles (D-22).
+3. **Focalización Operativa y Mínima Carga Cognitiva**: Durante los flujos críticos (enrollment biométrico facial y emisión de voto), la interfaz aísla distracciones: presenta un único objetivo por pantalla, instrucciones paso a paso concisas y confirmaciones explícitas antes de cualquier acción irreversible.
+4. **Accesibilidad e Inclusión**: El diseño considera adultos mayores y personas con distintos niveles de alfabetización digital. Se exige contraste suficiente, jerarquía tipográfica legible y áreas de toque amplias.
+
+#### **2. Branding e Identidad Visual Propuesta**
+
+El repositorio todavía no contiene un logotipo de VotoChain ni un manual de marca; por tanto, las reglas siguientes son una dirección de diseño que deberá materializarse y aprobarse antes de usarse como identidad oficial.
+
+* **Isotipo**: El isotipo de VotoChain fusiona geométricamente dos símbolos: la silueta limpia de una **urna electoral moderna con una papeleta ingresando**, intersectada en su base por un **nodo hexagonal interconectado** que representa la inmutabilidad de la cadena de bloques.
+* **Logotipo**: Se compone del isotipo acompañado de la palabra tipográfica **VotoChain**, donde "Voto" se presenta en peso semibold y "Chain" en peso medium con el color secundario cian, enfatizando la dualidad entre el acto democrático y la tecnología garante.
+* **Área de Aislamiento y Reducción Mínima**: Se propone un margen de protección perimetral equivalente a la altura de la letra "V" del logotipo. El tamaño inicial a validar es de `120px` de ancho para la versión horizontal y `32x32px` para favicon o ícono web.
+
+#### **3. Paleta Cromática (Color Palette)**
+
+La paleta cromática se estructura en tokens semánticos. La implementación deberá alcanzar una relación de contraste mínima de **4.5:1** para texto normal y **3:1** para texto grande y componentes gráficos esenciales, conforme a WCAG 2.2 AA.
+
+| Token de Color | Nombre Semántico | Valor HEX | Valor HSL | Restricción de Uso | Propósito y Aplicación en la Interfaz |
+|---|---|---|---|:---:|---|
+| `--color-brand-primary` | Azul Marino Institucional | `#1E3A8A` | `hsl(224, 64%, 33%)` | Admite texto blanco. | Color dominante de marca, navegación, acciones primarias y encabezados. |
+| `--color-brand-secondary` | Azul Celeste Tecnológico | `#0284C7` | `hsl(199, 89%, 40%)` | No usar con texto blanco pequeño sin validar contraste. | Enlaces, foco, bordes de selección y acentos tecnológicos. |
+| `--color-accent-success` | Verde Esmeralda Verificado | `#059669` | `hsl(160, 84%, 39%)` | Usar con texto oscuro o una variante más oscura para texto blanco. | Estados positivos; siempre acompañado por texto o ícono, nunca sólo por color. |
+| `--color-accent-warning` | Ámbar de Atención Cívica | `#D97706` | `hsl(38, 92%, 50%)` | Usar con texto oscuro. | Alertas preventivas y estados que requieren atención. |
+| `--color-accent-danger` | Rojo Carmesí Alerta | `#DC2626` | `hsl(0, 72%, 51%)` | Validar contraste según tamaño y peso del texto. | Errores, bloqueos y acciones destructivas; siempre acompañado por texto o ícono. |
+| `--color-surface-base` | Blanco Nieve / Fondo Claro | `#F8FAFC` | `hsl(210, 40%, 98%)` | Base | Fondo general del lienzo en aplicaciones web y móviles para evitar la fatiga visual del blanco puro (`#FFFFFF`). |
+| `--color-surface-card` | Blanco Puro / Superficie | `#FFFFFF` | `hsl(0, 0%, 100%)` | Base | Superficies elevadas: tarjetas de propuestas, modales, menús flotantes y contenedores de opciones de votación. |
+| `--color-surface-dark` | Azul Medianoche (Dark Mode) | `#0B1120` | `hsl(222, 47%, 8%)` | Base | Fondo general para la modalidad oscura de alta fidelidad, orientada a votaciones en asambleas nocturnas. |
+| `--color-card-dark` | Pizarra Azulada (Dark Mode) | `#1E293B` | `hsl(215, 28%, 17%)` | Base | Superficies elevadas de tarjetas y paneles en modo oscuro. |
+| `--color-text-primary` | Gris Carbón Profundo | `#0F172A` | `hsl(222, 47%, 11%)` | Validar sobre cada superficie. | Títulos, cuerpo de texto principal, opciones de votación y etiquetas de formularios. |
+| `--color-text-secondary` | Gris Pizarra Medio | `#475569` | `hsl(215, 25%, 35%)` | Validar sobre cada superficie. | Metadatos secundarios, fechas de asamblea, descripciones de opciones y pies de página. |
+| `--color-border-subtle` | Gris Borde Neutral | `#E2E8F0` | `hsl(214, 32%, 91%)` | Sólo decorativo; no usar como único límite de un control. | Divisores y bordes no esenciales de superficies. |
+
+Los valores se consideran candidatos y deberán comprobarse sobre cada fondo con una herramienta de contraste. Para texto normal se exige al menos `4.5:1`; para texto grande y componentes gráficos esenciales, `3:1`. Los estados no dependerán exclusivamente del color.
+
+#### **4. Tipografía (Typography System)**
+
+La jerarquía tipográfica propuesta combina fuentes de alta legibilidad. Como los archivos aún no están versionados, el frontend deberá autohospedarlos —si sus licencias lo permiten— y definir fallbacks para evitar saltos de layout o dependencia innecesaria de terceros:
+
+* **Tipografía de Títulos y Display (`Outfit`)**: Fuente geométrica con terminaciones limpias y curvas balanceadas. Se utiliza en titulares de la Landing Page, encabezados de sección y números de cuórum, aportando una presencia contemporánea, cívica y amigable.
+* **Tipografía de Texto y Controles UI (`Inter`)**: Familia tipográfica diseñada específicamente para interfaces digitales por Rasmus Andersson. Ofrece excelente definición de caracteres a tamaños reducidos en pantallas de smartphones de gama media/baja, minimizando la ambigüedad en caracteres similares (como `1`, `l` e `I`).
+* **Tipografía Monoespaciada de Auditoría (`JetBrains Mono`)**: Empleada de forma focalizada para códigos OTP, identificadores de transacción blockchain, llaves públicas truncadas y referencias de recibos de votación (`rec-...`), garantizando que cada dígito mantenga un ancho constante para cotejo visual inmediato.
+
+| Nivel Jerárquico | Familia Tipográfica | Tamaño (px / rem) | Line Height | Peso (Weight) | Uso Principal en Interfaz |
+|---|---|:---:|:---:|:---:|---|
+| **Display (Hero)** | Outfit | `40px` / `2.50rem` | `1.20` | Bold (700) | Titulares principales de la Landing Page y cabeceras de bienvenida. |
+| **Heading 1 (H1)** | Outfit | `32px` / `2.00rem` | `1.25` | Bold (700) | Títulos de pantallas principales: "Asamblea General Ordinaria", "Propuestas Activas". |
+| **Heading 2 (H2)** | Outfit | `24px` / `1.50rem` | `1.30` | SemiBold (600) | Título de propuestas de votación, nombres de comunidades y tarjetas destacadas. |
+| **Heading 3 (H3)** | Outfit | `20px` / `1.25rem` | `1.35` | SemiBold (600) | Subtítulos de módulos, encabezados de modales y resúmenes de cuórum. |
+| **Subtitle / Lead** | Inter | `18px` / `1.125rem` | `1.50` | Medium (500) | Introducción a propuestas complejas, subtítulos explicativos de asamblea. |
+| **Body Regular** | Inter | `16px` / `1.00rem` | `1.50` | Regular (400) | Párrafos informativos, textos de opciones de votación y reglamentos internos. |
+| **Body Bold / Button** | Inter | `16px` / `1.00rem` | `1.25` | SemiBold (600) | Botones de acción principal ("Emitir Voto", "Confirmar"), etiquetas activas. |
+| **Caption / Small** | Inter | `14px` / `0.875rem` | `1.40` | Regular (400) | Textos de ayuda en formularios, timestamps de votación, estado de elegibilidad. |
+| **Badge / Micro** | Inter | `12px` / `0.75rem` | `1.20` | SemiBold (600) | Badges de estado (`ABIERTA`, `VERIFICADO`, `CONFIRMADO`), chips de departamento. |
+| **Code / Audit Hash** | JetBrains Mono | `13px` / `0.8125rem` | `1.40` | Medium (500) | Hashes de bloques Polygon, firmas EIP-712 truncadas, códigos de constancia. |
+
+#### **5. Espaciado, Retícula y Elevación (Spacing & Elevation)**
+
+* **Sistema de Espaciado Modular (8-Point Grid)**: Todo espaciado de margen, padding, gaps y alturas de fila sigue múltiplos de 8px (con un valor medio de 4px para microajustes de badges e íconos):
+  * `4px` (`space-1`): Separación entre ícono y texto en botones compactos.
+  * `8px` (`space-2`): Padding interno de badges, inputs pequeños y separación de listas densas.
+  * `16px` (`space-4`): Padding estándar de tarjetas móviles, inputs de formulario y espaciado entre párrafos.
+  * `24px` (`space-6`): Padding de tarjetas en escritorio, separación entre bloques de opciones de votación.
+  * `32px` (`space-8`): Margen vertical entre secciones secundarias y cabeceras de módulo.
+  * `48px` (`space-12`): Separación entre bloques estructurales de contenido en paneles de control.
+  * `64px` (`space-16`): Espaciado de sección mayor en la Landing Page.
+* **Radios de Borde (`border-radius`)**:
+  * `6px` (`rounded-md`): Inputs de formulario, selectores y badges.
+  * `10px` (`rounded-lg`): Botones de acción, tarjetas secundarias y bloques de opción.
+  * `16px` (`rounded-2xl`): Modales de diálogo, tarjetas contenedoras principales y banners de alerta.
+* **Elevación y Sombras (Elevation Tokens)**:
+  * `shadow-sm` (`0 1px 2px rgba(0,0,0,0.05)`): Tarjetas en reposo y contenedores de formulario.
+  * `shadow-md` (`0 4px 6px -1px rgba(0,0,0,0.1)`): Tarjetas interactivas en estado hover, cabecera sticky de navegación.
+  * `shadow-lg` (`0 10px 15px -3px rgba(0,0,0,0.1)`): Modales emergentes de confirmación de voto y drawers de verificación.
+
+#### **6. Tono de Comunicación y Lenguaje Aplicado**
+
+El lenguaje de VotoChain refleja la seriedad y trascendencia de los acuerdos de copropiedad y cooperativas, posicionando a la plataforma como un árbitro tecnológico imparcial y confiable. Siguiendo la metodología de dimensiones de tono de voz, se adoptan las siguientes decisiones:
+
+```mermaid
+quadrantChart
+    title Matriz de Dimensiones del Tono de Comunicación en VotoChain
+    x-axis "Casual / Informal" --> "Formal Institucional"
+    y-axis "Divertido / Gamificado" --> "Serio y Confiable"
+    quadrant-1 "VotoChain (Serio + Formal Institucional)"
+    quadrant-2 "Inadecuado para Asambleas Legales"
+    quadrant-3 "Inadecuado (Riesgo de Percepción de Fraude)"
+    quadrant-4 "Comercial / B2C Ligero"
+    "VotoChain Platform": [0.75, 0.85]
+```
+
+1. **Serio, sin resultar intimidante**: Se evitan la gamificación, el confeti y los mensajes festivos en decisiones patrimoniales. El tono debe transmitir sobriedad, precisión y calma.
+2. **Formal, pero en lenguaje claro**: Se mantiene un trato institucional y respetuoso sin recurrir a barroquismos notariales. Las preguntas y opciones se redactan de manera directa y sin ambigüedad.
+3. **Respetuoso y transparente**: Nunca se presume el consentimiento ni se oculta el propósito de una captura. Se explica qué dato se solicita, para qué se usa y qué puede hacer el titular.
+4. **Sereno y verificable**: Las confirmaciones describen el estado real. “Voto recibido” corresponde a la intención aceptada; “Voto confirmado” se reserva para la confirmación on-chain. No se promete éxito antes de que exista el hecho técnico correspondiente.
+
+| Dimensión | Enfoque de VotoChain | Ejemplo Aceptado en Interfaz | Ejemplo Rechazado |
+|---|---|---|---|
+| **Verificación Biométrica** | Transparente, clínico y guiado | *"Ubique su rostro dentro del marco ovalado y parpadee lentamente. La imagen se procesará de forma transitoria para verificar su presencia y no será almacenada."* | *"¡Hazte un selfie genial para que sepamos quién eres y puedas entrar a la fiesta de la votación!"* |
+| **Emisión del Voto** | Seguro, consciente y confirmable | *"Ha seleccionado: 'Aprobación del Presupuesto Anual 2026'. Al confirmar, se consumirá su autorización única y comenzará el registro del voto. ¿Desea continuar?"* | *"¡Listo! Dale clic aquí para mandar tu voto a la nube mágica de blockchain."* |
+| **Fallo de Identidad** | Diagnóstico técnico sereno y útil | *"No fue posible verificar la coincidencia facial con el documento presentado. Por favor, asegúrese de contar con buena iluminación y retire lentes o accesorios."* | *"¡Ups! No te reconocimos. Algo salió mal en el escaneo facial. Prueba otra vez."* |
+| **Comprobante de Voto** | Precisión formal y estado verificable | *"Voto recibido. Estamos confirmando su registro. Puede consultar el estado con el código de constancia rec-8831."* | *"¡Genial! Tu voto ya está minado en el bloque cripto de Polygon. ¡Eres parte de la web3!"* |
+
+---
+
 ### **6.1.2. Web, Mobile & Devices Style Guidelines.**
+
+#### **1. Breakpoints y Sistema Adaptativo Multidispositivo**
+
+La arquitectura del Capítulo IV prevé un único frontend **Next.js** para la Landing Page y la aplicación web. Por ello, “mobile” designa inicialmente una experiencia web responsive —no una aplicación nativa ni una publicación en tiendas—. La solución atiende dos experiencias principales: administración de asamblea en pantallas amplias y emisión de voto/verificación desde smartphones.
+
+| Dispositivo Objetivo | Rango de Viewport | Columnas | Márgenes | Gutter | Casos de Uso Predominantes en VotoChain |
+|---|:---:|:---:|:---:|:---:|---|
+| **Mobile web (Compact)** | `320px` – `639px` | 4 | `16px` | `12px` | **Flujo del Votante (Miguel Herrera)**: enrollment biométrico, lectura de propuestas, selección, confirmación y consulta de constancia. |
+| **Tablet (Medium)** | `640px` – `1023px` | 8 | `24px` | `16px` | **Mesa de Apoyo en Asamblea Presencial**: Consulta del padrón electoral en recepción, asistencia a miembros en el registro y visualización en tiempo real de resultados preliminares. |
+| **Desktop / Laptop (Expanded)** | `1024px` – `1440px+` | 12 | `32px` | `24px` | **Dashboard Administrativo (Patricia Salas)**: Configuración de la comunidad, carga y regularización del padrón de miembros, apertura/cierre de propuestas, monitoreo de cuórum en vivo y exportación de actas oficiales. |
+
+#### **2. Estándares Visuales e Interacción para Web Responsive (Portal Administrativo)**
+
+* **Arquitectura de Layout (Sidebar Persistente)**: Panel lateral de navegación con ancho fijo de `260px` en escritorio, colapsable a modo icono (`72px`) para maximizar el área de trabajo de tablas densas. En pantallas de tabletas y móviles, el menú se repliega automáticamente en un cajón flotante (*Drawer accesible*).
+* **Tablas de Datos Densas para el Padrón Electoral**:
+  * Encabezados fijos (*Sticky Table Header*) con ordenamiento alfanumérico por columna (departamento/lote, apellidos, estado de pago).
+  * Fila de resumen de elegibilidad superior que totaliza miembros habilitados para cuórum.
+  * Paginación limpia de 10, 25 o 50 registros, con barra de búsqueda global y selector de filtros facetados.
+  * En pantallas de menos de `768px`, las tablas se transforman automáticamente en **tarjetas de datos apiladas (Card View)** para evitar el desplazamiento horizontal incómodo.
+* **Monitoreo de Cuórum en Vivo**: Indicadores visuales destacados compuestos por:
+  * Barra de progreso horizontal con marcador del umbral configurado y congelado (`QuorumSnapshot`).
+  * Desglose porcentual y numérico en tiempo real (ej. `68.5% alcanzado / 60.0% requerido`).
+  * Gráficos accesibles tipo dona con etiquetas de valor en texto plano para asegurar lectura en navegadores que deshabilitan scripts pesados.
+* **Confirmación de Acciones Críticas**: Apertura de propuestas, cierre de convocatoria y publicación de resultados emplean diálogos accesibles con foco contenido, resumen del efecto y confirmación explícita. No se exige una segunda interacción mecánica si no reduce un riesgo concreto.
+
+#### **3. Estándares Visuales e Interacción para Mobile Web (Portal del Votante)**
+
+* **Optimización de la Zona del Pulgar (*Thumb Zone Navigation*)**:
+  * Los botones primarios de acción ("Continuar", "Confirmar Elección", "Emitir Voto") se ubican en una **barra inferior persistente (Sticky Bottom Bar)** de `72px` de altura, anclada en la parte inferior de la pantalla para permitir la operación con una sola mano sin forzar el agarre del dispositivo.
+* **Áreas Táctiles Mínimas (*Touch Targets*)**:
+  * Cualquier elemento interactivo (botones, selectores de voto, enlaces y controles de cámara) posee una dimensión táctil mínima de **`48x48px`** (o `48x48dp`), con un espaciado perimetral mínimo de `8px` para evitar pulsaciones erróneas involuntarias.
+* **Módulo de Captura y Liveness Biométrico**:
+  * Viewport de cámara con guía ovalada semitransparente que orienta la colocación del rostro en pantalla completa.
+  * Indicador dinámico de iluminación: el borde del óvalo cambia de color (Gris neutral = buscando rostro; Ámbar = poca luz; Verde esmeralda = iluminación adecuada y rostro alineado).
+  * Instrucciones directas en la parte inferior: "Mire a la cámara", "Parpadee lentamente", "Procesando prueba de presencia".
+  * Animación de escaneo mediante un barrido vertical suave no invasivo que indica actividad sin generar destellos o parpadeos molestos.
+* **Componente de Papeleta Digital (*Radio Card Component*)**:
+  * En lugar de radio buttons diminutos convencionales, las opciones de voto se presentan en **tarjetas táctiles completas (Radio Cards)** de altura mínima de `56px`.
+  * La tarjeta no seleccionada presenta fondo blanco con borde sutil `#E2E8F0`; al ser seleccionada, adopta un borde azul marino de `2px`, un fondo azul tenue (`#EFF6FF`) y un ícono de check visible a la derecha, eliminando cualquier duda sobre la opción marcada antes de presionar el botón de confirmación.
+* **Constancia de Voto en Pantalla Móvil**:
+  * Tarjeta sobria con código de constancia, propuesta, fecha/hora con zona horaria y estado (`Recibido`, `En confirmación`, `Confirmado` o `No confirmado`).
+  * El código QR es opcional y sólo enlaza al verificador cuando exista una URL pública estable. La vista pública no expone DNI, correo, identidad del votante ni opción elegida.
+  * El hash y el bloque se muestran únicamente tras la confirmación on-chain. La descarga PDF deberá conservar la misma minimización de datos.
+
+#### **4. Accesibilidad e Inclusión (Objetivo WCAG 2.2 AA)**
+
+* **Navegación por Teclado y Foco Visible**: Todos los elementos interactivos deberán ser operables con teclado y mostrar un indicador de foco de al menos `2px`, con contraste suficiente respecto del estado sin foco.
+* **Semántica y Atributos ARIA**:
+  * Formularios con etiquetas explícitas `<label for="...">` asociadas unívocamente con sus inputs.
+  * Las métricas dinámicas de cuórum se implementarán con `aria-live="polite"`, permitiendo que los lectores de pantalla anuncien cambios relevantes sin interrumpir la lectura activa.
+  * Estados de error marcados con `aria-invalid="true"` y mensajes vinculados mediante `aria-describedby`.
+* **Movimiento y tiempo**: Se respeta `prefers-reduced-motion`; ninguna animación es indispensable para comprender un estado. Los vencimientos muestran tiempo restante y ofrecen reintento claro.
+* **Conectividad y permisos**: La denegación de cámara, una conexión inestable o un error del proveedor se explican sin culpar al usuario y ofrecen recuperación. La alternativa de soporte no debe omitir las reglas de identidad y consentimiento.
+
+---
 
 ## **6.2. Information Architecture.**
 

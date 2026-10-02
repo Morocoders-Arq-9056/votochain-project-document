@@ -165,10 +165,11 @@
     - [6.1.1. General Style Guidelines.](#611-general-style-guidelines)
     - [6.1.2. Web, Mobile & Devices Style Guidelines.](#612-web-mobile--devices-style-guidelines)
   - [6.2. Information Architecture.](#62-information-architecture)
-    - [6.2.1. Labeling Systems.](#621-labeling-systems)
-    - [6.2.2. Searching Systems.](#622-searching-systems)
-    - [6.2.3. SEO Tags and Meta Tags.](#623-seo-tags-and-meta-tags)
-    - [6.2.4. Navigation Systems.](#624-navigation-systems)
+    - [6.2.1. Organization Systems.](#621-organization-systems)
+    - [6.2.2. Labeling Systems.](#622-labeling-systems)
+    - [6.2.3. Searching Systems.](#623-searching-systems)
+    - [6.2.4. SEO Tags, Meta Tags y ASO Elements.](#624-seo-tags-meta-tags-y-aso-elements)
+    - [6.2.5. Navigation Systems.](#625-navigation-systems)
   - [6.3. Landing Page UI Design.](#63-landing-page-ui-design)
     - [6.3.1. Landing Page Wireframe.](#631-landing-page-wireframe)
     - [6.3.2. Landing Page Mock-up.](#632-landing-page-mock-up)
@@ -1649,13 +1650,220 @@ La arquitectura del Capítulo IV prevé un único frontend **Next.js** para la L
 
 ## **6.2. Information Architecture.**
 
-### **6.2.1. Labeling Systems.**
+La arquitectura de información (IA) organiza la futura Landing Page y la aplicación web responsive de VotoChain. Su unidad principal es la **comunidad**; dentro de ella se ubican miembros, política de votación, asambleas, propuestas, votos y constancias. Esta jerarquía refleja el lenguaje ubicuo del Capítulo II y evita mezclar conceptos distintos como usuario de IAM, miembro de una comunidad y administrador comunitario.
 
-### **6.2.2. Searching Systems.**
+La IA descrita es objetivo de diseño. En el backend actual sólo existen superficies REST para IAM, desafíos OTP y gestión de comunidades; los módulos de membresía, votación, biometría, auditoría pública y sus interfaces permanecen planificados. Cada pantalla futura deberá mantener trazabilidad con esos contratos y no inventar estados que contradigan el dominio.
 
-### **6.2.3. SEO Tags and Meta Tags.**
+---
 
-### **6.2.4. Navigation Systems.**
+### **6.2.1. Organization Systems.**
+
+Los sistemas de organización de VotoChain definen cómo se agrupan, estructuran y jerarquizan los contenidos para permitir una navegación intuitiva y coherente en las diferentes etapas del ciclo de vida del producto.
+
+#### **1. Estructuras de Organización Visual del Contenido**
+
+Para presentar los conjuntos de información se adoptarán tres tipos de organización visual según el objetivo de la tarea:
+
+```mermaid
+graph TD
+    subgraph "1. Organización Jerárquica"
+        A[Dashboard Comunidad] --> B[Asamblea Activa]
+        B --> C[Propuesta en Curso]
+        C --> D[Métricas de Cuórum]
+        C --> E[Opciones de Votación]
+    end
+
+    subgraph "2. Organización Secuencial (Paso a Paso)"
+        F[1. Consentimiento] --> G[2. Captura DNI]
+        G --> H[3. Liveness Facial]
+        H --> I[4. Emisión de Voto]
+        I --> J[5. Constancia Generada]
+    end
+
+    subgraph "3. Organización Matricial"
+        K[Padrón Electoral] --- L[Unidad Inmobiliaria]
+        K --- M[Estado de Pago]
+        K --- N[Estado de Emisión]
+    end
+```
+
+1. **Organización Jerárquica (Visual Hierarchy)**:
+   * **Landing Page**: Estructura de pirámide invertida que guía desde la propuesta de valor hacia funcionamiento, privacidad, evidencia técnica, preguntas frecuentes y contacto. Testimonios, precios o afirmaciones normativas sólo se incorporan cuando estén validados.
+   * **Portal Administrativo**: Jerarquía de tres niveles: *Nivel 1: Comunidad* (datos generales, políticas de cuórum); *Nivel 2: Convocatorias y Asambleas* (fechas, agenda, padrón habilitado); *Nivel 3: Propuestas y Votaciones* (alternativas, votos confirmados, cuórum alcanzado, actas oficiales).
+2. **Organización Secuencial (Step-by-Step to Accomplish)**:
+   * **Proceso de Enrollment Biométrico Inicial**: Flujo estrictamente lineal y guiado de 4 pasos (Paso 1: Consentimiento informado de tratamiento de datos personales → Paso 2: Escaneo de DNI con OCR → Paso 3: Prueba de vida facial con liveness → Paso 4: Referencia biométrica confirmada).
+   * **Proceso de Emisión de Voto Remoto**: Flujo lineal de 4 pasos con retroalimentación instantánea (Paso 1: Lectura de propuesta y opciones → Paso 2: Verificación de presencia facial fresca → Paso 3: Selección de alternativa y confirmación → Paso 4: Recepción de constancia digital auditable con transacción en ledger).
+3. **Organización Matricial (Faceted / Matrix View)**:
+   * **Gestión del Padrón de Miembros**: Una fila representa una membresía y permite filtrar por unidad y estado (`SOLICITADA`, `ACTIVA`, `MOROSA`, `SUSPENDIDA`, `TERMINADA`). La asistencia y el estado de voto se mostrarán en vistas de asamblea, no como atributos permanentes de Membership.
+   * **Auditoría de Resultados**: Matriz que cruza *Propuestas* × *Opciones de Voto* × *Cuórum Congelado* × *Bloques Confirmados en Blockchain*, permitiendo a auditores y directivas verificar la consistencia matemática de la asamblea sin depender de reportes opacos.
+
+#### **2. Esquemas de Categorización del Contenido**
+
+Los esquemas clasifican la información en categorías reconocibles para cada segmento de usuario:
+
+| Esquema de Categorización | Criterio de Ordenamiento | Aplicación Concreta en VotoChain | Beneficio para el Usuario |
+|---|---|---|---|
+| **Cronológico** | Temporal (Pasado, Presente, Futuro) | • **Propuestas de Votación**: Agrupadas en "En curso (Abiertas ahora)", "Programadas (Próximas asambleas)" y "Históricas (Concluidas y contabilizadas)".<br>• **Registro de Eventos de Asamblea**: Línea de tiempo ordenada de apertura, votaciones parciales, recesos y cierre oficial. | Permite al votante priorizar lo que debe votar hoy y a la administradora revisar actas de años previos. |
+| **Por Tópicos / Temas** | Materia o Naturaleza del Asunto | • **Propuestas de Asamblea**: Aprobación de Presupuesto Anual, Obras y Mantenimiento de Edificio, Elección de Junta Directiva, Normas de Convivencia y Modificaciones de Estatuto.<br>• **Centro de Ayuda / FAQs**: Preguntas sobre Legalidad de Actas, Privacidad Biométrica, Métodos de Voto y Soporte Técnico. | Facilita a los propietarios informarse sobre temas específicos de su interés patrimonial antes de emitir su voto. |
+| **Según Audiencia (Grupos de Usuarios)** | Perfil y Nivel de Privilegios | • **Visitantes (Público general)**: Landing Page con información comercial, cotizador SaaS y solicitud de demostración.<br>• **Propietarios y Socios Votantes (Móvil)**: Vista personal con sus comunidades asociadas, sus propuestas pendientes y sus constancias de voto.<br>• **Directivas y Administradoras (Web Desktop)**: Panel de control con configuración comunitaria, padrón, apertura de asambleas y generación de actas. | Cada tipo de usuario accede directamente a las herramientas que requiere, sin confusión de roles ni interfaces sobrecargadas. |
+| **Alfabético** | Orden Lexicográfico A–Z | • **Padrón Electoral de Miembros**: Clasificación por Apellidos y Nombres (`Paterno Materno, Nombres`) de todos los copropietarios y socios.<br>• **Directorio de Comunidades**: Para administradores profesionales que gestionan múltiples condominios. | Permite una localización inmediata de personas durante la mesa de asistencia o validación presencial en la asamblea. |
+
+---
+
+### **6.2.2. Labeling Systems.**
+
+El sistema de rotulado representa datos, acciones y estados con expresiones breves, consistentes y orientadas a la tarea. La brevedad nunca debe eliminar información necesaria para comprender una consecuencia, un consentimiento o un error.
+
+#### **1. Traducción del Lenguaje Técnico a Lenguaje de Interfaz**
+
+En consonancia con D-22 y el Lenguaje Ubicuo de la Sección 2.4, la UI traduce los términos internos sin ocultar la evidencia técnica en las vistas de detalle o auditoría:
+
+| Término Interno | Etiqueta Principal para Usuario | Criterio de Uso |
+|---|---|---|
+| *Gas fee / pago de red* | **Sin costo de red para usted** | El votante no gestiona ni financia la comisión; el detalle de operación permanece disponible para administración y auditoría. |
+| *Wallet / llave privada* | **Firma de voto** | La wallet no se presenta como un producto que el usuario deba administrar; la firma y sus referencias verificables quedan disponibles en auditoría, nunca la clave privada. |
+| *Mempool / Transacción pendiente* | **Voto en Proceso de Registro** | Comunica un estado activo comprensible sin inducir ansiedad técnica sobre la propagación de bloques. |
+| *Tx Hash (0x8f...)* | **Código de Constancia Digital** *(con hash visible al expandir)* | La mayoría de usuarios no sabe interpretar un hash; un código de constancia (`rec-2026-0412`) resulta verificable y amigable. |
+| *KYC / biometric match* | **Verificación de identidad** | Se especifica el paso concreto —documento, prueba de vida o comparación facial— y se explica el tratamiento de datos. |
+| *Smart contract* | **Registro verificable** | Las reglas de cuórum pertenecen a la política de votación; el contrato es el mecanismo técnico de registro y no debe confundirse con esa política. |
+| *Tenant / organization* | **Comunidad** | Mantiene el vocabulario del dominio para edificios, condominios y cooperativas sin atribuir una definición legal universal. |
+
+#### **2. Catálogo Oficial de Rotulado por Componente de Interfaz**
+
+##### **A. Etiquetas de Navegación**
+* **Landing Page**: `Inicio`, `Cómo Funciona`, `Seguridad y Privacidad`, `Planes y Precios`, `Preguntas Frecuentes`, `Solicitar Demo`, `Ingresar`.
+* **Portal del Votante (Mobile Web)**: `Mis Votaciones`, `Comunidades`, `Mis Constancias`, `Mi Perfil`.
+* **Portal Administrativo (Web Dashboard)**: `Panel General`, `Padrón de Miembros`, `Convocatorias y Asambleas`, `Propuestas`, `Resultados y Actas`, `Configuración de Comunidad`.
+
+##### **B. Etiquetas de Acción (Botones y Call To Action Breves)**
+* Acciones Primarias: `Emitir Voto`, `Verificar Identidad`, `Confirmar Selección`, `Abrir Votación`, `Cerrar Votación`, `Descargar Constancia`, `Solicitar Demostración`.
+* Acciones Secundarias / Cancelación: `Volver`, `Modificar Elección`, `Guardar Borrador`, `Descargar Acta`, `Copiar Enlace`.
+* Acciones Críticas / Destructivas: `Archivar Comunidad`, `Revocar Acceso`, `Suspender Comunidad`, `Eliminar Convocatoria`.
+
+##### **C. Etiquetas de Estado del Sistema (Badges Semánticos)**
+* **Estados de Propuesta** —traducción de `DRAFT → OPEN → CLOSED → TALLIED`—:
+  * `Borrador`: propuesta en preparación, todavía no recibe votos.
+  * `Abierta`: recibe votos con la política de cuórum congelada.
+  * `Cerrada`: ya no recibe votos; el cómputo aún puede estar pendiente.
+  * `Contabilizada`: resultado calculado únicamente con votos confirmados on-chain.
+* **Estados de Voto** —agrupación comprensible de `SIGNED / QUEUED / SENT → CONFIRMED / FAILED`—:
+  * `Recibido`: intención firmada aceptada por la plataforma, todavía no contabilizada.
+  * `En confirmación`: entrega al ledger en curso.
+  * `Confirmado`: registro on-chain confirmado y elegible para el cómputo.
+  * `No confirmado`: la entrega falló; debe mostrarse la razón y, cuando corresponda, la acción de reintento o soporte.
+* **Estados de Membresía**:
+  * `Solicitada` *(Neutral)*: registro pendiente de activación.
+  * `Activo` *(Verde)*: Habilitado con voz y voto según padrón.
+  * `Moroso` *(Ámbar)*: Estado de membresía que sólo restringe el voto cuando la política configurada así lo determine.
+  * `Suspendido` *(Rojo)*: Inhabilitado temporalmente de la asamblea.
+  * `Terminada` *(Gris)*: relación de membresía finalizada; estado terminal.
+
+##### **D. Etiquetas de Mensajería y Feedback**
+* `Identidad verificada`: tras superar prueba de vida y comparación facial.
+* `La verificación venció. Vuelva a verificar su identidad para continuar`: cuando concluye la ventana de frescura configurada.
+* `Voto recibido. Confirmación pendiente`: tras aceptar la intención firmada.
+* `Voto confirmado y contabilizable`: sólo después de la confirmación on-chain.
+* `Cuórum alcanzado (65,4 %)`: cuando la comparación con el `QuorumSnapshot` lo confirme; no se añade “legal” sin una validación jurídica específica.
+
+#### **3. Reglas de Consistencia Editorial**
+
+* Los botones comienzan con verbo y describen el efecto inmediato: `Guardar borrador`, `Abrir votación`, `Confirmar voto`.
+* Los estados se expresan como sustantivo o participio y no como acción: `Abierta`, `En confirmación`, `Confirmado`.
+* Se utiliza español del Perú, tratamiento de **usted**, formato de fecha `dd/mm/aaaa` y hora acompañada de zona horaria cuando afecte apertura o cierre.
+* Los mensajes de error indican qué ocurrió, qué dato se conserva y qué puede hacer la persona. No se exponen códigos internos, trazas ni datos biométricos.
+* Icono, color y texto se combinan para comunicar estados; ninguno funciona como único indicador.
+
+---
+
+### **6.2.3. Searching Systems.**
+
+La búsqueda se diseña por contexto, alcance y permiso. El sistema no tendrá un buscador global que mezcle comunidades ni datos personales. Como el backend actual no expone endpoints de búsqueda de miembros, propuestas, actas o constancias, esta sección define el contrato UX objetivo y su prioridad de implementación.
+
+```mermaid
+flowchart LR
+    A[Persona inicia consulta] --> B{Contexto y autorización}
+    B -->|Landing pública| C[Filtrar ayuda]
+    B -->|Comunidad autorizada| D[Miembros, propuestas y actas]
+    B -->|Portal del votante| E[Mis votaciones y constancias]
+    B -->|Verificador público| F[Código o hash exacto]
+    D --> G[Resultados limitados a la comunidad]
+    F --> H[Estado y evidencia sin datos personales]
+```
+
+#### **1. Zonas, Alcance y Prioridad**
+
+| Superficie | Consulta y filtros | Alcance / privacidad | Prioridad |
+|---|---|---|---|
+| **Landing Page** | Filtro local de preguntas frecuentes por tema: funcionamiento, privacidad, seguridad y soporte. | Sólo contenido público. Las afirmaciones normativas deberán tener fuente y fecha de revisión. | Primera entrega del frontend. |
+| **Portal administrativo** | Miembros por nombre, unidad o documento; propuestas por título/estado/fecha; actas por asamblea y periodo. | Requiere sesión, rol comunitario y `communityId`. Los documentos se enmascaran en resultados y logs. | Tras implementar Membership y Voting. |
+| **Portal del votante** | Filtro de sus propias votaciones y constancias por comunidad, estado o fecha. | Nunca devuelve datos de otros miembros. | Tras implementar Voting. |
+| **Verificador público** | Coincidencia exacta por código de constancia o hash de transacción; no ofrece autocompletado ni listados. | Devuelve estado, fecha, red, bloque y validez técnica sin DNI, correo, dirección de wallet completa ni opción de voto. | Tras implementar Voting, Relay y política de secreto de papeleta. |
+
+El documento de identidad no será el criterio sugerido por defecto. Su uso exige autorización, coincidencia exacta, enmascaramiento y controles contra enumeración. La búsqueda pública nunca podrá descubrir constancias mediante consultas parciales.
+
+#### **2. Comportamiento y Directrices de Interacción en Búsqueda**
+
+* **Ejecución**: filtros locales sobre listas pequeñas; consultas al servidor con `debounce` de referencia de `300 ms`, mínimo de 2 caracteres, cancelación de solicitudes anteriores, paginación y orden estable. El valor deberá ajustarse con medición, no asumirse como requisito de dominio.
+* **Normalización**: nombres y títulos ignoran mayúsculas y diacríticos; códigos, hashes y documentos usan coincidencia exacta. No se aplica búsqueda difusa a identificadores sensibles.
+* **Feedback accesible**: se muestran los estados `Escriba para buscar`, `Buscando…`, cantidad de resultados, error recuperable y estado vacío. Los cambios se anuncian mediante una región `aria-live="polite"` sin mover el foco.
+* **Coincidencias**: el resaltado mantiene contraste suficiente y no sustituye el texto. Los términos ingresados se escapan antes de renderizarse.
+* **Estado vacío**: informa el alcance consultado y ofrece `Limpiar filtros`; no confirma si una persona existe fuera de la comunidad autorizada.
+* **Seguridad y desempeño**: autorización en servidor, consultas parametrizadas, límites de página, rate limiting y logs sin términos sensibles completos. El frontend nunca será el único control de acceso.
+
+---
+
+### **6.2.4. SEO Tags, Meta Tags y ASO Elements.**
+
+La estrategia SEO se aplica únicamente al contenido público. El portal autenticado y los resultados individualizados de auditoría no deben indexarse. Los valores siguientes son una especificación para el futuro frontend; el dominio público, las imágenes sociales y las rutas deberán validarse antes del despliegue.
+
+#### **1. SEO Tags y Meta Tags para el Sitio Web Estático (Landing Page)**
+
+| Parámetro / Tag | Inicio (`/`) | Seguridad y Privacidad (`/seguridad`) | Planes (`/precios`) | Demostración (`/demo`) |
+|---|---|---|---|---|
+| `<title>` | VotoChain \| Votación verificable para comunidades | Seguridad y privacidad en VotoChain | Planes de VotoChain para comunidades | Solicite una demostración de VotoChain |
+| `meta description` | Conozca la propuesta de VotoChain para gestionar votaciones remotas con verificación de identidad y evidencia auditable en juntas y cooperativas. | Revise el diseño de verificación de identidad, consentimiento, minimización de datos y registro auditable previsto por VotoChain. | Compare los planes disponibles para gestionar votaciones comunitarias. Precios y condiciones sujetos a la oferta publicada. | Solicite una demostración para evaluar el flujo de administración, votación y consulta de constancias de VotoChain. |
+| `meta keywords`* | `votación electrónica, junta de propietarios, asamblea virtual, VotoChain` | `privacidad biométrica, verificación de identidad, auditoría de votos` | `software de votación, planes para comunidades` | `demostración VotoChain, votación comunitaria` |
+| `meta author` | Morocoders | Morocoders | Morocoders | Morocoders |
+| `og:title` | VotoChain: votación verificable para comunidades | Seguridad y privacidad en VotoChain | Planes para comunidades | Solicite una demostración |
+| `og:description` | La propuesta de VotoChain para organizar votaciones remotas con identidad verificada y evidencia consultable. | Conozca cómo se proyecta proteger la identidad y distinguir un voto recibido de uno confirmado. | Revise opciones de adopción según las necesidades de su comunidad. | Recorra el flujo propuesto y evalúe su aplicación en su comunidad. |
+| `og:image` | `{baseUrl}/assets/og-home.png` | `{baseUrl}/assets/og-security.png` | `{baseUrl}/assets/og-pricing.png` | `{baseUrl}/assets/og-demo.png` |
+| `twitter:card` | `summary_large_image` | `summary_large_image` | `summary_large_image` | `summary_large_image` |
+| `canonical URL` | `{baseUrl}/` | `{baseUrl}/seguridad` | `{baseUrl}/precios` | `{baseUrl}/demo` |
+
+*`meta keywords` se conserva por completitud de la rúbrica y compatibilidad con otros consumidores; [Google indica que no lo utiliza para indexación ni ranking](https://developers.google.com/search/docs/crawling-indexing/special-tags). Cada página deberá incluir además `charset="utf-8"`, `viewport`, `lang="es-PE"`, `og:type="website"`, `og:url`, `og:locale="es_PE"`, `og:image:alt` y datos estructurados JSON-LD verificables. No se publicarán testimonios, precios, certificaciones ni afirmaciones legales que no cuenten con evidencia vigente.
+
+#### **2. SEO Tags y Directivas para Web Applications (Portal Autenticado y Auditoría)**
+
+* **Zonas privadas (`/app/*`, `/admin/*`)**:
+  * Deben requerir autenticación y autorización en servidor, enviar `Cache-Control: private, no-store` cuando contengan datos sensibles y declarar:
+    ```html
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    ```
+  * `noindex` es una directiva para buscadores, no un control de seguridad. Las rutas privadas no se incluirán en sitemap y su contenido no se renderizará para clientes sin sesión.
+* **Auditoría (`/auditoria`)**:
+  * La página explicativa estática puede indexarse. El resultado de cada código o hash usa una URL no enumerable y `noindex, noarchive, nosnippet` para reducir exposición y duplicación:
+    ```html
+    <title>Consultar una constancia de VotoChain</title>
+    <meta name="description" content="Consulte el estado y la evidencia técnica asociada a una constancia de VotoChain." />
+    <meta name="robots" content="noindex, noarchive, nosnippet" />
+    ```
+
+#### **3. ASO (App Store Optimization) Elements para la Aplicación Móvil**
+
+**No aplica al alcance vigente.** La arquitectura aprobada define una Landing Page y una aplicación web responsive en Next.js; no existe repositorio de aplicación nativa ni evidencia de publicación en Google Play o Apple App Store. En consecuencia, no corresponde presentar títulos, categorías, clasificación etaria o descripciones de tienda como elementos ya definidos.
+
+Si una aplicación nativa se incorpora al roadmap, el ASO se abrirá como entregable independiente y deberá:
+
+1. reutilizar el sistema de rotulado y la identidad visual aprobada;
+2. describir sólo capacidades implementadas y verificadas, sin prometer validez legal, invulnerabilidad, tiempos garantizados o protección absoluta;
+3. definir nombre, subtítulo, keywords, descripción breve y descripción completa dentro de los límites vigentes de [Apple App Store](https://developer.apple.com/app-store/product-page/) y [Google Play](https://support.google.com/googleplay/android-developer/answer/9859152);
+4. completar la clasificación etaria y las declaraciones de privacidad a partir del comportamiento real de la app y sus SDK, no por estimación documental; y
+5. localizar la ficha para `es-PE` y validarla con investigación de términos antes de publicarla.
+
+---
+
+### **6.2.5. Navigation Systems.**
+*(Esta sección detalla los esquemas de navegación global, jerárquica y contextual en el siguiente bloque de diseño de interfaces).*
 
 ## **6.3. Landing Page UI Design.**
 

@@ -149,57 +149,6 @@
     - [4.3.3. Software Architecture Container Level Diagrams.](#433-software-architecture-container-level-diagrams)
     - [4.3.4. Software Architecture Deployment Diagrams.](#434-software-architecture-deployment-diagrams)
 
-- [Capítulo V: Tactical-Level Software Design.](#capítulo-v-tactical-level-software-design)
-  - [5.X. Bounded Context: &lt;Bounded Context Name&gt;](#5x-bounded-context-bounded-context-name)
-    - [5.X.1. Domain Layer.](#5x1-domain-layer)
-    - [5.X.2. Interface Layer.](#5x2-interface-layer)
-    - [5.X.3. Application Layer.](#5x3-application-layer)
-    - [5.X.4. Infrastructure Layer.](#5x4-infrastructure-layer)
-    - [5.X.5. Bounded Context Software Architecture Component Level Diagrams.](#5x5-bounded-context-software-architecture-component-level-diagrams)
-    - [5.X.6. Bounded Context Software Architecture Code Level Diagrams.](#5x6-bounded-context-software-architecture-code-level-diagrams)
-      - [5.X.6.1. Bounded Context Domain Layer Class Diagrams.](#5x61-bounded-context-domain-layer-class-diagrams)
-      - [5.X.6.2. Bounded Context Database Design Diagram.](#5x62-bounded-context-database-design-diagram)
-
-- [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
-  - [6.1. Style Guidelines.](#61-style-guidelines)
-    - [6.1.1. General Style Guidelines.](#611-general-style-guidelines)
-    - [6.1.2. Web, Mobile & Devices Style Guidelines.](#612-web-mobile--devices-style-guidelines)
-  - [6.2. Information Architecture.](#62-information-architecture)
-    - [6.2.1. Labeling Systems.](#621-labeling-systems)
-    - [6.2.2. Searching Systems.](#622-searching-systems)
-    - [6.2.3. SEO Tags and Meta Tags.](#623-seo-tags-and-meta-tags)
-    - [6.2.4. Navigation Systems.](#624-navigation-systems)
-  - [6.3. Landing Page UI Design.](#63-landing-page-ui-design)
-    - [6.3.1. Landing Page Wireframe.](#631-landing-page-wireframe)
-    - [6.3.2. Landing Page Mock-up.](#632-landing-page-mock-up)
-  - [6.4. Applications UX/UI Design.](#64-applications-uxui-design)
-    - [6.4.1. Applications Wireframes.](#641-applications-wireframes)
-    - [6.4.2. Applications Wireflow Diagrams.](#642-applications-wireflow-diagrams)
-    - [6.4.3. Applications Mock-ups.](#643-applications-mock-ups)
-    - [6.4.4. Applications User Flow Diagrams.](#644-applications-user-flow-diagrams)
-  - [6.5. Applications Prototyping.](#65-applications-prototyping)
-
-- [Capítulo VII: Product Implementation, Validation & Deployment](#capítulo-vii-product-implementation-validation--deployment)
-  - [7.1. Software Configuration Management.](#71-software-configuration-management)
-    - [7.1.1. Software Development Environment Configuration.](#711-software-development-environment-configuration)
-    - [7.1.2. Source Code Management.](#712-source-code-management)
-    - [7.1.3. Source Code Style Guide & Conventions.](#713-source-code-style-guide--conventions)
-    - [7.1.4. Software Deployment Configuration.](#714-software-deployment-configuration)
-  - [7.2. Solution Implementation.](#72-solution-implementation)
-    - [7.2.X. Sprint n](#72x-sprint-n)
-      - [7.2.X.1. Sprint Planning n.](#72x1-sprint-planning-n)
-      - [7.2.X.2. Sprint Backlog n.](#72x2-sprint-backlog-n)
-      - [7.2.X.3. Development Evidence for Sprint Review.](#72x3-development-evidence-for-sprint-review)
-      - [7.2.X.4. Testing Suite Evidence for Sprint Review.](#72x4-testing-suite-evidence-for-sprint-review)
-      - [7.2.X.5. Execution Evidence for Sprint Review.](#72x5-execution-evidence-for-sprint-review)
-      - [7.2.X.6. Services Documentation Evidence for Sprint Review.](#72x6-services-documentation-evidence-for-sprint-review)
-      - [7.2.X.7. Software Deployment Evidence for Sprint Review.](#72x7-software-deployment-evidence-for-sprint-review)
-      - [7.2.X.8. Team Collaboration Insights during Sprint.](#72x8-team-collaboration-insights-during-sprint)
-  - [7.3. Validation Interviews.](#73-validation-interviews)
-    - [7.3.1. Diseño de Entrevistas.](#731-diseño-de-entrevistas)
-    - [7.3.2. Registro de Entrevistas.](#732-registro-de-entrevistas)
-    - [7.3.3. Evaluaciones según heurísticas.](#733-evaluaciones-según-heurísticas)
-  - [7.4. Video About-the-Product.](#74-video-about-the-product)
 - [Referencias](#referencias)
 
 
@@ -343,7 +292,7 @@ Este segmento agrupa a los propietarios de unidades inmobiliarias (o socios, en 
 
 # **Capítulo II: Requirements Elicitation & Analysis**
 
-Este capítulo documenta la elicitación y el análisis inicial de requisitos para VotoChain. Su propósito es conectar la problemática formulada en el Capítulo I con los artefactos de especificación del Capítulo III y con las decisiones arquitectónicas posteriores. Por ello, se combinan tres fuentes de evidencia: el análisis competitivo del mercado de votación digital, el diseño de investigación con usuarios y los modelos de dominio ya documentados por el equipo en `backend/votochain-api-backend/docs`. La redacción se mantiene en un plano académico y técnico: cuando un dato proviene de una fuente documental se cita; cuando un punto corresponde a una hipótesis o a evidencia pendiente, se declara como tal.
+Este capítulo documenta la elicitación y el análisis inicial de requisitos para VotoChain. Su propósito es conectar la problemática formulada en el Capítulo I con los artefactos de especificación del Capítulo III y con las decisiones arquitectónicas posteriores. La redacción se mantiene en un plano académico y técnico: cuando un dato proviene de una fuente documental se cita; cuando un punto corresponde a una hipótesis o a evidencia pendiente, se declara como tal.
 
 ## **2.1. Competidores**
 
@@ -439,8 +388,6 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | La complejidad técnica debe ocultarse. | Usuarios describen el proceso deseado en términos simples: identificarse, votar y recibir confirmación. | Una interfaz con conceptos de wallet, gas o transacciones deterioraría adopción. |
 
 ### **2.2.2. Registro de entrevistas.**
-
-> Completar esta sección con entrevistas ejecutadas y verificables. No registrar hallazgos, citas ni conclusiones si no existe evidencia asociada.
 
 | Código | Fecha | Segmento | Entrevistado | Rol / relación con el problema | Modalidad | Evidencia | Estado |
 |---|---|---|---|---|---|---|---|
@@ -1444,103 +1391,7 @@ Despliegue MVP en **Google Cloud Platform** (región `southamerica-east1` sugeri
   <img src="./assets/c4-deployment.png" alt="C4 Deployment GCP" width="700"/>
 </p>
 
-# **Capítulo V: Tactical-Level Software Design.**
 
-## **5.X. Bounded Context: <Bounded Context Name>**
-
-### **5.X.1. Domain Layer.**
-
-### **5.X.2. Interface Layer.**
-
-### **5.X.3. Application Layer.**
-
-### **5.X.4. Infrastructure Layer.**
-
-### **5.X.5. Bounded Context Software Architecture Component Level Diagrams.**
-
-### **5.X.6. Bounded Context Software Architecture Code Level Diagrams.**
-
-#### **5.X.6.1. Bounded Context Domain Layer Class Diagrams.**
-
-#### **5.X.6.2. Bounded Context Database Design Diagram.**
-
-# **Capítulo VI: Solution UX Design**
-
-## **6.1. Style Guidelines.**
-
-### **6.1.1. General Style Guidelines.**
-
-### **6.1.2. Web, Mobile & Devices Style Guidelines.**
-
-## **6.2. Information Architecture.**
-
-### **6.2.1. Labeling Systems.**
-
-### **6.2.2. Searching Systems.**
-
-### **6.2.3. SEO Tags and Meta Tags.**
-
-### **6.2.4. Navigation Systems.**
-
-## **6.3. Landing Page UI Design.**
-
-### **6.3.1. Landing Page Wireframe.**
-
-### **6.3.2. Landing Page Mock-up.**
-
-## **6.4. Applications UX/UI Design.**
-
-### **6.4.1. Applications Wireframes.**
-
-### **6.4.2. Applications Wireflow Diagrams.**
-
-### **6.4.3. Applications Mock-ups.**
-
-### **6.4.4. Applications User Flow Diagrams.**
-
-### **6.5. Applications Prototyping.**
-
-# **Capítulo VII: Product Implementation, Validation & Deployment**
-
-## **7.1. Software Configuration Management.**
-
-### **7.1.1. Software Development Environment Configuration.**
-
-### **7.1.2. Source Code Management.**
-
-### **7.1.3. Source Code Style Guide & Conventions.**
-
-### **7.1.4. Software Deployment Configuration.**
-
-## **7.2. Solution Implementation.**
-
-### **7.2.X. Sprint n**
-
-#### **7.2.X.1. Sprint Planning n.**
-
-#### **7.2.X.2. Sprint Backlog n.**
-
-#### **7.2.X.3. Development Evidence for Sprint Review.**
-
-#### **7.2.X.4. Testing Suite Evidence for Sprint Review.**
-
-#### **7.2.X.5. Execution Evidence for Sprint Review.**
-
-#### **7.2.X.6. Services Documentation Evidence for Sprint Review.**
-
-#### **7.2.X.7. Software Deployment Evidence for Sprint Review.**
-
-#### **7.2.X.8. Team Collaboration Insights during Sprint.**
-
-## **7.3. Validation Interviews.**
-
-### **7.3.1. Diseño de Entrevistas.**
-
-### **7.3.2. Registro de Entrevistas.**
-
-### **7.3.3. Evaluaciones según heurísticas.**
-
-## **7.4. Video About-the-Product.**
 
 # **Referencias**
 

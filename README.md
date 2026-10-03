@@ -149,6 +149,59 @@
     - [4.3.3. Software Architecture Container Level Diagrams.](#433-software-architecture-container-level-diagrams)
     - [4.3.4. Software Architecture Deployment Diagrams.](#434-software-architecture-deployment-diagrams)
 
+- [Capítulo V: Tactical-Level Software Design.](#capítulo-v-tactical-level-software-design)
+  - [5.X. Bounded Context: &lt;Bounded Context Name&gt;](#5x-bounded-context-bounded-context-name)
+    - [5.X.1. Domain Layer.](#5x1-domain-layer)
+    - [5.X.2. Interface Layer.](#5x2-interface-layer)
+    - [5.X.3. Application Layer.](#5x3-application-layer)
+    - [5.X.4. Infrastructure Layer.](#5x4-infrastructure-layer)
+    - [5.X.5. Bounded Context Software Architecture Component Level Diagrams.](#5x5-bounded-context-software-architecture-component-level-diagrams)
+    - [5.X.6. Bounded Context Software Architecture Code Level Diagrams.](#5x6-bounded-context-software-architecture-code-level-diagrams)
+      - [5.X.6.1. Bounded Context Domain Layer Class Diagrams.](#5x61-bounded-context-domain-layer-class-diagrams)
+      - [5.X.6.2. Bounded Context Database Design Diagram.](#5x62-bounded-context-database-design-diagram)
+
+- [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+  - [6.1. Style Guidelines.](#61-style-guidelines)
+    - [6.1.1. General Style Guidelines.](#611-general-style-guidelines)
+    - [6.1.2. Web, Mobile & Devices Style Guidelines.](#612-web-mobile--devices-style-guidelines)
+  - [6.2. Information Architecture.](#62-information-architecture)
+    - [6.2.1. Organization Systems.](#621-organization-systems)
+    - [6.2.2. Labeling Systems.](#622-labeling-systems)
+    - [6.2.3. Searching Systems.](#623-searching-systems)
+    - [6.2.4. SEO Tags, Meta Tags y ASO Elements.](#624-seo-tags-meta-tags-y-aso-elements)
+    - [6.2.5. Navigation Systems.](#625-navigation-systems)
+  - [6.3. Landing Page UI Design.](#63-landing-page-ui-design)
+    - [6.3.1. Landing Page Wireframe.](#631-landing-page-wireframe)
+    - [6.3.2. Landing Page Mock-up.](#632-landing-page-mock-up)
+  - [6.4. Applications UX/UI Design.](#64-applications-uxui-design)
+    - [6.4.1. Applications Wireframes.](#641-applications-wireframes)
+    - [6.4.2. Applications Wireflow Diagrams.](#642-applications-wireflow-diagrams)
+    - [6.4.3. Applications Mock-ups.](#643-applications-mock-ups)
+    - [6.4.4. Applications User Flow Diagrams.](#644-applications-user-flow-diagrams)
+  - [6.5. Applications Prototyping.](#65-applications-prototyping)
+
+- [Capítulo VII: Product Implementation, Validation & Deployment](#capítulo-vii-product-implementation-validation--deployment)
+  - [7.1. Software Configuration Management.](#71-software-configuration-management)
+    - [7.1.1. Software Development Environment Configuration.](#711-software-development-environment-configuration)
+    - [7.1.2. Source Code Management.](#712-source-code-management)
+    - [7.1.3. Source Code Style Guide & Conventions.](#713-source-code-style-guide--conventions)
+    - [7.1.4. Software Deployment Configuration.](#714-software-deployment-configuration)
+  - [7.2. Solution Implementation.](#72-solution-implementation)
+    - [7.2.X. Sprint n](#72x-sprint-n)
+      - [7.2.X.1. Sprint Planning n.](#72x1-sprint-planning-n)
+      - [7.2.X.2. Sprint Backlog n.](#72x2-sprint-backlog-n)
+      - [7.2.X.3. Development Evidence for Sprint Review.](#72x3-development-evidence-for-sprint-review)
+      - [7.2.X.4. Testing Suite Evidence for Sprint Review.](#72x4-testing-suite-evidence-for-sprint-review)
+      - [7.2.X.5. Execution Evidence for Sprint Review.](#72x5-execution-evidence-for-sprint-review)
+      - [7.2.X.6. Services Documentation Evidence for Sprint Review.](#72x6-services-documentation-evidence-for-sprint-review)
+      - [7.2.X.7. Software Deployment Evidence for Sprint Review.](#72x7-software-deployment-evidence-for-sprint-review)
+      - [7.2.X.8. Team Collaboration Insights during Sprint.](#72x8-team-collaboration-insights-during-sprint)
+  - [7.3. Validation Interviews.](#73-validation-interviews)
+    - [7.3.1. Diseño de Entrevistas.](#731-diseño-de-entrevistas)
+    - [7.3.2. Registro de Entrevistas.](#732-registro-de-entrevistas)
+    - [7.3.3. Evaluaciones según heurísticas.](#733-evaluaciones-según-heurísticas)
+  - [7.4. Video About-the-Product.](#74-video-about-the-product)
+
 - [Referencias](#referencias)
 
 
@@ -1392,6 +1445,483 @@ Despliegue MVP en **Google Cloud Platform** (región `southamerica-east1` sugeri
 </p>
 
 
+## **5.X. Bounded Context: <Bounded Context Name>**
+
+### **5.X.1. Domain Layer.**
+
+### **5.X.2. Interface Layer.**
+
+### **5.X.3. Application Layer.**
+
+### **5.X.4. Infrastructure Layer.**
+
+### **5.X.5. Bounded Context Software Architecture Component Level Diagrams.**
+
+### **5.X.6. Bounded Context Software Architecture Code Level Diagrams.**
+
+#### **5.X.6.1. Bounded Context Domain Layer Class Diagrams.**
+
+#### **5.X.6.2. Bounded Context Database Design Diagram.**
+
+# **Capítulo VI: Solution UX Design**
+
+El diseño de experiencia de VotoChain sigue un enfoque de **diseño centrado en el usuario** y toma como referencia a los dos segmentos definidos en los Capítulos I y II: Patricia Salas, directiva o administradora de comunidad, y Miguel Herrera, propietario votante. La experiencia debe hacer comprensibles la verificación de identidad, la elegibilidad, el cuórum y la evidencia auditable, sin trasladar al usuario conceptos operativos como wallets, claves privadas, gas o RPC.
+
+Este capítulo distingue deliberadamente entre lo **implementado** y lo **proyectado**. A la fecha de revisión, el repositorio de software contiene una API modular en NestJS para IAM, verificación OTP y gestión de comunidades; el frontend Next.js descrito en la arquitectura, la votación, la biometría, el ledger y las superficies públicas todavía forman parte del diseño y del roadmap. Por ello, las reglas siguientes son especificaciones objetivo que deberán validarse mediante prototipos, pruebas de usabilidad y auditorías de accesibilidad antes de declararse cumplidas.
+
+---
+
+## **6.1. Style Guidelines.**
+
+Las directrices de estilo conforman la especificación inicial del **VotoChain Design System (VDS)**. Su propósito es centralizar tokens, tipografías, iconografía, componentes, patrones de interacción y criterios editoriales para la Landing Page y la aplicación web responsive prevista en Next.js. Los tokens se mantendrán independientes de una librería concreta; si durante la implementación se adoptan Tailwind CSS, Radix UI u otras herramientas, estas deberán mapearse al VDS y no convertirse por sí mismas en la fuente de verdad.
+
+La meta de accesibilidad es **[WCAG 2.2 nivel AA](https://www.w3.org/TR/WCAG22/)**. “Accesible” no se utilizará como una garantía previa: el cumplimiento se verificará con revisión de contraste, navegación por teclado, lectores de pantalla, zoom al 200 %, reflow a 320 CSS px y pruebas con usuarios. Los assets definitivos —logotipo, íconos, archivos de fuentes y componentes— deberán versionarse junto con el frontend cuando este sea creado.
+
+---
+
+### **6.1.1. General Style Guidelines.**
+
+#### **1. Principios de Diseño de VotoChain**
+
+Las decisiones estéticas y funcionales del sistema de diseño se sustentan en cuatro principios rectores:
+
+1. **Claridad Institucional y Confiabilidad Cívica**: Las interfaces deben transmitir seriedad, orden y formalidad cívica. Los usuarios toman decisiones patrimoniales y normativas que afectan a sus comunidades; por ello, se evitan decoraciones superfluas y gamificación.
+2. **Transparencia Técnica sin Fricción**: El flujo principal no exige comprender gas, mempool, claves privadas o RPC. Cuando el ledger sea implementado, esos detalles permanecerán disponibles en una vista de auditoría, mientras la tarea principal utilizará estados y constancias legibles (D-22).
+3. **Focalización Operativa y Mínima Carga Cognitiva**: Durante los flujos críticos (enrollment biométrico facial y emisión de voto), la interfaz aísla distracciones: presenta un único objetivo por pantalla, instrucciones paso a paso concisas y confirmaciones explícitas antes de cualquier acción irreversible.
+4. **Accesibilidad e Inclusión**: El diseño considera adultos mayores y personas con distintos niveles de alfabetización digital. Se exige contraste suficiente, jerarquía tipográfica legible y áreas de toque amplias.
+
+#### **2. Branding e Identidad Visual Propuesta**
+
+El repositorio todavía no contiene un logotipo de VotoChain ni un manual de marca; por tanto, las reglas siguientes son una dirección de diseño que deberá materializarse y aprobarse antes de usarse como identidad oficial.
+
+* **Isotipo**: El isotipo de VotoChain fusiona geométricamente dos símbolos: la silueta limpia de una **urna electoral moderna con una papeleta ingresando**, intersectada en su base por un **nodo hexagonal interconectado** que representa la inmutabilidad de la cadena de bloques.
+* **Logotipo**: Se compone del isotipo acompañado de la palabra tipográfica **VotoChain**, donde "Voto" se presenta en peso semibold y "Chain" en peso medium con el color secundario cian, enfatizando la dualidad entre el acto democrático y la tecnología garante.
+* **Área de Aislamiento y Reducción Mínima**: Se propone un margen de protección perimetral equivalente a la altura de la letra "V" del logotipo. El tamaño inicial a validar es de `120px` de ancho para la versión horizontal y `32x32px` para favicon o ícono web.
+
+#### **3. Paleta Cromática (Color Palette)**
+
+La paleta cromática se estructura en tokens semánticos. La implementación deberá alcanzar una relación de contraste mínima de **4.5:1** para texto normal y **3:1** para texto grande y componentes gráficos esenciales, conforme a WCAG 2.2 AA.
+
+| Token de Color | Nombre Semántico | Valor HEX | Valor HSL | Restricción de Uso | Propósito y Aplicación en la Interfaz |
+|---|---|---|---|:---:|---|
+| `--color-brand-primary` | Azul Marino Institucional | `#1E3A8A` | `hsl(224, 64%, 33%)` | Admite texto blanco. | Color dominante de marca, navegación, acciones primarias y encabezados. |
+| `--color-brand-secondary` | Azul Celeste Tecnológico | `#0284C7` | `hsl(199, 89%, 40%)` | No usar con texto blanco pequeño sin validar contraste. | Enlaces, foco, bordes de selección y acentos tecnológicos. |
+| `--color-accent-success` | Verde Esmeralda Verificado | `#059669` | `hsl(160, 84%, 39%)` | Usar con texto oscuro o una variante más oscura para texto blanco. | Estados positivos; siempre acompañado por texto o ícono, nunca sólo por color. |
+| `--color-accent-warning` | Ámbar de Atención Cívica | `#D97706` | `hsl(38, 92%, 50%)` | Usar con texto oscuro. | Alertas preventivas y estados que requieren atención. |
+| `--color-accent-danger` | Rojo Carmesí Alerta | `#DC2626` | `hsl(0, 72%, 51%)` | Validar contraste según tamaño y peso del texto. | Errores, bloqueos y acciones destructivas; siempre acompañado por texto o ícono. |
+| `--color-surface-base` | Blanco Nieve / Fondo Claro | `#F8FAFC` | `hsl(210, 40%, 98%)` | Base | Fondo general del lienzo en aplicaciones web y móviles para evitar la fatiga visual del blanco puro (`#FFFFFF`). |
+| `--color-surface-card` | Blanco Puro / Superficie | `#FFFFFF` | `hsl(0, 0%, 100%)` | Base | Superficies elevadas: tarjetas de propuestas, modales, menús flotantes y contenedores de opciones de votación. |
+| `--color-surface-dark` | Azul Medianoche (Dark Mode) | `#0B1120` | `hsl(222, 47%, 8%)` | Base | Fondo general para la modalidad oscura de alta fidelidad, orientada a votaciones en asambleas nocturnas. |
+| `--color-card-dark` | Pizarra Azulada (Dark Mode) | `#1E293B` | `hsl(215, 28%, 17%)` | Base | Superficies elevadas de tarjetas y paneles en modo oscuro. |
+| `--color-text-primary` | Gris Carbón Profundo | `#0F172A` | `hsl(222, 47%, 11%)` | Validar sobre cada superficie. | Títulos, cuerpo de texto principal, opciones de votación y etiquetas de formularios. |
+| `--color-text-secondary` | Gris Pizarra Medio | `#475569` | `hsl(215, 25%, 35%)` | Validar sobre cada superficie. | Metadatos secundarios, fechas de asamblea, descripciones de opciones y pies de página. |
+| `--color-border-subtle` | Gris Borde Neutral | `#E2E8F0` | `hsl(214, 32%, 91%)` | Sólo decorativo; no usar como único límite de un control. | Divisores y bordes no esenciales de superficies. |
+
+Los valores se consideran candidatos y deberán comprobarse sobre cada fondo con una herramienta de contraste. Para texto normal se exige al menos `4.5:1`; para texto grande y componentes gráficos esenciales, `3:1`. Los estados no dependerán exclusivamente del color.
+
+#### **4. Tipografía (Typography System)**
+
+La jerarquía tipográfica propuesta combina fuentes de alta legibilidad. Como los archivos aún no están versionados, el frontend deberá autohospedarlos —si sus licencias lo permiten— y definir fallbacks para evitar saltos de layout o dependencia innecesaria de terceros:
+
+* **Tipografía de Títulos y Display (`Outfit`)**: Fuente geométrica con terminaciones limpias y curvas balanceadas. Se utiliza en titulares de la Landing Page, encabezados de sección y números de cuórum, aportando una presencia contemporánea, cívica y amigable.
+* **Tipografía de Texto y Controles UI (`Inter`)**: Familia tipográfica diseñada específicamente para interfaces digitales por Rasmus Andersson. Ofrece excelente definición de caracteres a tamaños reducidos en pantallas de smartphones de gama media/baja, minimizando la ambigüedad en caracteres similares (como `1`, `l` e `I`).
+* **Tipografía Monoespaciada de Auditoría (`JetBrains Mono`)**: Empleada de forma focalizada para códigos OTP, identificadores de transacción blockchain, llaves públicas truncadas y referencias de recibos de votación (`rec-...`), garantizando que cada dígito mantenga un ancho constante para cotejo visual inmediato.
+
+| Nivel Jerárquico | Familia Tipográfica | Tamaño (px / rem) | Line Height | Peso (Weight) | Uso Principal en Interfaz |
+|---|---|:---:|:---:|:---:|---|
+| **Display (Hero)** | Outfit | `40px` / `2.50rem` | `1.20` | Bold (700) | Titulares principales de la Landing Page y cabeceras de bienvenida. |
+| **Heading 1 (H1)** | Outfit | `32px` / `2.00rem` | `1.25` | Bold (700) | Títulos de pantallas principales: "Asamblea General Ordinaria", "Propuestas Activas". |
+| **Heading 2 (H2)** | Outfit | `24px` / `1.50rem` | `1.30` | SemiBold (600) | Título de propuestas de votación, nombres de comunidades y tarjetas destacadas. |
+| **Heading 3 (H3)** | Outfit | `20px` / `1.25rem` | `1.35` | SemiBold (600) | Subtítulos de módulos, encabezados de modales y resúmenes de cuórum. |
+| **Subtitle / Lead** | Inter | `18px` / `1.125rem` | `1.50` | Medium (500) | Introducción a propuestas complejas, subtítulos explicativos de asamblea. |
+| **Body Regular** | Inter | `16px` / `1.00rem` | `1.50` | Regular (400) | Párrafos informativos, textos de opciones de votación y reglamentos internos. |
+| **Body Bold / Button** | Inter | `16px` / `1.00rem` | `1.25` | SemiBold (600) | Botones de acción principal ("Emitir Voto", "Confirmar"), etiquetas activas. |
+| **Caption / Small** | Inter | `14px` / `0.875rem` | `1.40` | Regular (400) | Textos de ayuda en formularios, timestamps de votación, estado de elegibilidad. |
+| **Badge / Micro** | Inter | `12px` / `0.75rem` | `1.20` | SemiBold (600) | Badges de estado (`ABIERTA`, `VERIFICADO`, `CONFIRMADO`), chips de departamento. |
+| **Code / Audit Hash** | JetBrains Mono | `13px` / `0.8125rem` | `1.40` | Medium (500) | Hashes de bloques Polygon, firmas EIP-712 truncadas, códigos de constancia. |
+
+#### **5. Espaciado, Retícula y Elevación (Spacing & Elevation)**
+
+* **Sistema de Espaciado Modular (8-Point Grid)**: Todo espaciado de margen, padding, gaps y alturas de fila sigue múltiplos de 8px (con un valor medio de 4px para microajustes de badges e íconos):
+  * `4px` (`space-1`): Separación entre ícono y texto en botones compactos.
+  * `8px` (`space-2`): Padding interno de badges, inputs pequeños y separación de listas densas.
+  * `16px` (`space-4`): Padding estándar de tarjetas móviles, inputs de formulario y espaciado entre párrafos.
+  * `24px` (`space-6`): Padding de tarjetas en escritorio, separación entre bloques de opciones de votación.
+  * `32px` (`space-8`): Margen vertical entre secciones secundarias y cabeceras de módulo.
+  * `48px` (`space-12`): Separación entre bloques estructurales de contenido en paneles de control.
+  * `64px` (`space-16`): Espaciado de sección mayor en la Landing Page.
+* **Radios de Borde (`border-radius`)**:
+  * `6px` (`rounded-md`): Inputs de formulario, selectores y badges.
+  * `10px` (`rounded-lg`): Botones de acción, tarjetas secundarias y bloques de opción.
+  * `16px` (`rounded-2xl`): Modales de diálogo, tarjetas contenedoras principales y banners de alerta.
+* **Elevación y Sombras (Elevation Tokens)**:
+  * `shadow-sm` (`0 1px 2px rgba(0,0,0,0.05)`): Tarjetas en reposo y contenedores de formulario.
+  * `shadow-md` (`0 4px 6px -1px rgba(0,0,0,0.1)`): Tarjetas interactivas en estado hover, cabecera sticky de navegación.
+  * `shadow-lg` (`0 10px 15px -3px rgba(0,0,0,0.1)`): Modales emergentes de confirmación de voto y drawers de verificación.
+
+#### **6. Tono de Comunicación y Lenguaje Aplicado**
+
+El lenguaje de VotoChain refleja la seriedad y trascendencia de los acuerdos de copropiedad y cooperativas, posicionando a la plataforma como un árbitro tecnológico imparcial y confiable. Siguiendo la metodología de dimensiones de tono de voz, se adoptan las siguientes decisiones:
+
+```mermaid
+quadrantChart
+    title Matriz de Dimensiones del Tono de Comunicación en VotoChain
+    x-axis "Casual / Informal" --> "Formal Institucional"
+    y-axis "Divertido / Gamificado" --> "Serio y Confiable"
+    quadrant-1 "VotoChain (Serio + Formal Institucional)"
+    quadrant-2 "Inadecuado para Asambleas Legales"
+    quadrant-3 "Inadecuado (Riesgo de Percepción de Fraude)"
+    quadrant-4 "Comercial / B2C Ligero"
+    "VotoChain Platform": [0.75, 0.85]
+```
+
+1. **Serio, sin resultar intimidante**: Se evitan la gamificación, el confeti y los mensajes festivos en decisiones patrimoniales. El tono debe transmitir sobriedad, precisión y calma.
+2. **Formal, pero en lenguaje claro**: Se mantiene un trato institucional y respetuoso sin recurrir a barroquismos notariales. Las preguntas y opciones se redactan de manera directa y sin ambigüedad.
+3. **Respetuoso y transparente**: Nunca se presume el consentimiento ni se oculta el propósito de una captura. Se explica qué dato se solicita, para qué se usa y qué puede hacer el titular.
+4. **Sereno y verificable**: Las confirmaciones describen el estado real. “Voto recibido” corresponde a la intención aceptada; “Voto confirmado” se reserva para la confirmación on-chain. No se promete éxito antes de que exista el hecho técnico correspondiente.
+
+| Dimensión | Enfoque de VotoChain | Ejemplo Aceptado en Interfaz | Ejemplo Rechazado |
+|---|---|---|---|
+| **Verificación Biométrica** | Transparente, clínico y guiado | *"Ubique su rostro dentro del marco ovalado y parpadee lentamente. La imagen se procesará de forma transitoria para verificar su presencia y no será almacenada."* | *"¡Hazte un selfie genial para que sepamos quién eres y puedas entrar a la fiesta de la votación!"* |
+| **Emisión del Voto** | Seguro, consciente y confirmable | *"Ha seleccionado: 'Aprobación del Presupuesto Anual 2026'. Al confirmar, se consumirá su autorización única y comenzará el registro del voto. ¿Desea continuar?"* | *"¡Listo! Dale clic aquí para mandar tu voto a la nube mágica de blockchain."* |
+| **Fallo de Identidad** | Diagnóstico técnico sereno y útil | *"No fue posible verificar la coincidencia facial con el documento presentado. Por favor, asegúrese de contar con buena iluminación y retire lentes o accesorios."* | *"¡Ups! No te reconocimos. Algo salió mal en el escaneo facial. Prueba otra vez."* |
+| **Comprobante de Voto** | Precisión formal y estado verificable | *"Voto recibido. Estamos confirmando su registro. Puede consultar el estado con el código de constancia rec-8831."* | *"¡Genial! Tu voto ya está minado en el bloque cripto de Polygon. ¡Eres parte de la web3!"* |
+
+---
+
+### **6.1.2. Web, Mobile & Devices Style Guidelines.**
+
+#### **1. Breakpoints y Sistema Adaptativo Multidispositivo**
+
+La arquitectura del Capítulo IV prevé un único frontend **Next.js** para la Landing Page y la aplicación web. Por ello, “mobile” designa inicialmente una experiencia web responsive —no una aplicación nativa ni una publicación en tiendas—. La solución atiende dos experiencias principales: administración de asamblea en pantallas amplias y emisión de voto/verificación desde smartphones.
+
+| Dispositivo Objetivo | Rango de Viewport | Columnas | Márgenes | Gutter | Casos de Uso Predominantes en VotoChain |
+|---|:---:|:---:|:---:|:---:|---|
+| **Mobile web (Compact)** | `320px` – `639px` | 4 | `16px` | `12px` | **Flujo del Votante (Miguel Herrera)**: enrollment biométrico, lectura de propuestas, selección, confirmación y consulta de constancia. |
+| **Tablet (Medium)** | `640px` – `1023px` | 8 | `24px` | `16px` | **Mesa de Apoyo en Asamblea Presencial**: Consulta del padrón electoral en recepción, asistencia a miembros en el registro y visualización en tiempo real de resultados preliminares. |
+| **Desktop / Laptop (Expanded)** | `1024px` – `1440px+` | 12 | `32px` | `24px` | **Dashboard Administrativo (Patricia Salas)**: Configuración de la comunidad, carga y regularización del padrón de miembros, apertura/cierre de propuestas, monitoreo de cuórum en vivo y exportación de actas oficiales. |
+
+#### **2. Estándares Visuales e Interacción para Web Responsive (Portal Administrativo)**
+
+* **Arquitectura de Layout (Sidebar Persistente)**: Panel lateral de navegación con ancho fijo de `260px` en escritorio, colapsable a modo icono (`72px`) para maximizar el área de trabajo de tablas densas. En pantallas de tabletas y móviles, el menú se repliega automáticamente en un cajón flotante (*Drawer accesible*).
+* **Tablas de Datos Densas para el Padrón Electoral**:
+  * Encabezados fijos (*Sticky Table Header*) con ordenamiento alfanumérico por columna (departamento/lote, apellidos, estado de pago).
+  * Fila de resumen de elegibilidad superior que totaliza miembros habilitados para cuórum.
+  * Paginación limpia de 10, 25 o 50 registros, con barra de búsqueda global y selector de filtros facetados.
+  * En pantallas de menos de `768px`, las tablas se transforman automáticamente en **tarjetas de datos apiladas (Card View)** para evitar el desplazamiento horizontal incómodo.
+* **Monitoreo de Cuórum en Vivo**: Indicadores visuales destacados compuestos por:
+  * Barra de progreso horizontal con marcador del umbral configurado y congelado (`QuorumSnapshot`).
+  * Desglose porcentual y numérico en tiempo real (ej. `68.5% alcanzado / 60.0% requerido`).
+  * Gráficos accesibles tipo dona con etiquetas de valor en texto plano para asegurar lectura en navegadores que deshabilitan scripts pesados.
+* **Confirmación de Acciones Críticas**: Apertura de propuestas, cierre de convocatoria y publicación de resultados emplean diálogos accesibles con foco contenido, resumen del efecto y confirmación explícita. No se exige una segunda interacción mecánica si no reduce un riesgo concreto.
+
+#### **3. Estándares Visuales e Interacción para Mobile Web (Portal del Votante)**
+
+* **Optimización de la Zona del Pulgar (*Thumb Zone Navigation*)**:
+  * Los botones primarios de acción ("Continuar", "Confirmar Elección", "Emitir Voto") se ubican en una **barra inferior persistente (Sticky Bottom Bar)** de `72px` de altura, anclada en la parte inferior de la pantalla para permitir la operación con una sola mano sin forzar el agarre del dispositivo.
+* **Áreas Táctiles Mínimas (*Touch Targets*)**:
+  * Cualquier elemento interactivo (botones, selectores de voto, enlaces y controles de cámara) posee una dimensión táctil mínima de **`48x48px`** (o `48x48dp`), con un espaciado perimetral mínimo de `8px` para evitar pulsaciones erróneas involuntarias.
+* **Módulo de Captura y Liveness Biométrico**:
+  * Viewport de cámara con guía ovalada semitransparente que orienta la colocación del rostro en pantalla completa.
+  * Indicador dinámico de iluminación: el borde del óvalo cambia de color (Gris neutral = buscando rostro; Ámbar = poca luz; Verde esmeralda = iluminación adecuada y rostro alineado).
+  * Instrucciones directas en la parte inferior: "Mire a la cámara", "Parpadee lentamente", "Procesando prueba de presencia".
+  * Animación de escaneo mediante un barrido vertical suave no invasivo que indica actividad sin generar destellos o parpadeos molestos.
+* **Componente de Papeleta Digital (*Radio Card Component*)**:
+  * En lugar de radio buttons diminutos convencionales, las opciones de voto se presentan en **tarjetas táctiles completas (Radio Cards)** de altura mínima de `56px`.
+  * La tarjeta no seleccionada presenta fondo blanco con borde sutil `#E2E8F0`; al ser seleccionada, adopta un borde azul marino de `2px`, un fondo azul tenue (`#EFF6FF`) y un ícono de check visible a la derecha, eliminando cualquier duda sobre la opción marcada antes de presionar el botón de confirmación.
+* **Constancia de Voto en Pantalla Móvil**:
+  * Tarjeta sobria con código de constancia, propuesta, fecha/hora con zona horaria y estado (`Recibido`, `En confirmación`, `Confirmado` o `No confirmado`).
+  * El código QR es opcional y sólo enlaza al verificador cuando exista una URL pública estable. La vista pública no expone DNI, correo, identidad del votante ni opción elegida.
+  * El hash y el bloque se muestran únicamente tras la confirmación on-chain. La descarga PDF deberá conservar la misma minimización de datos.
+
+#### **4. Accesibilidad e Inclusión (Objetivo WCAG 2.2 AA)**
+
+* **Navegación por Teclado y Foco Visible**: Todos los elementos interactivos deberán ser operables con teclado y mostrar un indicador de foco de al menos `2px`, con contraste suficiente respecto del estado sin foco.
+* **Semántica y Atributos ARIA**:
+  * Formularios con etiquetas explícitas `<label for="...">` asociadas unívocamente con sus inputs.
+  * Las métricas dinámicas de cuórum se implementarán con `aria-live="polite"`, permitiendo que los lectores de pantalla anuncien cambios relevantes sin interrumpir la lectura activa.
+  * Estados de error marcados con `aria-invalid="true"` y mensajes vinculados mediante `aria-describedby`.
+* **Movimiento y tiempo**: Se respeta `prefers-reduced-motion`; ninguna animación es indispensable para comprender un estado. Los vencimientos muestran tiempo restante y ofrecen reintento claro.
+* **Conectividad y permisos**: La denegación de cámara, una conexión inestable o un error del proveedor se explican sin culpar al usuario y ofrecen recuperación. La alternativa de soporte no debe omitir las reglas de identidad y consentimiento.
+
+---
+
+## **6.2. Information Architecture.**
+
+La arquitectura de información (IA) organiza la futura Landing Page y la aplicación web responsive de VotoChain. Su unidad principal es la **comunidad**; dentro de ella se ubican miembros, política de votación, asambleas, propuestas, votos y constancias. Esta jerarquía refleja el lenguaje ubicuo del Capítulo II y evita mezclar conceptos distintos como usuario de IAM, miembro de una comunidad y administrador comunitario.
+
+La IA descrita es objetivo de diseño. En el backend actual sólo existen superficies REST para IAM, desafíos OTP y gestión de comunidades; los módulos de membresía, votación, biometría, auditoría pública y sus interfaces permanecen planificados. Cada pantalla futura deberá mantener trazabilidad con esos contratos y no inventar estados que contradigan el dominio.
+
+---
+
+### **6.2.1. Organization Systems.**
+
+Los sistemas de organización de VotoChain definen cómo se agrupan, estructuran y jerarquizan los contenidos para permitir una navegación intuitiva y coherente en las diferentes etapas del ciclo de vida del producto.
+
+#### **1. Estructuras de Organización Visual del Contenido**
+
+Para presentar los conjuntos de información se adoptarán tres tipos de organización visual según el objetivo de la tarea:
+
+```mermaid
+graph TD
+    subgraph "1. Organización Jerárquica"
+        A[Dashboard Comunidad] --> B[Asamblea Activa]
+        B --> C[Propuesta en Curso]
+        C --> D[Métricas de Cuórum]
+        C --> E[Opciones de Votación]
+    end
+
+    subgraph "2. Organización Secuencial (Paso a Paso)"
+        F[1. Consentimiento] --> G[2. Captura DNI]
+        G --> H[3. Liveness Facial]
+        H --> I[4. Emisión de Voto]
+        I --> J[5. Constancia Generada]
+    end
+
+    subgraph "3. Organización Matricial"
+        K[Padrón Electoral] --- L[Unidad Inmobiliaria]
+        K --- M[Estado de Pago]
+        K --- N[Estado de Emisión]
+    end
+```
+
+1. **Organización Jerárquica (Visual Hierarchy)**:
+   * **Landing Page**: Estructura de pirámide invertida que guía desde la propuesta de valor hacia funcionamiento, privacidad, evidencia técnica, preguntas frecuentes y contacto. Testimonios, precios o afirmaciones normativas sólo se incorporan cuando estén validados.
+   * **Portal Administrativo**: Jerarquía de tres niveles: *Nivel 1: Comunidad* (datos generales, políticas de cuórum); *Nivel 2: Convocatorias y Asambleas* (fechas, agenda, padrón habilitado); *Nivel 3: Propuestas y Votaciones* (alternativas, votos confirmados, cuórum alcanzado, actas oficiales).
+2. **Organización Secuencial (Step-by-Step to Accomplish)**:
+   * **Proceso de Enrollment Biométrico Inicial**: Flujo estrictamente lineal y guiado de 4 pasos (Paso 1: Consentimiento informado de tratamiento de datos personales → Paso 2: Escaneo de DNI con OCR → Paso 3: Prueba de vida facial con liveness → Paso 4: Referencia biométrica confirmada).
+   * **Proceso de Emisión de Voto Remoto**: Flujo lineal de 4 pasos con retroalimentación instantánea (Paso 1: Lectura de propuesta y opciones → Paso 2: Verificación de presencia facial fresca → Paso 3: Selección de alternativa y confirmación → Paso 4: Recepción de constancia digital auditable con transacción en ledger).
+3. **Organización Matricial (Faceted / Matrix View)**:
+   * **Gestión del Padrón de Miembros**: Una fila representa una membresía y permite filtrar por unidad y estado (`SOLICITADA`, `ACTIVA`, `MOROSA`, `SUSPENDIDA`, `TERMINADA`). La asistencia y el estado de voto se mostrarán en vistas de asamblea, no como atributos permanentes de Membership.
+   * **Auditoría de Resultados**: Matriz que cruza *Propuestas* × *Opciones de Voto* × *Cuórum Congelado* × *Bloques Confirmados en Blockchain*, permitiendo a auditores y directivas verificar la consistencia matemática de la asamblea sin depender de reportes opacos.
+
+#### **2. Esquemas de Categorización del Contenido**
+
+Los esquemas clasifican la información en categorías reconocibles para cada segmento de usuario:
+
+| Esquema de Categorización | Criterio de Ordenamiento | Aplicación Concreta en VotoChain | Beneficio para el Usuario |
+|---|---|---|---|
+| **Cronológico** | Temporal (Pasado, Presente, Futuro) | • **Propuestas de Votación**: Agrupadas en "En curso (Abiertas ahora)", "Programadas (Próximas asambleas)" y "Históricas (Concluidas y contabilizadas)".<br>• **Registro de Eventos de Asamblea**: Línea de tiempo ordenada de apertura, votaciones parciales, recesos y cierre oficial. | Permite al votante priorizar lo que debe votar hoy y a la administradora revisar actas de años previos. |
+| **Por Tópicos / Temas** | Materia o Naturaleza del Asunto | • **Propuestas de Asamblea**: Aprobación de Presupuesto Anual, Obras y Mantenimiento de Edificio, Elección de Junta Directiva, Normas de Convivencia y Modificaciones de Estatuto.<br>• **Centro de Ayuda / FAQs**: Preguntas sobre Legalidad de Actas, Privacidad Biométrica, Métodos de Voto y Soporte Técnico. | Facilita a los propietarios informarse sobre temas específicos de su interés patrimonial antes de emitir su voto. |
+| **Según Audiencia (Grupos de Usuarios)** | Perfil y Nivel de Privilegios | • **Visitantes (Público general)**: Landing Page con información comercial, cotizador SaaS y solicitud de demostración.<br>• **Propietarios y Socios Votantes (Móvil)**: Vista personal con sus comunidades asociadas, sus propuestas pendientes y sus constancias de voto.<br>• **Directivas y Administradoras (Web Desktop)**: Panel de control con configuración comunitaria, padrón, apertura de asambleas y generación de actas. | Cada tipo de usuario accede directamente a las herramientas que requiere, sin confusión de roles ni interfaces sobrecargadas. |
+| **Alfabético** | Orden Lexicográfico A–Z | • **Padrón Electoral de Miembros**: Clasificación por Apellidos y Nombres (`Paterno Materno, Nombres`) de todos los copropietarios y socios.<br>• **Directorio de Comunidades**: Para administradores profesionales que gestionan múltiples condominios. | Permite una localización inmediata de personas durante la mesa de asistencia o validación presencial en la asamblea. |
+
+---
+
+### **6.2.2. Labeling Systems.**
+
+El sistema de rotulado representa datos, acciones y estados con expresiones breves, consistentes y orientadas a la tarea. La brevedad nunca debe eliminar información necesaria para comprender una consecuencia, un consentimiento o un error.
+
+#### **1. Traducción del Lenguaje Técnico a Lenguaje de Interfaz**
+
+En consonancia con D-22 y el Lenguaje Ubicuo de la Sección 2.4, la UI traduce los términos internos sin ocultar la evidencia técnica en las vistas de detalle o auditoría:
+
+| Término Interno | Etiqueta Principal para Usuario | Criterio de Uso |
+|---|---|---|
+| *Gas fee / pago de red* | **Sin costo de red para usted** | El votante no gestiona ni financia la comisión; el detalle de operación permanece disponible para administración y auditoría. |
+| *Wallet / llave privada* | **Firma de voto** | La wallet no se presenta como un producto que el usuario deba administrar; la firma y sus referencias verificables quedan disponibles en auditoría, nunca la clave privada. |
+| *Mempool / Transacción pendiente* | **Voto en Proceso de Registro** | Comunica un estado activo comprensible sin inducir ansiedad técnica sobre la propagación de bloques. |
+| *Tx Hash (0x8f...)* | **Código de Constancia Digital** *(con hash visible al expandir)* | La mayoría de usuarios no sabe interpretar un hash; un código de constancia (`rec-2026-0412`) resulta verificable y amigable. |
+| *KYC / biometric match* | **Verificación de identidad** | Se especifica el paso concreto —documento, prueba de vida o comparación facial— y se explica el tratamiento de datos. |
+| *Smart contract* | **Registro verificable** | Las reglas de cuórum pertenecen a la política de votación; el contrato es el mecanismo técnico de registro y no debe confundirse con esa política. |
+| *Tenant / organization* | **Comunidad** | Mantiene el vocabulario del dominio para edificios, condominios y cooperativas sin atribuir una definición legal universal. |
+
+#### **2. Catálogo Oficial de Rotulado por Componente de Interfaz**
+
+##### **A. Etiquetas de Navegación**
+* **Landing Page**: `Inicio`, `Cómo Funciona`, `Seguridad y Privacidad`, `Planes y Precios`, `Preguntas Frecuentes`, `Solicitar Demo`, `Ingresar`.
+* **Portal del Votante (Mobile Web)**: `Mis Votaciones`, `Comunidades`, `Mis Constancias`, `Mi Perfil`.
+* **Portal Administrativo (Web Dashboard)**: `Panel General`, `Padrón de Miembros`, `Convocatorias y Asambleas`, `Propuestas`, `Resultados y Actas`, `Configuración de Comunidad`.
+
+##### **B. Etiquetas de Acción (Botones y Call To Action Breves)**
+* Acciones Primarias: `Emitir Voto`, `Verificar Identidad`, `Confirmar Selección`, `Abrir Votación`, `Cerrar Votación`, `Descargar Constancia`, `Solicitar Demostración`.
+* Acciones Secundarias / Cancelación: `Volver`, `Modificar Elección`, `Guardar Borrador`, `Descargar Acta`, `Copiar Enlace`.
+* Acciones Críticas / Destructivas: `Archivar Comunidad`, `Revocar Acceso`, `Suspender Comunidad`, `Eliminar Convocatoria`.
+
+##### **C. Etiquetas de Estado del Sistema (Badges Semánticos)**
+* **Estados de Propuesta** —traducción de `DRAFT → OPEN → CLOSED → TALLIED`—:
+  * `Borrador`: propuesta en preparación, todavía no recibe votos.
+  * `Abierta`: recibe votos con la política de cuórum congelada.
+  * `Cerrada`: ya no recibe votos; el cómputo aún puede estar pendiente.
+  * `Contabilizada`: resultado calculado únicamente con votos confirmados on-chain.
+* **Estados de Voto** —agrupación comprensible de `SIGNED / QUEUED / SENT → CONFIRMED / FAILED`—:
+  * `Recibido`: intención firmada aceptada por la plataforma, todavía no contabilizada.
+  * `En confirmación`: entrega al ledger en curso.
+  * `Confirmado`: registro on-chain confirmado y elegible para el cómputo.
+  * `No confirmado`: la entrega falló; debe mostrarse la razón y, cuando corresponda, la acción de reintento o soporte.
+* **Estados de Membresía**:
+  * `Solicitada` *(Neutral)*: registro pendiente de activación.
+  * `Activo` *(Verde)*: Habilitado con voz y voto según padrón.
+  * `Moroso` *(Ámbar)*: Estado de membresía que sólo restringe el voto cuando la política configurada así lo determine.
+  * `Suspendido` *(Rojo)*: Inhabilitado temporalmente de la asamblea.
+  * `Terminada` *(Gris)*: relación de membresía finalizada; estado terminal.
+
+##### **D. Etiquetas de Mensajería y Feedback**
+* `Identidad verificada`: tras superar prueba de vida y comparación facial.
+* `La verificación venció. Vuelva a verificar su identidad para continuar`: cuando concluye la ventana de frescura configurada.
+* `Voto recibido. Confirmación pendiente`: tras aceptar la intención firmada.
+* `Voto confirmado y contabilizable`: sólo después de la confirmación on-chain.
+* `Cuórum alcanzado (65,4 %)`: cuando la comparación con el `QuorumSnapshot` lo confirme; no se añade “legal” sin una validación jurídica específica.
+
+#### **3. Reglas de Consistencia Editorial**
+
+* Los botones comienzan con verbo y describen el efecto inmediato: `Guardar borrador`, `Abrir votación`, `Confirmar voto`.
+* Los estados se expresan como sustantivo o participio y no como acción: `Abierta`, `En confirmación`, `Confirmado`.
+* Se utiliza español del Perú, tratamiento de **usted**, formato de fecha `dd/mm/aaaa` y hora acompañada de zona horaria cuando afecte apertura o cierre.
+* Los mensajes de error indican qué ocurrió, qué dato se conserva y qué puede hacer la persona. No se exponen códigos internos, trazas ni datos biométricos.
+* Icono, color y texto se combinan para comunicar estados; ninguno funciona como único indicador.
+
+---
+
+### **6.2.3. Searching Systems.**
+
+La búsqueda se diseña por contexto, alcance y permiso. El sistema no tendrá un buscador global que mezcle comunidades ni datos personales. Como el backend actual no expone endpoints de búsqueda de miembros, propuestas, actas o constancias, esta sección define el contrato UX objetivo y su prioridad de implementación.
+
+```mermaid
+flowchart LR
+    A[Persona inicia consulta] --> B{Contexto y autorización}
+    B -->|Landing pública| C[Filtrar ayuda]
+    B -->|Comunidad autorizada| D[Miembros, propuestas y actas]
+    B -->|Portal del votante| E[Mis votaciones y constancias]
+    B -->|Verificador público| F[Código o hash exacto]
+    D --> G[Resultados limitados a la comunidad]
+    F --> H[Estado y evidencia sin datos personales]
+```
+
+#### **1. Zonas, Alcance y Prioridad**
+
+| Superficie | Consulta y filtros | Alcance / privacidad | Prioridad |
+|---|---|---|---|
+| **Landing Page** | Filtro local de preguntas frecuentes por tema: funcionamiento, privacidad, seguridad y soporte. | Sólo contenido público. Las afirmaciones normativas deberán tener fuente y fecha de revisión. | Primera entrega del frontend. |
+| **Portal administrativo** | Miembros por nombre, unidad o documento; propuestas por título/estado/fecha; actas por asamblea y periodo. | Requiere sesión, rol comunitario y `communityId`. Los documentos se enmascaran en resultados y logs. | Tras implementar Membership y Voting. |
+| **Portal del votante** | Filtro de sus propias votaciones y constancias por comunidad, estado o fecha. | Nunca devuelve datos de otros miembros. | Tras implementar Voting. |
+| **Verificador público** | Coincidencia exacta por código de constancia o hash de transacción; no ofrece autocompletado ni listados. | Devuelve estado, fecha, red, bloque y validez técnica sin DNI, correo, dirección de wallet completa ni opción de voto. | Tras implementar Voting, Relay y política de secreto de papeleta. |
+
+El documento de identidad no será el criterio sugerido por defecto. Su uso exige autorización, coincidencia exacta, enmascaramiento y controles contra enumeración. La búsqueda pública nunca podrá descubrir constancias mediante consultas parciales.
+
+#### **2. Comportamiento y Directrices de Interacción en Búsqueda**
+
+* **Ejecución**: filtros locales sobre listas pequeñas; consultas al servidor con `debounce` de referencia de `300 ms`, mínimo de 2 caracteres, cancelación de solicitudes anteriores, paginación y orden estable. El valor deberá ajustarse con medición, no asumirse como requisito de dominio.
+* **Normalización**: nombres y títulos ignoran mayúsculas y diacríticos; códigos, hashes y documentos usan coincidencia exacta. No se aplica búsqueda difusa a identificadores sensibles.
+* **Feedback accesible**: se muestran los estados `Escriba para buscar`, `Buscando…`, cantidad de resultados, error recuperable y estado vacío. Los cambios se anuncian mediante una región `aria-live="polite"` sin mover el foco.
+* **Coincidencias**: el resaltado mantiene contraste suficiente y no sustituye el texto. Los términos ingresados se escapan antes de renderizarse.
+* **Estado vacío**: informa el alcance consultado y ofrece `Limpiar filtros`; no confirma si una persona existe fuera de la comunidad autorizada.
+* **Seguridad y desempeño**: autorización en servidor, consultas parametrizadas, límites de página, rate limiting y logs sin términos sensibles completos. El frontend nunca será el único control de acceso.
+
+---
+
+### **6.2.4. SEO Tags, Meta Tags y ASO Elements.**
+
+La estrategia SEO se aplica únicamente al contenido público. El portal autenticado y los resultados individualizados de auditoría no deben indexarse. Los valores siguientes son una especificación para el futuro frontend; el dominio público, las imágenes sociales y las rutas deberán validarse antes del despliegue.
+
+#### **1. SEO Tags y Meta Tags para el Sitio Web Estático (Landing Page)**
+
+| Parámetro / Tag | Inicio (`/`) | Seguridad y Privacidad (`/seguridad`) | Planes (`/precios`) | Demostración (`/demo`) |
+|---|---|---|---|---|
+| `<title>` | VotoChain \| Votación verificable para comunidades | Seguridad y privacidad en VotoChain | Planes de VotoChain para comunidades | Solicite una demostración de VotoChain |
+| `meta description` | Conozca la propuesta de VotoChain para gestionar votaciones remotas con verificación de identidad y evidencia auditable en juntas y cooperativas. | Revise el diseño de verificación de identidad, consentimiento, minimización de datos y registro auditable previsto por VotoChain. | Compare los planes disponibles para gestionar votaciones comunitarias. Precios y condiciones sujetos a la oferta publicada. | Solicite una demostración para evaluar el flujo de administración, votación y consulta de constancias de VotoChain. |
+| `meta keywords`* | `votación electrónica, junta de propietarios, asamblea virtual, VotoChain` | `privacidad biométrica, verificación de identidad, auditoría de votos` | `software de votación, planes para comunidades` | `demostración VotoChain, votación comunitaria` |
+| `meta author` | Morocoders | Morocoders | Morocoders | Morocoders |
+| `og:title` | VotoChain: votación verificable para comunidades | Seguridad y privacidad en VotoChain | Planes para comunidades | Solicite una demostración |
+| `og:description` | La propuesta de VotoChain para organizar votaciones remotas con identidad verificada y evidencia consultable. | Conozca cómo se proyecta proteger la identidad y distinguir un voto recibido de uno confirmado. | Revise opciones de adopción según las necesidades de su comunidad. | Recorra el flujo propuesto y evalúe su aplicación en su comunidad. |
+| `og:image` | `{baseUrl}/assets/og-home.png` | `{baseUrl}/assets/og-security.png` | `{baseUrl}/assets/og-pricing.png` | `{baseUrl}/assets/og-demo.png` |
+| `twitter:card` | `summary_large_image` | `summary_large_image` | `summary_large_image` | `summary_large_image` |
+| `canonical URL` | `{baseUrl}/` | `{baseUrl}/seguridad` | `{baseUrl}/precios` | `{baseUrl}/demo` |
+
+*`meta keywords` se conserva por completitud de la rúbrica y compatibilidad con otros consumidores; [Google indica que no lo utiliza para indexación ni ranking](https://developers.google.com/search/docs/crawling-indexing/special-tags). Cada página deberá incluir además `charset="utf-8"`, `viewport`, `lang="es-PE"`, `og:type="website"`, `og:url`, `og:locale="es_PE"`, `og:image:alt` y datos estructurados JSON-LD verificables. No se publicarán testimonios, precios, certificaciones ni afirmaciones legales que no cuenten con evidencia vigente.
+
+#### **2. SEO Tags y Directivas para Web Applications (Portal Autenticado y Auditoría)**
+
+* **Zonas privadas (`/app/*`, `/admin/*`)**:
+  * Deben requerir autenticación y autorización en servidor, enviar `Cache-Control: private, no-store` cuando contengan datos sensibles y declarar:
+    ```html
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    ```
+  * `noindex` es una directiva para buscadores, no un control de seguridad. Las rutas privadas no se incluirán en sitemap y su contenido no se renderizará para clientes sin sesión.
+* **Auditoría (`/auditoria`)**:
+  * La página explicativa estática puede indexarse. El resultado de cada código o hash usa una URL no enumerable y `noindex, noarchive, nosnippet` para reducir exposición y duplicación:
+    ```html
+    <title>Consultar una constancia de VotoChain</title>
+    <meta name="description" content="Consulte el estado y la evidencia técnica asociada a una constancia de VotoChain." />
+    <meta name="robots" content="noindex, noarchive, nosnippet" />
+    ```
+
+#### **3. ASO (App Store Optimization) Elements para la Aplicación Móvil**
+
+**No aplica al alcance vigente.** La arquitectura aprobada define una Landing Page y una aplicación web responsive en Next.js; no existe repositorio de aplicación nativa ni evidencia de publicación en Google Play o Apple App Store. En consecuencia, no corresponde presentar títulos, categorías, clasificación etaria o descripciones de tienda como elementos ya definidos.
+
+Si una aplicación nativa se incorpora al roadmap, el ASO se abrirá como entregable independiente y deberá:
+
+1. reutilizar el sistema de rotulado y la identidad visual aprobada;
+2. describir sólo capacidades implementadas y verificadas, sin prometer validez legal, invulnerabilidad, tiempos garantizados o protección absoluta;
+3. definir nombre, subtítulo, keywords, descripción breve y descripción completa dentro de los límites vigentes de [Apple App Store](https://developer.apple.com/app-store/product-page/) y [Google Play](https://support.google.com/googleplay/android-developer/answer/9859152);
+4. completar la clasificación etaria y las declaraciones de privacidad a partir del comportamiento real de la app y sus SDK, no por estimación documental; y
+5. localizar la ficha para `es-PE` y validarla con investigación de términos antes de publicarla.
+
+---
+
+### **6.2.5. Navigation Systems.**
+*(Esta sección detalla los esquemas de navegación global, jerárquica y contextual en el siguiente bloque de diseño de interfaces).*
+
+## **6.3. Landing Page UI Design.**
+
+### **6.3.1. Landing Page Wireframe.**
+
+### **6.3.2. Landing Page Mock-up.**
+
+## **6.4. Applications UX/UI Design.**
+
+### **6.4.1. Applications Wireframes.**
+
+### **6.4.2. Applications Wireflow Diagrams.**
+
+### **6.4.3. Applications Mock-ups.**
+
+### **6.4.4. Applications User Flow Diagrams.**
+
+### **6.5. Applications Prototyping.**
+
+# **Capítulo VII: Product Implementation, Validation & Deployment**
+
+## **7.1. Software Configuration Management.**
+
+### **7.1.1. Software Development Environment Configuration.**
+
+### **7.1.2. Source Code Management.**
+
+### **7.1.3. Source Code Style Guide & Conventions.**
+
+### **7.1.4. Software Deployment Configuration.**
+
+## **7.2. Solution Implementation.**
+
+### **7.2.X. Sprint n**
+
+#### **7.2.X.1. Sprint Planning n.**
+
+#### **7.2.X.2. Sprint Backlog n.**
+
+#### **7.2.X.3. Development Evidence for Sprint Review.**
+
+#### **7.2.X.4. Testing Suite Evidence for Sprint Review.**
+
+#### **7.2.X.5. Execution Evidence for Sprint Review.**
+
+#### **7.2.X.6. Services Documentation Evidence for Sprint Review.**
+
+#### **7.2.X.7. Software Deployment Evidence for Sprint Review.**
+
+#### **7.2.X.8. Team Collaboration Insights during Sprint.**
+
+## **7.3. Validation Interviews.**
+
+### **7.3.1. Diseño de Entrevistas.**
+
+### **7.3.2. Registro de Entrevistas.**
+
+### **7.3.3. Evaluaciones según heurísticas.**
+
+## **7.4. Video About-the-Product.**
 
 # **Referencias**
 

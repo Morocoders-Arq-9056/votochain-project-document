@@ -1860,143 +1860,253 @@ Al no existir en el alcance ninguna aplicación móvil nativa (Android o iOS) ni
 
 ### **6.2.5. Navigation Systems.**
 
-El sistema de navegación de VotoChain define las estructuras, técnicas y acciones que guían a los visitantes y usuarios a través de la Landing Page estática y la Aplicación Web (tanto en su vista de escritorio como en su adaptación responsive para smartphones), asegurando que puedan cumplir sus metas de manera intuitiva, predecible y sin fricción cognitiva.
+El sistema de navegación de VotoChain define la arquitectura, estructuras, técnicas y acciones interactivas que guían a los visitantes y usuarios a través de la **Landing Page estática** y la **Aplicación Web** (en su despliegue para computadoras de escritorio y en su adaptación responsive para smartphones), permitiéndoles cumplir sus metas de manera intuitiva, predecible y satisfactoria, garantizando al mismo tiempo la máxima transparencia y validez legal del proceso de sufragio.
 
-Siguiendo las directrices de Arquitectura de Información (Rosenfeld & Morville) y los estándares de accesibilidad WCAG 2.1 AA, se establecen cinco subsistemas de navegación complementarios y un conjunto de técnicas de recorrido e interacción adaptadas a las capacidades de cada dispositivo.
+Conforme a las directrices de Arquitectura de Información para la Web (Rosenfeld, Morville & Arango) y las pautas internacionales de accesibilidad WCAG 2.1 nivel AA, el sistema articula cinco subsistemas de navegación complementarios, un catálogo sistemático de acciones y técnicas de guía, y la descripción exhaustiva de las distintas maneras en que los usuarios recorrerán el contenido según su perfil y objetivos de interacción.
 
 ```mermaid
 flowchart TD
-    subgraph Landing["Landing Page Pública (Visitantes)"]
-        LP_H["Sticky Header: Enlaces Ancla / Idioma"] --> LP_Hero["Hero: Propuesta de Valor"]
-        LP_Hero --> LP_How["Cómo Funciona: 3 Pasos"]
-        LP_How --> LP_Audience["Para su Comunidad: Segmentos"]
-        LP_Audience --> LP_Sec["Seguridad y Privacidad"]
-        LP_Sec --> LP_FAQ["Preguntas Frecuentes"]
-        LP_FAQ --> LP_Contact["Formulario de Contacto / Demo"]
-        LP_Contact --> LP_Footer["Footer: Legal y Redes"]
+    subgraph Landing["1. Recorrido Exploratorio y de Conversión (Landing Page)"]
+        LP_H["Sticky Header: Navegación Global & Selector Idioma"] --> LP_Hero["Hero: Propuesta de Valor & CTA Primario"]
+        LP_Hero --> LP_How["Cómo Funciona: 3 Pasos Explicativos"]
+        LP_How --> LP_Audience["Para su Comunidad: Pestañas de Segmentos"]
+        LP_Audience --> LP_Sec["Seguridad, Criptografía & Ley N° 29733"]
+        LP_Sec --> LP_Pricing["Planes de Adopción & Estructura de Costos"]
+        LP_Pricing --> LP_FAQ["Preguntas Frecuentes (Acordeón Accesible)"]
+        LP_FAQ --> LP_Contact["Formulario de Demostración y Contacto"]
+        LP_Contact --> LP_Footer["Site Footer: Enlaces Institucionales & Legales"]
     end
 
-    subgraph AdminApp["Portal Administrativo Web (Desktop - Patricia Salas)"]
-        A_Nav["Sidebar Persistente: 260px"] --> A_Dash["Panel General / Métricas"]
-        A_Nav --> A_Padron["Padrón de Miembros"]
-        A_Nav --> A_Convoc["Convocatorias y Asambleas"]
-        A_Convoc --> A_Bread["Navegación Jerárquica: Breadcrumbs"]
-        A_Bread --> A_Tabs["Navegación Local: Tabs de Asamblea"]
-        A_Tabs --> A_Cuorum["Cuórum en Vivo"]
-        A_Tabs --> A_Prop["Gestión de Propuestas"]
-        A_Tabs --> A_Acta["Resultados y Acta Oficial"]
+    subgraph AdminApp["2. Recorrido Operativo y de Monitoreo (Desktop - Patricia Salas)"]
+        A_Nav["Sidebar Persistente (260px)"] --> A_Dash["Panel General de Métricas"]
+        A_Nav --> A_Padron["Gestión de Padrón de Residentes"]
+        A_Nav --> A_Convoc["Convocatorias & Asambleas"]
+        A_Convoc --> A_Bread["Navegación Jerárquica: Breadcrumbs Dinámicos"]
+        A_Bread --> A_Tabs["Navegación Local: Pestañas de Asamblea"]
+        A_Tabs --> A_Cuorum["Cuórum en Vivo & Participación"]
+        A_Tabs --> A_Prop["Gestión de Moción & Votación"]
+        A_Tabs --> A_Acta["Resultados Oficiales & Acta Digital"]
     end
 
-    subgraph VoterApp["Portal del Votante Web (Smartphone - Miguel Herrera)"]
-        V_Bottom["Sticky Bottom Bar: Zona del Pulgar"] --> V_List["Mis Votaciones Activas"]
-        V_Bottom --> V_Hist["Mis Constancias"]
-        V_Bottom --> V_Profile["Mi Perfil / Comunidades"]
-        V_List --> V_Wizard["Flujo Lineal de Votación: Modo Enfoque"]
-        V_Wizard --> V_Step1["1. Lectura de Propuesta"]
-        V_Step1 --> V_Step2["2. Verificación Facial"]
-        V_Step2 --> V_Step3["3. Selección de Opción"]
-        V_Step3 --> V_Step4["4. Confirmación Resumen"]
-        V_Step4 --> V_Step5["5. Constancia Digital"]
+    subgraph VoterApp["3. Recorrido Lineal y de Enfoque (Smartphone - Miguel Herrera)"]
+        V_Home["Pantalla Mis Votaciones (Sticky Bottom Bar)"] --> V_Card["Selección de Convocatoria Activa"]
+        V_Card --> V_Focus["Activación de Modo Enfoque (Distraction-Free)"]
+        V_Focus --> V_Step1["Paso 1: Lectura de Propuesta & Sustento"]
+        V_Step1 --> V_Step2["Paso 2: Acreditación Biométrica Facial"]
+        V_Step2 --> V_Step3["Paso 3: Marcación en Papeleta Táctil"]
+        V_Step3 --> V_Step4["Paso 4: Resumen & Confirmación de Dos Pasos"]
+        V_Step4 --> V_Step5["Paso 5: Emisión On-Chain & Constancia Digital"]
+        V_Step5 --> V_Exit["Retorno Seguro a Mis Votaciones"]
     end
 
-    subgraph Verifier["Verificador Público (Cualquier Dispositivo)"]
-        V_Step5 -.->|"Deep Link / Hash"| Pub_Verif["Consulta de Evidencia On-Chain"]
+    subgraph Verifier["4. Recorrido Desacoplado de Verificación (Público)"]
+        V_Step5 -.->|"Deep Link / QR"| Pub_Verif["Verificador On-Chain (/auditoria?code=...)"]
+        Pub_Verif --> Pub_Inspect["Inspección Técnica de Bloque & Timestamp"]
     end
 ```
 
-#### **1. Sistema de Navegación Global (Navegación Persistente)**
+---
 
-La navegación global se mantiene visible y accesible en todas las páginas de cada superficie para otorgar contexto inmediato y permitir el retorno a las áreas principales con un solo clic o toque:
+#### **1. Acciones y Técnicas que Guían a los Usuarios para Cumplir sus Metas**
 
+Para asegurar que los usuarios interactúen de forma satisfactoria y alcancen sus metas sin desorientación ni errores irreversibles, el sistema incorpora técnicas de diseño de interacción basadas en affordances visuales, retroalimentación inmediata, confinamiento de atención y prevención proactiva de fallas:
+
+##### **A. Técnicas de Orientación Visual y Cognitiva (Wayfinding)**
+1. **Affordances y Significantes Inequívocos**: Los elementos accionables presentan contrastes cromáticos de al menos `4.5:1` sobre sus fondos, bordes redondeados y microelevaciones mediante sombras (`box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1)`). Los estados `:hover`, `:focus-visible` y `:active` modifican el tono y el contorno del elemento, confirmando inmediatamente la interactividad antes del clic o toque.
+2. **Modo Enfoque para Votación (*Focus Mode / Distraction-Free*)**: Durante el acto crítico de votación en smartphones, el sistema oculta por completo la barra inferior de navegación global (*Sticky Bottom Bar*), los botones de soporte secundario y las notificaciones emergentes. La interfaz confina al votante en un túnel cognitivo dedicado exclusivamente a la lectura de la moción, su validación biométrica y su sufragio, eliminando cualquier distracción o toque accidental de salida.
+3. **Indicadores de Progreso Escalonado (*Steppers Lineales*)**: En flujos asistidos de múltiples pasos (como el sufragio del residente o el alta de convocatoria por la administradora), una barra superior enumera y titula visualmente cada etapa (`1. Lectura` › `2. Identidad` › `3. Papeleta` › `4. Confirmación` › `5. Constancia`). Los pasos completados se marcan con un check azul cobalto, el paso activo se resalta con fondo luminoso y los pasos futuros permanecen deshabilitados, comunicando con exactitud la distancia hasta la meta.
+4. **Señalización Semántica de Ubicación (*Active State Tracking*)**: En todos los subsistemas de menú (cabecera web, barra lateral administrativa y pestañas), el ítem correspondiente a la vista en curso incorpora el atributo HTML `aria-current="page"` (o `aria-current="step"`), acompañado visualmente por un borde indicador de `3px` en color azul primario (`#1D4ED8`) y tipografía en peso semibold (`font-weight: 600`), garantizando que el usuario sepa siempre en qué sección del sistema se encuentra.
+
+##### **B. Técnicas de Control, Seguridad y Prevención de Errores**
+1. **Patrón de Confirmación Explícita de Dos Pasos**: Debido a la inmutabilidad de los registros criptográficos en blockchain, emitir un voto no puede ser una acción de un solo clic. El sistema implementa una pantalla intermedia obligatoria de *Revisión y Resumen*, donde se exhibe en tipografía destacada la opción seleccionada, el nombre de la moción y la advertencia legal de irreversibilidad, requiriendo un segundo clic consciente en el botón primario `Confirmar y Emitir Voto`.
+2. **Botones de Acción Anclados (*Sticky Action Triggers*)**: En vistas largas (como la lectura de mociones o términos y condiciones), los botones de acción primaria (`Continuar a Verificación`, `Revisar Selección`) se anclan al borde inferior de la pantalla dentro de la zona del pulgar (*Thumb Zone*), evitando que el usuario deba desplazarse repetitivamente arriba y abajo para encontrar el control de avance.
+3. **Persistencia Automática de Borradores (*Autosave Drafts*)**: Si la administradora de la asamblea sufre una desconexión o navega accidentalmente a otra sección mientras redacta una propuesta compleja, el estado del formulario se guarda de forma continua en el almacenamiento local (`localStorage`) sincronizado con la sesión, permitiéndole retomar el trabajo sin pérdida de datos.
+4. **Microinteracciones y Regiones de Anuncio Accesible (`aria-live`)**: Las operaciones asíncronas (como la transmisión de la transacción a los relays blockchain o la validación facial) despliegan indicadores animados no intrusivos (*spinners* de carga y barras de progreso) y emiten descripciones verbales para lectores de pantalla mediante contenedores con `aria-live="polite"`, mitigando la ansiedad del usuario durante tiempos de espera técnicos.
+
+##### **C. Matriz de Acciones, Técnicas de Guía y Metas de Usuario**
+
+| Perfil de Usuario | Meta del Usuario | Acción del Usuario (Inputs / Gestos) | Técnica de Guía Implementada | Satisfacción e Impacto UX |
+|---|---|---|---|---|
+| **Visitante de Landing Page** *(Propietario / Directiva)* | Conocer la propuesta de valor y solicitar una demostración comercial. | Scroll vertical continuo, clics en enlaces ancla del encabezado, llenado de formulario. | Sticky Header con navegación suave (`scroll-behavior: smooth`), scroll padding de `76px`, formulario con validación inline y alerta de confirmación con `aria-live`. | Comprensión rápida de beneficios en menos de 90 segundos; conversión sin fricción. |
+| **Visitante de Landing Page** *(Comunidad en Evaluación)* | Evaluar costos y esquemas de precios para su comunidad. | Clic en `#planes` en el menú superior o botón `Ver Planes` en el Hero. | Salto asistido al bloque de tarifas, tarjetas destacadas con etiquetas comparativas (`Recomendado`), notas explícitas de costo cero en gas blockchain para votantes. | Claridad presupuestaria inmediata sin costos ocultos ni sorpresas tarifarias. |
+| **Administradora** *(Patricia Salas, Desktop)* | Monitorear el cuórum en vivo durante la asamblea ordinaria. | Clic en el módulo `Convocatorias` del Sidebar, selección de asamblea y clic en tab `Cuórum en Vivo`. | Navegación jerárquica con Breadcrumbs, pestañas locales accesibles (WAI-ARIA Tabs), gráfico radial con refresco automático sin recargar la pantalla. | Control operativo total en tiempo real; capacidad de verificar cuórum legal en segundos. |
+| **Administradora** *(Patricia Salas, Desktop)* | Publicar una moción y abrir votación oficial en la asamblea. | Clic en botón primario `+ Nueva Propuesta`, completado de campos y clic en `Publicar`. | Stepper guiado de 5 fases, vista previa editable de papeleta, modal de confirmación con resumen de habilitación del padrón. | Cero errores en el orden del día; respaldo auditable previo a la votación comunitaria. |
+| **Votante Residencial** *(Miguel Herrera, Smartphone)* | Emitir su voto en una moción comunitaria de forma segura. | Toque en enlace de convocatoria, liveness facial en cámara, toque sobre opción de voto, confirmación final. | Activación automática de Modo Enfoque, Stepper lineal de 5 pasos, tarjetas táctiles completas (*Radio Cards* de `>56px`), resumen de intención previa al sellado. | Experiencia de sufragio completada en menos de 2 minutos, sin sensación de complejidad técnica. |
+| **Votante Residencial** *(Miguel Herrera, Smartphone)* | Obtener constancia y comprobar que su voto fue registrado. | Toque en `Descargar Constancia (PDF)` o toque en el enlace del código de recibo. | Pantalla de éxito con código único `rec-2026-XXXX`, código QR de validación y botón de copia con feedback visual inmediato. | Certeza y tranquilidad absoluta de que su participación fue computada y blindada. |
+| **Auditor / Fiscalizador** *(Cualquier Navegador)* | Auditar la validez técnica y marca temporal de un sufragio. | Escaneo del código QR de una constancia o ingreso del código en `/auditoria`. | Deep linking directo sin login previo, búsqueda de coincidencia exacta, visualización estructurada de hashes y bloque on-chain. | Verificación matemática y legal independiente sin vulnerar el secreto de la papeleta. |
+
+---
+
+#### **2. Maneras en que los Usuarios irán Recorriendo el Contenido**
+
+El recorrido del contenido no es estático ni uniforme; varía según el contexto operativo, el objetivo del usuario y el dispositivo empleado. A continuación se detallan los cuatro recorridos principales y los recorridos de resiliencia ante contingencias:
+
+##### **A. Recorrido Exploratorio y de Conversión en la Landing Page (Visitante / Junta Directiva)**
+Este recorrido responde a un patrón de navegación vertical narrativo (*Storytelling & Conversion Funnel*), donde el visitante descubre gradualmente las capacidades de la plataforma:
+1. **Entrada e Impacto Inicial (*Hero Section*)**: El usuario aterriza en la página y lee el titular de valor: *"Votaciones transparentes, seguras e inmutables para comunidades residenciales y gremiales"*. Observa los dos caminos de acción inmediata: botón primario `Solicitar demo` (que lo lleva directamente al final de la página) y botón secundario `Conocer cómo funciona` (que inicia el scroll suave hacia el siguiente bloque).
+2. **Comprensión Funcional (*Cómo Funciona*)**: Mediante un recorrido guiado en 3 tarjetas numeradas (`1. Convocatoria y Padrón`, `2. Votación Biométrica Facial`, `3. Escrutinio Criptográfico en Blockchain`), el visitante comprende la mecánica de uso sin tecnicismos abrumadores.
+3. **Identificación con el Caso de Uso (*Para su Comunidad*)**: El usuario recorre las pestañas interactivas de segmentación para ver cómo VotoChain resuelve las necesidades específicas de `Juntas de Propietarios y Condominios`, `Colegios Profesionales y Asociaciones` o `Cooperativas de Ahorro y Crédito`.
+4. **Validación de Confianza y Cumplimiento Normativo (*Seguridad y Privacidad*)**: El usuario revisa los estándares de encriptación, la minimización de datos biométricos y el estricto cumplimiento de la Ley de Protección de Datos Personales (Ley N° 29733 de Perú), despejando inquietudes jurídicas.
+5. **Evaluación de Planes y Precios (*Planes*)**: El usuario examina las tres opciones de adopción comercial (`Asamblea Piloto`, `Comunidad Anual` y `Administradoras`), verificando las características incluidas y constatando que los votantes nunca pagan comisiones de red (*gas fees*).
+6. **Resolución de Dudas Frecuentes (*FAQ*)**: A través de un componente acordeón accesible, el visitante resuelve inquietudes comunes sobre quórum legal, validez de firmas electrónicas y soporte técnico para personas mayores.
+7. **Conversión y Registro (*Formulario de Contacto*)**: El recorrido culmina en el formulario interactivo. Tras ingresar sus datos, seleccionar el tipo de comunidad y marcar la casilla de consentimiento de datos personales, el sistema emite un mensaje de éxito accesible y el equipo comercial agenda la demostración.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Visitante as Visitante (Junta Directiva)
+    participant Header as Sticky Header
+    participant Landing as Landing Page Sections
+    participant Form as Formulario de Contacto
+    
+    Visitante->>Landing: Accede a la Landing Page (Hero)
+    Visitante->>Header: Clic en enlace ancla (#como-funciona o #planes)
+    Header->>Landing: Desplazamiento suave con scroll-padding
+    Visitante->>Landing: Revisa cómo funciona, seguridad (Ley 29733) y tarifas
+    Visitante->>Landing: Clic en CTA "Solicitar demo"
+    Landing->>Form: Foco asistido en campo "Nombre completo"
+    Visitante->>Form: Completa datos + Acepta política Ley 29733
+    Visitante->>Form: Envía formulario
+    Form-->>Visitante: Confirmación en pantalla (aria-live) & email de contacto
+```
+
+##### **B. Recorrido Operativo Jerárquico y de Monitoreo en Desktop (Administradora Patricia Salas)**
+Diseñado para la gestión intensiva de asambleas en pantallas amplias de escritorio, este recorrido aprovecha estructuras multi-nivel y acceso directo:
+1. **Acceso al Panel General (*Dashboard Entry*)**: Al iniciar sesión con credenciales administrativas y doble factor de autenticación, la administradora visualiza el panel de control con métricas clave: comunidades administradas, asamblea activa en fecha actual y porcentaje global de acreditación.
+2. **Revisión del Padrón Habilitado**: Mediante el sidebar, navega a `Padrón de Miembros`. Utiliza el buscador con debounce y filtros por torre/unidad para verificar qué propietarios se encuentran al día en sus cuotas y debidamente autorizados para votar.
+3. **Apertura de Convocatoria y Orden del Día**: Navega a `Convocatorias` e inicia el wizard guiado para ingresar los puntos a debatir, adjuntar documentos sustentatorios en PDF y programar las horas de inicio y cierre de cada votación.
+4. **Monitoreo de Cuórum en Vivo (*Live Assembly Monitoring*)**: Durante el desarrollo de la asamblea virtual o híbrida, la administradora mantiene abierta la pestaña `Cuórum en Tiempo Real`. El indicador circular interactivo refleja en tiempo real el porcentaje de acreditación conforme los residentes verifican su identidad facial, alertando visualmente cuando se alcanza el quórum estatutario (ej. `50% + 1`).
+5. **Apertura de Mociones y Monitoreo de Participación**: La administradora activa la votación de la moción en curso. A través de la pestaña `Propuestas Activas`, observa el porcentaje de participación sin vulnerar el secreto del voto (la pantalla solo muestra la cantidad de papeletas depositadas, nunca la opción elegida por cada votante).
+6. **Cierre de Votación y Generación de Actas**: Al expirar el tiempo de la moción, presiona `Cerrar Votación`. El sistema ejecuta el cómputo final on-chain y genera automáticamente el *Acta Oficial de Resultados*, firmada digitalmente con los hashes de cada voto, lista para ser descargada en formato PDF firmado y compartida con los propietarios.
+
+##### **C. Recorrido Lineal, Asistido y de Enfoque en Smartphone (Votante Miguel Herrera)**
+Optimizado para dispositivos táctiles, este recorrido minimiza la fricción cognitiva mediante un flujo guiado paso a paso con máxima asistencia ergonómica:
+1. **Acceso desde Notificación**: El votante recibe una convocatoria por correo electrónico o mensaje SMS con un enlace seguro cifrado (`Magic Link`). Al tocar el enlace, se abre la aplicación web adaptativa en el navegador de su smartphone (`Chrome Mobile` / `Safari`).
+2. **Vista de Inicio y Selección de Asamblea**: El votante entra en `Mis Votaciones`. En la parte superior, destaca una tarjeta interactiva con borde iluminado que indica: *"Asamblea Extraordinaria en Curso - Condominio Las Palmeras - Cierra en 45 minutos"*. El usuario toca el botón primario `Ingresar a la Asamblea`.
+3. **Aislamiento en Modo Enfoque (*Focus Mode*)**: Al abrirse la moción, desaparece la barra inferior global. La pantalla adopta una diagramación limpia de concentración total con un indicador de avance en la cabecera: `Paso 1 de 5`.
+4. **Lectura Asistida de la Moción**: La pantalla expone el texto de la propuesta en tipografía legible (`16px`), los nombres de la directiva convocante y un botón para previsualizar el informe técnico. El usuario presiona el botón anclado inferior `Continuar a Verificación`.
+5. **Verificación Biométrica de Identidad (Liveness Facial)**: La interfaz solicita permiso de cámara web mediante la API estándar del navegador (`navigator.mediaDevices.getUserMedia`). Se despliega una guía ovalada con instrucciones dinámicas: *"Mire de frente a la cámara"*. El sistema valida la prueba de vida de forma pasiva en segundos, mostrando un icono verde de verificación exitosa y avanzando automáticamente a la papeleta.
+6. **Marcación en Papeleta Táctil**: Se presenta la cédula de votación digital con opciones claras dispuestas en tarjetas táctiles de gran tamaño (`A Favor`, `En Contra`, `Abstención`). Al pulsar una opción, la tarjeta adquiere un borde azul cobalto y fondo resaltado con retroalimentación háptica (vibración leve en dispositivos compatibles). Se activa el botón `Revisar Selección`.
+7. **Revisión Previa y Confirmación Consciente**: La pantalla de confirmación despliega un resumen inequívoco de la elección realizada y el texto de advertencia legal. El usuario presiona el botón definitivo `Confirmar y Emitir Voto`.
+8. **Transmisión y Despliegue de Constancia Digital**: El sistema muestra una animación breve de sellado criptográfico y entrega la pantalla de comprobante final:
+   - Código de constancia: `rec-2026-0412` (con botón `Copiar Código`).
+   - Sello temporal: `05/10/2026 18:45:12 PET`.
+   - Estado: `Confirmado en Blockchain (Bloque #142857)`.
+   - Botón primario: `Descargar Constancia en PDF`.
+   - Botón secundario: `Verificar en Auditoría Pública`.
+9. **Cierre y Retorno Seguro**: El votante presiona `Volver a Mis Votaciones`, regresando al menú principal donde la moción recién votada ahora figura con el distintivo verde `Voto Emitido y Verificado`.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Votante as Miguel Herrera (Votante en Smartphone)
+    participant App as Web App Responsive
+    participant Biometria as Servicio de Identidad / Liveness
+    participant Blockchain as Smart Contract / Relay
+    
+    Votante->>App: Toca enlace de convocatoria o abre Mis Votaciones
+    App->>App: Activa Modo Enfoque (Oculta Bottom Bar)
+    App-->>Votante: Paso 1: Muestra texto de moción y anexos
+    Votante->>App: Presiona "Continuar a Verificación"
+    App->>Biometria: Solicita captura de cámara y ejecuta liveness
+    Biometria-->>App: Identidad validada satisfactoriamente
+    App-->>Votante: Paso 3: Despliega papeleta (Radio Cards)
+    Votante->>App: Selecciona opción de voto ("A Favor")
+    App-->>Votante: Paso 4: Pantalla de revisión y confirmación
+    Votante->>App: Presiona "Confirmar y Emitir Voto"
+    App->>Blockchain: Transmite transacción firmada de voto anónimo
+    Blockchain-->>App: Hash de bloque & confirmación de recibo
+    App-->>Votante: Paso 5: Despliega Constancia Digital (rec-2026-XXXX) & PDF
+    Votante->>App: Toca "Finalizar y Regresar"
+    App->>App: Desactiva Modo Enfoque y actualiza estado en Mis Votaciones
+```
+
+##### **D. Recorrido Desacoplado de Verificación Pública (Auditor / Fiscalizador / Vecino)**
+Este recorrido permite a cualquier participante o veedor externo auditar la autenticidad técnica de una constancia sin necesidad de autenticarse en el sistema:
+1. **Punto de Entrada Directo**: El usuario accede al verificador público ya sea escaneando el código QR impreso en una constancia en PDF o navegando directamente a la URL de auditoría con parámetro de consulta (`https://votochain.pe/auditoria?code=rec-2026-0412`).
+2. **Consulta y Búsqueda Exacta**: Si ingresó manualmente a `/auditoria`, el sistema presenta un campo de entrada único con máscara de validación para el código de recibo o el hash de la transacción. El botón `Verificar Registro` inicia la consulta directa a los nodos de la red.
+3. **Desglose de Evidencia On-Chain**: La pantalla de resultados muestra de forma estructurada y accesible:
+   - Identificador de la Asamblea y moción sufragada.
+   - Estado del bloque: `Confirmado e Inmutable`.
+   - Marca temporal oficial (`Timestamp UTC y Local`).
+   - Identificador criptográfico de la transacción (*Transaction Hash*).
+   - Firma del contrato inteligente de la asamblea.
+   - **Garantía de Secreto**: El resultado nunca expone el sentido del voto ni la identidad del votante, garantizando matemáticamente el secreto del sufragio.
+4. **Exportación de Prueba Técnica**: El usuario puede presionar `Descargar Certificado Criptográfico` para obtener un archivo JSON o PDF firmado que acredita la validez del registro para fines legales o impugnaciones.
+
+##### **E. Recorridos de Resiliencia, Recuperación y Manejo de Errores**
+La arquitectura de navegación contempla rutas de contingencia predecibles para evitar que anomalías técnicas o desconexiones perjudiquen la experiencia del usuario:
+1. **Recuperación ante Interrupción de Red durante el Sufragio**: Si el votante pierde cobertura móvil en el instante de presionar `Confirmar Voto`, la aplicación retiene la transacción firmada en memoria local y presenta una pantalla de espera con botón visible `Reintentar Envío`. Gracias a que cada transacción de voto posee un identificador idempotente único (*Client-Generated Nonce*), múltiples intentos de envío jamás generarán votos duplicados en el contrato inteligente.
+2. **Caducidad de Sesión Biométrica**: Para prevenir suplantaciones, la validación facial tiene una vigencia temporal máxima de 5 minutos antes de la emisión del voto. Si este tiempo expira mientras el usuario leía la moción, la interfaz despliega un mensaje no punitivo: *"Su sesión de verificación ha expirado por seguridad. Presione aquí para renovar su verificación facial"*. Al pulsar el botón, el usuario revalida su rostro y regresa inmediatamente a la papeleta sin reiniciar todo el flujo.
+3. **Manejo de Residentes No Empadronados**: Si un usuario ingresa a una asamblea en la que su unidad inmobiliaria no está habilitada por morosidad o falta de acreditación de poder, la interfaz bloquea el acceso a la papeleta y presenta una pantalla informativa cordial: *"Su usuario no cuenta con derecho a voto en esta asamblea"*, acompañada de un botón de contacto directo `Contactar a la Administración` que abre un canal de aclaración inmediato.
+
+---
+
+#### **3. Subsistemas de Navegación Arquitectónicos de VotoChain**
+
+La solución integra cinco subsistemas de navegación formales conforme a la teoría de Arquitectura de Información:
+
+```mermaid
+graph LR
+    subgraph Subsistemas["Sistemas de Navegación de VotoChain"]
+        S1["1. Navegación Global"] --- S1_Desc["Header Fijo / Sidebar / Bottom Bar"]
+        S2["2. Navegación Jerárquica"] --- S2_Desc["Migas de Pan (Breadcrumbs) & Niveles"]
+        S3["3. Navegación Secuencial"] --- S3_Desc["Steppers Lineales & Modo Enfoque"]
+        S4["4. Navegación Local"] --- S4_Desc["Pestañas WAI-ARIA & Deep Links"]
+        S5["5. Navegación de Cortesía"] --- S5_Desc["Skip Links, Footer Exhaustivo & Ayuda"]
+    end
+```
+
+##### **1. Sistema de Navegación Global (Persistente)**
 * **Landing Page (Cabecera Fija / Sticky Header)**:
-  * Permanece anclada en la parte superior (`position: sticky; top: 0`) con una altura de `76px` (`67px` en pantallas táctiles) y fondo con desenfoque de cristal (`backdrop-filter: blur(12px)`).
-  * Contiene: isotipo y logotipo de VotoChain (enlace directo a `#inicio`), menú de navegación principal (`Cómo funciona`, `Seguridad y privacidad`, `Para su comunidad`, `Recursos`, `Preguntas frecuentes`), selector de idioma (`ES` / `EN`), y botón de llamada a la acción primario (`Solicitar demo`, anclado a `#contacto`).
-  * En pantallas de smartphones (`< 940px`), los enlaces textuales se repliegan en un menú desplegable accesible accionado por un botón hamburguesa con atributos `aria-expanded` y bloqueo de scroll de fondo (`body.menu-open`).
-* **Portal Administrativo Web en Escritorio (Sidebar Lateral Persistente)**:
-  * Barra de navegación lateral fija con ancho de `260px` (colapsable a `72px` en modo compacto para priorizar la visualización de tablas densas).
-  * Agrupa las secciones estructurales de trabajo: `Panel General`, `Padrón de Miembros`, `Convocatorias y Asambleas`, `Propuestas`, `Resultados y Actas`, y `Configuración de Comunidad`.
-  * Cada ítem de menú incluye un ícono SVG representativo, una etiqueta textual breve y señalización semántica de estado activo (`aria-current="page"` con barra lateral azul cobalto `#1D4ED8` y fondo contrastante `#EFF6FF`).
+  * Permanece anclada en la parte superior (`position: sticky; top: 0; z-index: 1000`) con altura de `76px` (`67px` en pantallas táctiles) y fondo translúcido con desenfoque de cristal (`backdrop-filter: blur(12px)`).
+  * Aloja el imagotipo de VotoChain (enlace a `#inicio`), el menú de navegación ancla (`Cómo funciona`, `Para su comunidad`, `Seguridad`, `Planes`, `Preguntas frecuentes`), el selector de idioma (`ES` / `EN`), el botón de acceso al sistema (`Ingresar`) y el botón de llamada a la acción primario (`Solicitar demo`).
+  * En pantallas de smartphones (`< 940px`), los enlaces se repliegan en un menú desplegable accesible accionado por botón hamburguesa con atributos `aria-expanded` y bloqueo de scroll de fondo (`body.menu-open`).
+* **Portal Administrativo en Escritorio (Sidebar Lateral Persistente)**:
+  * Barra fija lateral de `260px` de ancho (colapsable a `72px` en modo compacto).
+  * Agrupa los módulos operativos: `Panel General`, `Padrón de Miembros`, `Convocatorias y Asambleas`, `Propuestas`, `Resultados y Actas` y `Configuración de Comunidad`.
+  * Cada elemento incluye icono SVG, etiqueta textual y marcado semántico `aria-current="page"` con barra lateral azul cobalto `#1D4ED8`.
 * **Portal del Votante en Smartphones (Barra Inferior Anclada / Sticky Bottom Bar)**:
-  * Barra de navegación anclada permanentemente al fondo del navegador móvil (`position: fixed; bottom: 0; left: 0; right: 0`) con altura táctil de `64px`, diseñada específicamente dentro de la **zona del pulgar (*Thumb Zone*)**.
-  * Aloja 4 destinos fundamentales: `Mis Votaciones` (pantalla de inicio con insignias de propuestas pendientes), `Comunidades` (selector de edificios asociados), `Mis Constancias` (historial de votos emitidos) y `Mi Perfil` (estado de verificación de identidad y preferencias).
+  * Barra anclada permanentemente al pie del navegador (`position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000`) con altura ergonómica de `64px`, emplazada dentro de la **zona del pulgar (*Thumb Zone*)**.
+  * Aloja 4 destinos clave: `Mis Votaciones`, `Comunidades`, `Mis Constancias` y `Mi Perfil`.
 
-#### **2. Sistema de Navegación Jerárquica (Breadcrumbs y Niveles de Profundidad)**
+##### **2. Sistema de Navegación Jerárquica (Breadcrumbs y Niveles de Profundidad)**
+* Implementado en el Portal Administrativo para visualizar la pertenencia jerárquica en la arquitectura multi-tenant del sistema:
+  `Comunidades` › `Condominio Las Palmeras` › `Convocatorias 2026` › `Asamblea Ordinaria Anual` › `Propuestas` › `Aprobación de Presupuesto`.
+* Marcado accesible con elemento `<nav aria-label="Migas de pan">` y lista ordenada `<ol>`. Los nodos intermedios son enlaces navegables y el nodo terminal se presenta en texto plano con `aria-current="page"`. Separadores gráficos gestionados mediante CSS para no ser verbalizados repetitivamente por lectores de pantalla.
 
-En el Portal Administrativo, la navegación jerárquica permite al usuario comprender su ubicación exacta dentro de la estructura multi-tenant del sistema y regresar a cualquier nivel superior sin depender del historial del navegador:
+##### **3. Sistema de Navegación Secuencial / Guiada (Wizards Lineales y Steppers)**
+* **Flujo Lineal de Votación (Smartphone)**: Aísla al votante en un túnel de 5 fases secuenciales (`Lectura` › `Identidad` › `Papeleta` › `Confirmación` › `Constancia`), ocultando elementos ajenos para garantizar el secreto y la concentración del sufragio.
+* **Flujo de Creación de Convocatorias (Desktop)**: Wizard administrativo de 5 etapas (`Información General` › `Quórum y Padrón` › `Papeletas` › `Programación` › `Apertura`), con persistencia de borrador automático (*Autosave Draft*).
 
-* **Estructura de Migas de Pan (*Breadcrumbs*)**:
-  * Ubicada inmediatamente debajo del encabezado de página en el portal de escritorio.
-  * Sigue un patrón estricto de izquierda a derecha:  
-    `Comunidades` › `Condominio Las Palmeras` › `Convocatorias 2026` › `Asamblea Extraordinaria #2` › `Propuestas` › `Aprobación de Presupuesto Fachada`.
-* **Accesibilidad y Estándares WCAG 2.1 AA**:
-  * Marcado mediante elemento semántico `<nav aria-label="Migas de pan">` con lista ordenada `<ol>`.
-  * Los elementos intermedios son enlaces interactivos con foco visible; el elemento final (ubicación actual) se presenta en texto plano y porta el atributo `aria-current="page"`.
-  * El separador gráfico (`›` o `/`) se inserta mediante CSS (`::after`) o con `aria-hidden="true"` para evitar lecturas redundantes en lectores de pantalla.
+##### **4. Sistema de Navegación Local y Contextual (Tabs WAI-ARIA y Deep Links)**
+* **Pestañas Contextuales de Asamblea**: Permiten alternar fluidamente entre `Detalle General`, `Cuórum en Vivo`, `Padrón Habilitado`, `Propuestas Activas` y `Resultados y Actas`.
+* Cumplen rigurosamente el patrón WAI-ARIA Tabs (`role="tablist"`, `role="tab"`, `role="tabpanel"`), permitiendo desplazamiento mediante teclas de dirección (`←`/`→`) y activación con `Enter`/`Espacio`.
+* **Deep Linking Desacoplado**: Cada constancia genera un enlace directo al verificador público (`/auditoria?code=rec-2026-0412`), permitiendo a fiscales y residentes inspeccionar el registro en blockchain sin necesidad de iniciar sesión.
 
-#### **3. Sistema de Navegación Secuencial / Guiada (Wizards Lineales y Modo Enfoque)**
+##### **5. Sistema de Navegación de Cortesía y Soporte**
+* **Enlace de Salto al Contenido Principal (*Skip to Content*)**: Primer elemento interactivo en el DOM (`<a class="skip-link" href="#main-content">Saltar al contenido principal</a>`), visible únicamente al recibir foco de teclado (`Tab`), permitiendo a usuarios con lectores de pantalla u operadores de teclado omitir la navegación repetitiva.
+* **Pie de Página Exhaustivo (*Site Footer*)**: Aloja enlaces institucionales, accesos a políticas de privacidad (Ley N° 29733), términos y condiciones, libro de reclamaciones y correo de soporte (`equipo@votochain.pe`).
+* **Páginas de Error Amigables (404 / 500)**: Diseñadas con opciones de recuperación contextual (`Regresar al Panel Principal`, `Reportar Incidencia`), impidiendo que el usuario quede atrapado en una pantalla vacía.
 
-La navegación secuencial guía al usuario paso a paso a través de procesos críticos donde el orden de las operaciones es determinante para la validez legal y técnica de la asamblea:
+---
 
-##### **A. Flujo Guiado de Votación (Smartphone / Votante)**
-* **Activación de Modo Enfoque (*Focus Mode*)**:
-  * Durante el proceso activo de votación, la barra inferior global (*Sticky Bottom Bar*) y las notificaciones secundarias se ocultan temporalmente. Esto elimina distracciones y previene toques accidentales que pudieran interrumpir la captura biométrica o la firma criptográfica del voto.
-* **Stepper Lineal de 5 Fases**:
-  1. *Fase 1: Lectura de la Propuesta*: Exposición del texto oficial de la moción, sustento técnico descargable y tiempo restante de apertura. Botón de avance: `Continuar a Verificación`.
-  2. *Fase 2: Verificación de Identidad Facial*: Activación del viewport de cámara web (`getUserMedia`), indicaciones dinámicas de encuadre/iluminación y ejecución de prueba de vida (liveness pasivo).
-  3. *Fase 3: Selección de Opción*: Despliegue de papeleta digital con tarjetas táctiles completas (*Radio Cards*). Al seleccionar una opción, se resalta visualmente y se habilita el botón `Revisar Selección`.
-  4. *Fase 4: Confirmación y Resumen de Intención*: Pantalla de revisión previa que muestra de forma explícita: propuesta evaluada, opción marcada, nombre del votante, comunidad y leyenda informativa (*"Al confirmar, su voto será firmado y registrado de forma irreversible"*). Botón primario: `Confirmar y Emitir Voto`. Botón secundario: `Modificar Elección`.
-  5. *Fase 5: Entrega de Constancia Digital*: Despliegue del código de constancia (`rec-2026-XXXX`), sello de tiempo con zona horaria, estado (`Recibido` o `Confirmado`), botón de descarga en PDF y enlace para regresar al listado general de votaciones.
+#### **4. Técnicas de Implementación, Ergonomía y Estándares WCAG 2.1 AA**
 
-##### **B. Flujo Guiado de Creación de Propuestas y Apertura de Asambleas (Desktop / Administradora)**
-* Wizard secuencial con indicador de progreso superior: `1. Información General` › `2. Política de Cuórum y Padrón` › `3. Opciones de Papeleta` › `4. Programación de Convocatoria` › `5. Revisión y Apertura`.
-* Mecanismo de persistencia de borrador automático (*Autosave Draft*): si la administradora interrumpe la sesión o navega a otra sección, los datos se preservan localmente para reanudar el flujo sin pérdida de información.
+1. **Desplazamiento Suave y Compensación de Altura (*Smooth Scrolling & Scroll Padding*)**:
+   - La Landing Page aplica `scroll-behavior: smooth` para una transición visual fluida entre secciones ancla.
+   - Se establece `scroll-padding-top: 76px` (`67px` en smartphones) en el elemento raíz `html` para garantizar que la cabecera fija nunca tape los títulos de sección al hacer clic en los enlaces de navegación.
+2. **Ergonomía Táctil y Zona del Pulgar (*Thumb Zone & Touch Target Size*)**:
+   - Todos los elementos táctiles en la adaptación responsive móvil cumplen una dimensión mínima de `48x48px` (`min-height: 48px; min-width: 48px`) y un espaciado periférico de al menos `8px`, superando el criterio de éxito 2.5.5 de WCAG 2.1.
+   - La barra inferior respeta los márgenes de seguridad del sistema operativo (*Safe Area Insets*: `padding-bottom: env(safe-area-inset-bottom)`), garantizando compatibilidad total con barras de navegación por gestos en smartphones iOS y Android.
+3. **Gestión del Historial del Navegador e Idempotencia (*History API & Nonce Verification*)**:
+   - El enrutamiento cliente en Next.js (`next/navigation`) gestiona el historial mediante la API `pushState`/`replaceState`, logrando que los botones nativos del navegador ("Atrás" y "Adelante") respondan de forma lógica sin recargas bruscas.
+   - En el flujo de votación, presionar "Atrás" regresa al paso de revisión sin anular la sesión biométrica ni generar votos duplicados, gracias al uso de identificadores idempotentes generados en el cliente.
+4. **Accesibilidad Integral para Navegación por Teclado y Tecnologías Asistivas**:
+   - Indicador de foco visible (`outline: 3px solid #1D4ED8; outline-offset: 2px`) en todos los controles navegables.
+   - Orden lógico de tabulación (`tabindex` natural) que coincide estrictamente con la jerarquía visual del DOM.
+   - Anuncios de cambios dinámicos mediante regiones `aria-live="polite"` que informan al usuario ciego o con baja visión sobre avances en la carga de resultados o confirmaciones de voto sin despojarlo de su foco actual.
 
-#### **4. Sistema de Navegación Local y Contextual**
-
-Permite al usuario interactuar con subconjuntos de información especializados sin perder la vista general de la entidad principal:
-
-* **Pestañas Contextuales (*Tabs Navigation*)**:
-  * Dentro de la vista de detalle de una asamblea en el Portal Administrativo, una barra horizontal de pestañas permite alternar entre:
-    * `Detalle General`: Fechas, orden del día, estado de la convocatoria y directiva responsable.
-    * `Cuórum en Tiempo Real`: Gráfico radial accesible y porcentaje acumulado de participaciones confirmadas.
-    * `Padrón Habilitado`: Tabla interactiva con búsqueda y filtrado de miembros acreditados.
-    * `Propuestas Activas`: Listado de votaciones abiertas con desglose de avance.
-    * `Resultados y Actas`: Registro histórico de votaciones cerradas y generación de acta firmada.
-  * Las pestañas implementan el patrón WAI-ARIA Tabs (`role="tablist"`, `role="tab"`, `role="tabpanel"`, navegación mediante teclas de flechas izquierda/derecha y selección mediante `Enter` / `Espacio`).
-* **Navegación Contextual mediante Deep Linking**:
-  * Cada constancia de voto emitida genera un enlace profundo contextual que apunta al verificador público independiente (`/auditoria?code=rec-2026-0412`).
-  * Esta navegación permite que tanto el votante como cualquier fiscalizador o auditor externo verifiquen el registro on-chain y el sello temporal de la transacción sin requerir credenciales ni exponer la identidad privada del votante.
-
-#### **5. Sistema de Navegación de Cortesía y Soporte**
-
-Proporciona rutas de auxilio, accesibilidad y recuperación ante situaciones imprevistas o necesidades legales:
-
-* **Enlace de Salto al Contenido Principal (*Skip to Content*)**:
-  * Ubicado como primer elemento interactivo en el DOM de todas las páginas (`<a class="skip-link" href="#main-content">Saltar al contenido</a>`). Permanece oculto visualmente fuera de la pantalla y se hace visible ante el primer foco de teclado (`Tab`), permitiendo a usuarios de lectores de pantalla omitir la barra de navegación repetitiva.
-* **Pie de Página Exhaustivo (*Site Footer*)**:
-  * En la Landing Page, agrupa enlaces de navegación secundaria y soporte:
-    * Enlaces institucionales: `Cómo funciona`, `Seguridad y privacidad`.
-    * Enlaces legales y de cumplimiento normativo: `Términos y Condiciones`, `Privacidad de Datos (Ley N° 29733)`, `Libro de Reclamaciones`.
-    * Enlaces de contacto directo y soporte: `equipo@votochain.pe`.
-* **Navegación de Error y Rutas de Recuperación**:
-  * Pantallas de error de red o desconexión transitoria: ofrecen un botón visible `Reintentar conexión` y una vía alterna para guardar la constancia localmente.
-  * Pantalla de sesión biométrica expirada: en lugar de reiniciar todo el proceso o mostrar un mensaje críptico, presenta un enlace directo `Renovar verificación de identidad` que redirige al punto exacto donde se interrumpió el flujo.
-
-#### **6. Técnicas y Mecanismos de Recorrido e Interacción**
-
-Las técnicas aplicadas garantizan una experiencia de recorrido fluida, predecible y consistente entre dispositivos:
-
-* **Desplazamiento Suave y Compensación de Anclas (*Smooth Scrolling & Scroll Padding*)**:
-  * En la Landing Page, todos los enlaces ancla internos navegan mediante desplazamiento suave con aceleración natural (`scroll-behavior: smooth`).
-  * Se aplica `scroll-padding-top: 76px` (`67px` en pantallas móviles) en el elemento raíz `html` para garantizar que el encabezado fijo nunca cubra el título o inicio de la sección destino.
-* **Optimización Ergonómica Táctil (*Touch Navigation & Safe Areas*)**:
-  * Todos los controles de navegación táctil en smartphones respetan una dimensión mínima de `48x48px` y un espaciado periférico de al menos `8px`.
-  * La barra inferior de navegación respeta los márgenes seguros (*Safe Area Insets*: `padding-bottom: env(safe-area-inset-bottom)`) en navegadores de teléfonos con muescas o barras gestuales del sistema operativo.
-* **Gestión del Historial del Navegador y Enrutamiento (*History API & Idempotency*)**:
-  * La aplicación utiliza la API de Historial de HTML5 mediante el enrutador de Next.js (`next/navigation`), garantizando que los botones "Atrás" y "Adelante" del navegador web funcionen de manera coherente sin recargar la página completa.
-  * En el flujo secuencial de votación, retroceder con el navegador navega a la etapa de revisión previa sin generar votos duplicados, gracias al uso de identificadores idempotentes de votación generados en el cliente.
-* **Señalización Visual del Estado Activo (*Active State Tracking*)**:
-  * En todos los componentes de navegación (Header, Sidebar, Tabs y Bottom Bar), la opción correspondiente a la vista activa se destaca mediante un contraste de color reforzado, bordes indicadores y el atributo de accesibilidad `aria-current="page"`, asegurando que el usuario reconozca en todo momento dónde se encuentra dentro del sistema.
 
 ## **6.3. Landing Page UI Design.**
 

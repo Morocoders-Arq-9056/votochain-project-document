@@ -1951,25 +1951,6 @@ Este recorrido responde a un patrón de navegación vertical narrativo (*Storyte
 6. **Resolución de Dudas Frecuentes (*FAQ*)**: A través de un componente acordeón accesible, el visitante resuelve inquietudes comunes sobre quórum legal, validez de firmas electrónicas y soporte técnico para personas mayores.
 7. **Conversión y Registro (*Formulario de Contacto*)**: El recorrido culmina en el formulario interactivo. Tras ingresar sus datos, seleccionar el tipo de comunidad y marcar la casilla de consentimiento de datos personales, el sistema emite un mensaje de éxito accesible y el equipo comercial agenda la demostración.
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Visitante as Visitante (Junta Directiva)
-    participant Header as Sticky Header
-    participant Landing as Landing Page Sections
-    participant Form as Formulario de Contacto
-    
-    Visitante->>Landing: Accede a la Landing Page (Hero)
-    Visitante->>Header: Clic en enlace ancla (#como-funciona o #planes)
-    Header->>Landing: Desplazamiento suave con scroll-padding
-    Visitante->>Landing: Revisa cómo funciona, seguridad (Ley 29733) y tarifas
-    Visitante->>Landing: Clic en CTA "Solicitar demo"
-    Landing->>Form: Foco asistido en campo "Nombre completo"
-    Visitante->>Form: Completa datos + Acepta política Ley 29733
-    Visitante->>Form: Envía formulario
-    Form-->>Visitante: Confirmación en pantalla (aria-live) & email de contacto
-```
-
 ##### **B. Recorrido Operativo Jerárquico y de Monitoreo en Desktop (Administradora Patricia Salas)**
 Diseñado para la gestión intensiva de asambleas en pantallas amplias de escritorio, este recorrido aprovecha estructuras multi-nivel y acceso directo:
 1. **Acceso al Panel General (*Dashboard Entry*)**: Al iniciar sesión con credenciales administrativas y doble factor de autenticación, la administradora visualiza el panel de control con métricas clave: comunidades administradas, asamblea activa en fecha actual y porcentaje global de acreditación.
@@ -1995,31 +1976,6 @@ Optimizado para dispositivos táctiles, este recorrido minimiza la fricción cog
    - Botón primario: `Descargar Constancia en PDF`.
    - Botón secundario: `Verificar en Auditoría Pública`.
 9. **Cierre y Retorno Seguro**: El votante presiona `Volver a Mis Votaciones`, regresando al menú principal donde la moción recién votada ahora figura con el distintivo verde `Voto Emitido y Verificado`.
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Votante as Miguel Herrera (Votante en Smartphone)
-    participant App as Web App Responsive
-    participant Biometria as Servicio de Identidad / Liveness
-    participant Blockchain as Smart Contract / Relay
-    
-    Votante->>App: Toca enlace de convocatoria o abre Mis Votaciones
-    App->>App: Activa Modo Enfoque (Oculta Bottom Bar)
-    App-->>Votante: Paso 1: Muestra texto de moción y anexos
-    Votante->>App: Presiona "Continuar a Verificación"
-    App->>Biometria: Solicita captura de cámara y ejecuta liveness
-    Biometria-->>App: Identidad validada satisfactoriamente
-    App-->>Votante: Paso 3: Despliega papeleta (Radio Cards)
-    Votante->>App: Selecciona opción de voto ("A Favor")
-    App-->>Votante: Paso 4: Pantalla de revisión y confirmación
-    Votante->>App: Presiona "Confirmar y Emitir Voto"
-    App->>Blockchain: Transmite transacción firmada de voto anónimo
-    Blockchain-->>App: Hash de bloque & confirmación de recibo
-    App-->>Votante: Paso 5: Despliega Constancia Digital (rec-2026-XXXX) & PDF
-    Votante->>App: Toca "Finalizar y Regresar"
-    App->>App: Desactiva Modo Enfoque y actualiza estado en Mis Votaciones
-```
 
 ##### **D. Recorrido Desacoplado de Verificación Pública (Auditor / Fiscalizador / Vecino)**
 Este recorrido permite a cualquier participante o veedor externo auditar la autenticidad técnica de una constancia sin necesidad de autenticarse en el sistema:

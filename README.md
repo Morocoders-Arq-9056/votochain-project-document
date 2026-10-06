@@ -2145,6 +2145,40 @@ Llamada a la acción final para agendar demostraciones y pie de página con acce
 
 ### **6.3.2. Landing Page Mock-up.**
 
+#### **Vista Web (Desktop Mock-ups)**
+
+A continuación se presentan los mock-ups de alta fidelidad de la Landing Page en su versión para escritorio (1440px / grid de 12 columnas con estilos y tipografía final):
+
+##### **1. Bloque 1: Navegación Global, Hero Section y Demo de Votación**
+Cabecera con navegación persistente y acciones principales, hero section con titular institucional, widget interactivo de votación de asamblea y barra de confianza.
+
+![Mock-up Desktop - Hero y Demo](./assets/landing_page_mockups/mockup_landing_desktop_01_hero_flujo.jpg)
+
+##### **2. Bloque 2: Flujo de Proceso (Cómo Funciona)**
+Presentación paso a paso del flujo de decisión comunitaria desde la preparación de la asamblea y verificación de participantes hasta la consulta de evidencia inmutable.
+
+![Mock-up Desktop - Cómo Funciona](./assets/landing_page_mockups/mockup_landing_desktop_02_como_funciona.jpg)
+
+##### **3. Bloque 3: Segmentación de Roles y Principios de Seguridad**
+Módulo diferenciado para directivas y votantes, acompañado de los principios de seguridad con consentimiento visible, estados sin ambigüedad y minimización de datos.
+
+![Mock-up Desktop - Roles y Seguridad](./assets/landing_page_mockups/mockup_landing_desktop_03_roles_seguridad.jpg)
+
+##### **4. Bloque 4: Matriz de Planes y Precios Transparentes**
+Estructura comparativa de planes orientados a asambleas piloto, comunidades residenciales anuales y empresas administradoras de múltiples predios.
+
+![Mock-up Desktop - Planes y Precios](./assets/landing_page_mockups/mockup_landing_desktop_04_planes_precios.jpg)
+
+##### **5. Bloque 5: Recursos Multimedia y Preguntas Frecuentes (FAQ)**
+Acceso a contenidos audiovisuales explicativos sobre la plataforma y el equipo, junto con el acordeón interactivo para la resolución de dudas clave.
+
+![Mock-up Desktop - Multimedia y FAQ](./assets/landing_page_mockups/mockup_landing_desktop_05_multimedia_faq.jpg)
+
+##### **6. Bloque 6: Formulario de Contacto, Demostración y Pie de Página**
+Formulario de contacto para solicitud de demostraciones con validaciones de datos y pie de página institucional con accesos legales y de navegación.
+
+![Mock-up Desktop - Contacto y Footer](./assets/landing_page_mockups/mockup_landing_desktop_06_contacto_footer.jpg)
+
 ## **6.4. Applications UX/UI Design.**
 
 ### **6.4.1. Applications Wireframes.**

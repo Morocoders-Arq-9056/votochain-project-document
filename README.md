@@ -2179,6 +2179,57 @@ Formulario de contacto para solicitud de demostraciones con validaciones de dato
 
 ![Mock-up Desktop - Contacto y Footer](./assets/landing_page_mockups/mockup_landing_desktop_06_contacto_footer.jpg)
 
+---
+
+#### **Vista Móvil (Mobile Mock-ups)**
+
+A continuación se presentan los mock-ups de alta fidelidad de la Landing Page adaptados a la vista móvil en pantalla vertical (390px / columna única):
+
+##### **1. Encabezado y Hero Section**
+Cabecera adaptada con selector de idioma y menú hamburguesa, acompañada del titular principal y botones de acción rápida.
+
+![Mock-up Mobile - Header y Hero](./assets/landing_page_mockups/mockup_landing_mobile_01_header_hero.jpg)
+
+##### **2. Demo de Votación y Barra de Confianza**
+Tarjeta interactiva simulada de votación en curso con progreso de participación y franja con los tres pilares de confianza.
+
+![Mock-up Mobile - Votación Demo](./assets/landing_page_mockups/mockup_landing_mobile_02_demo_votacion_trust.jpg)
+
+##### **3. Flujo de Proceso (Cómo Funciona)**
+Secuencia de tres pasos adaptada a columna única que guía desde la preparación de la asamblea hasta la consulta de evidencias.
+
+![Mock-up Mobile - Cómo Funciona](./assets/landing_page_mockups/mockup_landing_mobile_03_como_funciona.jpg)
+
+##### **4. Experiencia Segmentada por Roles**
+Presentación diferenciada de funciones clave para directivas/administradoras y propietarios/socios en tarjetas verticales.
+
+![Mock-up Mobile - Roles](./assets/landing_page_mockups/mockup_landing_mobile_04_roles.jpg)
+
+##### **5. Módulo de Seguridad por Diseño**
+Garantías técnicas sobre consentimiento informado, estados claros sin ambigüedad y minimización estricta de datos personales.
+
+![Mock-up Mobile - Seguridad](./assets/landing_page_mockups/mockup_landing_mobile_05_seguridad.jpg)
+
+##### **6. Planes y Precios Transparentes**
+Tarjetas de planes para asambleas piloto y suscripciones anuales con botones directos para cotización y solicitud.
+
+![Mock-up Mobile - Planes](./assets/landing_page_mockups/mockup_landing_mobile_06_planes.jpg)
+
+##### **7. Recursos Audiovisuales y Multimedia**
+Módulo de videos introductorios sobre el funcionamiento de la plataforma y el equipo multidisciplinario detrás de VotoChain.
+
+![Mock-up Mobile - Multimedia](./assets/landing_page_mockups/mockup_landing_mobile_07_multimedia.jpg)
+
+##### **8. Preguntas Frecuentes (FAQ)**
+Acordeón interactivo optimizado para pantallas táctiles que resuelve inquietudes sobre adopción, privacidad y tecnología.
+
+![Mock-up Mobile - FAQ](./assets/landing_page_mockups/mockup_landing_mobile_08_faq.jpg)
+
+##### **9. Formulario de Contacto y Solicitud de Demo**
+Formulario de captación con campos de validación, consentimiento según la Ley N° 29733 y pie de página institucional.
+
+![Mock-up Mobile - Contacto y Demo](./assets/landing_page_mockups/mockup_landing_mobile_09_contacto_demo.jpg)
+
 ## **6.4. Applications UX/UI Design.**
 
 ### **6.4.1. Applications Wireframes.**

@@ -2068,6 +2068,81 @@ graph LR
 
 ### **6.3.1. Landing Page Wireframe.**
 
+#### **Vista Web (Desktop Wireframes)**
+
+A continuación se presentan los wireframes de fidelidad media de la Landing Page en su versión para escritorio (1440px / grid de 12 columnas):
+
+##### **1. Bloque 1: Navegación Global, Hero Section, Barra de Confianza y Flujo de Decisión**
+Cabecera con menú global y accesos rápidos, sección hero con widget interactivo de votación simulada, barra de principios clave y flujo de decisión en tres pasos.
+
+![Wireframe Desktop - Bloque 1](./assets/landing_page_wireframes/wireframe_landing_desktop_01_hero_flujo.jpg)
+
+##### **2. Bloque 2: Casos de Uso y Módulo de Seguridad**
+Tarjetas descriptivas de aplicación en condominios, cooperativas y organizaciones, junto con el módulo de garantías de identidad, privacidad y trazabilidad.
+
+![Wireframe Desktop - Bloque 2](./assets/landing_page_wireframes/wireframe_landing_desktop_02_casos_seguridad.jpg)
+
+##### **3. Bloque 3: Evidencia y Estructura de Planes**
+Explicación de auditoría con widget demostrativo de expediente de decisión y cuadrícula de planes escalonados según las necesidades de la comunidad.
+
+![Wireframe Desktop - Bloque 3](./assets/landing_page_wireframes/wireframe_landing_desktop_03_evidencia_planes.jpg)
+
+##### **4. Bloque 4: Centro de Recursos y Preguntas Frecuentes (FAQ)**
+Descarga de guías prácticas y listas de verificación para asambleas, acompañado de un acordeón interactivo para resolver dudas recurrentes.
+
+![Wireframe Desktop - Bloque 4](./assets/landing_page_wireframes/wireframe_landing_desktop_04_recursos_faq.jpg)
+
+##### **5. Bloque 5: Bloque de Conversión Final y Pie de Página**
+Banda de alto contraste con llamada a la acción para solicitud de demos y footer institucional con enlaces de navegación de cortesía y notas legales.
+
+![Wireframe Desktop - Bloque 5](./assets/landing_page_wireframes/wireframe_landing_desktop_05_cta_footer.jpg)
+
+---
+
+#### **Vista Móvil (Mobile Wireframes)**
+
+A continuación se presentan los wireframes de fidelidad media adaptados a la vista móvil en pantalla vertical (390px / columna única):
+
+##### **1. Encabezado, Hero Section y Demo de Votación**
+Cabecera adaptada con selector de idioma y menú desplegable, titular principal con llamadas a la acción y widget de votación apilado verticalmente.
+
+![Wireframe Mobile - Header y Hero](./assets/landing_page_wireframes/wireframe_landing_mobile_01_header_hero.jpg)
+
+##### **2. Barra de Confianza y Flujo de Decisión**
+Franja de principios clave para decidir en comunidad y secuencia explicativa de tres pasos optimizada para lectura en dispositivos táctiles.
+
+![Wireframe Mobile - Confianza y Flujo](./assets/landing_page_wireframes/wireframe_landing_mobile_02_trust_flujo.jpg)
+
+##### **3. Casos de Uso Comunitarios y Módulo de Seguridad**
+Listado vertical de aplicaciones en condominios, cooperativas y organizaciones, seguido de tarjetas explicativas sobre identidad y privacidad del voto.
+
+![Wireframe Mobile - Casos y Seguridad](./assets/landing_page_wireframes/wireframe_landing_mobile_03_casos_seguridad.jpg)
+
+##### **4. Módulo de Evidencia y Expediente de Decisión**
+Puntos clave sobre reglas claras y constancias consultables con tarjeta interactiva simulada del expediente final de acuerdos.
+
+![Wireframe Mobile - Evidencia](./assets/landing_page_wireframes/wireframe_landing_mobile_04_evidencia.jpg)
+
+##### **5. Planes de Adopción y Servicio**
+Tarjetas individuales de planes para explorar, preparar procesos o acompañamiento integral con botones táctiles de conversión directa.
+
+![Wireframe Mobile - Planes](./assets/landing_page_wireframes/wireframe_landing_mobile_05_planes.jpg)
+
+##### **6. Centro de Recursos y Guías Prácticas**
+Tarjetas de acceso rápido a guías de redacción de agenda, listas de verificación previas a la votación y glosario de términos.
+
+![Wireframe Mobile - Recursos](./assets/landing_page_wireframes/wireframe_landing_mobile_06_recursos.jpg)
+
+##### **7. Preguntas Frecuentes (FAQ)**
+Componente colapsable tipo acordeón adaptado para consultar dudas clave sobre normativas, privacidad y soporte sin recargar la pantalla.
+
+![Wireframe Mobile - FAQ](./assets/landing_page_wireframes/wireframe_landing_mobile_07_faq.jpg)
+
+##### **8. Bloque CTA de Cierre y Pie de Página Institucional**
+Llamada a la acción final para agendar demostraciones y pie de página con accesos de navegación, políticas de privacidad y aviso legal.
+
+![Wireframe Mobile - CTA y Footer](./assets/landing_page_wireframes/wireframe_landing_mobile_08_cta_footer.jpg)
+
 ### **6.3.2. Landing Page Mock-up.**
 
 ## **6.4. Applications UX/UI Design.**

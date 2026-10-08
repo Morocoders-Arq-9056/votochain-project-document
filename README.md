@@ -73,20 +73,29 @@
 
 ## Registro de Versiones del Informe
 
-| Versión | Fecha      | Autor                                              | Descripción de modificación                                                                                                                                                                |
-| ------- | ---------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0.1     | 12/09/2026 | Morocoders                | Elaboración del Capítulo I y estructura general del informe.                                                                                          |
-| 0.2     | 12/09/2026 | Morocoders                | Desarrollo del Capítulo II: análisis competitivo, diseño de entrevistas, Needfinding y Ubiquitous Language.                                            |
-| 0.3    | 14/09/2026 | Morocoders                  | Desarrollo del Capítulo III: Requirements Specification, User Stories, Product Backlog                                             |
-| 0.4     | 16/09/2026 | Morocoders                    | Desarrollo del Capítulo IV: Capítulo IV: Strategic-Level Software Design., Event Storming, Attribute Driven-Design, C4 model diagrams |
+| Versión | Fecha | Autor (Apellido, Nombre) | Descripción de modificación |
+|---|---|---|---|
+| 0.1 | 12/09/2026 | Paredes Santos, Fabrizio Alberto | Elaboración del Capítulo I (Startup/Solution Profile, Lean UX) y estructura general del informe. |
+| 0.2 | 12/09/2026 | Bueno Perales, Mathias Eduardo | Diseño de entrevistas, registro ENT-01 a ENT-06 y análisis 2.2.3. |
+| 0.3 | 14/09/2026 | Ríos Pacheco, Héctor Javier | Needfinding: User Personas, User Task Matrix As-Is, Empathy/As-is/To-be Scenario Mapping. |
+| 0.4 | 14/09/2026 | Ríos Pacheco, Héctor Javier | Capítulo III: User Stories EP-01..EP-10 y Product Backlog con trazabilidad ENT→US. |
+| 0.5 | 16/09/2026 | Aliaga Aguirre, Ethan Matias | Capítulo IV ADD (drivers D-01..D-22, QAS) y diagramas C4 Landscape/Context/Container/Deployment. |
+| 0.6 | 19/09/2026 | Rodriguez Macedo, Sebastian | Capítulo IV DDD: EventStorming, Candidate Discovery, Message Flows, Context Mapping. |
+| 0.7 | 02/10/2026 | Aliaga Aguirre, Ethan Matias | Correcciones forma TB1 + Student Outcome + control versiones GitFlow. |
+| 0.8 | 05-06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI UX: Information Architecture, wireframes/mock-ups landing desktop/mobile. |
+| 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad OTP/OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. Rama `feat/aliaga-v1`. |
 
-
+Mapeo GitHub verificado con `git shortlog -sne --all`: Khafna09 (23) = Ríos Pacheco, Héctor Javier; MatFragg (19) = Aliaga Aguirre, Ethan Matias; MathiasBueno (8) = Bueno Perales, Mathias Eduardo; Sebastiaan_ (4) = Rodriguez Macedo, Sebastian; psfa29/Fabrizio Paredes Santos (6) = Paredes Santos, Fabrizio Alberto.
 
 ## Project Report Collaboration Insights
+
+Informe elaborado con GitFlow: ramas `feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno`, `feature/rodriguez` → `develop` → `main`, con conventional commits (`docs(ux):`, `fix issues document`). Verificación: `git log --oneline --all --graph`, `git shortlog -sne --all`, `git log --format="%h|%an|%ad|%s"`.
 
 | URL del repositorio del reporte |
 | :-----------------------------------: |
 | [https://github.com/Morocoders-Arq-9056/votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) |
+
+[Por agregar capturas: GitHub Insights → Contributors/Pulse, lista de commits por miembro y PR #5 `feature/bueno`. Coherente con Registro de Versiones de arriba.]
 
 
 ## Contenido
@@ -271,7 +280,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 | **How** (¿Cómo se propone resolverlo?) | Mediante una plataforma (VotoChain) que verifica biométricamente al votante antes de habilitarlo a votar, y que registra cada voto firmado individualmente en una blockchain pública, verificable con `ecrecover()` por cualquier interesado. |
 | **How much** (¿Cuál es la magnitud/costo?) | El costo indirecto se refleja en impugnaciones de acuerdos, procesos de conciliación extrajudicial o judicial, morosidad asociada a la desconfianza en la gestión, y baja participación de propietarios que no logran asistir presencialmente y hoy no tienen una alternativa remota confiable para votar. |
 
-Esta problemática constituye la base sobre la cual se desarrolla la solución de software descrita en este documento, y motiva directamente las decisiones de arquitectura ya tomadas por el equipo - en particular, la verificación biométrica pre-voto (OCR de DNI + liveness + comparación facial) y el modelo de wallet individual por usuario (Modelo B), que garantiza que cada voto pueda verificarse on-chain como perteneciente a una persona específica, y no a una única wallet que firme "por todos".
+Esta problemática constituye la base sobre la cual se explorará la solución de software descrita en este documento. Las alternativas de verificación de identidad, elegibilidad y evidencia verificable se contrastarán con entrevistas (Capítulo II) y se especificarán como historias (Capítulo III); las decisiones de verificación biométrica pre-voto, wallet por usuario y registro on-chain se justificarán recién en el Capítulo IV a partir del EventStorming y el Candidate Context Discovery.
 
 ### 1.2.2. Lean UX Process
 
@@ -351,7 +360,7 @@ Este capítulo documenta la elicitación y el análisis inicial de requisitos pa
 
 El análisis competitivo se enfoca en plataformas de votación electrónica y gobernanza digital que resuelven partes del problema de VotoChain: gestión de elecciones, autenticación de votantes, auditoría del proceso, emisión remota de votos y trazabilidad del resultado. La comparación no busca afirmar superioridad absoluta, sino identificar espacios de diferenciación razonables para una solución dirigida a juntas de propietarios y cooperativas de vivienda en el contexto peruano.
 
-Para evitar sesgos, se comparan competidores con fortalezas distintas: servicios comerciales de votación en línea, herramientas de participación ciudadana y soluciones con énfasis en seguridad electoral. VotoChain se analiza como una alternativa especializada en gobernanza comunitaria con verificación biométrica previa al voto y registro verificable en blockchain, decisión que se deriva del modelo de dominio del backend, especialmente de los bounded contexts `Voting & Verifiable Ledger`, `Biometric Identity Verification`, `Cryptographic Wallet Custody`, `Membership` y `Consent & Compliance`.
+Para evitar sesgos, se comparan competidores con fortalezas distintas: servicios comerciales de votación en línea, herramientas de participación ciudadana y soluciones con énfasis en seguridad electoral. VotoChain se analiza como una alternativa especializada en gobernanza comunitaria para juntas de propietarios y cooperativas. La delimitación de su dominio diferencial se realizará en el Capítulo IV a partir del EventStorming, sin presuponer contextos en esta etapa.
 
 ### **2.1.1. Análisis competitivo.**
 
@@ -366,7 +375,7 @@ Para evitar sesgos, se comparan competidores con fortalezas distintas: servicios
 
 **Lectura técnica del mercado.** POLYAS comunica seguridad, protección de datos, autenticación configurable y verificación de resultados como atributos centrales de su plataforma (POLYAS, s. f.-a, s. f.-b). Simply Voting enfatiza el control de un voto por elector, validación de papeletas, cifrado en tránsito/reposo y registro de actividad (Simply Voting, s. f.). ElectionBuddy destaca auditoría electoral, observabilidad independiente y protección del anonimato del votante (ElectionBuddy, s. f.). Estas fortalezas muestran que el mercado ya reconoce como relevantes la autenticación, la integridad del conteo y la auditoría. La oportunidad de VotoChain no consiste en negar esas capacidades, sino en trasladarlas a un dominio más específico: comunidades residenciales que requieren elegibilidad por membresía, gestión de cuórum, consentimiento de datos biométricos y una evidencia verificable por terceros sin convertir al usuario final en custodio de claves.
 
-Desde DDD, la comparación permite delimitar el core domain: VotoChain no compite por ser una herramienta genérica de formularios electorales, sino por transformar una intención de voto de un miembro elegible y físicamente verificado en un hecho registrable y auditable. Por ello, el bounded context `Voting & Verifiable Ledger` se conserva como núcleo del dominio, mientras que biometría, wallet, relay, membership, consent y notificaciones operan como capacidades de soporte o genéricas según su aporte diferencial.
+Desde la perspectiva de mercado, la comparación permite identificar la oportunidad diferencial: VotoChain no compite como herramienta genérica de formularios electorales, sino como solución para comunidades residenciales que requieren elegibilidad por membresía, gestión de cuórum y evidencia comprobable por terceros. La delimitación del core domain y de los contextos de soporte se documentará en el Capítulo IV como resultado del EventStorming.
 
 ### **2.1.2. Estrategias y tácticas frente a competidores.**
 
@@ -385,7 +394,7 @@ Las tácticas propuestas se alinean con el enfoque de diseño dirigido por atrib
 
 El trabajo de entrevistas se plantea como investigación cualitativa semiestructurada. Su objetivo no es obtener una muestra estadística, sino comprender tareas, temores, restricciones y vocabulario de los segmentos definidos en el Capítulo I. De acuerdo con Lean UX, las entrevistas deben ayudar a reducir incertidumbre sobre las hipótesis de mayor riesgo antes de invertir en diseño detallado e implementación (Gothelf & Seiden, 2021).
 
-**Estado de evidencia:** en el repositorio revisado no se encontraron transcripciones, enlaces a videos ni matrices de entrevistas ejecutadas. Por rigor académico, esta sección presenta el diseño completo y el formato de registro requerido, pero no reporta resultados empíricos como si ya hubieran sido levantados.
+**Evidencia levantada:** se ejecutaron 6 entrevistas semiestructuradas entre el 18 y 19/09/2026 (2 del segmento Directivas/administradores y 4 del segmento Propietarios/socios votantes, ver 2.2.2), con registro en video y fichas individuales. Esta sección presenta el diseño aplicado y los resultados obtenidos, que alimentan el Needfinding (2.3) y las User Stories (Capítulo III).
 
 ### **2.2.1. Diseño de entrevistas.**
 
@@ -442,24 +451,28 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 ### **2.2.2. Registro de entrevistas.**
 
-| Código | Fecha | Segmento | Entrevistado | Rol / relación con el problema | Modalidad | Evidencia | Estado |
-|---|---|---|---|---|---|---|---|
-| ENT-01 | 18/09/2026 | Directivas | Daniel Huatuco Franco |Directivo y apoyo ocasional en actividades relacionadas con la gestión de la comunidad | Videollamada | https://youtu.be/fv2x8oQX6y8 | Completada |
-| ENT-02 | 18/09/2026  | Socios votantes | Carlos Gabriel Mendoza | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Completada |
-| ENT-03 | 18/09/2026  | Socios votantes | Leonardo Prieto Mantari | Socio votante |Videollamada | https://youtu.be/JR1lHGZW5GY | Completada |
-| ENT-04 | 18/09/2026 | Directivas  | Fabrizio Díaz | Directiva | Videollamada | https://youtu.be/eGaMt-ZOPhg | Completada |
-| ENT-05 | 18/09/2026 | Directivas  | Miguel Salas | Directiva | Videollamada | https://youtu.be/8EnQxSFYI-0 | Completada |
-| ENT-06 | 19/09/2026 | Socios Votantes  | Cristina Sihuas | Socio Votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Completada |
+> Formato exigido por enunciado: nombres y apellidos, edad, distrito, captura, URL, timing de inicio y duración. Los campos [Por completar] deben ser aportados por el equipo con evidencia del video. La tabla anterior de 8 columnas se amplía abajo al formato requerido.
+
+| Código | Fecha | Segmento | Nombres y Apellidos | Edad | Distrito | Rol / relación con el problema | Modalidad | URL | Inicio | Duración | Captura | Estado |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ENT-01 | 18/09/2026 | Propietarios / socios votantes* | Daniel Huatuco Franco | [Por completar] | [Por completar – Lima] | Propietario / socio votante — participante en asamblea (apoyo ocasional en actividades, familiar en gestión). Aporta perspectiva de asistente: convocatoria, asistencia, conteo a mano alzada y evidencia del resultado. | Videollamada | https://youtu.be/fv2x8oQX6y8 | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-01-captura.png` [Por completar] | Completada |
+| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza [Apellidos por completar] | [Por completar] | [Por completar – Lima] | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-02-captura.png` [Por completar] | Completada |
+| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | [Por completar] | [Por completar – Lima] | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-03-captura.png` [Por completar] | Completada |
+| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | [Por completar] | [Por completar – Lima] | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-04-captura.png` [Por completar] | Completada |
+| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | [Por completar] | [Por completar – Lima] | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-05-captura.png` [Por completar] | Completada |
+| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | [Por completar] | [Por completar – Lima] | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-06-captura.png` [Por completar] | Completada |
+
+\* ENT-01: registrada en Segmento 2 como participante en asamblea. Para reforzar la cuota del Segmento 1 (3 a 5 directivas), se recomienda incorporar una entrevista adicional con directiva/administrador (ENT-01 v2 o ENT-07).
 
 
 **Formato de ficha individual para cada entrevista.**
 
-**Ficha individual - ENT-01**
+**Ficha individual - ENT-01 (Propietarios / socios votantes — participante en asamblea)**
 
-| Campo | Contenido esperado |
+| Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-01** |
-| Datos del participante | Daniel Huatuco Franco.  Segmento relacionado con directivas y administración de comunidades. Tiene cercanía con el proceso debido a que un familiar participa en la gestión y ha tenido contacto con actividades relacionadas con las asambleas. |
+| Datos del participante | Daniel Huatuco Franco. Propietario / socio votante — participante en asamblea (apoyo ocasional en actividades, familiar en gestión). Edad: [Por completar]. Distrito: [Por completar – Lima]. Aporta perspectiva de asistente sobre convocatoria, asistencia y conteo. |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante describió, desde su experiencia cercana a la administración, aspectos relacionados con la organización de asambleas, participación de propietarios, conteo de votos y utilización de herramientas digitales. |
 | Citas relevantes | La percepción general expresada durante la entrevista fue favorable hacia la digitalización de las votaciones y hacia mecanismos que permitan demostrar posteriormente que el proceso se realizó correctamente. |
@@ -468,7 +481,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 **Ficha individual - ENT-02**
 
-| Campo | Contenido esperado |
+| Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-02** |
 | Datos del participante | Carlos Gabriel Mendoza. Propietario / socio votante. |
@@ -480,7 +493,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 **Ficha individual - ENT-03**
 
-| Campo | Contenido esperado |
+| Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-03** |
 | Datos del participante | Leonardo Prieto Mantari. Propietario / socio votante. |
@@ -492,7 +505,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 **Ficha individual - ENT-04**
 
-| Campo | Contenido esperado |
+| Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-04** |
 | Datos del participante | Fabrizio Díaz Enriquez. Segmento relacionado con directivas y administración de comunidades. |
@@ -504,7 +517,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 **Ficha individual - ENT-05**
 
-| Campo | Contenido esperado |
+| Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-05** |
 | Datos del participante | Miguel Salas Guillen. Segmento relacionado con directivas y administración de comunidades. |
@@ -516,7 +529,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 **Ficha individual - ENT-06**
 
-| Campo | Contenido esperado |
+| Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-06** |
 | Datos del participante | Cristina Sihuas Diaz. Propietario / socio votante. |
@@ -544,7 +557,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 ## **2.3. Needfinding**
 
-El Needfinding traduce la información del problema y de la investigación propuesta en necesidades observables de los usuarios. En esta versión, los artefactos son **personas y escenarios preliminares**, construidos a partir de los segmentos del Capítulo I y de los documentos de dominio. Deben actualizarse cuando existan entrevistas reales registradas en la sección 2.2.2.
+El Needfinding traduce la evidencia de las 6 entrevistas (2.2.2-2.2.3) en necesidades observables. Las User Personas Patricia Salas (Directiva/administradora, síntesis de ENT-04 y ENT-05) y Miguel Herrera (Propietario votante, síntesis de ENT-01, ENT-02, ENT-03 y ENT-06) y los escenarios As-is se construyen a partir de tareas actuales observadas: convocar, firmar asistencia, calcular cuórum en Excel, contar a mano alzada, redactar acta y presentar ante SUNARP.
 
 ### **2.3.1. User Personas.**
 
@@ -560,24 +573,23 @@ El Needfinding traduce la información del problema y de la investigación propu
   <img src="./assets/UserPersona_Miguel_Herrera.png" alt="User Persona 2" width="700"/>
 </p>
 
-### **2.3.2. User Task Matrix.**
+### **2.3.2. User Task Matrix (As-Is – tareas actuales, no funciones del software).**
 
-| Tarea | Directiva / administradora | Propietario votante | Frecuencia | Criticidad |
-|---|---:|---:|---|---|
-| Registrar o activar una comunidad | Primario | No participa | Baja | Alta |
-| Definir política de votación y cuórum | Primario | Consulta resultado | Media | Alta |
-| Registrar o actualizar membresías | Primario | Secundario | Media | Alta |
-| Confirmar elegibilidad antes de votar | Consulta resultado | Primario | Alta en periodo electoral | Alta |
-| Otorgar consentimiento de datos | Supervisa comunicación | Primario | Media | Alta |
-| Ejecutar enrollment biométrico | Facilita soporte | Primario | Una vez por usuario | Alta |
-| Verificarse antes de votar | No participa directamente | Primario | Cada voto | Alta |
-| Emitir voto | No participa directamente salvo que también sea votante | Primario | Cada propuesta | Alta |
-| Revisar resultado y evidencia | Primario | Secundario | Cada cierre | Alta |
-| Enviar notificaciones | Configura o solicita | Recibe | Media | Media |
-| Solicitar supresión o revocación | No participa | Primario | Baja | Alta |
-| Resolver reclamo de votación | Primario | Secundario | Eventual | Alta |
+Tabla 2.3.2 – User Task Matrix As-Is. Fuente: ENT-01 a ENT-06 (2.2.2-2.2.3).
 
-La matriz evidencia dos tensiones que deben trasladarse a requisitos. Primero, la directiva necesita control operativo sin poder alterar hechos congelados. Segundo, el propietario necesita una experiencia simple, aunque por debajo existan biometría, firma criptográfica y relay blockchain.
+| Tarea actual | Patricia Salas – Directiva / administradora (Frecuencia / Importancia) | Miguel Herrera – Propietario votante (Frecuencia / Importancia) | Dolor observado | ENT origen |
+|---|---|---|---|---|
+| Convocar la asamblea (avisos en vitrina, WhatsApp, correo/carta) | Cada asamblea (1-4/año) / Alta | Recibe convocatoria / Media | Mensajes dispersos, baja asistencia | ENT-04, ENT-05 |
+| Verificar asistencia con firmas en papel | Cada asamblea / Alta | Firma al ingresar / Media | Filas, suplantación, cartas poder dudosas | ENT-04, ENT-05 |
+| Calcular el cuórum en Excel / a mano (coeficientes) | Cada asamblea / Alta | No aplica / Baja | 45 min, errores, desconfianza | ENT-04 08:12*, ENT-05 |
+| Contar votos a mano alzada | Cada votación / Alta | Vota a mano alzada / Alta | Disputas, sospecha de mal conteo, asambleas caóticas | ENT-04, ENT-05, ENT-06 |
+| Redactar el acta en Word / libro de actas | Cada asamblea / Alta | Consulta acta / Media | Re-trabajo, impugnaciones por falta de evidencia | ENT-04, ENT-05 |
+| Presentarla ante SUNARP / notaría | Por acuerdo inscribible / Alta | No participa / Baja | Trámite costoso, exige reporte con firmas y coeficientes | ENT-04 |
+| Validar morosidad para derecho a voto | Cada padrón / Alta | Consulta si está hábil / Media | Padrón desactualizado, discusiones | ENT-05 |
+
+\* Timing por completar con timestamp real del video.
+
+La matriz evidencia dos tensiones As-Is que deben trasladarse a requisitos. Primero, la directiva carga con trabajo manual (firmas, Excel, conteo) y aun así no logra evidencia defendible ante SUNARP, lo que deriva en RF de reporte consolidado con marca de tiempo y desglose por coeficientes (US-27/US-28 ← ENT-04/ENT-05). Segundo, el propietario desconfía del conteo a mano y teme suplantación, pero enfrenta barreras de horario y accesibilidad digital (adultos mayores, cámara baja), lo que deriva en RF de comprobante + aviso de privacidad y RNF de accesibilidad y flujo asistido (US-16/US-21/US-26 ← ENT-02/ENT-03/ENT-06).
 
 ### **2.3.3. Empathy Mapping.**
 
@@ -729,7 +741,7 @@ Este escenario describe el recorrido del copropietario que ejerce su voto median
 
 ## **3.2. User Stories.**
 
-Las siguientes épicas, User Stories y Technical Stories convierten las necesidades de los dos segmentos objetivo en requisitos verificables. La especificación toma como fuente el lenguaje ubicuo, el Context Mapping y los contratos de aplicación documentados en `votochain-api-backend`. Por ello, distingue la identidad técnica (`User`), la pertenencia a una comunidad (`Membership`) y la administración de una comunidad (`CommunityAdmin`); también separa la verificación de canal mediante OTP de la verificación biométrica de identidad. En el flujo principal, un `VoteCast` representa la intención de voto y solo un `VoteConfirmedOnChain` participa en el conteo.
+Las siguientes épicas, User Stories y Technical Stories convierten las necesidades observadas en las entrevistas (ENT-01 a ENT-06) y sintetizadas en el Needfinding en requisitos verificables. Cada historia traza su origen a hallazgos de entrevista; por ejemplo, US-25 Emitir voto nace de ENT-02/ENT-03/ENT-06 (desconfianza del conteo a mano alzada) y de la Persona Miguel Herrera, y US-27 Cerrar y contabilizar nace de ENT-04/ENT-05 (reporte para SUNARP/notaría) y de la Persona Patricia Salas. La especificación distingue la identidad técnica (`User`), la pertenencia (`Membership`) y la administración (`CommunityAdmin`); separa verificación de canal OTP de verificación biométrica. En el flujo principal, un `VoteCast` representa la intención de voto y solo un `VoteConfirmedOnChain` participa en el conteo.
 
 Se emplean los roles **visitante**, **directiva o administradora de comunidad**, **propietario o socio votante**, **administrador de cumplimiento** y **Developer**. Los criterios de aceptación están redactados en presente, en tercera persona y con la estructura Given-When-Then (Dado-Cuando-Entonces). Las épicas agrupan capacidades; sus filas expresan la condición global de cierre, mientras que las filas US y TS detallan comportamientos comprobables.
 
@@ -1093,9 +1105,7 @@ Al finalizar el QAW se priorizan 6 escenarios refinados. Ordenados por riesgo pa
 
 ## **4.2. Strategic-Level Domain-Driven Design.**
 
-El objetivo del DDD estratégico es descomponer el dominio de gobernanza comunitaria verificable en subconjuntos con límites naturales (Bounded Contexts), explicitar qué cruza cada límite y qué nunca lo cruza, y proteger el Core Domain (`Voting & Verifiable Ledger`) de la complejidad de identidad, criptografía, delivery y cumplimiento.
-
-Resultado anticipado: **11 Bounded Contexts** - 1 Core, 7 Supporting, 3 Generic - con `Voting` como downstream orquestador de sign → deliver → confirm, `Notifications` como sink puro y `Consent & Compliance` como contexto ortogonal que veta y coordina pero no borra datos ajenos.
+El objetivo del DDD estratégico es descomponer el dominio de gobernanza comunitaria verificable en subconjuntos con límites naturales (Bounded Contexts), explicitar qué cruza cada límite y qué nunca lo cruza. Al inicio no se presupone ningún número de contextos: los contextos de la Tabla siguiente son el *resultado* de aplicar `look-for-pivotal-events` + `start-with-value` sobre el Big Picture de EventStorming (4.2.1-4.2.2), donde se protegen intención verificable y hecho auditable de la complejidad de identidad, criptografía, delivery y cumplimiento.
 
 | # | Bounded Context | Tipo | Agregado(s) |
 |---|---|---|---|
@@ -1149,8 +1159,9 @@ Técnicas aplicadas:
 Decisión: 11 candidatos promovidos a Bounded Contexts (se excluyó Legacy/RPA por decisión explícita del equipo). El mapa de subdominios de referencia quedó como hipótesis superada donde discrepaba (ver D1–D7 en 4.2.5).
 
 <p align="center">
-  <img src="./assets/candidate-discovery.png" alt="Candidate Context Discovery" width="700"/>
+  <img src="./assets/eventstorm-bigpicture.png" alt="Candidate Context Discovery sobre Big Picture en Miro" width="700"/>
 </p>
+Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). Nota: `assets/candidate-discovery.png` no existe en el repo; se reutiliza el Big Picture consolidado hasta regenerar el corte de candidatos en la herramienta. Los cortes por candidato (1-11) se muestran abajo con sus PNG individuales.
 
 **1. Voting & Verifiable Ledger**
 
@@ -1196,8 +1207,10 @@ Decisión: 11 candidatos promovidos a Bounded Contexts (se excluyó Legacy/RPA p
 
 **5. IAM**
 
+> Nota: `assets/iam-candidate-discovery.png` no existe en el repo [Por regenerar en Miro]. Se mantiene el detalle textual hasta reponer la captura.
+
 <p align="center">
-  <img src="./assets/iam-candidate-discovery.png" alt="IAM Candidate Context Discovery" width="700"/>
+  <img src="./assets/eventstorm-bigpicture.png" alt="IAM Candidate Context Discovery pendiente" width="700"/>
 </p>
 
 - **Límite:** Agregado `User` (1 por persona); identidad técnica, sesión única y roles de sistema, excluye membresía, comunidad e identidad física.
@@ -1264,13 +1277,23 @@ Decisión: 11 candidatos promovidos a Bounded Contexts (se excluyó Legacy/RPA p
 - **Eventos clave:** `DeliveryRequested`, `DeliveryRefused`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryRetried`.
 - **Justificación:** Todos dependen de él y él de nadie; la misma idempotency key nunca entrega dos veces y el reintento es un intento nuevo (R11).
 
-### **4.2.3. Domain Message Flows Modeling.**
+### **4.2.3. Domain Message Flows Modeling (Domain Storytelling).**
 
-Técnica: **Domain Storytelling** - por cada caso de negocio se modela quién (actor), qué hace (acción en lenguaje ubicuo), con qué objeto y qué sistema/BC responde, en secuencia numerada. Tres historias cubren el flujo crítico US-19→US-28 + TS-01/TS-02.
+Técnica: **Domain Storytelling** – por cada caso de negocio se modela quién (actor con pictograma), qué hace (acción en lenguaje ubicuo), con qué objeto de trabajo y qué BC responde, en secuencia numerada 1→n sobre el lienzo de la herramienta (Miro / Domain Storytelling Modeler). Los bloques `mermaid sequenceDiagram` se conservan solo como anexo técnico legible en Markdown; la evidencia válida ante enunciado es la captura de la herramienta con flechas numeradas. Tres historias cubren el flujo crítico US-19→US-28 + TS-01/TS-02.
+
+> Estado de imágenes: `assets/story-enrollment.png`, `assets/story-vote.png` y `assets/story-close-audit.png` no existen en el repo (imágenes rotas). Se mantienen las referencias marcadas [Por regenerar en herramienta] hasta reponer las capturas. No usar `media/image1.png`; todo vive en `assets/`.
 
 #### Historia 1 — Enrollment y verificación pre-voto (US-16, US-19, US-20, US-21)
 
 Propietario demuestra identidad una vez (enrollment) y luego prueba presencia antes de cada voto. Consentimiento como guarda transversal.
+
+| Paso | Actor → Acción (lenguaje ubicuo) | Objeto | BC que responde | Evento resultante |
+|---|---|---|---|---|
+| 1 | Propietario → otorga consentimiento biométrico | `ConsentRecord` | Consent & Compliance | `ConsentGranted` (US-16) |
+| 2 | Propietario → solicita examen (pertenece ≥1 comunidad) | `DocumentExamination` | Membership → OCR Provider | Precondición `belongs?` (R8), US-19 |
+| 3 | OCR → extrae + compara | Veredicto | OCR Provider | `MATCH/NO_MATCH/UNREADABLE` single-use (R7) |
+| 4 | Biometric → crea referencia | `BiometricProfile` sin imágenes crudas | Biometric | `BiometricEnrolled` (US-20) → `ProvisionWallet` (TS-01) |
+| 5 | Antes de cada voto: Propietario → prueba presencia | `VerificationAttempt` | Biometric | `VERIFIED` fresco (US-21) |
 
 ```mermaid
 sequenceDiagram
@@ -1293,12 +1316,21 @@ sequenceDiagram
 ```
 
 <p align="center">
-  <img src="./assets/story-enrollment.png" alt="Domain Storytelling enrollment" width="700"/>
+  <img src="./assets/story-enrollment.png" alt="Domain Storytelling enrollment en herramienta [Por regenerar]" width="700"/>
 </p>
+Fig. H1 – Enrollment en Domain Storytelling (herramienta). [Por regenerar captura numerada 1→5 en Miro/Modeler].
 
 #### Historia 2 — Voto verificable sin gestionar wallet (US-23, US-24, US-25, TS-01, TS-02, US-26)
 
 Miembro elegible y verificado obtiene permiso breve, firma individualmente y sigue su comprobante.
+
+| Paso | Actor → Acción | Objeto | BC que responde | Evento |
+|---|---|---|---|---|
+| 1 | Directiva → abre propuesta | `QuorumSnapshot` | Community → Voting | `ProposalOpened` (US-23, R1) |
+| 2 | Propietario → solicita autorización | `VoteAuthorization` | Voting → Membership/Biometric | `EligibilitySnapshot` (R2) + `verified-now` (R3) → US-24 |
+| 3 | Propietario → emite voto | `Vote` (intención) | Voting → Wallet | Firma individual efímera (R4, TS-01) → US-25 |
+| 4 | Voting → entrega solo-firmado | `DeliveryOrder` | Relay | `DeliveryConfirmed/Failed` (R5, TS-02) |
+| 5 | Voting → avisa comprobante | `NotificationDispatch` | Notifications | Aviso idempotente (US-26, R11) |
 
 ```mermaid
 sequenceDiagram
@@ -1324,12 +1356,19 @@ sequenceDiagram
 ```
 
 <p align="center">
-  <img src="./assets/story-vote.png" alt="Domain Storytelling voto verificable" width="700"/>
+  <img src="./assets/story-vote.png" alt="Domain Storytelling voto verificable en herramienta [Por regenerar]" width="700"/>
 </p>
+Fig. H2 – Voto verificable en Domain Storytelling (herramienta). [Por regenerar captura numerada 1→5].
 
 #### Historia 3 — Cierre, conteo y auditoría (US-27, US-28) + supresión coordinada (US-17)
 
 Directiva cierra; cualquiera audita sin confiar en el operador. En paralelo, el titular puede pedir supresión sin que el ledger inmutable se reescriba.
+
+| Paso | Actor → Acción | Objeto | BC que responde | Evento |
+|---|---|---|---|---|
+| 1 | Directiva → cierra propuesta | `Proposal` | Voting | Tally solo `CONFIRMED` + `QuorumSnapshot` (US-27) |
+| 2 | Auditor/Propietario → consulta resultado | Evidencia | Voting | Conteos, cuórum, firma EIP-712 + tx hash `ecrecover()` (US-28) |
+| 3 | Titular → solicita supresión | `DataSubjectRequest` | Consent coordina con dueños | `ErasureRequested/Confirmed/Complete` sin reescribir ledger (US-17, R12) |
 
 ```mermaid
 sequenceDiagram
@@ -1350,26 +1389,100 @@ sequenceDiagram
 ```
 
 <p align="center">
-  <img src="./assets/story-close-audit.png" alt="Domain Storytelling cierre y auditoría" width="700"/>
+  <img src="./assets/story-close-audit.png" alt="Domain Storytelling cierre y auditoria en herramienta [Por regenerar]" width="700"/>
 </p>
+Fig. H3 – Cierre y auditoría en Domain Storytelling (herramienta). [Por regenerar captura numerada 1→3]. Los diagramas `sequenceDiagram` anteriores quedan como anexo técnico; la figura válida es la captura numerada de la herramienta.
 
 ---
 
-### **4.2.4. Bounded Context Canvases.**
+### **4.2.4. Bounded Context Canvases (por orden de importancia).**
 
-Proceso iterativo por BC (orden de importancia): 1) Context Overview Definition, 2) Business Rules Distillation & Ubiquitous Language Capture, 3) Capability Analysis, 4) Capability Layering, 5) Dependencies Capture, 6) Design Critique. Clasificación de capacidades: Core / Supporting / Generic.
+Proceso iterativo por BC: 1) Context Overview Definition, 2) Business Rules Distillation & Ubiquitous Language Capture, 3) Capability Analysis, 4) Capability Layering, 5) Dependencies Capture, 6) Design Critique. Clasificación: Core / Supporting / Generic. Resultado: 1 Core, 7 Supporting, 3 Generic (ver justificación de granularidad en 4.2.5 alternativa f).
+
+> Nota de trazabilidad: los 11 JPG en `assets/Bounded Context Canvases-*.jpg` se insertan abajo en orden de importancia, empezando por Voting & Verifiable Ledger (Core). Verificar que cada archivo corresponda al BC indicado y renombrar a `bc-canvas-01-voting.jpg`, etc.
+
+#### BC-01 — Voting & Verifiable Ledger (Core)
+| Aspecto | Contenido |
+|---|---|
+| Agregados | `Proposal`, `VoteAuthorization`, `Vote` (+ `QuorumSnapshot`, `EligibilitySnapshot` congelados) |
+| Reglas clave | Solo `VoteConfirmedOnChain` cuenta; `VoteCast` es intención. Tally con cuórum congelado. |
+| Lenguaje | `ProposalOpened`, `VoteAuthorizationGranted`, `VoteCast`, `VoteConfirmedOnChain`, `ProposalTallied` |
+
+<p align="center"><img src="./assets/Bounded Context Canvases-1.jpg" alt="BC Canvas 01 Voting and Verifiable Ledger" width="700"/></p>
+Fig. 4.2.4-01 – Canvas Voting & Verifiable Ledger (Core). Fuente: elaboración propia en Miro.
+
+#### BC-02 — Membership (Supporting)
+Agregado `Membership` (par persona-comunidad), `EligibilitySnapshot`. Solo `ACTIVE` integra roster.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-2.jpg" alt="BC Canvas 02 Membership" width="700"/></p>
+
+#### BC-03 — Community Management (Supporting)
+Agregado `Community`, `VotingPolicy`. La política evoluciona aquí; Voting solo congela copia.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-3.jpg" alt="BC Canvas 03 Community Management" width="700"/></p>
+
+#### BC-04 — Biometric Identity Verification (Supporting)
+Agregados `BiometricProfile`, `VerificationAttempt`. Veredicto binario fresco `verified-now`, sin imágenes crudas.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-4.jpg" alt="BC Canvas 04 Biometric Identity Verification" width="700"/></p>
+
+#### BC-05 — Cryptographic Wallet Custody (Supporting)
+Agregado `UserWallet`. Firma por persona, reconstrucción efímera, signer/payer separados.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-5.jpg" alt="BC Canvas 05 Wallet Custody" width="700"/></p>
+
+#### BC-06 — Blockchain Relay & Transaction Delivery (Supporting)
+Agregado `DeliveryOrder`. Solo contenido firmado, orden secuencial por pagador, solo `DeliveryConfirmed` cuenta.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-6.jpg" alt="BC Canvas 06 Relay Delivery" width="700"/></p>
+
+#### BC-07 — Consent & Compliance (Supporting, ortogonal)
+Agregados `ConsentRecord`, `DataSubjectRequest`, `RetentionPolicy` (Ley 29733). Veta y coordina, no borra datos ajenos.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-7.jpg" alt="BC Canvas 07 Consent and Compliance" width="700"/></p>
+
+#### BC-08 — IAM (Supporting)
+Agregado `User`. Identidad técnica y sesión única. Suspender acceso no reescribe membresía.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-8.jpg" alt="BC Canvas 08 IAM" width="700"/></p>
+
+#### BC-09 — Verification OTP (Generic)
+Agregado `VerificationChallenge`. Prueba posesión de canal, propósitos cerrados, código nunca cruza legible.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-9.jpg" alt="BC Canvas 09 Verification OTP" width="700"/></p>
+
+#### BC-10 — Document OCR & Face Match Provider (Generic)
+Agregado `DocumentExamination` efímero. Veredicto `MATCH/NO_MATCH/UNREADABLE` single-use hacia Biometric.
+
+<p align="center"><img src="./assets/Bounded Context Canvases-10.jpg" alt="BC Canvas 10 Document OCR" width="700"/></p>
+
+#### BC-11 — Notifications (Generic)
+Agregado `NotificationDispatch`. Sink email-only con idempotency key. Ver justificación en 4.2.5 (f).
+
+<p align="center"><img src="./assets/Bounded Context Canvases-11.jpg" alt="BC Canvas 11 Notifications" width="700"/></p>
 
 ### **4.2.5. Context Mapping.**
 
 Proceso: se revisó la información de storming y canvases y se probaron alternativas con las preguntas guía.
-Se descartaron: 
-- (a) fusionar Wallet+Relay (destruye separación signer/payer, viola C-03); 
-- (b) lista de miembros embebida en Community (acopla ritmos, reescribe historia); 
-- (c) `Proposal` gigante con votos embebidos (contención transaccional); 
-- (d) OTP para autorización de voto (mezcla canal con identidad); 
-- (e) preferencias de notificación locales (duplica Consent). 
+Se descartaron:
+- (a) fusionar Wallet+Relay (destruye separación signer/payer, viola C-03);
+- (b) lista de miembros embebida en Community (acopla ritmos, reescribe historia);
+- (c) `Proposal` gigante con votos embebidos (contención transaccional);
+- (d) OTP para autorización de voto (mezcla canal con identidad);
+- (e) preferencias de notificación locales (duplica Consent).
+- (f) degradar Verification (OTP), Document OCR y Notifications a adaptadores/puertos dentro de IAM / Biometric / Infraestructura — evaluada a pedido de revisión docente. Pro: 8 BC en vez de 11, menos OHS. Con: mezcla ritmos y vocabularios distintos, pierde reemplazabilidad C-07 y debilita R7/R9/R11. Conclusión: se mantienen como BC (ver justificación abajo).
 
-Se confirma el mapa de 11 bounded contexts.
+Se confirma el mapa de 11 bounded contexts (1 Core, 7 Supporting, 3 Generic).
+
+#### Justificación de granularidad: por qué OTP, OCR y Notifications son BC y no adaptadores
+
+| Candidato a degradar | Si fuera adaptador | Por qué se mantiene como BC en VotoChain |
+|---|---|---|
+| Verification (OTP) dentro de IAM | Mezcla probar posesión de canal (`ChallengeRequested/Confirmed`, minutos, intentos acotados) con identidad técnica y sesión única (`User/Session`, horas). Violaría R9: el código legible podría cruzar. | Ritmo, vocabulario y secretos distintos. OTP es reemplazable (SMTP/OTP provider) tras puerto C-07. ENT-02/ENT-03 exigen alternativa asistida sin contaminar sesión. |
+| Document OCR dentro de Biometric | Mezcla examen efímero con purga (`DocumentExamination`, nace/muere en minutos, 3 veredictos + 5 razones) con referencia duradera (`BiometricProfile`). Contaminaría referencia viva con artefactos temporales e imágenes. | Ciclo de vida y Ley 29733 exigen frontera R7/R8: solo `MATCH` single-use cruza, nada tipo-imagen. Proveedor Google Document AI reemplazable C-07. |
+| Notifications como librería | Pierde idempotencia explícita e `idempotency key` (R11) y el veto de Consent (R10/R12: `may-process/contact-now?`). Cada BC reimplementaría reintentos. | Sink puro genérico email-only: todos dependen de él, él de nadie. Garantiza exactly-once y trazabilidad de avisos (US-26, comprobantes, DSAR). |
+
+Conclusión: mantener 11 BC por separación de ritmos, vocabularios, secretos y reemplazabilidad. La alternativa 8+3 adaptadores queda documentada como opción simplificada si el costo de 3 OHS extra supera el beneficio.
 
 <p align="center">
   <img src="./assets/context-map.png" alt="Context Map en ContextMapper" width="700"/>
@@ -1404,29 +1517,36 @@ La arquitectura traduce drivers D-01..D-22 y constraints C-01..C-07 a containers
 
 ### **4.3.1. Software Architecture System Landscape Diagram.**
 
-Vista de paisaje: VotoChain en su ecosistema (comunidades, proveedores de identidad, ledger público, correo).
+Vista de paisaje: **VotoChain como un solo sistema** dentro de su ecosistema (personas, comunidades, ledger público, proveedores, SUNARP). Los containers internos (Landing, Web App, API, Relayer) no van en Landscape; van en 4.3.3 Container.
 
 <p align="center">
-  <img src="./assets/c4-landscape.png" alt="System Landscape" width="700"/>
+  <img src="./assets/c4-landscape.png" alt="System Landscape VotoChain como sistema unico [Por regenerar]" width="700"/>
 </p>
 
-Explicación: las personas solo tocan Landing y Web App (Next.js). Todo el dominio vive en el monolito NestJS (11 módulos, uno por BC). El worker relayer es el único que escribe en Polygon (paga gas). OCR/biometría y correo son externos reemplazables tras puertos. Lecturas de verificación on-chain (`ecrecover()`) pueden hacerse directo contra Polygon desde la web para auditoría independiente.
+[Por regenerar `c4-landscape.png` en Structurizr/Miro: 1 caja central “VotoChain”, alrededor Directiva/Admin edificio, Propietario votante, Admin Cumplimiento, Visitante, Polygon, Google Document AI, AWS Rekognition, SMTP, SUNARP/notaría (externo manual). Sin descomponer Landing/WebApp/API/Relayer dentro.]
+
+Explicación corregida: VotoChain es un único sistema. Las personas (directiva, propietario, admin cumplimiento, visitante) interactúan con VotoChain; VotoChain interactúa con sistemas externos (Polygon, Document AI, Rekognition, SMTP) y con entidades manuales (SUNARP/notaría). Todo el dominio vive en el monolito NestJS (11 módulos, uno por BC). El worker relayer es el único que escribe en Polygon (paga gas). OCR/biometría y correo son externos reemplazables tras puertos. Lecturas de verificación on-chain (`ecrecover()`) pueden hacerse directo contra Polygon desde la web para auditoría independiente sin pasar por la API.
 
 ### **4.3.2. Software Architecture Context Level Diagrams.**
 
-Un recuadro = “VotoChain Platform”; alrededor, usuarios y sistemas externos.
+Un recuadro = “VotoChain Platform” en el centro; alrededor, usuarios y sistemas externos, incluyendo **Admin Cumplimiento** (presente en historias US-18 y en Landscape).
 
 <p align="center">
-  <img src="./assets/c4-context.png" alt="C4 Context" width="700"/>
+  <img src="./assets/c4-context.png" alt="C4 Context con Admin Cumplimiento [Por regenerar]" width="700"/>
 </p>
+
+[Por regenerar `c4-context.png`: centro “VotoChain Platform”, alrededor Directiva/Admin edificio, Propietario votante, **Admin Cumplimiento**, Visitante, Polygon, Google Document AI, AWS Rekognition, SMTP, SUNARP/notaría.]
 
 | Interacción | Dirección | Protocolo / contrato | Driver que satisface |
 |---|---|---|---|
-| Gestionar comunidad/propuesta, votar, auditar | Usuarios → Platform | HTTPS REST versionado + idempotency keys (C-06) | D-22 usabilidad no-técnica, D-13 pico interactivo |
+| Gestionar comunidad/propuesta, votar, auditar | Directiva / Propietario / Visitante → Platform | HTTPS REST versionado + idempotency keys (C-06) | D-22 usabilidad no-técnica, D-13 pico interactivo |
+| Revisar consentimientos, atender DSAR, definir retención, auditar | Admin Cumplimiento → Platform | HTTPS REST versionado (US-17/US-18), vetos `may-process/contact-now?` (R12) | Privacidad Ley 29733, D-06 |
 | Publicar voto / leer confirmación | Platform ↔ Polygon | JSON-RPC, EIP-712 firmado por `UserWallet`, `ecrecover()` público (C-02) | D-03/D-05 verificabilidad, D-16 exactly-once |
 | OCR DNI | Platform → Document AI | HTTPS tras puerto `DocumentExamination` (C-07) | D-14 examen con purga, D-19 reemplazable |
 | Liveness + comparación | Platform → Rekognition | HTTPS tras puerto `VerificationAttempt` (C-07) | D-09 liveness-first, D-06 privacidad |
 | Email | Platform → SMTP | SMTP tras puerto `NotificationDispatch`, email-only (C-07) | D-16 sin duplicados (R11) |
+
+El Admin Cumplimiento no vota ni gestiona asambleas; solo veta tratamientos y coordina supresión (R12), por eso aparece en Context/Landscape pero no en Voting.
 
 ### **4.3.3. Software Architecture Container Level Diagrams.**
 
@@ -2281,6 +2401,31 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 ### **7.3.3. Evaluaciones según heurísticas.**
 
 ## **7.4. Video About-the-Product.**
+
+# **Conclusiones**
+
+1. La problemática de asambleas (firmas, Excel, mano alzada, actas impugnadas) se evidenció en ENT-04/ENT-05 y motivó el alcance As-is → To-be.
+2. Las 6 entrevistas muestran aceptación del voto digital con evidencia, condicionada a aviso de privacidad claro y flujo accesible (ENT-02/ENT-03/ENT-06).
+3. Las User Stories trazan cada requisito a su ENT origen, separando intención (`VoteCast`) de hecho (`VoteConfirmedOnChain`).
+4. El EventStorming produjo 11 candidatos por pivotal-events; Voting & Verifiable Ledger quedó como Core y OTP/OCR/Notifications se justifican como BC por ritmo/vocabulario/R7/R9/R11.
+5. La arquitectura (monolito modular NestJS, wallet por usuario, relayer pagador, Polygon, Document AI/Rekognition) responde a drivers D-01..D-22 y constraints C-01..C-07, con VotoChain como sistema único y Admin Cumplimiento explícito.
+6. Queda pendiente: regrabar ENT-01 v2 con directiva real, completar edad/distrito/capturas/timings, regenerar PNG rotos en herramienta y renombrar entregables a `TF_1ASI0728_202620_*`.
+
+# **Anexos**
+
+## Anexo A – Videos de Exposiciones
+| Entrega | Título | URL | Duración | Integrantes |
+|---|---|---|---|---|
+| TB1 | Sustentación TB1 – VotoChain | [Por completar – pegar URL YouTube] | [Por completar mm:ss] | Aliaga, Bueno, Paredes, Ríos, Rodríguez |
+| TF | Sustentación TF – VotoChain (presentación a cámara + demo en Miro/ContextMapper/Figma/YouTube) | [Por completar] | [Por completar] | Por definir |
+
+Nomenclatura exigida: `TF_1ASI0728_202620_TF`, `TF_1ASI0728_202620_KEYNOTE`, `TF_1ASI0728_202620_PERFORMANCE`, `TF_1ASI0728_202620_VIDEO`.
+
+## Anexo B – Trazabilidad ENT → Need → US
+| ENT | Need / Hallazgo | Persona | US derivada |
+|---|---|---|---|
+| ENT-04/ENT-05 | Reporte para SUNARP, cuórum Excel, cartas poder dudosas | Patricia Salas | US-08 a US-15, US-23, US-27, US-28 |
+| ENT-02/ENT-03/ENT-06 | Desconfianza mano alzada, privacidad biométrica, accesibilidad mayores | Miguel Herrera | US-16/US-17, US-19 a US-21, US-24 a US-26 |
 
 # **Referencias**
 

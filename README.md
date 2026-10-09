@@ -4635,12 +4635,13 @@ Alcance TF: sprints e implementación en roadmap del backend; esta sección se c
 
 # **Conclusiones**
 
-1. La problemática de asambleas (firmas, Excel, mano alzada, actas impugnadas) se evidenció en ENT-01/ENT-04/ENT-05 y motivó el alcance As-is → To-be.
-2. Las 6 entrevistas muestran aceptación del voto digital con evidencia, condicionada a aviso de privacidad claro y flujo accesible (ENT-02/ENT-03/ENT-06).
-3. Las User Stories trazan cada requisito a su ENT origen, separando intención (`VoteCast`) de hecho (`VoteConfirmedOnChain`).
-4. El EventStorming produjo 11 candidatos por pivotal-events; Voting & Verifiable Ledger quedó como Core y OTP/OCR/Notifications se justifican como BC por ritmo, vocabulario y fronteras de verificación y entrega.
-5. La arquitectura (monolito modular NestJS, wallet por usuario, relayer pagador, Polygon, Document AI/Rekognition) responde a drivers D-01..D-22 y constraints C-01..C-07, con VotoChain como sistema único y Admin Cumplimiento explícito.
-6. Queda pendiente: completar edad/distrito/capturas/timings manuales, regenerar PNG rotos en herramienta y renombrar entregables a `TF_1ASI0728_202620_*`.
+1.- Diseño táctico consolidado (DDD): Se detallaron los 11 Bounded Contexts mediante diagramas de clases, contratos REST y modelos de datos, delimitando las responsabilidades del núcleo de votación y los servicios de soporte.
+
+2.- Coherencia arquitectónica y trazabilidad: Se alinearon los requisitos funcionales con los componentes del sistema, manteniendo la separación de responsabilidades y las decisiones de seguridad, privacidad y verificabilidad definidas en la arquitectura estratégica.
+
+3.- Experiencia de usuario estructurada (UX/UI): Se desarrollaron wireframes y mockups para las interfaces web y móviles, aplicando guías de estilo y una arquitectura de información orientada a facilitar la interacción de administradores y votantes.
+
+4.- Flujos funcionales y avance de implementación: Los Wireflow Diagrams y User Flow Diagrams permitieron representar los recorridos e interacciones del sistema. Asimismo, se implementó la Landing Page responsiva, estableciendo una base para el desarrollo posterior de la aplicación.
 
 # **Anexos**
 

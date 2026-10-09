@@ -231,9 +231,8 @@ En Ingeniería de Software, un Student Outcome representa las capacidades, conoc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---|---|---|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br>**TP1**<br>Expuse la Arquitectura de Información y los subsistemas de navegación del sistema.<br>Sustenté el Style Guide y los wireframes de la Landing Page (Desktop y Mobile).<br>Presenté la demostración funcional e interactiva de la Landing Page desplegada.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos). **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**TP1**<br>Expliqué al equipo la estructura de los wireframes de la aplicación y la organización de sus principales vistas y componentes.<br>Presenté las correcciones transversales realizadas en el documento, comunicando los cambios aplicados para mejorar su coherencia y articulación.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo comunicó oralmente el diseño táctico (Capítulo V), el diseño UX y arquitectura de información (Capítulo VI) y la demo de la Landing Page, exponiendo con objetividad y dominio técnico ante perfiles académicos y de negocio. |
-
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br>**TP1**<br>Documenté las Guías de Estilo (6.1) y la Arquitectura de Información formal (6.2).<br>Elaboré los wireframes de fidelidad media de la Landing Page en versiones Desktop y Mobile (6.3.1).<br>Desarrollé e implementé el código de la Landing Page responsiva con accesibilidad y SEO.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Me apoyé en mi implementación del bounded context IAM en el backend (superficie REST, casos de uso y fachada de contexto) para redactar con precisión técnica sin perder claridad. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**TP1**<br>Elaboré la estructura de los wireframes de la aplicación, organizando la distribución de contenidos, navegación y componentes de las principales vistas.<br>Realicé la corrección transversal del documento, revisando la coherencia, consistencia y articulación entre sus capítulos y artefactos.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y mantener actualizada la trazabilidad entre entrevistas, Needfinding y requisitos.<br><br>**TP1**<br>En el TP1, el equipo documentó formalmente el diseño táctico, la arquitectura de información, los wireframes/mock-ups y la implementación de la Landing Page, manteniendo trazabilidad rigurosa y claridad técnica en todo el informe. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br>**TP1**<br>Expuse la Arquitectura de Información y los subsistemas de navegación del sistema.<br>Sustenté el Style Guide y los wireframes de la Landing Page (Desktop y Mobile).<br>Presenté la demostración funcional e interactiva de la Landing Page desplegada.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br>**TP1**<br>Presenté ante el equipo los mock-ups de la Landing Page y expliqué las decisiones en diseño visual aplicadas en cada sección. Expuse los wireframes de la app (6.4.1) y los wireflow diagrams (6.4.2), comunicando los flujos de usuario y la lógica de navegación entre pantallas a una audiencia con distintos niveles técnicos. <br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos). **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**TP1**<br>Expliqué al equipo la estructura de los wireframes de la aplicación y la organización de sus principales vistas y componentes.<br>Presenté las correcciones transversales realizadas en el documento, comunicando los cambios aplicados para mejorar su coherencia y articulación.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo comunicó oralmente el diseño táctico (Capítulo V), el diseño UX y arquitectura de información (Capítulo VI) y la demo de la Landing Page, exponiendo con objetividad y dominio técnico ante perfiles académicos y de negocio. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br>**TP1**<br>Documenté las Guías de Estilo (6.1) y la Arquitectura de Información formal (6.2).<br>Elaboré los wireframes de fidelidad media de la Landing Page en versiones Desktop y Mobile (6.3.1).<br>Desarrollé e implementé el código de la Landing Page responsiva con accesibilidad y SEO.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br>**TP1**<br>Elaboré los mockúps de la Landing Page (6.3.2), documentando las decisiones de diselo visual con coherencia respecto a las guías de estilo definidas en 6.1. Diseñé y documenté los wireframes de la app (6.4.1) con las principales vistas por rol, y los wireflow diagrams (6.4.2) con los flujos de usuario y ssu condiciones de navegación, manteniendo trazabilidad con las User Stories del Capítulo III.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Me apoyé en mi implementación del bounded context IAM en el backend (superficie REST, casos de uso y fachada de contexto) para redactar con precisión técnica sin perder claridad. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**TP1**<br>Elaboré la estructura de los wireframes de la aplicación, organizando la distribución de contenidos, navegación y componentes de las principales vistas.<br>Realicé la corrección transversal del documento, revisando la coherencia, consistencia y articulación entre sus capítulos y artefactos.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y mantener actualizada la trazabilidad entre entrevistas, Needfinding y requisitos.<br><br>**TP1**<br>En el TP1, el equipo documentó formalmente el diseño táctico, la arquitectura de información, los wireframes/mock-ups y la implementación de la Landing Page, manteniendo trazabilidad rigurosa y claridad técnica en todo el informe. |
 <br>
 
 
@@ -2890,6 +2889,428 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 
 ### **6.4.1. Applications Wireframes.**
 
+Los wireframes de la aplicación representan la estructura y disposición de los elementos de interfaz en fidelidad media, sin color ni estilo visual definitivo. Su propósito es validar la jerarquía de información, la navegación y la lógica de cada pantalla antes de aplicar el sistema de diseño. 
+
+
+#### **Vistas principales por rol**
+
+#### **Acceso, registro y seguridad**
+
+##### **Registro**
+
+Esquemas del flujo de creación de cuenta: pantalla de ingreso de datos personales y pantalla de confirmación de registro con indicación del paso de verificación de correo.
+
+<p align="center">
+  <img src="./assets/wireframes_registro.png" alt="Registro - RegistroWireframe.png" width="320"/>
+</p>
+
+
+##### **Inicio de sesión**
+
+Esquemas del flujo de autenticación: pantalla de ingreso de credenciales y pantalla de estado de error con mensaje de acción disponible.
+
+<p align="center">
+  <img src="./assets/wireframes_login.png" alt="Login - LoginWireframe.png" width="320"/>
+</p>
+
+
+##### **Solicitar código**
+
+Esquemas del flujo de solicitud de OTP: pantalla de ingreso del correo registrado y pantalla de confirmación de envío del código temporal.
+
+<p align="center">
+  <img src="./assets/wireframes_ingresar_codigo.png" alt="Solicitar código - SolicitarWireframe.png" width="320"/>
+</p>
+
+##### **Ingresar código**
+
+Esquemas del flujo de validación de OTP: pantalla de ingreso del código recibido y pantalla de estado de código vencido con opción de reenvío.
+
+<p align="center">
+  <img src="./assets/wireframes_solicitar_codigo.png" alt="Ingresar código - IngresarCódigoWireframes.png" width="320"/>
+</p>
+
+
+##### **Verificación de correo**
+
+Esquemas del flujo de confirmación de correo electrónico: pantalla de instrucción de revisión de bandeja y pantalla de confirmación de correo verificado.
+
+<p align="center">
+  <img src="./assets/wireframes_verificar_codigo.png" alt="Verificación de correo - VerificarCorreoWireframes.png" width="320"/>
+</p>
+
+
+##### **Cuenta y seguridad**
+
+Esquemas de las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, actualización de correo con verificación y gestión de cierre de sesión. Cada acción sensible muestra el paso de confirmación mediante OTP.
+
+<p align="center">
+  <img src="./assets/wireframes_cuenta_seguridad.png" alt="Cuenta y seguridad - CuentaySeguridadWireframes.png" width="320"/>
+</p>
+
+---
+
+#### **Verificación de identidad**
+
+##### **Resultado documental**
+
+Esquemas de las pantallas de resultado del procesamiento del DNI: estado de lectura exitosa con datos extraídos, estado de lectura parcial con campos a corregir y estado de error con instrucción de reintento.
+
+
+
+<p align="center">
+  <img src="./assets/wireframes_resultados_documentales.png" alt="Resultado documental - ResultadoDocumentalWireframes.png" width="320"/>
+</p>
+
+##### **Subir documento**
+
+Esquemas del flujo de captura del documento de identidad: pantalla de instrucción de posicionamiento del DNI y pantalla de previsualización con confirmación antes de procesar.
+
+<p align="center">
+  <img src="./assets/wireframes_subir_documento.png" alt="Subir documento - SubirDocumentoWireframes.png" width="320"/>
+</p>
+
+##### **Prueba de vida**
+
+Esquemas del flujo de liveness facial: pantalla de instrucción de posicionamiento, pantalla de captura activa con indicador de progreso y pantalla de resultado con estado de prueba superada o fallida.
+
+<p align="center">
+  <img src="./assets//wireframes_prueba_vida.png" alt="Prueba de vida - PruebaDeVidaWireframes.png" width="320"/>
+</p>
+
+##### **Referencia biométrica**
+
+Esquemas de las pantallas de enrolamiento biométrico: confirmación de referencia registrada y pantalla de estado cuando la referencia ya existe para el usuario.
+
+<p align="center">
+  <img src="./assets/wireframes_referencias_biometrica.png" alt="Prueba de vida - PruebaDeVidaWireframes.png" width="320"/>
+</p>
+
+##### **Mi verificación**
+
+Esquemas de la vista de estado de verificación del usuario: pantalla con verificación vigente mostrando fecha de última comprobación y pantalla con verificación vencida con CTA de re-verificación.
+
+<p align="center">
+  <img src="./assets/wireframes_miverificacion.png" alt="Mi verificación - MiVerificaciónWireframes.png" width="320"/>
+</p>
+
+
+---
+
+#### **Comunidades y administración**
+
+##### **Registrar comunidad**
+
+Esquemas del flujo de alta de comunidad: pantalla de datos generales, pantalla de configuración de política de cuórum y pantalla de confirmación antes de activar.
+
+<p align="center">
+  <img src="./assets/wireframes_registrarcomunidad.png" alt="Registrar comunidad - RegistrarComunidadWireframes.png" width="320"/>
+</p>
+
+
+##### **Ficha de comunidad**
+
+Esquemas de las pantallas de detalle de una comunidad: vista general con datos e indicadores, pestañas de padrón, propuestas, política de votación, administradores y configuración, y pantallas de edición de cada sección con sus estados de guardado.
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad1.png" alt="Ficha de comunidad - FichaComunidadWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad2.png" alt="Ficha de comunidad - FichaComunidadWireframe2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad3.png" alt="Ficha de comunidad - FichaComunidadWireframe3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad4.png" alt="Ficha de comunidad - FichaComunidadWireframe4.png" width="320"/>
+</p>
+
+
+##### **Administradores**
+
+Esquemas del flujo de gestión de co-administradores: listado de administradores activos, pantalla de invitación con selección de permisos, confirmación de asignación, pantalla de edición de permisos existentes y confirmación de revocación de acceso.
+
+<p align="center">
+  <img src="./assets/wireframes_admin1.png" alt="Administradores - AdministradoresWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_admin2.png" alt="Administradores - AdministradoresWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_admin3.png" alt="Administradores - AdministradoresWireframes3.png" width="320"/>
+</p>
+
+
+##### **Usuarios**
+
+Esquemas de la vista de gestión de usuarios del sistema: tabla de usuarios con filtros por estado y rol, pantalla de detalle de usuario y pantalla de confirmación de cambio de estado.
+
+<p align="center">
+  <img src="./assets/wireframes_usuarios.png" alt="Usuarios - UsuariosWireframes1.png" width="320"/>
+</p>
+
+
+##### **Padrón**
+
+Esquemas de las pantallas de gestión del padrón electoral: listado de miembros con filtros por estado y unidad, pantalla de solicitud pendiente con opciones de aprobación o rechazo, asignación de unidad inmobiliaria, edición de rol de voto y exportación del padrón.
+
+<p align="center">
+  <img src="./assets/wireframes_padron1.png" alt="Padrón - PadrónWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_padron2.png" alt="Padrón - PadrónWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_padron3.png" alt="Padrón - PadrónWireframes3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_padron4.png" alt="Padrón - PadrónWireframes4.png" width="320"/>
+</p>
+
+##### **Membresías**
+
+Esquemas del flujo de gestión de estados de membresía: pantalla de marcado como moroso, confirmación de suspensión con campo de motivo, pantalla de reactivación y confirmación de terminación definitiva.
+
+<p align="center">
+  <img src="./assets/wireframes_membresias1.png" alt="Membresías - MembresiasWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_membresias2.png" alt="Membresías - MembresiasWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_membresias3.png" alt="Membresías - MembresiasWireframes3.png" width="320"/>
+</p>
+
+
+##### **Detalle de miembro**
+
+Esquemas de la vista de ficha individual de un miembro: datos personales, estado de membresía, unidad asignada, historial de estados, estado de verificación de identidad, participación en asambleas anteriores y acciones disponibles según el estado actual.
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro1.png" alt="Detalle de miembro - DetalleDeMiembroWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro2.png" alt="Detalle de miembro - DetalleDeMiembroWireframe2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro3.png" alt="Detalle de miembro - DetalleDeMiembroWireframe3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro4.png" alt="Detalle de miembro - DetalleDeMiembroWireframe4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro5.png" alt="Detalle de miembro - DetalleDeMiembroWireframe5.png" width="320"/>
+</p>
+
+##### **Mis permisos**
+
+Esquemas de la vista del administrador sobre sus propios permisos en una comunidad: listado de permisos activos, pantalla de detalle por permiso y pantalla de solicitud de permiso adicional.
+
+<p align="center">
+  <img src="./assets/wireframes_permisos1.png" alt="Mis permisos - MisPermisosWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_permisos2.png" alt="Mis permisos - MisPermisosWireframe2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_permisos3.png" alt="Mis permisos - MisPermisosWireframe3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_permisos4.png" alt="Mis permisos - MisPermisosWireframe4.png" width="320"/>
+</p>
+
+---
+
+#### **Solicitudes y participación**
+
+##### **Solicitar unirse**
+
+Esquemas del flujo de solicitud de membresía por parte del propietario: búsqueda de comunidad, pantalla de formulario de solicitud con campo de unidad inmobiliaria y pantalla de confirmación de solicitud enviada.
+
+<p align="center">
+  <img src="./assets/wireframes_solicitarunirse.png" alt="Solicitar unirse - SolicitarUnirseWireframe1.png" width="320"/>
+</p>
+
+---
+
+#### **Propuestas y votaciones**
+
+##### **Propuestas**
+
+Esquemas de las pantallas de listado de propuestas: vista del administrador con filtros por estado, vista del miembro con propuestas habilitadas para votar y estados vacíos para cada caso.
+
+<p align="center">
+  <img src="./assets/wireframes_propuestas.png" alt="Propuestas - PropuestasWireframes.png" width="320"/>
+</p>
+
+
+##### **Crear propuesta**
+
+Esquemas del flujo de creación de propuesta: pantalla de formulario con título, descripción y opciones de votación, y pantalla de confirmación antes de publicar.
+
+<p align="center">
+  <img src="./assets/wireframes_crear_propuesta.png" alt="Crear propuesta - CrearPropuestaWireframe.png" width="320"/>
+</p>
+
+
+##### **Detalle de propuesta**
+
+Esquemas de la vista de detalle de una propuesta: bloque de descripción, opciones disponibles, indicador de cuórum en tiempo real y estado del voto del usuario autenticado.
+
+<p align="center">
+  <img src="./assets/wireframes_detalle_propuesta.png" alt="Detalle de propuesta - DetallePropuestaWireframe.png" width="320"/>
+</p>
+
+
+##### **Política de votación**
+
+Esquemas de las pantallas de configuración de la política de votación de una comunidad: selección del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y confirmación de cambios con advertencia de impacto sobre asambleas activas.
+
+<p align="center">
+  <img src="./assets/wireframes_politicavotacion1.png" alt="Política de votación - PolíticaVotaciónWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_politicavotacion2.png" alt="Política de votación - PolíticaVotaciónWireframe2.png" width="320"/>
+</p>
+
+
+##### **Emitir voto**
+
+Esquemas del flujo de emisión de voto: pantalla de selección de alternativa, pantalla de confirmación con resumen de la elección y pantalla de estado de voto recibido pendiente de confirmación on-chain.
+
+<p align="center">
+  <img src="./assets/wireframes_emitirvoto.png" alt="Emitir voto - EmitirVotoWireframe.png" width="320"/>
+</p>
+
+##### **Cierre y escrutinio**
+
+Esquemas del flujo de cierre de votación: pantalla de verificación de cuórum alcanzado, confirmación de cierre, pantalla de resultados con distribución de votos confirmados y pantalla de generación de acta.
+
+<p align="center">
+  <img src="./assets/wireframes_cierre_escrutinio.png" alt="Cierre y escrutinio - CierreEscrutinioWireframes.png" width="320"/>
+</p>
+
+---
+
+#### **Notificaciones y comprobantes**
+
+##### **Notificaciones**
+
+Esquemas del centro de notificaciones: listado de notificaciones recibidas con indicador de no leídas, pantalla de detalle de notificación y pantalla de configuración de preferencias de canal.
+
+<p align="center">
+  <img src="./assets/wireframes_notificacion1.png" alt="Notificaciones - NotificacionesWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_notificacion2.png" alt="Notificaciones - NotificacionesWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_notificacion3.png" alt="Notificaciones - NotificacionesWireframes3.png" width="320"/>
+</p>
+
+##### **Historial de notificaciones**
+
+Esquemas del historial completo de notificaciones: listado paginado con filtros por tipo y fecha, pantalla de detalle con estado de entrega y pantalla de reintento manual para notificaciones fallidas.
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones1.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones2.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones3.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones4.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones5.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones6.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones7.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes7.png" width="320"/>
+</p>
+
+##### **Mi recibo**
+
+Esquemas de la constancia digital del voto: pantalla de resumen con código de constancia, estado de confirmación on-chain y opción de descarga o copia del código.
+
+<p align="center">
+  <img src="./assets/wireframes_mirecibo.png" alt="Mi recibo - MiReciboWireframes.png" width="320"/>
+</p>
+
+---
+
+#### **Privacidad y gestión de datos**
+
+##### **Borrado de datos**
+
+Esquemas del flujo de solicitud de supresión: pantalla de inicio de solicitud, selección del alcance del borrado por categoría de dato, confirmación con advertencia de consecuencias, pantalla de seguimiento del estado de la solicitud y pantalla de notificación de resolución.
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos1.png" alt="Borrado de datos - BorradoDatosWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos2.png" alt="Borrado de datos - BorradoDatosWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos3.png" alt="Borrado de datos - BorradoDatosWireframes3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos4.png" alt="Borrado de datos - BorradoDatosWireframes4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos5.png" alt="Borrado de datos - BorradoDatosWireframes5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos6.png" alt="Borrado de datos - BorradoDatosWireframes6.png" width="320"/>
+</p>
+
+
+##### **Autorización**
+
+Esquemas del flujo de gestión de consentimientos: presentación del aviso de privacidad con opciones por finalidad, pantalla de actualización de consentimientos desde el perfil y confirmación de cambios aplicados.
+
+<p align="center">
+  <img src="./assets/wireframes_autorizacion.png" alt="Autorización - AutorizaciónWireframe.png" width="320"/>
+</p>
+
+---
+
 ### **6.4.2. Applications Wireflow Diagrams.**
 
 Los wireflow diagrams combinan las pantallas de la aplicación con las transiciones de navegación, mostrando qué acción del usuario desencadena cada cambio de estado o de vista. Se documentan 20 flujos agrupados en cinco dominios funcionales: identidad y acceso, verificación biométrica, gestión comunitaria, votación y cumplimiento.
@@ -2898,7 +3319,9 @@ Los wireflow diagrams combinan las pantallas de la aplicación con las transicio
 
 #### **WF-01 · Registro, incorporación e identidad**
 
-Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de datos personales, verificación de correo electrónico mediante OTP y activación de la cuenta. El usuario parte de la pantalla de bienvenida y concluye en el dashboard principal tras confirmar su identidad inicial.
+- User Goal: Registrarse e incorporarse a una comunidad
+- User Persona: Propietario votante (Segmento 2)
+El usuario pulsa "Crear cuenta" en la pantalla de bienvenida → se muestra el formulario de datos personales. Al completarlo y pulsar "Siguiente" → aparece la pantalla de verificación OTP por correo. Al ingresar el código válido → la cuenta queda activa y se navega al formulario de solicitud de incorporación a comunidad. El usuario otorga los consentimientos y sube su documento → se inicia el enrolamiento biométrico. Al completar la prueba de vida → se muestra la confirmación de solicitud enviada y el usuario queda en estado pendiente de aprobación.
 
 <a href="./assets/application_wireflows/wireflows_1.png">
   <img src="./assets/application_wireflows/wireflows_1.png" width="1200">
@@ -2908,8 +3331,9 @@ Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de d
 
 #### **WF-02 · Inicio de sesión, OTP y recuperación**
 
-Documenta las rutas de autenticación: inicio de sesión con credenciales, validación del segundo factor mediante OTP y el flujo alternativo de recuperación de contraseña. Incluye los estados de error por credenciales incorrectas y por OTP vencido.
-
+- User Goal: Acceder a su cuenta y recuperar el acceso
+- User Persona: Propietario votante y Administrador (Segmentos 1 y 2)
+El usuario ingresa correo y contraseña → si las credenciales son correctas, se muestra la pantalla de ingreso de OTP. Al ingresar el código válido → se accede al dashboard. Si el OTP está vencido → se muestra el error con opción de reenviar código. Si las credenciales son incorrectas → se muestra el mensaje de error con opción de recuperar contraseña. Al pulsar "Recuperar contraseña" → se navega al formulario de correo de recuperación; al confirmar el enlace recibido → se muestra la pantalla de nueva contraseña y, al guardarla, se redirige al inicio de sesión.
 <a href="./assets/application_wireflows/wireflows_2.png">
   <img src="./assets/application_wireflows/wireflows_2.png" width="1200">
 </a>
@@ -2918,7 +3342,9 @@ Documenta las rutas de autenticación: inicio de sesión con credenciales, valid
 
 #### **WF-03 · Cuenta y seguridad**
 
-Muestra las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, gestión de dispositivos de confianza y cierre de sesión. Cada acción sensible requiere confirmación mediante OTP antes de aplicarse.
+- User Goal: Administrar su cuenta y proteger el acceso
+- User Persona: Propietario votante y Administrador (Segmentos 1 y 2)
+Desde el menú de perfil el usuario selecciona "Cuenta y seguridad" → se muestra el panel con las opciones disponibles. Al pulsar "Cambiar contraseña" → se solicita la contraseña actual y la nueva; al confirmar → se envía OTP de verificación y, al ingresarlo correctamente, se aplica el cambio. Al pulsar "Actualizar correo" → se solicita el nuevo correo y se envía OTP al correo actual para confirmar. Al pulsar "Cerrar sesión" → se muestra confirmación y, al aceptar, se invalida la sesión y se redirige a la pantalla de inicio.
 
 <a href="./assets/application_wireflows/wireflows_3.png">
   <img src="./assets/application_wireflows/wireflows_3.png" width="1200">
@@ -2928,7 +3354,9 @@ Muestra las pantallas de configuración personal: edición de datos de perfil, c
 
 #### **WF-04 · Administración de usuarios y roles**
 
-Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, asignar roles (administrador de comunidad, miembro votante) y revocar accesos. Incluye la pantalla de confirmación antes de aplicar cambios de rol.
+- User Goal: Administrar los permisos y el estado de los usuarios
+- User Persona: Administrador del sistema (Segmento 1)
+Desde el panel de administración el administrador accede a la lista de usuarios → selecciona un usuario para ver su detalle. Al pulsar "Asignar rol" → se muestra el selector de roles; al confirmar → se muestra pantalla de confirmación y, al aceptar, el rol queda actualizado. Al pulsar "Suspender cuenta" → se solicita el motivo; al confirmar → el usuario queda suspendido y se le notifica. Al pulsar "Rehabilitar" sobre una cuenta suspendida → se muestra confirmación y, al aceptar, el acceso queda restaurado.
 
 <a href="./assets/application_wireflows/wireflows_4.png">
   <img src="./assets/application_wireflows/wireflows_4.png" width="1200">
@@ -2938,7 +3366,9 @@ Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, a
 
 #### **WF-05 · Revisión documental y enrolamiento biométrico**
 
-Documenta el flujo de verificación de identidad previo al voto: captura del DNI con OCR, extracción de datos del documento, prueba de vida facial (liveness) y comparación biométrica. El usuario avanza paso a paso y recibe retroalimentación inmediata en cada etapa. Corresponde al journey J1.
+- User Goal: Verificar su identidad y registrar su referencia biométrica
+- User Persona: Propietario votante (Segmento 2) — Journey J1
+El usuario accede al flujo de verificación → se muestra la pantalla de consentimiento biométrico. Al aceptar → se solicita la captura del DNI; al fotografiarlo → el OCR extrae los datos y muestra la vista de confirmación. Si el documento es ilegible o está vencido → se muestra el error con indicaciones para corregirlo. Al confirmar los datos extraídos → se inicia la prueba de vida facial; al completarla con resultado MATCH → se registra la referencia biométrica y se muestra la confirmación de enrolamiento exitoso.
 
 <a href="./assets/application_wireflows/wireflows_5.png">
   <img src="./assets/application_wireflows/wireflows_5.png" width="1200">
@@ -2948,7 +3378,9 @@ Documenta el flujo de verificación de identidad previo al voto: captura del DNI
 
 #### **WF-06 · Consulta de verificación y prueba de vida**
 
-Muestra el flujo de re-verificación biométrica cuando la ventana de frescura ha vencido. El usuario recibe una notificación de sesión biométrica expirada y debe completar nuevamente la prueba de vida antes de continuar con la emisión del voto.
+- User Goal: Consultar su verificación y completar una prueba de vida
+- User Persona: Propietario votante (Segmento 2)
+El usuario accede a "Mi verificación" → se muestra el estado actual de su referencia biométrica. Si la ventana de frescura ha vencido → se muestra el aviso de sesión biométrica expirada con opción de renovar. Al pulsar "Iniciar prueba de vida" → se activa la cámara y se ejecuta el liveness check. Si la prueba falla → se muestra el error con opción de reintentar. Al completarla exitosamente → se actualiza el estado a verificado y se habilita la continuación hacia la autorización de voto.
 
 <a href="./assets/application_wireflows/wireflows_6.png">
   <img src="./assets/application_wireflows/wireflows_6.png" width="1200">
@@ -2958,7 +3390,9 @@ Muestra el flujo de re-verificación biométrica cuando la ventana de frescura h
 
 #### **WF-07 · Crear comunidad y abrir votación**
 
-Cubre el flujo del administrador para crear una nueva comunidad en la plataforma: ingreso de datos del edificio o cooperativa, configuración de la política de cuórum, carga del padrón inicial y apertura de la primera convocatoria de asamblea. Corresponde al journey J2.
+- User Goal: Preparar una comunidad y abrir una votación
+- User Persona: Administrador de comunidad (Segmento 1) — Journey J2
+El administrador pulsa "Nueva comunidad" → se muestra el formulario de datos del edificio o cooperativa. Al completarlo y confirmar → se navega a la configuración de política de quórum. Al guardar la política → se muestra la pantalla de designación de co-administradores. Al confirmar → la comunidad queda activa. Desde el panel de la comunidad el administrador pulsa "Nueva propuesta" → ingresa título, descripción y opciones de voto. Al pulsar "Abrir votación" → se muestra la confirmación con las reglas congeladas y, al aceptar, la propuesta queda abierta y visible para los miembros habilitados.
 
 <a href="./assets/application_wireflows/wireflows_7.png">
   <img src="./assets/application_wireflows/wireflows_7.png" width="1200">
@@ -2968,7 +3402,9 @@ Cubre el flujo del administrador para crear una nueva comunidad en la plataforma
 
 #### **WF-08 · Ciclo de vida de comunidad**
 
-Documenta las transiciones de estado de una comunidad: de activa a suspendida, de suspendida a reactivada y el archivado definitivo. Cada transición muestra la pantalla de confirmación y el impacto sobre los miembros y asambleas asociadas.
+- User Goal: Gestionar el estado de una comunidad
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde la ficha de comunidad el administrador accede a "Gestionar estado" → se muestran las transiciones disponibles según el estado actual. Al pulsar "Suspender" → se solicita el motivo; al confirmar → la comunidad pasa a suspendida y los miembros son notificados. Al pulsar "Reactivar" sobre una comunidad suspendida → se muestra confirmación y, al aceptar, vuelve a activa. Al pulsar "Archivar" → se solicita doble confirmación; al completarla → la comunidad queda archivada y solo disponible en modo consulta.
 
 <a href="./assets/application_wireflows/wireflows_8.png">
   <img src="./assets/application_wireflows/wireflows_8.png" width="1200">
@@ -2978,7 +3414,9 @@ Documenta las transiciones de estado de una comunidad: de activa a suspendida, d
 
 #### **WF-09 · Política de votación y administradores**
 
-Muestra el flujo de configuración de la política de votación de una comunidad: definición del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y asignación de co-administradores con sus permisos específicos.
+- User Goal: Configurar las reglas y los responsables de la comunidad
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde la ficha de comunidad el administrador accede a "Política de votación" → se muestra la versión vigente con sus parámetros. Al pulsar "Editar" → se habilita el formulario; si hay parámetros inválidos → se resaltan con indicaciones de corrección. Al guardar → la nueva versión queda registrada y se aplica solo a futuras votaciones; las propuestas abiertas conservan la versión congelada. Al acceder a "Administradores" → se muestra la lista actual; al pulsar "Agregar" o "Retirar" → se confirma la acción y el cambio queda trazado.
 
 <a href="./assets/application_wireflows/wireflows_9.png">
   <img src="./assets/application_wireflows/wireflows_9.png" width="1200">
@@ -2988,7 +3426,9 @@ Muestra el flujo de configuración de la política de votación de una comunidad
 
 #### **WF-10 · Padrón: aprobación, unidad y rol**
 
-Cubre la gestión del padrón electoral: aprobación de solicitudes de membresía pendientes, asignación de unidad inmobiliaria a cada miembro y definición del rol de voto (propietario, copropietario, representante). Incluye el flujo de rechazo con motivo.
+- User Goal: Aprobar miembros y organizar el padrón de la comunidad
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde el panel de padrón el administrador visualiza las solicitudes pendientes → selecciona una para revisar los datos del solicitante. Al pulsar "Aprobar" → se solicita asignar unidad inmobiliaria y rol de voto; al confirmar → la membresía queda activa y el miembro es notificado. Al pulsar "Rechazar" → se solicita el motivo; al confirmar → el solicitante recibe la notificación de rechazo. Los miembros activos aparecen en el padrón y son considerados para el cálculo de quórum.
 
 <a href="./assets/application_wireflows/wireflows_10.png">
   <img src="./assets/application_wireflows/wireflows_10.png" width="1200">
@@ -2998,7 +3438,9 @@ Cubre la gestión del padrón electoral: aprobación de solicitudes de membresí
 
 #### **WF-11 · Membresía: mora, suspensión y terminación**
 
-Documenta las transiciones de estado de una membresía individual: marcado como moroso, suspensión temporal del derecho a voto y terminación definitiva de la relación. Cada acción muestra el impacto sobre la elegibilidad del miembro en asambleas activas.
+- User Goal: Gestionar las restricciones y la continuidad de una membresía
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde el detalle de un miembro el administrador accede a "Gestionar membresía" → se muestran las acciones disponibles. Al pulsar "Marcar como moroso" → se solicita el motivo; al confirmar → el miembro pierde el derecho a voto y es notificado. Al pulsar "Levantar mora" → se muestra confirmación y, al aceptar, el derecho queda restaurado. Al pulsar "Suspender" → se solicita motivo y duración; al confirmar → la membresía queda suspendida. Al pulsar "Terminar membresía" → se solicita doble confirmación; al completarla → la relación queda terminada de forma definitiva.
 
 <a href="./assets/application_wireflows/wireflows_11.png">
   <img src="./assets/application_wireflows/wireflows_11.png" width="1200">
@@ -3008,7 +3450,9 @@ Documenta las transiciones de estado de una membresía individual: marcado como 
 
 #### **WF-12 · Navegación del miembro y consulta de propuestas**
 
-Muestra el flujo de navegación del propietario votante: acceso al listado de sus comunidades, consulta de asambleas activas, lectura de propuestas en curso y revisión del historial de votaciones anteriores con sus constancias.
+- User Goal: Explorar su comunidad y consultar las propuestas disponibles
+- User Persona: Propietario votante (Segmento 2)
+El miembro accede al dashboard → se muestra el listado de sus comunidades con el estado de cada membresía. Al seleccionar una comunidad → se muestran las propuestas agrupadas por estado (abiertas, cerradas). Al pulsar una propuesta abierta → se muestra el detalle con las opciones de voto y el estado de su autorización. Al pulsar una propuesta cerrada → se muestra el resultado y la evidencia on-chain. Desde este panel el miembro puede también acceder a su verificación biométrica, privacidad o configuración de cuenta.
 
 <a href="./assets/application_wireflows/wireflows_12.png">
   <img src="./assets/application_wireflows/wireflows_12.png" width="1200">
@@ -3018,7 +3462,9 @@ Muestra el flujo de navegación del propietario votante: acceso al listado de su
 
 #### **WF-13 · Emisión y confirmación de voto**
 
-Documenta el flujo principal de votación: lectura de la propuesta, verificación biométrica de presencia, selección de alternativa, confirmación del voto y recepción de la constancia digital con código único. Corresponde al journey J3.
+- User Goal: Emitir su voto y comprobar su confirmación
+- User Persona: Propietario votante (Segmento 2) — Journey J3
+El miembro accede a una propuesta abierta → se verifica su elegibilidad y estado biométrico. Al obtener la autorización → se muestra la pantalla de selección de opción de voto. Al seleccionar una opción y pulsar "Confirmar" → se muestra la pantalla de revisión con la firma a aplicar. Al aceptar → el voto queda firmado y se envía al relay. Se muestra la pantalla de seguimiento con el estado del envío. Al recibir la confirmación on-chain → se muestra la constancia digital con el código único del voto confirmado.
 
 <a href="./assets/application_wireflows/wireflows_13.png">
   <img src="./assets/application_wireflows/wireflows_13.png" width="1200">
@@ -3028,7 +3474,9 @@ Documenta el flujo principal de votación: lectura de la propuesta, verificació
 
 #### **WF-14 · Excepciones al autorizar y emitir voto**
 
-Cubre los caminos alternativos durante la autorización y emisión: membresía morosa o suspendida, verificación biométrica fallida, propuesta ya cerrada y voto duplicado detectado. Cada excepción muestra el mensaje de error correspondiente y la acción disponible para el usuario. Corresponde al journey J4.
+- User Goal: Comprender y resolver los impedimentos para votar
+- User Persona: Propietario votante (Segmento 2) — Journey J4
+El miembro intenta acceder a una propuesta abierta → si su membresía está en mora o suspendida, se muestra el mensaje de restricción con el motivo y el contacto del administrador. Si la propuesta ya cerró → se muestra el aviso de votación cerrada con acceso al resultado. Si la autorización está vencida → se muestra el error con opción de solicitar una nueva. Si el voto ya fue emitido → se muestra el aviso de voto duplicado y se redirige a la constancia existente.
 
 <a href="./assets/application_wireflows/wireflows_14.png">
   <img src="./assets/application_wireflows/wireflows_14.png" width="1200">
@@ -3038,7 +3486,11 @@ Cubre los caminos alternativos durante la autorización y emisión: membresía m
 
 #### **WF-15 · Firma y envío: fallos, reintentos y constancia**
 
-Documenta los estados intermedios del proceso de registro on-chain: voto recibido y en cola, fallo en el envío al ledger, reintento automático y confirmación final. El usuario visualiza el estado de su constancia en tiempo real hasta obtener la confirmación on-chain. Corresponde al journey J4.
+- User Goal: Seguir el envío de su voto y consultar su constancia
+- User Persona: Propietario votante (Segmento 2) — Journey J4
+Tras firmar el voto → se muestra la pantalla de seguimiento con estado "en cola". Si el envío al ledger falla → se muestra el aviso de fallo con el contador de reintentos disponibles. En cada reintento automático → se actualiza el estado en pantalla. Si se agotan los reintentos → se muestra el estado "abandonado" con orientación al soporte. Al recibir la confirmación on-chain → el estado cambia a "confirmado" y se habilita el acceso a la constancia con la firma EIP-712 y el hash de transacción verificable.
+
+
 
 <a href="./assets/application_wireflows/wireflows_15.png">
   <img src="./assets/application_wireflows/wireflows_15.png" width="1200">
@@ -3048,7 +3500,9 @@ Documenta los estados intermedios del proceso de registro on-chain: voto recibid
 
 #### **WF-16 · Cierre, escrutinio, participación y cuórum**
 
-Muestra el flujo del administrador para cerrar una votación: verificación del cuórum alcanzado contra el snapshot congelado, inicio del escrutinio, visualización de resultados parciales y generación del acta oficial con los votos confirmados on-chain.
+- User Goal: Cerrar una votación y consultar sus resultados
+- User Persona: Administrador de comunidad (Segmento 1) y Propietario votante (Segmento 2)
+El administrador accede a la propuesta abierta y pulsa "Cerrar votación" → se muestra la confirmación con el estado actual de participación. Al confirmar → se ejecuta el escrutinio contando solo los votos con estado VoteConfirmedOnChain. Se muestra la pantalla de resultados con los conteos por opción, la participación total y la evaluación del quórum contra el snapshot congelado. Los miembros acceden al resultado desde el detalle de la propuesta → visualizan los mismos datos más el hash de transacción para verificación independiente con ecrecover().
 
 <a href="./assets/application_wireflows/wireflows_16.png">
   <img src="./assets/application_wireflows/wireflows_16.png" width="1200">
@@ -3058,7 +3512,9 @@ Muestra el flujo del administrador para cerrar una votación: verificación del 
 
 #### **WF-17 · Historial y reintentos de notificaciones**
 
-Cubre el centro de notificaciones del usuario: listado de notificaciones recibidas (convocatorias, recordatorios de voto, confirmaciones de constancia), marcado como leídas y reintento manual de notificaciones fallidas por parte del administrador.
+- User Goal: Consultar las notificaciones y resolver los envíos fallidos
+- User Persona: Administrador del sistema (Segmento 1)
+El administrador accede al historial de notificaciones → se muestra la lista con filtros por estado (entregada, fallida, duplicada, bloqueada). Al seleccionar un registro → se muestra el detalle con el destinatario, canal, fecha y resultado del envío. Al pulsar "Reintentar" sobre un envío fallido → se confirma la acción y se encola el reenvío. Si el destinatario no tiene consentimiento de contacto activo → la acción de reintento queda bloqueada y se muestra el motivo. Las notificaciones ya entregadas no permiten reenvío para evitar duplicados.
 
 <a href="./assets/application_wireflows/wireflows_17.png">
   <img src="./assets/application_wireflows/wireflows_17.png" width="1200">
@@ -3068,7 +3524,9 @@ Cubre el centro de notificaciones del usuario: listado de notificaciones recibid
 
 #### **WF-18 · Privacidad: consentimiento por finalidad**
 
-Documenta el flujo de gestión de consentimientos: presentación del aviso de privacidad al registrarse, aceptación o rechazo por finalidad (verificación de identidad, comunicaciones, auditoría) y actualización posterior desde el perfil. Ninguna finalidad opcional bloquea el acceso a la plataforma.
+- User Goal: Controlar los permisos de uso de sus datos
+- User Persona: Propietario votante (Segmento 2)
+Al registrarse el usuario → se muestra el aviso de privacidad con las finalidades desglosadas (verificación de identidad, comunicaciones, auditoría). El usuario acepta o rechaza cada finalidad opcional de forma independiente → al confirmar, los consentimientos quedan registrados. Desde el perfil el usuario accede a "Privacidad" → se muestra el estado actual de cada consentimiento. Al modificar uno → se muestra la pantalla de confirmación indicando cómo afecta a las funciones que dependen de ese permiso. Al confirmar → el cambio queda registrado con fecha y hora.
 
 <a href="./assets/application_wireflows/wireflows_18.png">
   <img src="./assets/application_wireflows/wireflows_18.png" width="1200">
@@ -3078,7 +3536,9 @@ Documenta el flujo de gestión de consentimientos: presentación del aviso de pr
 
 #### **WF-19 · Solicitud y seguimiento de borrado**
 
-Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de datos personales, confirmación del alcance (datos de perfil, biométricos, constancias), seguimiento del estado de la solicitud y notificación de resolución. Corresponde al journey J5.
+- User Goal: Solicitar el borrado de sus datos y seguir su avance
+- User Persona: Propietario votante (Segmento 2) — Journey J5
+Desde "Privacidad" el usuario pulsa "Solicitar borrado de datos" → se muestra la pantalla explicando el alcance (datos de perfil, biométricos, constancias) y la conservación de registros de auditoría inmutables. Al pulsar "Continuar" → se solicita confirmación con contraseña. Al confirmar → la solicitud queda registrada y se muestra el estado inicial "en revisión". Desde el historial de solicitudes el usuario puede consultar el avance en cada etapa hasta recibir la notificación de resolución. Si ya existe una solicitud abierta → se bloquea la creación de una nueva y se redirige al seguimiento existente.
 
 <a href="./assets/application_wireflows/wireflows_19.png">
   <img src="./assets/application_wireflows/wireflows_19.png" width="1200">
@@ -3088,7 +3548,9 @@ Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de
 
 #### **WF-20 · Cumplimiento, retención y auditoría**
 
-Cubre el panel de cumplimiento del administrador de plataforma: visualización de políticas de retención de datos por categoría, exportación de registros de auditoría, consulta del verificador público de constancias y gestión de solicitudes de acceso a datos pendientes.
+- User Goal: Gestionar las solicitudes de privacidad y las reglas de retención
+- User Persona: Administrador de cumplimiento (Segmento 1)
+El administrador accede al panel de cumplimiento → se muestra el listado de solicitudes de borrado pendientes con su antigüedad. Al seleccionar una → se muestra el detalle con los datos afectados y los responsables de cada contexto. Al coordinar la atención con cada responsable → el estado avanza por etapas hasta "completada". Desde "Políticas de retención" el administrador visualiza las categorías de datos con su duración configurada → al editar una política, la nueva versión queda registrada con historial de cambios. Desde "Auditoría" puede exportar los registros de actividad y consultar el verificador público de constancias.
 
 <a href="./assets/application_wireflows/wireflows_20.png">
   <img src="./assets/application_wireflows/wireflows_20.png" width="1200">

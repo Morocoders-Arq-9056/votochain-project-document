@@ -78,7 +78,8 @@
 | 0.1     | 12/09/2026 | Morocoders                | Elaboración del Capítulo I y estructura general del informe.                                                                                          |
 | 0.2     | 12/09/2026 | Morocoders                | Desarrollo del Capítulo II: análisis competitivo, diseño de entrevistas, Needfinding y Ubiquitous Language.                                            |
 | 0.3    | 14/09/2026 | Morocoders                  | Desarrollo del Capítulo III: Requirements Specification, User Stories, Product Backlog                                             |
-| 0.4     | 16/09/2026 | Morocoders                    | Desarrollo del Capítulo IV: Capítulo IV: Strategic-Level Software Design., Event Storming, Attribute Driven-Design, C4 model diagrams |
+| 0.4     | 16/09/2026 | Morocoders                    | Desarrollo del Capítulo IV: Strategic-Level Software Design, Event Storming, Attribute Driven-Design, C4 model diagrams. |
+| 1.0     | 06/10/2026 | Morocoders                    | Desarrollo del Capítulo V y Capítulo VI (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes y Mock-ups de Landing Page) e implementación de Landing Page para la entrega TP1. |
 
 
 
@@ -217,8 +218,14 @@ En Ingeniería de Software, un Student Outcome representa las capacidades, conoc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---|---|---|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos). **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Me apoyé en mi implementación del bounded context IAM en el backend (superficie REST, casos de uso y fachada de contexto) para redactar con precisión técnica sin perder claridad. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y completar las evidencias de entrevistas reales antes del siguiente hito. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br>**TP1**<br>Expuse la Arquitectura de Información y los subsistemas de navegación del sistema.<br>Sustenté el Style Guide y los wireframes de la Landing Page (Desktop y Mobile).<br>Presenté la demostración funcional e interactiva de la Landing Page desplegada.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos). **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo comunicó oralmente el diseño táctico (Capítulo V), el diseño UX y arquitectura de información (Capítulo VI) y la demo de la Landing Page, exponiendo con objetividad y dominio técnico ante perfiles académicos y de negocio. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br>**TP1**<br>Documenté las Guías de Estilo (6.1) y la Arquitectura de Información formal (6.2).<br>Elaboré los wireframes de fidelidad media de la Landing Page en versiones Desktop y Mobile (6.3.1).<br>Desarrollé e implementé el código de la Landing Page responsiva con accesibilidad y SEO.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Me apoyé en mi implementación del bounded context IAM en el backend (superficie REST, casos de uso y fachada de contexto) para redactar con precisión técnica sin perder claridad. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y completar las evidencias de entrevistas reales antes del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo documentó formalmente el diseño táctico, la arquitectura de información, los wireframes/mock-ups y la implementación de la Landing Page, manteniendo trazabilidad rigurosa y claridad técnica en todo el informe. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps, sustenté la transición del flujo As-is al To-be y presenté la priorización de las User Stories y el Product Backlog.  **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Participé en el diseño de las guías de entrevista para ambos segmentos, coordiné el registro de las entrevistas ENT-01 a ENT-06 y expuse los hallazgos del análisis ante el equipo.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.| **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Comuniqué con claridad técnica y objetividad los requerimientos y escenarios del producto, logrando consenso en el equipo sobre el alcance funcional de la solución. **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Comuniqué oralmente los patrones identificados en las entrevistas (desconfianza en métodos manuales, barreras de accesibilidad biométrica, necesidad de evidencia legal), logrando que el equipo incorporara esos hallazgos en los requisitos funcionales y no funcionales.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br> Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.|
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps), el mapeo de escenarios As-is y To-be, y redacté las User Stories con criterios de aceptación y el Product Backlog. **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar), documenté el registro de las 6 entrevistas con sus fichas individuales y elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Documenté el perfil de la startup y de la solución, desarrollé el proceso Lean UX y elaboré el Impact Mapping, organizando los resultados y conclusiones obtenidos durante el análisis del proyecto. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Generé especificaciones escritas claras y estructuradas que conectan las necesidades del usuario con la arquitectura del sistema, sirviendo de guía para el desarrollo. **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Generé documentación escrita estructurada que conecta la evidencia cualitativa de los usuarios con los requisitos del sistema, sirviendo de base para las decisiones de diseño de privacidad, accesibilidad y validez legal del proceso de votación.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Generé documentación estructurada que relaciona las características de la startup y la solución con las necesidades de los usuarios y los objetivos del proyecto, sirviendo como base para orientar las decisiones de diseño y desarrollo.|
 
 <br>
 
@@ -248,8 +255,9 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 |  ![alt text](assets/FotoFabrizio.jpeg) |  Fabrizio Alberto Paredes Santos | u202310914 | Ingenieria de Software | Formado en Ingeniería de Software, cuento con experiencia construyendo soluciones digitales de principio a fin, modelando bases de datos y diseñando APIs REST. Mi stack principal incluye Spring Boot, .NET, Angular y TypeScript, integrando prácticas de testing automatizado, CI/CD y herramientas de IA para optimizar la velocidad y calidad del desarrollo. Me caracterizo por mi proactividad en el trabajo colaborativo, siempre dispuesto a sumar iniciativas y mejoras técnicas.  |
 | ![alt text](assets/FotoHector.png) | Héctor Javier Ríos Pacheco | u20231c540 | Ingeniería de Software | Cuento con formación en desarrollo de software, incluyendo estructuras de datos, algoritmos y arquitecturas orientadas a servicios. Trabajo con lenguajes como Java, TypeScript, JavaScript, HTML5 y CSS3, y utilizo herramientas y frameworks como Angular, Spring Boot, Git/GitHub, Swagger y bases de datos relacionales. Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles |
 | ![alt text](assets/FotoSebastian.png) | Sebastián Rodriguez Macedo | u202310199 | Ingeniería de Software | Cuento con formación en desarrollo de software y conocimientos en arquitectura de sistemas, APIs REST, microservicios y bases de datos relacionales. Trabajo principalmente con Spring Boot, Angular, TypeScript y SQL Server, utilizando tecnologías relacionadas con integración y procesamiento de datos como procesos ETL. Me gusta involucrarme activamente en los proyectos, aportar ideas y proponer mejoras técnicas |
-| [alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
+| ![alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
 | ![alt text](assets/FotoEthan.png)  | Ethan Matias Aliaga Aguirre | u202318323 | Ingenieria de Software | Soy Ethan Matias Aliaga Aguirre, estudiante de 7mo ciclo de Ingeniería de Software en la UPC, sede San Miguel. Me caracterizo por mi compromiso, responsabilidad, habilidad para trabajar en equipo y comunicación. Mis conocimientos incluyen arquitectura de software y desarrollo de APIs. Además, tengo experiencia en el uso de herramientas como Photoshop, Filmora y Vegas Studio, lo que me permite aportar con soluciones creativas y técnicas en mis proyectos. Estoy comprometido con mi crecimiento personal y profesional, siempre buscando aprender y mejorar en cada oportunidad que se presente.  |
+| ![alt text](assets/FotoFabrizio.jpeg)  | Fabrizio Alberto Paredes Santos | u202310914 | Ingenieria de Software | Formado en Ingeniería de Software, cuento con experiencia construyendo soluciones digitales de principio a fin, modelando bases de datos y diseñando APIs REST. Mi stack principal incluye Spring Boot, .NET, Angular y TypeScript, integrando prácticas de testing automatizado, CI/CD y herramientas de IA para optimizar la velocidad y calidad del desarrollo. Me caracterizo por mi proactividad en el trabajo colaborativo, siempre dispuesto a sumar iniciativas y mejoras técnicas.  |
 
 ---
 
@@ -2234,9 +2242,1107 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 
 ### **6.4.2. Applications Wireflow Diagrams.**
 
+Los wireflow diagrams combinan las pantallas de la aplicación con las transiciones de navegación, mostrando qué acción del usuario desencadena cada cambio de estado o de vista. Se documentan 20 flujos agrupados en cinco dominios funcionales: identidad y acceso, verificación biométrica, gestión comunitaria, votación y cumplimiento.
+
+---
+
+#### **WF-01 · Registro, incorporación e identidad**
+
+Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de datos personales, verificación de correo electrónico mediante OTP y activación de la cuenta. El usuario parte de la pantalla de bienvenida y concluye en el dashboard principal tras confirmar su identidad inicial.
+
+<a href="./assets/application_wireflows/wireflows_1.png">
+  <img src="./assets/application_wireflows/wireflows_1.png" width="1200">
+</a>
+
+---
+
+#### **WF-02 · Inicio de sesión, OTP y recuperación**
+
+Documenta las rutas de autenticación: inicio de sesión con credenciales, validación del segundo factor mediante OTP y el flujo alternativo de recuperación de contraseña. Incluye los estados de error por credenciales incorrectas y por OTP vencido.
+
+<a href="./assets/application_wireflows/wireflows_2.png">
+  <img src="./assets/application_wireflows/wireflows_2.png" width="1200">
+</a>
+
+---
+
+#### **WF-03 · Cuenta y seguridad**
+
+Muestra las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, gestión de dispositivos de confianza y cierre de sesión. Cada acción sensible requiere confirmación mediante OTP antes de aplicarse.
+
+<a href="./assets/application_wireflows/wireflows_3.png">
+  <img src="./assets/application_wireflows/wireflows_3.png" width="1200">
+</a>
+
+---
+
+#### **WF-04 · Administración de usuarios y roles**
+
+Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, asignar roles (administrador de comunidad, miembro votante) y revocar accesos. Incluye la pantalla de confirmación antes de aplicar cambios de rol.
+
+<a href="./assets/application_wireflows/wireflows_4.png">
+  <img src="./assets/application_wireflows/wireflows_4.png" width="1200">
+</a>
+
+---
+
+#### **WF-05 · Revisión documental y enrolamiento biométrico**
+
+Documenta el flujo de verificación de identidad previo al voto: captura del DNI con OCR, extracción de datos del documento, prueba de vida facial (liveness) y comparación biométrica. El usuario avanza paso a paso y recibe retroalimentación inmediata en cada etapa. Corresponde al journey J1.
+
+<a href="./assets/application_wireflows/wireflows_5.png">
+  <img src="./assets/application_wireflows/wireflows_5.png" width="1200">
+</a>
+
+---
+
+#### **WF-06 · Consulta de verificación y prueba de vida**
+
+Muestra el flujo de re-verificación biométrica cuando la ventana de frescura ha vencido. El usuario recibe una notificación de sesión biométrica expirada y debe completar nuevamente la prueba de vida antes de continuar con la emisión del voto.
+
+<a href="./assets/application_wireflows/wireflows_6.png">
+  <img src="./assets/application_wireflows/wireflows_6.png" width="1200">
+</a>
+
+---
+
+#### **WF-07 · Crear comunidad y abrir votación**
+
+Cubre el flujo del administrador para crear una nueva comunidad en la plataforma: ingreso de datos del edificio o cooperativa, configuración de la política de cuórum, carga del padrón inicial y apertura de la primera convocatoria de asamblea. Corresponde al journey J2.
+
+<a href="./assets/application_wireflows/wireflows_7.png">
+  <img src="./assets/application_wireflows/wireflows_7.png" width="1200">
+</a>
+
+---
+
+#### **WF-08 · Ciclo de vida de comunidad**
+
+Documenta las transiciones de estado de una comunidad: de activa a suspendida, de suspendida a reactivada y el archivado definitivo. Cada transición muestra la pantalla de confirmación y el impacto sobre los miembros y asambleas asociadas.
+
+<a href="./assets/application_wireflows/wireflows_8.png">
+  <img src="./assets/application_wireflows/wireflows_8.png" width="1200">
+</a>
+
+---
+
+#### **WF-09 · Política de votación y administradores**
+
+Muestra el flujo de configuración de la política de votación de una comunidad: definición del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y asignación de co-administradores con sus permisos específicos.
+
+<a href="./assets/application_wireflows/wireflows_9.png">
+  <img src="./assets/application_wireflows/wireflows_9.png" width="1200">
+</a>
+
+---
+
+#### **WF-10 · Padrón: aprobación, unidad y rol**
+
+Cubre la gestión del padrón electoral: aprobación de solicitudes de membresía pendientes, asignación de unidad inmobiliaria a cada miembro y definición del rol de voto (propietario, copropietario, representante). Incluye el flujo de rechazo con motivo.
+
+<a href="./assets/application_wireflows/wireflows_10.png">
+  <img src="./assets/application_wireflows/wireflows_10.png" width="1200">
+</a>
+
+---
+
+#### **WF-11 · Membresía: mora, suspensión y terminación**
+
+Documenta las transiciones de estado de una membresía individual: marcado como moroso, suspensión temporal del derecho a voto y terminación definitiva de la relación. Cada acción muestra el impacto sobre la elegibilidad del miembro en asambleas activas.
+
+<a href="./assets/application_wireflows/wireflows_11.png">
+  <img src="./assets/application_wireflows/wireflows_11.png" width="1200">
+</a>
+
+---
+
+#### **WF-12 · Navegación del miembro y consulta de propuestas**
+
+Muestra el flujo de navegación del propietario votante: acceso al listado de sus comunidades, consulta de asambleas activas, lectura de propuestas en curso y revisión del historial de votaciones anteriores con sus constancias.
+
+<a href="./assets/application_wireflows/wireflows_12.png">
+  <img src="./assets/application_wireflows/wireflows_12.png" width="1200">
+</a>
+
+---
+
+#### **WF-13 · Emisión y confirmación de voto**
+
+Documenta el flujo principal de votación: lectura de la propuesta, verificación biométrica de presencia, selección de alternativa, confirmación del voto y recepción de la constancia digital con código único. Corresponde al journey J3.
+
+<a href="./assets/application_wireflows/wireflows_13.png">
+  <img src="./assets/application_wireflows/wireflows_13.png" width="1200">
+</a>
+
+---
+
+#### **WF-14 · Excepciones al autorizar y emitir voto**
+
+Cubre los caminos alternativos durante la autorización y emisión: membresía morosa o suspendida, verificación biométrica fallida, propuesta ya cerrada y voto duplicado detectado. Cada excepción muestra el mensaje de error correspondiente y la acción disponible para el usuario. Corresponde al journey J4.
+
+<a href="./assets/application_wireflows/wireflows_14.png">
+  <img src="./assets/application_wireflows/wireflows_14.png" width="1200">
+</a>
+
+---
+
+#### **WF-15 · Firma y envío: fallos, reintentos y constancia**
+
+Documenta los estados intermedios del proceso de registro on-chain: voto recibido y en cola, fallo en el envío al ledger, reintento automático y confirmación final. El usuario visualiza el estado de su constancia en tiempo real hasta obtener la confirmación on-chain. Corresponde al journey J4.
+
+<a href="./assets/application_wireflows/wireflows_15.png">
+  <img src="./assets/application_wireflows/wireflows_15.png" width="1200">
+</a>
+
+---
+
+#### **WF-16 · Cierre, escrutinio, participación y cuórum**
+
+Muestra el flujo del administrador para cerrar una votación: verificación del cuórum alcanzado contra el snapshot congelado, inicio del escrutinio, visualización de resultados parciales y generación del acta oficial con los votos confirmados on-chain.
+
+<a href="./assets/application_wireflows/wireflows_16.png">
+  <img src="./assets/application_wireflows/wireflows_16.png" width="1200">
+</a>
+
+---
+
+#### **WF-17 · Historial y reintentos de notificaciones**
+
+Cubre el centro de notificaciones del usuario: listado de notificaciones recibidas (convocatorias, recordatorios de voto, confirmaciones de constancia), marcado como leídas y reintento manual de notificaciones fallidas por parte del administrador.
+
+<a href="./assets/application_wireflows/wireflows_17.png">
+  <img src="./assets/application_wireflows/wireflows_17.png" width="1200">
+</a>
+
+---
+
+#### **WF-18 · Privacidad: consentimiento por finalidad**
+
+Documenta el flujo de gestión de consentimientos: presentación del aviso de privacidad al registrarse, aceptación o rechazo por finalidad (verificación de identidad, comunicaciones, auditoría) y actualización posterior desde el perfil. Ninguna finalidad opcional bloquea el acceso a la plataforma.
+
+<a href="./assets/application_wireflows/wireflows_18.png">
+  <img src="./assets/application_wireflows/wireflows_18.png" width="1200">
+</a>
+
+---
+
+#### **WF-19 · Solicitud y seguimiento de borrado**
+
+Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de datos personales, confirmación del alcance (datos de perfil, biométricos, constancias), seguimiento del estado de la solicitud y notificación de resolución. Corresponde al journey J5.
+
+<a href="./assets/application_wireflows/wireflows_19.png">
+  <img src="./assets/application_wireflows/wireflows_19.png" width="1200">
+</a>
+
+---
+
+#### **WF-20 · Cumplimiento, retención y auditoría**
+
+Cubre el panel de cumplimiento del administrador de plataforma: visualización de políticas de retención de datos por categoría, exportación de registros de auditoría, consulta del verificador público de constancias y gestión de solicitudes de acceso a datos pendientes.
+
+<a href="./assets/application_wireflows/wireflows_20.png">
+  <img src="./assets/application_wireflows/wireflows_20.png" width="1200">
+</a>
+
+
 ### **6.4.3. Applications Mock-ups.**
 
+Las siguientes vistas corresponden a los principales flujos de la aplicación, agrupados según la funcionalidad representada por el nombre de cada mock-up.
+
+#### **Vistas principales por rol**
+
+##### **Registro de comunidad para el fundador**
+
+La vista presenta el formulario de registro de una nueva comunidad, con campos para el nombre, la ubicación y el contacto responsable. Asimismo, explicita los pasos posteriores del proceso —definir la política de votación, nombrar a una persona administradora existente y activar la comunidad—, evidenciando el flujo de incorporación inicial de una organización a VotoChain.
+
+<p align="center">
+  <img src="./assets/RegisterAdministradorMockup.png" alt="Registro de comunidad para el fundador" width="320"/>
+</p>
+
+##### **Panel de la administradora de comunidad**
+
+El mock-up muestra el panel operativo de una comunidad, donde la administradora consulta el estado del padrón, el número de miembros activos y la distribución de propuestas por estado. También se visualiza una propuesta abierta con el avance de participación, el cuórum alcanzado y la regla congelada aplicable, reforzando la función de VotoChain como soporte para una gestión de asambleas trazable y verificable.
+
+<p align="center">
+  <img src="./assets/HomeAdministradorMockup.png" alt="Panel de la administradora de comunidad" width="320"/>
+</p>
+
+##### **Gestión de usuarios y accesos del administrador del sistema**
+
+La interfaz corresponde al rol de administración global y permite buscar usuarios, revisar su estado, consultar el rol asignado y ejecutar acciones como gestionar permisos o suspender cuentas. La sección de notificaciones complementa el control operativo, manteniendo la separación entre la administración de accesos globales y la información privada de cada comunidad.
+
+<p align="center">
+  <img src="./assets/HomeAdminMockup.png" alt="Gestión de usuarios y accesos del administrador del sistema" width="320"/>
+</p>
+
+##### **Panel de inicio del miembro votante**
+
+La vista resume la experiencia del propietario o miembro de la comunidad: muestra su membresía activa, el acceso a las votaciones, el estado de su verificación de identidad, una propuesta abierta que requiere autorización y el último recibo de votación. Esta composición concentra los elementos necesarios para que el usuario participe en una asamblea manteniendo la relación entre elegibilidad, verificación biométrica y evidencia del voto.
+
+<p align="center">
+  <img src="./assets/HomeVotanteMockup.png" alt="Panel de inicio del miembro votante" width="320"/>
+</p>
+
+#### **Acceso, registro y seguridad**
+
+##### **Registro**
+
+<p align="center">
+  <img src="./assets/RegistroMockup1.png" alt="Registro - RegistroMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistroMockup2.png" alt="Registro - RegistroMockup2.png" width="320"/>
+</p>
+
+##### **Inicio de sesión**
+
+<p align="center">
+  <img src="./assets/InicioSesionMockup1.png" alt="Inicio de sesión - InicioSesionMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/InicioSesionMockup2.png" alt="Inicio de sesión - InicioSesionMockup2.png" width="320"/>
+</p>
+
+##### **Solicitar código**
+
+<p align="center">
+  <img src="./assets/SolicitarCódigoMockup1.png" alt="Solicitar código - SolicitarCódigoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarCódigoMockup2.png" alt="Solicitar código - SolicitarCódigoMockup2.png" width="320"/>
+</p>
+
+##### **Ingresar código**
+
+<p align="center">
+  <img src="./assets/IngresarCódigoMockup1.png" alt="Ingresar código - IngresarCódigoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/IngresarCódigoMockup2.png" alt="Ingresar código - IngresarCódigoMockup2.png" width="320"/>
+</p>
+
+##### **Verificación de correo**
+
+<p align="center">
+  <img src="./assets/VerificarCorreo1.png" alt="Verificación de correo - VerificarCorreo1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/VerficiarCorreo2.png" alt="Verificación de correo - VerficiarCorreo2.png" width="320"/>
+</p>
+
+##### **Cuenta y seguridad**
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup1.png" alt="Cuenta y seguridad - CuentaySeguridadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup2.png" alt="Cuenta y seguridad - CuentaySeguridadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup3.png" alt="Cuenta y seguridad - CuentaySeguridadMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup4.png" alt="Cuenta y seguridad - CuentaySeguridadMockup4.png" width="320"/>
+</p>
+
+#### **Verificación de identidad**
+
+##### **Resultado documental**
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup1.png" alt="Resultado documental - ResultadoDocumentalMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup2.png" alt="Resultado documental - ResultadoDocumentalMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup3.png" alt="Resultado documental - ResultadoDocumentalMockup3.png" width="320"/>
+</p>
+
+##### **Subir documento**
+
+<p align="center">
+  <img src="./assets/SubirDocumentoMockup1.png" alt="Subir documento - SubirDocumentoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SubirDocumentoMockup2.png" alt="Subir documento - SubirDocumentoMockup2.png" width="320"/>
+</p>
+
+##### **Prueba de vida**
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup1.png" alt="Prueba de vida - PruebaDeVidaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup2.png" alt="Prueba de vida - PruebaDeVidaMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup3.png" alt="Prueba de vida - PruebaDeVidaMockup3.png" width="320"/>
+</p>
+
+##### **Referencia biométrica**
+
+<p align="center">
+  <img src="./assets/ReferenciaBiométricaMockup1.png" alt="Referencia biométrica - ReferenciaBiométricaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ReferenciaBiométricaMockup2.png" alt="Referencia biométrica - ReferenciaBiométricaMockup2.png" width="320"/>
+</p>
+
+##### **Mi verificación**
+
+<p align="center">
+  <img src="./assets/MiVerificaciónMockup1.png" alt="Mi verificación - MiVerificaciónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiVerificaciónMockup2.png" alt="Mi verificación - MiVerificaciónMockup2.png" width="320"/>
+</p>
+
+#### **Comunidades y administración**
+
+##### **Registrar comunidad**
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup1.png" alt="Registrar comunidad - RegistrarComunidadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup2.png" alt="Registrar comunidad - RegistrarComunidadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup3.png" alt="Registrar comunidad - RegistrarComunidadMockup3.png" width="320"/>
+</p>
+
+##### **Ficha de comunidad**
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup1.png" alt="Ficha de comunidad - FichaComunidadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup2.png" alt="Ficha de comunidad - FichaComunidadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup3.png" alt="Ficha de comunidad - FichaComunidadMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup4.png" alt="Ficha de comunidad - FichaComunidadMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup5.png" alt="Ficha de comunidad - FichaComunidadMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup6.png" alt="Ficha de comunidad - FichaComunidadMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup7.png" alt="Ficha de comunidad - FichaComunidadMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup8.png" alt="Ficha de comunidad - FichaComunidadMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup9.png" alt="Ficha de comunidad - FichaComunidadMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup10.png" alt="Ficha de comunidad - FichaComunidadMockup10.png" width="320"/>
+</p>
+
+##### **Administradores**
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup1.png" alt="Administradores - AdministradoresMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup2.png" alt="Administradores - AdministradoresMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup3.png" alt="Administradores - AdministradoresMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup4.png" alt="Administradores - AdministradoresMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup5.png" alt="Administradores - AdministradoresMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup6.png" alt="Administradores - AdministradoresMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup7.png" alt="Administradores - AdministradoresMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup8.png" alt="Administradores - AdministradoresMockup8.png" width="320"/>
+</p>
+
+##### **Usuarios**
+
+<p align="center">
+  <img src="./assets/UsuariosMockup1.png" alt="Usuarios - UsuariosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/UsuariosMockup2.png" alt="Usuarios - UsuariosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/UsuariosMockup3.png" alt="Usuarios - UsuariosMockup3.png" width="320"/>
+</p>
+
+##### **Padrón**
+
+<p align="center">
+  <img src="./assets/PadrónMockup1.png" alt="Padrón - PadrónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup2.png" alt="Padrón - PadrónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup3.png" alt="Padrón - PadrónMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup4.png" alt="Padrón - PadrónMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup5.png" alt="Padrón - PadrónMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup6.png" alt="Padrón - PadrónMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup7.png" alt="Padrón - PadrónMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup8.png" alt="Padrón - PadrónMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup9.png" alt="Padrón - PadrónMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup10.png" alt="Padrón - PadrónMockup10.png" width="320"/>
+</p>
+
+##### **Membresías**
+
+<p align="center">
+  <img src="./assets/MembresiasMockup1.png" alt="Membresías - MembresiasMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup2.png" alt="Membresías - MembresiasMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup3.png" alt="Membresías - MembresiasMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup4.png" alt="Membresías - MembresiasMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup5.png" alt="Membresías - MembresiasMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup6.png" alt="Membresías - MembresiasMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup7.png" alt="Membresías - MembresiasMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup8.png" alt="Membresías - MembresiasMockup8.png" width="320"/>
+</p>
+
+##### **Detalle de miembro**
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup1.png" alt="Detalle de miembro - DetalleDeMiembroMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup2.png" alt="Detalle de miembro - DetalleDeMiembroMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup3.png" alt="Detalle de miembro - DetalleDeMiembroMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup4.png" alt="Detalle de miembro - DetalleDeMiembroMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup5.png" alt="Detalle de miembro - DetalleDeMiembroMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup6.png" alt="Detalle de miembro - DetalleDeMiembroMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup7.png" alt="Detalle de miembro - DetalleDeMiembroMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup8.png" alt="Detalle de miembro - DetalleDeMiembroMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup9.png" alt="Detalle de miembro - DetalleDeMiembroMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup10.png" alt="Detalle de miembro - DetalleDeMiembroMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup11.png" alt="Detalle de miembro - DetalleDeMiembroMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup12.png" alt="Detalle de miembro - DetalleDeMiembroMockup12.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup13.png" alt="Detalle de miembro - DetalleDeMiembroMockup13.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup14.png" alt="Detalle de miembro - DetalleDeMiembroMockup14.png" width="320"/>
+</p>
+
+##### **Mis permisos**
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup1.png" alt="Mis permisos - MisPermisosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup2.png" alt="Mis permisos - MisPermisosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup3.png" alt="Mis permisos - MisPermisosMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup4.png" alt="Mis permisos - MisPermisosMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup5.png" alt="Mis permisos - MisPermisosMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup6.png" alt="Mis permisos - MisPermisosMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup7.png" alt="Mis permisos - MisPermisosMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup8.png" alt="Mis permisos - MisPermisosMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup9.png" alt="Mis permisos - MisPermisosMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup10.png" alt="Mis permisos - MisPermisosMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup11.png" alt="Mis permisos - MisPermisosMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup12.png" alt="Mis permisos - MisPermisosMockup12.png" width="320"/>
+</p>
+
+#### **Solicitudes y participación**
+
+##### **Solicitar unirse**
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup1.png" alt="Solicitar unirse - SolicitarUnirseMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup2.png" alt="Solicitar unirse - SolicitarUnirseMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup3.png" alt="Solicitar unirse - SolicitarUnirseMockup3.png" width="320"/>
+</p>
+
+#### **Propuestas y votaciones**
+
+##### **Propuestas**
+
+<p align="center">
+  <img src="./assets/PropuestasMockup1.png" alt="Propuestas - PropuestasMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup2.png" alt="Propuestas - PropuestasMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup3.png" alt="Propuestas - PropuestasMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup4.png" alt="Propuestas - PropuestasMockup4.png" width="320"/>
+</p>
+
+##### **Crear propuesta**
+
+<p align="center">
+  <img src="./assets/CrearPropuestaMockup1.png" alt="Crear propuesta - CrearPropuestaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CrearPropuestaMockup2.png" alt="Crear propuesta - CrearPropuestaMockup2.png" width="320"/>
+</p>
+
+##### **Detalle de propuesta**
+
+<p align="center">
+  <img src="./assets/DetallePropuestaMockup1.png" alt="Detalle de propuesta - DetallePropuestaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetallePropuestaMockup2.png" alt="Detalle de propuesta - DetallePropuestaMockup2.png" width="320"/>
+</p>
+
+##### **Política de votación**
+
+<p align="center">
+  <img src="./assets/PolíticaVocatiónMockup1.png" alt="Política de votación - PolíticaVocatiónMockup1.png" width="320"/>
+</p>
+
+##### **Política de votación**
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup4.png" alt="Política de votación - PolíticaVotaciónMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup2.png" alt="Política de votación - PolíticaVotaciónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup3.png" alt="Política de votación - PolíticaVotaciónMockup3.png" width="320"/>
+</p>
+
+##### **Emitir voto**
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup1.png" alt="Emitir voto - EmitirVotoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup2.png" alt="Emitir voto - EmitirVotoMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup3.png" alt="Emitir voto - EmitirVotoMockup3.png" width="320"/>
+</p>
+
+##### **Cierre y escrutinio**
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup1.png" alt="Cierre y escrutinio - CierreEscrutinioMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup2.png" alt="Cierre y escrutinio - CierreEscrutinioMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup3.png" alt="Cierre y escrutinio - CierreEscrutinioMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup4.png" alt="Cierre y escrutinio - CierreEscrutinioMockup4.png" width="320"/>
+</p>
+
+#### **Notificaciones y comprobantes**
+
+##### **Notificaciones**
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup1.png" alt="Notificaciones - NotificacionesMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup2.png" alt="Notificaciones - NotificacionesMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup3.png" alt="Notificaciones - NotificacionesMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup4.png" alt="Notificaciones - NotificacionesMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup5.png" alt="Notificaciones - NotificacionesMockup5.png" width="320"/>
+</p>
+
+##### **Historial de notificaciones**
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup1.png" alt="Historial de notificaciones - HistorialNotificacionesMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup2.png" alt="Historial de notificaciones - HistorialNotificacionesMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup3.png" alt="Historial de notificaciones - HistorialNotificacionesMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup4.png" alt="Historial de notificaciones - HistorialNotificacionesMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup5.png" alt="Historial de notificaciones - HistorialNotificacionesMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup6.png" alt="Historial de notificaciones - HistorialNotificacionesMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup7.png" alt="Historial de notificaciones - HistorialNotificacionesMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup8.png" alt="Historial de notificaciones - HistorialNotificacionesMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup9.png" alt="Historial de notificaciones - HistorialNotificacionesMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup10.png" alt="Historial de notificaciones - HistorialNotificacionesMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup11.png" alt="Historial de notificaciones - HistorialNotificacionesMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup12.png" alt="Historial de notificaciones - HistorialNotificacionesMockup12.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup13.png" alt="Historial de notificaciones - HistorialNotificacionesMockup13.png" width="320"/>
+</p>
+
+##### **Mi recibo**
+
+<p align="center">
+  <img src="./assets/MiReciboMockup1.png" alt="Mi recibo - MiReciboMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiReciboMockup2.png" alt="Mi recibo - MiReciboMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiReciboMockup3.png" alt="Mi recibo - MiReciboMockup3.png" width="320"/>
+</p>
+
+#### **Privacidad y gestión de datos**
+
+##### **Borrado de datos**
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup1.png" alt="Borrado de datos - BorradoDatosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup2.png" alt="Borrado de datos - BorradoDatosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup3.png" alt="Borrado de datos - BorradoDatosMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup4.png" alt="Borrado de datos - BorradoDatosMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup5.png" alt="Borrado de datos - BorradoDatosMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup6.png" alt="Borrado de datos - BorradoDatosMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup7.png" alt="Borrado de datos - BorradoDatosMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup8.png" alt="Borrado de datos - BorradoDatosMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup9.png" alt="Borrado de datos - BorradoDatosMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup10.png" alt="Borrado de datos - BorradoDatosMockup10.png" width="320"/>
+</p>
+
+##### **Autorización**
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup1.png" alt="Autorización - AutorizaciónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup2.png" alt="Autorización - AutorizaciónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup3.png" alt="Autorización - AutorizaciónMockup3.png" width="320"/>
+</p>
+
+
 ### **6.4.4. Applications User Flow Diagrams.**
+
+##### **1. Registro, incorporación e identidad**
+
+**User Goal: Registrarse e incorporarse a una comunidad**
+El usuario necesita crear una cuenta, verificar su correo electrónico y solicitar su incorporación a una comunidad. Durante este recorrido, otorga los permisos necesarios, presenta su documento y completa el enrolamiento biométrico. El objetivo es acompañarlo hasta contar con una identidad verificada y una membresía activa, una vez aprobada su incorporación.
+
+<a href="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png">
+  <img src="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png" alt="User flow de registro, incorporación e identidad" width="1200">
+</a>
+
+##### **2. Inicio de sesión, OTP y recuperación**
+
+**User Goal: Acceder a su cuenta y recuperar el acceso**
+El usuario necesita ingresar a su cuenta mediante un proceso sencillo y seguro. Si requiere verificar su correo o recuperar el acceso, puede solicitar un código temporal y seguir las indicaciones correspondientes. El objetivo es permitirle continuar incluso ante credenciales incorrectas o códigos vencidos, mostrando claramente cómo resolver cada situación.
+
+<a href="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png">
+  <img src="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png" alt="User flow de inicio de sesión, OTP y recuperación" width="1100">
+</a>
+
+##### **3. Cuenta y seguridad**
+
+**User Goal: Administrar su cuenta y proteger el acceso**
+El usuario necesita mantener actualizadas sus credenciales y controlar las opciones de acceso a su cuenta. Puede cambiar su contraseña, actualizar su correo mediante verificación y gestionar la vinculación de una identidad externa. El objetivo es facilitar estos cambios de forma segura y permitirle cerrar su sesión cuando lo necesite.
+
+<a href="./assets/applications_user_flow_diagrams/03 · Cuenta y seguridad.png">
+  <img src="./assets/applications_user_flow_diagrams/03 · Cuenta y seguridad.png" alt="User flow de cuenta y seguridad" width="900">
+</a>
+
+##### **4. Administración de usuarios y roles**
+
+**User Goal: Administrar los permisos y el estado de los usuarios**
+El administrador del sistema necesita controlar qué funciones puede realizar cada usuario y gestionar su acceso a la plataforma. Puede asignar o revocar roles, suspender una cuenta indicando el motivo y rehabilitarla cuando corresponda. El objetivo es mantener una administración clara de permisos y comunicar al usuario cualquier restricción que afecte su acceso.
+
+<a href="./assets/applications_user_flow_diagrams/04 · Administración de usuarios y roles.png">
+  <img src="./assets/applications_user_flow_diagrams/04 · Administración de usuarios y roles.png" alt="User flow de administración de usuarios y roles" width="1200">
+</a>
+
+##### **5. Revisión documental y enrolamiento biométrico**
+
+**User Goal: Verificar su identidad y registrar su referencia biométrica**
+El usuario necesita acreditar su identidad mediante un documento válido y completar el registro de su referencia biométrica. Si el documento resulta ilegible, está vencido o presenta inconsistencias, recibe indicaciones para corregirlo. El objetivo es completar la verificación con los consentimientos y requisitos necesarios, dejando preparada su referencia para posteriores comprobaciones.
+
+<a href="./assets/applications_user_flow_diagrams/05 · Revisión documental y enrolamiento biométrico.png">
+  <img src="./assets/applications_user_flow_diagrams/05 · Revisión documental y enrolamiento biométrico.png" alt="User flow de revisión documental y enrolamiento biométrico" width="1200">
+</a>
+
+##### **6. Consulta de verificación y prueba de vida**
+
+**User Goal: Consultar su verificación y completar una prueba de vida**
+El usuario necesita conocer el estado de su referencia biométrica y realizar una prueba de vida cuando el proceso de votación lo requiera. Si falta la referencia, el consentimiento o una verificación vigente, la plataforma lo orienta hacia el paso correspondiente. El objetivo es permitirle acreditar su presencia antes de continuar con la autorización del voto.
+
+<a href="./assets/applications_user_flow_diagrams/06 · Consulta de verificación y prueba de vida.png">
+  <img src="./assets/applications_user_flow_diagrams/06 · Consulta de verificación y prueba de vida.png" alt="User flow de consulta de verificación y prueba de vida" width="1000">
+</a>
+
+##### **7. Crear comunidad y abrir votación**
+
+**User Goal: Preparar una comunidad y abrir una votación**
+El administrador necesita registrar una comunidad, definir su política de votación y designar a sus administradores. Después de la activación de la comunidad, prepara una propuesta con sus opciones y la abre a los miembros habilitados. El objetivo es iniciar la votación con reglas claras, que se mantienen fijadas durante su desarrollo.
+
+<a href="./assets/applications_user_flow_diagrams/07 · Crear comunidad y abrir votación — J2.png">
+  <img src="./assets/applications_user_flow_diagrams/07 · Crear comunidad y abrir votación — J2.png" alt="User flow de creación de comunidad y apertura de votación" width="1200">
+</a>
+
+##### **8. Ciclo de vida de comunidad**
+
+**User Goal: Gestionar el estado de una comunidad**
+El administrador necesita actualizar los datos de una comunidad y controlar su estado operativo. Puede suspenderla indicando el motivo, reactivarla cuando corresponda o archivarla mediante una doble confirmación. El objetivo es gestionar cada transición de forma consciente y conservar la consulta de la información cuando la comunidad queda archivada.
+
+<a href="./assets/applications_user_flow_diagrams/08 · Ciclo de vida de comunidad.png">
+  <img src="./assets/applications_user_flow_diagrams/08 · Ciclo de vida de comunidad.png" alt="User flow del ciclo de vida de una comunidad" width="1000">
+</a>
+
+##### **9. Política de votación y administradores**
+
+**User Goal: Configurar las reglas y los responsables de la comunidad**
+El administrador necesita ajustar la política de votación y gestionar quiénes administran la comunidad. Puede revisar las versiones de las reglas, corregir parámetros inválidos y designar o retirar administradores existentes. El objetivo es mantener una configuración trazable, aplicando los cambios de política a futuras votaciones y preservando las reglas de las que ya están abiertas.
+
+<a href="./assets/applications_user_flow_diagrams/09 · Política de votación y administradores.png">
+  <img src="./assets/applications_user_flow_diagrams/09 · Política de votación y administradores.png" alt="User flow de política de votación y administradores" width="1000">
+</a>
+
+##### **10. Padrón: aprobación, unidad y rol**
+
+**User Goal: Aprobar miembros y organizar el padrón de la comunidad**
+El administrador necesita revisar las solicitudes de incorporación y asignar a cada miembro su unidad y rol dentro de la comunidad. Tras aprobar la solicitud, activa la membresía para que el usuario pueda acceder a las funciones que le corresponden. El objetivo es mantener un padrón actualizado, distinguiendo las solicitudes pendientes de las membresías activas consideradas para el quórum.
+
+<a href="./assets/applications_user_flow_diagrams/10 · Padrón_ aprobación, unidad y rol.png">
+  <img src="./assets/applications_user_flow_diagrams/10 · Padrón_ aprobación, unidad y rol.png" alt="User flow de aprobación del padrón, unidad y rol" width="1200">
+</a>
+
+##### **11. Membresía: mora, suspensión y terminación**
+
+**User Goal: Gestionar las restricciones y la continuidad de una membresía**
+El administrador necesita registrar situaciones que afectan la participación de un miembro, como la mora o la suspensión. Puede indicar sus motivos, levantar las restricciones cuando se resuelven y terminar una membresía mediante una doble confirmación. El objetivo es reflejar correctamente el estado del miembro y permitirle comprender cómo ese estado afecta su participación en las votaciones.
+
+<a href="./assets/applications_user_flow_diagrams/11 · Membresía_ mora, suspensión y terminación.png">
+  <img src="./assets/applications_user_flow_diagrams/11 · Membresía_ mora, suspensión y terminación.png" alt="User flow de mora, suspensión y terminación de membresía" width="1100">
+</a>
+
+##### **12. Navegación del miembro y consulta de propuestas**
+
+**User Goal: Explorar su comunidad y consultar las propuestas disponibles**
+El miembro necesita identificar sus comunidades, conocer el estado de su membresía y consultar las propuestas visibles para él. Desde este recorrido, puede revisar una votación abierta, acceder a los resultados de una cerrada y gestionar su verificación, privacidad o cuenta. El objetivo es facilitar el acceso a las acciones disponibles según su situación y el estado de cada propuesta.
+
+<a href="./assets/applications_user_flow_diagrams/12 · Navegación del miembro y consulta de propuestas.png">
+  <img src="./assets/applications_user_flow_diagrams/12 · Navegación del miembro y consulta de propuestas.png" alt="User flow de navegación del miembro y consulta de propuestas" width="1000">
+</a>
+
+##### **13. Emisión y confirmación de voto**
+
+**User Goal: Emitir su voto y comprobar su confirmación**
+El miembro necesita participar en una votación abierta después de cumplir los requisitos de membresía y verificación. Obtiene una autorización, selecciona su opción y confirma la firma antes de seguir el estado del envío. El objetivo es completar el recorrido con claridad y distinguir el voto firmado o enviado del voto confirmado, que es el que se contabiliza.
+
+<a href="./assets/applications_user_flow_diagrams/13 · Emisión y confirmación de voto — J3.png">
+  <img src="./assets/applications_user_flow_diagrams/13 · Emisión y confirmación de voto — J3.png" alt="User flow de emisión y confirmación de voto" width="1100">
+</a>
+
+##### **14. Excepciones al autorizar y emitir voto**
+
+**User Goal: Comprender y resolver los impedimentos para votar**
+El miembro necesita saber por qué no puede continuar cuando su membresía está restringida, la votación ha cerrado o su autorización está vencida o ya fue utilizada. La plataforma identifica la causa y muestra el siguiente paso cuando existe una posibilidad de continuar. El objetivo es evitar intentos duplicados y orientar al usuario sin generar dudas sobre la validez de su voto.
+
+<a href="./assets/applications_user_flow_diagrams/14 · Excepciones al autorizar y emitir voto — J4.png">
+  <img src="./assets/applications_user_flow_diagrams/14 · Excepciones al autorizar y emitir voto — J4.png" alt="User flow de excepciones al autorizar y emitir voto" width="900">
+</a>
+
+##### **15. Firma y envío: fallos, reintentos y constancia**
+
+**User Goal: Seguir el envío de su voto y consultar su constancia**
+El miembro necesita comprender qué ocurre después de firmar su voto y conocer si el envío está pendiente, confirmado o ha fallado. Ante un fallo, puede seguir los reintentos permitidos y recibir orientación cuando el proceso no logra completarse. El objetivo es ofrecer un seguimiento transparente y permitir la consulta de la constancia y la evidencia del voto confirmado.
+
+<a href="./assets/applications_user_flow_diagrams/15 · Firma y envío_ fallos, reintentos y constancia — J4.png">
+  <img src="./assets/applications_user_flow_diagrams/15 · Firma y envío_ fallos, reintentos y constancia — J4.png" alt="User flow de firma, envío, fallos, reintentos y constancia" width="1200">
+</a>
+
+##### **16. Cierre, escrutinio, participación y quórum**
+
+**User Goal: Cerrar una votación y consultar sus resultados**
+El administrador necesita cerrar una votación y obtener el escrutinio de los votos confirmados, mientras los miembros necesitan consultar el resultado y su evidencia. El recorrido contempla la confirmación del cierre manual, el procesamiento de los resultados y la evaluación del quórum según las reglas fijadas. El objetivo es presentar claramente la participación, el resultado y si se alcanzó el quórum requerido.
+
+<a href="./assets/applications_user_flow_diagrams/16 · Cierre, escrutinio, participación y quórum.png">
+  <img src="./assets/applications_user_flow_diagrams/16 · Cierre, escrutinio, participación y quórum.png" alt="User flow de cierre, escrutinio, participación y quórum" width="1200">
+</a>
+
+##### **17. Historial y reintentos de notificaciones**
+
+**User Goal: Consultar las notificaciones y resolver los envíos fallidos**
+El administrador necesita revisar el historial de notificaciones, filtrar los registros y conocer el resultado de cada envío. Puede identificar entregas, fallos, duplicados o bloqueos por falta de permiso, y reintentar los envíos fallidos que correspondan. El objetivo es mantener una comunicación trazable, respetando el consentimiento de contacto y evitando repetir notificaciones ya entregadas.
+
+<a href="./assets/applications_user_flow_diagrams/17 · Historial y reintentos de notificaciones.png">
+  <img src="./assets/applications_user_flow_diagrams/17 · Historial y reintentos de notificaciones.png" alt="User flow de historial y reintentos de notificaciones" width="900">
+</a>
+
+##### **18. Privacidad: consentimiento por finalidad**
+
+**User Goal: Controlar los permisos de uso de sus datos**
+El usuario necesita decidir para qué finalidades autoriza el tratamiento de sus datos y modificar sus consentimientos cuando lo considere necesario. Puede gestionar por separado los permisos de contacto, documentación y biometría, conociendo cómo afectan a las funciones que requieren esos datos. El objetivo es ofrecer un control claro sobre los usos futuros, diferenciando el retiro de consentimiento de una solicitud de borrado.
+
+<a href="./assets/applications_user_flow_diagrams/18 · Privacidad_ consentimiento por finalidad.png">
+  <img src="./assets/applications_user_flow_diagrams/18 · Privacidad_ consentimiento por finalidad.png" alt="User flow de privacidad y consentimiento por finalidad" width="1000">
+</a>
+
+##### **19. Solicitud y seguimiento de borrado**
+
+**User Goal: Solicitar el borrado de sus datos y seguir su avance**
+El usuario necesita presentar una solicitud de borrado mediante un proceso claro, con confirmaciones que eviten acciones accidentales. Después de enviarla, puede consultar su estado desde la solicitud inicial hasta su finalización, sin generar solicitudes abiertas duplicadas. El objetivo es ofrecer seguimiento y explicar el alcance del borrado, incluida la conservación de los registros de auditoría inmutables.
+
+<a href="./assets/applications_user_flow_diagrams/19 · Solicitud y seguimiento de borrado — J5.png">
+  <img src="./assets/applications_user_flow_diagrams/19 · Solicitud y seguimiento de borrado — J5.png" alt="User flow de solicitud y seguimiento de borrado de datos" width="1000">
+</a>
+
+##### **20. Cumplimiento, retención y auditoría**
+
+**User Goal: Gestionar las solicitudes de privacidad y las reglas de retención**
+El administrador de cumplimiento necesita revisar las solicitudes de borrado y coordinar su atención con los responsables de los datos. También requiere administrar las políticas de retención por categoría y duración, conservando sus versiones y el historial de cambios. El objetivo es supervisar el cumplimiento de cada solicitud y mantener la trazabilidad de las decisiones mediante la auditoría.
+
+<a href="./assets/applications_user_flow_diagrams/20 · Cumplimiento, retención y auditoría.png">
+  <img src="./assets/applications_user_flow_diagrams/20 · Cumplimiento, retención y auditoría.png" alt="User flow de cumplimiento, retención y auditoría" width="1000">
+</a>
 
 ### **6.5. Applications Prototyping.**
 

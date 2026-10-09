@@ -2890,7 +2890,7 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 ### **6.4.1. Applications Wireframes.**
 
 Los wireframes de la aplicación representan la estructura y disposición de los elementos de interfaz en fidelidad media, sin color ni estilo visual definitivo. Su propósito es validar la jerarquía de información, la navegación y la lógica de cada pantalla antes de aplicar el sistema de diseño. 
----
+
 
 #### **Vistas principales por rol**
 

@@ -2235,10 +2235,192 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 ### **6.4.1. Applications Wireframes.**
 
 ### **6.4.2. Applications Wireflow Diagrams.**
-
+  
 ### **6.4.3. Applications Mock-ups.**
 
 ### **6.4.4. Applications User Flow Diagrams.**
+
+### **6.4.4. Applications User Flow Diagrams.**
+
+##### **1. Registro, incorporación e identidad**
+
+**User Goal: Registrarse e incorporarse a una comunidad**
+El usuario necesita crear una cuenta, verificar su correo electrónico y solicitar su incorporación a una comunidad. Durante este recorrido, otorga los permisos necesarios, presenta su documento y completa el enrolamiento biométrico. El objetivo es acompañarlo hasta contar con una identidad verificada y una membresía activa, una vez aprobada su incorporación.
+
+<a href="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png">
+  <img src="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png" alt="User flow de registro, incorporación e identidad" width="1200">
+</a>
+
+##### **2. Inicio de sesión, OTP y recuperación**
+
+**User Goal: Acceder a su cuenta y recuperar el acceso**
+El usuario necesita ingresar a su cuenta mediante un proceso sencillo y seguro. Si requiere verificar su correo o recuperar el acceso, puede solicitar un código temporal y seguir las indicaciones correspondientes. El objetivo es permitirle continuar incluso ante credenciales incorrectas o códigos vencidos, mostrando claramente cómo resolver cada situación.
+
+<a href="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png">
+  <img src="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png" alt="User flow de inicio de sesión, OTP y recuperación" width="1100">
+</a>
+
+##### **3. Cuenta y seguridad**
+
+**User Goal: Administrar su cuenta y proteger el acceso**
+El usuario necesita mantener actualizadas sus credenciales y controlar las opciones de acceso a su cuenta. Puede cambiar su contraseña, actualizar su correo mediante verificación y gestionar la vinculación de una identidad externa. El objetivo es facilitar estos cambios de forma segura y permitirle cerrar su sesión cuando lo necesite.
+
+<a href="./assets/applications_user_flow_diagrams/03 · Cuenta y seguridad.png">
+  <img src="./assets/applications_user_flow_diagrams/03 · Cuenta y seguridad.png" alt="User flow de cuenta y seguridad" width="900">
+</a>
+
+##### **4. Administración de usuarios y roles**
+
+**User Goal: Administrar los permisos y el estado de los usuarios**
+El administrador del sistema necesita controlar qué funciones puede realizar cada usuario y gestionar su acceso a la plataforma. Puede asignar o revocar roles, suspender una cuenta indicando el motivo y rehabilitarla cuando corresponda. El objetivo es mantener una administración clara de permisos y comunicar al usuario cualquier restricción que afecte su acceso.
+
+<a href="./assets/applications_user_flow_diagrams/04 · Administración de usuarios y roles.png">
+  <img src="./assets/applications_user_flow_diagrams/04 · Administración de usuarios y roles.png" alt="User flow de administración de usuarios y roles" width="1200">
+</a>
+
+##### **5. Revisión documental y enrolamiento biométrico**
+
+**User Goal: Verificar su identidad y registrar su referencia biométrica**
+El usuario necesita acreditar su identidad mediante un documento válido y completar el registro de su referencia biométrica. Si el documento resulta ilegible, está vencido o presenta inconsistencias, recibe indicaciones para corregirlo. El objetivo es completar la verificación con los consentimientos y requisitos necesarios, dejando preparada su referencia para posteriores comprobaciones.
+
+<a href="./assets/applications_user_flow_diagrams/05 · Revisión documental y enrolamiento biométrico.png">
+  <img src="./assets/applications_user_flow_diagrams/05 · Revisión documental y enrolamiento biométrico.png" alt="User flow de revisión documental y enrolamiento biométrico" width="1200">
+</a>
+
+##### **6. Consulta de verificación y prueba de vida**
+
+**User Goal: Consultar su verificación y completar una prueba de vida**
+El usuario necesita conocer el estado de su referencia biométrica y realizar una prueba de vida cuando el proceso de votación lo requiera. Si falta la referencia, el consentimiento o una verificación vigente, la plataforma lo orienta hacia el paso correspondiente. El objetivo es permitirle acreditar su presencia antes de continuar con la autorización del voto.
+
+<a href="./assets/applications_user_flow_diagrams/06 · Consulta de verificación y prueba de vida.png">
+  <img src="./assets/applications_user_flow_diagrams/06 · Consulta de verificación y prueba de vida.png" alt="User flow de consulta de verificación y prueba de vida" width="1000">
+</a>
+
+##### **7. Crear comunidad y abrir votación**
+
+**User Goal: Preparar una comunidad y abrir una votación**
+El administrador necesita registrar una comunidad, definir su política de votación y designar a sus administradores. Después de la activación de la comunidad, prepara una propuesta con sus opciones y la abre a los miembros habilitados. El objetivo es iniciar la votación con reglas claras, que se mantienen fijadas durante su desarrollo.
+
+<a href="./assets/applications_user_flow_diagrams/07 · Crear comunidad y abrir votación — J2.png">
+  <img src="./assets/applications_user_flow_diagrams/07 · Crear comunidad y abrir votación — J2.png" alt="User flow de creación de comunidad y apertura de votación" width="1200">
+</a>
+
+##### **8. Ciclo de vida de comunidad**
+
+**User Goal: Gestionar el estado de una comunidad**
+El administrador necesita actualizar los datos de una comunidad y controlar su estado operativo. Puede suspenderla indicando el motivo, reactivarla cuando corresponda o archivarla mediante una doble confirmación. El objetivo es gestionar cada transición de forma consciente y conservar la consulta de la información cuando la comunidad queda archivada.
+
+<a href="./assets/applications_user_flow_diagrams/08 · Ciclo de vida de comunidad.png">
+  <img src="./assets/applications_user_flow_diagrams/08 · Ciclo de vida de comunidad.png" alt="User flow del ciclo de vida de una comunidad" width="1000">
+</a>
+
+##### **9. Política de votación y administradores**
+
+**User Goal: Configurar las reglas y los responsables de la comunidad**
+El administrador necesita ajustar la política de votación y gestionar quiénes administran la comunidad. Puede revisar las versiones de las reglas, corregir parámetros inválidos y designar o retirar administradores existentes. El objetivo es mantener una configuración trazable, aplicando los cambios de política a futuras votaciones y preservando las reglas de las que ya están abiertas.
+
+<a href="./assets/applications_user_flow_diagrams/09 · Política de votación y administradores.png">
+  <img src="./assets/applications_user_flow_diagrams/09 · Política de votación y administradores.png" alt="User flow de política de votación y administradores" width="1000">
+</a>
+
+##### **10. Padrón: aprobación, unidad y rol**
+
+**User Goal: Aprobar miembros y organizar el padrón de la comunidad**
+El administrador necesita revisar las solicitudes de incorporación y asignar a cada miembro su unidad y rol dentro de la comunidad. Tras aprobar la solicitud, activa la membresía para que el usuario pueda acceder a las funciones que le corresponden. El objetivo es mantener un padrón actualizado, distinguiendo las solicitudes pendientes de las membresías activas consideradas para el quórum.
+
+<a href="./assets/applications_user_flow_diagrams/10 · Padrón_ aprobación, unidad y rol.png">
+  <img src="./assets/applications_user_flow_diagrams/10 · Padrón_ aprobación, unidad y rol.png" alt="User flow de aprobación del padrón, unidad y rol" width="1200">
+</a>
+
+##### **11. Membresía: mora, suspensión y terminación**
+
+**User Goal: Gestionar las restricciones y la continuidad de una membresía**
+El administrador necesita registrar situaciones que afectan la participación de un miembro, como la mora o la suspensión. Puede indicar sus motivos, levantar las restricciones cuando se resuelven y terminar una membresía mediante una doble confirmación. El objetivo es reflejar correctamente el estado del miembro y permitirle comprender cómo ese estado afecta su participación en las votaciones.
+
+<a href="./assets/applications_user_flow_diagrams/11 · Membresía_ mora, suspensión y terminación.png">
+  <img src="./assets/applications_user_flow_diagrams/11 · Membresía_ mora, suspensión y terminación.png" alt="User flow de mora, suspensión y terminación de membresía" width="1100">
+</a>
+
+##### **12. Navegación del miembro y consulta de propuestas**
+
+**User Goal: Explorar su comunidad y consultar las propuestas disponibles**
+El miembro necesita identificar sus comunidades, conocer el estado de su membresía y consultar las propuestas visibles para él. Desde este recorrido, puede revisar una votación abierta, acceder a los resultados de una cerrada y gestionar su verificación, privacidad o cuenta. El objetivo es facilitar el acceso a las acciones disponibles según su situación y el estado de cada propuesta.
+
+<a href="./assets/applications_user_flow_diagrams/12 · Navegación del miembro y consulta de propuestas.png">
+  <img src="./assets/applications_user_flow_diagrams/12 · Navegación del miembro y consulta de propuestas.png" alt="User flow de navegación del miembro y consulta de propuestas" width="1000">
+</a>
+
+##### **13. Emisión y confirmación de voto**
+
+**User Goal: Emitir su voto y comprobar su confirmación**
+El miembro necesita participar en una votación abierta después de cumplir los requisitos de membresía y verificación. Obtiene una autorización, selecciona su opción y confirma la firma antes de seguir el estado del envío. El objetivo es completar el recorrido con claridad y distinguir el voto firmado o enviado del voto confirmado, que es el que se contabiliza.
+
+<a href="./assets/applications_user_flow_diagrams/13 · Emisión y confirmación de voto — J3.png">
+  <img src="./assets/applications_user_flow_diagrams/13 · Emisión y confirmación de voto — J3.png" alt="User flow de emisión y confirmación de voto" width="1100">
+</a>
+
+##### **14. Excepciones al autorizar y emitir voto**
+
+**User Goal: Comprender y resolver los impedimentos para votar**
+El miembro necesita saber por qué no puede continuar cuando su membresía está restringida, la votación ha cerrado o su autorización está vencida o ya fue utilizada. La plataforma identifica la causa y muestra el siguiente paso cuando existe una posibilidad de continuar. El objetivo es evitar intentos duplicados y orientar al usuario sin generar dudas sobre la validez de su voto.
+
+<a href="./assets/applications_user_flow_diagrams/14 · Excepciones al autorizar y emitir voto — J4.png">
+  <img src="./assets/applications_user_flow_diagrams/14 · Excepciones al autorizar y emitir voto — J4.png" alt="User flow de excepciones al autorizar y emitir voto" width="900">
+</a>
+
+##### **15. Firma y envío: fallos, reintentos y constancia**
+
+**User Goal: Seguir el envío de su voto y consultar su constancia**
+El miembro necesita comprender qué ocurre después de firmar su voto y conocer si el envío está pendiente, confirmado o ha fallado. Ante un fallo, puede seguir los reintentos permitidos y recibir orientación cuando el proceso no logra completarse. El objetivo es ofrecer un seguimiento transparente y permitir la consulta de la constancia y la evidencia del voto confirmado.
+
+<a href="./assets/applications_user_flow_diagrams/15 · Firma y envío_ fallos, reintentos y constancia — J4.png">
+  <img src="./assets/applications_user_flow_diagrams/15 · Firma y envío_ fallos, reintentos y constancia — J4.png" alt="User flow de firma, envío, fallos, reintentos y constancia" width="1200">
+</a>
+
+##### **16. Cierre, escrutinio, participación y quórum**
+
+**User Goal: Cerrar una votación y consultar sus resultados**
+El administrador necesita cerrar una votación y obtener el escrutinio de los votos confirmados, mientras los miembros necesitan consultar el resultado y su evidencia. El recorrido contempla la confirmación del cierre manual, el procesamiento de los resultados y la evaluación del quórum según las reglas fijadas. El objetivo es presentar claramente la participación, el resultado y si se alcanzó el quórum requerido.
+
+<a href="./assets/applications_user_flow_diagrams/16 · Cierre, escrutinio, participación y quórum.png">
+  <img src="./assets/applications_user_flow_diagrams/16 · Cierre, escrutinio, participación y quórum.png" alt="User flow de cierre, escrutinio, participación y quórum" width="1200">
+</a>
+
+##### **17. Historial y reintentos de notificaciones**
+
+**User Goal: Consultar las notificaciones y resolver los envíos fallidos**
+El administrador necesita revisar el historial de notificaciones, filtrar los registros y conocer el resultado de cada envío. Puede identificar entregas, fallos, duplicados o bloqueos por falta de permiso, y reintentar los envíos fallidos que correspondan. El objetivo es mantener una comunicación trazable, respetando el consentimiento de contacto y evitando repetir notificaciones ya entregadas.
+
+<a href="./assets/applications_user_flow_diagrams/17 · Historial y reintentos de notificaciones.png">
+  <img src="./assets/applications_user_flow_diagrams/17 · Historial y reintentos de notificaciones.png" alt="User flow de historial y reintentos de notificaciones" width="900">
+</a>
+
+##### **18. Privacidad: consentimiento por finalidad**
+
+**User Goal: Controlar los permisos de uso de sus datos**
+El usuario necesita decidir para qué finalidades autoriza el tratamiento de sus datos y modificar sus consentimientos cuando lo considere necesario. Puede gestionar por separado los permisos de contacto, documentación y biometría, conociendo cómo afectan a las funciones que requieren esos datos. El objetivo es ofrecer un control claro sobre los usos futuros, diferenciando el retiro de consentimiento de una solicitud de borrado.
+
+<a href="./assets/applications_user_flow_diagrams/18 · Privacidad_ consentimiento por finalidad.png">
+  <img src="./assets/applications_user_flow_diagrams/18 · Privacidad_ consentimiento por finalidad.png" alt="User flow de privacidad y consentimiento por finalidad" width="1000">
+</a>
+
+##### **19. Solicitud y seguimiento de borrado**
+
+**User Goal: Solicitar el borrado de sus datos y seguir su avance**
+El usuario necesita presentar una solicitud de borrado mediante un proceso claro, con confirmaciones que eviten acciones accidentales. Después de enviarla, puede consultar su estado desde la solicitud inicial hasta su finalización, sin generar solicitudes abiertas duplicadas. El objetivo es ofrecer seguimiento y explicar el alcance del borrado, incluida la conservación de los registros de auditoría inmutables.
+
+<a href="./assets/applications_user_flow_diagrams/19 · Solicitud y seguimiento de borrado — J5.png">
+  <img src="./assets/applications_user_flow_diagrams/19 · Solicitud y seguimiento de borrado — J5.png" alt="User flow de solicitud y seguimiento de borrado de datos" width="1000">
+</a>
+
+##### **20. Cumplimiento, retención y auditoría**
+
+**User Goal: Gestionar las solicitudes de privacidad y las reglas de retención**
+El administrador de cumplimiento necesita revisar las solicitudes de borrado y coordinar su atención con los responsables de los datos. También requiere administrar las políticas de retención por categoría y duración, conservando sus versiones y el historial de cambios. El objetivo es supervisar el cumplimiento de cada solicitud y mantener la trazabilidad de las decisiones mediante la auditoría.
+
+<a href="./assets/applications_user_flow_diagrams/20 · Cumplimiento, retención y auditoría.png">
+  <img src="./assets/applications_user_flow_diagrams/20 · Cumplimiento, retención y auditoría.png" alt="User flow de cumplimiento, retención y auditoría" width="1000">
+</a>
 
 ### **6.5. Applications Prototyping.**
 

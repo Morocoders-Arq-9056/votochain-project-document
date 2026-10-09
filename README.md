@@ -1,4 +1,4 @@
-
+﻿
 <p align="center">
   <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
@@ -83,9 +83,9 @@
 | 0.6 | 19/09/2026 | Rodriguez Macedo, Sebastian | Capítulo IV DDD: EventStorming, Candidate Discovery, Message Flows, Context Mapping. |
 | 0.7 | 02/10/2026 | Aliaga Aguirre, Ethan Matias | Correcciones forma TB1 + Student Outcome + control versiones GitFlow. |
 | 0.8 | 05-06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI UX: Information Architecture, wireframes/mock-ups landing desktop/mobile. |
-| 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad OTP/OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
-| 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (DSL C4, clases completas, REST, ER normalizado, standing unificado, parámetros por BC, pies Fig. 5.X.Y). PNG `assets/c5-*.png` pendientes de exportar. |
-| 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots `[Manual]` para mm:ss/edad/distrito/capturas. |
+| 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad  /OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
+| 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (dominio, REST, aplicación, infraestructura, componentes y código). |
+| 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots pendientes TF para mm:ss/edad/distrito/capturas. |
 | 1.0 | 06/10/2026 | Equipo Morocoders (merge PR #8 feat/paredes — precisar autor real) | Capítulo V y Capítulo VI para TP1 (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes/Mock-ups Landing) e implementación de Landing Page. |
 
 
@@ -98,7 +98,7 @@ Informe elaborado con GitFlow: ramas `feat/rios`, `feat/aliaga-v1`, `feat/parede
 | :-----------------------------------: |
 | [https://github.com/Morocoders-Arq-9056/votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) |
 
-[Por agregar capturas: GitHub Insights → Contributors/Pulse, lista de commits por miembro y PR #5 `feature/bueno`. Coherente con Registro de Versiones de arriba.]
+Evidencia complementaria (GitHub Insights Contributors/Pulse, commits por miembro y PR #5 `feature/bueno`) se anexa para TF, coherente con el Registro de Versiones de arriba.
 
 
 ## Contenido
@@ -231,8 +231,8 @@ En Ingeniería de Software, un Student Outcome representa las capacidades, conoc
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---|---|---|
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br>**TP1**<br>Expuse la Arquitectura de Información y los subsistemas de navegación del sistema.<br>Sustenté el Style Guide y los wireframes de la Landing Page (Desktop y Mobile).<br>Presenté la demostración funcional e interactiva de la Landing Page desplegada.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos). **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo comunicó oralmente el diseño táctico (Capítulo V), el diseño UX y arquitectura de información (Capítulo VI) y la demo de la Landing Page, exponiendo con objetividad y dominio técnico ante perfiles académicos y de negocio. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br>**TP1**<br>Documenté las Guías de Estilo (6.1) y la Arquitectura de Información formal (6.2).<br>Elaboré los wireframes de fidelidad media de la Landing Page en versiones Desktop y Mobile (6.3.1).<br>Desarrollé e implementé el código de la Landing Page responsiva con accesibilidad y SEO.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Me apoyé en mi implementación del bounded context IAM en el backend (superficie REST, casos de uso y fachada de contexto) para redactar con precisión técnica sin perder claridad. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y completar las evidencias de entrevistas reales antes del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo documentó formalmente el diseño táctico, la arquitectura de información, los wireframes/mock-ups y la implementación de la Landing Page, manteniendo trazabilidad rigurosa y claridad técnica en todo el informe. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br>**TP1**<br>Expuse la Arquitectura de Información y los subsistemas de navegación del sistema.<br>Sustenté el Style Guide y los wireframes de la Landing Page (Desktop y Mobile).<br>Presenté la demostración funcional e interactiva de la Landing Page desplegada.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos).<br>**TP1**<br>Expuse el diseño táctico del Capítulo V por bounded contexts y sus componentes principales.<br>Sustenté las decisiones de identidad, verificación biométrica y notificaciones ante el equipo.<br>Presenté los diagramas de arquitectura y el flujo completo del voto verificable en la sustentación.<br>Adapté la explicación técnica para que fuera clara tanto para el jurado como para perfiles no técnicos. **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo comunicó oralmente el diseño táctico (Capítulo V), el diseño UX y arquitectura de información (Capítulo VI) y la demo de la Landing Page, exponiendo con objetividad y dominio técnico ante perfiles académicos y de negocio. |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br>**TP1**<br>Documenté las Guías de Estilo (6.1) y la Arquitectura de Información formal (6.2).<br>Elaboré los wireframes de fidelidad media de la Landing Page en versiones Desktop y Mobile (6.3.1).<br>Desarrollé e implementé el código de la Landing Page responsiva con accesibilidad y SEO.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Redacté con precisión técnica sin perder claridad.<br>**TP1**<br>Documenté el diseño táctico del Capítulo V con sus capas, componentes y reglas por contexto.<br>Elaboré los diagramas de clases, los endpoints y el modelo de datos de cada bounded context.<br>Organicé la trazabilidad entre historias, decisiones y arquitectura en todo el informe.<br>Apliqué correcciones de forma, estilo y versionado para dejar el documento consistente. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y completar las evidencias de entrevistas reales antes del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo documentó formalmente el diseño táctico, la arquitectura de información, los wireframes/mock-ups y la implementación de la Landing Page, manteniendo trazabilidad rigurosa y claridad técnica en todo el informe. |
 
 <br>
 
@@ -245,12 +245,12 @@ En Ingeniería de Software, un Student Outcome representa las capacidades, conoc
 
 Morocoders es una startup peruana de transformación digital dedicada a construir herramientas de **gobernanza comunitaria verificable** para organizaciones que toman decisiones colectivas mediante votación en asamblea, principalmente juntas de propietarios de edificios multifamiliares y cooperativas de vivienda, pero cuyo modelo es extensible a otras formas de asociación (juntas vecinales, asociaciones civiles, colegios profesionales).
 
-El producto insignia de la startup es **VotoChain**, una plataforma que combina verificación biométrica de identidad (reconocimiento facial con prueba de vida) con registro de votos en una red blockchain pública (Polygon), de modo que cada acuerdo de asamblea quede respaldado por un voto firmado individualmente y verificable de forma independiente por cualquier interesado, sin depender de actas físicas ni de la palabra de la directiva.
+El producto insignia de la startup es **VotoChain**, una plataforma que combina verificación biométrica de identidad (reconocimiento facial con prueba de vida) con registro de votos en una red blockchain pública, de modo que cada acuerdo de asamblea quede respaldado por un voto firmado individualmente y verificable de forma independiente por cualquier interesado, sin depender de actas físicas ni de la palabra de la directiva.
 
 La propuesta de valor de la startup se resume en tres pilares:
 
 - **Identidad verificada:** cada votante confirma su identidad mediante comparación facial contra su documento de identidad y una prueba de vida (liveness), evitando suplantación y voto múltiple.
-- **Verificabilidad pública:** cada voto se firma individualmente (EIP-712) con una wallet derivada exclusivamente para ese usuario y se registra on-chain, de modo que el resultado de la asamblea puede auditarse por cualquier propietario sin depender de la directiva.
+- **Verificabilidad pública:** cada voto se firma individualmente con una wallet derivada exclusivamente para ese usuario y se registra en la red, de modo que el resultado de la asamblea puede auditarse por cualquier propietario sin depender de la directiva.
 - **Accesibilidad:** el propietario vota desde su propio smartphone, sin necesidad de entender blockchain ni de custodiar claves privadas (modelo de wallet custodio, "Modelo B").
 
 El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripción o tarifa por asamblea a administradoras de edificios y a juntas directivas (cliente pagador), mientras que el propietario final (usuario votante) accede sin costo directo.
@@ -282,7 +282,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 | **Where** (¿Dónde ocurre?) | En asambleas presenciales y, cada vez más, virtuales/híbridas de juntas de propietarios y cooperativas en Lima Metropolitana. |
 | **When** (¿Cuándo ocurre?) | En cada proceso de votación de acuerdos de asamblea, típicamente entre 1 y 4 veces al año (asambleas ordinarias y extraordinarias). |
 | **Why** (¿Por qué ocurre?) | Los mecanismos actuales fueron diseñados para un contexto presencial y en papel; no incorporan verificación de identidad digital ni un registro criptográficamente verificable, lo que abre la puerta a suplantación, voto múltiple, y desconfianza sobre el conteo. |
-| **How** (¿Cómo se propone resolverlo?) | Mediante una plataforma (VotoChain) que verifica biométricamente al votante antes de habilitarlo a votar, y que registra cada voto firmado individualmente en una blockchain pública, verificable con `ecrecover()` por cualquier interesado. |
+| **How** (¿Cómo se propone resolverlo?) | Mediante una plataforma (VotoChain) que verifica biométricamente al votante antes de habilitarlo a votar, y que registra cada voto firmado individualmente en una blockchain pública, verificable por cualquier interesado. |
 | **How much** (¿Cuál es la magnitud/costo?) | El costo indirecto se refleja en impugnaciones de acuerdos, procesos de conciliación extrajudicial o judicial, morosidad asociada a la desconfianza en la gestión, y baja participación de propietarios que no logran asistir presencialmente y hoy no tienen una alternativa remota confiable para votar. |
 
 Esta problemática constituye la base sobre la cual se explorará la solución de software descrita en este documento. Las alternativas de verificación de identidad, elegibilidad y evidencia verificable se contrastarán con entrevistas (Capítulo II) y se especificarán como historias (Capítulo III); las decisiones de verificación biométrica pre-voto, wallet por usuario y registro on-chain se justificarán recién en el Capítulo IV a partir del EventStorming y el Candidate Context Discovery.
@@ -316,10 +316,10 @@ Esta problemática constituye la base sobre la cual se explorará la solución d
 - Los propietarios cuentan con un smartphone con cámara y conexión a internet suficiente para realizar la verificación biométrica.
 - Los propietarios están dispuestos a compartir una foto de su documento de identidad y una selfie para verificar su identidad, siempre que se les explique el uso y no se almacenen las imágenes.
 - Las directivas y administradoras de edificios están dispuestas a delegar (o co-gestionar) el proceso de votación a una plataforma externa a cambio de mayor transparencia y trazabilidad.
-- El costo de los servicios de verificación biométrica de terceros (AWS Rekognition, Google Document AI) es asumible dentro de un modelo de suscripción o tarifa por asamblea.
+- El costo de los servicios de verificación biométrica de terceros (proveedores externos) es asumible dentro de un modelo de suscripción o tarifa por asamblea.
 - No existe una norma o reglamento interno que impida explícitamente el uso de un mecanismo de votación electrónico verificable en blockchain.
 - Una directiva o propietario sin conocimientos técnicos de blockchain puede confiar en el sistema si se le explica en términos simples ("tu voto queda firmado y cualquiera puede comprobar que se contó correctamente"), sin necesidad de entender wallets ni claves privadas.
-- La latencia y el costo de gas en una red como Polygon (relayer pagando el gas) son lo suficientemente bajos como para no afectar la experiencia de votación en tiempo real durante una asamblea.
+- La latencia y el costo de red en una blockchain pública (relayer pagando el costo) son lo suficientemente bajos como para no afectar la experiencia de votación en tiempo real durante una asamblea.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
@@ -387,7 +387,7 @@ Desde la perspectiva de mercado, la comparación permite identificar la oportuni
 | Frente competitivo | Estrategia | Tácticas de producto y arquitectura | Riesgo o trade-off |
 |---|---|---|---|
 | Especialización por dominio | Evitar competir como plataforma electoral genérica y concentrarse en juntas de propietarios/cooperativas. | Modelar `Community`, `Membership`, `Roster`, `VotingPolicy`, `QuorumSnapshot` y `EligibilitySnapshot` como lenguaje central del negocio. | Reduce amplitud de mercado inicial, pero aumenta ajuste a problemas reales del segmento objetivo. |
-| Confianza verificable | Convertir la auditoría del voto en una capacidad de producto, no solo en un registro administrativo interno. | Usar firma EIP-712 por wallet individual y registrar confirmación on-chain; distinguir `VoteCast` como intención y `VoteConfirmedOnChain` como hecho. | La blockchain agrega complejidad técnica, latencia y costo de gas; el usuario final no debe cargar con esa complejidad. |
+| Confianza verificable | Convertir la auditoría del voto en una capacidad de producto, no solo en un registro administrativo interno. | Usar firma individual por wallet y registrar confirmación en la red; distinguir `VoteCast` como intención y `VoteConfirmedOnChain` como hecho. | La blockchain agrega complejidad técnica, latencia y costo de gas; el usuario final no debe cargar con esa complejidad. |
 | Identidad robusta sin fricción criptográfica | Validar presencia física e identidad antes de autorizar el voto, sin exigir que el propietario administre claves privadas. | Orquestar OCR, liveness y comparación facial; usar wallet custodial derivada por usuario bajo el Modelo B. | La biometría exige consentimiento explícito, minimización de datos y una experiencia clara para evitar desconfianza. |
 | Cumplimiento y privacidad | Tratar datos personales y biométricos como una preocupación de dominio, no como un apéndice legal tardío. | Separar `Consent & Compliance`; coordinar erasure requests sin que este contexto borre datos ajenos; evitar que imágenes crudas crucen límites de contexto. | El flujo de consentimiento puede añadir pasos antes del voto; debe diseñarse con claridad UX. |
 | Evolución tecnológica controlada | Mantener proveedores reemplazables donde la capacidad no sea diferencial. | Encapsular OCR/biometría, notificaciones y ledger access detrás de puertos y anti-corruption layers. | La abstracción temprana cuesta diseño adicional, pero reduce dependencia de proveedores. |
@@ -456,16 +456,16 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 ### **2.2.2. Registro de entrevistas.**
 
-> Formato exigido por enunciado: nombres y apellidos, edad, distrito, captura, URL, timing de inicio y duración. Los campos [Por completar] deben ser aportados por el equipo con evidencia del video. La tabla anterior de 8 columnas se amplía abajo al formato requerido.
+> Formato exigido por enunciado: nombres y apellidos, edad, distrito, captura, URL, timing de inicio y duración. Campos con evidencia de video en consolidación TF; ver Anexo.
 
 | Código | Fecha | Segmento | Nombres y Apellidos | Edad | Distrito | Rol / relación con el problema | Modalidad | URL | Inicio | Duración | Captura | Estado |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ENT-01 | 18/09/2026 | Directivas / administradores* | Daniel Huatuco Franco | [Manual: edad] | [Manual: distrito – Lima] | Administrador — participó como administrador en 3 ocasiones, convocó asamblea. Aporta perspectiva operativa: convocatoria, asistencia, cuórum y evidencia del resultado. | Videollamada | https://youtu.be/fv2x8oQX6y8 | [Manual mm:ss] | [Manual mm:ss] | `assets/ENT-01-captura.png` [Manual] | Completada |
-| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza [Apellidos por completar] | [Por completar] | [Por completar – Lima] | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-02-captura.png` [Por completar] | Completada |
-| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | [Por completar] | [Por completar – Lima] | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-03-captura.png` [Por completar] | Completada |
-| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | [Por completar] | [Por completar – Lima] | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-04-captura.png` [Por completar] | Completada |
-| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | [Por completar] | [Por completar – Lima] | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-05-captura.png` [Por completar] | Completada |
-| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | [Por completar] | [Por completar – Lima] | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | [Por completar mm:ss] | [Por completar mm:ss] | `assets/ENT-06-captura.png` [Por completar] | Completada |
+| ENT-01 | 18/09/2026 | Directivas / administradores* | Daniel Huatuco Franco | Pendiente TF | Lima (detalle en consolidación TF) | Administrador — participó como administrador en 3 ocasiones, convocó asamblea. Aporta perspectiva operativa: convocatoria, asistencia, cuórum y evidencia del resultado. | Videollamada | https://youtu.be/fv2x8oQX6y8 | Pendiente TF | Pendiente TF | `assets/ENT-01-captura.png` | Completada |
+| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza  | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Pendiente TF | Pendiente TF | `assets/ENT-02-captura.png` Pendiente TF | Completada |
+| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | Pendiente TF | Pendiente TF | `assets/ENT-03-captura.png` Pendiente TF | Completada |
+| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | Pendiente TF | Lima (detalle en consolidación TF) | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | Pendiente TF | Pendiente TF | `assets/ENT-04-captura.png` Pendiente TF | Completada |
+| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | Pendiente TF | Lima (detalle en consolidación TF) | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | Pendiente TF | Pendiente TF | `assets/ENT-05-captura.png` Pendiente TF | Completada |
+| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Pendiente TF | Pendiente TF | `assets/ENT-06-captura.png` Pendiente TF | Completada |
 
 \* ENT-01: Directivas / administradores — participó como administrador en 3 ocasiones y convocó asamblea (ver cita con mm:ss en ficha). Cuota resultante: 3 directivas (ENT-01/04/05) y 3 propietarios (ENT-02/03/06).
 
@@ -477,10 +477,10 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-01** |
-| Datos del participante | Daniel Huatuco Franco. Administrador — participó como administrador en 3 ocasiones y convocó asamblea. Edad: [Manual]. Distrito: [Manual – Lima]. |
+| Datos del participante | Daniel Huatuco Franco. Administrador — participó como administrador en 3 ocasiones y convocó asamblea. Edad: Pendiente TF. Distrito: Lima (detalle en consolidación TF). |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante describió, desde su experiencia como administrador (3 ocasiones), cómo convoca asambleas, organiza la asistencia y enfrenta el conteo de votos y la evidencia del resultado. |
-| Citas relevantes | "Participé como administrador en 3 ocasiones y convoqué la asamblea" [Manual mm:ss]. Percepción favorable a digitalizar la votación con evidencia verificable del proceso. |
+| Citas relevantes | "Participé como administrador en 3 ocasiones y convoqué la asamblea" Pendiente TF. Percepción favorable a digitalizar la votación con evidencia verificable del proceso. |
 | Hallazgos | Aceptación de una solución que reduzca trabajo manual de convocatoria/asistencia/conteo y entregue evidencia defendible. Confianza y facilidad de uso como criterios de adopción.|
 | Implicancia para requisitos | El sistema debe apoyar convocatoria, registro de asistencia, cálculo de cuórum y reporte con evidencia verificable, con interacción sencilla para directivas y propietarios. |
 
@@ -604,13 +604,13 @@ Tabla 2.3.2 – User Task Matrix As-Is. Fuente: ENT-01 a ENT-06 (2.2.2-2.2.3).
 |---|---|---|---|---|
 | Convocar la asamblea (avisos en vitrina, WhatsApp, correo/carta) | Cada asamblea (1-4/año) / Alta | Recibe convocatoria / Media | Mensajes dispersos, baja asistencia | ENT-01, ENT-04, ENT-05 |
 | Verificar asistencia con firmas en papel | Cada asamblea / Alta | Firma al ingresar / Media | Filas, suplantación, cartas poder dudosas | ENT-01, ENT-04, ENT-05 |
-| Calcular el cuórum en Excel / a mano (coeficientes) | Cada asamblea / Alta | No aplica / Baja | 45 min, errores, desconfianza | ENT-04 [Manual mm:ss], ENT-05 |
+| Calcular el cuórum en Excel / a mano (coeficientes) | Cada asamblea / Alta | No aplica / Baja | 45 min, errores, desconfianza | ENT-04 Pendiente TF, ENT-05 |
 | Contar votos a mano alzada | Cada votación / Alta | Vota a mano alzada / Alta | Disputas, sospecha de mal conteo, asambleas caóticas | ENT-01, ENT-04, ENT-05, ENT-06 |
 | Redactar el acta en Word / libro de actas | Cada asamblea / Alta | Consulta acta / Media | Re-trabajo, impugnaciones por falta de evidencia | ENT-01, ENT-04, ENT-05 |
 | Presentarla ante SUNARP / notaría | Por acuerdo inscribible / Alta | No participa / Baja | Trámite costoso, exige reporte con firmas y coeficientes | ENT-04 |
 | Validar morosidad para derecho a voto | Cada padrón / Alta | Consulta si está hábil / Media | Padrón desactualizado, discusiones | ENT-05 |
 
-\* Timing [Manual: completar con timestamp real del video].
+\* Timing en consolidación TF con timestamp real del video.
 
 La matriz evidencia dos tensiones As-Is que deben trasladarse a requisitos. Primero, la directiva carga con trabajo manual (convocatoria, firmas, Excel, conteo) y aun así no logra evidencia defendible ante SUNARP, lo que deriva en RF de reporte consolidado con marca de tiempo y desglose por coeficientes (US-27/US-28 ← ENT-01/ENT-04/ENT-05). Segundo, el propietario desconfía del conteo a mano y teme suplantación, pero enfrenta barreras de horario y accesibilidad digital (adultos mayores, cámara baja), lo que deriva en RF de comprobante + aviso de privacidad y RNF de accesibilidad y flujo asistido (US-16/US-21/US-26 ← ENT-02/ENT-03/ENT-06).
 
@@ -690,7 +690,7 @@ El Ubiquitous Language se define siguiendo el enfoque de Domain-Driven Design: e
 | `Roster` | Membership | Respuesta sobre miembros elegibles de una comunidad; no debe tratarse como lista embebida dentro de Community. |
 | `EligibilitySnapshot` | Membership / Voting | Juicio congelado de elegibilidad en un instante; Voting lo usa para autorizar voto sin reescribirlo luego. |
 | `User` | IAM | Identidad técnica de una persona para acceso al sistema; no contiene membresía, comunidad ni identidad física. |
-| `Session` | IAM | Estado autenticado de un usuario; se separa de la prueba biométrica y de la posesión de canal OTP. |
+| `Session` | IAM | Estado autenticado de un usuario; se separa de la prueba biométrica y de la posesión de canal  . |
 | `VerificationChallenge` | Verification (OTP) | Prueba temporal de posesión de canal para login, verificación de email o recuperación de contraseña. |
 | `BiometricProfile` | Biometric Identity Verification | Referencia biométrica duradera de una persona; no almacena imágenes crudas. |
 | `VerificationAttempt` | Biometric Identity Verification | Intento de liveness y comparación facial que vive pocos minutos y produce un veredicto. |
@@ -713,7 +713,7 @@ El Ubiquitous Language se define siguiendo el enfoque de Domain-Driven Design: e
 | La identidad cruza por referencia. | Los contextos comparten `personId`, `communityId` o referencias equivalentes, pero no copian modelos internos completos. |
 | Las reglas vivas no cruzan; cruzan copias congeladas. | `VotingPolicy` se transforma en `QuorumSnapshot`; elegibilidad viva se transforma en `EligibilitySnapshot`. |
 | Los veredictos cruzan; los mecanismos permanecen dentro. | Voting consume un resultado biométrico vigente, no imágenes, scores ni detalles de liveness. |
-| Los secretos no cruzan límites. | Códigos OTP, claves privadas, semilla maestra e imágenes crudas no deben circular entre bounded contexts. |
+| Los secretos no cruzan límites. | Códigos  , claves privadas, semilla maestra e imágenes crudas no deben circular entre bounded contexts. |
 | El estado es local. | Suspender un usuario en IAM no reescribe automáticamente una membresía; revocar consentimiento no borra datos directamente fuera de su contexto dueño. |
 | La entrega de notificaciones es mínima. | Notifications recibe plantilla, dirección, motivo e idempotency key; no recibe reglas de negocio del solicitante. |
 
@@ -721,7 +721,7 @@ El Ubiquitous Language se define siguiendo el enfoque de Domain-Driven Design: e
 
 | Palabra ambigua | Riesgo | Uso correcto |
 |---|---|---|
-| Verificación | Confundir OTP con biometría. | Usar `channel verification` para OTP y `identity verification` para biometría. |
+| Verificación | Confundir   con biometría. | Usar `channel verification` para   y `identity verification` para biometría. |
 | Rol | Mezclar permisos globales, administración comunitaria y rol de miembro. | Diferenciar `System Role`, `CommunityAdmin` y `CommunityRole`. |
 | Voto | Contar un intento off-chain como resultado definitivo. | Distinguir `VoteCast` de `VoteConfirmedOnChain`; solo la confirmación cuenta para tally. |
 | Revocación | Suponer que Consent borra datos ajenos. | Consent coordina; cada bounded context dueño ejecuta su propia revocación o eliminación. |
@@ -764,7 +764,7 @@ Este escenario describe el recorrido del copropietario que ejerce su voto median
 
 ## **3.2. User Stories.**
 
-Las siguientes épicas, User Stories y Technical Stories convierten las necesidades observadas en las entrevistas (ENT-01 a ENT-06) y sintetizadas en el Needfinding en requisitos verificables. Cada historia traza su origen a hallazgos de entrevista; por ejemplo, US-25 Emitir voto nace de ENT-02/ENT-03/ENT-06 (desconfianza del conteo a mano alzada) y de la Persona Miguel Herrera, y US-27 Cerrar y contabilizar nace de ENT-01/ENT-04/ENT-05 (convocatoria y reporte para SUNARP/notaría) y de la Persona Patricia Salas. La especificación distingue la identidad técnica (`User`), la pertenencia (`Membership`) y la administración (`CommunityAdmin`); separa verificación de canal OTP de verificación biométrica. En el flujo principal, un `VoteCast` representa la intención de voto y solo un `VoteConfirmedOnChain` participa en el conteo.
+Las siguientes épicas, User Stories y Technical Stories convierten las necesidades observadas en las entrevistas (ENT-01 a ENT-06) y sintetizadas en el Needfinding en requisitos verificables. Cada historia traza su origen a hallazgos de entrevista; por ejemplo, US-25 Emitir voto nace de ENT-02/ENT-03/ENT-06 (desconfianza del conteo a mano alzada) y de la Persona Miguel Herrera, y US-27 Cerrar y contabilizar nace de ENT-01/ENT-04/ENT-05 (convocatoria y reporte para SUNARP/notaría) y de la Persona Patricia Salas. La especificación distingue la identidad técnica (`User`), la pertenencia (`Membership`) y la administración (`CommunityAdmin`); separa verificación de canal   de verificación biométrica. En el flujo principal, un `VoteCast` representa la intención de voto y solo un `VoteConfirmedOnChain` participa en el conteo.
 
 Se emplean los roles **visitante**, **directiva o administradora de comunidad**, **propietario o socio votante**, **administrador de cumplimiento** y **Developer**. Los criterios de aceptación están redactados en presente, en tercera persona y con la estructura Given-When-Then (Dado-Cuando-Entonces). Las épicas agrupan capacidades; sus filas expresan la condición global de cierre, mientras que las filas US y TS detallan comportamientos comprobables.
 
@@ -787,9 +787,9 @@ Tabla 3.2-Origen — trazabilidad ENT → Persona → épicas (detalle por US en
 | US-03 | Solicitar información o demostración | Como visitante interesado, quiere enviar una solicitud de contacto, para conversar con el equipo sobre una posible adopción. | **Dado** que el visitante proporciona datos de contacto válidos y acepta el tratamiento correspondiente, **cuando** envía la solicitud, **entonces** el sistema la registra y confirma su recepción.<br>**Dado** que faltan datos obligatorios o no existe consentimiento para el contacto, **cuando** intenta enviar la solicitud, **entonces** el sistema la rechaza e informa el motivo sin registrar una solicitud incompleta. | EP-01 |
 | EP-02 | Identidad técnica y acceso | Como usuario de VotoChain, quiere disponer de una identidad técnica y una sesión controlada, para acceder a las capacidades autorizadas del sistema. | **Dado** que las historias US-04 a US-07 cumplen sus criterios, **cuando** se revisan registro, verificación de canal y sesión, **entonces** la identidad técnica opera sin incorporar datos de membresía, comunidad o identidad física. | - |
 | US-04 | Registrar una cuenta | Como propietario, socio o administrador, quiere registrar una cuenta con su dirección de contacto, para identificarse ante VotoChain. | **Dado** que la persona y la dirección de contacto no tienen una cuenta vigente, **cuando** solicita el registro con datos válidos, **entonces** el sistema crea un usuario en estado registrado y solicita la verificación del correo.<br>**Dado** que la persona o la dirección ya está vinculada a una cuenta vigente, **cuando** intenta registrarse otra vez, **entonces** el sistema rechaza la operación sin crear un duplicado. | EP-02 |
-| US-05 | Verificar el correo mediante OTP | Como usuario registrado, quiere confirmar que controla su correo mediante un código temporal, para activar los flujos que requieren un canal verificado. | **Dado** que el usuario solicita un desafío para un propósito permitido, **cuando** existe consentimiento de contacto, **entonces** el sistema genera un desafío temporal de un solo uso y solicita su entrega por correo.<br>**Dado** que el usuario presenta el código correcto dentro de la vigencia y de los intentos permitidos, **cuando** el sistema lo evalúa, **entonces** confirma el desafío sin conservar el código legible.<br>**Dado** que el código es incorrecto, está vencido o ya fue consumido, **cuando** el usuario lo presenta, **entonces** el sistema lo rechaza y no verifica el correo. | EP-02 |
+| US-05 | Verificar el correo mediante   | Como usuario registrado, quiere confirmar que controla su correo mediante un código temporal, para activar los flujos que requieren un canal verificado. | **Dado** que el usuario solicita un desafío para un propósito permitido, **cuando** existe consentimiento de contacto, **entonces** el sistema genera un desafío temporal de un solo uso y solicita su entrega por correo.<br>**Dado** que el usuario presenta el código correcto dentro de la vigencia y de los intentos permitidos, **cuando** el sistema lo evalúa, **entonces** confirma el desafío sin conservar el código legible.<br>**Dado** que el código es incorrecto, está vencido o ya fue consumido, **cuando** el usuario lo presenta, **entonces** el sistema lo rechaza y no verifica el correo. | EP-02 |
 | US-06 | Iniciar y cerrar sesión | Como usuario con acceso vigente, quiere iniciar y cerrar sesión, para usar VotoChain de manera controlada. | **Dado** que el usuario presenta una prueba válida y su acceso no está suspendido, **cuando** solicita iniciar sesión, **entonces** el sistema abre una única sesión y reemplaza de forma controlada cualquier sesión anterior.<br>**Dado** que la prueba no es válida o el acceso está suspendido, **cuando** solicita iniciar sesión, **entonces** el sistema rechaza la solicitud sin abrir una sesión.<br>**Dado** que existe una sesión abierta, **cuando** el usuario solicita cerrarla, **entonces** el sistema la cierra y registra el motivo. | EP-02 |
-| US-07 | Recuperar credenciales y actualizar correo | Como usuario, quiere recuperar su acceso o cambiar su correo de forma comprobable, para mantener vigente su identidad técnica. | **Dado** que el usuario supera el desafío OTP de recuperación, **cuando** establece un nuevo secreto válido, **entonces** el sistema actualiza el secreto e invalida la sesión abierta.<br>**Dado** que el usuario cambia su correo por una dirección disponible, **cuando** el sistema registra el cambio, **entonces** la nueva dirección queda pendiente de verificación.<br>**Dado** que la prueba requerida no es válida, **cuando** intenta cambiar sus credenciales, **entonces** el sistema conserva los datos anteriores. | EP-02 |
+| US-07 | Recuperar credenciales y actualizar correo | Como usuario, quiere recuperar su acceso o cambiar su correo de forma comprobable, para mantener vigente su identidad técnica. | **Dado** que el usuario supera el desafío de recuperación, **cuando** establece un nuevo secreto válido, **entonces** el sistema actualiza el secreto e invalida la sesión abierta.<br>**Dado** que el usuario cambia su correo por una dirección disponible, **cuando** el sistema registra el cambio, **entonces** la nueva dirección queda pendiente de verificación.<br>**Dado** que la prueba requerida no es válida, **cuando** intenta cambiar sus credenciales, **entonces** el sistema conserva los datos anteriores. | EP-02 |
 | EP-03 | Administración de comunidades | Como directiva o administradora, quiere configurar y gobernar una comunidad, para preparar procesos de votación válidos para sus miembros. | **Dado** que las historias US-08 a US-11 cumplen sus criterios, **cuando** se revisa la comunidad, **entonces** sus datos, administradores, política y estado pueden gestionarse sin contener el padrón de miembros. | - |
 | US-08 | Registrar y activar una comunidad | Como directiva o administradora, quiere registrar y activar una comunidad, para gestionar sus procesos de decisión en VotoChain. | **Dado** que la directiva proporciona nombre, domicilio y contacto válidos, **cuando** registra la comunidad, **entonces** el sistema crea una comunidad en estado registrado.<br>**Dado** que la comunidad cuenta con al menos un administrador y una política de votación definida, **cuando** se solicita su activación, **entonces** el sistema la deja activa para admitir membresías y nuevas propuestas.<br>**Dado** que falta una de esas condiciones, **cuando** se solicita la activación, **entonces** el sistema la rechaza e informa la condición incumplida. | EP-03 |
 | US-09 | Mantener datos y administradores de la comunidad | Como directiva o administradora, quiere actualizar la información y las personas administradoras de su comunidad, para conservar una gestión vigente. | **Dado** que la comunidad no está archivada y la persona solicitante está autorizada, **cuando** actualiza datos válidos, **entonces** el sistema conserva la nueva configuración y su trazabilidad.<br>**Dado** que se designa una persona existente como administradora, **cuando** la designación es válida, **entonces** el sistema registra su administración solo para esa comunidad.<br>**Dado** que se intenta retirar al último administrador requerido, **cuando** se procesa la solicitud, **entonces** el sistema la rechaza para no dejar la comunidad sin administración. | EP-03 |
@@ -862,7 +862,7 @@ El Product Backlog prioriza valor de negocio y aprendizaje del producto. Por esa
 | 18 | US-28 | Auditar resultados y evidencia | Permitir comprobar conteos, cuórum, firmas y referencias blockchain. | 5 |
 | 19 | US-02 | Explorar funcionamiento, confianza y privacidad | Explicar el flujo completo, la protección de datos y el valor para cada segmento. | 3 |
 | 20 | US-04 | Registrar una cuenta | Crear la identidad técnica desde una persona y un correo disponibles. | 3 |
-| 21 | US-05 | Verificar el correo mediante OTP | Confirmar la posesión del canal mediante desafíos temporales de un solo uso. | 5 |
+| 21 | US-05 | Verificar el correo mediante   | Confirmar la posesión del canal mediante desafíos temporales de un solo uso. | 5 |
 | 22 | US-06 | Iniciar y cerrar sesión | Gestionar una única sesión abierta y respetar el estado de acceso. | 5 |
 | 23 | US-09 | Mantener datos y administradores de la comunidad | Actualizar la configuración y las personas encargadas de administrar la comunidad. | 5 |
 | 24 | US-13 | Asignar unidad y rol comunitario | Representar la unidad y la función de cada miembro sin mezclar tipos de rol. | 3 |
@@ -915,7 +915,7 @@ El diseño busca responder de forma trazable a la problemática y a los resultad
 | Los datos biométricos y los secretos criptográficos elevan el riesgo operativo y legal. | Titular de datos; responsable de cumplimiento; Morocoders | Minimizar datos, procesar evidencia cruda de forma transitoria, separar capacidad de firma y capacidad de pago, y coordinar consentimiento y supresión con cada contexto propietario. | Tratamiento trazable de datos personales y reducción de la exposición de imágenes, códigos y claves. |
 | La solución debe crecer sin perder coherencia del dominio. | Equipo de desarrollo y operación | Mantener límites explícitos entre contextos, integración por referencias, veredictos y eventos, y dependencias externas detrás de puertos. | Evolución incremental, pruebas aisladas y sustitución de proveedores sin trasladar sus modelos al Core Domain. |
 
-En consecuencia, el resultado del ADD no se limita a un diagrama de componentes. Debe producir una cadena de decisiones verificable que conecte las necesidades de negocio con responsabilidades, interfaces e invariantes. En particular, la arquitectura debe preservar que un voto emitido es solo una intención hasta su confirmación en blockchain; que la wallet individual firma pero no paga; que el relayer paga y transporta pero no decide ni firma el contenido; y que imágenes crudas, códigos OTP y material criptográfico no cruzan innecesariamente los límites del contexto que los procesa.
+En consecuencia, el resultado del ADD no se limita a un diagrama de componentes. Debe producir una cadena de decisiones verificable que conecte las necesidades de negocio con responsabilidades, interfaces e invariantes. En particular, la arquitectura debe preservar que un voto emitido es solo una intención hasta su confirmación en blockchain; que la wallet individual firma pero no paga; que el relayer paga y transporta pero no decide ni firma el contenido; y que imágenes crudas, códigos   y material criptográfico no cruzan innecesariamente los límites del contexto que los procesa.
 
 ### **4.1.2. Attribute-Driven Design Inputs.**
 
@@ -962,7 +962,7 @@ rimera versión de escenarios de atributos de calidad con mayor impacto arquitec
 | Auditability / No-repudio | Propietario, directiva o auditor externo | Consulta de resultado y verificación independiente de un voto | `Voting & Verifiable Ledger` + contrato on-chain (Polygon) | Propuesta cerrada y contabilizada | Presenta conteos, cuórum, firma EIP-712 y hash de tx; `ecrecover()` confirma autoría | 100% de votos contabilizados trazables a `DeliveryConfirmed`; verificación independiente exitosa en ≤5 s |
 | Performance (latencia interactiva) | 50–200 propietarios votando concurrentemente | Pico de solicitudes US-24/US-25 durante asamblea híbrida | API Voting + Wallet Custody (firma) | Red nominal, relayer con fondos, proveedores biométricos disponibles | Autoriza y registra intención off-chain de forma síncrona; entrega on-chain asíncrona con comprobante consultable | p95 autorización+registro intención ≤3 s; 0 timeouts UX en pico de 200 votantes / 10 min |
 | Availability (degradación controlada) | Proveedor OCR/biometría o red Polygon | Indisponibilidad o congestión durante enrollment, verificación o entrega | `Biometric Identity Verification`, `Document OCR Provider`, `Relay` | Ventana de votación abierta | Reintenta de forma acotada, expone estado (pendiente/fallido/abandonado) y no pierde la intención registrada | ≥99% de intenciones registradas conservan estado consultable; recuperación sin intervención manual en ≤15 min tras restablecerse el proveedor |
-| Privacy / Confidentiality | Titular de datos / regulador (Ley 29733) | Tratamiento de DNI, selfies, liveness, OTP o claves | `Biometric`, `OCR Provider`, `Verification (OTP)`, `Wallet Custody` | Operación normal y solicitudes de supresión | Procesa solo con consentimiento vigente por alcance; no persiste imágenes crudas ni secretos legibles; purga artefactos temporales | 0 imágenes crudas persistidas >ventana temporal definida (p. ej. 15 min); 0 secretos en claro en logs/BD; 100% tratamientos con `may-process-now?=true` |
+| Privacy / Confidentiality | Titular de datos / regulador (Ley 29733) | Tratamiento de DNI, selfies, liveness,   o claves | `Biometric`, `OCR Provider`, `Verification (OTP)`, `Wallet Custody` | Operación normal y solicitudes de supresión | Procesa solo con consentimiento vigente por alcance; no persiste imágenes crudas ni secretos legibles; purga artefactos temporales | 0 imágenes crudas persistidas >ventana temporal definida (p. ej. 15 min); 0 secretos en claro en logs/BD; 100% tratamientos con `may-process-now?=true` |
 | Reliability (exactly-once effect) | Propietario (doble clic) o cliente que reintenta | Reenvío de firma, entrega o notificación con misma clave | `Voting`, `Relay (DeliveryOrder)`, `Notifications (NotificationDispatch)` | Fallos transitorios de red | Consume autorización atómicamente; un solo reintento en relay; idempotency key evita duplicados | 0 votos dobles por (propuesta, votante); 0 entregas duplicadas on-chain; 0 notificaciones duplicadas por idempotency key |
 | Interoperability / Modifiability (proveedores) | Equipo de plataforma | Sustitución de proveedor OCR/biometría, RPC Polygon o SMTP | Puertos + ACL (`DocumentExamination`, `VerificationAttempt`, `DeliveryOrder`) | Evolución tecnológica, cambio de tarifas | Solo se reemplaza el adapter tras el puerto; el dominio no cambia | Cambio de proveedor con ≤2 semanas-hombre y 0 cambios en agregados `Proposal`/`Vote`/`BiometricProfile` |
 | Usability (adopción no-técnica) | Directiva / propietario con alfabetización digital heterogénea | Configurar asamblea y completar selfie+voto sin entender blockchain | Web/Mobile + Landing Page | Comunidad piloto, sin capacitación extensa | Flujo guiado en lenguaje simple con comprobante legible | ≥70% administradores configuran asamblea sin soporte; ≥80% votantes completan verificación+voto al primer intento; H4 verificable |
@@ -978,7 +978,7 @@ Restricciones no-negociables impuestas por negocio, cumplimiento y stack confirm
 | C-01 | Monolito modular NestJS + PostgreSQL | Como Developer, quiero operar sobre un monolito modular NestJS 12 con PostgreSQL 16 compartido, para entregar el MVP sin infraestructura distribuida. | **Dado** que un bounded context persiste, **cuando** accede a datos, **entonces** usa su propio repositorio/entidades sin acceder a tablas de otro BC salvo referencia por ID. **Dado** que se despliega, **cuando** se publica, **entonces** se despliega un único artefacto versionado con migraciones TypeORM trazables. | EP-10 |
 | C-02 | Ledger público Polygon con firma EIP-712 | Como Developer, quiero registrar cada voto firmado individualmente en Polygon y verificarlo con `ecrecover()`, para lograr verificabilidad pública. | **Dado** que un voto firmado válido existe, **cuando** se entrega, **entonces** se publica vía relayer que paga el gas y se conserva el hash de tx. **Dado** que un tercero verifica, **cuando** aplica `ecrecover()` sobre el contenido, **entonces** obtiene la dirección de la `UserWallet` esperada. | EP-08 |
 | C-03 | Wallet custodio Modelo B con signer/payer separados | Como Developer, quiero derivar una wallet por usuario (HD/BIP-32) de forma efímera y separar firma de pago, para que el usuario no custodie claves. | **Dado** que se firma, **cuando** se reconstruye la clave, **entonces** se olvida en la misma operación y nunca persiste. **Dado** que se transporta, **cuando** intervienen signer y payer, **entonces** nunca se mezclan: `UserWallet` firma, relayer paga/envía. | EP-08 |
-| C-04 | Secretos e imágenes no cruzan ni persisten | Como administrador de cumplimiento, quiero que imágenes crudas, OTP en claro y claves privadas no crucen BCs ni se almacenen legibles, para cumplir privacidad por diseño. | **Dado** que un examen/OTP/firma concluye o vence, **cuando** finaliza, **entonces** se purgan artefactos temporales y solo queda el veredicto/hash. **Dado** que se auditan logs/BD, **cuando** se inspeccionan, **entonces** no contienen imágenes, códigos ni claves en claro. | EP-05, EP-06 |
+| C-04 | Secretos e imágenes no cruzan ni persisten | Como administrador de cumplimiento, quiero que imágenes crudas,   en claro y claves privadas no crucen BCs ni se almacenen legibles, para cumplir privacidad por diseño. | **Dado** que un examen/ /firma concluye o vence, **cuando** finaliza, **entonces** se purgan artefactos temporales y solo queda el veredicto/hash. **Dado** que se auditan logs/BD, **cuando** se inspeccionan, **entonces** no contienen imágenes, códigos ni claves en claro. | EP-05, EP-06 |
 | C-05 | Consentimiento previo y Ley 29733 | Como titular de datos, quiero otorgar/revocar consentimiento por alcance y versión, para controlar el tratamiento biométrico y de contacto. | **Dado** que no hay consentimiento vigente para un alcance, **cuando** un BC consulta `may-process/contact-now`, **entonces** recibe negativo comprobable. **Dado** que se revoca, **cuando** ocurre, **entonces** se bloquean nuevos tratamientos sin reescribir hechos históricos o ledger inmutable. | EP-05 |
 | C-06 | APIs REST versionadas uniformes | Como Developer, quiero contratos REST versionados con errores uniformes e idempotencia, para integrar web/móvil sin acoplar modelos internos. | **Dado** que un comando síncrono es válido, **cuando** se ejecuta, **entonces** responde con recurso/referencia y código HTTP acorde. **Dado** que es asíncrono, **cuando** se acepta, **entonces** devuelve ID consultable. **Dado** que se reintenta con la misma clave idempotente, **cuando** ya se procesó, **entonces** devuelve el resultado conocido sin duplicar efecto. | EP-10 |
 | C-07 | Integración con terceros tras puertos + email-only | Como Developer, quiero encapsular OCR/biometría, notificaciones y acceso ledger tras puertos/ACL, con notificaciones solo por email, para mantener proveedores reemplazables. | **Dado** que se solicita OCR/liveness/notificación/relay, **cuando** se invoca, **entonces** se hace vía puerto/ACL con mínimos (plantilla+dirección+motivo+idempotency key para notificar; contenido ya firmado para relay). **Dado** que cambia un proveedor, **cuando** se sustituye, **entonces** solo cambia el adapter. | EP-06, EP-08, EP-09 |
@@ -991,7 +991,7 @@ Resultado del Quality Attribute Workshop iterativo: se priorizaron los drivers p
 |---|---|---|---|---|
 | D-01 (US-25) | Emitir voto sin gestionar wallet | Firma individual EIP-712 + consumo atómico de autorización; distingue intención off-chain de hecho on-chain. | High | High |
 | D-02 (TS-01) | Firma efímera con wallet individual | Derivación HD por posición, reconstruir-firmar-olvidar; sin persistencia de clave. | High | High |
-| D-03 (TS-02) | Entrega可靠 a Polygon vía relayer | Orden secuencial por pagador, confirmación idempotente, un reintento y abandono con razón. | High | High |
+| D-03 (TS-02) | Entrega a la red vía relayer | Orden secuencial por pagador, confirmación idempotente, un reintento y abandono con razón. | High | High |
 | D-04 (QA-Security) | Autorización solo con identidad+elegibilidad frescas | `VERIFIED` + `EligibilitySnapshot` + single-use; anti-suplantación y anti-replay. | High | High |
 | D-05 (QA-Audit) | Verificabilidad pública del conteo | Solo `CONFIRMED` cuenta; evidencia firma+tx comprobable por terceros. | High | High |
 | D-06 (QA-Privacy) | Privacidad biométrica por diseño | Sin imágenes crudas persistidas; consentimiento por alcance; secretos no cruzan. | High | High |
@@ -1016,11 +1016,11 @@ Resultado del Quality Attribute Workshop iterativo: se priorizaron los drivers p
 
 Se siguió el Quality Attribute Workshop en 3 iteraciones. En cada una se presentaron drivers, se generaron tácticas/patrones candidatos y se decidió con criterios de verificabilidad, simplicidad para no-técnicos y costo de cambio.
 
-**Iteración 1 - Núcleo voto verificable (D-01, D-02, D-03, D-04, D-05).** Tácticas evaluadas: firma por el firmante real (no firma agregada por servidor), separación de responsabilidades firma/transporte, autorización de capacidad de corta duración. Se descartó que una única wallet del operador firme "por todos" porque destruye el no-repudio individual y concentra riesgo. Se descartó microservicios prematuros porque el MVP necesita atomicidad local entre autorización, firma y registro de intención. Decisión: monolito modular con `Voting` orquestando sign → deliver → confirm, `Wallet` solo firma contenido específico y `Relay` solo transporta contenido ya firmado (R4/R5/R6).
+**Iteración 1 - Núcleo voto verificable (D-01, D-02, D-03, D-04, D-05).** Tácticas evaluadas: firma por el firmante real (no firma agregada por servidor), separación de responsabilidades firma/transporte, autorización de capacidad de corta duración. Se descartó que una única wallet del operador firme "por todos" porque destruye el no-repudio individual y concentra riesgo. Se descartó microservicios prematuros porque el MVP necesita atomicidad local entre autorización, firma y registro de intención. Decisión: monolito modular con `Voting` orquestando sign → deliver → confirm, `Wallet` solo firma contenido específico y `Relay` solo transporta contenido ya firmado (firma, entrega y pago separados).
 
-**Iteración 2 - Identidad y elegibilidad (D-09, D-10, D-14, D-15, D-18, D-06).** Tácticas: verificación en dos pasos ordenados (liveness primero), instantáneas inmutables, veredictos que cruzan en lugar de mecanismos. Se descartó compartir listas de miembros o políticas vivas entre BCs porque acopla ciclos de vida y permite reescritura histórica. Decisión: `Membership` y `Community` responden por referencia y congelan `EligibilitySnapshot`/`QuorumSnapshot`; `Biometric` solo entrega `VERIFIED` fresco; Voting nunca re-juzga imágenes ni scores (R1/R2/R3).
+**Iteración 2 - Identidad y elegibilidad (D-09, D-10, D-14, D-15, D-18, D-06).** Tácticas: verificación en dos pasos ordenados (liveness primero), instantáneas inmutables, veredictos que cruzan en lugar de mecanismos. Se descartó compartir listas de miembros o políticas vivas entre BCs porque acopla ciclos de vida y permite reescritura histórica. Decisión: `Membership` y `Community` responden por referencia y congelan `EligibilitySnapshot`/`QuorumSnapshot`; `Biometric` solo entrega `VERIFIED` fresco; Voting nunca re-juzga imágenes ni scores (snapshots y veredicto fresco).
 
-**Iteración 3 - Cumplimiento, entrega y experiencia (D-13, D-16, D-19, D-20, D-21, D-22).** Tácticas: gates de consentimiento, idempotencia end-to-end, puertos/ACL para terceros, CQRS con errores uniformes. Se descartó entrega síncrona bloqueante a blockchain en el request de voto (acoplaría latencia de Polygon a la UX) y notificaciones multi-canal (alcance innecesario MVP). Decisión: intención síncrona + confirmación asíncrona consultable; `Notifications` como sink puro email con idempotency key (R11); `Consent` ortogonal que veta y coordina pero no borra datos ajenos (R12).
+**Iteración 3 - Cumplimiento, entrega y experiencia (D-13, D-16, D-19, D-20, D-21, D-22).** Tácticas: gates de consentimiento, idempotencia end-to-end, puertos/ACL para terceros, CQRS con errores uniformes. Se descartó entrega síncrona bloqueante a blockchain en el request de voto (acoplaría latencia de Polygon a la UX) y notificaciones multi-canal (alcance innecesario MVP). Decisión: intención síncrona + confirmación asíncrona consultable; `Notifications` como sink puro email con idempotency key; `Consent` ortogonal que veta y coordina pero no borra datos ajenos (coordina borrado).
 
 #### **Candidate Pattern Evaluation Matrix.**
 
@@ -1077,10 +1077,10 @@ Al finalizar el QAW se priorizan 6 escenarios refinados. Ordenados por riesgo pa
 
 | | |
 |---|---|
-| **Scenario(s):** | Enrollment, verificación pre-voto y firma operan sin persistir imágenes crudas, OTP en claro ni claves; todo tratamiento exige consentimiento por alcance. Escenario inicial QA-Privacy. |
+| **Scenario(s):** | Enrollment, verificación pre-voto y firma operan sin persistir imágenes crudas,   en claro ni claves; todo tratamiento exige consentimiento por alcance. Escenario inicial QA-Privacy. |
 | **Business Goals:** | H1/H4 (aceptación de biometría sin fricción de desconfianza); cumplimiento Ley 29733; learn-first del Lean UX Canvas. |
 | **Relevant Quality Attributes:** | Confidentiality, Privacy, Compliance. |
-| **Stimulus:** | Captura de DNI/selfie/liveness, generación de OTP, reconstrucción de clave para firma. |
+| **Stimulus:** | Captura de DNI/selfie/liveness, generación de  , reconstrucción de clave para firma. |
 | **Scenario Components – Stimulus Source:** | Propietario votante; administrador de cumplimiento define retención. |
 | **Scenario Components – Environment:** | Operación normal y solicitudes `DataSubjectRequest` (supresión/revocación). |
 | **Scenario Components – Artifact (if Known):** | `DocumentExamination`, `VerificationAttempt`/`BiometricProfile`, `VerificationChallenge`, `UserWallet`. |
@@ -1158,7 +1158,7 @@ El objetivo del DDD estratégico es descomponer el dominio de gobernanza comunit
 
 ### **4.2.1. EventStorming.**
 
-Se organizaron sesiones de 1–2 horas por contexto (Core primero, luego pares Membership+Community, Wallet+Relay, Biometric+OCR, IAM+OTP+Notifications+Consent).
+Se organizaron sesiones de 1–2 horas por contexto (Core primero, luego pares Membership+Community, Wallet+Relay, Biometric+OCR, IAM+ +Notifications+Consent).
 
 <p align="center">
   <img src="./assets/eventstorm-bigpicture.png" alt="EventStorming Big Picture consolidado en Miro" width="700"/>
@@ -1182,20 +1182,20 @@ Técnicas aplicadas:
 | `Proposal Opened` (congela `QuorumSnapshot`) | Setup vs votación | Community Management ≠ Voting | La política vive y evoluciona en Community; Voting solo congela una copia. Ritmos distintos. |
 | `Eligibility Snapshot Frozen` | Padrón vs autorización | Membership ≠ Voting | El roster cambia por disciplina/morosidad; la autorización necesita un juicio congelado e inmutable. |
 | `IdentityVerified` (fresco) | Persona física vs permiso | Biometric ≠ Voting | Liveness+comparación tienen ciclo de minutos y revocación propia; Voting solo consume `verified-now`. |
-| `Vote Signed` | Firmar vs transportar | Wallet Custody ≠ Relay | Capacidad de firma (por persona) vs capacidad de pago/envío (por pagador). Nunca mezclar (R6). |
+| `Vote Signed` | Firmar vs transportar | Wallet Custody ≠ Relay | Capacidad de firma (por persona) vs capacidad de pago/envío (por pagador). Nunca mezclar (signer/payer separados). |
 | `VoteConfirmedOnChain` | Intent vs fact | Voting (off-chain) + ledger observado | Solo `DeliveryConfirmed` cuenta; reintentos y reorganizaciones no deben contaminar el tally. |
 | `MATCH` (single-use) | Evidencia documental vs referencia viva | OCR Provider ≠ Biometric | El examen nace y muere en minutos; la referencia biométrica perdura. El veredicto cruza una vez. |
 | `ChallengeConfirmed` | Canal vs identidad | Verification (OTP) ≠ IAM ≠ Biometric | Probar posesión de canal ≠ probar persona física ≠ identidad técnica. Tres ritmos, tres vocabularios. |
 | `may-process/contact-now?` | Juicio vs ejecución | Consent ≠ todos | El opt-in y la coordinación de erasure son ortogonales; cada dueño borra lo suyo. |
 | Delivery intent | Decidir vs entregar | Todos ≠ Notifications | Notificar es sink genérico email-only con idempotencia; sin reglas de negocio ajenas. |
-| `UserSignedIn` / sesión única | Acceso técnico vs pertenencia | IAM ≠ Membership/Community | Suspender acceso técnico nunca reescribe membresía ni comunidad (R13). |
+| `UserSignedIn` / sesión única | Acceso técnico vs pertenencia | IAM ≠ Membership/Community | Suspender acceso técnico nunca reescribe membresía ni comunidad (sin reescribir membresía). |
 
 Decisión: 11 candidatos promovidos a Bounded Contexts (se excluyó Legacy/RPA por decisión explícita del equipo). El mapa de subdominios de referencia quedó como hipótesis superada donde discrepaba (ver D1–D7 en 4.2.5).
 
 <p align="center">
   <img src="./assets/eventstorm-bigpicture.png" alt="Candidate Context Discovery sobre Big Picture en Miro" width="700"/>
 </p>
-Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). Nota: `assets/candidate-discovery.png` no existe en el repo; se reutiliza el Big Picture consolidado hasta regenerar el corte de candidatos en la herramienta. Los cortes por candidato (1-11) se muestran abajo con sus PNG individuales.
+Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). Los cortes por candidato (1-11) se muestran abajo con sus PNG individuales.
 
 **1. Voting & Verifiable Ledger**
 
@@ -1217,7 +1217,7 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregado `UserWallet`; custodia la capacidad de firma por persona con reconstrucción efímera, excluye pago y envío.
 - **Eventos clave:** `WalletProvisioned`, `KeyReconstructed`, `KeyForgotten`, `WalletSuspended`, `WalletRetired`.
-- **Justificación:** Nada guardado puede firmar por sí solo y signer/payer nunca se mezclan (R6, C-03), por eso se separa de Relay.
+- **Justificación:** Nada guardado puede firmar por sí solo y signer/payer nunca se mezclan (signer/payer separados), por eso se separa de Relay.
 
 **3. Biometric Identity Verification**
 
@@ -1227,7 +1227,7 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregados `BiometricProfile` y `VerificationAttempt`; prueba persona viva contra referencia duradera, excluye examen documental y posesión de canal.
 - **Eventos clave:** `BiometricEnrolled`, `LivenessPassed`, `IdentityVerified`, `VerificationAttemptExpired`, `BiometricProfileRevoked`.
-- **Justificación:** Liveness primero y veredicto binario fresco que Voting consume como `verified-now` (R3); ritmo de minutos distinto al voto.
+- **Justificación:** Liveness primero y veredicto binario fresco que Voting consume como `verified-now` (veredicto fresco); ritmo de minutos distinto al voto.
 
 **4. Blockchain Relay & Transaction Delivery**
 
@@ -1237,19 +1237,17 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregado `DeliveryOrder`; transporta solo contenido ya firmado al ledger, excluye firma y conteo.
 - **Eventos clave:** `AcceptedForDelivery`, `OrderedForSending`, `SendingRecorded`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryAbandoned`.
-- **Justificación:** Orden secuencial por pagador con confirmación terminal y un reintento acotado; solo `DeliveryConfirmed` cuenta para el tally (R5).
+- **Justificación:** Orden secuencial por pagador con confirmación terminal y un reintento acotado; solo `DeliveryConfirmed` cuenta para el tally (solo confirmado cuenta).
 
 **5. IAM**
 
-> Nota: `assets/iam-candidate-discovery.png` no existe en el repo [Por regenerar en Miro]. Se mantiene el detalle textual hasta reponer la captura.
-
 <p align="center">
-  <img src="./assets/eventstorm-bigpicture.png" alt="IAM Candidate Context Discovery pendiente" width="700"/>
+  <img src="./assets/iam-candidate-discovery.png" alt="IAM Candidate Context Discovery" width="700"/>
 </p>
 
 - **Límite:** Agregado `User` (1 por persona); identidad técnica, sesión única y roles de sistema, excluye membresía, comunidad e identidad física.
 - **Eventos clave:** `UserSignedUp`, `UserSignedIn`, `UserSignedOut`, `EmailVerified`, `AccessSuspended`, `AccessRestored`.
-- **Justificación:** Suspender acceso técnico nunca reescribe membresía ni comunidad (R13, Separate Ways); la ejecución de pruebas vive fuera y el juicio dentro.
+- **Justificación:** Suspender acceso técnico nunca reescribe membresía ni comunidad (sin reescribir membresía); la ejecución de pruebas vive fuera y el juicio dentro.
 
 **6. Community Management**
 
@@ -1259,7 +1257,7 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregado `Community`; standing, datos, `VotingPolicy` y administradores, excluye el padrón de miembros.
 - **Eventos clave:** `CommunityRegistered`, `CommunityActivated`, `VotingPolicyDefined`, `CommunitySuspended`, `CommunityArchived`.
-- **Justificación:** La política evoluciona en Community y Voting solo congela una copia al abrir (`QuorumSnapshot`, R1); ritmos de cambio distintos.
+- **Justificación:** La política evoluciona en Community y Voting solo congela una copia al abrir (snapshot de quórum); ritmos de cambio distintos.
 
 **7. Membership**
 
@@ -1269,7 +1267,7 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregado `Membership` (un par persona-comunidad); standing, unidad y rol comunitario, excluye configuración de comunidad y voto.
 - **Eventos clave:** `MembershipActivated`, `MemberMarkedDelinquent`, `MembershipSuspended`, `MembershipTerminated`, `EligibilityJudged`.
-- **Justificación:** Solo `ACTIVE` integra el roster y la elegibilidad se congela al autorizar (`EligibilitySnapshot`, R2); cambios posteriores no reescriben juicios.
+- **Justificación:** Solo `ACTIVE` integra el roster y la elegibilidad se congela al autorizar (elegibilidad congelada); cambios posteriores no reescriben juicios.
 
 **8. Consent & Compliance**
 
@@ -1279,7 +1277,7 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregados `ConsentRecord`, `DataSubjectRequest` y `RetentionPolicy`; opt-in por alcance y coordinación de erasure (Ley 29733), excluye datos ajenos.
 - **Eventos clave:** `ConsentGranted`, `ConsentRevoked`, `ErasureRequested`, `ErasureConfirmed`, `ErasureCompleted`.
-- **Justificación:** Contexto ortogonal que veta (`may-process/contact-now?`) y coordina, pero completa solo cuando cada dueño confirma su borrado (R12).
+- **Justificación:** Contexto ortogonal que veta (`may-process/contact-now?`) y coordina, pero completa solo cuando cada dueño confirma su borrado (coordina borrado).
 
 **9. Document OCR & Face Match Provider**
 
@@ -1289,17 +1287,17 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregado `DocumentExamination` efímero; examen documental con veredicto único, excluye referencia viva y prueba de presencia.
 - **Eventos clave:** `ExaminationRequested`, `DocumentExtracted`, `FacesCompared`, `ExaminationConcluded (MATCH / NO_MATCH / UNREADABLE)`.
-- **Justificación:** El examen nace y muere en minutos mientras la referencia biométrica perdura; el `MATCH` cruza una sola vez hacia Biometric (R7).
+- **Justificación:** El examen nace y muere en minutos mientras la referencia biométrica perdura; el `MATCH` cruza una sola vez hacia Biometric (veredicto single-use).
 
 **10. Verification (OTP)**
 
 <p align="center">
-  <img src="./assets/otp-candidate-discovery.png" alt="OTP Candidate Context Discovery" width="700"/>
+  <img src="./assets/ -candidate-discovery.png" alt="  Candidate Context Discovery" width="700"/>
 </p>
 
 - **Límite:** Agregado `VerificationChallenge` por (persona, propósito); prueba posesión de canal, excluye identidad física y autorización de voto.
 - **Eventos clave:** `ChallengeRequested`, `ChallengeConfirmed`, `ChallengeAttemptFailed`, `ChallengeInvalidated`, `ChallengeExpired`.
-- **Justificación:** Propósitos cerrados en 3 y código que nunca cruza legible; solo el hecho `ChallengeConfirmed` llega a IAM (R9).
+- **Justificación:** Propósitos cerrados en 3 y código que nunca cruza legible; solo el hecho `ChallengeConfirmed` llega a IAM (solo hecho confirmado cruza).
 
 **11. Notifications**
 
@@ -1309,13 +1307,11 @@ Fig. 4.2.2 – Candidate Context Discovery trazado sobre el Big Picture (Miro). 
 
 - **Límite:** Agregado `NotificationDispatch`; sink de entrega email-only por intent, excluye reglas de negocio ajenas.
 - **Eventos clave:** `DeliveryRequested`, `DeliveryRefused`, `DeliveryConfirmed`, `DeliveryFailed`, `DeliveryRetried`.
-- **Justificación:** Todos dependen de él y él de nadie; la misma idempotency key nunca entrega dos veces y el reintento es un intento nuevo (R11).
+- **Justificación:** Todos dependen de él y él de nadie; la misma idempotency key nunca entrega dos veces y el reintento es un intento nuevo (idempotente).
 
 ### **4.2.3. Domain Message Flows Modeling (Domain Storytelling).**
 
-Técnica: **Domain Storytelling** – por cada caso de negocio se modela quién (actor con pictograma), qué hace (acción en lenguaje ubicuo), con qué objeto de trabajo y qué BC responde, en secuencia numerada 1→n sobre el lienzo de la herramienta (Miro / Domain Storytelling Modeler). Los bloques `mermaid sequenceDiagram` se conservan solo como anexo técnico legible en Markdown; la evidencia válida ante enunciado es la captura de la herramienta con flechas numeradas. Tres historias cubren el flujo crítico US-19→US-28 + TS-01/TS-02.
-
-> Estado de imágenes: `assets/story-enrollment.png`, `assets/story-vote.png` y `assets/story-close-audit.png` no existen en el repo (imágenes rotas). Se mantienen las referencias marcadas [Por regenerar en herramienta] hasta reponer las capturas. No usar `media/image1.png`; todo vive en `assets/`.
+Técnica: **Domain Storytelling** – por cada caso de negocio se modela quién (actor), qué hace (acción en lenguaje ubicuo), con qué objeto de trabajo y qué BC responde, en secuencia numerada 1→n. El modelado se expresa con bloques `mermaid sequenceDiagram` legibles en Markdown. Tres historias cubren el flujo crítico US-19→US-28 + TS-01/TS-02.
 
 #### Historia 1 — Enrollment y verificación pre-voto (US-16, US-19, US-20, US-21)
 
@@ -1324,8 +1320,8 @@ Propietario demuestra identidad una vez (enrollment) y luego prueba presencia an
 | Paso | Actor → Acción (lenguaje ubicuo) | Objeto | BC que responde | Evento resultante |
 |---|---|---|---|---|
 | 1 | Propietario → otorga consentimiento biométrico | `ConsentRecord` | Consent & Compliance | `ConsentGranted` (US-16) |
-| 2 | Propietario → solicita examen (pertenece ≥1 comunidad) | `DocumentExamination` | Membership → OCR Provider | Precondición `belongs?` (R8), US-19 |
-| 3 | OCR → extrae + compara | Veredicto | OCR Provider | `MATCH/NO_MATCH/UNREADABLE` single-use (R7) |
+| 2 | Propietario → solicita examen (pertenece ≥1 comunidad) | `DocumentExamination` | Membership → OCR Provider | Precondición `belongs?` (pertenencia previa), US-19 |
+| 3 | OCR → extrae + compara | Veredicto | OCR Provider | `MATCH/NO_MATCH/UNREADABLE` single-use (veredicto single-use) |
 | 4 | Biometric → crea referencia | `BiometricProfile` sin imágenes crudas | Biometric | `BiometricEnrolled` (US-20) → `ProvisionWallet` (TS-01) |
 | 5 | Antes de cada voto: Propietario → prueba presencia | `VerificationAttempt` | Biometric | `VERIFIED` fresco (US-21) |
 
@@ -1339,9 +1335,9 @@ sequenceDiagram
     participant W as Wallet Custody
     P->>C: Otorga consentimiento biométrico (US-16)
     P->>M: Solicita examen (pertenece ≥1 comunidad)
-    M-->>O: Precondición: belongs? (R8)
+    M-->>O: Precondición: belongs? (pertenencia previa)
     O->>O: Extrae + compara → MATCH / NO_MATCH / UNREADABLE (US-19)
-    O-->>B: MATCH single-use (R7)
+    O-->>B: MATCH single-use (veredicto single-use)
     B->>B: Crea BiometricProfile, sin imágenes crudas (US-20)
     B->>W: Referencia lista → ProvisionWallet (TS-01)
     Note over P,B: Antes de cada voto (US-21)
@@ -1349,10 +1345,7 @@ sequenceDiagram
     B-->>P: Veredicto binario con ventana de frescura
 ```
 
-<p align="center">
-  <img src="./assets/story-enrollment.png" alt="Domain Storytelling enrollment en herramienta [Por regenerar]" width="700"/>
-</p>
-Fig. H1 – Enrollment en Domain Storytelling (herramienta). [Por regenerar captura numerada 1→5 en Miro/Modeler].
+Fig. H1 – Enrollment en Domain Storytelling (ver diagrama superior).
 
 #### Historia 2 — Voto verificable sin gestionar wallet (US-23, US-24, US-25, TS-01, TS-02, US-26)
 
@@ -1360,11 +1353,11 @@ Miembro elegible y verificado obtiene permiso breve, firma individualmente y sig
 
 | Paso | Actor → Acción | Objeto | BC que responde | Evento |
 |---|---|---|---|---|
-| 1 | Directiva → abre propuesta | `QuorumSnapshot` | Community → Voting | `ProposalOpened` (US-23, R1) |
-| 2 | Propietario → solicita autorización | `VoteAuthorization` | Voting → Membership/Biometric | `EligibilitySnapshot` (R2) + `verified-now` (R3) → US-24 |
-| 3 | Propietario → emite voto | `Vote` (intención) | Voting → Wallet | Firma individual efímera (R4, TS-01) → US-25 |
-| 4 | Voting → entrega solo-firmado | `DeliveryOrder` | Relay | `DeliveryConfirmed/Failed` (R5, TS-02) |
-| 5 | Voting → avisa comprobante | `NotificationDispatch` | Notifications | Aviso idempotente (US-26, R11) |
+| 1 | Directiva → abre propuesta | `QuorumSnapshot` | Community → Voting | `ProposalOpened` (US-23, snapshot de quórum) |
+| 2 | Propietario → solicita autorización | `VoteAuthorization` | Voting → Membership/Biometric | `EligibilitySnapshot` (elegibilidad congelada) + `verified-now` (veredicto fresco) → US-24 |
+| 3 | Propietario → emite voto | `Vote` (intención) | Voting → Wallet | Firma individual efímera (firma individual) → US-25 |
+| 4 | Voting → entrega solo-firmado | `DeliveryOrder` | Relay | `DeliveryConfirmed/Failed` (solo confirmado cuenta) |
+| 5 | Voting → avisa comprobante | `NotificationDispatch` | Notifications | Aviso idempotente (US-26) |
 
 ```mermaid
 sequenceDiagram
@@ -1376,23 +1369,20 @@ sequenceDiagram
     participant W as Wallet
     participant R as Relay
     participant N as Notifications
-    Cm->>V: Política + standing (snapshot al abrir, US-23, R1)
+    Cm->>V: Política + standing (snapshot al abrir, US-23, snapshot de quórum)
     P->>V: Solicita autorización (US-24)
-    V->>Mb: ¿Elegible ahora? → EligibilitySnapshot (R2)
-    V->>B: ¿Verified-now fresco? (R3)
+    V->>Mb: ¿Elegible ahora? → EligibilitySnapshot (elegibilidad congelada)
+    V->>B: ¿Verified-now fresco? (veredicto fresco)
     V-->>P: Autorización single-use breve / denegación razonada
     P->>V: Elige opción + emite voto (US-25)
-    V->>W: Firma este contenido específico (R4)
+    V->>W: Firma este contenido específico (firma individual)
     W-->>V: Contenido firmado (clave olvidada en la op.)
-    V->>R: Entrega solo-firmado (R5)
+    V->>R: Entrega solo-firmado (solo confirmado cuenta)
     R-->>V: DeliveryConfirmed / Failed / Abandoned
-    V->>N: Aviso comprobante (US-26, R11)
+    V->>N: Aviso comprobante (US-26)
 ```
 
-<p align="center">
-  <img src="./assets/story-vote.png" alt="Domain Storytelling voto verificable en herramienta [Por regenerar]" width="700"/>
-</p>
-Fig. H2 – Voto verificable en Domain Storytelling (herramienta). [Por regenerar captura numerada 1→5].
+Fig. H2 – Voto verificable en Domain Storytelling (ver diagrama superior).
 
 #### Historia 3 — Cierre, conteo y auditoría (US-27, US-28) + supresión coordinada (US-17)
 
@@ -1402,7 +1392,7 @@ Directiva cierra; cualquiera audita sin confiar en el operador. En paralelo, el 
 |---|---|---|---|---|
 | 1 | Directiva → cierra propuesta | `Proposal` | Voting | Tally solo `CONFIRMED` + `QuorumSnapshot` (US-27) |
 | 2 | Auditor/Propietario → consulta resultado | Evidencia | Voting | Conteos, cuórum, firma EIP-712 + tx hash `ecrecover()` (US-28) |
-| 3 | Titular → solicita supresión | `DataSubjectRequest` | Consent coordina con dueños | `ErasureRequested/Confirmed/Complete` sin reescribir ledger (US-17, R12) |
+| 3 | Titular → solicita supresión | `DataSubjectRequest` | Consent coordina con dueños | `ErasureRequested/Confirmed/Complete` sin reescribir ledger (US-17) |
 
 ```mermaid
 sequenceDiagram
@@ -1418,14 +1408,11 @@ sequenceDiagram
     V-->>A: Conteos, cuórum, firma EIP-712 + tx hash (ecrecover verificable)
     T->>C: Solicita supresión (US-17)
     C->>V: Coordina (votos en vuelo vs hechos on-chain, O5)
-    C->>A: Completa solo cuando cada dueño confirma (R12)
+    C->>A: Completa solo cuando cada dueño confirma (coordina borrado)
     Note over V,R: Ledger inmutable: se coordina, no se borra
 ```
 
-<p align="center">
-  <img src="./assets/story-close-audit.png" alt="Domain Storytelling cierre y auditoria en herramienta [Por regenerar]" width="700"/>
-</p>
-Fig. H3 – Cierre y auditoría en Domain Storytelling (herramienta). [Por regenerar captura numerada 1→3]. Los diagramas `sequenceDiagram` anteriores quedan como anexo técnico; la figura válida es la captura numerada de la herramienta.
+Fig. H3 – Cierre y auditoría en Domain Storytelling (ver diagrama superior).
 
 ---
 
@@ -1480,10 +1467,10 @@ Agregado `User`. Identidad técnica y sesión única. Suspender acceso no reescr
 
 <p align="center"><img src="./assets/Bounded Context Canvases-8.jpg" alt="BC Canvas 08 IAM" width="700"/></p>
 
-#### BC-09 — Verification OTP (Generic)
+#### BC-09 — Verification   (Generic)
 Agregado `VerificationChallenge`. Prueba posesión de canal, propósitos cerrados, código nunca cruza legible.
 
-<p align="center"><img src="./assets/Bounded Context Canvases-9.jpg" alt="BC Canvas 09 Verification OTP" width="700"/></p>
+<p align="center"><img src="./assets/Bounded Context Canvases-9.jpg" alt="BC Canvas 09 Verification  " width="700"/></p>
 
 #### BC-10 — Document OCR & Face Match Provider (Generic)
 Agregado `DocumentExamination` efímero. Veredicto `MATCH/NO_MATCH/UNREADABLE` single-use hacia Biometric.
@@ -1502,19 +1489,19 @@ Se descartaron:
 - (a) fusionar Wallet+Relay (destruye separación signer/payer, viola C-03);
 - (b) lista de miembros embebida en Community (acopla ritmos, reescribe historia);
 - (c) `Proposal` gigante con votos embebidos (contención transaccional);
-- (d) OTP para autorización de voto (mezcla canal con identidad);
+- (d)   para autorización de voto (mezcla canal con identidad);
 - (e) preferencias de notificación locales (duplica Consent).
-- (f) degradar Verification (OTP), Document OCR y Notifications a adaptadores/puertos dentro de IAM / Biometric / Infraestructura — evaluada a pedido de revisión docente. Pro: 8 BC en vez de 11, menos OHS. Con: mezcla ritmos y vocabularios distintos, pierde reemplazabilidad C-07 y debilita R7/R9/R11. Conclusión: se mantienen como BC (ver justificación abajo).
+- (f) degradar Verification (OTP), Document OCR y Notifications a adaptadores/puertos dentro de IAM / Biometric / Infraestructura — evaluada a pedido de revisión docente. Pro: 8 BC en vez de 11, menos OHS. Con: mezcla ritmos y vocabularios distintos, pierde reemplazabilidad C-07 y debilita la verificación single-use, el hecho confirmado y la idempotencia. Conclusión: se mantienen como BC (ver justificación abajo).
 
 Se confirma el mapa de 11 bounded contexts (1 Core, 7 Supporting, 3 Generic).
 
-#### Justificación de granularidad: por qué OTP, OCR y Notifications son BC y no adaptadores
+#### Justificación de granularidad: por qué  , OCR y Notifications son BC y no adaptadores
 
 | Candidato a degradar | Si fuera adaptador | Por qué se mantiene como BC en VotoChain |
 |---|---|---|
-| Verification (OTP) dentro de IAM | Mezcla probar posesión de canal (`ChallengeRequested/Confirmed`, minutos, intentos acotados) con identidad técnica y sesión única (`User/Session`, horas). Violaría R9: el código legible podría cruzar. | Ritmo, vocabulario y secretos distintos. OTP es reemplazable (SMTP/OTP provider) tras puerto C-07. ENT-02/ENT-03 exigen alternativa asistida sin contaminar sesión. |
-| Document OCR dentro de Biometric | Mezcla examen efímero con purga (`DocumentExamination`, nace/muere en minutos, 3 veredictos + 5 razones) con referencia duradera (`BiometricProfile`). Contaminaría referencia viva con artefactos temporales e imágenes. | Ciclo de vida y Ley 29733 exigen frontera R7/R8: solo `MATCH` single-use cruza, nada tipo-imagen. Proveedor Google Document AI reemplazable C-07. |
-| Notifications como librería | Pierde idempotencia explícita e `idempotency key` (R11) y el veto de Consent (R10/R12: `may-process/contact-now?`). Cada BC reimplementaría reintentos. | Sink puro genérico email-only: todos dependen de él, él de nadie. Garantiza exactly-once y trazabilidad de avisos (US-26, comprobantes, DSAR). |
+| Verification (OTP) dentro de IAM | Mezcla probar posesión de canal (`ChallengeRequested/Confirmed`, minutos, intentos acotados) con identidad técnica y sesión única (`User/Session`, horas). Violaría la frontera de verificación: el código legible podría cruzar. | Ritmo, vocabulario y secretos distintos.   es reemplazable (proveedor de correo/OTP) tras puerto C-07. ENT-02/ENT-03 exigen alternativa asistida sin contaminar sesión. |
+| Document OCR dentro de Biometric | Mezcla examen efímero con purga (`DocumentExamination`, nace/muere en minutos, 3 veredictos + 5 razones) con referencia duradera (`BiometricProfile`). Contaminaría referencia viva con artefactos temporales e imágenes. | Ciclo de vida y Ley 29733 exigen frontera de verificación: solo `MATCH` single-use cruza, nada tipo-imagen. Proveedor biométrico externo reemplazable C-07. |
+| Notifications como librería | Pierde idempotencia explícita e `idempotency key` y el veto de Consent (permiso y borrado coordinado: `may-process/contact-now?`). Cada BC reimplementaría reintentos. | Sink puro genérico email-only: todos dependen de él, él de nadie. Garantiza exactly-once y trazabilidad de avisos (US-26, comprobantes, DSAR). |
 
 Conclusión: mantener 11 BC por separación de ritmos, vocabularios, secretos y reemplazabilidad. La alternativa 8+3 adaptadores queda documentada como opción simplificada si el costo de 3 OHS extra supera el beneficio.
 
@@ -1554,33 +1541,33 @@ La arquitectura traduce drivers D-01..D-22 y constraints C-01..C-07 a containers
 Vista de paisaje: **VotoChain como un solo sistema** dentro de su ecosistema (personas, comunidades, ledger público, proveedores, SUNARP). Los containers internos (Landing, Web App, API, Relayer) no van en Landscape; van en 4.3.3 Container.
 
 <p align="center">
-  <img src="./assets/c4-landscape.png" alt="System Landscape VotoChain como sistema unico [Por regenerar]" width="700"/>
+  <img src="./assets/c4-landscape.png" alt="System Landscape VotoChain como sistema unico" width="700"/>
 </p>
 
-[Por regenerar `c4-landscape.png` en Structurizr/Miro: 1 caja central “VotoChain”, alrededor Directiva/Admin edificio, Propietario votante, Admin Cumplimiento, Visitante, Polygon, Google Document AI, AWS Rekognition, SMTP, SUNARP/notaría (externo manual). Sin descomponer Landing/WebApp/API/Relayer dentro.]
+Fig. 4.3.1 – System Landscape (VotoChain como sistema único).
 
-Explicación corregida: VotoChain es un único sistema. Las personas (directiva, propietario, admin cumplimiento, visitante) interactúan con VotoChain; VotoChain interactúa con sistemas externos (Polygon, Document AI, Rekognition, SMTP) y con entidades manuales (SUNARP/notaría). Todo el dominio vive en el monolito NestJS (11 módulos, uno por BC). El worker relayer es el único que escribe en Polygon (paga gas). OCR/biometría y correo son externos reemplazables tras puertos. Lecturas de verificación on-chain (`ecrecover()`) pueden hacerse directo contra Polygon desde la web para auditoría independiente sin pasar por la API.
+VotoChain es un único sistema. Las personas (directiva, propietario, admin cumplimiento, visitante) interactúan con VotoChain; VotoChain interactúa con sistemas externos (red blockchain pública, proveedores biométricos, correo) y con entidades manuales (SUNARP/notaría). Todo el dominio vive en el monolito modular (11 módulos, uno por BC). El worker relayer es el único que escribe en el ledger (paga gas). OCR/biometría y correo son externos reemplazables tras puertos. La verificación on-chain puede hacerse directo contra la red desde la web para auditoría independiente sin pasar por la API.
 
 ### **4.3.2. Software Architecture Context Level Diagrams.**
 
 Un recuadro = “VotoChain Platform” en el centro; alrededor, usuarios y sistemas externos, incluyendo **Admin Cumplimiento** (presente en historias US-18 y en Landscape).
 
 <p align="center">
-  <img src="./assets/c4-context.png" alt="C4 Context con Admin Cumplimiento [Por regenerar]" width="700"/>
+  <img src="./assets/c4-context.png" alt="C4 Context con Admin Cumplimiento" width="700"/>
 </p>
 
-[Por regenerar `c4-context.png`: centro “VotoChain Platform”, alrededor Directiva/Admin edificio, Propietario votante, **Admin Cumplimiento**, Visitante, Polygon, Google Document AI, AWS Rekognition, SMTP, SUNARP/notaría.]
+Fig. 4.3.2 – Context (VotoChain Platform al centro, actores y sistemas externos alrededor).
 
 | Interacción | Dirección | Protocolo / contrato | Driver que satisface |
 |---|---|---|---|
 | Gestionar comunidad/propuesta, votar, auditar | Directiva / Propietario / Visitante → Platform | HTTPS REST versionado + idempotency keys (C-06) | D-22 usabilidad no-técnica, D-13 pico interactivo |
-| Revisar consentimientos, atender DSAR, definir retención, auditar | Admin Cumplimiento → Platform | HTTPS REST versionado (US-17/US-18), vetos `may-process/contact-now?` (R12) | Privacidad Ley 29733, D-06 |
+| Revisar consentimientos, atender DSAR, definir retención, auditar | Admin Cumplimiento → Platform | HTTPS REST versionado (US-17/US-18), vetos `may-process/contact-now?` (coordina borrado) | Privacidad Ley 29733, D-06 |
 | Publicar voto / leer confirmación | Platform ↔ Polygon | JSON-RPC, EIP-712 firmado por `UserWallet`, `ecrecover()` público (C-02) | D-03/D-05 verificabilidad, D-16 exactly-once |
 | OCR DNI | Platform → Document AI | HTTPS tras puerto `DocumentExamination` (C-07) | D-14 examen con purga, D-19 reemplazable |
 | Liveness + comparación | Platform → Rekognition | HTTPS tras puerto `VerificationAttempt` (C-07) | D-09 liveness-first, D-06 privacidad |
-| Email | Platform → SMTP | SMTP tras puerto `NotificationDispatch`, email-only (C-07) | D-16 sin duplicados (R11) |
+| Email | Platform → SMTP | SMTP tras puerto `NotificationDispatch`, email-only (C-07) | D-16 sin duplicados (idempotente) |
 
-El Admin Cumplimiento no vota ni gestiona asambleas; solo veta tratamientos y coordina supresión (R12), por eso aparece en Context/Landscape pero no en Voting.
+El Admin Cumplimiento no vota ni gestiona asambleas; solo veta tratamientos y coordina supresión (coordina borrado), por eso aparece en Context/Landscape pero no en Voting.
 
 ### **4.3.3. Software Architecture Container Level Diagrams.**
 
@@ -1601,30 +1588,58 @@ Despliegue MVP en **Google Cloud Platform** (región `southamerica-east1` sugeri
 
 # **Capítulo V: Tactical-Level Software Design.**
 
-Convención del capítulo: narrativa en español, clases/VOs/hechos en inglés (`Proposal`, `VoteCast`, `QuorumSnapshot`, `EligibilitySnapshot`, `UserWallet`, `DeliveryOrder`, `VerificationAttempt`, `ConsentRecord`, `NotificationDispatch`). Eventos como clases con sufijo `Event` (`ProposalOpenedEvent`), wire como string (`'ProposalOpened'`). Se usa `standing` en código/diagramas/tablas (`situación/estado` solo como glosa ES). Leyenda ER: `TEXT=VARCHAR/TEXT, JSONB=documento, TIMESTAMPTZ=fecha, INTEGER=número, BOOLEAN=booleano`. Pies: `Fig. 5.X.Y – … Elaborado en Structurizr/Miro. Fuente: elaboración propia.` Diagramas C4 y UML/ER se exportan a `assets/c5-*.png`; abajo va el DSL/código fuente + figura.
+Este capítulo detalla el diseño táctico de los 11 bounded contexts: agregados, servicios, repositorios e invariantes (5.X.1), interfaz REST (5.X.2), aplicación (5.X.3), infraestructura (5.X.4), componentes (5.X.5) y código —clases y base de datos— (5.X.6). El diseño distingue intención (`VoteCast`) de hecho (`VoteConfirmedOnChain`): solo lo confirmado cuenta.
 
 | N.º | Contexto | Tipo | Agregados | Trazabilidad |
 |---|---|---|---|---|
-| 5.1 | Voting & Verifiable Ledger | Core | `Proposal`, `VoteAuthorization`, `Vote` | US-22..US-28, R1..R5, D-01/D-03/D-05 |
-| 5.2 | Cryptographic Wallet Custody | Supporting | `UserWallet` | TS-01, R4/R6, C-03 |
-| 5.3 | Biometric Identity Verification | Supporting | `BiometricProfile`, `VerificationAttempt` | US-19..US-21, R3/R7, D-09/D-06 |
-| 5.4 | Blockchain Relay & Transaction Delivery | Supporting | `DeliveryOrder` | TS-02, R5, D-05/D-16 |
-| 5.5 | IAM | Supporting | `User` | US-04..US-07, R9/R13/R16, D-22 |
-| 5.6 | Community Management | Supporting | `Community` | US-08..US-11, R1/R15, D-22 |
-| 5.7 | Membership | Supporting | `Membership` | US-12..US-15, R2/R8/R15, D-13 |
-| 5.8 | Consent & Compliance | Supporting | `ConsentRecord`, `DataSubjectRequest`, `RetentionPolicy` | US-16..US-18, R12, Ley 29733 |
-| 5.9 | Document OCR & Face Match Provider | Generic | `DocumentExamination` | US-19, R7/R8, D-14/C-07 |
-| 5.10 | Verification (OTP) | Generic | `VerificationChallenge` | US-05/US-07, R9/R10, C-07 |
-| 5.11 | Notifications | Generic | `NotificationDispatch` | TS-03/US-26, R10/R11/R14, D-16 |
+| 5.1 | Voting & Verifiable Ledger | Core | `Proposal`, `VoteAuthorization`, `Vote` | US-22..US-28, D-01/D-03/D-05 |
+| 5.2 | Cryptographic Wallet Custody | Supporting | `UserWallet` | TS-01, C-03 |
+| 5.3 | Biometric Identity Verification | Supporting | `BiometricProfile`, `VerificationAttempt` | US-19..US-21, D-09/D-06 |
+| 5.4 | Blockchain Relay & Transaction Delivery | Supporting | `DeliveryOrder` | TS-02, D-05/D-16 |
+| 5.5 | IAM | Supporting | `User` | US-04..US-07, D-22 |
+| 5.6 | Community Management | Supporting | `Community` | US-08..US-11, D-22 |
+| 5.7 | Membership | Supporting | `Membership` | US-12..US-15, D-13 |
+| 5.8 | Consent & Compliance | Supporting | `ConsentRecord`, `DataSubjectRequest`, `RetentionPolicy` | US-16..US-18, Ley 29733 |
+| 5.9 | Document OCR & Face Match Provider | Generic | `DocumentExamination` | US-19, D-14/C-07 |
+| 5.10 | Verification (OTP) | Generic | `VerificationChallenge` | US-05/US-07, C-07 |
+| 5.11 | Notifications | Generic | `NotificationDispatch` | TS-03/US-26, D-16 |
 
 ## **5.1. Voting & Verifiable Ledger (Core).**
-Responsabilidad: convertir intención verificable en hecho observado. Solo `CONFIRMED` cuenta. Trazabilidad: US-22..US-28, R1..R5.
+Responsabilidad: convertir intención verificable en hecho observado. Solo `CONFIRMED` cuenta. Trazabilidad: US-22..US-28.
 
 ### **5.1.1. Domain Layer.**
-Agregados: `Proposal(id, communityId, status DRAFT>OPEN>CLOSED>TALLIED, options, quorumSnapshot, tally): create/open(quorum)/close/tallyVotes/assertOpen/assertChoice`; `VoteAuthorization(id, proposalId, voterAddress, standing PENDING/CONSUMED/EXPIRED/DENIED, denialReason, expiresAt): request/grant/deny/consume/expire` (máx un PENDING por pareja); `Vote(id, proposalId, voterAddress, choice, nonce, signature, txReference, standing SIGNED/QUEUED/SENT/CONFIRMED/FAILED): buildMessage/cast/markQueued/markSent/markConfirmed/markFailed` (intención vs hecho, FAILED reintenta misma identidad, nunca voto nuevo).
-VOs: `ProposalId/AuthorizationId/VoteId/CommunityId, VoterAddress (normalizada, firmante==declarado), Choice (en ballot), BallotOptions (≥2, fijo al abrir), Signature (EIP-712 sobre propuesta/votante/opción/nonce), VoteNonce (fresco), QuorumSnapshot (threshold+basis, verdictFor, una escritura al abrir), EligibilitySnapshot (congelado al autorizar), TransactionReference (txHash+bloque, observada)`.
-Servicios: `ProposalCommandService (draft/open/close/tally), VoteAuthorizationCommandService (request/grant/deny/expire), VoteCommandService (cast atómico consume+emite, markQueued/Sent/Confirmed/Failed), ProposalQueryService, VoteQueryService, SignaturePolicy (recover), QuorumPolicy (verdict)`. Repos: `ProposalRepository(findById/save), VoteAuthorizationRepository, VoteRepository` (listados/tally/recibo/prueba como queries).
-Invariantes: quórum una escritura; solo propuesta abierta acepta; solo CONFIRMED suma; propuesta nunca contiene votos; firma ata 4; segundo CONFIRMED = replay; nada cambia tras CONFIRMED. Hechos (`Event`): `ProposalDrafted/Opened/Closed/Tallied, QuorumReached/NotReached, VoteAuthorizationRequested/Granted/Denied/Consumed/Expired, VoteMessageBuilt, VoteCast, SignedVoteQueued, TransactionSent, VoteConfirmedOnChain, TransactionFailed, ReplayRejected, LateVoteRejected`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `Proposal` | `id, communityId, standing DRAFT>OPEN>CLOSED>TALLIED, options, quorumSnapshot, tally` | `create, open(quorum), close, tallyVotes, assertOpen, assertChoice` | avance solo hacia adelante, sin reapertura |
+| `VoteAuthorization` | `id, proposalId, voterAddress, standing PENDING/CONSUMED/EXPIRED/DENIED, denialReason, expiresAt` | `request, grant, deny, consume, expire` | máx un `PENDING` por pareja; finales terminales |
+| `Vote` | `id, proposalId, voterAddress, choice, nonce, signature, txReference, standing SIGNED/QUEUED/SENT/CONFIRMED/FAILED` | `buildMessage, cast, markQueued, markSent, markConfirmed, markFailed` | intención vs hecho; `FAILED` reintenta misma identidad, nunca voto nuevo |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `ProposalId, AuthorizationId, VoteId, CommunityId` | identidades estables, nunca intercambiables |
+| `VoterAddress` | normalizada; firmante recuperado debe igualar al declarado |
+| `Choice` | debe pertenecer al ballot |
+| `BallotOptions` | ≥2 opciones distintas; fijo al abrir |
+| `Signature` | EIP-712 sobre propuesta/votante/opción/nonce |
+| `VoteNonce` | fresco por autorización; impide reutilización |
+| `QuorumSnapshot` | threshold + basis; `verdictFor`; una escritura al abrir |
+| `EligibilitySnapshot` | juicio congelado al autorizar |
+| `TransactionReference` | txHash + bloque; observada, nunca inventada |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `ProposalCommandService` | comando | `draft, open, close, tally` |
+| `VoteAuthorizationCommandService` | comando | `request, grant, deny, expire` |
+| `VoteCommandService` | comando | `cast` (atómico consume+emite), `markQueued, markSent, markConfirmed, markFailed` |
+| `ProposalQueryService` | consulta | `getById, listByCommunityAndStatus, getTally` |
+| `VoteQueryService` | consulta | `getReceipt, getProof` |
+| `SignaturePolicy, QuorumPolicy` | puerto | `recover`, `verdict` |
+| `ProposalRepository, VoteAuthorizationRepository, VoteRepository` | repo | `findById, save` (listados/tally/recibo/prueba como queries) |
+#### Invariantes
+* quórum una escritura; solo propuesta abierta acepta; solo `CONFIRMED` suma; propuesta nunca contiene votos; firma ata los 4; segundo `CONFIRMED` = replay; nada cambia tras `CONFIRMED`.
+#### Hechos (`Event`)
+* `ProposalDraftedEvent`, `ProposalOpenedEvent`, `ProposalClosedEvent`, `ProposalTalliedEvent`, `QuorumReachedEvent`, `QuorumNotReachedEvent`, `VoteAuthorizationRequestedEvent`, `VoteAuthorizationGrantedEvent`, `VoteAuthorizationDeniedEvent`, `VoteAuthorizationConsumedEvent`, `VoteAuthorizationExpiredEvent`, `VoteMessageBuiltEvent`, `VoteCastEvent`, `SignedVoteQueuedEvent`, `TransactionSentEvent`, `VoteConfirmedOnChainEvent`, `TransactionFailedEvent`, `ReplayRejectedEvent`, `LateVoteRejectedEvent`.
 
 ### **5.1.2. Interface Layer.**
 Controladores delgados + `VotingExceptionFilter` (negocio→HTTP). Idempotencia por header `Idempotency-Key` en emisión.
@@ -1649,54 +1664,132 @@ Crear (`create`→`ProposalDraftedEvent`); Abrir (lee policy vía ACL, `open`→
 Postgres esquema propio: `proposals/authorizations/votes + request_log(idempotencyKey→voteId)`. Unicidad parcial: un PENDING por (propuesta,votante), un CONFIRMED por pareja. VOs como JSONB. ACLs: Comunidad (policy), Padrón (elegibilidad), Presencia (veredicto), Custodia (firma), Relay (entrega), Avisos (recibo). Puertos `SignaturePolicy/QuorumPolicy` con variante operativa/prueba.
 
 ### **5.1.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.1" {
-  model {
-    v = softwareSystem "VotoChain" {
-      c = container "5.1 Voting" {
-        rest = component "ProposalVoteController" "REST"
-        filter = component "VotingExceptionFilter" "negocio a HTTP"
-        cmd = component "ProposalVoteCmdService" "comandos"
-        qry = component "ProposalVoteQryService" "consultas"
-        dom = component "VotingDomain" "Proposal/Auth/Vote + VOs"
-        repo = component "VotingPersistence" "3 tablas + idempotencia"
-        aclCom = component "CommunityAcl" "ACL"
-        aclPad = component "MembershipAcl" "ACL"
-        aclPre = component "PresenceAcl" "ACL"
-        aclFir = component "CustodyAcl" "ACL"
-        aclRel = component "RelayAcl" "ACL"
-        evh = component "VotingEventHandlers" "handlers"
-      }
-    }
-    p = softwareSystem "Polygon" { tags "External" }
-    v.c.rest -> v.c.cmd "comandos"; v.c.rest -> v.c.qry "consultas"
-    v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"
-    v.c.cmd -> v.c.aclCom "policy"; v.c.cmd -> v.c.aclPad "elegibilidad"
-    v.c.cmd -> v.c.aclPre "verified-now"; v.c.cmd -> v.c.aclFir "firma"
-    v.c.evh -> v.c.aclRel "signed-only"; v.c.aclRel -> p "JSON-RPC"
-  }
-  views { component v.c "C5-01" { include *; title "Fig. 5.1.5" } }
-}
-```
-Fig. 5.1.5 – Componentes Voting. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-01-voting-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-01.png" alt="Fig. 5.1.5 - Voting, componentes" width="700"/>
+</p>
+Fig. 5.1.5 – Voting, componentes.
 
 ### **5.1.6. Code Level Diagrams.**
 #### **5.1.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class Proposal { -ProposalId id -CommunityId communityId -ProposalStatus standing -BallotOptions options -QuorumSnapshot quorum -Tally tally +create()$ +open(quorum) +close() +tallyVotes() +assertOpen() +assertChoice() }
-  class VoteAuthorization { -AuthorizationId id -ProposalId proposalId -VoterAddress voter -AuthorizationStatus standing -DenialReason reason -Date expiresAt +request()$ +grant() +deny() +consume() +expire() }
-  class Vote { -VoteId id -ProposalId proposalId -VoterAddress voter -Choice choice -VoteNonce nonce -Signature signature -TransactionReference txRef -VoteStatus standing +buildMessage()$ +cast() +markQueued() +markSent() +markConfirmed() +markFailed() }
-  class QuorumSnapshot { -number threshold -string basis +verdictFor(turnout) bool }
-  class EligibilitySnapshot { -string verdict -string standing }
-  class VoterAddress { -string value }
-  class Signature { -string r -string s -int v }
+  class Proposal {
+    -ProposalId id
+    -CommunityId communityId
+    -ProposalStatus standing
+    -BallotOptions options
+    -QuorumSnapshot quorum
+    -Tally tally
+    +Proposal create(ProposalId id, CommunityId communityId, BallotOptions options)$
+    +void open(QuorumSnapshot quorum)
+    +void close()
+    +void tallyVotes(List~int~ counts, int turnout)
+    +void assertOpen()
+    +void assertChoice(Choice c)
+  }
+  class VoteAuthorization {
+    -AuthorizationId id
+    -ProposalId proposalId
+    -VoterAddress voter
+    -AuthorizationStatus standing
+    -DenialReason denialReason
+    -date expiresAt
+    +VoteAuthorization request(AuthorizationId id, ProposalId proposalId, VoterAddress voter, date ttl)$
+    +void grant(EligibilitySnapshot eligibility)
+    +void deny(DenialReason reason)
+    +void consume(VoteId voteId)
+    +void expire()
+  }
+  class Vote {
+    -VoteId id
+    -ProposalId proposalId
+    -VoterAddress voter
+    -Choice choice
+    -VoteNonce nonce
+    -Signature signature
+    -TransactionReference txRef
+    -VoteStatus standing
+    +string buildMessage(ProposalId proposalId, VoterAddress voter, Choice choice, VoteNonce nonce)$
+    +Vote cast(VoteId id, ProposalId proposalId, VoterAddress voter, Choice choice, VoteNonce nonce, Signature sig, VoterAddress recovered)$
+    +void markQueued()
+    +void markSent(TransactionReference ref)
+    +void markConfirmed(TransactionReference ref, int block)
+    +void markFailed(string reason, boolean retryable)
+  }
+  class QuorumSnapshot {
+    -int threshold
+    -string basis
+    +boolean verdictFor(int turnout)
+  }
+  class EligibilitySnapshot {
+    -string verdict
+    -string standing
+  }
+  class VoterAddress {
+    -string value
+  }
+  class Signature {
+    -string r
+    -string s
+    -int v
+  }
+  class VoteNonce {
+    -string value
+  }
+  class Choice {
+    -string value
+  }
+  class BallotOptions {
+    -List~Choice~ options
+  }
+  class TransactionReference {
+    -string txHash
+    -int blockNumber
+  }
+  class Tally {
+    -List~int~ counts
+    -int turnout
+  }
+  class DenialReason {
+    -string value
+  }
+  class ProposalStatus {
+    DRAFT
+    OPEN
+    CLOSED
+    TALLIED
+  }
+  class VoteStatus {
+    SIGNED
+    QUEUED
+    SENT
+    CONFIRMED
+    FAILED
+  }
+  class AuthorizationStatus {
+    PENDING
+    CONSUMED
+    EXPIRED
+    DENIED
+  }
   Proposal "1" --> "1" QuorumSnapshot : decide bajo
+  Proposal "1" --> "1" BallotOptions : ofrece
+  Proposal "1" --> "1" ProposalStatus : clasifica en
+  Proposal "1" --> "1" Tally : acumula
   Vote "1" --> "1" Proposal : sobre
   VoteAuthorization "1" --> "1" Proposal : para
+  VoteAuthorization "1" --> "1" AuthorizationStatus : clasifica en
+  VoteAuthorization "1" --> "1" VoterAddress : autoriza a
+  VoteAuthorization "1" --> "1" EligibilitySnapshot : congela
+  VoteAuthorization "1" --> "1" DenialReason : niega con
   Vote "1" --> "1" Signature : porta
+  Vote "1" --> "1" Choice : elige
+  Vote "1" --> "1" VoteStatus : clasifica en
+  Vote "1" --> "1" VoterAddress : declara
+  Vote "1" --> "1" VoteNonce : distingue con
+  Vote "1" --> "1" TransactionReference : confirma con
 ```
-Fig. 5.1.6.1 – Clases Voting (completas con VOs). Elaborado en Miro. Fuente: elaboración propia. `assets/c5-01-voting-class.png` [Por exportar PNG].
+Fig. 5.1.6.1 – Clases Voting.
 
 #### **5.1.6.2. Database Design Diagram.**
 ```mermaid
@@ -1709,12 +1802,33 @@ erDiagram
   REQUEST_LOG { TEXT idempotencyKey PK TEXT voteId FK TIMESTAMPTZ createdAt }
 ```
 Nota: unicidad parcial un PENDING y un CONFIRMED por (propuesta,votante); conteo filtra `CONFIRMED`.
-Fig. 5.1.6.2 – DB Voting. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-01-voting-er.png` [Por exportar PNG].
+Fig. 5.1.6.2 – DB Voting.
 
 ## **5.2. Cryptographic Wallet Custody (Supporting).**
-Responsabilidad: capacidad de firma por persona, efímera y con olvido. Nunca paga ni entrega. Trazabilidad: TS-01, R4/R6.
+Responsabilidad: capacidad de firma por persona, efímera y con olvido. Nunca paga ni entrega. Trazabilidad: TS-01.
 ### **5.2.1. Domain Layer.**
-`UserWallet(id, personId, position, standing PROVISIONED/SIGNING_OPEN/ROTATED/SUSPENDED/RETIRED, openFor): provision/reconstructForSigning/forget/rotate/suspend/retire/answerSigningCapability` (máx una viva por persona, en reposo nada firma, reconstrucción atada a un contenido + olvido atómico, RETIRED terminal). VOs: `UserWalletId, PersonId(ref), DerivationPosition(única), SignedContentRef(ref Voting), WalletHistory`. Hechos: `WalletProvisionedEvent, KeyReconstructedEvent, KeyForgottenEvent, WalletRotated/Suspended/RetiredEvent`. Repo: `WalletRepository(findById/findLiveByPerson/existsPosition/findEventsByWallet/save)`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `UserWallet` | `id, personId, position, standing PROVISIONED/SIGNING_OPEN/ROTATED/SUSPENDED/RETIRED, openFor` | `provision, reconstructForSigning, forget, rotate, suspend, retire, answerSigningCapability` | máx una viva por persona; en reposo nada firma; reconstrucción atada a un contenido + olvido atómico; `RETIRED` terminal |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `UserWalletId` | identidad de la capacidad |
+| `PersonId` | solo referencia a la persona |
+| `DerivationPosition` | posición única |
+| `SignedContentRef` | referencia al contenido (propiedad de Voting) |
+| `WalletHistory` | historial de administración |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `WalletCommandService` | comando | `provision, rotate, suspend, retire, sign` |
+| `WalletQueryService` | consulta | `getCapabilityByPerson, getHistory` |
+| `WalletRepository` | repo | `findById, findLiveByPerson, existsPosition, findEventsByWallet, save` |
+#### Invariantes
+* una viva por persona; reconstrucción siempre seguida de olvido en la misma operación; firmar y pagar nunca se mezclan.
+#### Hechos (`Event`)
+* `WalletProvisionedEvent`, `KeyReconstructedEvent`, `KeyForgottenEvent`, `WalletRotatedEvent`, `WalletSuspendedEvent`, `WalletRetiredEvent`.
 ### **5.2.2. Interface Layer.**
 | Método + ruta | 2xx | Errores |
 |---|---|---|
@@ -1728,21 +1842,52 @@ Proveer (verifica persona+ausencia viva, reserva posición, crea); Firmar (UoW a
 ### **5.2.4. Infrastructure Layer.**
 Tabla `wallets(personId, position UK, standing, openFor transitorio)` + `wallet_history`. Ejecutor firma tras puerto; ACL Avisos. Sin mezcla con pagadora (Relay).
 ### **5.2.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.2" { model { v = softwareSystem "VotoChain" { c = container "5.2 Wallet" { rest = component "WalletController" "REST"; cmd = component "WalletCmdService" "cmd"; qry = component "WalletQryService" "qry"; dom = component "WalletDomain" "UserWallet+VOs"; repo = component "WalletPersistence" "wallets"; exec = component "SignExecutor" "puerto"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.exec "firma"; } } views { component v.c "C5-02" { include *; title "Fig. 5.2.5" } } }
-```
-Fig. 5.2.5 – Componentes Wallet. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-02-wallet-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-02.png" alt="Fig. 5.2.5 - Wallet, componentes" width="700"/>
+</p>
+Fig. 5.2.5 – Wallet, componentes.
 ### **5.2.6. Code Level Diagrams.**
 #### **5.2.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class UserWallet { -UserWalletId id -PersonId personId -DerivationPosition position -WalletStanding standing -SignedContentRef openFor +provision()$ +reconstructForSigning() +forget() +rotate() +suspend() +retire() }
-  class DerivationPosition { -string value +equals() bool }
-  class WalletHistory { -string fact -Date occurredAt }
+  class UserWallet {
+    -UserWalletId id
+    -PersonId personId
+    -DerivationPosition position
+    -WalletStanding standing
+    -SignedContentRef openFor
+    +UserWallet provision(UserWalletId id, PersonId personId, DerivationPosition position)$
+    +void reconstructForSigning(SignedContentRef content)
+    +void forget()
+    +void rotate(DerivationPosition next)
+    +void suspend(string reason)
+    +void retire()
+  }
+  class DerivationPosition {
+    -string value
+    +boolean equals(DerivationPosition other)
+  }
+  class WalletHistory {
+    -string fact
+    -date occurredAt
+  }
+  class SignedContentRef {
+    -string value
+  }
+  class WalletStanding {
+    PROVISIONED
+    SIGNING_OPEN
+    ROTATED
+    SUSPENDED
+    RETIRED
+  }
   UserWallet "1" --> "1" DerivationPosition : ocupa
   UserWallet "1" --> "*" WalletHistory : registra
+  UserWallet "1" --> "1" WalletStanding : clasifica en
+  UserWallet "1" --> "1" SignedContentRef : abre para
+  UserWallet "1" --> "*" WalletHistory : registra
 ```
-Fig. 5.2.6.1 – Clases Wallet completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-02-wallet-class.png` [Por exportar PNG].
+Fig. 5.2.6.1 – Clases Wallet.
 #### **5.2.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -1750,12 +1895,34 @@ erDiagram
   WALLET_HISTORY { TEXT id PK TEXT walletId FK TEXT fact TIMESTAMPTZ occurredAt }
   WALLETS ||--o{ WALLET_HISTORY : registra
 ```
-Fig. 5.2.6.2 – DB Wallet. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-02-wallet-er.png` [Por exportar PNG].
+Fig. 5.2.6.2 – DB Wallet.
 
 ## **5.3. Biometric Identity Verification (Supporting).**
-Responsabilidad: presencia primero, luego comparación, veredicto binario fresco. Trazabilidad: US-19..21, R3/R7.
+Responsabilidad: presencia primero, luego comparación, veredicto binario fresco. Trazabilidad: US-19..21.
 ### **5.3.1. Domain Layer.**
-`BiometricProfile(id, personId, standing ENROLLED/REVOKED): enroll/revoke/answerReferenceStanding` (una viva por persona, sin imágenes crudas); `VerificationAttempt(id, personId, profileId, standing CHALLENGE_OPEN/LIVENESS_PASSED|FAILED/COMPARISON_REQUESTED/VERIFIED/NOT_VERIFIED/EXPIRED, verdict): start/completeLiveness/requestComparison/recordVerdict/expire` (sin liveness no hay comparación, un cierre, VERIFIED solo fresco). VOs: `VerificationVerdict(motivo+frescura), LivenessOutcome(PRESENT/ABSENT), FailureReason(5 cerrados), FreshnessWindow`. Hechos: `BiometricEnrolled, LivenessChallengeStarted/Passed/Failed, FaceComparisonRequested, IdentityVerified/Failed, AttemptExpired, ProfileRevokedEvent`. Repos: `ProfileRepository(findById/findLiveByPerson/save), AttemptRepository(findById/findOpenByProfile/save)`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `BiometricProfile` | `id, personId, standing ENROLLED/REVOKED` | `enroll, revoke, answerReferenceStanding` | una viva por persona; sin imágenes crudas |
+| `VerificationAttempt` | `id, personId, profileId, standing CHALLENGE_OPEN/LIVENESS_PASSED/LIVENESS_FAILED/COMPARISON_REQUESTED/VERIFIED/NOT_VERIFIED/EXPIRED, verdict` | `start, completeLiveness, requestComparison, recordVerdict, expire` | sin liveness no hay comparación; un cierre; `VERIFIED` solo fresco |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `VerificationVerdict` | conclusión + motivo + frescura |
+| `LivenessOutcome` | `PRESENT` / `ABSENT` |
+| `FailureReason` | 5 valores cerrados |
+| `FreshnessWindow` | cuánto autoriza un `VERIFIED` |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `BiometricCommandService` | comando | `enroll, start, completeLiveness, requestComparison, recordVerdict, expire, revoke` |
+| `BiometricQueryService` | consulta | `answerStanding, getHistory` |
+| `ProfileRepository` | repo | `findById, findLiveByPerson, save` |
+| `AttemptRepository` | repo | `findById, findOpenByProfile, save` |
+#### Invariantes
+* una referencia viva por persona; cada intento concluye una sola vez; la revocación cierra abiertos sin reescribir concluidos.
+#### Hechos (`Event`)
+* `BiometricEnrolledEvent`, `LivenessChallengeStartedEvent`, `LivenessPassedEvent`, `LivenessFailedEvent`, `FaceComparisonRequestedEvent`, `IdentityVerifiedEvent`, `IdentityVerificationFailedEvent`, `VerificationAttemptExpiredEvent`, `BiometricProfileRevokedEvent`.
 ### **5.3.2. Interface Layer.**
 | Método + ruta | 2xx | Errores |
 |---|---|---|
@@ -1768,20 +1935,74 @@ Inscribir (permiso+MATCH single-use); ciclo intento→veredicto; vencimiento por
 ### **5.3.4. Infrastructure Layer.**
 `profiles/attempts` (viva única por persona). ACLs Permiso/Examen(MATCH consumible); ejecutores presencia/comparación tras puertos; ACL Avisos.
 ### **5.3.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.3" { model { v = softwareSystem "VotoChain" { c = container "5.3 Biometric" { rest = component "BiometricController" "REST"; cmd = component "BiometricCmdService" "cmd"; qry = component "BiometricQryService" "qry"; dom = component "BiometricDomain" "profile+attempt"; repo = component "BiometricPersistence" "2 tablas"; perm = component "PermissionAcl" "ACL"; exam = component "ExamAcl" "ACL"; exec = component "PresenceCompareExecutors" "puertos"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.perm "permiso"; v.c.cmd -> v.c.exam "MATCH"; v.c.cmd -> v.c.exec "ejecuta"; } } views { component v.c "C5-03" { include *; title "Fig. 5.3.5" } } }
-```
-Fig. 5.3.5 – Componentes Biometric. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-03-biometric-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-03.png" alt="Fig. 5.3.5 - Biometric, componentes" width="700"/>
+</p>
+Fig. 5.3.5 – Biometric, componentes.
 ### **5.3.6. Code Level Diagrams.**
 #### **5.3.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class BiometricProfile { -BiometricProfileId id -PersonId personId -ProfileStanding standing +enroll()$ +revoke() }
-  class VerificationAttempt { -VerificationAttemptId id -PersonId personId -BiometricProfileId profileId -AttemptStanding standing -VerificationVerdict verdict +start()$ +completeLiveness() +requestComparison() +recordVerdict() +expire() }
-  class VerificationVerdict { -string conclusion -string reason -FreshnessWindow freshness }
+  class BiometricProfile {
+    -BiometricProfileId id
+    -PersonId personId
+    -ProfileStanding standing
+    +BiometricProfile enroll(BiometricProfileId id, PersonId personId)$
+    +void revoke()
+  }
+  class VerificationAttempt {
+    -VerificationAttemptId id
+    -PersonId personId
+    -BiometricProfileId profileId
+    -AttemptStanding standing
+    -VerificationVerdict verdict
+    +VerificationAttempt start(VerificationAttemptId id, PersonId personId, BiometricProfileId profileId)$
+    +void completeLiveness(LivenessOutcome present)
+    +void requestComparison()
+    +void recordVerdict(boolean match)
+    +void expire()
+  }
+  class VerificationVerdict {
+    -string conclusion
+    -string reason
+    -FreshnessWindow freshness
+  }
+  class LivenessOutcome {
+    PRESENT
+    ABSENT
+  }
+  class FailureReason {
+    LIVENESS_NOT_OBSERVED
+    NO_MATCH
+    REFERENCE_ENDED
+    ATTEMPT_EXPIRED
+    CONSENT_WITHDRAWN
+  }
+  class FreshnessWindow {
+    -int seconds
+  }
+  class ProfileStanding {
+    ENROLLED
+    REVOKED
+  }
+  class AttemptStanding {
+    CHALLENGE_OPEN
+    LIVENESS_PASSED
+    LIVENESS_FAILED
+    COMPARISON_REQUESTED
+    VERIFIED
+    NOT_VERIFIED
+    EXPIRED
+  }
   VerificationAttempt "1" --> "1" BiometricProfile : contra
+  BiometricProfile "1" --> "1" ProfileStanding : clasifica en
+  VerificationAttempt "1" --> "1" AttemptStanding : clasifica en
+  VerificationAttempt "1" --> "1" VerificationVerdict : concluye con
+  VerificationVerdict "1" --> "1" FreshnessWindow : autoriza durante
+  VerificationVerdict "1" --> "1" FailureReason : motiva con
+  VerificationVerdict "1" --> "1" LivenessOutcome : observa
 ```
-Fig. 5.3.6.1 – Clases Biometric completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-03-biometric-class.png` [Por exportar PNG].
+Fig. 5.3.6.1 – Clases Biometric.
 #### **5.3.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -1789,12 +2010,35 @@ erDiagram
   ATTEMPTS { TEXT id PK TEXT personId FK TEXT profileId FK TEXT standing JSONB verdict TIMESTAMPTZ createdAt }
   PROFILES ||--o{ ATTEMPTS : juzga
 ```
-Fig. 5.3.6.2 – DB Biometric. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-03-biometric-er.png` [Por exportar PNG].
+Fig. 5.3.6.2 – DB Biometric.
 
 ## **5.4. Blockchain Relay & Transaction Delivery (Supporting).**
-Responsabilidad: llevar firmado a la red e informar. Nunca firma ni cuenta. Trazabilidad: TS-02, R5.
+Responsabilidad: llevar firmado a la red e informar. Nunca firma ni cuenta. Trazabilidad: TS-02.
 ### **5.4.1. Domain Layer.**
-`DeliveryOrder(id, contentRef, payerRef, orderPosition, standing ACCEPTED/ORDERED/SENT/CONFIRMED/FAILED/RETRIED/ABANDONED, attempts[]): accept/order/recordSending/recordConfirmation/recordFailure/retry/abandon` (una orden por contenido, máx una abierta, sin adelantamientos por pagador, reintento preserva efecto, CONFIRMED/ABANDONED terminales). VOs: `DeliveryOrderId, SignedContentRef(ref), PayerRef(nunca firmante), SendingOrderPosition(secuencial densa), SendingCost, SendingAttempt(anexado), FailureReason(LEDGER_REJECTED/COST_EXHAUSTED/RETRY_LIMIT/ORDER_SUPERSEDED)`. Hechos: `AcceptedForDelivery, OrderedForSending, SendingRecorded, DeliveryConfirmed (única que cuenta), DeliveryFailed/Retried/AbandonedEvent`. Repo: `DeliveryOrderRepository(findById/findOpenByContent/findByPayer/nextPositionForPayer/save)`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `DeliveryOrder` | `id, contentRef, payerRef, orderPosition, standing ACCEPTED/ORDERED/SENT/CONFIRMED/FAILED/RETRIED/ABANDONED, attempts[]` | `accept, order, recordSending, recordConfirmation, recordFailure, retry, abandon` | una orden por contenido; máx una abierta; sin adelantamientos por pagador; reintento preserva efecto; `CONFIRMED`/`ABANDONED` terminales |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `DeliveryOrderId` | identidad de la orden |
+| `SignedContentRef` | solo referencia al contenido firmado |
+| `PayerRef` | capacidad pagadora; nunca la firmante |
+| `SendingOrderPosition` | secuencial densa por pagador |
+| `SendingCost` | costo de envío; sin cobertura es fallo |
+| `SendingAttempt` | posición + resultado + motivo; anexado |
+| `FailureReason` | `LEDGER_REJECTED`, `COST_EXHAUSTED`, `RETRY_LIMIT_REACHED`, `ORDER_SUPERSEDED` |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `DeliveryCommandService` | comando | `accept, order, recordSending, recordConfirmation, recordFailure, retry, abandon` |
+| `DeliveryQueryService` | consulta | `answerStanding, getHistory` |
+| `DeliveryOrderRepository` | repo | `findById, findOpenByContent, findByPayer, nextPositionForPayer, save` |
+#### Invariantes
+* una abierta por contenido; el reintento preserva efecto único en red dentro de la misma orden.
+#### Hechos (`Event`)
+* `AcceptedForDeliveryEvent`, `OrderedForSendingEvent`, `SendingRecordedEvent`, `DeliveryConfirmedEvent` (única que cuenta), `DeliveryFailedEvent`, `DeliveryRetriedEvent`, `DeliveryAbandonedEvent`.
 ### **5.4.2. Interface Layer.**
 | Método + ruta | 2xx | Errores |
 |---|---|---|
@@ -1806,19 +2050,65 @@ Acepta→ordena (siguiente posición pagador)→envía→confirma/falla→reinte
 ### **5.4.4. Infrastructure Layer.**
 `orders + attempts` (abierta única por contenido, secuencia por pagador). Adaptador red envío/observación; ACL Avisos. Costo descubierto = fallo, nunca espera silenciosa.
 ### **5.4.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.4" { model { v = softwareSystem "VotoChain" { c = container "5.4 Relay" { rest = component "RelayController" "REST"; cmd = component "RelayCmdService" "cmd"; qry = component "RelayQryService" "qry"; dom = component "RelayDomain" "order+attempts"; repo = component "RelayPersistence" "2 tablas"; net = component "NetworkAdapter" "puerto"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.net "envia/observa"; } p = softwareSystem "Polygon" { tags "External" } v.c.net -> p "JSON-RPC"; } views { component v.c "C5-04" { include *; title "Fig. 5.4.5" } } }
-```
-Fig. 5.4.5 – Componentes Relay. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-04-relay-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-04.png" alt="Fig. 5.4.5 - Relay, componentes" width="700"/>
+</p>
+Fig. 5.4.5 – Relay, componentes.
 ### **5.4.6. Code Level Diagrams.**
 #### **5.4.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class DeliveryOrder { -DeliveryOrderId id -SignedContentRef contentRef -PayerRef payerRef -SendingOrderPosition position -DeliveryStanding standing +accept()$ +order() +recordSending() +recordConfirmation() +recordFailure() +retry() +abandon() }
-  class SendingAttempt { -INTEGER number -TEXT outcome -TEXT reason }
-  DeliveryOrder "1" --> "*" SendingAttempt : intenta
+  class DeliveryOrder {
+    -DeliveryOrderId id
+    -SignedContentRef contentRef
+    -PayerRef payerRef
+    -SendingOrderPosition position
+    -DeliveryStanding standing
+    +DeliveryOrder accept(DeliveryOrderId id, SignedContentRef content, PayerRef payer, SendingOrderPosition pos)$
+    +void order()
+    +void recordSending()
+    +void recordConfirmation()
+    +void recordFailure(FailureReason reason)
+    +void retry()
+    +void abandon(FailureReason reason)
+  }
+  class SendingAttempt {
+    -int number
+    -string outcome
+    -string reason
+  }
+  class PayerRef {
+    -string value
+  }
+  class SendingOrderPosition {
+    -int value
+  }
+  class SendingCost {
+    -int value
+  }
+  class FailureReason {
+    LEDGER_REJECTED
+    COST_EXHAUSTED
+    RETRY_LIMIT_REACHED
+    ORDER_SUPERSEDED
+  }
+  class DeliveryStanding {
+    ACCEPTED
+    ORDERED
+    SENT
+    CONFIRMED
+    FAILED
+    RETRIED
+    ABANDONED
+  }
+  DeliveryOrder "1" --> "*" SendingAttempt : intenta como
+  DeliveryOrder "1" --> "1" DeliveryStanding : clasifica en
+  DeliveryOrder "1" --> "1" PayerRef : paga con
+  DeliveryOrder "1" --> "1" SendingOrderPosition : ordena en
+  DeliveryOrder "1" --> "1" SendingCost : cuesta
+  DeliveryOrder "1" --> "1" FailureReason : falla con
 ```
-Fig. 5.4.6.1 – Clases Relay completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-04-relay-class.png` [Por exportar PNG].
+Fig. 5.4.6.1 – Clases Relay.
 #### **5.4.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -1826,12 +2116,32 @@ erDiagram
   ATTEMPTS { TEXT id PK TEXT orderId FK INTEGER number TEXT outcome TEXT reason }
   ORDERS ||--o{ ATTEMPTS : registra
 ```
-Fig. 5.4.6.2 – DB Relay. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-04-relay-er.png` [Por exportar PNG].
+Fig. 5.4.6.2 – DB Relay.
 
 ## **5.5. IAM (Supporting).**
-Responsabilidad: identidad técnica 1 por persona, sesión única, roles. Juzga, no ejecuta pruebas. Trazabilidad: US-04..07, R9/R13/R16.
+Responsabilidad: identidad técnica 1 por persona, sesión única, roles. Juzga, no ejecuta pruebas. Trazabilidad: US-04..07.
 ### **5.5.1. Domain Layer.**
-`User(id, personId UK, standing REGISTERED/ACTIVE/SUSPENDED, session CLOSED/OPEN, contactAddress+verified, systemRoles, proofs): signUp/signIn/signOut/changeSecret/changeEmail/verifyEmail/link|unlinkOutsideIdentity/grant|revokeSystemRole/suspend/restore/answerAccessStanding` (una sesión abierta máx, reemplazo; siempre una prueba y un ADMIN; SUSPENDED rechaza; nada de membresía/comunidad/biometría). VOs: `ContactAddress(cambio reinicia verificación), SystemRole(ADMIN/USER), ProofKind(LOCAL/OUTSIDE), OutsideProverRef(único)`. Hechos: `UserSignedUp/In/Out(motivo ASKED/SUPERSEDED/PROOF_CHANGED/SUSPENDED), SecretChanged, EmailChanged/Verified, OutsideLinked/Unlinked, RoleGranted/Revoked, AccessSuspended/RestoredEvent`. Repo: `UserRepository(findById/findByPersonId/findByEmail/save)`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `User` | `id, personId UK, standing REGISTERED/ACTIVE/SUSPENDED, session CLOSED/OPEN, contactAddress+verified, systemRoles, proofs` | `signUp, signIn, signOut, changeSecret, changeEmail, verifyEmail, linkOutsideIdentity, unlinkOutsideIdentity, grantSystemRole, revokeSystemRole, suspend, restore, answerAccessStanding` | una sesión abierta máx (reemplazo); siempre una prueba y un `ADMIN`; `SUSPENDED` rechaza; nada de membresía/comunidad/biometría |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `ContactAddress` | cambiarla reinicia verificación |
+| `SystemRole` | `ADMIN` / `USER` |
+| `ProofKind` | `LOCAL` / `OUTSIDE` |
+| `OutsideProverRef` | un solo proveedor acordado enlazado |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `UserCommandService` | comando | `signUp, signIn, signOut, changeSecret, changeEmail, verifyEmail, link, unlink, grant, revoke, suspend, restore` |
+| `UserQueryService` | consulta | `answerStanding, getHistory, getRoles` |
+| `UserRepository` | repo | `findById, findByPersonId, findByEmail, save` |
+#### Invariantes
+* una identidad por persona; quitar la última prueba o el último responsable se rechaza; dirección verificada o no, nunca incierta.
+#### Hechos (`Event`)
+* `UserSignedUpEvent`, `UserSignedInEvent`, `UserSignedOutEvent` (motivo `ASKED`/`SUPERSEDED`/`PROOF_CHANGED`/`SUSPENDED`), `SecretChangedEvent`, `EmailChangedEvent`, `EmailVerifiedEvent`, `OutsideIdentityLinkedEvent`, `OutsideIdentityUnlinkedEvent`, `SystemRoleGrantedEvent`, `SystemRoleRevokedEvent`, `AccessSuspendedEvent`, `AccessRestoredEvent`.
 ### **5.5.2. Interface Layer.**
 | Método + ruta | 2xx | Errores |
 |---|---|---|
@@ -1845,21 +2155,60 @@ Comandos registro/acceso/secreto/dirección/enlace/roles/suspensión + consultas
 ### **5.5.4. Infrastructure Layer.**
 `users(personId UK, address UK, session columnas)` + `identity_history`. Puertos prueba/sesión con ejecutores externos; ACL Avisos; `ExistenceFacade(personExists)` primitivas, llamada BEFORE UoW.
 ### **5.5.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.5" { model { v = softwareSystem "VotoChain" { c = container "5.5 IAM" { rest = component "IamController" "REST"; cmd = component "IamCmdService" "cmd"; qry = component "IamQryService" "qry"; dom = component "IamDomain" "User+VOs"; repo = component "IamPersistence" "users"; proof = component "ProofExecutor" "puerto"; sess = component "SessionArtefacts" "puerto"; fac = component "ExistenceFacade" "fachada"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.proof "verifica"; } } views { component v.c "C5-05" { include *; title "Fig. 5.5.5" } } }
-```
-Fig. 5.5.5 – Componentes IAM. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-05-iam-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-05.png" alt="Fig. 5.5.5 - IAM, componentes" width="700"/>
+</p>
+Fig. 5.5.5 – IAM, componentes.
 ### **5.5.6. Code Level Diagrams.**
 #### **5.5.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class User { -UserId id -PersonId personId -AccessStanding standing -SessionStanding session -ContactAddress address +signup()$ +signIn() +signOut() +changeSecret() +changeEmail() +verifyEmail() +suspend() +restore() }
-  class ContactAddress { -string value -bool verified }
-  class SystemRole { -string value }
-  User "1" --> "1" ContactAddress : localizable
+  class User {
+    -UserId id
+    -PersonId personId
+    -AccessStanding standing
+    -SessionStanding session
+    -ContactAddress address
+    +User signup(ContactAddress contact)$
+    +void signIn(string proof)
+    +void signOut()
+    +void changeSecret()
+    +void changeEmail(ContactAddress next)
+    +void verifyEmail()
+    +void suspend(string reason)
+    +void restore()
+  }
+  class ContactAddress {
+    -string value
+    -boolean verified
+  }
+  class SystemRole {
+    -string value
+  }
+  class ProofKind {
+    LOCAL
+    OUTSIDE
+  }
+  class OutsideProverRef {
+    -string value
+  }
+  class AccessStanding {
+    REGISTERED
+    ACTIVE
+    SUSPENDED
+  }
+  class SessionStanding {
+    SESSION_CLOSED
+    SESSION_OPEN
+  }
+  User "1" --> "1" ContactAddress : localizable en
   User "1" --> "*" SystemRole : posee
+  User "1" --> "1" AccessStanding : clasifica en
+  User "1" --> "1" SessionStanding : sesiona en
+  User "1" --> "1" ProofKind : prueba con
+  User "1" --> "1" OutsideProverRef : enlaza
 ```
-Fig. 5.5.6.1 – Clases IAM completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-05-iam-class.png` [Por exportar PNG].
+Fig. 5.5.6.1 – Clases IAM.
 #### **5.5.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -1867,12 +2216,32 @@ erDiagram
   IDENTITY_HISTORY { TEXT id PK TEXT userId FK TEXT fact TIMESTAMPTZ occurredAt }
   USERS ||--o{ IDENTITY_HISTORY : registra
 ```
-Fig. 5.5.6.2 – DB IAM. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-05-iam-er.png` [Por exportar PNG].
+Fig. 5.5.6.2 – DB IAM.
 
 ## **5.6. Community Management (Supporting).**
-Responsabilidad: comunidad con configuración, regla y administradores; nunca contiene miembros. Trazabilidad: US-08..11, R1/R15.
+Responsabilidad: comunidad con configuración, regla y administradores; nunca contiene miembros. Trazabilidad: US-08..11.
 ### **5.6.1. Domain Layer.**
-`Community(id, standing REGISTERED/ACTIVE/SUSPENDED/ARCHIVED terminal, settings, votingPolicy, administrators[]): register/activate/updateSettings/definePolicy/appoint|removeAdmin/suspend/reactivate/archive/answerStanding/answerPolicy` (ACTIVE exige policy+≥1 admin; versiones reemplazan, copias frozen intactas). VOs: `CommunitySettings, VotingPolicy(threshold/basis/majority), QuorumConfig(lo que Voting congela), CommunityAdmin(persona+momento)`. Hechos: `CommunityRegistered/Activated/SettingsUpdated/PolicyDefined/AdminAppointed|Removed/Suspended/Reactivated/ArchivedEvent`. Repo: `CommunityRepository(findById/findByName/save)`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `Community` | `id, standing, settings, votingPolicy, administrators[]` | `register, activate, updateSettings, definePolicy, appointAdmin, removeAdmin, suspend, reactivate, archive, answerStanding, answerPolicy` | `ACTIVE` exige policy + ≥1 admin; `ARCHIVED` terminal |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `CommunitySettings` | nombre, domicilio, contacto |
+| `VotingPolicy` | threshold, basis, majority |
+| `QuorumConfig` | lo que Voting congela como `QuorumSnapshot` |
+| `CommunityAdmin` | persona + momento |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `CommunityCommandService` | comando | `register, activate, updateSettings, definePolicy, appointAdmin, removeAdmin, suspend, reactivate, archive` |
+| `CommunityQueryService` | consulta | `answerStanding, answerPolicy` |
+| `CommunityRepository` | repo | `findById, findByName, save` |
+#### Invariantes
+* `ARCHIVED` terminal; versiones de política reemplazan sin editar pasado; copias frozen fuera quedan intactas.
+#### Hechos (`Event`)
+* `CommunityRegisteredEvent`, `CommunityActivatedEvent`, `CommunitySettingsUpdatedEvent`, `VotingPolicyDefinedEvent`, `CommunityAdminAppointedEvent`, `CommunityAdminRemovedEvent`, `CommunitySuspendedEvent`, `CommunityReactivatedEvent`, `CommunityArchivedEvent`.
 ### **5.6.2. Interface Layer.**
 | Método + ruta | 2xx | Errores |
 |---|---|---|
@@ -1888,21 +2257,53 @@ Comandos verifican standing y guardan; `answerStanding/answerPolicy` coherentes;
 ### **5.6.4. Infrastructure Layer.**
 `communities + admins + policies(versiones)`. Sin tabla miembros. ACL Avisos. Fachada `situación+política` primitivas.
 ### **5.6.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.6" { model { v = softwareSystem "VotoChain" { c = container "5.6 Community" { rest = component "CommunityController" "REST"; cmd = component "CommunityCmdService" "cmd"; qry = component "CommunityQryService" "qry"; dom = component "CommunityDomain" "community+VOs"; repo = component "CommunityPersistence" "3 tablas"; fac = component "StandingPolicyFacade" "fachada"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; } } views { component v.c "C5-06" { include *; title "Fig. 5.6.5" } } }
-```
-Fig. 5.6.5 – Componentes Community. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-06-community-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-06.png" alt="Fig. 5.6.5 - Community, componentes" width="700"/>
+</p>
+Fig. 5.6.5 – Community, componentes.
 ### **5.6.6. Code Level Diagrams.**
 #### **5.6.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class Community { -CommunityId id -CommunityStanding standing -CommunitySettings settings -VotingPolicy policy +register()$ +activate() +definePolicy() +appointAdmin() +removeAdmin() +suspend() +archive() }
-  class VotingPolicy { -number threshold -string basis -string majority }
-  class CommunityAdmin { -PersonId personId -Date entrustedAt }
+  class Community {
+    -CommunityId id
+    -CommunityStanding standing
+    -CommunitySettings settings
+    -VotingPolicy policy
+    +Community register(CommunityId id, CommunitySettings settings, PersonId admin)$
+    +void activate()
+    +void definePolicy(VotingPolicy policy)
+    +void appointAdmin(PersonId person)
+    +void removeAdmin(PersonId person)
+    +void suspend(string reason)
+    +void archive(string reason)
+  }
+  class VotingPolicy {
+    -int threshold
+    -string basis
+    -string majority
+  }
+  class CommunitySettings {
+    -string name
+    -string domicile
+    -string contact
+  }
+  class CommunityAdmin {
+    -PersonId personId
+    -date entrustedAt
+  }
+  class CommunityStanding {
+    REGISTERED
+    ACTIVE
+    SUSPENDED
+    ARCHIVED
+  }
   Community "1" --> "1" VotingPolicy : decide bajo
-  Community "1" --> "*" CommunityAdmin : administrada
+  Community "1" --> "*" CommunityAdmin : administrada por
+  Community "1" --> "1" CommunityStanding : clasifica en
+  Community "1" --> "1" CommunitySettings : configura con
 ```
-Fig. 5.6.6.1 – Clases Community completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-06-community-class.png` [Por exportar PNG].
+Fig. 5.6.6.1 – Clases Community.
 #### **5.6.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -1912,12 +2313,31 @@ erDiagram
   COMMUNITIES ||--o{ ADMINS : administra
   COMMUNITIES ||--o{ POLICIES : versiona
 ```
-Fig. 5.6.6.2 – DB Community. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-06-community-er.png` [Por exportar PNG].
+Fig. 5.6.6.2 – DB Community.
 
 ## **5.7. Membership (Supporting).**
-Responsabilidad: par persona-comunidad con standing; padrón es pregunta, elegibilidad se congela. Trazabilidad: US-12..15, R2/R8/R15.
+Responsabilidad: par persona-comunidad con standing; padrón es pregunta, elegibilidad se congela. Trazabilidad: US-12..15.
 ### **5.7.1. Domain Layer.**
-`Membership(id, personId, communityId, standing REQUESTED/ACTIVE/DELINQUENT/SUSPENDED/TERMINATED terminal, communityRole, unit, lastEligibility): register/activate/assignUnit/assignRole/markDelinquent/clearDelinquency/suspend/reinstate/terminate/judgeEligibility` (atada al par, máx una viva, solo ACTIVE en padrón, juicio nunca reescrito). VOs: `Unit, CommunityRole(PRESIDENT/BOARD_MEMBER/OWNER solo ACTIVE), EligibilitySnapshot(veredicto+motivo congelados)`. Hechos: `MembershipRegistered/Activated, UnitAssigned, CommunityRoleAssigned, MemberMarkedDelinquent, DelinquencyCleared, MembershipSuspended/Reinstated/Terminated, EligibilityJudgedEvent`. Repo: `MembershipRepository(getById/findLiveByPersonAndCommunity/findActiveByCommunity/findLiveByPerson/save)`.
+#### Agregados
+| Agregado | Atributos | Operaciones | Regla local |
+|---|---|---|---|
+| `Membership` | `id, personId, communityId, standing REQUESTED/ACTIVE/DELINQUENT/SUSPENDED/TERMINATED terminal, communityRole, unit, lastEligibility` | `register, activate, assignUnit, assignRole, markDelinquent, clearDelinquency, suspend, reinstate, terminate, judgeEligibility` | atada al par, nunca transferible; máx una viva; solo `ACTIVE` integra el padrón; juicio congelado nunca se reescribe |
+#### Objetos de valor
+| VO | Contenido |
+|---|---|
+| `Unit` | predio; sigue a la persona por defecto |
+| `CommunityRole` | `PRESIDENT`, `BOARD_MEMBER`, `OWNER`; solo con `ACTIVE` |
+| `EligibilitySnapshot` | veredicto + motivo congelados al instante |
+#### Servicios y repositorios
+| Elemento | Tipo | Operaciones |
+|---|---|---|
+| `MembershipCommandService` | comando | `register, activate, assignUnit, assignRole, markDelinquent, clearDelinquency, suspend, reinstate, terminate` |
+| `MembershipQueryService` | consulta | `judgeEligibility, getRoster` |
+| `MembershipRepository` | repo | `getById, findLiveByPersonAndCommunity, findActiveByCommunity, findLiveByPerson, save` |
+#### Invariantes
+* `TERMINATED` terminal; el juicio congelado nunca se reescribe.
+#### Hechos (`Event`)
+* `MembershipRegisteredEvent`, `MembershipActivatedEvent`, `UnitAssignedEvent`, `CommunityRoleAssignedEvent`, `MemberMarkedDelinquentEvent`, `DelinquencyClearedEvent`, `MembershipSuspendedEvent`, `MembershipReinstatedEvent`, `MembershipTerminatedEvent`, `EligibilityJudgedEvent`.
 ### **5.7.2. Interface Layer.**
 | Método + ruta | 2xx | Errores |
 |---|---|---|
@@ -1933,31 +2353,61 @@ Verifica comunidad receptiva + libros para morosidad; puerta pide standing+polic
 ### **5.7.4. Infrastructure Layer.**
 `memberships` (viva única por par, índices comunidad/persona). ACLs existencia-persona, Comunidad (puerta), Avisos. Fachada `elegibilidad congelable`.
 ### **5.7.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.7" { model { v = softwareSystem "VotoChain" { c = container "5.7 Membership" { rest = component "MembershipController" "REST"; cmd = component "MembershipCmdService" "cmd"; qry = component "MembershipQryService" "qry"; dom = component "MembershipDomain" "membership+VOs"; repo = component "MembershipPersistence" "memberships"; gate = component "CommunityGateAcl" "ACL"; fac = component "EligibilityFacade" "fachada"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.gate "puerta"; } } views { component v.c "C5-07" { include *; title "Fig. 5.7.5" } } }
-```
-Fig. 5.7.5 – Componentes Membership. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-07-membership-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-07.png" alt="Fig. 5.7.5 - Membership, componentes" width="700"/>
+</p>
+Fig. 5.7.5 – Membership, componentes.
 ### **5.7.6. Code Level Diagrams.**
 #### **5.7.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class Membership { -MembershipId id -PersonId personId -CommunityId communityId -MembershipStatus standing -CommunityRole role -Unit unit +register()$ +activate() +markDelinquent() +clearDelinquency() +suspend() +terminate() +judgeEligibility() }
-  class Unit { -string value }
-  class CommunityRole { -string value }
-  class EligibilitySnapshot { -string verdict -string reason }
+  class Membership {
+    -MembershipId id
+    -PersonId personId
+    -CommunityId communityId
+    -MembershipStatus standing
+    -CommunityRole role
+    -Unit unit
+    +Membership register(MembershipId id, PersonId personId, CommunityId communityId, Unit unit)$
+    +void activate()
+    +void markDelinquent()
+    +void clearDelinquency()
+    +void suspend(string reason)
+    +void terminate(string reason)
+    +EligibilitySnapshot judgeEligibility()
+  }
+  class Unit {
+    -string value
+  }
+  class CommunityRole {
+    -string value
+  }
+  class EligibilitySnapshot {
+    -string verdict
+    -string reason
+  }
+  class MembershipStatus {
+    REQUESTED
+    ACTIVE
+    DELINQUENT
+    SUSPENDED
+    TERMINATED
+  }
   Membership "1" --> "1" Unit : ocupa
   Membership "1" --> "1" EligibilitySnapshot : congela
+  Membership "1" --> "1" MembershipStatus : clasifica en
+  Membership "1" --> "1" CommunityRole : desempeña
 ```
-Fig. 5.7.6.1 – Clases Membership completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-07-membership-class.png` [Por exportar PNG].
+Fig. 5.7.6.1 – Clases Membership.
 #### **5.7.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
   MEMBERSHIPS { TEXT id PK TEXT personId FK TEXT communityId FK TEXT standing TEXT role TEXT unit JSONB lastEligibility TIMESTAMPTZ createdAt }
 ```
-Fig. 5.7.6.2 – DB Membership. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-07-membership-er.png` [Por exportar PNG].
+Fig. 5.7.6.2 – DB Membership.
 
 ## **5.8. Consent & Compliance (Supporting).**
-Responsabilidad: permisos y coordinación de borrado (Ley 29733); nunca posee datos ajenos. Trazabilidad: US-16..18, R12.
+Responsabilidad: permisos y coordinación de borrado (Ley 29733); nunca posee datos ajenos. Trazabilidad: US-16..18.
 ### **5.8.1. Domain Layer.**
 `ConsentRecord(id, personId, scope, standing GRANTED/REVOKED, policyVersion): grant/revoke/answerState` (un otorgado por par, revoca detiene sin reescribir); `DataSubjectRequest(id, personId, standing REQUESTED/CONFIRMED/COORDINATED/AWAITING_CONFIRMATIONS/COMPLETED, confirmations): submit/confirm/coordinateRevocation/recordConfirmation/complete` (cierra solo con todas); `RetentionPolicy(id, category, terms): define/answerTerms` (reemplaza). VOs: `ConsentScope(un alcance, nunca general), PolicyVersion, DataCategory, RetentionTerms, RevocationConfirmations`. Hechos: `ConsentGranted/Revoked, RetentionPolicyDefined, ErasureRequested/Confirmed, RevocationCoordinated/Confirmed (por propietario), ErasureCompletedEvent`. Repos: 3 + confirmaciones.
 ### **5.8.2. Interface Layer.**
@@ -1976,20 +2426,71 @@ Otorga/revoca/define con reemplazo; pedido sin duplicar abierto; coordina un hec
 ### **5.8.4. Infrastructure Layer.**
 `consents(otorgado único por par) + requests(una abierta por persona) + confirmations + policies(vigente por categoría)`. Bus coordinación con lenguaje publicado. ACL Avisos.
 ### **5.8.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.8" { model { v = softwareSystem "VotoChain" { c = container "5.8 Consent" { rest = component "ConsentController" "REST"; cmd = component "ConsentCmdService" "cmd"; qry = component "ConsentQryService" "qry"; dom = component "ConsentDomain" "3 agregados"; repo = component "ConsentPersistence" "4 tablas"; coord = component "CoordinationBus" "bus"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.coord "coordina"; } } views { component v.c "C5-08" { include *; title "Fig. 5.8.5" } } }
-```
-Fig. 5.8.5 – Componentes Consent. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-08-consent-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-08.png" alt="Fig. 5.8.5 - Consent, componentes" width="700"/>
+</p>
+Fig. 5.8.5 – Consent, componentes.
 ### **5.8.6. Code Level Diagrams.**
 #### **5.8.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class ConsentRecord { -ConsentRecordId id -PersonId personId -ConsentScope scope -ConsentStanding standing -PolicyVersion version +grant()$ +revoke() }
-  class DataSubjectRequest { -DataSubjectRequestId id -PersonId personId -ErasureStanding standing +submit()$ +confirm() +coordinateRevocation() +recordConfirmation() +complete() }
-  class RetentionPolicy { -RetentionPolicyId id -DataCategory category -RetentionTerms terms +define()$ }
+  class ConsentRecord {
+    -ConsentRecordId id
+    -PersonId personId
+    -ConsentScope scope
+    -ConsentStanding standing
+    -PolicyVersion version
+    +ConsentRecord grant(ConsentRecordId id, PersonId personId, ConsentScope scope, PolicyVersion version)$
+    +void revoke()
+  }
+  class DataSubjectRequest {
+    -DataSubjectRequestId id
+    -PersonId personId
+    -ErasureStanding standing
+    +DataSubjectRequest submit(DataSubjectRequestId id, PersonId personId)$
+    +void confirm()
+    +void coordinateRevocation()
+    +void recordConfirmation(string owner)
+    +void complete()
+  }
+  class RetentionPolicy {
+    -RetentionPolicyId id
+    -DataCategory category
+    -RetentionTerms terms
+    +RetentionPolicy define(RetentionPolicyId id, DataCategory category, RetentionTerms terms)$
+  }
+  class ConsentScope {
+    -string value
+  }
+  class PolicyVersion {
+    -string value
+  }
+  class DataCategory {
+    -string value
+  }
+  class RetentionTerms {
+    -string value
+  }
+  class ConsentStanding {
+    GRANTED
+    REVOKED
+  }
+  class ErasureStanding {
+    REQUESTED
+    CONFIRMED
+    COORDINATED
+    AWAITING_CONFIRMATIONS
+    COMPLETED
+  }
   DataSubjectRequest "1" --> "*" ConsentRecord : coordina
+  ConsentRecord "1" --> "1" ConsentStanding : clasifica en
+  ConsentRecord "1" --> "1" ConsentScope : autoriza
+  ConsentRecord "1" --> "1" PolicyVersion : rige por
+  DataSubjectRequest "1" --> "1" ErasureStanding : clasifica en
+  RetentionPolicy "1" --> "1" DataCategory : guarda
+  RetentionPolicy "1" --> "1" RetentionTerms : rige por
 ```
-Fig. 5.8.6.1 – Clases Consent completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-08-consent-class.png` [Por exportar PNG].
+Fig. 5.8.6.1 – Clases Consent.
 #### **5.8.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -1999,10 +2500,10 @@ erDiagram
   POLICIES { TEXT id PK TEXT category UK JSONB terms }
   REQUESTS ||--o{ CONFIRMATIONS : espera
 ```
-Fig. 5.8.6.2 – DB Consent. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-08-consent-er.png` [Por exportar PNG].
+Fig. 5.8.6.2 – DB Consent.
 
 ## **5.9. Document OCR & Face Match Provider (Generic).**
-Responsabilidad: examen único documental (MATCH/NO_MATCH/UNREADABLE), single-use hacia Biometric. Trazabilidad: US-19, R7/R8.
+Responsabilidad: examen único documental (MATCH/NO_MATCH/UNREADABLE), single-use hacia Biometric. Trazabilidad: US-19.
 ### **5.9.1. Domain Layer.**
 `DocumentExamination(id, personId, documentRef, standing OPEN/CONCLUDED/EXPIRED, window): request/recordExtraction/recordComparison/recordVerdict/expire` (un abierto por par, concluido single-use, vencido nunca responde, evidencia muere con examen). VOs: `Verdict(3 cerrados), UnreadableReason(5: borroso/brillo/recortado/vencido/tipo), ValidityWindow`. Hechos: `ExaminationRequested/Refused, DocumentExtracted, FacesCompared, ExaminationConcluded/Expired, ReexaminationRequestedEvent`. Repo: `ExaminationRepository(findOpenByPersonAndDocument/findById/findAllByPersonAndDocument/save)`.
 ### **5.9.2. Interface Layer.**
@@ -2016,20 +2517,57 @@ Pide (pertenencia+permiso+sin abierto), registra vía ejecutores, concluye únic
 ### **5.9.4. Infrastructure Layer.**
 `examinations(abierto único por par) + history`; sin columnas imagen. Ejecutores lectura/comparación; ACL Avisos.
 ### **5.9.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.9" { model { v = softwareSystem "VotoChain" { c = container "5.9 OCR" { rest = component "ExamController" "REST"; cmd = component "ExamCmdService" "cmd"; qry = component "ExamQryService" "qry"; dom = component "ExamDomain" "examination+VOs"; repo = component "ExamPersistence" "2 tablas"; mem = component "MembershipAcl" "ACL"; perm = component "PermissionAcl" "ACL"; exec = component "ReadCompareExecutors" "puertos"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.mem "pertenencia"; v.c.cmd -> v.c.exec "ejecuta"; } } views { component v.c "C5-09" { include *; title "Fig. 5.9.5" } } }
-```
-Fig. 5.9.5 – Componentes OCR. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-09-ocr-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-09.png" alt="Fig. 5.9.5 - OCR, componentes" width="700"/>
+</p>
+Fig. 5.9.5 – OCR, componentes.
 ### **5.9.6. Code Level Diagrams.**
 #### **5.9.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class DocumentExamination { -ExaminationId id -PersonId personId -DocumentRef doc -ExaminationStanding standing -ValidityWindow window -Verdict verdict +request()$ +recordExtraction() +recordComparison() +recordVerdict() +expire() }
-  class Verdict { -string value }
-  class UnreadableReason { -string value }
+  class DocumentExamination {
+    -ExaminationId id
+    -PersonId personId
+    -DocumentRef doc
+    -ExaminationStanding standing
+    -ValidityWindow window
+    -Verdict verdict
+    +DocumentExamination request(ExaminationId id, PersonId personId, DocumentRef doc, ValidityWindow window)$
+    +void recordExtraction(boolean readable, UnreadableReason reason)
+    +void recordComparison(boolean holds)
+    +void recordVerdict()
+    +void expire()
+  }
+  class DocumentRef {
+    -string value
+  }
+  class ValidityWindow {
+    -date validUntil
+  }
+  class Verdict {
+    MATCH
+    NO_MATCH
+    UNREADABLE
+  }
+  class UnreadableReason {
+    BLURRY
+    GLARE
+    CROPPED
+    EXPIRED
+    MISMATCHED_TYPE
+  }
+  class ExaminationStanding {
+    OPEN
+    CONCLUDED
+    EXPIRED
+  }
   DocumentExamination "1" --> "1" Verdict : concluye
+  DocumentExamination "1" --> "1" ExaminationStanding : clasifica en
+  DocumentExamination "1" --> "1" DocumentRef : examina
+  DocumentExamination "1" --> "1" ValidityWindow : vence en
+  Verdict "1" --> "1" UnreadableReason : detalla con
 ```
-Fig. 5.9.6.1 – Clases OCR completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-09-ocr-class.png` [Por exportar PNG].
+Fig. 5.9.6.1 – Clases OCR.
 #### **5.9.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -2037,10 +2575,10 @@ erDiagram
   EXAMINATION_HISTORY { TEXT id PK TEXT examinationId FK TEXT fact TIMESTAMPTZ occurredAt }
   EXAMINATIONS ||--o{ EXAMINATION_HISTORY : registra
 ```
-Fig. 5.9.6.2 – DB OCR. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-09-ocr-er.png` [Por exportar PNG].
+Fig. 5.9.6.2 – DB OCR.
 
 ## **5.10. Verification (OTP) (Generic).**
-Responsabilidad: posesión de canal por (persona,motivo), 3 propósitos cerrados. Trazabilidad: US-05/07, R9/R10.
+Responsabilidad: posesión de canal por (persona,motivo), 3 propósitos cerrados. Trazabilidad: US-05/07.
 ### **5.10.1. Domain Layer.**
 `VerificationChallenge(id, personId, purpose login/email-verification/password-reset cerrado, standing OPEN/CONFIRMED/INVALIDATED/EXPIRED, attempts, window): request/answer/expire` (un abierto por par, segundo reemplaza, confirmado nunca reconfirma, código nunca legible, solo ventana). VOs: `Purpose, AttemptCount(vs máx), ValidityWindow, InvalidationReason(ATTEMPTS_EXHAUSTED/SUPERSEDED)`. Hechos: `ChallengeRequested/Confirmed/AttemptFailed/Invalidated/ExpiredEvent` (ninguno porta código). Repo: `VerificationChallengeRepository(findOpenByPersonAndPurpose/findById/save)`.
 ### **5.10.2. Interface Layer.**
@@ -2050,23 +2588,53 @@ Responsabilidad: posesión de canal por (persona,motivo), 3 propósitos cerrados
 | `POST /challenges/{id}/answers {code}` | `200 CONFIRMED o fallido con restantes` | `409 invalidado, 410 expired, 404` |
 | `GET /challenges/standing?person=&purpose=` | `200 utilizable+restantes` | `—` |
 ### **5.10.3. Application Layer.**
-Pide (motivo+permiso, cierra anterior, instruye envío), responde (cuenta, confirma/falla/invalida), vence. Ante `Confirmed` llama fachada IAM primitivas. Parámetros: `OTP_TTL, OTP_MAX_ATTEMPTS`.
+Pide (motivo+permiso, cierra anterior, instruye envío), responde (cuenta, confirma/falla/invalida), vence. Ante `Confirmed` llama fachada IAM primitivas. Parámetros: ` _TTL,  _MAX_ATTEMPTS`.
 ### **5.10.4. Infrastructure Layer.**
 `challenges(abierto único por par) + history(sin secretos)`. Ejecutores generación/comparación/envío; ACL Avisos vía Notifications (plantilla+dirección+motivo+clave).
 ### **5.10.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.10" { model { v = softwareSystem "VotoChain" { c = container "5.10 OTP" { rest = component "ChallengeController" "REST"; cmd = component "ChallengeCmdService" "cmd"; qry = component "ChallengeQryService" "qry"; dom = component "ChallengeDomain" "challenge+VOs"; repo = component "ChallengePersistence" "2 tablas"; perm = component "ContactPermissionAcl" "ACL"; exec = component "GenCompareSendExecutors" "puertos"; iam = component "IamAcl" "ACL"; } v.c.rest -> v.c.cmd "cmd"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.exec "ejecuta"; v.c.cmd -> v.c.iam "marca"; } } views { component v.c "C5-10" { include *; title "Fig. 5.10.5" } } }
-```
-Fig. 5.10.5 – Componentes OTP. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-10-otp-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-10.png" alt="Fig. 5.10.5 - Verification (OTP), componentes" width="700"/>
+</p>
+Fig. 5.10.5 – Verification (OTP), componentes.
 ### **5.10.6. Code Level Diagrams.**
 #### **5.10.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class VerificationChallenge { -ChallengeId id -PersonId personId -Purpose purpose -ChallengeStanding standing -AttemptCount attempts -ValidityWindow window +request()$ +answer() +expire() }
-  class Purpose { -string value }
+  class VerificationChallenge {
+    -ChallengeId id
+    -PersonId personId
+    -Purpose purpose
+    -ChallengeStanding standing
+    -AttemptCount attempts
+    -ValidityWindow window
+    +VerificationChallenge request(ChallengeId id, PersonId personId, Purpose purpose, ValidityWindow window)$
+    +void answer(boolean holds)
+    +void expire()
+  }
+  class Purpose {
+    LOGIN
+    EMAIL_VERIFICATION
+    PASSWORD_RESET
+  }
+  class AttemptCount {
+    -int value
+    -int max
+  }
+  class ValidityWindow {
+    -date validUntil
+  }
+  class ChallengeStanding {
+    OPEN
+    CONFIRMED
+    INVALIDATED
+    EXPIRED
+  }
   VerificationChallenge "1" --> "1" Purpose : para
+  VerificationChallenge "1" --> "1" ChallengeStanding : clasifica en
+  VerificationChallenge "1" --> "1" AttemptCount : intenta con
+  VerificationChallenge "1" --> "1" ValidityWindow : vence en
 ```
-Fig. 5.10.6.1 – Clases OTP completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-10-otp-class.png` [Por exportar PNG].
+Fig. 5.10.6.1 – Clases OTP.
 #### **5.10.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -2074,10 +2642,10 @@ erDiagram
   CHALLENGE_HISTORY { TEXT id PK TEXT challengeId FK TEXT fact TIMESTAMPTZ occurredAt }
   CHALLENGES ||--o{ CHALLENGE_HISTORY : registra
 ```
-Fig. 5.10.6.2 – DB OTP. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-10-otp-er.png` [Por exportar PNG].
+Fig. 5.10.6.2 – DB OTP.
 
 ## **5.11. Notifications (Generic).**
-Responsabilidad: intención de entrega email-only, idempotente. Trazabilidad: TS-03/US-26, R10/R11/R14.
+Responsabilidad: intención de entrega email-only, idempotente. Trazabilidad: TS-03/US-26.
 ### **5.11.1. Domain Layer.**
 `NotificationDispatch(id, idempotencyKey(misma nunca 2 veces), address, template resuelta, standing REQUESTED/REFUSED/CONFIRMED/FAILED, history): requestDelivery/confirmDelivered/recordDeliveryFailure/requestRetry` (una dirección+plantilla por despacho, historial solo crece, confirmado no reintenta, rechazado nunca envía). VOs: `DispatchId, IdempotencyKey(solicitante), DeliveryAddress, ResolvedTemplate(clave+marcadores), RefusalReason(DUPLICATE/CONTACT_NOT_ALLOWED), FailureReason`. Hechos: `DeliveryRequested/Refused/Confirmed/Failed/RetriedEvent`. Repo: `NotificationDispatchRepository(findByKey/findById/save)`.
 ### **5.11.2. Interface Layer.**
@@ -2091,19 +2659,52 @@ Recibe (resuelve plantilla, forma+permiso+clave fresca), instruye ejecutor, conf
 ### **5.11.4. Infrastructure Layer.**
 `dispatches(clave UK) + history`. Ejecutor correo tras puerto. Sin preferencias/dispositivos.
 ### **5.11.5. Component Level Diagrams.**
-```dsl
-workspace "VotoChain-5.11" { model { v = softwareSystem "VotoChain" { c = container "5.11 Notices" { api = component "DispatchApi" "API"; cmd = component "DispatchCmdService" "cmd"; qry = component "DispatchQryService" "qry"; dom = component "DispatchDomain" "dispatch+VOs"; repo = component "DispatchPersistence" "2 tablas"; exec = component "MailExecutor" "puerto"; } v.c.api -> v.c.cmd "pide"; v.c.cmd -> v.c.dom "reglas"; v.c.cmd -> v.c.repo "guarda"; v.c.cmd -> v.c.exec "envia"; } } views { component v.c "C5-11" { include *; title "Fig. 5.11.5" } } }
-```
-Fig. 5.11.5 – Componentes Notifications. Elaborado en Structurizr. Fuente: elaboración propia. `assets/c5-11-notifications-component.png` [Por exportar PNG].
+<p align="center">
+  <img src="./assets/componentes/C5-11.png" alt="Fig. 5.11.5 - Notifications, componentes" width="700"/>
+</p>
+Fig. 5.11.5 – Notifications, componentes.
 ### **5.11.6. Code Level Diagrams.**
 #### **5.11.6.1. Domain Layer Class Diagrams.**
 ```mermaid
 classDiagram
-  class NotificationDispatch { -DispatchId id -IdempotencyKey key -DeliveryAddress address -ResolvedTemplate template -DispatchStanding standing +requestDelivery()$ +confirmDelivered() +recordDeliveryFailure() +requestRetry() }
-  class IdempotencyKey { -string value }
+  class NotificationDispatch {
+    -DispatchId id
+    -IdempotencyKey key
+    -DeliveryAddress address
+    -ResolvedTemplate template
+    -DispatchStanding standing
+    +NotificationDispatch requestDelivery(DispatchId id, IdempotencyKey key, DeliveryAddress address, ResolvedTemplate template)$
+    +void confirmDelivered()
+    +void recordDeliveryFailure(string reason)
+    +void requestRetry()
+  }
+  class IdempotencyKey {
+    -string value
+  }
+  class DeliveryAddress {
+    -string value
+  }
+  class ResolvedTemplate {
+    -string key
+    -string body
+  }
+  class RefusalReason {
+    DUPLICATE
+    CONTACT_NOT_ALLOWED
+  }
+  class DispatchStanding {
+    REQUESTED
+    REFUSED
+    CONFIRMED
+    FAILED
+  }
   NotificationDispatch "1" --> "1" IdempotencyKey : deduplica
+  NotificationDispatch "1" --> "1" DispatchStanding : clasifica en
+  NotificationDispatch "1" --> "1" DeliveryAddress : envía a
+  NotificationDispatch "1" --> "1" ResolvedTemplate : redacta con
+  NotificationDispatch "1" --> "1" RefusalReason : rechaza con
 ```
-Fig. 5.11.6.1 – Clases Notifications completas. Elaborado en Miro. Fuente: elaboración propia. `assets/c5-11-notifications-class.png` [Por exportar PNG].
+Fig. 5.11.6.1 – Clases Notifications.
 #### **5.11.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
@@ -2111,13 +2712,13 @@ erDiagram
   DISPATCH_HISTORY { TEXT id PK TEXT dispatchId FK TEXT fact TIMESTAMPTZ occurredAt }
   DISPATCHES ||--o{ DISPATCH_HISTORY : registra
 ```
-Fig. 5.11.6.2 – DB Notifications. Elaborado en herramienta ER. Fuente: elaboración propia. `assets/c5-11-notifications-er.png` [Por exportar PNG].
+Fig. 5.11.6.2 – DB Notifications.
 
 # **Capítulo VI: Solution UX Design**
 
 El diseño de experiencia de VotoChain sigue un enfoque de **diseño centrado en el usuario** y toma como referencia a los dos segmentos definidos en los Capítulos I y II: Patricia Salas, directiva o administradora de comunidad, y Miguel Herrera, propietario votante. La experiencia debe hacer comprensibles la verificación de identidad, la elegibilidad, el cuórum y la evidencia auditable, sin trasladar al usuario conceptos operativos como wallets, claves privadas, gas o RPC.
 
-Este capítulo distingue deliberadamente entre lo **implementado** y lo **proyectado**. A la fecha de revisión, el repositorio de software contiene una API modular en NestJS para IAM, verificación OTP y gestión de comunidades; el frontend Next.js descrito en la arquitectura, la votación, la biometría, el ledger y las superficies públicas todavía forman parte del diseño y del roadmap. Por ello, las reglas siguientes son especificaciones objetivo que deberán validarse mediante prototipos, pruebas de usabilidad y auditorías de accesibilidad antes de declararse cumplidas.
+Este capítulo distingue deliberadamente entre lo **implementado** y lo **proyectado**. A la fecha de revisión, el repositorio de software contiene la API modular de identidad, verificación y gestión de comunidades; el frontend descrito en la arquitectura, la votación, la biometría, el ledger y las superficies públicas todavía forman parte del diseño y del roadmap. Por ello, las reglas siguientes son especificaciones objetivo que deberán validarse mediante prototipos, pruebas de usabilidad y auditorías de accesibilidad antes de declararse cumplidas.
 
 ---
 
@@ -2175,7 +2776,7 @@ La jerarquía tipográfica propuesta combina fuentes de alta legibilidad. Como l
 
 * **Tipografía de Títulos y Display (`Outfit`)**: Fuente geométrica con terminaciones limpias y curvas balanceadas. Se utiliza en titulares de la Landing Page, encabezados de sección y números de cuórum, aportando una presencia contemporánea, cívica y amigable.
 * **Tipografía de Texto y Controles UI (`Inter`)**: Familia tipográfica diseñada específicamente para interfaces digitales por Rasmus Andersson. Ofrece excelente definición de caracteres a tamaños reducidos en pantallas de smartphones de gama media/baja, minimizando la ambigüedad en caracteres similares (como `1`, `l` e `I`).
-* **Tipografía Monoespaciada de Auditoría (`JetBrains Mono`)**: Empleada de forma focalizada para códigos OTP, identificadores de transacción blockchain, llaves públicas truncadas y referencias de recibos de votación (`rec-...`), garantizando que cada dígito mantenga un ancho constante para cotejo visual inmediato.
+* **Tipografía Monoespaciada de Auditoría (`JetBrains Mono`)**: Empleada de forma focalizada para códigos  , identificadores de transacción blockchain, llaves públicas truncadas y referencias de recibos de votación (`rec-...`), garantizando que cada dígito mantenga un ancho constante para cotejo visual inmediato.
 
 | Nivel Jerárquico | Familia Tipográfica | Tamaño (px / rem) | Line Height | Peso (Weight) | Uso Principal en Interfaz |
 |---|---|:---:|:---:|:---:|---|
@@ -2302,7 +2903,7 @@ La interfaz web atiende dos experiencias ergonómicas principales: gestión admi
 
 La arquitectura de información (IA) organiza la futura Landing Page y la aplicación web responsive de VotoChain. Su unidad principal es la **comunidad**; dentro de ella se ubican miembros, política de votación, asambleas, propuestas, votos y constancias. Esta jerarquía refleja el lenguaje ubicuo del Capítulo II y evita mezclar conceptos distintos como usuario de IAM, miembro de una comunidad y administrador comunitario.
 
-La IA descrita es objetivo de diseño. En el backend actual sólo existen superficies REST para IAM, desafíos OTP y gestión de comunidades; los módulos de membresía, votación, biometría, auditoría pública y sus interfaces permanecen planificados. Cada pantalla futura deberá mantener trazabilidad con esos contratos y no inventar estados que contradigan el dominio.
+La IA descrita es objetivo de diseño. En el backend actual sólo existen superficies REST para IAM, desafíos   y gestión de comunidades; los módulos de membresía, votación, biometría, auditoría pública y sus interfaces permanecen planificados. Cada pantalla futura deberá mantener trazabilidad con esos contratos y no inventar estados que contradigan el dominio.
 
 ---
 
@@ -2890,7 +3491,7 @@ Los wireflow diagrams combinan las pantallas de la aplicación con las transicio
 
 #### **WF-01 · Registro, incorporación e identidad**
 
-Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de datos personales, verificación de correo electrónico mediante OTP y activación de la cuenta. El usuario parte de la pantalla de bienvenida y concluye en el dashboard principal tras confirmar su identidad inicial.
+Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de datos personales, verificación de correo electrónico mediante   y activación de la cuenta. El usuario parte de la pantalla de bienvenida y concluye en el dashboard principal tras confirmar su identidad inicial.
 
 <a href="./assets/application_wireflows/wireflows_1.png">
   <img src="./assets/application_wireflows/wireflows_1.png" width="1200">
@@ -2898,9 +3499,9 @@ Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de d
 
 ---
 
-#### **WF-02 · Inicio de sesión, OTP y recuperación**
+#### **WF-02 · Inicio de sesión,   y recuperación**
 
-Documenta las rutas de autenticación: inicio de sesión con credenciales, validación del segundo factor mediante OTP y el flujo alternativo de recuperación de contraseña. Incluye los estados de error por credenciales incorrectas y por OTP vencido.
+Documenta las rutas de autenticación: inicio de sesión con credenciales, validación del segundo factor mediante   y el flujo alternativo de recuperación de contraseña. Incluye los estados de error por credenciales incorrectas y por   vencido.
 
 <a href="./assets/application_wireflows/wireflows_2.png">
   <img src="./assets/application_wireflows/wireflows_2.png" width="1200">
@@ -2910,7 +3511,7 @@ Documenta las rutas de autenticación: inicio de sesión con credenciales, valid
 
 #### **WF-03 · Cuenta y seguridad**
 
-Muestra las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, gestión de dispositivos de confianza y cierre de sesión. Cada acción sensible requiere confirmación mediante OTP antes de aplicarse.
+Muestra las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, gestión de dispositivos de confianza y cierre de sesión. Cada acción sensible requiere confirmación mediante   antes de aplicarse.
 
 <a href="./assets/application_wireflows/wireflows_3.png">
   <img src="./assets/application_wireflows/wireflows_3.png" width="1200">
@@ -3815,13 +4416,13 @@ El usuario necesita crear una cuenta, verificar su correo electrónico y solicit
   <img src="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png" alt="User flow de registro, incorporación e identidad" width="1200">
 </a>
 
-##### **2. Inicio de sesión, OTP y recuperación**
+##### **2. Inicio de sesión,   y recuperación**
 
 **User Goal: Acceder a su cuenta y recuperar el acceso**
 El usuario necesita ingresar a su cuenta mediante un proceso sencillo y seguro. Si requiere verificar su correo o recuperar el acceso, puede solicitar un código temporal y seguir las indicaciones correspondientes. El objetivo es permitirle continuar incluso ante credenciales incorrectas o códigos vencidos, mostrando claramente cómo resolver cada situación.
 
-<a href="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png">
-  <img src="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png" alt="User flow de inicio de sesión, OTP y recuperación" width="1100">
+<a href="./assets/applications_user_flow_diagrams/02 · Inicio de sesión,   y recuperación.png">
+  <img src="./assets/applications_user_flow_diagrams/02 · Inicio de sesión,   y recuperación.png" alt="User flow de inicio de sesión,   y recuperación" width="1100">
 </a>
 
 ##### **3. Cuenta y seguridad**
@@ -4037,7 +4638,7 @@ Alcance TF: sprints e implementación en roadmap del backend; esta sección se c
 1. La problemática de asambleas (firmas, Excel, mano alzada, actas impugnadas) se evidenció en ENT-01/ENT-04/ENT-05 y motivó el alcance As-is → To-be.
 2. Las 6 entrevistas muestran aceptación del voto digital con evidencia, condicionada a aviso de privacidad claro y flujo accesible (ENT-02/ENT-03/ENT-06).
 3. Las User Stories trazan cada requisito a su ENT origen, separando intención (`VoteCast`) de hecho (`VoteConfirmedOnChain`).
-4. El EventStorming produjo 11 candidatos por pivotal-events; Voting & Verifiable Ledger quedó como Core y OTP/OCR/Notifications se justifican como BC por ritmo/vocabulario/R7/R9/R11.
+4. El EventStorming produjo 11 candidatos por pivotal-events; Voting & Verifiable Ledger quedó como Core y OTP/OCR/Notifications se justifican como BC por ritmo, vocabulario y fronteras de verificación y entrega.
 5. La arquitectura (monolito modular NestJS, wallet por usuario, relayer pagador, Polygon, Document AI/Rekognition) responde a drivers D-01..D-22 y constraints C-01..C-07, con VotoChain como sistema único y Admin Cumplimiento explícito.
 6. Queda pendiente: completar edad/distrito/capturas/timings manuales, regenerar PNG rotos en herramienta y renombrar entregables a `TF_1ASI0728_202620_*`.
 
@@ -4046,8 +4647,8 @@ Alcance TF: sprints e implementación en roadmap del backend; esta sección se c
 ## Anexo A – Videos de Exposiciones
 | Entrega | Título | URL | Duración | Integrantes |
 |---|---|---|---|---|
-| TB1 | Sustentación TB1 – VotoChain | [Por completar – pegar URL YouTube] | [Por completar mm:ss] | Aliaga, Bueno, Paredes, Ríos, Rodríguez |
-| TF | Sustentación TF – VotoChain (presentación a cámara + demo en Miro/ContextMapper/Figma/YouTube) | [Por completar] | [Por completar] | Por definir |
+| TB1 | Sustentación TB1 – VotoChain | Pendiente TF | Pendiente TF | Aliaga, Bueno, Paredes, Ríos, Rodríguez |
+| TF | Sustentación TF – VotoChain (presentación a cámara + demo en herramienta/YouTube) | Pendiente TF | Pendiente TF | Equipo completo |
 
 Nomenclatura exigida: `TF_1ASI0728_202620_TF`, `TF_1ASI0728_202620_KEYNOTE`, `TF_1ASI0728_202620_PERFORMANCE`, `TF_1ASI0728_202620_VIDEO`.
 

@@ -571,22 +571,38 @@ El Needfinding traduce la información del problema y de la investigación propu
 
 ### **2.3.2. User Task Matrix.**
 
-| Tarea | Directiva / administradora | Propietario votante | Frecuencia | Criticidad |
-|---|---:|---:|---|---|
-| Registrar o activar una comunidad | Primario | No participa | Baja | Alta |
-| Definir política de votación y cuórum | Primario | Consulta resultado | Media | Alta |
-| Registrar o actualizar membresías | Primario | Secundario | Media | Alta |
-| Confirmar elegibilidad antes de votar | Consulta resultado | Primario | Alta en periodo electoral | Alta |
-| Otorgar consentimiento de datos | Supervisa comunicación | Primario | Media | Alta |
-| Ejecutar enrollment biométrico | Facilita soporte | Primario | Una vez por usuario | Alta |
-| Verificarse antes de votar | No participa directamente | Primario | Cada voto | Alta |
-| Emitir voto | No participa directamente salvo que también sea votante | Primario | Cada propuesta | Alta |
-| Revisar resultado y evidencia | Primario | Secundario | Cada cierre | Alta |
-| Enviar notificaciones | Configura o solicita | Recibe | Media | Media |
-| Solicitar supresión o revocación | No participa | Primario | Baja | Alta |
-| Resolver reclamo de votación | Primario | Secundario | Eventual | Alta |
+La **User Task Matrix** mapea las actividades y tareas que los usuarios llevan a cabo en su **proceso actual (*As-Is*)** de toma de decisiones y gobernanza comunitaria en asambleas de juntas de propietarios y cooperativas de vivienda. A diferencia de un catálogo de características del software, esta matriz identifica las tareas del mundo real previas a la digitalización, evaluando la **Frecuencia** y el nivel de **Importancia** para cada una de las dos User Personas principales definidas en el proyecto: **Patricia Salas** (Directiva / Administradora) y **Miguel Herrera** (Propietario / Socio Votante).
 
-La matriz evidencia dos tensiones que deben trasladarse a requisitos. Primero, la directiva necesita control operativo sin poder alterar hechos congelados. Segundo, el propietario necesita una experiencia simple, aunque por debajo existan biometría, firma criptográfica y relay blockchain.
+| Tarea Actual del Proceso de Gobernanza / Asambleas | Patricia Salas (Directiva / Administradora)<br>Frecuencia | Patricia Salas (Directiva / Administradora)<br>Importancia | Miguel Herrera (Propietario / Socio Votante)<br>Frecuencia | Miguel Herrera (Propietario / Socio Votante)<br>Importancia |
+|---|:---:|:---:|:---:|:---:|
+| **1. Elaborar la agenda y convocar a la asamblea general** (redacción de temas y envío de citaciones por WhatsApp, correo o esquelas bajo puerta) | Media (periódica) | Alta | Media (recibe citación) | Alta |
+| **2. Conciliar pagos de mantenimiento y depurar padrón de morosidad** (revisión de hojas de cálculo y cuentas bancarias para definir derecho a voto) | Alta (mensual / pre-asamblea) | Alta | Media (consulta su estado) | Alta |
+| **3. Recibir, revisar y validar cartas poder o poderes simples** (inspección de autorizaciones de representación entregadas por inquilinos o apoderados) | Media | Alta | Baja (solo si viaja/ausente) | Alta |
+| **4. Acreditar asistencia e identidad con firmas en listas de papel** (control de ingreso en la puerta de la sala común o pase de lista en videollamada) | Alta (en cada asamblea) | Alta | Alta (asiste y firma) | Alta |
+| **5. Calcular el cuórum sumando coeficientes de copropiedad en Excel** (cálculo manual de porcentajes para verificar si se alcanza el mínimo legal) | Alta (en 1ra y 2da citación) | Alta | Baja (escucha anuncio) | Media |
+| **6. Declarar la instalación formal de la asamblea y abrir sesión** (anuncio formal del inicio tras verificar el cuórum requerido) | Alta | Alta | Baja (asistente) | Media |
+| **7. Exponer la justificación de presupuestos, cuotas u obras comunes** (presentación de cotizaciones, balances y proyectos en agenda) | Alta | Alta | Alta (escucha sustentación) | Alta |
+| **8. Debatir propuestas y responder consultas o discrepancias en sala** (moderación de intervenciones y argumentos de vecinos en debate) | Alta | Alta | Media (participa si le afecta) | Media |
+| **9. Contar votos a mano alzada, papeletas físicas o mensajes de chat** (conteo visual manual de votos a favor, en contra y abstenciones por punto) | Alta (por cada moción) | Alta | Alta (emite su voto) | Alta |
+| **10. Resolver discrepancias o impugnaciones durante el escrutinio** (atención inmediata de reclamos por conteos dudosos o votantes inhabilitados) | Media (temas polémicos) | Alta | Baja (ocasional) | Alta |
+| **11. Redactar el acta de asamblea en el libro de actas físico o borrador** (registro detallado de acuerdos, porcentajes de votación y deliberaciones) | Alta (cierre de asamblea) | Alta | No participa | Baja |
+| **12. Recolectar firmas de directivos y propietarios designados** (búsqueda presencial de testigos y firmantes del acta para su validez) | Alta (post-asamblea) | Alta | Baja (solo si es testigo) | Media |
+| **13. Publicar y distribuir copias o fotos del acta en áreas comunes** (colocación de acuerdos en vitrinas, ascensores o envío de circulares) | Alta | Media | Alta (revisa acuerdos) | Alta |
+| **14. Tramitar la protocolización notarial e inscripción ante SUNARP** (gestión legal para inscribir la junta directiva o modificaciones de reglamento) | Baja (anual / bianual) | Alta | No participa | Media |
+| **15. Atender reclamos, dudas sobre cuórum o pedidos de nulidad post-asamblea** (gestión de impugnaciones o quejas formales de vecinos inconformes) | Media | Alta | Baja (solo si reclama) | Alta |
+
+#### **Análisis y Hallazgos de la Matriz de Tareas**
+
+1. **Sobrecarga y Vulnerabilidad en la Gestión Administrativa (Patricia Salas)**:
+   - Las tareas de mayor criticidad para la administración (*calcular cuórum en Excel*, *validar poderes simples*, *contar votos a mano alzada* y *redactar actas para SUNARP*) dependen actualmente de herramientas manuales propensas a errores de cálculo y suspicacias vecinales.
+   - El riesgo de rechazo registral en SUNARP por errores en la sumatoria de coeficientes o padrones desactualizados representa el principal dolor operativo de la administradora.
+
+2. **Asimetría de Información y Falta de Evidencia para el Propietario (Miguel Herrera)**:
+   - Para el votante, las tareas más importantes son *verificar su propia habilitación*, *emitir su voto de manera clara* y *contar con una constancia auditable* de que su decisión fue contabilizada fielmente sin alteraciones.
+   - La imposibilidad de votar remotamente y la desconfianza en el conteo visual a mano alzada reducen drásticamente la participación en las convocatorias.
+
+3. **Conexión con los Requisitos de VotoChain**:
+   - Esta matriz fundamenta la necesidad de automatizar el cálculo de cuórum mediante *snapshots* inmutables, reemplazar las firmas físicas en papel por *identidad biométrica verificada*, y sustituir el conteo manual por *firmas criptográficas individuales registradas on-chain*, garantizando actas estructuradas listas para elevación formal.
 
 ### **2.3.3. Empathy Mapping.**
 

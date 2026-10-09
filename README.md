@@ -2248,6 +2248,40 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 
 Las siguientes vistas corresponden a los principales flujos de la aplicación, agrupados según la funcionalidad representada por el nombre de cada mock-up.
 
+#### **Vistas principales por rol**
+
+##### **Registro de comunidad para el fundador**
+
+La vista presenta el formulario de registro de una nueva comunidad, con campos para el nombre, la ubicación y el contacto responsable. Asimismo, explicita los pasos posteriores del proceso —definir la política de votación, nombrar a una persona administradora existente y activar la comunidad—, evidenciando el flujo de incorporación inicial de una organización a VotoChain.
+
+<p align="center">
+  <img src="./assets/RegisterAdministradorMockup.png" alt="Registro de comunidad para el fundador" width="320"/>
+</p>
+
+##### **Panel de la administradora de comunidad**
+
+El mock-up muestra el panel operativo de una comunidad, donde la administradora consulta el estado del padrón, el número de miembros activos y la distribución de propuestas por estado. También se visualiza una propuesta abierta con el avance de participación, el cuórum alcanzado y la regla congelada aplicable, reforzando la función de VotoChain como soporte para una gestión de asambleas trazable y verificable.
+
+<p align="center">
+  <img src="./assets/HomeAdministradorMockup.png" alt="Panel de la administradora de comunidad" width="320"/>
+</p>
+
+##### **Gestión de usuarios y accesos del administrador del sistema**
+
+La interfaz corresponde al rol de administración global y permite buscar usuarios, revisar su estado, consultar el rol asignado y ejecutar acciones como gestionar permisos o suspender cuentas. La sección de notificaciones complementa el control operativo, manteniendo la separación entre la administración de accesos globales y la información privada de cada comunidad.
+
+<p align="center">
+  <img src="./assets/HomeAdminMockup.png" alt="Gestión de usuarios y accesos del administrador del sistema" width="320"/>
+</p>
+
+##### **Panel de inicio del miembro votante**
+
+La vista resume la experiencia del propietario o miembro de la comunidad: muestra su membresía activa, el acceso a las votaciones, el estado de su verificación de identidad, una propuesta abierta que requiere autorización y el último recibo de votación. Esta composición concentra los elementos necesarios para que el usuario participe en una asamblea manteniendo la relación entre elegibilidad, verificación biométrica y evidencia del voto.
+
+<p align="center">
+  <img src="./assets/HomeVotanteMockup.png" alt="Panel de inicio del miembro votante" width="320"/>
+</p>
+
 #### **Acceso, registro y seguridad**
 
 ##### **Registro**

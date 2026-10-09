@@ -248,7 +248,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 |  ![alt text](assets/FotoFabrizio.jpeg) |  Fabrizio Alberto Paredes Santos | u202310914 | Ingenieria de Software | Formado en Ingeniería de Software, cuento con experiencia construyendo soluciones digitales de principio a fin, modelando bases de datos y diseñando APIs REST. Mi stack principal incluye Spring Boot, .NET, Angular y TypeScript, integrando prácticas de testing automatizado, CI/CD y herramientas de IA para optimizar la velocidad y calidad del desarrollo. Me caracterizo por mi proactividad en el trabajo colaborativo, siempre dispuesto a sumar iniciativas y mejoras técnicas.  |
 | ![alt text](assets/FotoHector.png) | Héctor Javier Ríos Pacheco | u20231c540 | Ingeniería de Software | Cuento con formación en desarrollo de software, incluyendo estructuras de datos, algoritmos y arquitecturas orientadas a servicios. Trabajo con lenguajes como Java, TypeScript, JavaScript, HTML5 y CSS3, y utilizo herramientas y frameworks como Angular, Spring Boot, Git/GitHub, Swagger y bases de datos relacionales. Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles |
 | ![alt text](assets/FotoSebastian.png) | Sebastián Rodriguez Macedo | u202310199 | Ingeniería de Software | Cuento con formación en desarrollo de software y conocimientos en arquitectura de sistemas, APIs REST, microservicios y bases de datos relacionales. Trabajo principalmente con Spring Boot, Angular, TypeScript y SQL Server, utilizando tecnologías relacionadas con integración y procesamiento de datos como procesos ETL. Me gusta involucrarme activamente en los proyectos, aportar ideas y proponer mejoras técnicas |
-| [alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
+| ![alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
 | ![alt text](assets/FotoEthan.png)  | Ethan Matias Aliaga Aguirre | u202318323 | Ingenieria de Software | Soy Ethan Matias Aliaga Aguirre, estudiante de 7mo ciclo de Ingeniería de Software en la UPC, sede San Miguel. Me caracterizo por mi compromiso, responsabilidad, habilidad para trabajar en equipo y comunicación. Mis conocimientos incluyen arquitectura de software y desarrollo de APIs. Además, tengo experiencia en el uso de herramientas como Photoshop, Filmora y Vegas Studio, lo que me permite aportar con soluciones creativas y técnicas en mis proyectos. Estoy comprometido con mi crecimiento personal y profesional, siempre buscando aprender y mejorar en cada oportunidad que se presente.  |
 
 ---
@@ -2236,6 +2236,209 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 ### **6.4.1. Applications Wireframes.**
 
 ### **6.4.2. Applications Wireflow Diagrams.**
+
+Los wireflow diagrams combinan las pantallas de la aplicación con las transiciones de navegación, mostrando qué acción del usuario desencadena cada cambio de estado o de vista. Se documentan 20 flujos agrupados en cinco dominios funcionales: identidad y acceso, verificación biométrica, gestión comunitaria, votación y cumplimiento.
+
+---
+
+#### **WF-01 · Registro, incorporación e identidad**
+
+Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de datos personales, verificación de correo electrónico mediante OTP y activación de la cuenta. El usuario parte de la pantalla de bienvenida y concluye en el dashboard principal tras confirmar su identidad inicial.
+
+<a href="./assets/application_wireflows/wireflows_1.png">
+  <img src="./assets/application_wireflows/wireflows_1.png" width="1200">
+</a>
+
+---
+
+#### **WF-02 · Inicio de sesión, OTP y recuperación**
+
+Documenta las rutas de autenticación: inicio de sesión con credenciales, validación del segundo factor mediante OTP y el flujo alternativo de recuperación de contraseña. Incluye los estados de error por credenciales incorrectas y por OTP vencido.
+
+<a href="./assets/application_wireflows/wireflows_2.png">
+  <img src="./assets/application_wireflows/wireflows_2.png" width="1200">
+</a>
+
+---
+
+#### **WF-03 · Cuenta y seguridad**
+
+Muestra las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, gestión de dispositivos de confianza y cierre de sesión. Cada acción sensible requiere confirmación mediante OTP antes de aplicarse.
+
+<a href="./assets/application_wireflows/wireflows_3.png">
+  <img src="./assets/application_wireflows/wireflows_3.png" width="1200">
+</a>
+
+---
+
+#### **WF-04 · Administración de usuarios y roles**
+
+Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, asignar roles (administrador de comunidad, miembro votante) y revocar accesos. Incluye la pantalla de confirmación antes de aplicar cambios de rol.
+
+<a href="./assets/application_wireflows/wireflows_4.png">
+  <img src="./assets/application_wireflows/wireflows_4.png" width="1200">
+</a>
+
+---
+
+#### **WF-05 · Revisión documental y enrolamiento biométrico**
+
+Documenta el flujo de verificación de identidad previo al voto: captura del DNI con OCR, extracción de datos del documento, prueba de vida facial (liveness) y comparación biométrica. El usuario avanza paso a paso y recibe retroalimentación inmediata en cada etapa. Corresponde al journey J1.
+
+<a href="./assets/application_wireflows/wireflows_5.png">
+  <img src="./assets/application_wireflows/wireflows_5.png" width="1200">
+</a>
+
+---
+
+#### **WF-06 · Consulta de verificación y prueba de vida**
+
+Muestra el flujo de re-verificación biométrica cuando la ventana de frescura ha vencido. El usuario recibe una notificación de sesión biométrica expirada y debe completar nuevamente la prueba de vida antes de continuar con la emisión del voto.
+
+<a href="./assets/application_wireflows/wireflows_6.png">
+  <img src="./assets/application_wireflows/wireflows_6.png" width="1200">
+</a>
+
+---
+
+#### **WF-07 · Crear comunidad y abrir votación**
+
+Cubre el flujo del administrador para crear una nueva comunidad en la plataforma: ingreso de datos del edificio o cooperativa, configuración de la política de cuórum, carga del padrón inicial y apertura de la primera convocatoria de asamblea. Corresponde al journey J2.
+
+<a href="./assets/application_wireflows/wireflows_7.png">
+  <img src="./assets/application_wireflows/wireflows_7.png" width="1200">
+</a>
+
+---
+
+#### **WF-08 · Ciclo de vida de comunidad**
+
+Documenta las transiciones de estado de una comunidad: de activa a suspendida, de suspendida a reactivada y el archivado definitivo. Cada transición muestra la pantalla de confirmación y el impacto sobre los miembros y asambleas asociadas.
+
+<a href="./assets/application_wireflows/wireflows_8.png">
+  <img src="./assets/application_wireflows/wireflows_8.png" width="1200">
+</a>
+
+---
+
+#### **WF-09 · Política de votación y administradores**
+
+Muestra el flujo de configuración de la política de votación de una comunidad: definición del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y asignación de co-administradores con sus permisos específicos.
+
+<a href="./assets/application_wireflows/wireflows_9.png">
+  <img src="./assets/application_wireflows/wireflows_9.png" width="1200">
+</a>
+
+---
+
+#### **WF-10 · Padrón: aprobación, unidad y rol**
+
+Cubre la gestión del padrón electoral: aprobación de solicitudes de membresía pendientes, asignación de unidad inmobiliaria a cada miembro y definición del rol de voto (propietario, copropietario, representante). Incluye el flujo de rechazo con motivo.
+
+<a href="./assets/application_wireflows/wireflows_10.png">
+  <img src="./assets/application_wireflows/wireflows_10.png" width="1200">
+</a>
+
+---
+
+#### **WF-11 · Membresía: mora, suspensión y terminación**
+
+Documenta las transiciones de estado de una membresía individual: marcado como moroso, suspensión temporal del derecho a voto y terminación definitiva de la relación. Cada acción muestra el impacto sobre la elegibilidad del miembro en asambleas activas.
+
+<a href="./assets/application_wireflows/wireflows_11.png">
+  <img src="./assets/application_wireflows/wireflows_11.png" width="1200">
+</a>
+
+---
+
+#### **WF-12 · Navegación del miembro y consulta de propuestas**
+
+Muestra el flujo de navegación del propietario votante: acceso al listado de sus comunidades, consulta de asambleas activas, lectura de propuestas en curso y revisión del historial de votaciones anteriores con sus constancias.
+
+<a href="./assets/application_wireflows/wireflows_12.png">
+  <img src="./assets/application_wireflows/wireflows_12.png" width="1200">
+</a>
+
+---
+
+#### **WF-13 · Emisión y confirmación de voto**
+
+Documenta el flujo principal de votación: lectura de la propuesta, verificación biométrica de presencia, selección de alternativa, confirmación del voto y recepción de la constancia digital con código único. Corresponde al journey J3.
+
+<a href="./assets/application_wireflows/wireflows_13.png">
+  <img src="./assets/application_wireflows/wireflows_13.png" width="1200">
+</a>
+
+---
+
+#### **WF-14 · Excepciones al autorizar y emitir voto**
+
+Cubre los caminos alternativos durante la autorización y emisión: membresía morosa o suspendida, verificación biométrica fallida, propuesta ya cerrada y voto duplicado detectado. Cada excepción muestra el mensaje de error correspondiente y la acción disponible para el usuario. Corresponde al journey J4.
+
+<a href="./assets/application_wireflows/wireflows_14.png">
+  <img src="./assets/application_wireflows/wireflows_14.png" width="1200">
+</a>
+
+---
+
+#### **WF-15 · Firma y envío: fallos, reintentos y constancia**
+
+Documenta los estados intermedios del proceso de registro on-chain: voto recibido y en cola, fallo en el envío al ledger, reintento automático y confirmación final. El usuario visualiza el estado de su constancia en tiempo real hasta obtener la confirmación on-chain. Corresponde al journey J4.
+
+<a href="./assets/application_wireflows/wireflows_15.png">
+  <img src="./assets/application_wireflows/wireflows_15.png" width="1200">
+</a>
+
+---
+
+#### **WF-16 · Cierre, escrutinio, participación y cuórum**
+
+Muestra el flujo del administrador para cerrar una votación: verificación del cuórum alcanzado contra el snapshot congelado, inicio del escrutinio, visualización de resultados parciales y generación del acta oficial con los votos confirmados on-chain.
+
+<a href="./assets/application_wireflows/wireflows_16.png">
+  <img src="./assets/application_wireflows/wireflows_16.png" width="1200">
+</a>
+
+---
+
+#### **WF-17 · Historial y reintentos de notificaciones**
+
+Cubre el centro de notificaciones del usuario: listado de notificaciones recibidas (convocatorias, recordatorios de voto, confirmaciones de constancia), marcado como leídas y reintento manual de notificaciones fallidas por parte del administrador.
+
+<a href="./assets/application_wireflows/wireflows_17.png">
+  <img src="./assets/application_wireflows/wireflows_17.png" width="1200">
+</a>
+
+---
+
+#### **WF-18 · Privacidad: consentimiento por finalidad**
+
+Documenta el flujo de gestión de consentimientos: presentación del aviso de privacidad al registrarse, aceptación o rechazo por finalidad (verificación de identidad, comunicaciones, auditoría) y actualización posterior desde el perfil. Ninguna finalidad opcional bloquea el acceso a la plataforma.
+
+<a href="./assets/application_wireflows/wireflows_18.png">
+  <img src="./assets/application_wireflows/wireflows_18.png" width="1200">
+</a>
+
+---
+
+#### **WF-19 · Solicitud y seguimiento de borrado**
+
+Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de datos personales, confirmación del alcance (datos de perfil, biométricos, constancias), seguimiento del estado de la solicitud y notificación de resolución. Corresponde al journey J5.
+
+<a href="./assets/application_wireflows/wireflows_19.png">
+  <img src="./assets/application_wireflows/wireflows_19.png" width="1200">
+</a>
+
+---
+
+#### **WF-20 · Cumplimiento, retención y auditoría**
+
+Cubre el panel de cumplimiento del administrador de plataforma: visualización de políticas de retención de datos por categoría, exportación de registros de auditoría, consulta del verificador público de constancias y gestión de solicitudes de acceso a datos pendientes.
+
+<a href="./assets/application_wireflows/wireflows_20.png">
+  <img src="./assets/application_wireflows/wireflows_20.png" width="1200">
+</a>
+
 
 ### **6.4.3. Applications Mock-ups.**
 

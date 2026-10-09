@@ -254,7 +254,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 |  ![alt text](assets/FotoFabrizio.jpeg) |  Fabrizio Alberto Paredes Santos | u202310914 | Ingenieria de Software | Formado en Ingeniería de Software, cuento con experiencia construyendo soluciones digitales de principio a fin, modelando bases de datos y diseñando APIs REST. Mi stack principal incluye Spring Boot, .NET, Angular y TypeScript, integrando prácticas de testing automatizado, CI/CD y herramientas de IA para optimizar la velocidad y calidad del desarrollo. Me caracterizo por mi proactividad en el trabajo colaborativo, siempre dispuesto a sumar iniciativas y mejoras técnicas.  |
 | ![alt text](assets/FotoHector.png) | Héctor Javier Ríos Pacheco | u20231c540 | Ingeniería de Software | Cuento con formación en desarrollo de software, incluyendo estructuras de datos, algoritmos y arquitecturas orientadas a servicios. Trabajo con lenguajes como Java, TypeScript, JavaScript, HTML5 y CSS3, y utilizo herramientas y frameworks como Angular, Spring Boot, Git/GitHub, Swagger y bases de datos relacionales. Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles |
 | ![alt text](assets/FotoSebastian.png) | Sebastián Rodriguez Macedo | u202310199 | Ingeniería de Software | Cuento con formación en desarrollo de software y conocimientos en arquitectura de sistemas, APIs REST, microservicios y bases de datos relacionales. Trabajo principalmente con Spring Boot, Angular, TypeScript y SQL Server, utilizando tecnologías relacionadas con integración y procesamiento de datos como procesos ETL. Me gusta involucrarme activamente en los proyectos, aportar ideas y proponer mejoras técnicas |
-| [alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
+| ![alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
 | ![alt text](assets/FotoEthan.png)  | Ethan Matias Aliaga Aguirre | u202318323 | Ingenieria de Software | Soy Ethan Matias Aliaga Aguirre, estudiante de 7mo ciclo de Ingeniería de Software en la UPC, sede San Miguel. Me caracterizo por mi compromiso, responsabilidad, habilidad para trabajar en equipo y comunicación. Mis conocimientos incluyen arquitectura de software y desarrollo de APIs. Además, tengo experiencia en el uso de herramientas como Photoshop, Filmora y Vegas Studio, lo que me permite aportar con soluciones creativas y técnicas en mis proyectos. Estoy comprometido con mi crecimiento personal y profesional, siempre buscando aprender y mejorar en cada oportunidad que se presente.  |
 | ![alt text](assets/FotoFabrizio.jpeg)  | Fabrizio Alberto Paredes Santos | u202310914 | Ingenieria de Software | Formado en Ingeniería de Software, cuento con experiencia construyendo soluciones digitales de principio a fin, modelando bases de datos y diseñando APIs REST. Mi stack principal incluye Spring Boot, .NET, Angular y TypeScript, integrando prácticas de testing automatizado, CI/CD y herramientas de IA para optimizar la velocidad y calidad del desarrollo. Me caracterizo por mi proactividad en el trabajo colaborativo, siempre dispuesto a sumar iniciativas y mejoras técnicas.  |
 
@@ -2244,6 +2244,209 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 
 ### **6.4.2. Applications Wireflow Diagrams.**
 
+Los wireflow diagrams combinan las pantallas de la aplicación con las transiciones de navegación, mostrando qué acción del usuario desencadena cada cambio de estado o de vista. Se documentan 20 flujos agrupados en cinco dominios funcionales: identidad y acceso, verificación biométrica, gestión comunitaria, votación y cumplimiento.
+
+---
+
+#### **WF-01 · Registro, incorporación e identidad**
+
+Cubre el flujo completo de creación de cuenta de un nuevo usuario: ingreso de datos personales, verificación de correo electrónico mediante OTP y activación de la cuenta. El usuario parte de la pantalla de bienvenida y concluye en el dashboard principal tras confirmar su identidad inicial.
+
+<a href="./assets/application_wireflows/wireflows_1.png">
+  <img src="./assets/application_wireflows/wireflows_1.png" width="1200">
+</a>
+
+---
+
+#### **WF-02 · Inicio de sesión, OTP y recuperación**
+
+Documenta las rutas de autenticación: inicio de sesión con credenciales, validación del segundo factor mediante OTP y el flujo alternativo de recuperación de contraseña. Incluye los estados de error por credenciales incorrectas y por OTP vencido.
+
+<a href="./assets/application_wireflows/wireflows_2.png">
+  <img src="./assets/application_wireflows/wireflows_2.png" width="1200">
+</a>
+
+---
+
+#### **WF-03 · Cuenta y seguridad**
+
+Muestra las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, gestión de dispositivos de confianza y cierre de sesión. Cada acción sensible requiere confirmación mediante OTP antes de aplicarse.
+
+<a href="./assets/application_wireflows/wireflows_3.png">
+  <img src="./assets/application_wireflows/wireflows_3.png" width="1200">
+</a>
+
+---
+
+#### **WF-04 · Administración de usuarios y roles**
+
+Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, asignar roles (administrador de comunidad, miembro votante) y revocar accesos. Incluye la pantalla de confirmación antes de aplicar cambios de rol.
+
+<a href="./assets/application_wireflows/wireflows_4.png">
+  <img src="./assets/application_wireflows/wireflows_4.png" width="1200">
+</a>
+
+---
+
+#### **WF-05 · Revisión documental y enrolamiento biométrico**
+
+Documenta el flujo de verificación de identidad previo al voto: captura del DNI con OCR, extracción de datos del documento, prueba de vida facial (liveness) y comparación biométrica. El usuario avanza paso a paso y recibe retroalimentación inmediata en cada etapa. Corresponde al journey J1.
+
+<a href="./assets/application_wireflows/wireflows_5.png">
+  <img src="./assets/application_wireflows/wireflows_5.png" width="1200">
+</a>
+
+---
+
+#### **WF-06 · Consulta de verificación y prueba de vida**
+
+Muestra el flujo de re-verificación biométrica cuando la ventana de frescura ha vencido. El usuario recibe una notificación de sesión biométrica expirada y debe completar nuevamente la prueba de vida antes de continuar con la emisión del voto.
+
+<a href="./assets/application_wireflows/wireflows_6.png">
+  <img src="./assets/application_wireflows/wireflows_6.png" width="1200">
+</a>
+
+---
+
+#### **WF-07 · Crear comunidad y abrir votación**
+
+Cubre el flujo del administrador para crear una nueva comunidad en la plataforma: ingreso de datos del edificio o cooperativa, configuración de la política de cuórum, carga del padrón inicial y apertura de la primera convocatoria de asamblea. Corresponde al journey J2.
+
+<a href="./assets/application_wireflows/wireflows_7.png">
+  <img src="./assets/application_wireflows/wireflows_7.png" width="1200">
+</a>
+
+---
+
+#### **WF-08 · Ciclo de vida de comunidad**
+
+Documenta las transiciones de estado de una comunidad: de activa a suspendida, de suspendida a reactivada y el archivado definitivo. Cada transición muestra la pantalla de confirmación y el impacto sobre los miembros y asambleas asociadas.
+
+<a href="./assets/application_wireflows/wireflows_8.png">
+  <img src="./assets/application_wireflows/wireflows_8.png" width="1200">
+</a>
+
+---
+
+#### **WF-09 · Política de votación y administradores**
+
+Muestra el flujo de configuración de la política de votación de una comunidad: definición del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y asignación de co-administradores con sus permisos específicos.
+
+<a href="./assets/application_wireflows/wireflows_9.png">
+  <img src="./assets/application_wireflows/wireflows_9.png" width="1200">
+</a>
+
+---
+
+#### **WF-10 · Padrón: aprobación, unidad y rol**
+
+Cubre la gestión del padrón electoral: aprobación de solicitudes de membresía pendientes, asignación de unidad inmobiliaria a cada miembro y definición del rol de voto (propietario, copropietario, representante). Incluye el flujo de rechazo con motivo.
+
+<a href="./assets/application_wireflows/wireflows_10.png">
+  <img src="./assets/application_wireflows/wireflows_10.png" width="1200">
+</a>
+
+---
+
+#### **WF-11 · Membresía: mora, suspensión y terminación**
+
+Documenta las transiciones de estado de una membresía individual: marcado como moroso, suspensión temporal del derecho a voto y terminación definitiva de la relación. Cada acción muestra el impacto sobre la elegibilidad del miembro en asambleas activas.
+
+<a href="./assets/application_wireflows/wireflows_11.png">
+  <img src="./assets/application_wireflows/wireflows_11.png" width="1200">
+</a>
+
+---
+
+#### **WF-12 · Navegación del miembro y consulta de propuestas**
+
+Muestra el flujo de navegación del propietario votante: acceso al listado de sus comunidades, consulta de asambleas activas, lectura de propuestas en curso y revisión del historial de votaciones anteriores con sus constancias.
+
+<a href="./assets/application_wireflows/wireflows_12.png">
+  <img src="./assets/application_wireflows/wireflows_12.png" width="1200">
+</a>
+
+---
+
+#### **WF-13 · Emisión y confirmación de voto**
+
+Documenta el flujo principal de votación: lectura de la propuesta, verificación biométrica de presencia, selección de alternativa, confirmación del voto y recepción de la constancia digital con código único. Corresponde al journey J3.
+
+<a href="./assets/application_wireflows/wireflows_13.png">
+  <img src="./assets/application_wireflows/wireflows_13.png" width="1200">
+</a>
+
+---
+
+#### **WF-14 · Excepciones al autorizar y emitir voto**
+
+Cubre los caminos alternativos durante la autorización y emisión: membresía morosa o suspendida, verificación biométrica fallida, propuesta ya cerrada y voto duplicado detectado. Cada excepción muestra el mensaje de error correspondiente y la acción disponible para el usuario. Corresponde al journey J4.
+
+<a href="./assets/application_wireflows/wireflows_14.png">
+  <img src="./assets/application_wireflows/wireflows_14.png" width="1200">
+</a>
+
+---
+
+#### **WF-15 · Firma y envío: fallos, reintentos y constancia**
+
+Documenta los estados intermedios del proceso de registro on-chain: voto recibido y en cola, fallo en el envío al ledger, reintento automático y confirmación final. El usuario visualiza el estado de su constancia en tiempo real hasta obtener la confirmación on-chain. Corresponde al journey J4.
+
+<a href="./assets/application_wireflows/wireflows_15.png">
+  <img src="./assets/application_wireflows/wireflows_15.png" width="1200">
+</a>
+
+---
+
+#### **WF-16 · Cierre, escrutinio, participación y cuórum**
+
+Muestra el flujo del administrador para cerrar una votación: verificación del cuórum alcanzado contra el snapshot congelado, inicio del escrutinio, visualización de resultados parciales y generación del acta oficial con los votos confirmados on-chain.
+
+<a href="./assets/application_wireflows/wireflows_16.png">
+  <img src="./assets/application_wireflows/wireflows_16.png" width="1200">
+</a>
+
+---
+
+#### **WF-17 · Historial y reintentos de notificaciones**
+
+Cubre el centro de notificaciones del usuario: listado de notificaciones recibidas (convocatorias, recordatorios de voto, confirmaciones de constancia), marcado como leídas y reintento manual de notificaciones fallidas por parte del administrador.
+
+<a href="./assets/application_wireflows/wireflows_17.png">
+  <img src="./assets/application_wireflows/wireflows_17.png" width="1200">
+</a>
+
+---
+
+#### **WF-18 · Privacidad: consentimiento por finalidad**
+
+Documenta el flujo de gestión de consentimientos: presentación del aviso de privacidad al registrarse, aceptación o rechazo por finalidad (verificación de identidad, comunicaciones, auditoría) y actualización posterior desde el perfil. Ninguna finalidad opcional bloquea el acceso a la plataforma.
+
+<a href="./assets/application_wireflows/wireflows_18.png">
+  <img src="./assets/application_wireflows/wireflows_18.png" width="1200">
+</a>
+
+---
+
+#### **WF-19 · Solicitud y seguimiento de borrado**
+
+Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de datos personales, confirmación del alcance (datos de perfil, biométricos, constancias), seguimiento del estado de la solicitud y notificación de resolución. Corresponde al journey J5.
+
+<a href="./assets/application_wireflows/wireflows_19.png">
+  <img src="./assets/application_wireflows/wireflows_19.png" width="1200">
+</a>
+
+---
+
+#### **WF-20 · Cumplimiento, retención y auditoría**
+
+Cubre el panel de cumplimiento del administrador de plataforma: visualización de políticas de retención de datos por categoría, exportación de registros de auditoría, consulta del verificador público de constancias y gestión de solicitudes de acceso a datos pendientes.
+
+<a href="./assets/application_wireflows/wireflows_20.png">
+  <img src="./assets/application_wireflows/wireflows_20.png" width="1200">
+</a>
+
+
 ### **6.4.3. Applications Mock-ups.**
 
 Las siguientes vistas corresponden a los principales flujos de la aplicación, agrupados según la funcionalidad representada por el nombre de cada mock-up.
@@ -2962,6 +3165,186 @@ La vista resume la experiencia del propietario o miembro de la comunidad: muestr
 
 
 ### **6.4.4. Applications User Flow Diagrams.**
+
+##### **1. Registro, incorporación e identidad**
+
+**User Goal: Registrarse e incorporarse a una comunidad**
+El usuario necesita crear una cuenta, verificar su correo electrónico y solicitar su incorporación a una comunidad. Durante este recorrido, otorga los permisos necesarios, presenta su documento y completa el enrolamiento biométrico. El objetivo es acompañarlo hasta contar con una identidad verificada y una membresía activa, una vez aprobada su incorporación.
+
+<a href="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png">
+  <img src="./assets/applications_user_flow_diagrams/01 · Registro, incorporación e identidad — J1.png" alt="User flow de registro, incorporación e identidad" width="1200">
+</a>
+
+##### **2. Inicio de sesión, OTP y recuperación**
+
+**User Goal: Acceder a su cuenta y recuperar el acceso**
+El usuario necesita ingresar a su cuenta mediante un proceso sencillo y seguro. Si requiere verificar su correo o recuperar el acceso, puede solicitar un código temporal y seguir las indicaciones correspondientes. El objetivo es permitirle continuar incluso ante credenciales incorrectas o códigos vencidos, mostrando claramente cómo resolver cada situación.
+
+<a href="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png">
+  <img src="./assets/applications_user_flow_diagrams/02 · Inicio de sesión, OTP y recuperación.png" alt="User flow de inicio de sesión, OTP y recuperación" width="1100">
+</a>
+
+##### **3. Cuenta y seguridad**
+
+**User Goal: Administrar su cuenta y proteger el acceso**
+El usuario necesita mantener actualizadas sus credenciales y controlar las opciones de acceso a su cuenta. Puede cambiar su contraseña, actualizar su correo mediante verificación y gestionar la vinculación de una identidad externa. El objetivo es facilitar estos cambios de forma segura y permitirle cerrar su sesión cuando lo necesite.
+
+<a href="./assets/applications_user_flow_diagrams/03 · Cuenta y seguridad.png">
+  <img src="./assets/applications_user_flow_diagrams/03 · Cuenta y seguridad.png" alt="User flow de cuenta y seguridad" width="900">
+</a>
+
+##### **4. Administración de usuarios y roles**
+
+**User Goal: Administrar los permisos y el estado de los usuarios**
+El administrador del sistema necesita controlar qué funciones puede realizar cada usuario y gestionar su acceso a la plataforma. Puede asignar o revocar roles, suspender una cuenta indicando el motivo y rehabilitarla cuando corresponda. El objetivo es mantener una administración clara de permisos y comunicar al usuario cualquier restricción que afecte su acceso.
+
+<a href="./assets/applications_user_flow_diagrams/04 · Administración de usuarios y roles.png">
+  <img src="./assets/applications_user_flow_diagrams/04 · Administración de usuarios y roles.png" alt="User flow de administración de usuarios y roles" width="1200">
+</a>
+
+##### **5. Revisión documental y enrolamiento biométrico**
+
+**User Goal: Verificar su identidad y registrar su referencia biométrica**
+El usuario necesita acreditar su identidad mediante un documento válido y completar el registro de su referencia biométrica. Si el documento resulta ilegible, está vencido o presenta inconsistencias, recibe indicaciones para corregirlo. El objetivo es completar la verificación con los consentimientos y requisitos necesarios, dejando preparada su referencia para posteriores comprobaciones.
+
+<a href="./assets/applications_user_flow_diagrams/05 · Revisión documental y enrolamiento biométrico.png">
+  <img src="./assets/applications_user_flow_diagrams/05 · Revisión documental y enrolamiento biométrico.png" alt="User flow de revisión documental y enrolamiento biométrico" width="1200">
+</a>
+
+##### **6. Consulta de verificación y prueba de vida**
+
+**User Goal: Consultar su verificación y completar una prueba de vida**
+El usuario necesita conocer el estado de su referencia biométrica y realizar una prueba de vida cuando el proceso de votación lo requiera. Si falta la referencia, el consentimiento o una verificación vigente, la plataforma lo orienta hacia el paso correspondiente. El objetivo es permitirle acreditar su presencia antes de continuar con la autorización del voto.
+
+<a href="./assets/applications_user_flow_diagrams/06 · Consulta de verificación y prueba de vida.png">
+  <img src="./assets/applications_user_flow_diagrams/06 · Consulta de verificación y prueba de vida.png" alt="User flow de consulta de verificación y prueba de vida" width="1000">
+</a>
+
+##### **7. Crear comunidad y abrir votación**
+
+**User Goal: Preparar una comunidad y abrir una votación**
+El administrador necesita registrar una comunidad, definir su política de votación y designar a sus administradores. Después de la activación de la comunidad, prepara una propuesta con sus opciones y la abre a los miembros habilitados. El objetivo es iniciar la votación con reglas claras, que se mantienen fijadas durante su desarrollo.
+
+<a href="./assets/applications_user_flow_diagrams/07 · Crear comunidad y abrir votación — J2.png">
+  <img src="./assets/applications_user_flow_diagrams/07 · Crear comunidad y abrir votación — J2.png" alt="User flow de creación de comunidad y apertura de votación" width="1200">
+</a>
+
+##### **8. Ciclo de vida de comunidad**
+
+**User Goal: Gestionar el estado de una comunidad**
+El administrador necesita actualizar los datos de una comunidad y controlar su estado operativo. Puede suspenderla indicando el motivo, reactivarla cuando corresponda o archivarla mediante una doble confirmación. El objetivo es gestionar cada transición de forma consciente y conservar la consulta de la información cuando la comunidad queda archivada.
+
+<a href="./assets/applications_user_flow_diagrams/08 · Ciclo de vida de comunidad.png">
+  <img src="./assets/applications_user_flow_diagrams/08 · Ciclo de vida de comunidad.png" alt="User flow del ciclo de vida de una comunidad" width="1000">
+</a>
+
+##### **9. Política de votación y administradores**
+
+**User Goal: Configurar las reglas y los responsables de la comunidad**
+El administrador necesita ajustar la política de votación y gestionar quiénes administran la comunidad. Puede revisar las versiones de las reglas, corregir parámetros inválidos y designar o retirar administradores existentes. El objetivo es mantener una configuración trazable, aplicando los cambios de política a futuras votaciones y preservando las reglas de las que ya están abiertas.
+
+<a href="./assets/applications_user_flow_diagrams/09 · Política de votación y administradores.png">
+  <img src="./assets/applications_user_flow_diagrams/09 · Política de votación y administradores.png" alt="User flow de política de votación y administradores" width="1000">
+</a>
+
+##### **10. Padrón: aprobación, unidad y rol**
+
+**User Goal: Aprobar miembros y organizar el padrón de la comunidad**
+El administrador necesita revisar las solicitudes de incorporación y asignar a cada miembro su unidad y rol dentro de la comunidad. Tras aprobar la solicitud, activa la membresía para que el usuario pueda acceder a las funciones que le corresponden. El objetivo es mantener un padrón actualizado, distinguiendo las solicitudes pendientes de las membresías activas consideradas para el quórum.
+
+<a href="./assets/applications_user_flow_diagrams/10 · Padrón_ aprobación, unidad y rol.png">
+  <img src="./assets/applications_user_flow_diagrams/10 · Padrón_ aprobación, unidad y rol.png" alt="User flow de aprobación del padrón, unidad y rol" width="1200">
+</a>
+
+##### **11. Membresía: mora, suspensión y terminación**
+
+**User Goal: Gestionar las restricciones y la continuidad de una membresía**
+El administrador necesita registrar situaciones que afectan la participación de un miembro, como la mora o la suspensión. Puede indicar sus motivos, levantar las restricciones cuando se resuelven y terminar una membresía mediante una doble confirmación. El objetivo es reflejar correctamente el estado del miembro y permitirle comprender cómo ese estado afecta su participación en las votaciones.
+
+<a href="./assets/applications_user_flow_diagrams/11 · Membresía_ mora, suspensión y terminación.png">
+  <img src="./assets/applications_user_flow_diagrams/11 · Membresía_ mora, suspensión y terminación.png" alt="User flow de mora, suspensión y terminación de membresía" width="1100">
+</a>
+
+##### **12. Navegación del miembro y consulta de propuestas**
+
+**User Goal: Explorar su comunidad y consultar las propuestas disponibles**
+El miembro necesita identificar sus comunidades, conocer el estado de su membresía y consultar las propuestas visibles para él. Desde este recorrido, puede revisar una votación abierta, acceder a los resultados de una cerrada y gestionar su verificación, privacidad o cuenta. El objetivo es facilitar el acceso a las acciones disponibles según su situación y el estado de cada propuesta.
+
+<a href="./assets/applications_user_flow_diagrams/12 · Navegación del miembro y consulta de propuestas.png">
+  <img src="./assets/applications_user_flow_diagrams/12 · Navegación del miembro y consulta de propuestas.png" alt="User flow de navegación del miembro y consulta de propuestas" width="1000">
+</a>
+
+##### **13. Emisión y confirmación de voto**
+
+**User Goal: Emitir su voto y comprobar su confirmación**
+El miembro necesita participar en una votación abierta después de cumplir los requisitos de membresía y verificación. Obtiene una autorización, selecciona su opción y confirma la firma antes de seguir el estado del envío. El objetivo es completar el recorrido con claridad y distinguir el voto firmado o enviado del voto confirmado, que es el que se contabiliza.
+
+<a href="./assets/applications_user_flow_diagrams/13 · Emisión y confirmación de voto — J3.png">
+  <img src="./assets/applications_user_flow_diagrams/13 · Emisión y confirmación de voto — J3.png" alt="User flow de emisión y confirmación de voto" width="1100">
+</a>
+
+##### **14. Excepciones al autorizar y emitir voto**
+
+**User Goal: Comprender y resolver los impedimentos para votar**
+El miembro necesita saber por qué no puede continuar cuando su membresía está restringida, la votación ha cerrado o su autorización está vencida o ya fue utilizada. La plataforma identifica la causa y muestra el siguiente paso cuando existe una posibilidad de continuar. El objetivo es evitar intentos duplicados y orientar al usuario sin generar dudas sobre la validez de su voto.
+
+<a href="./assets/applications_user_flow_diagrams/14 · Excepciones al autorizar y emitir voto — J4.png">
+  <img src="./assets/applications_user_flow_diagrams/14 · Excepciones al autorizar y emitir voto — J4.png" alt="User flow de excepciones al autorizar y emitir voto" width="900">
+</a>
+
+##### **15. Firma y envío: fallos, reintentos y constancia**
+
+**User Goal: Seguir el envío de su voto y consultar su constancia**
+El miembro necesita comprender qué ocurre después de firmar su voto y conocer si el envío está pendiente, confirmado o ha fallado. Ante un fallo, puede seguir los reintentos permitidos y recibir orientación cuando el proceso no logra completarse. El objetivo es ofrecer un seguimiento transparente y permitir la consulta de la constancia y la evidencia del voto confirmado.
+
+<a href="./assets/applications_user_flow_diagrams/15 · Firma y envío_ fallos, reintentos y constancia — J4.png">
+  <img src="./assets/applications_user_flow_diagrams/15 · Firma y envío_ fallos, reintentos y constancia — J4.png" alt="User flow de firma, envío, fallos, reintentos y constancia" width="1200">
+</a>
+
+##### **16. Cierre, escrutinio, participación y quórum**
+
+**User Goal: Cerrar una votación y consultar sus resultados**
+El administrador necesita cerrar una votación y obtener el escrutinio de los votos confirmados, mientras los miembros necesitan consultar el resultado y su evidencia. El recorrido contempla la confirmación del cierre manual, el procesamiento de los resultados y la evaluación del quórum según las reglas fijadas. El objetivo es presentar claramente la participación, el resultado y si se alcanzó el quórum requerido.
+
+<a href="./assets/applications_user_flow_diagrams/16 · Cierre, escrutinio, participación y quórum.png">
+  <img src="./assets/applications_user_flow_diagrams/16 · Cierre, escrutinio, participación y quórum.png" alt="User flow de cierre, escrutinio, participación y quórum" width="1200">
+</a>
+
+##### **17. Historial y reintentos de notificaciones**
+
+**User Goal: Consultar las notificaciones y resolver los envíos fallidos**
+El administrador necesita revisar el historial de notificaciones, filtrar los registros y conocer el resultado de cada envío. Puede identificar entregas, fallos, duplicados o bloqueos por falta de permiso, y reintentar los envíos fallidos que correspondan. El objetivo es mantener una comunicación trazable, respetando el consentimiento de contacto y evitando repetir notificaciones ya entregadas.
+
+<a href="./assets/applications_user_flow_diagrams/17 · Historial y reintentos de notificaciones.png">
+  <img src="./assets/applications_user_flow_diagrams/17 · Historial y reintentos de notificaciones.png" alt="User flow de historial y reintentos de notificaciones" width="900">
+</a>
+
+##### **18. Privacidad: consentimiento por finalidad**
+
+**User Goal: Controlar los permisos de uso de sus datos**
+El usuario necesita decidir para qué finalidades autoriza el tratamiento de sus datos y modificar sus consentimientos cuando lo considere necesario. Puede gestionar por separado los permisos de contacto, documentación y biometría, conociendo cómo afectan a las funciones que requieren esos datos. El objetivo es ofrecer un control claro sobre los usos futuros, diferenciando el retiro de consentimiento de una solicitud de borrado.
+
+<a href="./assets/applications_user_flow_diagrams/18 · Privacidad_ consentimiento por finalidad.png">
+  <img src="./assets/applications_user_flow_diagrams/18 · Privacidad_ consentimiento por finalidad.png" alt="User flow de privacidad y consentimiento por finalidad" width="1000">
+</a>
+
+##### **19. Solicitud y seguimiento de borrado**
+
+**User Goal: Solicitar el borrado de sus datos y seguir su avance**
+El usuario necesita presentar una solicitud de borrado mediante un proceso claro, con confirmaciones que eviten acciones accidentales. Después de enviarla, puede consultar su estado desde la solicitud inicial hasta su finalización, sin generar solicitudes abiertas duplicadas. El objetivo es ofrecer seguimiento y explicar el alcance del borrado, incluida la conservación de los registros de auditoría inmutables.
+
+<a href="./assets/applications_user_flow_diagrams/19 · Solicitud y seguimiento de borrado — J5.png">
+  <img src="./assets/applications_user_flow_diagrams/19 · Solicitud y seguimiento de borrado — J5.png" alt="User flow de solicitud y seguimiento de borrado de datos" width="1000">
+</a>
+
+##### **20. Cumplimiento, retención y auditoría**
+
+**User Goal: Gestionar las solicitudes de privacidad y las reglas de retención**
+El administrador de cumplimiento necesita revisar las solicitudes de borrado y coordinar su atención con los responsables de los datos. También requiere administrar las políticas de retención por categoría y duración, conservando sus versiones y el historial de cambios. El objetivo es supervisar el cumplimiento de cada solicitud y mantener la trazabilidad de las decisiones mediante la auditoría.
+
+<a href="./assets/applications_user_flow_diagrams/20 · Cumplimiento, retención y auditoría.png">
+  <img src="./assets/applications_user_flow_diagrams/20 · Cumplimiento, retención y auditoría.png" alt="User flow de cumplimiento, retención y auditoría" width="1000">
+</a>
 
 ### **6.5. Applications Prototyping.**
 

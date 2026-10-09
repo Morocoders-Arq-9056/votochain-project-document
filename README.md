@@ -2236,10 +2236,8 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 ### **6.4.1. Applications Wireframes.**
 
 ### **6.4.2. Applications Wireflow Diagrams.**
-  
-### **6.4.3. Applications Mock-ups.**
 
-### **6.4.4. Applications User Flow Diagrams.**
+### **6.4.3. Applications Mock-ups.**
 
 ### **6.4.4. Applications User Flow Diagrams.**
 

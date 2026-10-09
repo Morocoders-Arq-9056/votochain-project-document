@@ -219,6 +219,12 @@ En Ingeniería de Software, un Student Outcome representa las capacidades, conoc
 |---|---|---|
 | Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps.<br>Sustenté la transición del flujo As-is al To-be.<br>Presenté la priorización de las User Stories y el Product Backlog.<br>**TP1**<br>Expuse la Arquitectura de Información y los subsistemas de navegación del sistema.<br>Sustenté el Style Guide y los wireframes de la Landing Page (Desktop y Mobile).<br>Presenté la demostración funcional e interactiva de la Landing Page desplegada.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Participé en el diseño de las guías de entrevista para ambos segmentos.<br>Coordiné el registro de las entrevistas ENT-01 a ENT-06.<br>Expuse los hallazgos del análisis ante el equipo.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Expuse oralmente en el video de sustentación los artefactos que documenté: la estructura de capítulos del informe, los diagramas base y los diagramas C4 de arquitectura (Landscape, Context, Container y Deployment en GCP).<br>Presenté la redacción del Capítulo IV estratégico (ADD y escenarios QAW).<br>Expliqué ante cámara cómo las decisiones arquitectónicas —monolito modular NestJS, wallet custodio Modelo B con signer/payer separados y snapshots congelados— responden a la problemática de las juntas de propietarios.<br>Adapté el nivel técnico del discurso a una audiencia mixta (jurado académico y perfiles no técnicos). **Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Comuniqué de manera clara y objetiva con usuarios de diferentes perfiles, lo que permitió comprender sus necesidades y trasladar sus aportes al diseño funcional y arquitectónico del proyecto. | **TB1**<br>Como grupo, en el TB1 comunicamos oralmente los resultados del proyecto mediante el video de exposición, en el que cada integrante presentó ante cámara los artefactos que documentó: problemática y Lean UX, requisitos y backlog, diseño ADD con sus escenarios de calidad, los 11 bounded contexts con su context mapping y la arquitectura C4 con despliegue en GCP. El reparto por capítulos permitió que cada miembro expusiera con dominio lo que implementó o investigó, adaptando el lenguaje técnico (wallets, snapshots, relayer, EIP-712) a una audiencia mixta de jurado académico y perfiles no técnicos. Concluimos que el equipo comunica oralmente con objetividad ante distintos niveles jerárquicos, quedando como mejora ensayar los tiempos de cada bloque para la sustentación sincrónica del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo comunicó oralmente el diseño táctico (Capítulo V), el diseño UX y arquitectura de información (Capítulo VI) y la demo de la Landing Page, exponiendo con objetividad y dominio técnico ante perfiles académicos y de negocio. |
 | Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps).<br>Elaboré el mapeo de escenarios As-is y To-be.<br>Redacté las User Stories con criterios de aceptación y el Product Backlog.<br>**TP1**<br>Documenté las Guías de Estilo (6.1) y la Arquitectura de Información formal (6.2).<br>Elaboré los wireframes de fidelidad media de la Landing Page en versiones Desktop y Mobile (6.3.1).<br>Desarrollé e implementé el código de la Landing Page responsiva con accesibilidad y SEO.<br><br>**Bueno Perales, Mathias Eduardo**<br>**TB1**<br>Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar).<br>Documenté el registro de las 6 entrevistas con sus fichas individuales.<br>Elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.<br><br>**Aliaga Aguirre, Ethan Matias**<br>**TB1**<br>Redacté y organicé la estructura de capítulos y títulos del informe.<br>Incorporé mi perfil y fotografía al Startup Profile (1.1.2).<br>Elaboré los diagramas C4 coherentes con los drivers D-01..D-22 y restricciones C-01..C-07.<br>Redacté la documentación del ADD con sus escenarios de atributos de calidad.<br>Armé la tabla inicial del Student Outcome y apliqué correcciones de control de versiones con conventional commits y GitFlow.<br>Me apoyé en mi implementación del bounded context IAM en el backend (superficie REST, casos de uso y fachada de contexto) para redactar con precisión técnica sin perder claridad. **Paredes Santos Fabrizio**<br>**TB1**<br>Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.<br>**Rodríguez Macedo, Sebastián**<br>**TB1**<br>Organicé la información obtenida durante la investigación en documentos y modelos claros y estructurados, facilitando la comprensión de las necesidades de los usuarios, las responsabilidades de cada contexto y las relaciones existentes dentro de la arquitectura del sistema. | **TB1**<br>Por escrito, el equipo produjo en el TB1 un informe coherente de punta a punta (Capítulos I–IV) con trazabilidad verificable: la problemática con 5W+2H alimenta las hipótesis Lean UX H1–H4, estas alimentan las épicas e historias de usuario, y estas a su vez los drivers D-01..D-22, las decisiones de diseño y las vistas C4. Cada capítulo combina narrativa accesible con artefactos técnicos rigurosos (tablas de escenarios QA, R1–R16 del context mapping, diagramas mermaid + capturas de Miro/Structurizr), y los commits con conventional commits bajo GitFlow evidencian la autoría de cada aporte. Concluimos que el equipo comunica por escrito con objetividad y rigor ante audiencias de distintas especialidades, quedando como mejora uniformar el tono entre capítulos y completar las evidencias de entrevistas reales antes del siguiente hito.<br><br>**TP1**<br>En el TP1, el equipo documentó formalmente el diseño táctico, la arquitectura de información, los wireframes/mock-ups y la implementación de la Landing Page, manteniendo trazabilidad rigurosa y claridad técnica en todo el informe. |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Expuse ante el equipo los hallazgos de User Personas y Empathy Maps, sustenté la transición del flujo As-is al To-be y presenté la priorización de las User Stories y el Product Backlog.  **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Participé en el diseño de las guías de entrevista para ambos segmentos, coordiné el registro de las entrevistas ENT-01 a ENT-06 y expuse los hallazgos del análisis ante el equipo.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Presenté ante el equipo el perfil de la startup y de la solución, expliqué el proceso Lean UX y sustenté el Impact Mapping, comunicando los principales hallazgos y su relación con los objetivos y necesidades del proyecto.| **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Comuniqué con claridad técnica y objetividad los requerimientos y escenarios del producto, logrando consenso en el equipo sobre el alcance funcional de la solución. **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Comuniqué oralmente los patrones identificados en las entrevistas (desconfianza en métodos manuales, barreras de accesibilidad biométrica, necesidad de evidencia legal), logrando que el equipo incorporara esos hallazgos en los requisitos funcionales y no funcionales.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br> Comuniqué de manera clara y objetiva los resultados del análisis de la startup, la solución, el proceso Lean UX y el Impact Mapping, facilitando la comprensión y alineación del equipo respecto al enfoque y alcance de la solución.|
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerárquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Documenté formalmente los artefactos de Needfinding (User Personas y Empathy Maps), el mapeo de escenarios As-is y To-be, y redacté las User Stories con criterios de aceptación y el Product Backlog. **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Redacté el diseño de entrevistas (guías, criterios de reclutamiento, hipótesis a contrastar), documenté el registro de las 6 entrevistas con sus fichas individuales y elaboré el análisis de entrevistas con la tabla de hallazgos y la síntesis.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Documenté el perfil de la startup y de la solución, desarrollé el proceso Lean UX y elaboré el Impact Mapping, organizando los resultados y conclusiones obtenidos durante el análisis del proyecto. | **Ríos Pacheco, Héctor Javier**<br>**TB1**<br>Generé especificaciones escritas claras y estructuradas que conectan las necesidades del usuario con la arquitectura del sistema, sirviendo de guía para el desarrollo. **Bueno Perales, Mathias Eduardo**<br>**TB1**<br> Generé documentación escrita estructurada que conecta la evidencia cualitativa de los usuarios con los requisitos del sistema, sirviendo de base para las decisiones de diseño de privacidad, accesibilidad y validez legal del proceso de votación.
+**Paredes Santos, Fabrizio Alberto**<br>**TB1**<br>Generé documentación estructurada que relaciona las características de la startup y la solución con las necesidades de los usuarios y los objetivos del proyecto, sirviendo como base para orientar las decisiones de diseño y desarrollo.|
 
 <br>
 
@@ -250,6 +256,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 | ![alt text](assets/FotoSebastian.png) | Sebastián Rodriguez Macedo | u202310199 | Ingeniería de Software | Cuento con formación en desarrollo de software y conocimientos en arquitectura de sistemas, APIs REST, microservicios y bases de datos relacionales. Trabajo principalmente con Spring Boot, Angular, TypeScript y SQL Server, utilizando tecnologías relacionadas con integración y procesamiento de datos como procesos ETL. Me gusta involucrarme activamente en los proyectos, aportar ideas y proponer mejoras técnicas |
 | [alt text](assets/foto-mathias.png) | Bueno Perales Mathias Eduardo | U202313433 | Ingenieria de Software | Soy Mathias Eduardo Bueno Perales, estudiante de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, cursando actualmente el 8tavo ciclo. Soy una persona que busca siempre trabajar en equipo y busco tener nuestros proyectos listos de forma puntual. Cuento con habilidades de trabajo en equipo, mucho compromiso, responsabilidad y empatia. Cuento con conocimientos de desarrollo web y de base de datos en Java |
 | ![alt text](assets/FotoEthan.png)  | Ethan Matias Aliaga Aguirre | u202318323 | Ingenieria de Software | Soy Ethan Matias Aliaga Aguirre, estudiante de 7mo ciclo de Ingeniería de Software en la UPC, sede San Miguel. Me caracterizo por mi compromiso, responsabilidad, habilidad para trabajar en equipo y comunicación. Mis conocimientos incluyen arquitectura de software y desarrollo de APIs. Además, tengo experiencia en el uso de herramientas como Photoshop, Filmora y Vegas Studio, lo que me permite aportar con soluciones creativas y técnicas en mis proyectos. Estoy comprometido con mi crecimiento personal y profesional, siempre buscando aprender y mejorar en cada oportunidad que se presente.  |
+| ![alt text](assets/FotoFabrizio.jpeg)  | Fabrizio Alberto Paredes Santos | u202310914 | Ingenieria de Software | Formado en Ingeniería de Software, cuento con experiencia construyendo soluciones digitales de principio a fin, modelando bases de datos y diseñando APIs REST. Mi stack principal incluye Spring Boot, .NET, Angular y TypeScript, integrando prácticas de testing automatizado, CI/CD y herramientas de IA para optimizar la velocidad y calidad del desarrollo. Me caracterizo por mi proactividad en el trabajo colaborativo, siempre dispuesto a sumar iniciativas y mejoras técnicas.  |
 
 ---
 
@@ -2238,6 +2245,687 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 ### **6.4.2. Applications Wireflow Diagrams.**
 
 ### **6.4.3. Applications Mock-ups.**
+
+Las siguientes vistas corresponden a los principales flujos de la aplicación, agrupados según la funcionalidad representada por el nombre de cada mock-up.
+
+#### **Acceso, registro y seguridad**
+
+##### **Registro**
+
+<p align="center">
+  <img src="./assets/RegistroMockup1.png" alt="Registro - RegistroMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistroMockup2.png" alt="Registro - RegistroMockup2.png" width="320"/>
+</p>
+
+##### **Inicio de sesión**
+
+<p align="center">
+  <img src="./assets/InicioSesionMockup1.png" alt="Inicio de sesión - InicioSesionMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/InicioSesionMockup2.png" alt="Inicio de sesión - InicioSesionMockup2.png" width="320"/>
+</p>
+
+##### **Solicitar código**
+
+<p align="center">
+  <img src="./assets/SolicitarCódigoMockup1.png" alt="Solicitar código - SolicitarCódigoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarCódigoMockup2.png" alt="Solicitar código - SolicitarCódigoMockup2.png" width="320"/>
+</p>
+
+##### **Ingresar código**
+
+<p align="center">
+  <img src="./assets/IngresarCódigoMockup1.png" alt="Ingresar código - IngresarCódigoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/IngresarCódigoMockup2.png" alt="Ingresar código - IngresarCódigoMockup2.png" width="320"/>
+</p>
+
+##### **Verificación de correo**
+
+<p align="center">
+  <img src="./assets/VerificarCorreo1.png" alt="Verificación de correo - VerificarCorreo1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/VerficiarCorreo2.png" alt="Verificación de correo - VerficiarCorreo2.png" width="320"/>
+</p>
+
+##### **Cuenta y seguridad**
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup1.png" alt="Cuenta y seguridad - CuentaySeguridadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup2.png" alt="Cuenta y seguridad - CuentaySeguridadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup3.png" alt="Cuenta y seguridad - CuentaySeguridadMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup4.png" alt="Cuenta y seguridad - CuentaySeguridadMockup4.png" width="320"/>
+</p>
+
+#### **Verificación de identidad**
+
+##### **Resultado documental**
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup1.png" alt="Resultado documental - ResultadoDocumentalMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup2.png" alt="Resultado documental - ResultadoDocumentalMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup3.png" alt="Resultado documental - ResultadoDocumentalMockup3.png" width="320"/>
+</p>
+
+##### **Subir documento**
+
+<p align="center">
+  <img src="./assets/SubirDocumentoMockup1.png" alt="Subir documento - SubirDocumentoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SubirDocumentoMockup2.png" alt="Subir documento - SubirDocumentoMockup2.png" width="320"/>
+</p>
+
+##### **Prueba de vida**
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup1.png" alt="Prueba de vida - PruebaDeVidaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup2.png" alt="Prueba de vida - PruebaDeVidaMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup3.png" alt="Prueba de vida - PruebaDeVidaMockup3.png" width="320"/>
+</p>
+
+##### **Referencia biométrica**
+
+<p align="center">
+  <img src="./assets/ReferenciaBiométricaMockup1.png" alt="Referencia biométrica - ReferenciaBiométricaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ReferenciaBiométricaMockup2.png" alt="Referencia biométrica - ReferenciaBiométricaMockup2.png" width="320"/>
+</p>
+
+##### **Mi verificación**
+
+<p align="center">
+  <img src="./assets/MiVerificaciónMockup1.png" alt="Mi verificación - MiVerificaciónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiVerificaciónMockup2.png" alt="Mi verificación - MiVerificaciónMockup2.png" width="320"/>
+</p>
+
+#### **Comunidades y administración**
+
+##### **Registrar comunidad**
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup1.png" alt="Registrar comunidad - RegistrarComunidadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup2.png" alt="Registrar comunidad - RegistrarComunidadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup3.png" alt="Registrar comunidad - RegistrarComunidadMockup3.png" width="320"/>
+</p>
+
+##### **Ficha de comunidad**
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup1.png" alt="Ficha de comunidad - FichaComunidadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup2.png" alt="Ficha de comunidad - FichaComunidadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup3.png" alt="Ficha de comunidad - FichaComunidadMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup4.png" alt="Ficha de comunidad - FichaComunidadMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup5.png" alt="Ficha de comunidad - FichaComunidadMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup6.png" alt="Ficha de comunidad - FichaComunidadMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup7.png" alt="Ficha de comunidad - FichaComunidadMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup8.png" alt="Ficha de comunidad - FichaComunidadMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup9.png" alt="Ficha de comunidad - FichaComunidadMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup10.png" alt="Ficha de comunidad - FichaComunidadMockup10.png" width="320"/>
+</p>
+
+##### **Administradores**
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup1.png" alt="Administradores - AdministradoresMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup2.png" alt="Administradores - AdministradoresMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup3.png" alt="Administradores - AdministradoresMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup4.png" alt="Administradores - AdministradoresMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup5.png" alt="Administradores - AdministradoresMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup6.png" alt="Administradores - AdministradoresMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup7.png" alt="Administradores - AdministradoresMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup8.png" alt="Administradores - AdministradoresMockup8.png" width="320"/>
+</p>
+
+##### **Usuarios**
+
+<p align="center">
+  <img src="./assets/UsuariosMockup1.png" alt="Usuarios - UsuariosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/UsuariosMockup2.png" alt="Usuarios - UsuariosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/UsuariosMockup3.png" alt="Usuarios - UsuariosMockup3.png" width="320"/>
+</p>
+
+##### **Padrón**
+
+<p align="center">
+  <img src="./assets/PadrónMockup1.png" alt="Padrón - PadrónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup2.png" alt="Padrón - PadrónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup3.png" alt="Padrón - PadrónMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup4.png" alt="Padrón - PadrónMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup5.png" alt="Padrón - PadrónMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup6.png" alt="Padrón - PadrónMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup7.png" alt="Padrón - PadrónMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup8.png" alt="Padrón - PadrónMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup9.png" alt="Padrón - PadrónMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup10.png" alt="Padrón - PadrónMockup10.png" width="320"/>
+</p>
+
+##### **Membresías**
+
+<p align="center">
+  <img src="./assets/MembresiasMockup1.png" alt="Membresías - MembresiasMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup2.png" alt="Membresías - MembresiasMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup3.png" alt="Membresías - MembresiasMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup4.png" alt="Membresías - MembresiasMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup5.png" alt="Membresías - MembresiasMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup6.png" alt="Membresías - MembresiasMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup7.png" alt="Membresías - MembresiasMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup8.png" alt="Membresías - MembresiasMockup8.png" width="320"/>
+</p>
+
+##### **Detalle de miembro**
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup1.png" alt="Detalle de miembro - DetalleDeMiembroMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup2.png" alt="Detalle de miembro - DetalleDeMiembroMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup3.png" alt="Detalle de miembro - DetalleDeMiembroMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup4.png" alt="Detalle de miembro - DetalleDeMiembroMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup5.png" alt="Detalle de miembro - DetalleDeMiembroMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup6.png" alt="Detalle de miembro - DetalleDeMiembroMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup7.png" alt="Detalle de miembro - DetalleDeMiembroMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup8.png" alt="Detalle de miembro - DetalleDeMiembroMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup9.png" alt="Detalle de miembro - DetalleDeMiembroMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup10.png" alt="Detalle de miembro - DetalleDeMiembroMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup11.png" alt="Detalle de miembro - DetalleDeMiembroMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup12.png" alt="Detalle de miembro - DetalleDeMiembroMockup12.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup13.png" alt="Detalle de miembro - DetalleDeMiembroMockup13.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup14.png" alt="Detalle de miembro - DetalleDeMiembroMockup14.png" width="320"/>
+</p>
+
+##### **Mis permisos**
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup1.png" alt="Mis permisos - MisPermisosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup2.png" alt="Mis permisos - MisPermisosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup3.png" alt="Mis permisos - MisPermisosMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup4.png" alt="Mis permisos - MisPermisosMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup5.png" alt="Mis permisos - MisPermisosMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup6.png" alt="Mis permisos - MisPermisosMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup7.png" alt="Mis permisos - MisPermisosMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup8.png" alt="Mis permisos - MisPermisosMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup9.png" alt="Mis permisos - MisPermisosMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup10.png" alt="Mis permisos - MisPermisosMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup11.png" alt="Mis permisos - MisPermisosMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup12.png" alt="Mis permisos - MisPermisosMockup12.png" width="320"/>
+</p>
+
+#### **Solicitudes y participación**
+
+##### **Solicitar unirse**
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup1.png" alt="Solicitar unirse - SolicitarUnirseMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup2.png" alt="Solicitar unirse - SolicitarUnirseMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup3.png" alt="Solicitar unirse - SolicitarUnirseMockup3.png" width="320"/>
+</p>
+
+#### **Propuestas y votaciones**
+
+##### **Propuestas**
+
+<p align="center">
+  <img src="./assets/PropuestasMockup1.png" alt="Propuestas - PropuestasMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup2.png" alt="Propuestas - PropuestasMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup3.png" alt="Propuestas - PropuestasMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup4.png" alt="Propuestas - PropuestasMockup4.png" width="320"/>
+</p>
+
+##### **Crear propuesta**
+
+<p align="center">
+  <img src="./assets/CrearPropuestaMockup1.png" alt="Crear propuesta - CrearPropuestaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CrearPropuestaMockup2.png" alt="Crear propuesta - CrearPropuestaMockup2.png" width="320"/>
+</p>
+
+##### **Detalle de propuesta**
+
+<p align="center">
+  <img src="./assets/DetallePropuestaMockup1.png" alt="Detalle de propuesta - DetallePropuestaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetallePropuestaMockup2.png" alt="Detalle de propuesta - DetallePropuestaMockup2.png" width="320"/>
+</p>
+
+##### **Política de votación**
+
+<p align="center">
+  <img src="./assets/PolíticaVocatiónMockup1.png" alt="Política de votación - PolíticaVocatiónMockup1.png" width="320"/>
+</p>
+
+##### **Política de votación**
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup4.png" alt="Política de votación - PolíticaVotaciónMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup2.png" alt="Política de votación - PolíticaVotaciónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup3.png" alt="Política de votación - PolíticaVotaciónMockup3.png" width="320"/>
+</p>
+
+##### **Emitir voto**
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup1.png" alt="Emitir voto - EmitirVotoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup2.png" alt="Emitir voto - EmitirVotoMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup3.png" alt="Emitir voto - EmitirVotoMockup3.png" width="320"/>
+</p>
+
+##### **Cierre y escrutinio**
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup1.png" alt="Cierre y escrutinio - CierreEscrutinioMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup2.png" alt="Cierre y escrutinio - CierreEscrutinioMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup3.png" alt="Cierre y escrutinio - CierreEscrutinioMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup4.png" alt="Cierre y escrutinio - CierreEscrutinioMockup4.png" width="320"/>
+</p>
+
+#### **Notificaciones y comprobantes**
+
+##### **Notificaciones**
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup1.png" alt="Notificaciones - NotificacionesMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup2.png" alt="Notificaciones - NotificacionesMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup3.png" alt="Notificaciones - NotificacionesMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup4.png" alt="Notificaciones - NotificacionesMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup5.png" alt="Notificaciones - NotificacionesMockup5.png" width="320"/>
+</p>
+
+##### **Historial de notificaciones**
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup1.png" alt="Historial de notificaciones - HistorialNotificacionesMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup2.png" alt="Historial de notificaciones - HistorialNotificacionesMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup3.png" alt="Historial de notificaciones - HistorialNotificacionesMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup4.png" alt="Historial de notificaciones - HistorialNotificacionesMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup5.png" alt="Historial de notificaciones - HistorialNotificacionesMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup6.png" alt="Historial de notificaciones - HistorialNotificacionesMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup7.png" alt="Historial de notificaciones - HistorialNotificacionesMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup8.png" alt="Historial de notificaciones - HistorialNotificacionesMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup9.png" alt="Historial de notificaciones - HistorialNotificacionesMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup10.png" alt="Historial de notificaciones - HistorialNotificacionesMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup11.png" alt="Historial de notificaciones - HistorialNotificacionesMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup12.png" alt="Historial de notificaciones - HistorialNotificacionesMockup12.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup13.png" alt="Historial de notificaciones - HistorialNotificacionesMockup13.png" width="320"/>
+</p>
+
+##### **Mi recibo**
+
+<p align="center">
+  <img src="./assets/MiReciboMockup1.png" alt="Mi recibo - MiReciboMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiReciboMockup2.png" alt="Mi recibo - MiReciboMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiReciboMockup3.png" alt="Mi recibo - MiReciboMockup3.png" width="320"/>
+</p>
+
+#### **Privacidad y gestión de datos**
+
+##### **Borrado de datos**
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup1.png" alt="Borrado de datos - BorradoDatosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup2.png" alt="Borrado de datos - BorradoDatosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup3.png" alt="Borrado de datos - BorradoDatosMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup4.png" alt="Borrado de datos - BorradoDatosMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup5.png" alt="Borrado de datos - BorradoDatosMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup6.png" alt="Borrado de datos - BorradoDatosMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup7.png" alt="Borrado de datos - BorradoDatosMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup8.png" alt="Borrado de datos - BorradoDatosMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup9.png" alt="Borrado de datos - BorradoDatosMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup10.png" alt="Borrado de datos - BorradoDatosMockup10.png" width="320"/>
+</p>
+
+##### **Autorización**
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup1.png" alt="Autorización - AutorizaciónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup2.png" alt="Autorización - AutorizaciónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup3.png" alt="Autorización - AutorizaciónMockup3.png" width="320"/>
+</p>
+
 
 ### **6.4.4. Applications User Flow Diagrams.**
 

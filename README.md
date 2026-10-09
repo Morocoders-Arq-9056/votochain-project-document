@@ -83,6 +83,10 @@
 | 0.6 | 19/09/2026 | Rodriguez Macedo, Sebastian | Capítulo IV DDD: EventStorming, Candidate Discovery, Message Flows, Context Mapping. |
 | 0.7 | 02/10/2026 | Aliaga Aguirre, Ethan Matias | Correcciones forma TB1 + Student Outcome + control versiones GitFlow. |
 | 0.8 | 05-06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI UX: Information Architecture, wireframes/mock-ups landing desktop/mobile. |
+| 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad OTP/OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
+| 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (DSL C4, clases completas, REST, ER normalizado, standing unificado, parámetros por BC, pies Fig. 5.X.Y). PNG `assets/c5-*.png` pendientes de exportar. |
+| 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots `[Manual]` para mm:ss/edad/distrito/capturas. |
+| 1.0 | 06/10/2026 | Paredes Santos, Fabrizio Alberto | Capítulo V y Capítulo VI para TP1 (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes/Mock-ups Landing) e implementación de Landing Page mediante el merge de la PR #8 (`feat/paredes`). |
 | 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad  /OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
 | 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (dominio, REST, aplicación, infraestructura, componentes y código). |
 | 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots pendientes TF para mm:ss/edad/distrito/capturas. |
@@ -92,7 +96,21 @@
 
 ## Project Report Collaboration Insights
 
-Informe elaborado con GitFlow: ramas `feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno`, `feature/rodriguez` → `develop` → `main`, con conventional commits (`docs(ux):`, `fix issues document`). Verificación: `git log --oneline --all --graph`, `git shortlog -sne --all`, `git log --format="%h|%an|%ad|%s"`.
+El informe se elaboró colaborativamente mediante GitFlow, utilizando ramas de trabajo por integrante (`feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno` y `feature/rodriguez`) que fueron integradas progresivamente en `develop` y posteriormente en `main`. Los cambios se organizaron mediante commits convencionales y pull requests, lo que permitió revisar, integrar y mantener la trazabilidad de los aportes de cada autor.
+
+La evidencia de GitHub Insights muestra la actividad colaborativa del repositorio. Durante el periodo analizado se registraron 5 autores, 24 commits en `main` y 24 commits considerando todas las ramas, además de 7 pull requests integradas También se documentan 302 archivos modificados, con 2,801 adiciones y 182 eliminaciones. Estos indicadores evidencian que el informe fue construido mediante iteraciones sucesivas de documentación, revisión y consolidación.
+
+<p align="center">
+  <img src="./assets/MoroCodersCollaborationInsights1.png" alt="GitHub Insights - Pulse del repositorio" width="850"/>
+</p>
+
+**Figura. GitHub Insights – Pulse del repositorio.** La captura evidencia la actividad reciente del equipo, los pull requests integrados y los commits asociados a las ramas de trabajo, en coherencia con las versiones registradas en el informe.
+
+<p align="center">
+  <img src="./assets/MoroCodersCollaborationInsights2.png" alt="GitHub Insights - Contributors del repositorio" width="850"/>
+</p>
+
+**Figura. GitHub Insights – Contributors.** La captura presenta la distribución temporal de contribuciones y commits por autor. Esta evidencia complementa el Registro de Versiones al mostrar la participación individual de los integrantes durante la elaboración y corrección del documento.
 
 | URL del repositorio del reporte |
 | :-----------------------------------: |
@@ -467,7 +485,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | Pendiente TF | Lima (detalle en consolidación TF) | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | Pendiente TF | Pendiente TF | `assets/ENT-05-captura.png` Pendiente TF | Completada |
 | ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Pendiente TF | Pendiente TF | `assets/ENT-06-captura.png` Pendiente TF | Completada |
 
-\* ENT-01: Directivas / administradores — participó como administrador en 3 ocasiones y convocó asamblea (ver cita con mm:ss en ficha). Cuota resultante: 3 directivas (ENT-01/04/05) y 3 propietarios (ENT-02/03/06).
+\* ENT-01: Directivas / administradores — participó como administrador en 3 ocasiones y convocó asamblea (ver cita [00:35] en ficha). Cuota resultante: 3 directivas (ENT-01/04/05) y 3 propietarios (ENT-02/03/06).
 
 
 **Formato de ficha individual para cada entrevista.**
@@ -484,63 +502,73 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Hallazgos | Aceptación de una solución que reduzca trabajo manual de convocatoria/asistencia/conteo y entregue evidencia defendible. Confianza y facilidad de uso como criterios de adopción.|
 | Implicancia para requisitos | El sistema debe apoyar convocatoria, registro de asistencia, cálculo de cuórum y reporte con evidencia verificable, con interacción sencilla para directivas y propietarios. |
 
-**Ficha individual - ENT-02**
+**Ficha individual - ENT-02 (Propietarios / socios votantes)**
 
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-02** |
-| Datos del participante | Carlos Gabriel Mendoza. Propietario / socio votante. |
+| Datos del participante | Carlos Gabriel Mendoza Quispe. Propietario / socio votante. Edad: 21 años. Distrito: Santiago de Surco, Lima. |
+| Hora de inicio y duración | Inicio: 20:30 \| Duración: 04:28 min |
+| Evidencia gráfica | <p align="center"><img src="./assets/ENT-02-captura.png" alt="Captura ENT-02" width="500"/></p> |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante respondió preguntas relacionadas con su participación en asambleas, confianza en el proceso de votación, uso de aplicaciones digitales, verificación de identidad y posibilidad de recibir evidencia del voto. |
-| Citas relevantes | El participante mostró una percepción favorable hacia la propuesta, aunque señaló la necesidad de considerar una alternativa cuando una persona mayor tenga dificultades con el uso del celular o disponga de una cámara de baja calidad. |
+| Citas relevantes | "El conteo manual suele generar dudas cuando la votación queda muy pareja" [01:33]. El participante mostró una percepción favorable hacia la propuesta, señalando la necesidad de considerar una alternativa para personas mayores o con cámaras de baja calidad [03:36]. |
 | Hallazgos | Existe aceptación del voto digital y de la validación de identidad, pero la dependencia exclusiva de un smartphone con cámara puede convertirse en una barrera para ciertos propietarios.|
 | Implicancia para requisitos | Debe contemplarse un mecanismo alternativo o asistido de verificación para usuarios que no puedan completar correctamente el proceso biométrico mediante su dispositivo. También debe priorizarse una interfaz sencilla y accesible. |
 
-**Ficha individual - ENT-03**
+**Ficha individual - ENT-03 (Propietarios / socios votantes)**
 
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-03** |
-| Datos del participante | Leonardo Prieto Mantari. Propietario / socio votante. |
+| Datos del participante | Leonardo Prieto Mantari. Propietario / socio votante. Edad: 23 años. Distrito: San Miguel, Lima. |
+| Hora de inicio y duración | Inicio: 20:40 \| Duración: 04:22 min |
+| Evidencia gráfica | <p align="center"><img src="./assets/ENT-03-captura.png" alt="Captura ENT-03" width="500"/></p> |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante evaluó aspectos relacionados con participación, confianza en los resultados, identificación del votante, uso de aplicaciones con cámara y accesibilidad para diferentes tipos de usuarios. |
-| Citas relevantes | El participante consideró favorable la propuesta, pero también manifestó que debería existir una alternativa para personas mayores o para quienes dispongan de dispositivos cuya cámara no permita realizar adecuadamente la validación. |
+| Citas relevantes | "Solo confío parcialmente en la forma en que se cuentan los votos; necesitaría mayor transparencia y una confirmación individual" [00:41]. Propone recibir un comprobante con código verificable que guarde confidencialidad [02:17]. |
 | Hallazgos | La propuesta genera una percepción positiva de seguridad y trazabilidad, pero se identificó nuevamente una posible barrera relacionada con la accesibilidad tecnológica y la calidad del dispositivo utilizado.|
 | Implicancia para requisitos | El sistema debe considerar accesibilidad digital y mecanismos de contingencia cuando la verificación biométrica no pueda realizarse correctamente por limitaciones del dispositivo o del usuario. |
 
-**Ficha individual - ENT-04**
+**Ficha individual - ENT-04 (Directivas / administradores)**
 
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-04** |
-| Datos del participante | Fabrizio Díaz Enriquez. Segmento relacionado con directivas y administración de comunidades. |
+| Datos del participante | Fabricio Alonso Díaz Enríquez. Administrador de condominios. Edad: 22 años. Distrito: San Martín de Porres, Lima. |
+| Hora de inicio y duración | Inicio: 20:46 \| Duración: 05:23 min |
+| Evidencia gráfica | <p align="center"><img src="./assets/ENT-04-captura.png" alt="Captura ENT-04" width="500"/></p> |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante describió cómo convoca asambleas mediante correo y carta física, y cómo calcula el cuórum sumando coeficientes en Excel. Relató que enfrenta conflictos por actas impugnadas y cartas poder de dudosa procedencia. Además, mencionó que el uso de Zoom y Formularios de Google durante la pandemia no ofreció validez legal ni certeza sobre la identidad de los votantes. |
-| Citas relevantes | El participante indicó que necesita "un reporte consolidado con marca de tiempo, desglose de coeficientes por unidad y firmas digitales que pueda anexar directamente al libro de actas para presentarlo ante notaría o SUNARP". |
-| Hallazgos | Existe una necesidad imperativa de otorgar validez legal estricta al proceso y garantizar que los votantes sean los verdaderos titulares para evitar asambleas caóticas. Se anticipan objeciones sobre el uso de datos biométricos, especialmente por parte de los propietarios de mayor edad |
-| Implicancia para requisitos | El sistema debe generar reportes automáticos con firmas digitales, desgloses de coeficientes y marcas de tiempo que tengan validez para entidades legales (SUNARP o notarías). Además, la plataforma debe facilitar la comunicación sobre la privacidad de datos mediante circulares formales |
+| Citas relevantes | Necesito "un reporte consolidado con marca de tiempo, desglose de coeficientes por unidad y firmas digitales que pueda anexar directamente al libro de actas para presentarlo ante notaría o SUNARP" [03:40]. |
+| Hallazgos | Existe una necesidad imperativa de otorgar validez legal estricta al proceso y garantizar que los votantes sean los verdaderos titulares para evitar asambleas caóticas. Se anticipan objeciones sobre el uso de datos biométricos, especialmente por parte de los propietarios de mayor edad. |
+| Implicancia para requisitos | El sistema debe generar reportes automáticos con firmas digitales, desgloses de coeficientes y marcas de tiempo que tengan validez para entidades legales (SUNARP o notarías). Además, la plataforma debe facilitar la comunicación sobre la privacidad de datos mediante circulares formales. |
 
-**Ficha individual - ENT-05**
+**Ficha individual - ENT-05 (Directivas / administradores)**
 
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-05** |
-| Datos del participante | Miguel Salas Guillen. Segmento relacionado con directivas y administración de comunidades. |
+| Datos del participante | Miguel Salas Guillen. Directiva / Administrador vecinal. Edad: 21 años. Distrito: La Victoria, Lima. |
+| Hora de inicio y duración | Inicio: 20:56 \| Duración: 03:40 min |
+| Evidencia gráfica | <p align="center"><img src="./assets/ENT-05-captura.png" alt="Captura ENT-05" width="500"/></p> |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante organiza asambleas presenciales donde verifica la asistencia con firmas en papel y cuenta los votos a mano alzada. Señaló que esto genera discusiones y paraliza proyectos. También relató un intento fallido de votar mediante encuestas de WhatsApp, el cual no funcionó debido a votos dobles y borrado de mensajes. |
-| Citas relevantes | Considera como evidencia suficiente "un documento resumen firmado digitalmente o con un código de verificación que pueda imprimir y pegar en la vitrina del ascensor". |
+| Citas relevantes | Considera como evidencia suficiente "un documento resumen firmado digitalmente o con un código de verificación que pueda imprimir y pegar en la vitrina del ascensor" [02:05]. |
 | Hallazgos | Los procesos manuales y las adaptaciones informales generan desconfianza y conflictos vecinales por sospechas de mal conteo. Existe un temor latente a las estafas digitales entre los propietarios. |
 | Implicancia para requisitos | La aplicación debe garantizar la inmutabilidad de los votos, impidiendo borrados o votaciones múltiples por departamento. El sistema debe emitir un resumen verificable públicamente. Se recomienda integrar flujos educativos (como videos cortos explicativos) para mitigar la desconfianza inicial. |
 
-**Ficha individual - ENT-06**
+**Ficha individual - ENT-06 (Propietarios / socios votantes)**
 
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-06** |
-| Datos del participante | Cristina Sihuas Diaz. Propietario / socio votante. |
+| Datos del participante | Cristina Sihuas Diaz. Propietaria / socia votante. Edad: 21 años. Distrito: Magdalena del Mar, Lima. |
+| Hora de inicio y duración | Inicio: 00:46 \| Duración: 03:44 min |
+| Evidencia gráfica | <p align="center"><img src="./assets/ENT-06-captura.png" alt="Captura ENT-06" width="500"/></p> |
 | Consentimiento | La participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | La participante indicó que asiste con poca frecuencia debido a incompatibilidad de horarios y a que las asambleas son largas y desordenadas. Desconfía fuertemente del conteo a mano alzada y teme que se utilicen votos sin autorización o que representantes no acreditados tomen decisiones. |
-| Citas relevantes | Manifestó que aceptaría el uso de prueba de vida "siempre que al inicio me aparezca un aviso claro de protección de datos confirmando que la imagen no se almacenará ni compartirá con terceros". |
+| Citas relevantes | Manifestó que aceptaría el uso de prueba de vida "siempre que al inicio me aparezca un aviso claro de protección de datos confirmando que la imagen no se almacenará ni compartirá con terceros" [01:45]. |
 | Hallazgos | Existe familiaridad y disposición favorable hacia el uso de tecnologías biométricas en usuarios más jóvenes, pero exigen transparencia absoluta sobre el manejo de privacidad. Se ratifica la preocupación por las barreras tecnológicas que podrían enfrentar los adultos mayores. |
 | Implicancia para requisitos | La interfaz debe mostrar un aviso de privacidad claro y explícito inmediatamente antes de utilizar la cámara. El sistema debe emitir un comprobante digital (en la app o por correo) confirmando fecha, hora y mociones, resguardando el secreto del voto. El flujo debe ser lo suficientemente intuitivo y contemplar asistencia para usuarios con dispositivos limitados o poca destreza digital. |
 
@@ -1538,9 +1566,10 @@ La arquitectura traduce drivers D-01..D-22 y constraints C-01..C-07 a containers
 
 ### **4.3.1. Software Architecture System Landscape Diagram.**
 
-Vista de paisaje: **VotoChain como un solo sistema** dentro de su ecosistema (personas, comunidades, ledger público, proveedores, SUNARP). Los containers internos (Landing, Web App, API, Relayer) no van en Landscape; van en 4.3.3 Container.
+Vista de paisaje: **VotoChain como un solo sistema** dentro de su ecosistema (personas, comunidades, ledger público y proveedores externos). Los containers internos (Landing, Web App, API, Relayer) no van en Landscape; van en 4.3.3 Container.
 
 <p align="center">
+  <img src="./assets/c4-landscape.png" alt="System Landscape VotoChain como sistema unico" width="700"/>
   <img src="./assets/c4-landscape.png" alt="System Landscape VotoChain como sistema unico" width="700"/>
 </p>
 
@@ -1553,6 +1582,7 @@ VotoChain es un único sistema. Las personas (directiva, propietario, admin cump
 Un recuadro = “VotoChain Platform” en el centro; alrededor, usuarios y sistemas externos, incluyendo **Admin Cumplimiento** (presente en historias US-18 y en Landscape).
 
 <p align="center">
+  <img src="./assets/c4-context.png" alt="C4 Context con Admin Cumplimiento" width="700"/>
   <img src="./assets/c4-context.png" alt="C4 Context con Admin Cumplimiento" width="700"/>
 </p>
 
@@ -3483,6 +3513,428 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 
 ### **6.4.1. Applications Wireframes.**
 
+Los wireframes de la aplicación representan la estructura y disposición de los elementos de interfaz en fidelidad media, sin color ni estilo visual definitivo. Su propósito es validar la jerarquía de información, la navegación y la lógica de cada pantalla antes de aplicar el sistema de diseño. 
+
+
+#### **Vistas principales por rol**
+
+#### **Acceso, registro y seguridad**
+
+##### **Registro**
+
+Esquemas del flujo de creación de cuenta: pantalla de ingreso de datos personales y pantalla de confirmación de registro con indicación del paso de verificación de correo.
+
+<p align="center">
+  <img src="./assets/wireframes_registro.png" alt="Registro - RegistroWireframe.png" width="320"/>
+</p>
+
+
+##### **Inicio de sesión**
+
+Esquemas del flujo de autenticación: pantalla de ingreso de credenciales y pantalla de estado de error con mensaje de acción disponible.
+
+<p align="center">
+  <img src="./assets/wireframes_login.png" alt="Login - LoginWireframe.png" width="320"/>
+</p>
+
+
+##### **Solicitar código**
+
+Esquemas del flujo de solicitud de OTP: pantalla de ingreso del correo registrado y pantalla de confirmación de envío del código temporal.
+
+<p align="center">
+  <img src="./assets/wireframes_ingresar_codigo.png" alt="Solicitar código - SolicitarWireframe.png" width="320"/>
+</p>
+
+##### **Ingresar código**
+
+Esquemas del flujo de validación de OTP: pantalla de ingreso del código recibido y pantalla de estado de código vencido con opción de reenvío.
+
+<p align="center">
+  <img src="./assets/wireframes_solicitar_codigo.png" alt="Ingresar código - IngresarCódigoWireframes.png" width="320"/>
+</p>
+
+
+##### **Verificación de correo**
+
+Esquemas del flujo de confirmación de correo electrónico: pantalla de instrucción de revisión de bandeja y pantalla de confirmación de correo verificado.
+
+<p align="center">
+  <img src="./assets/wireframes_verificar_codigo.png" alt="Verificación de correo - VerificarCorreoWireframes.png" width="320"/>
+</p>
+
+
+##### **Cuenta y seguridad**
+
+Esquemas de las pantallas de configuración personal: edición de datos de perfil, cambio de contraseña, actualización de correo con verificación y gestión de cierre de sesión. Cada acción sensible muestra el paso de confirmación mediante OTP.
+
+<p align="center">
+  <img src="./assets/wireframes_cuenta_seguridad.png" alt="Cuenta y seguridad - CuentaySeguridadWireframes.png" width="320"/>
+</p>
+
+---
+
+#### **Verificación de identidad**
+
+##### **Resultado documental**
+
+Esquemas de las pantallas de resultado del procesamiento del DNI: estado de lectura exitosa con datos extraídos, estado de lectura parcial con campos a corregir y estado de error con instrucción de reintento.
+
+
+
+<p align="center">
+  <img src="./assets/wireframes_resultados_documentales.png" alt="Resultado documental - ResultadoDocumentalWireframes.png" width="320"/>
+</p>
+
+##### **Subir documento**
+
+Esquemas del flujo de captura del documento de identidad: pantalla de instrucción de posicionamiento del DNI y pantalla de previsualización con confirmación antes de procesar.
+
+<p align="center">
+  <img src="./assets/wireframes_subir_documento.png" alt="Subir documento - SubirDocumentoWireframes.png" width="320"/>
+</p>
+
+##### **Prueba de vida**
+
+Esquemas del flujo de liveness facial: pantalla de instrucción de posicionamiento, pantalla de captura activa con indicador de progreso y pantalla de resultado con estado de prueba superada o fallida.
+
+<p align="center">
+  <img src="./assets//wireframes_prueba_vida.png" alt="Prueba de vida - PruebaDeVidaWireframes.png" width="320"/>
+</p>
+
+##### **Referencia biométrica**
+
+Esquemas de las pantallas de enrolamiento biométrico: confirmación de referencia registrada y pantalla de estado cuando la referencia ya existe para el usuario.
+
+<p align="center">
+  <img src="./assets/wireframes_referencias_biometrica.png" alt="Prueba de vida - PruebaDeVidaWireframes.png" width="320"/>
+</p>
+
+##### **Mi verificación**
+
+Esquemas de la vista de estado de verificación del usuario: pantalla con verificación vigente mostrando fecha de última comprobación y pantalla con verificación vencida con CTA de re-verificación.
+
+<p align="center">
+  <img src="./assets/wireframes_miverificacion.png" alt="Mi verificación - MiVerificaciónWireframes.png" width="320"/>
+</p>
+
+
+---
+
+#### **Comunidades y administración**
+
+##### **Registrar comunidad**
+
+Esquemas del flujo de alta de comunidad: pantalla de datos generales, pantalla de configuración de política de cuórum y pantalla de confirmación antes de activar.
+
+<p align="center">
+  <img src="./assets/wireframes_registrarcomunidad.png" alt="Registrar comunidad - RegistrarComunidadWireframes.png" width="320"/>
+</p>
+
+
+##### **Ficha de comunidad**
+
+Esquemas de las pantallas de detalle de una comunidad: vista general con datos e indicadores, pestañas de padrón, propuestas, política de votación, administradores y configuración, y pantallas de edición de cada sección con sus estados de guardado.
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad1.png" alt="Ficha de comunidad - FichaComunidadWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad2.png" alt="Ficha de comunidad - FichaComunidadWireframe2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad3.png" alt="Ficha de comunidad - FichaComunidadWireframe3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_fichacomunidad4.png" alt="Ficha de comunidad - FichaComunidadWireframe4.png" width="320"/>
+</p>
+
+
+##### **Administradores**
+
+Esquemas del flujo de gestión de co-administradores: listado de administradores activos, pantalla de invitación con selección de permisos, confirmación de asignación, pantalla de edición de permisos existentes y confirmación de revocación de acceso.
+
+<p align="center">
+  <img src="./assets/wireframes_admin1.png" alt="Administradores - AdministradoresWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_admin2.png" alt="Administradores - AdministradoresWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_admin3.png" alt="Administradores - AdministradoresWireframes3.png" width="320"/>
+</p>
+
+
+##### **Usuarios**
+
+Esquemas de la vista de gestión de usuarios del sistema: tabla de usuarios con filtros por estado y rol, pantalla de detalle de usuario y pantalla de confirmación de cambio de estado.
+
+<p align="center">
+  <img src="./assets/wireframes_usuarios.png" alt="Usuarios - UsuariosWireframes1.png" width="320"/>
+</p>
+
+
+##### **Padrón**
+
+Esquemas de las pantallas de gestión del padrón electoral: listado de miembros con filtros por estado y unidad, pantalla de solicitud pendiente con opciones de aprobación o rechazo, asignación de unidad inmobiliaria, edición de rol de voto y exportación del padrón.
+
+<p align="center">
+  <img src="./assets/wireframes_padron1.png" alt="Padrón - PadrónWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_padron2.png" alt="Padrón - PadrónWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_padron3.png" alt="Padrón - PadrónWireframes3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_padron4.png" alt="Padrón - PadrónWireframes4.png" width="320"/>
+</p>
+
+##### **Membresías**
+
+Esquemas del flujo de gestión de estados de membresía: pantalla de marcado como moroso, confirmación de suspensión con campo de motivo, pantalla de reactivación y confirmación de terminación definitiva.
+
+<p align="center">
+  <img src="./assets/wireframes_membresias1.png" alt="Membresías - MembresiasWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_membresias2.png" alt="Membresías - MembresiasWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_membresias3.png" alt="Membresías - MembresiasWireframes3.png" width="320"/>
+</p>
+
+
+##### **Detalle de miembro**
+
+Esquemas de la vista de ficha individual de un miembro: datos personales, estado de membresía, unidad asignada, historial de estados, estado de verificación de identidad, participación en asambleas anteriores y acciones disponibles según el estado actual.
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro1.png" alt="Detalle de miembro - DetalleDeMiembroWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro2.png" alt="Detalle de miembro - DetalleDeMiembroWireframe2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro3.png" alt="Detalle de miembro - DetalleDeMiembroWireframe3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro4.png" alt="Detalle de miembro - DetalleDeMiembroWireframe4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_detallemiembro5.png" alt="Detalle de miembro - DetalleDeMiembroWireframe5.png" width="320"/>
+</p>
+
+##### **Mis permisos**
+
+Esquemas de la vista del administrador sobre sus propios permisos en una comunidad: listado de permisos activos, pantalla de detalle por permiso y pantalla de solicitud de permiso adicional.
+
+<p align="center">
+  <img src="./assets/wireframes_permisos1.png" alt="Mis permisos - MisPermisosWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_permisos2.png" alt="Mis permisos - MisPermisosWireframe2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_permisos3.png" alt="Mis permisos - MisPermisosWireframe3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_permisos4.png" alt="Mis permisos - MisPermisosWireframe4.png" width="320"/>
+</p>
+
+---
+
+#### **Solicitudes y participación**
+
+##### **Solicitar unirse**
+
+Esquemas del flujo de solicitud de membresía por parte del propietario: búsqueda de comunidad, pantalla de formulario de solicitud con campo de unidad inmobiliaria y pantalla de confirmación de solicitud enviada.
+
+<p align="center">
+  <img src="./assets/wireframes_solicitarunirse.png" alt="Solicitar unirse - SolicitarUnirseWireframe1.png" width="320"/>
+</p>
+
+---
+
+#### **Propuestas y votaciones**
+
+##### **Propuestas**
+
+Esquemas de las pantallas de listado de propuestas: vista del administrador con filtros por estado, vista del miembro con propuestas habilitadas para votar y estados vacíos para cada caso.
+
+<p align="center">
+  <img src="./assets/wireframes_propuestas.png" alt="Propuestas - PropuestasWireframes.png" width="320"/>
+</p>
+
+
+##### **Crear propuesta**
+
+Esquemas del flujo de creación de propuesta: pantalla de formulario con título, descripción y opciones de votación, y pantalla de confirmación antes de publicar.
+
+<p align="center">
+  <img src="./assets/wireframes_crear_propuesta.png" alt="Crear propuesta - CrearPropuestaWireframe.png" width="320"/>
+</p>
+
+
+##### **Detalle de propuesta**
+
+Esquemas de la vista de detalle de una propuesta: bloque de descripción, opciones disponibles, indicador de cuórum en tiempo real y estado del voto del usuario autenticado.
+
+<p align="center">
+  <img src="./assets/wireframes_detalle_propuesta.png" alt="Detalle de propuesta - DetallePropuestaWireframe.png" width="320"/>
+</p>
+
+
+##### **Política de votación**
+
+Esquemas de las pantallas de configuración de la política de votación de una comunidad: selección del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y confirmación de cambios con advertencia de impacto sobre asambleas activas.
+
+<p align="center">
+  <img src="./assets/wireframes_politicavotacion1.png" alt="Política de votación - PolíticaVotaciónWireframe1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_politicavotacion2.png" alt="Política de votación - PolíticaVotaciónWireframe2.png" width="320"/>
+</p>
+
+
+##### **Emitir voto**
+
+Esquemas del flujo de emisión de voto: pantalla de selección de alternativa, pantalla de confirmación con resumen de la elección y pantalla de estado de voto recibido pendiente de confirmación on-chain.
+
+<p align="center">
+  <img src="./assets/wireframes_emitirvoto.png" alt="Emitir voto - EmitirVotoWireframe.png" width="320"/>
+</p>
+
+##### **Cierre y escrutinio**
+
+Esquemas del flujo de cierre de votación: pantalla de verificación de cuórum alcanzado, confirmación de cierre, pantalla de resultados con distribución de votos confirmados y pantalla de generación de acta.
+
+<p align="center">
+  <img src="./assets/wireframes_cierre_escrutinio.png" alt="Cierre y escrutinio - CierreEscrutinioWireframes.png" width="320"/>
+</p>
+
+---
+
+#### **Notificaciones y comprobantes**
+
+##### **Notificaciones**
+
+Esquemas del centro de notificaciones: listado de notificaciones recibidas con indicador de no leídas, pantalla de detalle de notificación y pantalla de configuración de preferencias de canal.
+
+<p align="center">
+  <img src="./assets/wireframes_notificacion1.png" alt="Notificaciones - NotificacionesWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_notificacion2.png" alt="Notificaciones - NotificacionesWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_notificacion3.png" alt="Notificaciones - NotificacionesWireframes3.png" width="320"/>
+</p>
+
+##### **Historial de notificaciones**
+
+Esquemas del historial completo de notificaciones: listado paginado con filtros por tipo y fecha, pantalla de detalle con estado de entrega y pantalla de reintento manual para notificaciones fallidas.
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones1.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones2.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones3.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones4.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones5.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones6.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_historial_notificaciones7.png" alt="Historial de notificaciones - HistorialNotificacionesWireframes7.png" width="320"/>
+</p>
+
+##### **Mi recibo**
+
+Esquemas de la constancia digital del voto: pantalla de resumen con código de constancia, estado de confirmación on-chain y opción de descarga o copia del código.
+
+<p align="center">
+  <img src="./assets/wireframes_mirecibo.png" alt="Mi recibo - MiReciboWireframes.png" width="320"/>
+</p>
+
+---
+
+#### **Privacidad y gestión de datos**
+
+##### **Borrado de datos**
+
+Esquemas del flujo de solicitud de supresión: pantalla de inicio de solicitud, selección del alcance del borrado por categoría de dato, confirmación con advertencia de consecuencias, pantalla de seguimiento del estado de la solicitud y pantalla de notificación de resolución.
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos1.png" alt="Borrado de datos - BorradoDatosWireframes1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos2.png" alt="Borrado de datos - BorradoDatosWireframes2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos3.png" alt="Borrado de datos - BorradoDatosWireframes3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos4.png" alt="Borrado de datos - BorradoDatosWireframes4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos5.png" alt="Borrado de datos - BorradoDatosWireframes5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/wireframes_borrado_datos6.png" alt="Borrado de datos - BorradoDatosWireframes6.png" width="320"/>
+</p>
+
+
+##### **Autorización**
+
+Esquemas del flujo de gestión de consentimientos: presentación del aviso de privacidad con opciones por finalidad, pantalla de actualización de consentimientos desde el perfil y confirmación de cambios aplicados.
+
+<p align="center">
+  <img src="./assets/wireframes_autorizacion.png" alt="Autorización - AutorizaciónWireframe.png" width="320"/>
+</p>
+
+---
+
 ### **6.4.2. Applications Wireflow Diagrams.**
 
 Los wireflow diagrams combinan las pantallas de la aplicación con las transiciones de navegación, mostrando qué acción del usuario desencadena cada cambio de estado o de vista. Se documentan 20 flujos agrupados en cinco dominios funcionales: identidad y acceso, verificación biométrica, gestión comunitaria, votación y cumplimiento.
@@ -3521,7 +3973,9 @@ Muestra las pantallas de configuración personal: edición de datos de perfil, c
 
 #### **WF-04 · Administración de usuarios y roles**
 
-Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, asignar roles (administrador de comunidad, miembro votante) y revocar accesos. Incluye la pantalla de confirmación antes de aplicar cambios de rol.
+- User Goal: Administrar los permisos y el estado de los usuarios
+- User Persona: Administrador del sistema (Segmento 1)
+Desde el panel de administración el administrador accede a la lista de usuarios → selecciona un usuario para ver su detalle. Al pulsar "Asignar rol" → se muestra el selector de roles; al confirmar → se muestra pantalla de confirmación y, al aceptar, el rol queda actualizado. Al pulsar "Suspender cuenta" → se solicita el motivo; al confirmar → el usuario queda suspendido y se le notifica. Al pulsar "Rehabilitar" sobre una cuenta suspendida → se muestra confirmación y, al aceptar, el acceso queda restaurado.
 
 <a href="./assets/application_wireflows/wireflows_4.png">
   <img src="./assets/application_wireflows/wireflows_4.png" width="1200">
@@ -3531,7 +3985,9 @@ Cubre el flujo del administrador para invitar nuevos usuarios a la plataforma, a
 
 #### **WF-05 · Revisión documental y enrolamiento biométrico**
 
-Documenta el flujo de verificación de identidad previo al voto: captura del DNI con OCR, extracción de datos del documento, prueba de vida facial (liveness) y comparación biométrica. El usuario avanza paso a paso y recibe retroalimentación inmediata en cada etapa. Corresponde al journey J1.
+- User Goal: Verificar su identidad y registrar su referencia biométrica
+- User Persona: Propietario votante (Segmento 2) — Journey J1
+El usuario accede al flujo de verificación → se muestra la pantalla de consentimiento biométrico. Al aceptar → se solicita la captura del DNI; al fotografiarlo → el OCR extrae los datos y muestra la vista de confirmación. Si el documento es ilegible o está vencido → se muestra el error con indicaciones para corregirlo. Al confirmar los datos extraídos → se inicia la prueba de vida facial; al completarla con resultado MATCH → se registra la referencia biométrica y se muestra la confirmación de enrolamiento exitoso.
 
 <a href="./assets/application_wireflows/wireflows_5.png">
   <img src="./assets/application_wireflows/wireflows_5.png" width="1200">
@@ -3541,7 +3997,9 @@ Documenta el flujo de verificación de identidad previo al voto: captura del DNI
 
 #### **WF-06 · Consulta de verificación y prueba de vida**
 
-Muestra el flujo de re-verificación biométrica cuando la ventana de frescura ha vencido. El usuario recibe una notificación de sesión biométrica expirada y debe completar nuevamente la prueba de vida antes de continuar con la emisión del voto.
+- User Goal: Consultar su verificación y completar una prueba de vida
+- User Persona: Propietario votante (Segmento 2)
+El usuario accede a "Mi verificación" → se muestra el estado actual de su referencia biométrica. Si la ventana de frescura ha vencido → se muestra el aviso de sesión biométrica expirada con opción de renovar. Al pulsar "Iniciar prueba de vida" → se activa la cámara y se ejecuta el liveness check. Si la prueba falla → se muestra el error con opción de reintentar. Al completarla exitosamente → se actualiza el estado a verificado y se habilita la continuación hacia la autorización de voto.
 
 <a href="./assets/application_wireflows/wireflows_6.png">
   <img src="./assets/application_wireflows/wireflows_6.png" width="1200">
@@ -3551,7 +4009,9 @@ Muestra el flujo de re-verificación biométrica cuando la ventana de frescura h
 
 #### **WF-07 · Crear comunidad y abrir votación**
 
-Cubre el flujo del administrador para crear una nueva comunidad en la plataforma: ingreso de datos del edificio o cooperativa, configuración de la política de cuórum, carga del padrón inicial y apertura de la primera convocatoria de asamblea. Corresponde al journey J2.
+- User Goal: Preparar una comunidad y abrir una votación
+- User Persona: Administrador de comunidad (Segmento 1) — Journey J2
+El administrador pulsa "Nueva comunidad" → se muestra el formulario de datos del edificio o cooperativa. Al completarlo y confirmar → se navega a la configuración de política de quórum. Al guardar la política → se muestra la pantalla de designación de co-administradores. Al confirmar → la comunidad queda activa. Desde el panel de la comunidad el administrador pulsa "Nueva propuesta" → ingresa título, descripción y opciones de voto. Al pulsar "Abrir votación" → se muestra la confirmación con las reglas congeladas y, al aceptar, la propuesta queda abierta y visible para los miembros habilitados.
 
 <a href="./assets/application_wireflows/wireflows_7.png">
   <img src="./assets/application_wireflows/wireflows_7.png" width="1200">
@@ -3561,7 +4021,9 @@ Cubre el flujo del administrador para crear una nueva comunidad en la plataforma
 
 #### **WF-08 · Ciclo de vida de comunidad**
 
-Documenta las transiciones de estado de una comunidad: de activa a suspendida, de suspendida a reactivada y el archivado definitivo. Cada transición muestra la pantalla de confirmación y el impacto sobre los miembros y asambleas asociadas.
+- User Goal: Gestionar el estado de una comunidad
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde la ficha de comunidad el administrador accede a "Gestionar estado" → se muestran las transiciones disponibles según el estado actual. Al pulsar "Suspender" → se solicita el motivo; al confirmar → la comunidad pasa a suspendida y los miembros son notificados. Al pulsar "Reactivar" sobre una comunidad suspendida → se muestra confirmación y, al aceptar, vuelve a activa. Al pulsar "Archivar" → se solicita doble confirmación; al completarla → la comunidad queda archivada y solo disponible en modo consulta.
 
 <a href="./assets/application_wireflows/wireflows_8.png">
   <img src="./assets/application_wireflows/wireflows_8.png" width="1200">
@@ -3571,7 +4033,9 @@ Documenta las transiciones de estado de una comunidad: de activa a suspendida, d
 
 #### **WF-09 · Política de votación y administradores**
 
-Muestra el flujo de configuración de la política de votación de una comunidad: definición del tipo de cuórum requerido, reglas de elegibilidad por estado de membresía y asignación de co-administradores con sus permisos específicos.
+- User Goal: Configurar las reglas y los responsables de la comunidad
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde la ficha de comunidad el administrador accede a "Política de votación" → se muestra la versión vigente con sus parámetros. Al pulsar "Editar" → se habilita el formulario; si hay parámetros inválidos → se resaltan con indicaciones de corrección. Al guardar → la nueva versión queda registrada y se aplica solo a futuras votaciones; las propuestas abiertas conservan la versión congelada. Al acceder a "Administradores" → se muestra la lista actual; al pulsar "Agregar" o "Retirar" → se confirma la acción y el cambio queda trazado.
 
 <a href="./assets/application_wireflows/wireflows_9.png">
   <img src="./assets/application_wireflows/wireflows_9.png" width="1200">
@@ -3581,7 +4045,9 @@ Muestra el flujo de configuración de la política de votación de una comunidad
 
 #### **WF-10 · Padrón: aprobación, unidad y rol**
 
-Cubre la gestión del padrón electoral: aprobación de solicitudes de membresía pendientes, asignación de unidad inmobiliaria a cada miembro y definición del rol de voto (propietario, copropietario, representante). Incluye el flujo de rechazo con motivo.
+- User Goal: Aprobar miembros y organizar el padrón de la comunidad
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde el panel de padrón el administrador visualiza las solicitudes pendientes → selecciona una para revisar los datos del solicitante. Al pulsar "Aprobar" → se solicita asignar unidad inmobiliaria y rol de voto; al confirmar → la membresía queda activa y el miembro es notificado. Al pulsar "Rechazar" → se solicita el motivo; al confirmar → el solicitante recibe la notificación de rechazo. Los miembros activos aparecen en el padrón y son considerados para el cálculo de quórum.
 
 <a href="./assets/application_wireflows/wireflows_10.png">
   <img src="./assets/application_wireflows/wireflows_10.png" width="1200">
@@ -3591,7 +4057,9 @@ Cubre la gestión del padrón electoral: aprobación de solicitudes de membresí
 
 #### **WF-11 · Membresía: mora, suspensión y terminación**
 
-Documenta las transiciones de estado de una membresía individual: marcado como moroso, suspensión temporal del derecho a voto y terminación definitiva de la relación. Cada acción muestra el impacto sobre la elegibilidad del miembro en asambleas activas.
+- User Goal: Gestionar las restricciones y la continuidad de una membresía
+- User Persona: Administrador de comunidad (Segmento 1)
+Desde el detalle de un miembro el administrador accede a "Gestionar membresía" → se muestran las acciones disponibles. Al pulsar "Marcar como moroso" → se solicita el motivo; al confirmar → el miembro pierde el derecho a voto y es notificado. Al pulsar "Levantar mora" → se muestra confirmación y, al aceptar, el derecho queda restaurado. Al pulsar "Suspender" → se solicita motivo y duración; al confirmar → la membresía queda suspendida. Al pulsar "Terminar membresía" → se solicita doble confirmación; al completarla → la relación queda terminada de forma definitiva.
 
 <a href="./assets/application_wireflows/wireflows_11.png">
   <img src="./assets/application_wireflows/wireflows_11.png" width="1200">
@@ -3601,7 +4069,9 @@ Documenta las transiciones de estado de una membresía individual: marcado como 
 
 #### **WF-12 · Navegación del miembro y consulta de propuestas**
 
-Muestra el flujo de navegación del propietario votante: acceso al listado de sus comunidades, consulta de asambleas activas, lectura de propuestas en curso y revisión del historial de votaciones anteriores con sus constancias.
+- User Goal: Explorar su comunidad y consultar las propuestas disponibles
+- User Persona: Propietario votante (Segmento 2)
+El miembro accede al dashboard → se muestra el listado de sus comunidades con el estado de cada membresía. Al seleccionar una comunidad → se muestran las propuestas agrupadas por estado (abiertas, cerradas). Al pulsar una propuesta abierta → se muestra el detalle con las opciones de voto y el estado de su autorización. Al pulsar una propuesta cerrada → se muestra el resultado y la evidencia on-chain. Desde este panel el miembro puede también acceder a su verificación biométrica, privacidad o configuración de cuenta.
 
 <a href="./assets/application_wireflows/wireflows_12.png">
   <img src="./assets/application_wireflows/wireflows_12.png" width="1200">
@@ -3611,7 +4081,9 @@ Muestra el flujo de navegación del propietario votante: acceso al listado de su
 
 #### **WF-13 · Emisión y confirmación de voto**
 
-Documenta el flujo principal de votación: lectura de la propuesta, verificación biométrica de presencia, selección de alternativa, confirmación del voto y recepción de la constancia digital con código único. Corresponde al journey J3.
+- User Goal: Emitir su voto y comprobar su confirmación
+- User Persona: Propietario votante (Segmento 2) — Journey J3
+El miembro accede a una propuesta abierta → se verifica su elegibilidad y estado biométrico. Al obtener la autorización → se muestra la pantalla de selección de opción de voto. Al seleccionar una opción y pulsar "Confirmar" → se muestra la pantalla de revisión con la firma a aplicar. Al aceptar → el voto queda firmado y se envía al relay. Se muestra la pantalla de seguimiento con el estado del envío. Al recibir la confirmación on-chain → se muestra la constancia digital con el código único del voto confirmado.
 
 <a href="./assets/application_wireflows/wireflows_13.png">
   <img src="./assets/application_wireflows/wireflows_13.png" width="1200">
@@ -3621,7 +4093,9 @@ Documenta el flujo principal de votación: lectura de la propuesta, verificació
 
 #### **WF-14 · Excepciones al autorizar y emitir voto**
 
-Cubre los caminos alternativos durante la autorización y emisión: membresía morosa o suspendida, verificación biométrica fallida, propuesta ya cerrada y voto duplicado detectado. Cada excepción muestra el mensaje de error correspondiente y la acción disponible para el usuario. Corresponde al journey J4.
+- User Goal: Comprender y resolver los impedimentos para votar
+- User Persona: Propietario votante (Segmento 2) — Journey J4
+El miembro intenta acceder a una propuesta abierta → si su membresía está en mora o suspendida, se muestra el mensaje de restricción con el motivo y el contacto del administrador. Si la propuesta ya cerró → se muestra el aviso de votación cerrada con acceso al resultado. Si la autorización está vencida → se muestra el error con opción de solicitar una nueva. Si el voto ya fue emitido → se muestra el aviso de voto duplicado y se redirige a la constancia existente.
 
 <a href="./assets/application_wireflows/wireflows_14.png">
   <img src="./assets/application_wireflows/wireflows_14.png" width="1200">
@@ -3631,7 +4105,11 @@ Cubre los caminos alternativos durante la autorización y emisión: membresía m
 
 #### **WF-15 · Firma y envío: fallos, reintentos y constancia**
 
-Documenta los estados intermedios del proceso de registro on-chain: voto recibido y en cola, fallo en el envío al ledger, reintento automático y confirmación final. El usuario visualiza el estado de su constancia en tiempo real hasta obtener la confirmación on-chain. Corresponde al journey J4.
+- User Goal: Seguir el envío de su voto y consultar su constancia
+- User Persona: Propietario votante (Segmento 2) — Journey J4
+Tras firmar el voto → se muestra la pantalla de seguimiento con estado "en cola". Si el envío al ledger falla → se muestra el aviso de fallo con el contador de reintentos disponibles. En cada reintento automático → se actualiza el estado en pantalla. Si se agotan los reintentos → se muestra el estado "abandonado" con orientación al soporte. Al recibir la confirmación on-chain → el estado cambia a "confirmado" y se habilita el acceso a la constancia con la firma EIP-712 y el hash de transacción verificable.
+
+
 
 <a href="./assets/application_wireflows/wireflows_15.png">
   <img src="./assets/application_wireflows/wireflows_15.png" width="1200">
@@ -3641,7 +4119,9 @@ Documenta los estados intermedios del proceso de registro on-chain: voto recibid
 
 #### **WF-16 · Cierre, escrutinio, participación y cuórum**
 
-Muestra el flujo del administrador para cerrar una votación: verificación del cuórum alcanzado contra el snapshot congelado, inicio del escrutinio, visualización de resultados parciales y generación del acta oficial con los votos confirmados on-chain.
+- User Goal: Cerrar una votación y consultar sus resultados
+- User Persona: Administrador de comunidad (Segmento 1) y Propietario votante (Segmento 2)
+El administrador accede a la propuesta abierta y pulsa "Cerrar votación" → se muestra la confirmación con el estado actual de participación. Al confirmar → se ejecuta el escrutinio contando solo los votos con estado VoteConfirmedOnChain. Se muestra la pantalla de resultados con los conteos por opción, la participación total y la evaluación del quórum contra el snapshot congelado. Los miembros acceden al resultado desde el detalle de la propuesta → visualizan los mismos datos más el hash de transacción para verificación independiente con ecrecover().
 
 <a href="./assets/application_wireflows/wireflows_16.png">
   <img src="./assets/application_wireflows/wireflows_16.png" width="1200">
@@ -3651,7 +4131,9 @@ Muestra el flujo del administrador para cerrar una votación: verificación del 
 
 #### **WF-17 · Historial y reintentos de notificaciones**
 
-Cubre el centro de notificaciones del usuario: listado de notificaciones recibidas (convocatorias, recordatorios de voto, confirmaciones de constancia), marcado como leídas y reintento manual de notificaciones fallidas por parte del administrador.
+- User Goal: Consultar las notificaciones y resolver los envíos fallidos
+- User Persona: Administrador del sistema (Segmento 1)
+El administrador accede al historial de notificaciones → se muestra la lista con filtros por estado (entregada, fallida, duplicada, bloqueada). Al seleccionar un registro → se muestra el detalle con el destinatario, canal, fecha y resultado del envío. Al pulsar "Reintentar" sobre un envío fallido → se confirma la acción y se encola el reenvío. Si el destinatario no tiene consentimiento de contacto activo → la acción de reintento queda bloqueada y se muestra el motivo. Las notificaciones ya entregadas no permiten reenvío para evitar duplicados.
 
 <a href="./assets/application_wireflows/wireflows_17.png">
   <img src="./assets/application_wireflows/wireflows_17.png" width="1200">
@@ -3661,7 +4143,9 @@ Cubre el centro de notificaciones del usuario: listado de notificaciones recibid
 
 #### **WF-18 · Privacidad: consentimiento por finalidad**
 
-Documenta el flujo de gestión de consentimientos: presentación del aviso de privacidad al registrarse, aceptación o rechazo por finalidad (verificación de identidad, comunicaciones, auditoría) y actualización posterior desde el perfil. Ninguna finalidad opcional bloquea el acceso a la plataforma.
+- User Goal: Controlar los permisos de uso de sus datos
+- User Persona: Propietario votante (Segmento 2)
+Al registrarse el usuario → se muestra el aviso de privacidad con las finalidades desglosadas (verificación de identidad, comunicaciones, auditoría). El usuario acepta o rechaza cada finalidad opcional de forma independiente → al confirmar, los consentimientos quedan registrados. Desde el perfil el usuario accede a "Privacidad" → se muestra el estado actual de cada consentimiento. Al modificar uno → se muestra la pantalla de confirmación indicando cómo afecta a las funciones que dependen de ese permiso. Al confirmar → el cambio queda registrado con fecha y hora.
 
 <a href="./assets/application_wireflows/wireflows_18.png">
   <img src="./assets/application_wireflows/wireflows_18.png" width="1200">
@@ -3671,7 +4155,9 @@ Documenta el flujo de gestión de consentimientos: presentación del aviso de pr
 
 #### **WF-19 · Solicitud y seguimiento de borrado**
 
-Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de datos personales, confirmación del alcance (datos de perfil, biométricos, constancias), seguimiento del estado de la solicitud y notificación de resolución. Corresponde al journey J5.
+- User Goal: Solicitar el borrado de sus datos y seguir su avance
+- User Persona: Propietario votante (Segmento 2) — Journey J5
+Desde "Privacidad" el usuario pulsa "Solicitar borrado de datos" → se muestra la pantalla explicando el alcance (datos de perfil, biométricos, constancias) y la conservación de registros de auditoría inmutables. Al pulsar "Continuar" → se solicita confirmación con contraseña. Al confirmar → la solicitud queda registrada y se muestra el estado inicial "en revisión". Desde el historial de solicitudes el usuario puede consultar el avance en cada etapa hasta recibir la notificación de resolución. Si ya existe una solicitud abierta → se bloquea la creación de una nueva y se redirige al seguimiento existente.
 
 <a href="./assets/application_wireflows/wireflows_19.png">
   <img src="./assets/application_wireflows/wireflows_19.png" width="1200">
@@ -3681,7 +4167,9 @@ Muestra el flujo de ejercicio del derecho de supresión: solicitud de borrado de
 
 #### **WF-20 · Cumplimiento, retención y auditoría**
 
-Cubre el panel de cumplimiento del administrador de plataforma: visualización de políticas de retención de datos por categoría, exportación de registros de auditoría, consulta del verificador público de constancias y gestión de solicitudes de acceso a datos pendientes.
+- User Goal: Gestionar las solicitudes de privacidad y las reglas de retención
+- User Persona: Administrador de cumplimiento (Segmento 1)
+El administrador accede al panel de cumplimiento → se muestra el listado de solicitudes de borrado pendientes con su antigüedad. Al seleccionar una → se muestra el detalle con los datos afectados y los responsables de cada contexto. Al coordinar la atención con cada responsable → el estado avanza por etapas hasta "completada". Desde "Políticas de retención" el administrador visualiza las categorías de datos con su duración configurada → al editar una política, la nueva versión queda registrada con historial de cambios. Desde "Auditoría" puede exportar los registros de actividad y consultar el verificador público de constancias.
 
 <a href="./assets/application_wireflows/wireflows_20.png">
   <img src="./assets/application_wireflows/wireflows_20.png" width="1200">
@@ -4661,6 +5149,12 @@ Nomenclatura exigida: `TF_1ASI0728_202620_TF`, `TF_1ASI0728_202620_KEYNOTE`, `TF
 | ENT-01..06 (acceso) | Identidad técnica y canal verificado para ambos segmentos | Patricia + Miguel | US-04, US-05, US-06, US-07 |
 | Transversal técnica | Firma individual, entrega on-chain, notificaciones idempotentes, contratos REST | Developer | TS-01 (US-25), TS-02 (US-25/27), TS-03 (US-26), TS-04 (todas) |
 | Visitante | Descubrimiento y contacto | Visitante | US-01, US-02, US-03 |
+
+## **7.5. Conclusiones**
+
+En el aspecto arquitectónico y de ingeniería, la aplicación de principios de Domain-Driven Design (DDD) garantizó que el sistema mantenga una separación estricta de responsabilidades, aislando el núcleo de Voting & Verifiable Ledger de los servicios de soporte como membresías, custodia de wallets y cumplimiento. La implementación de artefactos inmutables como QuorumSnapshot y EligibilitySnapshot asegura que los acuerdos queden blindados frente a modificaciones posteriores en el padrón. Asimismo, la distinción técnica entre la intención del voto (VoteCast) y su confirmación en red (VoteConfirmedOnChain) dota al MVP de un no repudio confiable y reduce las causas de impugnación de actas.   
+
+Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfica y experiencia de usuario mediante el modelo de wallet custodio (Modelo B), permitiendo que los propietarios firmen digitalmente sus decisiones sin necesidad de gestionar claves privadas ni pagar costos de transacción (gas). Complementado con un diseño enfocado en la privacidad que descarta imágenes biométricas crudas y procesa únicamente veredictos y consentimientos explícitos, este MVP establece una base sólida, escalable y éticamente responsable para futuras iteraciones y para su validación empírica en asambleas piloto reales
 
 # **Referencias**
 

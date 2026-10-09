@@ -86,19 +86,31 @@
 | 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad OTP/OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
 | 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (DSL C4, clases completas, REST, ER normalizado, standing unificado, parámetros por BC, pies Fig. 5.X.Y). PNG `assets/c5-*.png` pendientes de exportar. |
 | 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots `[Manual]` para mm:ss/edad/distrito/capturas. |
-| 1.0 | 06/10/2026 | Equipo Morocoders (merge PR #8 feat/paredes — precisar autor real) | Capítulo V y Capítulo VI para TP1 (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes/Mock-ups Landing) e implementación de Landing Page. |
+| 1.0 | 06/10/2026 | Paredes Santos, Fabrizio Alberto | Capítulo V y Capítulo VI para TP1 (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes/Mock-ups Landing) e implementación de Landing Page mediante el merge de la PR #8 (`feat/paredes`). |
 
 
 
 ## Project Report Collaboration Insights
 
-Informe elaborado con GitFlow: ramas `feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno`, `feature/rodriguez` → `develop` → `main`, con conventional commits (`docs(ux):`, `fix issues document`). Verificación: `git log --oneline --all --graph`, `git shortlog -sne --all`, `git log --format="%h|%an|%ad|%s"`.
+El informe se elaboró colaborativamente mediante GitFlow, utilizando ramas de trabajo por integrante (`feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno` y `feature/rodriguez`) que fueron integradas progresivamente en `develop` y posteriormente en `main`. Los cambios se organizaron mediante commits convencionales y pull requests, lo que permitió revisar, integrar y mantener la trazabilidad de los aportes de cada autor.
+
+La evidencia de GitHub Insights muestra la actividad colaborativa del repositorio. Durante el periodo analizado se registraron 5 autores, 24 commits en `main` y 24 commits considerando todas las ramas, además de 7 pull requests integradas También se documentan 302 archivos modificados, con 2,801 adiciones y 182 eliminaciones. Estos indicadores evidencian que el informe fue construido mediante iteraciones sucesivas de documentación, revisión y consolidación.
+
+<p align="center">
+  <img src="./assets/MoroCodersCollaborationInsights1.png" alt="GitHub Insights - Pulse del repositorio" width="850"/>
+</p>
+
+**Figura. GitHub Insights – Pulse del repositorio.** La captura evidencia la actividad reciente del equipo, los pull requests integrados y los commits asociados a las ramas de trabajo, en coherencia con las versiones registradas en el informe.
+
+<p align="center">
+  <img src="./assets/MoroCodersCollaborationInsights2.png" alt="GitHub Insights - Contributors del repositorio" width="850"/>
+</p>
+
+**Figura. GitHub Insights – Contributors.** La captura presenta la distribución temporal de contribuciones y commits por autor. Esta evidencia complementa el Registro de Versiones al mostrar la participación individual de los integrantes durante la elaboración y corrección del documento.
 
 | URL del repositorio del reporte |
 | :-----------------------------------: |
 | [https://github.com/Morocoders-Arq-9056/votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) |
-
-[Por agregar capturas: GitHub Insights → Contributors/Pulse, lista de commits por miembro y PR #5 `feature/bueno`. Coherente con Registro de Versiones de arriba.]
 
 
 ## Contenido

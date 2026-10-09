@@ -4530,6 +4530,12 @@ Nomenclatura exigida: `TF_1ASI0728_202620_TF`, `TF_1ASI0728_202620_KEYNOTE`, `TF
 | Transversal técnica | Firma individual, entrega on-chain, notificaciones idempotentes, contratos REST | Developer | TS-01 (US-25), TS-02 (US-25/27), TS-03 (US-26), TS-04 (todas) |
 | Visitante | Descubrimiento y contacto | Visitante | US-01, US-02, US-03 |
 
+## **7.5. Conclusiones**
+
+En el aspecto arquitectónico y de ingeniería, la aplicación de principios de Domain-Driven Design (DDD) garantizó que el sistema mantenga una separación estricta de responsabilidades, aislando el núcleo de Voting & Verifiable Ledger de los servicios de soporte como membresías, custodia de wallets y cumplimiento. La implementación de artefactos inmutables como QuorumSnapshot y EligibilitySnapshot asegura que los acuerdos queden blindados frente a modificaciones posteriores en el padrón. Asimismo, la distinción técnica entre la intención del voto (VoteCast) y su confirmación en red (VoteConfirmedOnChain) dota al MVP de un no repudio confiable y reduce las causas de impugnación de actas.   
+
+Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfica y experiencia de usuario mediante el modelo de wallet custodio (Modelo B), permitiendo que los propietarios firmen digitalmente sus decisiones sin necesidad de gestionar claves privadas ni pagar costos de transacción (gas). Complementado con un diseño enfocado en la privacidad que descarta imágenes biométricas crudas y procesa únicamente veredictos y consentimientos explícitos, este MVP establece una base sólida, escalable y éticamente responsable para futuras iteraciones y para su validación empírica en asambleas piloto reales
+
 # **Referencias**
 
 | Referencia | Uso en el informe |

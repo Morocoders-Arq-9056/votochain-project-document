@@ -2246,6 +2246,687 @@ Formulario de captación con campos de validación, consentimiento según la Ley
 
 ### **6.4.3. Applications Mock-ups.**
 
+Las siguientes vistas corresponden a los principales flujos de la aplicación, agrupados según la funcionalidad representada por el nombre de cada mock-up.
+
+#### **Acceso, registro y seguridad**
+
+##### **Registro**
+
+<p align="center">
+  <img src="./assets/RegistroMockup1.png" alt="Registro - RegistroMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistroMockup2.png" alt="Registro - RegistroMockup2.png" width="320"/>
+</p>
+
+##### **Inicio de sesión**
+
+<p align="center">
+  <img src="./assets/InicioSesionMockup1.png" alt="Inicio de sesión - InicioSesionMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/InicioSesionMockup2.png" alt="Inicio de sesión - InicioSesionMockup2.png" width="320"/>
+</p>
+
+##### **Solicitar código**
+
+<p align="center">
+  <img src="./assets/SolicitarCódigoMockup1.png" alt="Solicitar código - SolicitarCódigoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarCódigoMockup2.png" alt="Solicitar código - SolicitarCódigoMockup2.png" width="320"/>
+</p>
+
+##### **Ingresar código**
+
+<p align="center">
+  <img src="./assets/IngresarCódigoMockup1.png" alt="Ingresar código - IngresarCódigoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/IngresarCódigoMockup2.png" alt="Ingresar código - IngresarCódigoMockup2.png" width="320"/>
+</p>
+
+##### **Verificación de correo**
+
+<p align="center">
+  <img src="./assets/VerificarCorreo1.png" alt="Verificación de correo - VerificarCorreo1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/VerficiarCorreo2.png" alt="Verificación de correo - VerficiarCorreo2.png" width="320"/>
+</p>
+
+##### **Cuenta y seguridad**
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup1.png" alt="Cuenta y seguridad - CuentaySeguridadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup2.png" alt="Cuenta y seguridad - CuentaySeguridadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup3.png" alt="Cuenta y seguridad - CuentaySeguridadMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CuentaySeguridadMockup4.png" alt="Cuenta y seguridad - CuentaySeguridadMockup4.png" width="320"/>
+</p>
+
+#### **Verificación de identidad**
+
+##### **Resultado documental**
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup1.png" alt="Resultado documental - ResultadoDocumentalMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup2.png" alt="Resultado documental - ResultadoDocumentalMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ResultadoDocumentalMockup3.png" alt="Resultado documental - ResultadoDocumentalMockup3.png" width="320"/>
+</p>
+
+##### **Subir documento**
+
+<p align="center">
+  <img src="./assets/SubirDocumentoMockup1.png" alt="Subir documento - SubirDocumentoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SubirDocumentoMockup2.png" alt="Subir documento - SubirDocumentoMockup2.png" width="320"/>
+</p>
+
+##### **Prueba de vida**
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup1.png" alt="Prueba de vida - PruebaDeVidaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup2.png" alt="Prueba de vida - PruebaDeVidaMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PruebaDeVidaMockup3.png" alt="Prueba de vida - PruebaDeVidaMockup3.png" width="320"/>
+</p>
+
+##### **Referencia biométrica**
+
+<p align="center">
+  <img src="./assets/ReferenciaBiométricaMockup1.png" alt="Referencia biométrica - ReferenciaBiométricaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/ReferenciaBiométricaMockup2.png" alt="Referencia biométrica - ReferenciaBiométricaMockup2.png" width="320"/>
+</p>
+
+##### **Mi verificación**
+
+<p align="center">
+  <img src="./assets/MiVerificaciónMockup1.png" alt="Mi verificación - MiVerificaciónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiVerificaciónMockup2.png" alt="Mi verificación - MiVerificaciónMockup2.png" width="320"/>
+</p>
+
+#### **Comunidades y administración**
+
+##### **Registrar comunidad**
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup1.png" alt="Registrar comunidad - RegistrarComunidadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup2.png" alt="Registrar comunidad - RegistrarComunidadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/RegistrarComunidadMockup3.png" alt="Registrar comunidad - RegistrarComunidadMockup3.png" width="320"/>
+</p>
+
+##### **Ficha de comunidad**
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup1.png" alt="Ficha de comunidad - FichaComunidadMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup2.png" alt="Ficha de comunidad - FichaComunidadMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup3.png" alt="Ficha de comunidad - FichaComunidadMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup4.png" alt="Ficha de comunidad - FichaComunidadMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup5.png" alt="Ficha de comunidad - FichaComunidadMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup6.png" alt="Ficha de comunidad - FichaComunidadMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup7.png" alt="Ficha de comunidad - FichaComunidadMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup8.png" alt="Ficha de comunidad - FichaComunidadMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup9.png" alt="Ficha de comunidad - FichaComunidadMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/FichaComunidadMockup10.png" alt="Ficha de comunidad - FichaComunidadMockup10.png" width="320"/>
+</p>
+
+##### **Administradores**
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup1.png" alt="Administradores - AdministradoresMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup2.png" alt="Administradores - AdministradoresMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup3.png" alt="Administradores - AdministradoresMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup4.png" alt="Administradores - AdministradoresMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup5.png" alt="Administradores - AdministradoresMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup6.png" alt="Administradores - AdministradoresMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup7.png" alt="Administradores - AdministradoresMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AdministradoresMockup8.png" alt="Administradores - AdministradoresMockup8.png" width="320"/>
+</p>
+
+##### **Usuarios**
+
+<p align="center">
+  <img src="./assets/UsuariosMockup1.png" alt="Usuarios - UsuariosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/UsuariosMockup2.png" alt="Usuarios - UsuariosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/UsuariosMockup3.png" alt="Usuarios - UsuariosMockup3.png" width="320"/>
+</p>
+
+##### **Padrón**
+
+<p align="center">
+  <img src="./assets/PadrónMockup1.png" alt="Padrón - PadrónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup2.png" alt="Padrón - PadrónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup3.png" alt="Padrón - PadrónMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup4.png" alt="Padrón - PadrónMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup5.png" alt="Padrón - PadrónMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup6.png" alt="Padrón - PadrónMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup7.png" alt="Padrón - PadrónMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup8.png" alt="Padrón - PadrónMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup9.png" alt="Padrón - PadrónMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PadrónMockup10.png" alt="Padrón - PadrónMockup10.png" width="320"/>
+</p>
+
+##### **Membresías**
+
+<p align="center">
+  <img src="./assets/MembresiasMockup1.png" alt="Membresías - MembresiasMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup2.png" alt="Membresías - MembresiasMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup3.png" alt="Membresías - MembresiasMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup4.png" alt="Membresías - MembresiasMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup5.png" alt="Membresías - MembresiasMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup6.png" alt="Membresías - MembresiasMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup7.png" alt="Membresías - MembresiasMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MembresiasMockup8.png" alt="Membresías - MembresiasMockup8.png" width="320"/>
+</p>
+
+##### **Detalle de miembro**
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup1.png" alt="Detalle de miembro - DetalleDeMiembroMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup2.png" alt="Detalle de miembro - DetalleDeMiembroMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup3.png" alt="Detalle de miembro - DetalleDeMiembroMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup4.png" alt="Detalle de miembro - DetalleDeMiembroMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup5.png" alt="Detalle de miembro - DetalleDeMiembroMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup6.png" alt="Detalle de miembro - DetalleDeMiembroMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup7.png" alt="Detalle de miembro - DetalleDeMiembroMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup8.png" alt="Detalle de miembro - DetalleDeMiembroMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup9.png" alt="Detalle de miembro - DetalleDeMiembroMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup10.png" alt="Detalle de miembro - DetalleDeMiembroMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup11.png" alt="Detalle de miembro - DetalleDeMiembroMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup12.png" alt="Detalle de miembro - DetalleDeMiembroMockup12.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup13.png" alt="Detalle de miembro - DetalleDeMiembroMockup13.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetalleDeMiembroMockup14.png" alt="Detalle de miembro - DetalleDeMiembroMockup14.png" width="320"/>
+</p>
+
+##### **Mis permisos**
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup1.png" alt="Mis permisos - MisPermisosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup2.png" alt="Mis permisos - MisPermisosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup3.png" alt="Mis permisos - MisPermisosMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup4.png" alt="Mis permisos - MisPermisosMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup5.png" alt="Mis permisos - MisPermisosMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup6.png" alt="Mis permisos - MisPermisosMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup7.png" alt="Mis permisos - MisPermisosMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup8.png" alt="Mis permisos - MisPermisosMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup9.png" alt="Mis permisos - MisPermisosMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup10.png" alt="Mis permisos - MisPermisosMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup11.png" alt="Mis permisos - MisPermisosMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MisPermisosMockup12.png" alt="Mis permisos - MisPermisosMockup12.png" width="320"/>
+</p>
+
+#### **Solicitudes y participación**
+
+##### **Solicitar unirse**
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup1.png" alt="Solicitar unirse - SolicitarUnirseMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup2.png" alt="Solicitar unirse - SolicitarUnirseMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/SolicitarUnirseMockup3.png" alt="Solicitar unirse - SolicitarUnirseMockup3.png" width="320"/>
+</p>
+
+#### **Propuestas y votaciones**
+
+##### **Propuestas**
+
+<p align="center">
+  <img src="./assets/PropuestasMockup1.png" alt="Propuestas - PropuestasMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup2.png" alt="Propuestas - PropuestasMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup3.png" alt="Propuestas - PropuestasMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PropuestasMockup4.png" alt="Propuestas - PropuestasMockup4.png" width="320"/>
+</p>
+
+##### **Crear propuesta**
+
+<p align="center">
+  <img src="./assets/CrearPropuestaMockup1.png" alt="Crear propuesta - CrearPropuestaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CrearPropuestaMockup2.png" alt="Crear propuesta - CrearPropuestaMockup2.png" width="320"/>
+</p>
+
+##### **Detalle de propuesta**
+
+<p align="center">
+  <img src="./assets/DetallePropuestaMockup1.png" alt="Detalle de propuesta - DetallePropuestaMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/DetallePropuestaMockup2.png" alt="Detalle de propuesta - DetallePropuestaMockup2.png" width="320"/>
+</p>
+
+##### **Política de votación**
+
+<p align="center">
+  <img src="./assets/PolíticaVocatiónMockup1.png" alt="Política de votación - PolíticaVocatiónMockup1.png" width="320"/>
+</p>
+
+##### **Política de votación**
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup4.png" alt="Política de votación - PolíticaVotaciónMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup2.png" alt="Política de votación - PolíticaVotaciónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/PolíticaVotaciónMockup3.png" alt="Política de votación - PolíticaVotaciónMockup3.png" width="320"/>
+</p>
+
+##### **Emitir voto**
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup1.png" alt="Emitir voto - EmitirVotoMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup2.png" alt="Emitir voto - EmitirVotoMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/EmitirVotoMockup3.png" alt="Emitir voto - EmitirVotoMockup3.png" width="320"/>
+</p>
+
+##### **Cierre y escrutinio**
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup1.png" alt="Cierre y escrutinio - CierreEscrutinioMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup2.png" alt="Cierre y escrutinio - CierreEscrutinioMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup3.png" alt="Cierre y escrutinio - CierreEscrutinioMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/CierreEscrutinioMockup4.png" alt="Cierre y escrutinio - CierreEscrutinioMockup4.png" width="320"/>
+</p>
+
+#### **Notificaciones y comprobantes**
+
+##### **Notificaciones**
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup1.png" alt="Notificaciones - NotificacionesMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup2.png" alt="Notificaciones - NotificacionesMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup3.png" alt="Notificaciones - NotificacionesMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup4.png" alt="Notificaciones - NotificacionesMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/NotificacionesMockup5.png" alt="Notificaciones - NotificacionesMockup5.png" width="320"/>
+</p>
+
+##### **Historial de notificaciones**
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup1.png" alt="Historial de notificaciones - HistorialNotificacionesMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup2.png" alt="Historial de notificaciones - HistorialNotificacionesMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup3.png" alt="Historial de notificaciones - HistorialNotificacionesMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup4.png" alt="Historial de notificaciones - HistorialNotificacionesMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup5.png" alt="Historial de notificaciones - HistorialNotificacionesMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup6.png" alt="Historial de notificaciones - HistorialNotificacionesMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup7.png" alt="Historial de notificaciones - HistorialNotificacionesMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup8.png" alt="Historial de notificaciones - HistorialNotificacionesMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup9.png" alt="Historial de notificaciones - HistorialNotificacionesMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup10.png" alt="Historial de notificaciones - HistorialNotificacionesMockup10.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup11.png" alt="Historial de notificaciones - HistorialNotificacionesMockup11.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup12.png" alt="Historial de notificaciones - HistorialNotificacionesMockup12.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/HistorialNotificacionesMockup13.png" alt="Historial de notificaciones - HistorialNotificacionesMockup13.png" width="320"/>
+</p>
+
+##### **Mi recibo**
+
+<p align="center">
+  <img src="./assets/MiReciboMockup1.png" alt="Mi recibo - MiReciboMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiReciboMockup2.png" alt="Mi recibo - MiReciboMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/MiReciboMockup3.png" alt="Mi recibo - MiReciboMockup3.png" width="320"/>
+</p>
+
+#### **Privacidad y gestión de datos**
+
+##### **Borrado de datos**
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup1.png" alt="Borrado de datos - BorradoDatosMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup2.png" alt="Borrado de datos - BorradoDatosMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup3.png" alt="Borrado de datos - BorradoDatosMockup3.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup4.png" alt="Borrado de datos - BorradoDatosMockup4.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup5.png" alt="Borrado de datos - BorradoDatosMockup5.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup6.png" alt="Borrado de datos - BorradoDatosMockup6.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup7.png" alt="Borrado de datos - BorradoDatosMockup7.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup8.png" alt="Borrado de datos - BorradoDatosMockup8.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup9.png" alt="Borrado de datos - BorradoDatosMockup9.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/BorradoDatosMockup10.png" alt="Borrado de datos - BorradoDatosMockup10.png" width="320"/>
+</p>
+
+##### **Autorización**
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup1.png" alt="Autorización - AutorizaciónMockup1.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup2.png" alt="Autorización - AutorizaciónMockup2.png" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./assets/AutorizaciónMockup3.png" alt="Autorización - AutorizaciónMockup3.png" width="320"/>
+</p>
+
+
 ### **6.4.4. Applications User Flow Diagrams.**
 
 ### **6.5. Applications Prototyping.**

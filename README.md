@@ -479,11 +479,11 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Código | Fecha | Segmento | Nombres y Apellidos | Edad | Distrito | Rol / relación con el problema | Modalidad | URL | Inicio | Duración | Captura | Estado |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ENT-01 | 18/09/2026 | Directivas / administradores* | Daniel Huatuco Franco | Pendiente TF | Lima (detalle en consolidación TF) | Administrador — participó como administrador en 3 ocasiones, convocó asamblea. Aporta perspectiva operativa: convocatoria, asistencia, cuórum y evidencia del resultado. | Videollamada | https://youtu.be/fv2x8oQX6y8 | Pendiente TF | Pendiente TF | `assets/ENT-01-captura.png` | Completada |
-| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza  | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Pendiente TF | Pendiente TF | `assets/ENT-02-captura.png` Pendiente TF | Completada |
-| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | Pendiente TF | Pendiente TF | `assets/ENT-03-captura.png` Pendiente TF | Completada |
-| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | Pendiente TF | Lima (detalle en consolidación TF) | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | Pendiente TF | Pendiente TF | `assets/ENT-04-captura.png` Pendiente TF | Completada |
-| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | Pendiente TF | Lima (detalle en consolidación TF) | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | Pendiente TF | Pendiente TF | `assets/ENT-05-captura.png` Pendiente TF | Completada |
-| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Pendiente TF | Pendiente TF | `assets/ENT-06-captura.png` Pendiente TF | Completada |
+| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza  | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Pendiente TF | Pendiente TF | `assets/ENT-02-captura.png` | Completada |
+| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | Pendiente TF | Pendiente TF | `assets/ENT-03-captura.png` | Completada |
+| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | Pendiente TF | Lima (detalle en consolidación TF) | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | Pendiente TF | Pendiente TF | `assets/ENT-04-captura.png` | Completada |
+| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | Pendiente TF | Lima (detalle en consolidación TF) | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | Pendiente TF | Pendiente TF | `assets/ENT-05-captura.png` | Completada |
+| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Pendiente TF | Pendiente TF | `assets/ENT-06-captura.png` | Completada |
 
 \* ENT-01: Directivas / administradores — participó como administrador en 3 ocasiones y convocó asamblea (ver cita [00:35] en ficha). Cuota resultante: 3 directivas (ENT-01/04/05) y 3 propietarios (ENT-02/03/06).
 
@@ -1826,10 +1826,41 @@ Fig. 5.1.6.1 – Clases Voting.
 erDiagram
   PROPOSALS ||--o{ AUTHORIZATIONS : abre
   PROPOSALS ||--o{ VOTES : recibe
-  PROPOSALS { TEXT id PK TEXT communityId FK TEXT standing JSONB options JSONB quorumSnapshot JSONB tally TIMESTAMPTZ createdAt TIMESTAMPTZ updatedAt }
-  AUTHORIZATIONS { TEXT id PK TEXT proposalId FK TEXT voterAddress TEXT standing TEXT denialReason TIMESTAMPTZ expiresAt JSONB eligibilitySnapshot }
-  VOTES { TEXT id PK TEXT proposalId FK TEXT voterAddress TEXT choice TEXT nonce JSONB signature TEXT txHash INTEGER blockNumber TEXT standing }
-  REQUEST_LOG { TEXT idempotencyKey PK TEXT voteId FK TIMESTAMPTZ createdAt }
+  PROPOSALS {
+    TEXT id PK
+    TEXT communityId FK
+    TEXT standing
+    JSONB options
+    JSONB quorumSnapshot
+    JSONB tally
+    TIMESTAMPTZ createdAt
+    TIMESTAMPTZ updatedAt
+  }
+  AUTHORIZATIONS {
+    TEXT id PK
+    TEXT proposalId FK
+    TEXT voterAddress
+    TEXT standing
+    TEXT denialReason
+    TIMESTAMPTZ expiresAt
+    JSONB eligibilitySnapshot
+  }
+  VOTES {
+    TEXT id PK
+    TEXT proposalId FK
+    TEXT voterAddress
+    TEXT choice
+    TEXT nonce
+    JSONB signature
+    TEXT txHash
+    INTEGER blockNumber
+    TEXT standing
+  }
+  REQUEST_LOG {
+    TEXT idempotencyKey PK
+    TEXT voteId FK
+    TIMESTAMPTZ createdAt
+  }
 ```
 Nota: unicidad parcial un PENDING y un CONFIRMED por (propuesta,votante); conteo filtra `CONFIRMED`.
 Fig. 5.1.6.2 – DB Voting.
@@ -1915,14 +1946,26 @@ classDiagram
   UserWallet "1" --> "*" WalletHistory : registra
   UserWallet "1" --> "1" WalletStanding : clasifica en
   UserWallet "1" --> "1" SignedContentRef : abre para
-  UserWallet "1" --> "*" WalletHistory : registra
 ```
 Fig. 5.2.6.1 – Clases Wallet.
 #### **5.2.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  WALLETS { TEXT id PK TEXT personId FK TEXT position UK TEXT standing TEXT openFor TIMESTAMPTZ createdAt TIMESTAMPTZ updatedAt }
-  WALLET_HISTORY { TEXT id PK TEXT walletId FK TEXT fact TIMESTAMPTZ occurredAt }
+  WALLETS {
+    TEXT id PK
+    TEXT personId FK
+    TEXT position UK
+    TEXT standing
+    TEXT openFor
+    TIMESTAMPTZ createdAt
+    TIMESTAMPTZ updatedAt
+  }
+  WALLET_HISTORY {
+    TEXT id PK
+    TEXT walletId FK
+    TEXT fact
+    TIMESTAMPTZ occurredAt
+  }
   WALLETS ||--o{ WALLET_HISTORY : registra
 ```
 Fig. 5.2.6.2 – DB Wallet.
@@ -2036,8 +2079,20 @@ Fig. 5.3.6.1 – Clases Biometric.
 #### **5.3.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  PROFILES { TEXT id PK TEXT personId FK TEXT standing TIMESTAMPTZ createdAt }
-  ATTEMPTS { TEXT id PK TEXT personId FK TEXT profileId FK TEXT standing JSONB verdict TIMESTAMPTZ createdAt }
+  PROFILES {
+    TEXT id PK
+    TEXT personId FK
+    TEXT standing
+    TIMESTAMPTZ createdAt
+  }
+  ATTEMPTS {
+    TEXT id PK
+    TEXT personId FK
+    TEXT profileId FK
+    TEXT standing
+    JSONB verdict
+    TIMESTAMPTZ createdAt
+  }
   PROFILES ||--o{ ATTEMPTS : juzga
 ```
 Fig. 5.3.6.2 – DB Biometric.
@@ -2142,8 +2197,21 @@ Fig. 5.4.6.1 – Clases Relay.
 #### **5.4.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  ORDERS { TEXT id PK TEXT contentRef UK TEXT payerRef FK INTEGER position TEXT standing TIMESTAMPTZ createdAt }
-  ATTEMPTS { TEXT id PK TEXT orderId FK INTEGER number TEXT outcome TEXT reason }
+  ORDERS {
+    TEXT id PK
+    TEXT contentRef UK
+    TEXT payerRef FK
+    INTEGER position
+    TEXT standing
+    TIMESTAMPTZ createdAt
+  }
+  ATTEMPTS {
+    TEXT id PK
+    TEXT orderId FK
+    INTEGER number
+    TEXT outcome
+    TEXT reason
+  }
   ORDERS ||--o{ ATTEMPTS : registra
 ```
 Fig. 5.4.6.2 – DB Relay.
@@ -2242,8 +2310,23 @@ Fig. 5.5.6.1 – Clases IAM.
 #### **5.5.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  USERS { TEXT id PK TEXT personId UK TEXT standing TEXT session TEXT address UK BOOLEAN addressVerified JSONB roles TEXT outsideProver TIMESTAMPTZ createdAt }
-  IDENTITY_HISTORY { TEXT id PK TEXT userId FK TEXT fact TIMESTAMPTZ occurredAt }
+  USERS {
+    TEXT id PK
+    TEXT personId UK
+    TEXT standing
+    TEXT session
+    TEXT address UK
+    BOOLEAN addressVerified
+    JSONB roles
+    TEXT outsideProver
+    TIMESTAMPTZ createdAt
+  }
+  IDENTITY_HISTORY {
+    TEXT id PK
+    TEXT userId FK
+    TEXT fact
+    TIMESTAMPTZ occurredAt
+  }
   USERS ||--o{ IDENTITY_HISTORY : registra
 ```
 Fig. 5.5.6.2 – DB IAM.
@@ -2337,9 +2420,23 @@ Fig. 5.6.6.1 – Clases Community.
 #### **5.6.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  COMMUNITIES { TEXT id PK TEXT standing JSONB settings TIMESTAMPTZ createdAt }
-  ADMINS { TEXT communityId FK TEXT personId FK TIMESTAMPTZ entrustedAt }
-  POLICIES { TEXT id PK TEXT communityId FK JSONB policy TIMESTAMPTZ supersedes }
+  COMMUNITIES {
+    TEXT id PK
+    TEXT standing
+    JSONB settings
+    TIMESTAMPTZ createdAt
+  }
+  ADMINS {
+    TEXT communityId FK
+    TEXT personId FK
+    TIMESTAMPTZ entrustedAt
+  }
+  POLICIES {
+    TEXT id PK
+    TEXT communityId FK
+    JSONB policy
+    TIMESTAMPTZ supersedes
+  }
   COMMUNITIES ||--o{ ADMINS : administra
   COMMUNITIES ||--o{ POLICIES : versiona
 ```
@@ -2432,7 +2529,16 @@ Fig. 5.7.6.1 – Clases Membership.
 #### **5.7.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  MEMBERSHIPS { TEXT id PK TEXT personId FK TEXT communityId FK TEXT standing TEXT role TEXT unit JSONB lastEligibility TIMESTAMPTZ createdAt }
+  MEMBERSHIPS {
+    TEXT id PK
+    TEXT personId FK
+    TEXT communityId FK
+    TEXT standing
+    TEXT role
+    TEXT unit
+    JSONB lastEligibility
+    TIMESTAMPTZ createdAt
+  }
 ```
 Fig. 5.7.6.2 – DB Membership.
 
@@ -2524,10 +2630,28 @@ Fig. 5.8.6.1 – Clases Consent.
 #### **5.8.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  CONSENTS { TEXT id PK TEXT personId FK TEXT scope TEXT standing TEXT policyVersion }
-  REQUESTS { TEXT id PK TEXT personId FK TEXT standing }
-  CONFIRMATIONS { TEXT requestId FK TEXT owner TEXT standing }
-  POLICIES { TEXT id PK TEXT category UK JSONB terms }
+  CONSENTS {
+    TEXT id PK
+    TEXT personId FK
+    TEXT scope
+    TEXT standing
+    TEXT policyVersion
+  }
+  REQUESTS {
+    TEXT id PK
+    TEXT personId FK
+    TEXT standing
+  }
+  CONFIRMATIONS {
+    TEXT requestId FK
+    TEXT owner
+    TEXT standing
+  }
+  POLICIES {
+    TEXT id PK
+    TEXT category UK
+    JSONB terms
+  }
   REQUESTS ||--o{ CONFIRMATIONS : espera
 ```
 Fig. 5.8.6.2 – DB Consent.
@@ -2601,8 +2725,21 @@ Fig. 5.9.6.1 – Clases OCR.
 #### **5.9.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  EXAMINATIONS { TEXT id PK TEXT personId FK TEXT documentRef TEXT standing JSONB verdict TIMESTAMPTZ requestedAt TIMESTAMPTZ validUntil }
-  EXAMINATION_HISTORY { TEXT id PK TEXT examinationId FK TEXT fact TIMESTAMPTZ occurredAt }
+  EXAMINATIONS {
+    TEXT id PK
+    TEXT personId FK
+    TEXT documentRef
+    TEXT standing
+    JSONB verdict
+    TIMESTAMPTZ requestedAt
+    TIMESTAMPTZ validUntil
+  }
+  EXAMINATION_HISTORY {
+    TEXT id PK
+    TEXT examinationId FK
+    TEXT fact
+    TIMESTAMPTZ occurredAt
+  }
   EXAMINATIONS ||--o{ EXAMINATION_HISTORY : registra
 ```
 Fig. 5.9.6.2 – DB OCR.
@@ -2668,8 +2805,22 @@ Fig. 5.10.6.1 – Clases OTP.
 #### **5.10.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  CHALLENGES { TEXT id PK TEXT personId FK TEXT purpose TEXT standing INTEGER attempts INTEGER maxAttempts TIMESTAMPTZ requestedAt TIMESTAMPTZ validUntil }
-  CHALLENGE_HISTORY { TEXT id PK TEXT challengeId FK TEXT fact TIMESTAMPTZ occurredAt }
+  CHALLENGES {
+    TEXT id PK
+    TEXT personId FK
+    TEXT purpose
+    TEXT standing
+    INTEGER attempts
+    INTEGER maxAttempts
+    TIMESTAMPTZ requestedAt
+    TIMESTAMPTZ validUntil
+  }
+  CHALLENGE_HISTORY {
+    TEXT id PK
+    TEXT challengeId FK
+    TEXT fact
+    TIMESTAMPTZ occurredAt
+  }
   CHALLENGES ||--o{ CHALLENGE_HISTORY : registra
 ```
 Fig. 5.10.6.2 – DB OTP.
@@ -2738,8 +2889,20 @@ Fig. 5.11.6.1 – Clases Notifications.
 #### **5.11.6.2. Database Design Diagram.**
 ```mermaid
 erDiagram
-  DISPATCHES { TEXT id PK TEXT idempotencyKey UK TEXT address JSONB template TEXT standing TIMESTAMPTZ createdAt }
-  DISPATCH_HISTORY { TEXT id PK TEXT dispatchId FK TEXT fact TIMESTAMPTZ occurredAt }
+  DISPATCHES {
+    TEXT id PK
+    TEXT idempotencyKey UK
+    TEXT address
+    JSONB template
+    TEXT standing
+    TIMESTAMPTZ createdAt
+  }
+  DISPATCH_HISTORY {
+    TEXT id PK
+    TEXT dispatchId FK
+    TEXT fact
+    TIMESTAMPTZ occurredAt
+  }
   DISPATCHES ||--o{ DISPATCH_HISTORY : registra
 ```
 Fig. 5.11.6.2 – DB Notifications.
@@ -5149,6 +5312,10 @@ Nomenclatura exigida: `TF_1ASI0728_202620_TF`, `TF_1ASI0728_202620_KEYNOTE`, `TF
 | ENT-01..06 (acceso) | Identidad técnica y canal verificado para ambos segmentos | Patricia + Miguel | US-04, US-05, US-06, US-07 |
 | Transversal técnica | Firma individual, entrega on-chain, notificaciones idempotentes, contratos REST | Developer | TS-01 (US-25), TS-02 (US-25/27), TS-03 (US-26), TS-04 (todas) |
 | Visitante | Descubrimiento y contacto | Visitante | US-01, US-02, US-03 |
+
+## Anexo C - Vídeo Entrega Parcial
+
+https://youtu.be/T7yzk-yKodk
 
 ## **7.5. Conclusiones**
 

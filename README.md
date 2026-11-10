@@ -5256,6 +5256,42 @@ El administrador de cumplimiento necesita revisar las solicitudes de borrado y c
 
 Alcance TF: sprints e implementación en roadmap del backend; esta sección se completa con planning/backlog/evidencias por sprint o se retira si excede el alcance.
 
+### **7.2.1. Sprint 1**
+
+A continuacion se encuentra el sprint planning orientado a nuestro primer sprint. En esta sección, vamos a explicar la reunión acorde al sprint realizado, detallando lo que se planeó, acordó y revisó en la reunión.
+
+#### **7.2.1.1. Sprint Planning 1.**
+
+| Sprint \# | Sprint 1 |
+| :---- | :---- |
+| **Sprint Planning Background:** | Nos reunimos con el equipo en una sesión para comprometer el primer incremento vertical del producto: identidad verficada por OTP y la comunidad lista para recibir miembros, más landing page con CTA exigidad desde este primer sprint. Se revisó el Product Backlog priorizado por su valor y la capacidad del equipo.  |  |
+| Date | 2026-18-10 |
+| Time | 20:00 PM |
+| Location | Virtual vía Discord - Lima, Perú |
+| Prepared By | Aliaga Aguirre, Ethan Matias |
+| Attendees (to planning meeting) | Aliaga Aguirre, Ethan<br> Bueno Perales, Mathias <br> Paredes Santos, Fabrizio <br> Rios Pacheco, Héctor <br> Rodriguez Macedo, Sebastian |
+| Sprint 0 Review Summary | No aplica por ser este el primer sprint a trabajar. No existen resultador previos de producto ni feedback de Product Owner. La linea base es la arquitectura C4 aprobado. |
+| Sprint 0 Retrospective Summary | No aplica por ser el primer sprint. Como forma de trabajo se acordo **GitFlow + Convetional Commits + feeature branches + rebase antes de merge a main** como forma de trabajo |
+| **Sprint Goal & User Stories** |  |
+| Sprint 1 Goal | **Nuestro enfoque está en** lograr que un visitante se convierta en persona verificada por código y que una comunidad quede activa con politica para recibir miembros en el sprint 2 **Creemos que esto ofrece** una visión clara de las funciones esenciales de la aplicación, con la pagina web pública de acceso y con acceso directo al inicio de sesión de forma funcional  **Esto se confirmará cuando** el 100% de los Done Criteria S01 esten en verde en stagging, el flujo sign-up -> sign in -> answer OTP -> community + policy sea demostrable en video y Swagger responda en la URL pública. |
+| Sprint 1 Velocity | 38 Story Points.  |
+| Sum of Story Points | 38 Story Points correspondientes a US01-US08. Sin incluir aun las Technical Stories en la suma. |
+
+#### **7.2.1.2. Sprint Backlog 1.**
+
+#### **7.2.1.3. Development Evidence for Sprint Review.**
+
+#### **7.2.1.4. Testing Suite Evidence for Sprint Review.**
+
+#### **7.2.1.5. Execution Evidence for Sprint Review.**
+
+#### **7.2.1.6. Services Documentation Evidence for Sprint Review.**
+
+#### **7.2.1.7. Software Deployment Evidence for Sprint Review.**
+
+#### **7.2.1.8. Team Collaboration Insights during Sprint.**
+
+
 ### **7.2.X. Sprint n**
 
 #### **7.2.X.1. Sprint Planning n.**

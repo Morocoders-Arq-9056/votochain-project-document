@@ -5314,6 +5314,34 @@ A continuacion se encuentra el sprint planning orientado a nuestro primer sprint
 
 ### **7.3.1. Diseño de Entrevistas.**
 
+#### Segmento: Propietarios / socios votantes
+- ¿Qué tan fácil te resultó registrarte y entender para qué servía VotaChain como votante?
+- ¿Cómo fue tu experiencia al navegar desde el Landing hasta llegar a crear tu cuenta?
+- Al ver el aviso de “Te enviamos un código”, ¿entendiste para qué era y cuánto tiempo tenías?
+- ¿La pantalla de ingresar código de 6 dígitos te dejó claro cuántos intentos te quedaban?
+- ¿Pudiste usar sin problemas el botón Reenviar cuando el código no llegaba o se vencía?
+- ¿Entendiste la diferencia entre tener “Correo verificado” y poder votar en una comunidad?
+- ¿La pantalla de Login te pareció clara para entrar con tu correo?
+- ¿Entendiste qué pasa cuando dice “Se cerrará la sesión anterior” en otro dispositivo?
+- ¿La sección “Mi cuenta / Seguridad” te ayudó a ver tu estado, roles e historial?
+- ¿Sentiste que el diseño de registro y verificación era confiable y profesional desde el primer momento?
+- ¿Te sentiste cómodo verificando tu correo por internet directamente desde la plataforma?
+- ¿Qué cambiarías en la experiencia visual o funcional para que el registro y verificación sea aún más claro o rápido de usar?
+
+#### Segmento: Directivas y administradores de juntas de propietarios / cooperativas
+- ¿Tu comunidad ya tenía una forma de registrarse y organizarse? ¿Qué cambió con VotaChain?
+- ¿Te resultó fácil registrar tu comunidad con nombre, domicilio y contacto?
+- ¿El formulario de registro te pareció claro para saber qué sigue después: definir política y activar?
+- ¿La opción de definir Política de votación (umbral, base, mayoría) fue fácil de entender?
+- ¿Entendiste que los cambios de política solo aplican a futuras votaciones y no cambian las abiertas?
+- ¿Consideras útil ver el historial de versiones de la política directamente en la plataforma?
+- ¿VotaChain te permite tener control sobre activar, suspender y reactivar tu comunidad?
+- ¿Qué tan clara te parece la insignia de estado Registrada / Activa / Suspendida / Archivada?
+- ¿Entendiste que Archivada es terminal solo-lectura y Suspendida bloquea miembros y votaciones?
+- ¿La tabla de Administradores te pareció ágil para nombrar por correo y quitar con confirmación?
+- ¿Crees que el diseño transmite formalidad y confianza suficiente para una junta o asociación?
+- ¿Qué funcionalidades crees que le hacen falta a VotaChain para facilitarte la gestión como admin?
+
 ### **7.3.2. Registro de Entrevistas.**
 
 ### **7.3.3. Evaluaciones según heurísticas.**

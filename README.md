@@ -5279,7 +5279,41 @@ A continuacion se encuentra el sprint planning orientado a nuestro primer sprint
 
 #### **7.2.1.2. Sprint Backlog 1.**
 
+Para este primer Sprint, nuestro objetivo principal es desarrollar la **Landing Page de VotoChain** y desarrollar un avance del sistema base de la aplicación, asi como implementar las primeras funcionalidades. Para lograrlo, hemos creado tareas específicas para cada historia de usuario relacionada con la landing y algunas tecnicas relacionadas con el backend, las hemos asignado entre los integrantes del equipo. Además, para una mejor organización y seguimiento del Backlog, estamos utilizando la herramienta **Trello**  
+
+*Figura* <br>
+*Sprint 1 de VotoChain*
+<p align="center">
+  <img src="imgs/SprintBacklog1.png" alt="PB" width="850">
+</p>
+
+Sprint Backlog 1 en Trello: 
+
+| Sprint # | Sprint 1 |  |  |  |  |  |  |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+| User Story |  | Work Item/Task |  |  |  |  |  |
+| Id | Title | Id | Title | Description | Estimation (Hours) | Assigned To | Status |
+| US-01 | Conocer la propuesta de valor | T01 | Implementar sección Hero | Desarrollar el bloque hero de la landing con titular principal, subtítulo y botones de acción (CTA). | 3 | Paredes Santos, Fabrizio | Done |
+|  |  | T02 | Implementar barra de confianza | Desarrollar la franja con los tres pilares de VotoChain (identidad verificada, verificabilidad pública, accesibilidad). | 2 | Paredes Santos, Fabrizio | Done |
+| US-02 | Explorar funcionamiento, confianza y privacidad | T03 | Implementar sección "Cómo funciona" | Desarrollar el bloque de tres pasos que describe el flujo de registro, verificación, votación y comprobación. | 3 | Paredes Santos, Fabrizio | Done |
+|  |  | T04 | Implementar sección de seguridad y privacidad | Desarrollar el bloque de principios de seguridad por diseño con consentimiento, estados sin ambigüedad y minimización de datos. | 2 | Paredes Santos, Fabrizio | Done |
+| US-03 | Solicitar información o demostración | T05 | Implementar formulario de contacto | Desarrollar el formulario de solicitud de demo con validaciones de campos obligatorios, consentimiento de tratamiento de datos y confirmación de envío. | 4 | Paredes Santos, Fabrizio | Done |
+| US-04 | Registrar una cuenta | T06 | Implementar endpoint POST /users/signup | Crear el comando signUp en IAM: validar persona y correo únicos, crear usuario en estado REGISTERED y solicitar verificación de correo. | 4 | Aliaga Aguirre, Ethan | Done |
+|  |  | T07 | Implementar pantalla de registro en frontend | Desarrollar el formulario de creación de cuenta con validaciones inline y flujo de confirmación de registro. | 3 | Ríos Pacheco, Héctor | Done |
+| US-05 | Verificar el correo mediante OTP | T08 | Implementar endpoint POST /challenges | Crear el comando de solicitud de desafío OTP en Verification: generar código temporal de un solo uso y solicitar entrega por correo. | 4 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T09 | Implementar endpoint POST /challenges/{id}/answers | Crear el comando de validación del código OTP: confirmar desafío dentro de vigencia e intentos permitidos sin conservar el código legible. | 3 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T10 | Implementar pantalla de verificación de correo | Desarrollar las pantallas de ingreso y validación del código OTP con estados de éxito, error y reenvío. | 3 | Ríos Pacheco, Héctor | Done |
+| US-06 | Iniciar y cerrar sesión | T11 | Implementar endpoint POST /users/signin y /users/signout | Crear los comandos signIn y signOut en IAM: abrir sesión única con reemplazo controlado y cerrar sesión con registro de motivo. | 4 | Aliaga Aguirre, Ethan | Done |
+|  |  | T12 | Implementar pantallas de inicio y cierre de sesión | Desarrollar el formulario de login con manejo de errores de credenciales y estado suspendido, y el flujo de cierre de sesión. | 3 | Ríos Pacheco, Héctor | Done |
+| US-07 | Recuperar credenciales y actualizar correo | T13 | Implementar endpoint POST /users/{id}/secret y /email | Crear los comandos changeSecret y changeEmail en IAM: validar desafío de recuperación, actualizar secreto e invalidar sesión abierta. | 4 | Bueno Perales, Mathias | Done |
+|  |  | T14 | Implementar pantallas de recuperación de acceso | Desarrollar las pantallas de solicitud de código, ingreso de nuevo secreto y confirmación de cambio de correo. | 3 | Ríos Pacheco, Héctor | Done |
+| US-08 | Registrar y activar una comunidad | T15 | Implementar endpoint POST /communities y POST /communities/{id}/activate | Crear los comandos register y activate en Community Management: validar datos, crear comunidad en estado REGISTERED y activarla cuando tenga admin y política definida. | 5 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T16 | Implementar pantalla de registro de comunidad | Desarrollar el formulario de alta de comunidad con campos de nombre, domicilio y contacto, y el flujo de confirmación de activación. | 3 | Ríos Pacheco, Héctor | Done |
+
 #### **7.2.1.3. Development Evidence for Sprint Review.**
+
+| Repository  | Branch | Commit Id | Commit | Message Body | Commited on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
 
 #### **7.2.1.4. Testing Suite Evidence for Sprint Review.**
 

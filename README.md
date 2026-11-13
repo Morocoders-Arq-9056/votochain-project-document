@@ -5279,7 +5279,265 @@ A continuacion se encuentra el sprint planning orientado a nuestro primer sprint
 
 #### **7.2.1.2. Sprint Backlog 1.**
 
+Para este primer Sprint, nuestro objetivo principal es desarrollar la **Landing Page de VotoChain** y desarrollar un avance del sistema base de la aplicación, asi como implementar las primeras funcionalidades. Para lograrlo, hemos creado tareas específicas para cada historia de usuario relacionada con la landing y algunas tecnicas relacionadas con el backend, las hemos asignado entre los integrantes del equipo. Además, para una mejor organización y seguimiento del Backlog, estamos utilizando la herramienta **Trello**  
+
+*Figura* <br>
+*Sprint 1 de VotoChain*
+<p align="center">
+  <img src="imgs/SprintBacklog1.png" alt="PB" width="850">
+</p>
+
+Sprint Backlog 1 en Trello: 
+
+| Sprint # | Sprint 1 |  |  |  |  |  |  |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+| User Story |  | Work Item/Task |  |  |  |  |  |
+| Id | Title | Id | Title | Description | Estimation (Hours) | Assigned To | Status |
+| US-01 | Conocer la propuesta de valor | T01 | Implementar sección Hero | Desarrollar el bloque hero de la landing con titular principal, subtítulo y botones de acción (CTA). | 3 | Paredes Santos, Fabrizio | Done |
+|  |  | T02 | Implementar barra de confianza | Desarrollar la franja con los tres pilares de VotoChain (identidad verificada, verificabilidad pública, accesibilidad). | 2 | Paredes Santos, Fabrizio | Done |
+| US-02 | Explorar funcionamiento, confianza y privacidad | T03 | Implementar sección "Cómo funciona" | Desarrollar el bloque de tres pasos que describe el flujo de registro, verificación, votación y comprobación. | 3 | Paredes Santos, Fabrizio | Done |
+|  |  | T04 | Implementar sección de seguridad y privacidad | Desarrollar el bloque de principios de seguridad por diseño con consentimiento, estados sin ambigüedad y minimización de datos. | 2 | Paredes Santos, Fabrizio | Done |
+| US-03 | Solicitar información o demostración | T05 | Implementar formulario de contacto | Desarrollar el formulario de solicitud de demo con validaciones de campos obligatorios, consentimiento de tratamiento de datos y confirmación de envío. | 4 | Paredes Santos, Fabrizio | Done |
+| US-04 | Registrar una cuenta | T06 | Implementar endpoint POST /users/signup | Crear el comando signUp en IAM: validar persona y correo únicos, crear usuario en estado REGISTERED y solicitar verificación de correo. | 4 | Aliaga Aguirre, Ethan | Done |
+|  |  | T07 | Implementar pantalla de registro en frontend | Desarrollar el formulario de creación de cuenta con validaciones inline y flujo de confirmación de registro. | 3 | Ríos Pacheco, Héctor | Done |
+| US-05 | Verificar el correo mediante OTP | T08 | Implementar endpoint POST /challenges | Crear el comando de solicitud de desafío OTP en Verification: generar código temporal de un solo uso y solicitar entrega por correo. | 4 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T09 | Implementar endpoint POST /challenges/{id}/answers | Crear el comando de validación del código OTP: confirmar desafío dentro de vigencia e intentos permitidos sin conservar el código legible. | 3 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T10 | Implementar pantalla de verificación de correo | Desarrollar las pantallas de ingreso y validación del código OTP con estados de éxito, error y reenvío. | 3 | Ríos Pacheco, Héctor | Done |
+| US-06 | Iniciar y cerrar sesión | T11 | Implementar endpoint POST /users/signin y /users/signout | Crear los comandos signIn y signOut en IAM: abrir sesión única con reemplazo controlado y cerrar sesión con registro de motivo. | 4 | Aliaga Aguirre, Ethan | Done |
+|  |  | T12 | Implementar pantallas de inicio y cierre de sesión | Desarrollar el formulario de login con manejo de errores de credenciales y estado suspendido, y el flujo de cierre de sesión. | 3 | Ríos Pacheco, Héctor | Done |
+| US-07 | Recuperar credenciales y actualizar correo | T13 | Implementar endpoint POST /users/{id}/secret y /email | Crear los comandos changeSecret y changeEmail en IAM: validar desafío de recuperación, actualizar secreto e invalidar sesión abierta. | 4 | Bueno Perales, Mathias | Done |
+|  |  | T14 | Implementar pantallas de recuperación de acceso | Desarrollar las pantallas de solicitud de código, ingreso de nuevo secreto y confirmación de cambio de correo. | 3 | Ríos Pacheco, Héctor | Done |
+| US-08 | Registrar y activar una comunidad | T15 | Implementar endpoint POST /communities y POST /communities/{id}/activate | Crear los comandos register y activate en Community Management: validar datos, crear comunidad en estado REGISTERED y activarla cuando tenga admin y política definida. | 5 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T16 | Implementar pantalla de registro de comunidad | Desarrollar el formulario de alta de comunidad con campos de nombre, domicilio y contacto, y el flujo de confirmación de activación. | 3 | Ríos Pacheco, Héctor | Done |
+
 #### **7.2.1.3. Development Evidence for Sprint Review.**
+
+
+**Votochain Landing Page**
+
+| Repository  | Branch | Commit Id | Commit | Message Body | Commited on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Morocoders-Arq-9056/votochain-web-landing | main | cd15ec8 | feat: create VotoChain landing page | - | Oct 2, 2026 |
+| Morocoders-Arq-9056/votochain-web-landing | main | 9a5ea82 | feat(landing): implement interactive demo request form with Ley 29733 consent, pricing section, and complete SEO metadata | - | Oct 5, 2026 |
+| Morocoders-Arq-9056/votochain-web-landing | main | 9791502 | chore: updating colors of sections | - | Oct 8, 2026 |
+| Morocoders-Arq-9056/votochain-web-landing | main | 77f8a09 | chore: update colors palette | - | Oct 8, 2026 |
+
+
+**Votochain Backend**
+
+| Repository | Branch | Commit Id | Commit | Message Body | Committed on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 8f4777d | first commit | - | Sep 05, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9015f8f | feat: add base shared context scaffold. | - | Sep 05, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 343a5c3 | add base documentation for each bounded context. | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0e16bb5 | feat: set up vite config | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 27bd68a | chore(iam): fix iam implementation guide. | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0b9eb64 | chore: update impl guides | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 28aaff5 | add new documentation | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3468238 | refactor(docs): adopt ddd-guideliness v1.0.7 conventions | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9a64bb4 | feat(iam): add UserId PersonId ContactAddress VOs | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f8b6ef4 | feat(iam): add User aggregate with supersede logic | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | efc7b7a | feat(iam): add user commands queries events rejections | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 470b1fa | docs(iam): document as-const unions and parsers | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | b0a8a8c | feat(iam): add first iam version | - | Sep 11, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5c489ba | feat(iam): define command and query service contracts. | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 70ec1de | feat(iam): add user repository. | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 1497195 | chore(root): add postgres typeorm docker bootstrap chore(shared): add application infrastructure interceptors | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e02683a | chore(iam): update value objects file reference. | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 37faaa5 | refactor(iam): add new repository methods to find user by email and by person id. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5c99e5d | refactor(iam): add getters methods for user aggregate. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5c26709 | feat(iam): add user and system role assignment persistence entities. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 88ca439 | feat(iam): add user repository finders with assignments.. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5b73c97 | feat(iam): add user persistence assembler. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3c1cbd5 | feat(iam): add user persistence assembler. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e4bd31a | refactor(iam): modify the find by person id method param. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | a7385b9 | refactor(iam): comment the unused handle methods. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e35aed8 | refactor(iam): move PersonId generation to domain signup factory | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | b27123f | docs(iam): sync signup contract after PersonId factory move | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 179996e | chore(iam): add auth0 authentication provider. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3827958 | chore(iam): add sign up resources, assemblers and controller. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | aac79b1 | chore(iam): add proof service. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f2ae29f | add auth 0 dependencies. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 94f0c4b | add auth 0 dependencies. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 7ee476a | chore(iam): revert signin scope from signup slice | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ff4bf62 | fix(iam): enforce user repository contract, unique email, load assignments | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | d2fbdce | fix(iam): enforce user repository contract, unique email, load assignments | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ee9b55a | update bounded context documentation | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5278cf9 | refactor(shared): promote PersonId to shared kernel | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f27f2ba | refactor(iam): named service methods per skill v1.0.11 | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 89f5dfa | feat(iam): signup endpoint with UserResource and exception filter | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ee6d776 | test(iam): signup unit specs and e2e groundwork | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 245f102 | chore: ignore tsc build info | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 708352d | update bounded context documentation | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | de94e8c | update bounded context documentation | - | Sep 16, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5650fcf | feat(iam): complete domain services and simplify roles to SystemRole[] simple-array | - | Sep 17, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | cf3e8bf | feat(iam): full 12-command application services with ports, facade impl, handlers and Sprint-01 fakes | - | Sep 17, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 7f3accc | feat(iam): full REST surface with 12 use cases, published IAM_CONTEXT_FACADE and module wiring | - | Sep 17, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 7ae19ce | docs(chapter-4): write ADD and QAW scenarios. | - | Sep 19, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 2881de3 | rm documents | - | Sep 21, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 53002c9 | docs(community,verification): align impl-guides to ddd-guideliness skill | - | Sep 21, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 58e5ea3 | feat(verification): add ChallengeId Purpose AttemptCount VOs | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 74499f9 | feat(verification): add ValidityWindow InvalidationReason Standing VOs | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 44e335c | feat(verification): add challenge lifecycle events without secrets | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 408772b | feat(verification): add verification commands and queries | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ae01f47 | feat(verification): add VerificationChallenge aggregate with answer | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 83a992b | feat(verification): add verification domain rejections | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f70ff5b | feat(verification): define command query repository ports | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 174cd29 | refactor(verification): expose aggregate state for persistence | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 35286d9 | feat(verification): add challenge persistence adapter | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 965e79d | feat(verification): add verification outbound ports | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 71f0328 | feat(verification): implement verification command service | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0101fdd | feat(verification): implement verification queries and confirmed handler | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9dc1202 | feat(verification): add Sprint-01 fakes and module wiring | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0c6541d | feat(verification): add verification REST surface | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | c96dc1a | feat(verification): add verification context facade | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e018aeb | feat(verification): wire verification module | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | cb9435c | feat(community): add community value objects | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | bcbd6f5 | feat(community): add community domain events | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3c000ec | feat(community): add community domain rejections | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 2496268 | feat(community): add Community aggregate with lifecycle | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5ae3ada | feat(community): define community command query repository ports | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9aca37e | feat(community): add community persistence adapter | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 35a6fcb | feat(community): add community outbound port | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | a47e888 | feat(community): implement community command service | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5848b7e | feat(community): implement community queries and event logger | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | a1842a8 | feat(community): add community module wiring | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f2f5ef6 | feat(community): add community REST surface | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 42842e5 | feat(community): add community context facade | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | d531e74 | feat(community): wire community module | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3d49785 | test(community): prove community lifecycle e2e | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 2155208 | Merge branch 'feat/community-slice' into develop | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9d62c94 | refactor(verification): resource-oriented challenge endpoints | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 07ca561 | refactor(community): standing patch plus correct collection statuses | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3a2b46b | refactor(iam): resource-oriented identity endpoints | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 6ef516f | test(e2e): align specs to RESTful paths | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e54d14a | docs(rest): align endpoint references to resource-oriented paths | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 4603624 | refactor(iam): flat users resource, three controllers | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f853ca5 | refactor(community): three resource controllers | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 8894a9a | refactor(verification): challenges and answers controllers | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 45c5a05 | refactor(api): missing sub-resource reads plus 400 on absent filters | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | d9242f7 | test(e2e): align specs to flat paths | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 50b4731 | docs(rest): resource controllers per bounded context | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e5ce175 | feat(iam): email-based sign-in and sign-out under auth | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ecb487b | test(e2e): auth flows by email | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 8f098ee | docs(rest): auth resource flows | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 4a03efb | feat(iam): add identity history query contract | - | Sep 28, 2026 |
+
+
+**Votochain Frontend**
+
+| Repository | Branch | Commit Id | Commit | Message Body | Committed on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ff23748 | Initial commit from Create Next App | - | Oct 22, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | a607da1 | chore(root): add design and test tooling deps | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 5aa81fd | chore(config): enforce domain boundaries with eslint | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 0dba74b | feat(ui): add button and badge atoms with theme tokens | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 13dc8df | feat(domain): add eligibility and membership value objects | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 9dca627 | test(voting): add unit tests for eligibility rules | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 9466264 | feat(infra): add api client with es-pe error mapping | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f60e9bf | feat(auth): add protected route shells and middleware | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 63dc8da | feat(ui): update home with design-system components | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 591a101 | feat(ui): add form and dialog action utilities | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 202cce0 | merge(feat): integrate votochain base shell into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1798d1f | feat(ui): add input atom with label and error states | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 52f7e42 | merge(feat): integrate input atom into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1e1cc22 | feat(ui): add shared field variants for form controls | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 995f6bc | fix(ui): keep visible focus ring on input atom | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 289d82f | feat(ui): add password input with visibility toggle | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ab9c49f | feat(ui): add select atom with error state | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f13cbbf | feat(ui): add textarea atom for reason input | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 009fb07 | feat(ui): add otp input atom for six-digit code | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | cb5b7d9 | feat(ui): add spinner atom | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 28f02ce | feat(ui): add ghost variant to button | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e83afea | feat(ui): add loading state to button | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e318827 | style(ui): fix badge line height to 15px | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 701281b | feat(ui): export new atoms from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 20a1aa8 | refactor(ui): reduce select atom to line budget | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c7c3452 | merge(feat): integrate ui atom library into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 33c9986 | chore(root): add component testing dependencies | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1a2fa4a | chore(config): configure vitest for component testing | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 0f07c74 | feat(auth): add otp box molecule with expiry timer | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 067f046 | feat(voting): add vote authorization checklist organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 57833ef | test(voting): add integration tests for authorization checklist | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4abf00f | merge(feat): integrate authorization ui into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 9d03c18 | feat(ui): add radio card atom for selection | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d35b356 | feat(voting): add vote form organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | b285f20 | test(voting): add integration tests for vote form | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4b64fc7 | feat(voting): add sign modal organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 88ad1d5 | test(voting): add integration tests for sign modal | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 741edce | feat(infra): add vote status labels for es-pe messages | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d925113 | style(ui): collapse export type statement in organisms barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4daddff | feat(ui): export sign modal and vote form from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ff9962d | merge(feat): integrate ballot ui into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1022777 | feat(ui): add step dot atom for receipt timeline | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 94d6854 | feat(voting): add vote receipt timeline organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 87f8492 | test(voting): add integration tests for receipt timeline | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1870a9e | feat(ui): export receipt timeline from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c50f881 | merge(feat): integrate receipt timeline into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 04c1a5e | feat(voting): add receipt value object | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c465b82 | refactor(voting): align step dot and receipt timeline with domain model | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f6ee8f0 | refactor(ui): rename radio card and vote form props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 71fce94 | refactor(voting): rename authorization checklist props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 39309de | refactor(auth): rename sign modal props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f3f2128 | refactor(auth): rename otp box props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 7883016 | refactor(ui): rename input hint prop to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 8aaa4b4 | refactor(domain): rename consent record fields to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 0d8a4fe | refactor(domain): extract eligibility decision type with english reason | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c7b5b50 | refactor(infra): rename ui label constants to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 611abdb | refactor(ui): rename organism barrel exports to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | b8d96a1 | refactor(app): rename page components to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4fcf471 | refactor(app): import atoms directly instead of barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 557660a | feat(voting): add receipt application stub | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 948d5d8 | feat(ui): add receipt template | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c06d840 | feat(voting): render vote receipt page with async content | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ec27d40 | merge(feat): integrate receipt page and english ubiquitous language | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c4edb67 | feat(voting): add authorization case value object | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f2aba22 | refactor(voting): read checklist types from domain authorization model | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e012f64 | feat(ui): add bottom navigation organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f969c4f | test(ui): add integration tests for bottom navigation | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 655cce9 | feat(voting): add authorization application stub | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f443315 | feat(voting): add authorization flow with eligibility checklist | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 7f47995 | feat(voting): render authorization page with async content | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 076e560 | feat(voting): protect authorization route in middleware | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | b2394ed | feat(voting): add vote flow with signature modal | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4541400 | feat(voting): render vote page with async content | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 26ff119 | refactor(ui): export authorization types from domain module | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 85b2f70 | feat(ui): export bottom navigation from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | a7b60dd | merge(feat): integrate authorization flow into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 772c09d | feat(voting): add cast vote input value object | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e375e33 | refactor(infra): throw typed api error with backend status | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 20a07be | feat(voting): add vote receipt mapper with es-pe error table | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4636dce | feat(voting): add voting api client with idempotent cast vote | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 3fbe8f7 | test(voting): add integration tests for voting api client | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4bda2f0 | merge(feat): integrate voting api client into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4c0e4e3 | docs(root): add repository conventions for layered architecture | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | bc74aed | chore(config): enforce layer boundaries with restricted imports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d8db70f | chore(ui): remove shadcn theme from global styles | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 7f21528 | chore(root): drop unused styling and lint dependencies | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 3762c01 | feat(ui): add typography tokens for code and badges | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 2345c72 | feat(ui): add shared copy kernel with es-pe messages | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 6b1ac3f | feat(ui): add pet datetime formatter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | cd609ef | feat(ui): add timeline projection with visual states | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 699cc57 | feat(ui): add eligibility checklist projection | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | a6f1c68 | feat(voting): add eligibility snapshot value object | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1f35f58 | feat(voting): add vote authorization outcome value objects | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ee586c3 | feat(voting): add voter receipt value object with frozen journey | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d4d4451 | feat(voting): add vote cast error codes | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 147ef92 | feat(voting): declare delivery and authorization ports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f12d0e0 | feat(infra): add mock api switch to environment | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 5044160 | refactor(voting): implement delivery port with voting api adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4a72598 | feat(voting): add authorization api adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 5fd3c7a | feat(voting): add fake delivery adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 2b0cc44 | feat(voting): add fake authorization adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 61d0fa0 | feat(infra): add composition root for voting ports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | aec8216 | feat(voting): add cast vote application service | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c7ee21a | feat(voting): add request authorization application service | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | bdfae25 | refactor(infra): make api error transport agnostic | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 14001c6 | chore(ui): remove component barrels in favor of direct imports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 403672a | refactor(ui): use typography tokens in badge and otp input | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 664a670 | refactor(ui): align select and textarea hint
+
+
 
 #### **7.2.1.4. Testing Suite Evidence for Sprint Review.**
 

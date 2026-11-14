@@ -1,4 +1,4 @@
-﻿
+
 <p align="center">
   <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
@@ -5873,6 +5873,31 @@ Sprint Backlog 1 en Trello:
 
 ### **7.3.2. Registro de Entrevistas.**
 
+#### **Segmento: Propietarios / socios votantes**
+
+| Código | Fecha | Segmento | Nombres y Apellidos | Edad | Distrito | Rol / relación con el problema | Modalidad | URL | Inicio | Duración | Captura | Estado |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| VAL-01 | 14/11/2026 | Propietarios / socios votantes | Gabriel Gordon | Pendiente | Lima (detalle pendiente) | Propietario / socio votante (validación de registro, OTP, login y seguridad) | Videollamada | [Grabación VAL-01](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQCpqVMvLGK2RZEWjviqBD4EAYdnJPhH5BAcbz9Gde5xFuk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=w99W3A) | 00:00 | 05:00 min | `assets/VAL-01-captura.jpg` | Completada |
+
+**Ficha individual - VAL-01 (Propietarios / socios votantes)**
+
+| Campo | Contenido |
+|---|---|
+| Código de entrevista | **VAL-01** |
+| Datos del participante | Gabriel Gordon. Propietario / socio votante. |
+| Hora de inicio y duración | Inicio: 00:00 \| Duración: 05:00 min (bloques documentados: 00:00 – 04:57) |
+| Enlace de grabación | https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQCpqVMvLGK2RZEWjviqBD4EAYdnJPhH5BAcbz9Gde5xFuk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=w99W3A |
+| Evidencia gráfica | <p align="center"><img src="./assets/VAL-01-captura.jpg" alt="Captura VAL-01" width="500"/></p> |
+| Consentimiento | El participante autorizó la realización y grabación de la entrevista de validación con fines académicos. |
+| Contexto narrado | En esta entrevista de validación, Gabriel Gordon prueba el prototipo de VotoChain y describe cómo entiende el flujo de registro, verificación y acceso. Considera que la plataforma explica con claridad su propósito y transmite seguridad sin exigir conocimientos de blockchain, e identifica ajustes puntuales de navegación e ingreso del código que podrían hacer el proceso más directo. |
+| Observaciones por bloque temporal | • **00:00 - 01:33:** Propósito y registro claros; sugiere enlazar «Ingresar» directo a registro/login.<br>• **01:36 - 02:34:** Código OTP claro (5 min, 5 intentos y reenvío que invalida el anterior).<br>• **02:37 - 03:30:** Distingue correo verificado de padrón; login claro y entiende sesión única por dispositivo.<br>• **03:32 - 04:18:** Valora «Mi cuenta y seguridad» (estado, rol, historial) y el diseño confiable.<br>• **04:20 - 04:57:** Cómodo con el aviso de privacidad; propone dividir el OTP en 6 casillas. |
+| Hallazgos | Se valida la claridad de la propuesta de valor, la comprensión del flujo OTP (vigencia, intentos y reenvío), la distinción entre correo verificado y elegibilidad en padrón, la política de sesión única y la confianza visual del diseño. Se detectan dos oportunidades concretas de mejora en navegación e ingreso del código. |
+| Implicancia para requisitos y UX | 1) Conectar el botón «Ingresar» del menú principal del Landing Page directamente hacia las rutas de inicio de sesión o registro.<br>2) Dividir el campo de entrada del código OTP de 6 dígitos en seis casillas individuales para mejorar la rapidez y legibilidad del ingreso. |
+
+#### **Segmento: Directivas y administradores de juntas de propietarios / cooperativas**
+
+*(Pendiente de incorporar las fichas y evidencias de validación correspondientes al segmento de directivas y administradores).*
+
 ### **7.3.3. Evaluaciones según heurísticas.**
 
 ## **7.4. Video About-the-Product.**
@@ -5942,5 +5967,4 @@ Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfi
 | NestJS. (s. f.). *Documentation*. https://docs.nestjs.com/ | Monolito modular — Cap IV–V. |
 | Google Cloud. (s. f.). *Document AI*. https://cloud.google.com/document-ai | OCR DNI — Cap IV–V. |
 | Amazon Web Services. (s. f.). *Rekognition*. https://aws.amazon.com/rekognition/ | Liveness/comparación — Cap IV–V. |
-
 

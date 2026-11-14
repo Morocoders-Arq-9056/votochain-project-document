@@ -90,34 +90,55 @@
 | 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad  /OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
 | 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (dominio, REST, aplicación, infraestructura, componentes y código). |
 | 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots pendientes TF para mm:ss/edad/distrito/capturas. |
-| 1.0 | 06/10/2026 | Equipo Morocoders (merge PR #8 feat/paredes — precisar autor real) | Capítulo V y Capítulo VI para TP1 (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes/Mock-ups Landing) e implementación de Landing Page. |
+| 1.0 | 06/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V para TP1: diseño táctico de la solución y documentación de sus componentes de software. |
+| 1.0 | 06/10/2026 | Rodriguez Macedo, Sebastian | Capítulo VI para TP1: elaboración de las guías de estilo de la aplicación. |
+| 1.0 | 06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI para TP1: definición de la arquitectura de información y elaboración de wireframes y mock-ups de la landing page. |
+| 1.0 | 06/10/2026 | Paredes Santos, Fabrizio Alberto | Capítulo V y Capítulo VI para TP1: contribución al diseño táctico, elaboración de wireframes y mock-ups de la landing page e implementación de la Landing Page mediante el merge de la PR #8 (`feat/paredes`). |
+| 1.1 | 14/11/2026 | Paredes Santos, Fabrizio Alberto | TB2: elaboración de la estructura de wireframes y corrección transversal del informe; documentación de evidencias de implementación y pruebas de Sprint 1; desarrollo de pruebas de aceptación BDD para autenticación, verificación, recuperación de cuenta y comunidades, con escenarios, pasos de API y fixtures. |
 
 
 
 ## Project Report Collaboration Insights
 
-El informe se elaboró colaborativamente mediante GitFlow, utilizando ramas de trabajo por integrante (`feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno` y `feature/rodriguez`) que fueron integradas progresivamente en `develop` y posteriormente en `main`. Los cambios se organizaron mediante commits convencionales y pull requests, lo que permitió revisar, integrar y mantener la trazabilidad de los aportes de cada autor.
+### **TP1**
 
-La evidencia de GitHub Insights muestra la actividad colaborativa del repositorio. Durante el periodo analizado se registraron 5 autores, 24 commits en `main` y 24 commits considerando todas las ramas, además de 7 pull requests integradas También se documentan 302 archivos modificados, con 2,801 adiciones y 182 eliminaciones. Estos indicadores evidencian que el informe fue construido mediante iteraciones sucesivas de documentación, revisión y consolidación.
+Durante TP1, el informe se elaboró colaborativamente mediante ramas de trabajo por integrante que se integraron en `develop` y `main`, con commits y pull requests para revisar y consolidar los cambios. GitHub Insights registró cinco autores, 24 commits en `main`, siete pull requests integradas, 302 archivos modificados, 2,801 adiciones y 182 eliminaciones.
 
 <p align="center">
   <img src="./assets/MoroCodersCollaborationInsights1.png" alt="GitHub Insights - Pulse del repositorio" width="850"/>
 </p>
 
-**Figura. GitHub Insights – Pulse del repositorio.** La captura evidencia la actividad reciente del equipo, los pull requests integrados y los commits asociados a las ramas de trabajo, en coherencia con las versiones registradas en el informe.
+**Figura. GitHub Insights – Pulse del repositorio, TP1.** La captura evidencia la actividad del repositorio correspondiente al periodo de TP1.
 
 <p align="center">
   <img src="./assets/MoroCodersCollaborationInsights2.png" alt="GitHub Insights - Contributors del repositorio" width="850"/>
 </p>
 
-**Figura. GitHub Insights – Contributors.** La captura presenta la distribución temporal de contribuciones y commits por autor. Esta evidencia complementa el Registro de Versiones al mostrar la participación individual de los integrantes durante la elaboración y corrección del documento.
+**Figura. GitHub Insights – Contributors, TP1.** La captura presenta la distribución temporal de contribuciones por autor durante TP1.
+
+### **TB2**
+
+Durante TB2, el equipo continuó el informe y los productos mediante cambios versionados y revisiones integradas. En el repositorio del informe se actualizaron la gestión de configuración, el plan y backlog del Sprint 1, la evidencia de desarrollo y las entrevistas de validación. En el backend se incorporaron pruebas de aceptación BDD para autenticación, verificación de correo, recuperación de cuenta y gestión de comunidades, junto con fixtures y ajustes de configuración necesarios para su ejecución. En el frontend se registraron cambios de autenticación, identidad y votación. El repositorio de la landing consultado no presenta commits posteriores al periodo de TP1.
+
+**Figura TB2-1. GitHub Insights – Pulse del repositorio del informe.**
+
+<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Document-Pulse.png -->
+
+**Figura TB2-2. GitHub Insights – Contributors del repositorio del informe.**
+
+<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Document-Contributors.png -->
+
+**Figura TB2-3. GitHub Insights – actividad del backend.**
+
+<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Backend.png -->
+
+**Figura TB2-4. GitHub Insights – actividad del frontend.**
+
+<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Frontend.png -->
 
 | URL del repositorio del reporte |
 | :-----------------------------------: |
 | [https://github.com/Morocoders-Arq-9056/votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) |
-
-Evidencia complementaria (GitHub Insights Contributors/Pulse, commits por miembro y PR #5 `feature/bueno`) se anexa para TF, coherente con el Registro de Versiones de arriba.
-
 
 ## Contenido
 

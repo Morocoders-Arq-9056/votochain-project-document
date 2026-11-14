@@ -5312,7 +5312,7 @@ Las versiones de bibliotecas se toman de `package.json` y de `pnpm-lock.yaml` de
 | Entrega asíncrona | **Redis 7 y BullMQ** | Cola y worker para entrega de transacciones, con estado y reintentos controlados. [Redis](https://redis.io/docs/latest/) · [BullMQ](https://docs.bullmq.io/) |
 | Identidad y documentos | **AWS Rekognition**, **Azure AI Document Intelligence**, servicios cloud | Adaptadores de biometría y OCR presentes en backend. Su uso requiere recursos y permisos del entorno; no se presume disponibilidad por tener instalado el SDK. [AWS Rekognition](https://aws.amazon.com/rekognition/) · [Azure Document Intelligence](https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence) |
 | Blockchain | **Solidity 0.8.28**, **Hardhat**, **ethers 6** y **Polygon Amoy** | Compilar contratos, ejecutar red local y preparar integración con la red de pruebas. Hardhat está configurado, pero su subproyecto no declara todavía las dependencias necesarias para reproducir la compilación. [Solidity](https://docs.soliditylang.org/) · [Hardhat](https://hardhat.org/docs) · [ethers](https://docs.ethers.org/v6/) · [Polygon](https://docs.polygon.technology/) |
-| Software Testing | **Vitest**, **Cucumber**, **Testing Library**, **jsdom**, **Supertest** y **Testcontainers** | Pruebas unitarias y de componentes; pruebas HTTP y de persistencia del backend. El backend incorpora tres archivos `.feature`, sus Steps y `pnpm run test:bdd`; ejecutarlos contra la API requiere datos y servicios configurados. [Vitest](https://vitest.dev/) · [Cucumber](https://cucumber.io/docs/) · [Testing Library](https://testing-library.com/) · [Supertest](https://github.com/forwardemail/supertest) · [Testcontainers](https://node.testcontainers.org/) |
+| Software Testing | **Vitest**, **Cucumber**, **Testing Library**, **jsdom**, **Supertest** y **Testcontainers** | Pruebas unitarias y de componentes; pruebas HTTP y de persistencia del backend. Para el Sprint 1 se incorporan cuatro archivos `.feature` de Web Services, sus Steps y `pnpm run test:bdd`; ejecutarlos requiere datos y servicios configurados. [Vitest](https://vitest.dev/) · [Cucumber](https://cucumber.io/docs/) · [Testing Library](https://testing-library.com/) · [Supertest](https://github.com/forwardemail/supertest) · [Testcontainers](https://node.testcontainers.org/) |
 | Calidad y contratos | **ESLint**, **Oxlint**, **Prettier** y **Swagger/OpenAPI** | ESLint verifica el frontend y sus dependencias entre capas; Oxlint revisa backend; Prettier define su formato. Swagger documenta la API desde el código. [ESLint](https://eslint.org/) · [Oxlint](https://oxc.rs/docs/guide/usage/linter) · [Prettier](https://prettier.io/) · [OpenAPI en NestJS](https://docs.nestjs.com/openapi/introduction) |
 | Software Deployment | **Google Cloud**, plataforma objetivo del capítulo IV; **GitHub** para conservar revisiones y evidencias | Preparar ambientes y registrar versiones desplegadas. No se identificaron pipelines ni manifiestos que acrediten actualmente un despliegue automatizado en GCP. [Google Cloud](https://cloud.google.com/) |
 
@@ -5339,43 +5339,37 @@ GitHub es la plataforma de colaboración y Git es el sistema de control de versi
 | Aplicación web | [votochain-web-frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend) | `app/`, `components/`, `lib/`, pruebas `*.test.ts(x)`, configuración y lockfile. |
 | Web Services y contratos blockchain | [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | `src/`, `test/`, `docs/`, migraciones, configuración y `contracts/`. Las especificaciones BDD se encuentran en `test/features/*.feature`, con Steps en `test/steps/`. |
 
-**Estado de las pruebas de aceptación:** el backend contiene pruebas TypeScript `*.spec.ts` y `*.e2e-spec.ts`, además de `authentication.feature`, `community.feature` y `voting.feature`. Cucumber se invoca con `pnpm run test:bdd` y carga `test/steps/api.steps.mjs`. El reconocimiento de escenarios y Steps se verificó con `--dry-run`; aún no se dispone de resultados de ejecución funcional contra un ambiente configurado. La relación de escenarios con las US del sprint debe documentarse en 7.2.1.4.
+**Estado de las pruebas de aceptación del Sprint 1:** el backend contiene pruebas TypeScript `*.spec.ts` y `*.e2e-spec.ts`, además de `authentication.feature`, `verification.feature`, `account-recovery.feature` y `community.feature`, etiquetadas con las US-04 a US-08. US-01 a US-03 son historias de la Landing Page y requieren evidencia de pruebas del producto web, fuera de las features del API. Cucumber se invoca con `pnpm run test:bdd`, selecciona `@sprint-1` y carga los Steps de `test/steps/`. La ejecución funcional registrada finalizó con **20 escenarios y 80 pasos aprobados**; la captura se incluye en 7.1.3. La relación detallada de pruebas con las US del sprint y sus resultados debe documentarse en 7.2.1.4.
 
-#### **Workflow GitFlow y nomenclatura de ramas**
+#### **Flujo de trabajo y nomenclatura de ramas**
 
-El equipo utiliza `main` y `develop`, además de ramas personales `feat/rios`, `feat/paredes`, `feat/aliaga-v1`, `feature/bueno` y `feature/rodriguez`. Estas se conservan como evidencia histórica; para el nuevo trabajo cada feature tendrá su propia rama. El equipo no ha utilizado ramas `release/*` ni `hotfix/*`.
+El flujo confirmado por el equipo utiliza una rama de funcionalidad por integrante. Cada cambio se trabaja en su propia rama; una vez revisado y considerado listo por el equipo, se integra en `develop`. Cuando el incremento está preparado para desplegarse, se promueve de `develop` a `main`, rama utilizada para el despliegue. Los nombres de ramas observados en el historial local incluyen prefijos `feat/` y `feature/`, por lo que no se documenta un patrón único obligatorio para esas ramas.
 
 | Rama | Origen | Convención y ejemplo | Integración / propósito |
 |---|---|---|---|
-| `main` | Línea estable | Nombre permanente | Revisiones aprobadas para entrega; cada release se identifica mediante tag. |
-| `develop` | `main` | Nombre permanente | Integra incrementos revisados y sirve de base para nuevas features. |
-| Feature | `develop` | `feature/<story-id>-<short-description>`, por ejemplo `feature/us-05-email-verification` o `feature/ts-04-api-contracts` | Pull request hacia `develop`; una funcionalidad coherente por rama. |
+| `main` | `develop` | Nombre permanente | Recibe el incremento que el equipo prepara para despliegue. |
+| `develop` | `main` | Nombre permanente | Integra los cambios que el equipo valida desde sus ramas de funcionalidad. |
+| Funcionalidad | `develop` | Una rama propia por integrante; el historial local muestra prefijos `feat/` y `feature/`. | Mantiene aislado el cambio durante su desarrollo y revisión antes de integrarse en `develop`. |
 
-Los identificadores y descripciones de ramas se escriben en inglés, en minúsculas y separados por guiones. Antes de integrar se actualiza la rama con la base compartida y se resuelven conflictos sin perder aportes de otros integrantes. No se reescribe una rama compartida mediante force push como parte del flujo ordinario.
+El equipo confirma que no utiliza ramas `release/*` ni `hotfix/*`, ni etiquetas Git o releases para publicar versiones. También confirma que no utiliza reglas de protección de ramas. Las versiones `0.0.1` del backend y `0.1.0` del frontend proceden de sus manifiestos; no representan tags de Git.
 
-Cada pull request indicará objetivo, US/TS, cambios, comandos de verificación, resultados y pendientes; requerirá revisión de otro integrante. Se adopta como política la protección de `main` y `develop` frente a cambios directos, pero la configuración efectiva de esas reglas en GitHub deberá evidenciarse. No se ha verificado su activación desde los archivos locales.
-
-#### **Versionado de releases**
-
-Se adopta [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html): `MAJOR.MINOR.PATCH`. A partir de una API estable, `MAJOR` comunica incompatibilidades; `MINOR`, nuevas capacidades compatibles; y `PATCH`, correcciones compatibles. Las versiones `0.y.z` corresponden al desarrollo inicial, con contratos aún sujetos a cambios. Se utilizarán tags `v0.2.0`, candidatos `v0.2.0-rc.1` y releases de GitHub con notas de cambios y limitaciones.
-
-Cada repositorio se versiona de forma independiente. Una entrega integrada registrará una matriz con repositorio, tag, SHA y ambiente para identificar exactamente qué API, frontend, landing e informe se evaluaron juntos. Las versiones declaradas actualmente (`0.0.1` en backend y `0.1.0` en frontend) son valores de sus manifiestos, no evidencia de releases publicadas. Las migraciones y revisiones de contratos forman parte de la compatibilidad de cada entrega.
+Para identificar una entrega conjunta se registran los SHA concretos de los repositorios y el ambiente evaluado.
 
 #### **Convenciones de mensajes de commit**
 
-Se adopta [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) con la estructura `<type>[optional scope][!]: <description>`. El mensaje se redacta en inglés, con una descripción breve en imperativo; el cuerpo explica la motivación y el pie enlaza la US/TS o registra `BREAKING CHANGE:` cuando corresponda.
+El equipo confirma que utiliza [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) con la estructura `<type>[optional scope][!]: <description>`. Los mensajes registrados incluyen tipos como `feat`, `fix`, `docs` y `test`; los ejemplos siguientes ilustran la convención.
 
 | Tipo | Uso | Ejemplo |
 |---|---|---|
 | `feat` | Nueva funcionalidad | `feat(verification): verify email with a single-use code` |
 | `fix` | Corrección de comportamiento | `fix(voting): exclude unconfirmed votes from tally` |
-| `docs` | Documentación y evidencias | `docs(configuration): define development and release conventions` |
+| `docs` | Documentación y evidencias | `docs(configuration): describe development conventions` |
 | `test` | Pruebas | `test(membership): cover suspended member eligibility` |
 | `refactor` | Reestructuración sin cambio funcional | `refactor(ui): extract receipt timeline projection` |
 | `style` | Formato sin alterar comportamiento | `style(iam): apply formatter rules` |
 | `build`, `ci`, `chore` | Dependencias, automatización y mantenimiento | `build(frontend): update dependency lockfile` |
 
-Un cambio incompatible se explicita, por ejemplo `feat(api)!: require password during account registration`, con su impacto y estrategia de actualización. Esta convención se aplica a los próximos commits; no implica renombrar el historial existente ni demostrar un pipeline automático de releases.
+Un cambio incompatible puede explicitarse con `!` y documentar el impacto, por ejemplo `feat(api)!: require password during account registration`. El uso de Conventional Commits no implica que el equipo etiquete releases ni que exista un pipeline automático de publicación.
 
 ### **7.1.3. Source Code Style Guide & Conventions.**
 
@@ -5394,8 +5388,14 @@ Se utilizan UTF-8, sangría de dos espacios en TypeScript/JavaScript/JSON, nombr
 | **CSS3 / Tailwind CSS** | Clases CSS en `kebab-case`, custom properties semánticas y estilos responsive. En frontend, los valores visuales se definen en los tokens de `app/globals.css` y se reutilizan desde los componentes. | VDS de 6.1 y [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS). Evitar colores y valores visuales arbitrarios fuera de los tokens. |
 | **Solidity** | Contratos, structs, eventos y errores en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`. Declarar licencia SPDX, pragma, visibilidad y NatSpec en interfaces públicas. | [Solidity Style Guide](https://docs.soliditylang.org/en/latest/style-guide.html). Compilador configurado: `0.8.28`. |
 | **SQL / TypeORM** | Tablas y columnas en `snake_case` mediante `SnakeNamingStrategy`; clases de entidad en `PascalCase`; cambios de esquema mediante migraciones versionadas con identificador temporal y descripción. No modificar una migración ya aplicada en un ambiente compartido. | Configuración TypeORM y migraciones de `src/migrations/`. |
-| **Gherkin** | Archivos `kebab-case.feature`, keywords y escenarios en inglés; una capacidad por `Feature` y un comportamiento por `Scenario`. Separar precondiciones (`Given`), acción (`When`) y resultado observable (`Then`). Usar `Scenario Outline` sólo para variantes con estructura común. | [Cucumber: Writing better Gherkin](https://cucumber.io/docs/bdd/better-gherkin/). El backend contiene tres features y Steps; la evidencia de ejecución funcional está pendiente. |
+| **Gherkin** | Archivos `kebab-case.feature`, keywords y escenarios en inglés; una capacidad por `Feature` y un comportamiento por `Scenario`. Separar precondiciones (`Given`), acción (`When`) y resultado observable (`Then`). Usar `Scenario Outline` sólo para variantes con estructura común. | [Cucumber: Writing better Gherkin](https://cucumber.io/docs/bdd/better-gherkin/). El Sprint 1 dispone de cuatro features de Web Services y sus Steps; la ejecución funcional aprobó sus 20 escenarios y 80 pasos, como muestra la Figura 7.1.3-1. |
 | **Markdown / JSON / YAML** | Encabezados consistentes, enlaces relativos comprobables, imágenes con texto alternativo y recursos versionados. JSON válido sin comentarios; YAML con espacios, sin tabulaciones. | Convenciones del informe y configuración de cada repositorio. No incluir secretos ni evidencias con datos personales sin anonimizar. |
+
+La ejecución de `corepack pnpm test:bdd` seleccionó las pruebas etiquetadas para Sprint 1 y finalizó sin fallos: 20 escenarios y 80 pasos aprobados.
+
+![Ejecución satisfactoria de las pruebas Gherkin del Sprint 1: 20 escenarios y 80 pasos aprobados](./assets/PruebaTest.png)
+
+**Figura 7.1.3-1.** Resultado de Cucumber para la suite de aceptación del Sprint 1 en el backend.
 
 En frontend, `lib/domain` contiene reglas y tipos puros; `lib/application` depende de puertos del dominio; `lib/infrastructure` implementa adaptadores; `components` presenta datos y emite eventos; `app` realiza la composición. El copy de negocio se centraliza en `lib/ui/copy.ts`; Zod valida en dominio. ESLint restringe importaciones entre capas. Las sesiones se manejan mediante cookies HTTP-only, sin trasladar secretos a `localStorage`.
 
@@ -5415,14 +5415,50 @@ Feature: Tally confirmed votes
 
 #### **Verificación de convenciones**
 
-| Repositorio | Comandos existentes que deben registrarse en la evidencia | Alcance |
+| Repositorio | Comandos ejecutados y resultados | Alcance |
 |---|---|---|
-| Backend | `pnpm lint`, `pnpm test`, `pnpm test:e2e`, `pnpm build` | Análisis estático, pruebas y compilación. Las E2E requieren los servicios y condiciones indicados por sus fixtures. `pnpm format` modifica archivos y se ejecuta antes de revisar el diff. |
-| Frontend | `pnpm lint`, `pnpm test`, `pnpm build` | Reglas de Next.js y capas, pruebas unitarias/de componentes y compilación; son los controles indicados por su `AGENTS.md`. |
-| Landing | `node --check app.js` y revisión manual en navegador | Sintaxis JavaScript y revisión responsive, i18n, teclado, contraste, enlaces y formulario. No existe un script de pruebas automatizadas del sitio. |
+| Backend | `corepack pnpm lint`, `corepack pnpm test`, ejecución de Vitest E2E sobre una base aislada con migraciones, `corepack pnpm build` | Análisis estático, pruebas unitarias e integración y compilación. La suite unitaria terminó con 102 pruebas aprobadas y 1 omitida; E2E, con 31 aprobadas. Lint finalizó con una advertencia de importación sin uso. La base E2E usada fue independiente de la base de desarrollo. |
+| Frontend | `corepack pnpm lint`, `corepack pnpm test`, `corepack pnpm build` | Las tres verificaciones finalizaron correctamente: ESLint sin errores; Vitest, 36 archivos y 147 pruebas aprobados; y compilación de producción de Next.js completada. Para esta compilación, Node usó el almacén de certificados de Windows porque `next/font` descarga fuentes de Google durante el build. |
+| Landing | `node --check app.js` y revisión manual en navegador | `node --check app.js` finalizó correctamente. La revisión responsive, i18n, teclado, contraste, enlaces y formulario es manual; no existe un script de pruebas automatizadas del sitio. |
 | Informe | `git diff --check` y revisión de Markdown, tablas, referencias y recursos locales | Consistencia documental y ausencia de errores de whitespace; no sustituye la revisión de contenido. |
 
-Estos comandos definen controles reproducibles, no resultados ya obtenidos. No se encontró `.orchestrator/config.json` en los repositorios revisados; las comprobaciones anteriores se derivan de los scripts y reglas efectivamente versionados.
+Las Figuras 7.1.3-2 a 7.1.3-8 presentan las capturas de lint, pruebas unitarias y compilación de los tres repositorios de producto. La evidencia de aceptación Gherkin se conserva por separado en la Figura 7.1.3-1. No se encontró `.orchestrator/config.json` en los repositorios revisados; los controles se identifican a partir de los scripts y reglas versionados.
+
+#### **Evidencia de ejecución por repositorio**
+
+**Backend.**
+
+<p align="center"><img src="./assets/EjecucionBackend1.png" alt="Lint del backend completado sin errores y con una advertencia de importación no utilizada" width="900"/></p>
+
+**Figura 7.1.3-2.** Ejecución de lint del backend: cero errores y una advertencia por `EVIDENCE_STORE` sin uso.
+
+<p align="center"><img src="./assets/EjecucionBackend2.png" alt="Pruebas unitarias del backend: 17 archivos aprobados, 102 pruebas aprobadas y una omitida" width="900"/></p>
+
+**Figura 7.1.3-3.** Resultado de las pruebas unitarias del backend: 17 archivos aprobados, 102 pruebas aprobadas y una omitida.
+
+<p align="center"><img src="./assets/EjecucionBackend3.png" alt="Compilación del backend completada correctamente" width="900"/></p>
+
+**Figura 7.1.3-4.** Compilación del backend completada correctamente.
+
+**Frontend.**
+
+<p align="center"><img src="./assets/EjecucionFrontend1.png" alt="Lint del frontend aprobado e inicio de Vitest" width="900"/></p>
+
+**Figura 7.1.3-5.** Lint del frontend aprobado; la captura muestra también el inicio de la ejecución de Vitest.
+
+<p align="center"><img src="./assets/EjecucionFrontend2.png" alt="Pruebas del frontend: 36 archivos y 147 pruebas aprobadas" width="900"/></p>
+
+**Figura 7.1.3-6.** Resultado de Vitest en frontend: 36 archivos y 147 pruebas aprobadas.
+
+<p align="center"><img src="./assets/EjecucionFrontend3.png" alt="Build de producción del frontend completado correctamente" width="900"/></p>
+
+**Figura 7.1.3-7.** Build de producción del frontend completado correctamente.
+
+**Landing Page.**
+
+<p align="center"><img src="./assets/EjecuciónLanding.png" alt="Verificación de sintaxis JavaScript de la Landing Page aprobada" width="900"/></p>
+
+**Figura 7.1.3-8.** Verificación de sintaxis de `app.js` completada correctamente con `node --check`.
 
 ### **7.1.4. Software Deployment Configuration.**
 
@@ -5466,15 +5502,15 @@ El frontend requiere ejecución de Next.js por sus Server Actions y cookies de s
 
 El repositorio conserva plantillas y nombres de parámetros; los valores privados se gestionan fuera de Git. Las credenciales de servicios locales deben ser exclusivas para desarrollo y no reutilizarse en staging o producción. La publicación de evidencias ocultará correos, imágenes biométricas, claves y datos personales.
 
-#### **Procedimiento de preparación y publicación de una versión**
+#### **Procedimiento de preparación y publicación**
 
-1. Identificar los SHA de los repositorios y la release candidata. Revisar diferencias de contratos entre frontend y backend; actualmente el registro y login locales del backend requieren contraseña, mientras que sus adaptadores de frontend aún no la envían.
+1. Identificar los SHA de los repositorios involucrados. Revisar diferencias de contratos entre frontend y backend; actualmente el registro y login locales del backend requieren contraseña, mientras que sus adaptadores de frontend aún no la envían.
 2. Instalar con los lockfiles, ejecutar los controles de 7.1.3 y registrar sus resultados. Corregir incompatibilidades antes de declarar un incremento integrado.
 3. Preparar base y cola del ambiente, respaldo y migraciones. Ejecutar `pnpm migration:run` de forma controlada y verificar el esquema esperado. Compilar backend con `pnpm build`; el script de arranque disponible es `pnpm start:prod`, cuya ruta al artefacto deberá comprobarse contra la salida generada.
 4. Construir frontend con `pnpm build` usando la URL pública correcta de la API y ejecutarlo con `pnpm start`. La landing se publica en GitHub Pages desde `main` y `/(root)`; conservar rutas a assets y términos.
 5. Para una prueba blockchain, completar primero las dependencias y lockfile del subproyecto `contracts/`, compilar con su script `compile` y ejecutar `deploy:amoy` sólo en el ambiente autorizado. Registrar dirección del contrato, red y transacción; configurar el relay con esa misma revisión del contrato. La presencia de scripts no acredita que este paso se haya ejecutado.
 6. Verificar registro, OTP, sesión, identidad, elegibilidad, voto, confirmación y escrutinio con datos de prueba. El correo sigue usando un adaptador `LogOnly`, las sesiones de backend un ejecutor `Noop` y la prueba de identidad externa un servicio `Fake`; estos pendientes deben resolverse o delimitarse expresamente en la demostración.
-7. Incorporar en 7.2 las URLs verificadas, fecha, versiones, resultados y limitaciones; etiquetar la versión aprobada y publicar sus notas mediante revisión del equipo. Conservar la revisión anterior para reversión de aplicación. Una reversión de base requiere evaluar migraciones y respaldo; `migration:revert` no constituye por sí solo un rollback seguro.
+7. Incorporar en 7.2 las URLs verificadas, fecha, SHA de cada repositorio, resultados y limitaciones. Conservar la revisión anterior para una eventual reversión de la aplicación. Una reversión de base requiere evaluar migraciones y respaldo; `migration:revert` no constituye por sí solo un rollback seguro.
 
 #### **Secuencia ejecutable desde los repositorios**
 
@@ -5515,13 +5551,13 @@ Definir `NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1` y `USE_MOCK_API=false
 
 **Contrato — carpeta `votochain-api-backend/contracts`:** completar las dependencias Hardhat y su lockfile como cambio de software independiente; después ejecutar `pnpm compile` y `pnpm deploy:amoy` con la cuenta de prueba autorizada. Registrar la dirección obtenida en `AMOY_LEDGER_ADDRESS`, así como `AMOY_RPC_URL`, `AMOY_CHAIN_ID=80002`, `AMOY_PAYER_ADDRESS` y la clave privada del pagador mediante configuración privada. La cadena del RPC, el contrato y el dominio de firma deben coincidir. Un hash de ejemplo no sustituye una transacción confirmada observable en la red.
 
-**Informe — carpeta `votochain-project-document`:** conservar el Markdown y las fuentes del diagrama en GitHub; comprobar que los enlaces relativos y las imágenes se muestran en la rama revisada. La publicación de una versión del informe se identifica mediante su SHA y, cuando el equipo apruebe una release, mediante su tag. No requiere desplegar un servidor de aplicación.
+**Informe — carpeta `votochain-project-document`:** conservar el Markdown y las fuentes del diagrama en GitHub; comprobar que los enlaces relativos y las imágenes se muestran en la rama revisada. La revisión del informe se identifica mediante su SHA. No requiere desplegar un servidor de aplicación.
 
 #### **Paso de artefactos locales a infraestructura y evidencia de aceptación**
 
 Para materializar GCP deben completarse: elección de servicio de cómputo compatible con Next.js y el worker persistente, elección de alojamiento estático y Redis, Dockerfiles y contexto de build, creación de imágenes en Artifact Registry, aprovisionamiento de Cloud SQL, permisos y entrega de secretos, rutas de Load Balancing, certificado HTTPS y configuración de CDN. No se almacenarán en caché respuestas de sesión, datos personales ni resultados individualizados. Estos son requisitos de ejecución del diseño, no recursos creados por esta documentación.
 
-El cierre del despliegue exige registrar por producto: SHA/tag, URL pública o dirección del contrato, ambiente, fecha, responsable y resultado de smoke tests. Para el flujo integrado se comprobarán acceso, OTP con entrega real, identidad, membresía, autorización, voto, confirmación y escrutinio. Se conservarán logs anonimizados y evidencia de la transacción de Amoy. Para el informe y la landing se comprobarán enlaces y recursos. Las URLs, capturas y resultados se incorporarán en 7.2.1.5–7.2.1.7 cuando existan; no se completan con valores supuestos.
+El cierre del despliegue exige registrar por producto: SHA, URL pública o dirección del contrato, ambiente, fecha, responsable y resultado de smoke tests. Para el flujo integrado se comprobarán acceso, OTP con entrega real, identidad, membresía, autorización, voto, confirmación y escrutinio. Se conservarán logs anonimizados y evidencia de la transacción de Amoy. Para el informe y la landing se comprobarán enlaces y recursos. Las URLs, capturas y resultados se incorporarán en 7.2.1.5–7.2.1.7 cuando existan; no se completan con valores supuestos.
 
 Este procedimiento establece los pasos y condiciones de publicación de cada producto. El estado actual permite preparar artefactos y configurar integraciones, pero aún requiere resolver los bloqueos indicados y aportar evidencia antes de declarar satisfactorio el despliegue completo.
 

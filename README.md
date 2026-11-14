@@ -5244,13 +5244,184 @@ El administrador de cumplimiento necesita revisar las solicitudes de borrado y c
 
 ## **7.1. Software Configuration Management.**
 
+El Software Configuration Management (SCM) de VotoChain se organiza como un conjunto de prácticas para identificar, versionar, revisar y reproducir los artefactos que intervienen en el ciclo de desarrollo. Su alcance comprende el informe, el backend modular NestJS, el subproyecto de contratos Solidity, las migraciones de persistencia, las pruebas, las configuraciones de herramientas y los archivos de entorno de ejemplo. La revisión de la rúbrica de logro exige que estas prácticas permitan el trabajo colaborativo, el mantenimiento y la evolución de la solución, y que sean coherentes con las restricciones de lenguajes, frameworks, herramientas, nomenclatura y estilo de codificación del proyecto.
+
+La configuración descrita a continuación distingue entre evidencia implementada, configuración local reproducible y decisiones de despliegue documentadas. Esta distinción es necesaria porque la arquitectura objetivo registra un despliegue en Google Cloud Platform, mientras que el repositorio revisado contiene principalmente el código del backend, su configuración de desarrollo y el contrato blockchain; no se identificaron en el backend archivos de infraestructura como código, manifiestos de Kubernetes, `Dockerfile` o pipelines CI/CD que permitan afirmar que dicho despliegue está automatizado.
+
+| Elemento de configuración | Evidencia verificable | Estado en la revisión |
+|---|---|---|
+| Código de aplicación | `backend/votochain-api-backend/src/`, organizado en módulos por bounded context y un módulo compartido | Implementado |
+| Contrato blockchain | `backend/votochain-api-backend/contracts/`, configuración Hardhat y script de despliegue | Implementado como subproyecto; el despliegue depende de credenciales y red configuradas fuera del repositorio |
+| Dependencias | `package.json`, `pnpm-lock.yaml` y `contracts/package.json` | Versionadas |
+| Persistencia local | `docker-compose.yml` con PostgreSQL y Redis, además de migraciones TypeORM en `src/migrations/` | Configuración local disponible |
+| Calidad y pruebas | Scripts `lint`, `format`, `test`, `test:cov` y `test:e2e`; configuraciones de Oxlint y Vitest | Implementado a nivel de herramientas; la ejecución de resultados no se infiere del código |
+| Despliegue cloud | Decisión arquitectónica registrada en la sección 4.3.4 y variables de configuración en `.env.example` | Diseñado/documentado; automatización no evidenciada |
+
 ### **7.1.1. Software Development Environment Configuration.**
+
+El entorno de desarrollo se basa en Node.js con TypeScript y NestJS. El archivo `package.json` identifica a `pnpm` como gestor operativo mediante los scripts del proyecto y fija las dependencias directas del backend, entre ellas NestJS, TypeORM, PostgreSQL (`pg`), Redis (`ioredis`), BullMQ, `ethers`, AWS SDK y Azure Identity/Document Intelligence. La versión exacta de resolución queda registrada en `pnpm-lock.yaml`; por ello, la instalación debe realizarse respetando el lockfile y no mediante una actualización libre de dependencias.
+
+La siguiente tabla explicita los productos de software identificables en el alcance revisado, su propósito y la referencia para acceder a ellos. Cuando el repositorio no contiene una ruta de descarga o un proyecto correspondiente, se declara como pendiente en lugar de inferirlo.
+
+| Producto o herramienta | Propósito dentro del ciclo de vida | Referencia o ruta verificable | Artefactos/actividades |
+|---|---|---|---|
+| GitHub | Hospedaje, revisión y control de versiones colaborativo | [Organización del proyecto](https://github.com/Morocoders-Arq-9056); [repositorio backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | Informe, backend, commits, ramas y pull requests |
+| Node.js + pnpm | Ejecución del backend y gestión reproducible de dependencias | `backend/votochain-api-backend/package.json` y `pnpm-lock.yaml` | Desarrollo, compilación, pruebas y scripts del backend |
+| TypeScript + NestJS | Implementación del RESTful Web Service y monolito modular | `backend/votochain-api-backend/src/` | Código de aplicación |
+| Visual Studio Code | IDE oficial para edición, navegación y depuración del código | [Visual Studio Code 1.145.3](https://code.visualstudio.com/updates/v1_145) | Desarrollo del backend, frontend y Landing Page; versión estable publicada el 4 de noviembre de 2026 |
+| Docker Compose | Ejecución local de PostgreSQL y Redis | `backend/votochain-api-backend/docker-compose.yml` | Desarrollo e integración local |
+| Prettier + Oxlint | Formateo y análisis estático | `.prettierrc`, `oxlint.json` y scripts de `package.json` | Style guide y control de calidad |
+| Vitest + Supertest/Testcontainers | Pruebas unitarias y end-to-end | `vitest.config.ts`, `vitest.config.e2e.ts` y scripts de `package.json` | Testing del backend |
+| Swagger/OpenAPI | Documentación del Web Service | `src/shared/infrastructure/documentation/openapi/` | Documentación de endpoints |
+| Next.js + React | Implementación del Web Frontend | [Repositorio frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend); `frontend/votochain-web-frontend/` | Aplicación web, componentes, clientes API y pruebas |
+| ESLint + configuración Next.js | Linting y verificación de límites entre capas del frontend | `frontend/votochain-web-frontend/eslint.config.mjs` | Calidad y arquitectura del frontend |
+| Figma | Diseño UX/UI | [Archivo Figma de VotoChain](https://www.figma.com/design/LsF4ObetPmO1nxwnypwJjd/Untitled--Copy-?node-id=0-1&t=SqCFZGTWia1UKp4p-1); prompts de apoyo en `backend/docs/figma-prompts-votachain.md` | Prototipos y artefactos UX |
+| Landing Page estática | Publicación de la página pública | [Repositorio landing](https://github.com/Morocoders-Arq-9056/votochain-web-landing); `landingpage/votochain-web-landing/` | `index.html`, `styles.css`, `app.js` y `terms.html` |
+| Trello | Seguimiento de backlog, tareas y coordinación de sprints | [Trello](https://trello.com/); se creará un tablero independiente cuando inicie cada sprint | Product Backlog, Sprint Planning, Sprint Backlog, seguimiento de tareas y retrospectiva |
+
+La tabla no afirma que todas las herramientas hayan sido utilizadas por todos los integrantes: registra la evidencia disponible y hace visibles los vacíos de configuración exigibles por el enunciado.
+
+Las versiones declaradas o configuradas en el backend son las siguientes:
+
+| Componente | Versión o configuración verificable | Fuente |
+|---|---|---|
+| Backend VotoChain API | `0.0.1` | `package.json` |
+| NestJS | `12.0.1` para `@nestjs/common`, `@nestjs/core` y `@nestjs/platform-express` | `package.json` y `pnpm-lock.yaml` |
+| TypeScript | `6.0.2` | `package.json` |
+| TypeORM | `0.3.31` | `package.json` |
+| PostgreSQL | `16-alpine` para el entorno local | `docker-compose.yml` |
+| Redis | `7-alpine` para el entorno local | `docker-compose.yml` |
+| Prettier | `3.4.2` | `package.json` |
+| Oxlint | `1.58.0` | `package.json` |
+| Vitest | `4.1.2` | `package.json` |
+| BullMQ | `6.5.3` | `package.json` |
+| Ethers | `6.17.0` | `package.json` |
+| Solidity | `0.8.28` con optimizador habilitado y 200 ejecuciones | `contracts/hardhat.config.ts` |
+| Lockfile pnpm | `9.0` | `pnpm-lock.yaml` |
+| Frontend VotoChain | `0.1.0` | `frontend/votochain-web-frontend/package.json` |
+| Next.js | `16.4.2` | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
+| React / React DOM | `19.3.0` | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
+| TypeScript frontend | `5.9.3` resuelto en el lockfile | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
+| Vitest frontend | `5.0.5` resuelto en el lockfile | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
+| ESLint frontend | `9.39.5` resuelto en el lockfile | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
+| pnpm frontend | `11.20.0` | Campo `packageManager` de `frontend/votochain-web-frontend/package.json` |
+| Node.js backend | `22.23.4` | `.nvmrc` y `engines` de `backend/votochain-api-backend/package.json` |
+| pnpm backend | `11.20.0` | Campo `packageManager` y `engines` de `backend/votochain-api-backend/package.json` |
+
+Las versiones con prefijo `^` en `package.json` representan rangos compatibles; el lockfile es la referencia de resolución concreta para una instalación reproducible. Node.js queda fijado en `22.23.4` y pnpm en `11.20.0` para el backend mediante `.nvmrc`, `packageManager` y `engines`.
+
+La configuración de compilación se encuentra en `tsconfig.json`, `tsconfig.build.json` y `nest-cli.json`. El código se compila como módulos Node `nodenext`, con destino ES2023, declaraciones y source maps, modo `strict` y salida en `dist`. El `rootDir` de compilación es `src` y se excluyen las pruebas unitarias del artefacto de producción. La aplicación se inicia desde `src/main.ts`, donde se establece el prefijo configurable `api/v1`, CORS, el filtro global de excepciones, `ValidationPipe` con `whitelist` y `transform`, Swagger y el puerto parametrizable.
+
+El entorno local de servicios auxiliares se declara en `docker-compose.yml`. Incluye contenedores de PostgreSQL 16 Alpine y Redis 7 Alpine, con volúmenes nombrados para conservar sus datos durante el ciclo local. Este archivo sirve para levantar dependencias de desarrollo; no constituye por sí solo una definición del despliegue productivo. Los valores sensibles no deben copiarse desde el compose ni desde un entorno real al informe. El archivo `.env.example` funciona como contrato de configuración: enumera variables para la aplicación, PostgreSQL, Swagger, OTP, OCR, reconocimiento facial, wallet, Polygon Amoy, Redis, colas, reintentos y procesos de barrido, pero no debe contener secretos efectivos.
+
+La validación de configuración se implementa mediante Joi en `src/shared/infrastructure/persistence/configuration/validation.schema.ts`. Entre las reglas verificables se encuentran la obligatoriedad de los parámetros de base de datos y `JWT_SECRET`, la longitud mínima del secreto JWT, los valores permitidos para los drivers de OCR, reconocimiento facial, wallet, cola y red del ledger, así como rangos para el umbral de comparación facial. En consecuencia, la configuración inválida debe fallar al inicio y no quedar como un error silencioso de ejecución.
+
+El ciclo local recomendado se expresa en los scripts existentes: `pnpm install`, levantamiento de PostgreSQL y Redis mediante Docker Compose, `pnpm run build` para compilación, `pnpm run lint` y `pnpm run format` para calidad, y `pnpm run test`, `pnpm run test:cov` o `pnpm run test:e2e` según el tipo de validación. Las migraciones TypeORM se invocan mediante los scripts `migration:generate`, `migration:run` y `migration:revert`. La configuración fija `DB_SYNCHRONIZE=false` como valor de ejemplo, coherente con el uso de migraciones trazables y con la restricción arquitectónica de no depender de una sincronización implícita del esquema.
 
 ### **7.1.2. Source Code Management.**
 
+El repositorio del backend utiliza Git como sistema de control de versiones. La estrategia documentada para el informe es GitFlow: las contribuciones se realizan en ramas de funcionalidad por integrante, se integran en `develop` mediante revisión y posteriormente se consolida la versión estable en `main`. En el registro de colaboración del informe se identifican las ramas `feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno` y `feature/rodriguez`, además de pull requests y commits asociados. Esta evidencia respalda el criterio de la rúbrica referido a un workflow colaborativo; no obstante, el cumplimiento operativo de una futura entrega debe comprobarse en el historial del repositorio correspondiente.
+
+Los repositorios de los productos identificados son los siguientes:
+
+| Producto | Repositorio | Evidencia local de SCM |
+|---|---|---|
+| Informe | [votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) | Registro de versiones, ramas y colaboración documentadas en el informe |
+| Backend | [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | Rama `develop`, historial de commits, pruebas y especificaciones Gherkin en `backend/votochain-api-backend/test/features/` |
+| Frontend | [votochain-web-frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend) | Rama `develop`, ramas remotas `feat/*` e historial de commits |
+| Landing Page | [votochain-web-landing](https://github.com/Morocoders-Arq-9056/votochain-web-landing) | Rama `main` e historial de commits |
+| Smart contract | [votochain-blockchain-contract](https://github.com/Morocoders-Arq-9056/votochain-blockchain-contract) | Remoto configurado, pero el clon local no contiene archivos fuente ni commits |
+
+En el alcance del backend, el proyecto, sus archivos de pruebas y las especificaciones Gherkin se almacenan en el mismo repositorio. Las features `authentication.feature`, `community.feature` y `voting.feature` cubren escenarios de registro, autenticación, gestión de comunidades y voto idempotente. El backend incorpora el runner Cucumber mediante el script `pnpm run test:bdd` y los step definitions ubicados en `test/steps/api.steps.mjs`. La ejecución utiliza `BDD_BASE_URL` para seleccionar la instancia del API y requiere que los datos de prueba y servicios externos estén disponibles; por ello, la validación está automatizada, pero los resultados deben generarse contra un entorno configurado y no se presentan aquí como resultados ya ejecutados.
+
+Los usuarios GitHub identificados para la colaboración del equipo son:
+
+| Integrante | Usuario GitHub |
+|---|---|
+| Aliaga Aguirre, Ethan Matias | [MatFragg](https://github.com/MatFragg) |
+| Rodriguez Macedo, Sebastian | [Shiftinnnnn](https://github.com/orgs/Morocoders-Arq-9056/people/Shiftinnnnn) |
+| Bueno Perales, Mathias Eduardo | [MathiasBueno](https://github.com/orgs/Morocoders-Arq-9056/people/MathiasBueno) |
+| Rios Pacheco, Héctor Javier | [Khafna09](https://github.com/Khafna09) |
+| Paredes Santos, Fabrizio Alberto | [psfa29](https://github.com/psfa29) |
+
+El historial observable del backend conserva una convención de commits basada en Conventional Commits. Se verifican tipos como `feat`, `fix`, `refactor`, `test`, `docs` y `chore`, seguidos de un alcance entre paréntesis y una descripción breve, por ejemplo: `feat(relay): polygon ledger gateway with bullmq delivery and contracts`. Esta práctica aporta trazabilidad entre una modificación y su intención, facilita la revisión por pares y permite distinguir cambios funcionales, correcciones, pruebas, documentación y mantenimiento.
+
+En el trabajo realizado, `main` representa la línea estable y `develop` integra los cambios. Para las funcionalidades se han utilizado ramas con los prefijos `feat/*` y `feature/*`, según el historial documentado. El equipo no ha utilizado ramas `release/*` ni `hotfix/*`; por tanto, estos prefijos no forman parte del flujo aplicado ni constituyen evidencia pendiente de esta entrega.
+
+La unidad de cambio debe mantenerse acotada al bounded context, capa o configuración que se modifica. Antes de solicitar la integración, el autor debe actualizar su rama desde `develop`, ejecutar las verificaciones disponibles y documentar cualquier decisión que afecte contratos, migraciones o variables de entorno. La integración no debe incorporar secretos, archivos `.env` reales, `node_modules`, `dist`, coberturas, logs ni datos runtime; estas exclusiones están declaradas en `.gitignore`. Las migraciones se tratan como artefactos versionados y ordenados: una modificación persistente debe acompañarse de la migración correspondiente y de la actualización de los componentes que la consumen.
+
+La política de SCM queda resumida en la siguiente secuencia:
+
+```text
+feature/<alcance> -> revisión y verificaciones -> develop -> validación de integración -> main
+```
+
+La existencia del workflow y del historial no implica que todas las funcionalidades estén desplegadas. Por ello, la evidencia de un commit o una pull request sustenta control y colaboración, pero no sustituye la evidencia funcional de una prueba, una imagen publicada o un despliegue exitoso.
+
 ### **7.1.3. Source Code Style Guide & Conventions.**
 
+Las convenciones del backend se derivan de la configuración efectiva del repositorio y de la estructura por capas utilizada en los bounded contexts. El lenguaje de implementación es TypeScript; las clases, interfaces, tipos, comandos, consultas, eventos, agregados, servicios, repositorios, controladores y módulos emplean nomenclatura en inglés, mientras que la documentación académica mantiene el español. Los nombres de archivos siguen `kebab-case` y los sufijos semánticos distinguen, entre otros, `*.module.ts`, `*.controller.ts`, `*.service.ts`, `*.aggregate.ts`, `*.value-object.ts`, `*.orm-entity.ts`, `*.repository.ts`, `*.command.ts`, `*.query.ts` y `*.event.ts`.
+
+Las referencias de estilo adoptadas para el código deben declararse de forma explícita: Google TypeScript Style Guide para TypeScript, las convenciones oficiales de Gherkin/Cucumber para archivos `.feature` y Conventional Commits para mensajes de Git. En el repositorio se evidencia TypeScript, Conventional Commits, especificaciones Gherkin en `test/features/` y un runner Cucumber con step definitions en `test/steps/`. La ejecución se realiza mediante `pnpm run test:bdd`; su resultado depende de la disponibilidad de la instancia del API indicada por `BDD_BASE_URL` y de los datos requeridos por cada escenario.
+
+La separación arquitectónica también funciona como convención de código: `domain/` contiene reglas y modelos del dominio; `application/` coordina casos de uso, comandos, consultas, eventos y puertos; `infrastructure/` implementa persistencia, proveedores, colas y gateways; e `interfaces/` expone REST y filtros. Las guías de implementación de los bounded contexts establecen que el dominio no importa `@nestjs/*`, TypeORM ni `class-validator`, evitando que las reglas centrales dependan del framework o de un adaptador concreto. La composición de NestJS y TypeORM se concentra en módulos e infraestructura, mientras que los proveedores externos se seleccionan mediante puertos y adaptadores configurables.
+
+En el frontend, `AGENTS.md` y `eslint.config.mjs` documentan una convención adicional: identificadores, props, tipos, archivos y funciones en inglés; copy visible en español peruano centralizado en `lib/ui/copy.ts`; dependencias dirigidas hacia el dominio; componentes presentacionales sin acceso directo a infraestructura; y reglas `no-restricted-imports` para verificar los límites entre `app`, `components`, `lib/ui`, `lib/application`, `lib/infrastructure` y `lib/domain`. Asimismo, se adopta Atomic Design para atoms, molecules, organisms y templates, y se prohíben valores hexadecimales fuera de los tokens visuales definidos en `app/globals.css`.
+
+La configuración de Prettier establece comillas simples y `trailingComma: 'all'`; el script `format` aplica esta herramienta a los archivos TypeScript de `src` y `test`. Oxlint se ejecuta mediante el script `lint` sobre `src` y `test`; su configuración mantiene explícitamente desactivada la regla `no-explicit-any` y reporta como advertencia `no-floating-promises`. Estas excepciones son parte de la configuración vigente y no deben reinterpretarse como cumplimiento absoluto de todas las reglas posibles. La compilación TypeScript se realiza con `strict: true`, aunque `strictPropertyInitialization` está desactivado en el `tsconfig`, por lo que ambas decisiones deben considerarse al revisar cambios.
+
+En las APIs se conservan los principios RESTful documentados en los capítulos tácticos: recursos con URLs jerárquicas, verbos HTTP según la operación y DTOs validados en la frontera. `main.ts` aplica `ValidationPipe` con `whitelist` y `transform`, y `app.module.ts` centraliza la carga de configuración, TypeORM, el emisor de eventos y los módulos de los once bounded contexts. Las entidades de persistencia usan una estrategia de nombres `snake_case`, mientras que el código TypeScript utiliza identificadores en `camelCase` y las clases en `PascalCase`.
+
+Como control de consistencia, una contribución debe conservar la convención de idioma y nomenclatura, pasar por el formateador y el linter configurados, mantener la independencia del dominio respecto de frameworks y registrar en el commit la razón del cambio. Cuando una decisión no esté respaldada por una regla automatizada —por ejemplo, la uniformidad del idioma de los comentarios o la calidad semántica de un nombre— debe verificarse durante la revisión por pares.
+
 ### **7.1.4. Software Deployment Configuration.**
+
+La arquitectura de despliegue registrada en la sección 4.3.4 propone Google Cloud Platform como plataforma del MVP, con región `southamerica-east1`, componentes contenerizados, Artifact Registry, HTTPS perimetral mediante Cloud Load Balancing y Cloud CDN, y secretos administrados en Secret Manager. La solución contempla un frontend Next.js, el API como monolito modular NestJS, PostgreSQL administrado, un worker de relay y las integraciones con la red blockchain, correo y proveedores de identidad. Esta sección 7.1 toma esa decisión como configuración objetivo, pero no la presenta como una ejecución comprobada.
+
+En el backend sí se verifican los parámetros necesarios para preparar una ejecución por ambiente. `ConfigModule.forRoot` carga `.env.local` y `.env`, valida las variables con Joi y registra configuraciones para aplicación, base de datos, Swagger, AWS, Azure, OCR, biometría, wallet, relay, IAM, idempotencia y verificación. La conexión TypeORM utiliza PostgreSQL, carga entidades automáticamente, mantiene `synchronize` parametrizable y declara las migraciones en `dist/migrations/*.js`; la configuración efectiva de ejemplo mantiene la sincronización desactivada. Swagger se expone bajo una ruta configurable y la aplicación bajo el prefijo configurable del API.
+
+Para el ledger, el subproyecto `contracts` define Solidity 0.8.28 con optimización habilitada, redes Hardhat local, localhost y Polygon Amoy, y scripts separados para compilar y desplegar. El backend, a su vez, parametriza RPC, chain ID, dirección del ledger, payer, timeout de confirmación, driver de cola y número máximo de reintentos. Los valores operativos —claves, endpoints privados, direcciones generadas y secretos— deben inyectarse en el ambiente de ejecución o en un gestor de secretos; no se incluyen en este informe.
+
+La configuración de ejecución local y la configuración cloud tienen alcances distintos:
+
+| Ambiente | Artefactos verificables | Propósito | Evidencia faltante para declararlo operativo |
+|---|---|---|---|
+| Desarrollo | `docker-compose.yml`, `.env.example`, scripts pnpm y `contracts` | Ejecutar dependencias locales y validar el código | Resultado de una ejecución concreta, versión del runtime y evidencia de pruebas en el entorno |
+| Frontend preview/producción | Proyecto Next.js, `package.json`, `pnpm-lock.yaml` y documentación de despliegue en Vercel del README | Construir y publicar la Web Application | URL real del proyecto Vercel, configuración del proyecto y evidencia de build/publicación |
+| Landing Page | Archivos estáticos `index.html`, `styles.css`, `app.js` y `terms.html`; captura de *Settings → Pages* facilitada por el equipo y registro de [Actions](./assets/LandingPageDeploy.png) | Publicada en [GitHub Pages](https://morocoders-arq-9056.github.io/votochain-web-landing/) desde la rama `main`, carpeta `/(root)`, con HTTPS obligatorio | La captura de Actions acredita ejecuciones exitosas; no muestra el commit específico ni los logs de cada ejecución |
+| Integración/staging | Variables parametrizadas, migraciones, artefactos compilados y documentación de arquitectura | Validar integración entre API, persistencia, cola, proveedores y ledger | Pipeline, definición del servicio, imagen publicada, logs y URL de ambiente |
+| Producción objetivo | GCP, Artifact Registry, balanceador/CDN, Secret Manager y servicios administrados descritos en 4.3.4 | Operar la solución con separación de secretos y componentes escalables | Infraestructura como código, políticas de acceso, procedimiento de rollback, monitoreo y evidencia de despliegue |
+
+Por tanto, el estado verificable del SCM y de la configuración de desarrollo es suficiente para reproducir la preparación local del backend, pero el despliegue cloud permanece como una decisión arquitectónica y un pendiente de implementación/documentación. No se encontró en el backend revisado un `Dockerfile`, un pipeline CI/CD ni manifiestos de infraestructura que permitan probar una promoción automática entre ambientes. Estos artefactos deben incorporarse antes de afirmar cumplimiento completo del ciclo de deployment exigido por el logro del curso.
+
+El procedimiento reproducible que sí puede documentarse a partir del repositorio es el siguiente:
+
+1. Clonar el repositorio del backend y entrar en `backend/votochain-api-backend`.
+2. Instalar dependencias con `pnpm install`, respetando `pnpm-lock.yaml`.
+3. Crear el archivo de entorno a partir de `.env.example` e inyectar valores válidos sin subir secretos.
+4. Levantar PostgreSQL y Redis para desarrollo mediante `docker compose up -d`.
+5. Ejecutar las migraciones TypeORM requeridas con `pnpm migration:run`.
+6. Ejecutar `pnpm run lint`, `pnpm run test`, `pnpm run test:e2e` y `pnpm run build`.
+7. Iniciar el servicio con `pnpm run start:prod`; Swagger queda bajo la ruta configurada y la API bajo el prefijo configurado.
+8. En el frontend, entrar en `frontend/votochain-web-frontend`, ejecutar `pnpm install`, `pnpm lint`, `pnpm test`, `pnpm build` y `pnpm start`; para Vercel, enlazar el repositorio, seleccionar pnpm y configurar las variables del cliente sin exponer secretos.
+9. La Landing Page se publica en [GitHub Pages](https://morocoders-arq-9056.github.io/votochain-web-landing/). Según la captura de configuración proporcionada por el equipo, en `Settings → Pages → Build and deployment` la fuente es `Deploy from a branch`, con rama `main` y carpeta `/(root)`; la opción `Enforce HTTPS` está activada. Los archivos `index.html`, `styles.css`, `app.js` y `terms.html` se encuentran en la raíz del repositorio, sin script de build. Al actualizar la rama fuente, GitHub Pages publica el contenido de esa carpeta mediante su flujo de compilación y despliegue ([GitHub, s. f.](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
+10. Para el contrato, el código verificable actualmente se encuentra en `backend/votochain-api-backend/contracts`; ejecutar `pnpm compile` y utilizar `pnpm deploy:local` o `pnpm deploy:amoy` únicamente después de configurar la red y las credenciales fuera del repositorio.
+
+La captura de [Actions del repositorio de la Landing Page](./assets/LandingPageDeploy.png) registra tres ejecuciones exitosas del workflow `pages-build-deployment` sobre `main`: una el 6 de octubre y dos el 8 de octubre de 2026. Constituye evidencia del proceso de publicación; la captura no expone los identificadores de commit ni el detalle de los logs.
+
+<p align="center">
+  <img src="./assets/LandingPageDeploy.png" alt="Ejecuciones exitosas de GitHub Pages para la Landing Page" width="900"/>
+</p>
+
+<p align="center"><em>Figura 7.1.4. Registro de publicación de la Landing Page en GitHub Actions.</em></p>
+
+Los pasos anteriores cubren el backend, el frontend, la Landing Page y el contrato con el nivel de evidencia actualmente disponible. El frontend tiene comandos de build y documentación de publicación en Vercel, pero no se encontró una URL de despliegue ni un pipeline versionado. Para la Landing Page, la URL pública, la captura de `Settings → Pages` y el registro de Actions sustentan la configuración y la ejecución exitosa de su publicación. El clon local del repositorio independiente del contrato no contiene fuente; por ello, la evidencia de compilación y despliegue del smart contract debe mantenerse vinculada al subproyecto `backend/votochain-api-backend/contracts` o completarse en el repositorio independiente. La publicación cloud prevista en la sección 4.3.4 requiere completar estas evidencias.
+
+<p align="center">
+  <img src="./assets/c4-deployment.png" alt="C4 Deployment GCP" width="700"/>
+</p>
+
+**Figura. Deployment Diagram C4 de VotoChain.** La figura representa la configuración objetivo documentada para GCP. No debe interpretarse como evidencia de que el despliegue automatizado se haya ejecutado satisfactoriamente.
 
 ## **7.2. Solution Implementation.**
 
@@ -5379,5 +5550,10 @@ Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfi
 | NestJS. (s. f.). *Documentation*. https://docs.nestjs.com/ | Monolito modular — Cap IV–V. |
 | Google Cloud. (s. f.). *Document AI*. https://cloud.google.com/document-ai | OCR DNI — Cap IV–V. |
 | Amazon Web Services. (s. f.). *Rekognition*. https://aws.amazon.com/rekognition/ | Liveness/comparación — Cap IV–V. |
+| Cucumber. (s. f.). *Gherkin reference*. https://cucumber.io/docs/gherkin/reference/ | Convenciones para especificaciones `.feature` — Cap VII. |
+| Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/ | Fundamento del workflow GitFlow — Cap VII. |
+| Google. (s. f.). *TypeScript style guide*. https://google.github.io/styleguide/tsguide.html | Convenciones de código TypeScript — Cap VII. |
+| Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/ | Formato de mensajes de commit — Cap VII. |
+| Semantic Versioning. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/ | Convención de versionado de releases — Cap VII. |
 
 

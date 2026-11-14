@@ -1,0 +1,50 @@
+@startuml
+!include <C4/C4_Deployment>
+title VotoChain - Despliegue objetivo de integracion en GCP (no desplegado)
+LAYOUT_TOP_DOWN()
+Deployment_Node(device, "Dispositivo del usuario", "Computadora / smartphone") {
+  Deployment_Node(browser, "Navegador web", "HTTPS") {
+    Container(client, "Cliente web", "HTML / CSS / JavaScript", "Visitantes, administradores y votantes")
+  }
+}
+Deployment_Node(gcp, "Google Cloud Platform", "Destino documentado en 4.3.4") {
+  Deployment_Node(edge, "Acceso perimetral", "Cloud Load Balancing / Cloud CDN - objetivo") {
+    Container(https, "Entrada HTTPS", "TLS", "Enrutamiento; cache solo de contenido publico")
+  }
+  Deployment_Node(staticHost, "Alojamiento estatico", "Servicio concreto pendiente") {
+    Container(landing, "Landing Page", "HTML5 / CSS3 / JavaScript", "ES/EN, terminos y recursos")
+  }
+  Deployment_Node(runtime, "Runtime de aplicaciones", "Servicio GCP pendiente; imagenes por preparar") {
+    Container(web, "Aplicacion web", "Next.js / React", "Server Actions, SSR y cookies HTTP-only")
+    Container(api, "API modular y worker embebido", "NestJS / Node.js / BullMQ", "11 bounded contexts; worker cargado por AppModule")
+  }
+  Deployment_Node(data, "Servicios de datos", "Acceso restringido") {
+    ContainerDb(db, "Base de datos", "PostgreSQL 16 / Cloud SQL - objetivo", "Datos por contexto y migraciones")
+    ContainerDb(redis, "Cola y evidencia temporal", "Redis 7; alojamiento pendiente", "BullMQ y evidencia con TTL")
+  }
+  Container(registry, "Artifact Registry", "Objetivo del capitulo IV", "Imagenes de aplicaciones pendientes de crear")
+  Container(secrets, "Secret Manager", "Objetivo del capitulo IV", "Credenciales e identificadores por ambiente")
+}
+Deployment_Node(aws, "AWS", "Proveedor externo") {
+  Container(rekognition, "Rekognition", "API HTTPS", "Liveness y comparacion facial")
+}
+Deployment_Node(azure, "Azure", "Proveedor externo") {
+  Container(ocr, "Document Intelligence", "API HTTPS", "OCR; proveedor presente en codigo")
+}
+Deployment_Node(polygon, "Polygon Amoy", "Testnet 80002") {
+  Container(ledger, "VotoChainLedger", "Solidity 0.8.28", "Direccion y transaccion de despliegue pendientes de evidencia")
+}
+Rel(client, https, "Accede", "HTTPS")
+Rel(https, landing, "Entrega contenido publico", "HTTP interno")
+Rel(https, web, "Enruta aplicacion dinamica", "HTTP interno")
+Rel(web, api, "Invoca contratos REST", "HTTP interno /api/v1")
+Rel(api, db, "Persiste y consulta", "PostgreSQL")
+Rel(api, redis, "Procesa cola y evidencia", "Redis")
+Rel(api, rekognition, "Verifica identidad", "HTTPS / AWS SDK")
+Rel(api, ocr, "Extrae texto documental", "HTTPS / Azure SDK")
+Rel(api, ledger, "Envia transacciones y consulta confirmacion", "JSON-RPC / HTTPS")
+Rel(api, secrets, "Recibe configuracion privada", "Integracion de despliegue pendiente")
+Rel(registry, runtime, "Suministra imagenes", "Flujo objetivo pendiente")
+SHOW_LEGEND()
+@enduml
+

@@ -626,6 +626,41 @@ Tabla 2.3.1b – Resumen auditable Miguel Herrera (síntesis ENT-02/03/06).
 
 ### **2.3.2. User Task Matrix (As-Is – tareas actuales, no funciones del software).**
 
+La **User Task Matrix** mapea las actividades y tareas que los usuarios llevan a cabo en su **proceso actual (*As-Is*)** de toma de decisiones y gobernanza comunitaria en asambleas de juntas de propietarios y cooperativas de vivienda. A diferencia de un catálogo de características del software, esta matriz identifica las tareas del mundo real previas a la digitalización, evaluando la **Frecuencia** y el nivel de **Importancia** para cada una de las dos User Personas principales definidas en el proyecto: **Patricia Salas** (Directiva / Administradora) y **Miguel Herrera** (Propietario / Socio Votante).
+
+| Tarea Actual del Proceso de Gobernanza / Asambleas | Patricia Salas (Directiva / Administradora)<br>Frecuencia | Patricia Salas (Directiva / Administradora)<br>Importancia | Miguel Herrera (Propietario / Socio Votante)<br>Frecuencia | Miguel Herrera (Propietario / Socio Votante)<br>Importancia |
+|---|:---:|:---:|:---:|:---:|
+| **1. Elaborar la agenda y convocar a la asamblea general** (redacción de temas y envío de citaciones por WhatsApp, correo o esquelas bajo puerta) | Media (periódica) | Alta | Media (recibe citación) | Alta |
+| **2. Conciliar pagos de mantenimiento y depurar padrón de morosidad** (revisión de hojas de cálculo y cuentas bancarias para definir derecho a voto) | Alta (mensual / pre-asamblea) | Alta | Media (consulta su estado) | Alta |
+| **3. Recibir, revisar y validar cartas poder o poderes simples** (inspección de autorizaciones de representación entregadas por inquilinos o apoderados) | Media | Alta | Baja (solo si viaja/ausente) | Alta |
+| **4. Acreditar asistencia e identidad con firmas en listas de papel** (control de ingreso en la puerta de la sala común o pase de lista en videollamada) | Alta (en cada asamblea) | Alta | Alta (asiste y firma) | Alta |
+| **5. Calcular el cuórum sumando coeficientes de copropiedad en Excel** (cálculo manual de porcentajes para verificar si se alcanza el mínimo legal) | Alta (en 1ra y 2da citación) | Alta | Baja (escucha anuncio) | Media |
+| **6. Declarar la instalación formal de la asamblea y abrir sesión** (anuncio formal del inicio tras verificar el cuórum requerido) | Alta | Alta | Baja (asistente) | Media |
+| **7. Exponer la justificación de presupuestos, cuotas u obras comunes** (presentación de cotizaciones, balances y proyectos en agenda) | Alta | Alta | Alta (escucha sustentación) | Alta |
+| **8. Debatir propuestas y responder consultas o discrepancias en sala** (moderación de intervenciones y argumentos de vecinos en debate) | Alta | Alta | Media (participa si le afecta) | Media |
+| **9. Contar votos a mano alzada, papeletas físicas o mensajes de chat** (conteo visual manual de votos a favor, en contra y abstenciones por punto) | Alta (por cada moción) | Alta | Alta (emite su voto) | Alta |
+| **10. Resolver discrepancias o impugnaciones durante el escrutinio** (atención inmediata de reclamos por conteos dudosos o votantes inhabilitados) | Media (temas polémicos) | Alta | Baja (ocasional) | Alta |
+| **11. Redactar el acta de asamblea en el libro de actas físico o borrador** (registro detallado de acuerdos, porcentajes de votación y deliberaciones) | Alta (cierre de asamblea) | Alta | No participa | Baja |
+| **12. Recolectar firmas de directivos y propietarios designados** (búsqueda presencial de testigos y firmantes del acta para su validez) | Alta (post-asamblea) | Alta | Baja (solo si es testigo) | Media |
+| **13. Publicar y distribuir copias o fotos del acta en áreas comunes** (colocación de acuerdos en vitrinas, ascensores o envío de circulares) | Alta | Media | Alta (revisa acuerdos) | Alta |
+| **14. Tramitar la protocolización notarial e inscripción ante SUNARP** (gestión legal para inscribir la junta directiva o modificaciones de reglamento) | Baja (anual / bianual) | Alta | No participa | Media |
+| **15. Atender reclamos, dudas sobre cuórum o pedidos de nulidad post-asamblea** (gestión de impugnaciones o quejas formales de vecinos inconformes) | Media | Alta | Baja (solo si reclama) | Alta |
+
+#### **Análisis y Hallazgos de la Matriz de Tareas**
+
+1. **Sobrecarga y Vulnerabilidad en la Gestión Administrativa (Patricia Salas)**:
+   - Las tareas de mayor criticidad para la administración (*calcular cuórum en Excel*, *validar poderes simples*, *contar votos a mano alzada* y *redactar actas para SUNARP*) dependen actualmente de herramientas manuales propensas a errores de cálculo y suspicacias vecinales.
+   - El riesgo de rechazo registral en SUNARP por errores en la sumatoria de coeficientes o padrones desactualizados representa el principal dolor operativo de la administradora.
+
+2. **Asimetría de Información y Falta de Evidencia para el Propietario (Miguel Herrera)**:
+   - Para el votante, las tareas más importantes son *verificar su propia habilitación*, *emitir su voto de manera clara* y *contar con una constancia auditable* de que su decisión fue contabilizada fielmente sin alteraciones.
+   - La imposibilidad de votar remotamente y la desconfianza en el conteo visual a mano alzada reducen drásticamente la participación en las convocatorias.
+
+3. **Conexión con los Requisitos de VotoChain**:
+   - Esta matriz fundamenta la necesidad de automatizar el cálculo de cuórum mediante *snapshots* inmutables, reemplazar las firmas físicas en papel por *identidad biométrica verificada*, y sustituir el conteo manual por *firmas criptográficas individuales registradas on-chain*, garantizando actas estructuradas listas para elevación formal.
+
+#### **Trazabilidad de las tareas con las entrevistas**
+
 Tabla 2.3.2 – User Task Matrix As-Is. Fuente: ENT-01 a ENT-06 (2.2.2-2.2.3).
 
 | Tarea actual | Patricia Salas – Directiva / administradora (Frecuencia / Importancia) | Miguel Herrera – Propietario votante (Frecuencia / Importancia) | Dolor observado | ENT origen |
@@ -5244,184 +5279,251 @@ El administrador de cumplimiento necesita revisar las solicitudes de borrado y c
 
 ## **7.1. Software Configuration Management.**
 
-El Software Configuration Management (SCM) de VotoChain se organiza como un conjunto de prácticas para identificar, versionar, revisar y reproducir los artefactos que intervienen en el ciclo de desarrollo. Su alcance comprende el informe, el backend modular NestJS, el subproyecto de contratos Solidity, las migraciones de persistencia, las pruebas, las configuraciones de herramientas y los archivos de entorno de ejemplo. La revisión de la rúbrica de logro exige que estas prácticas permitan el trabajo colaborativo, el mantenimiento y la evolución de la solución, y que sean coherentes con las restricciones de lenguajes, frameworks, herramientas, nomenclatura y estilo de codificación del proyecto.
+La gestión de configuración de VotoChain establece cómo el equipo identifica, versiona, revisa y reproduce los artefactos de la solución durante su ciclo de vida. Comprende cuatro repositorios: informe, landing page estática, aplicación web responsive y API con contratos blockchain. La línea base se compone del código, las pruebas, los archivos de dependencias, las migraciones, los contratos REST, los recursos de diseño y la documentación asociados a una revisión de Git.
 
-La configuración descrita a continuación distingue entre evidencia implementada, configuración local reproducible y decisiones de despliegue documentadas. Esta distinción es necesaria porque la arquitectura objetivo registra un despliegue en Google Cloud Platform, mientras que el repositorio revisado contiene principalmente el código del backend, su configuración de desarrollo y el contrato blockchain; no se identificaron en el backend archivos de infraestructura como código, manifiestos de Kubernetes, `Dockerfile` o pipelines CI/CD que permitan afirmar que dicho despliegue está automatizado.
+La configuración se revisó el **13 de noviembre de 2026** contra los archivos de los repositorios. Las tablas siguientes distinguen las herramientas presentes en la implementación de las convenciones que el equipo adopta para las próximas integraciones. Una dependencia declarada o un adaptador implementado no demuestra por sí mismo un servicio desplegado ni una prueba aprobada.
 
-| Elemento de configuración | Evidencia verificable | Estado en la revisión |
-|---|---|---|
-| Código de aplicación | `backend/votochain-api-backend/src/`, organizado en módulos por bounded context y un módulo compartido | Implementado |
-| Contrato blockchain | `backend/votochain-api-backend/contracts/`, configuración Hardhat y script de despliegue | Implementado como subproyecto; el despliegue depende de credenciales y red configuradas fuera del repositorio |
-| Dependencias | `package.json`, `pnpm-lock.yaml` y `contracts/package.json` | Versionadas |
-| Persistencia local | `docker-compose.yml` con PostgreSQL y Redis, además de migraciones TypeORM en `src/migrations/` | Configuración local disponible |
-| Calidad y pruebas | Scripts `lint`, `format`, `test`, `test:cov` y `test:e2e`; configuraciones de Oxlint y Vitest | Implementado a nivel de herramientas; la ejecución de resultados no se infiere del código |
-| Despliegue cloud | Decisión arquitectónica registrada en la sección 4.3.4 y variables de configuración en `.env.example` | Diseñado/documentado; automatización no evidenciada |
+Cada cambio deberá mantener trazabilidad entre historia de usuario o tarea técnica, rama, commits, pull request y evidencia de verificación. El responsable del cambio actualizará los artefactos afectados; otro integrante revisará su coherencia antes de incorporarlo a una línea base compartida.
 
 ### **7.1.1. Software Development Environment Configuration.**
 
-El entorno de desarrollo se basa en Node.js con TypeScript y NestJS. El archivo `package.json` identifica a `pnpm` como gestor operativo mediante los scripts del proyecto y fija las dependencias directas del backend, entre ellas NestJS, TypeORM, PostgreSQL (`pg`), Redis (`ioredis`), BullMQ, `ethers`, AWS SDK y Azure Identity/Document Intelligence. La versión exacta de resolución queda registrada en `pnpm-lock.yaml`; por ello, la instalación debe realizarse respetando el lockfile y no mediante una actualización libre de dependencias.
+#### **Herramientas para colaboración, requisitos, diseño y documentación**
 
-La siguiente tabla explicita los productos de software identificables en el alcance revisado, su propósito y la referencia para acceder a ellos. Cuando el repositorio no contiene una ruta de descarga o un proyecto correspondiente, se declara como pendiente en lugar de inferirlo.
-
-| Producto o herramienta | Propósito dentro del ciclo de vida | Referencia o ruta verificable | Artefactos/actividades |
+| Actividad | Producto y modalidad | Propósito en VotoChain | Referencia o descarga |
 |---|---|---|---|
-| GitHub | Hospedaje, revisión y control de versiones colaborativo | [Organización del proyecto](https://github.com/Morocoders-Arq-9056); [repositorio backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | Informe, backend, commits, ramas y pull requests |
-| Node.js + pnpm | Ejecución del backend y gestión reproducible de dependencias | `backend/votochain-api-backend/package.json` y `pnpm-lock.yaml` | Desarrollo, compilación, pruebas y scripts del backend |
-| TypeScript + NestJS | Implementación del RESTful Web Service y monolito modular | `backend/votochain-api-backend/src/` | Código de aplicación |
-| Visual Studio Code | IDE oficial para edición, navegación y depuración del código | [Visual Studio Code 1.145.3](https://code.visualstudio.com/updates/v1_145) | Desarrollo del backend, frontend y Landing Page; versión estable publicada el 4 de noviembre de 2026 |
-| Docker Compose | Ejecución local de PostgreSQL y Redis | `backend/votochain-api-backend/docker-compose.yml` | Desarrollo e integración local |
-| Prettier + Oxlint | Formateo y análisis estático | `.prettierrc`, `oxlint.json` y scripts de `package.json` | Style guide y control de calidad |
-| Vitest + Supertest/Testcontainers | Pruebas unitarias y end-to-end | `vitest.config.ts`, `vitest.config.e2e.ts` y scripts de `package.json` | Testing del backend |
-| Swagger/OpenAPI | Documentación del Web Service | `src/shared/infrastructure/documentation/openapi/` | Documentación de endpoints |
-| Next.js + React | Implementación del Web Frontend | [Repositorio frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend); `frontend/votochain-web-frontend/` | Aplicación web, componentes, clientes API y pruebas |
-| ESLint + configuración Next.js | Linting y verificación de límites entre capas del frontend | `frontend/votochain-web-frontend/eslint.config.mjs` | Calidad y arquitectura del frontend |
-| Figma | Diseño UX/UI | [Archivo Figma de VotoChain](https://www.figma.com/design/LsF4ObetPmO1nxwnypwJjd/Untitled--Copy-?node-id=0-1&t=SqCFZGTWia1UKp4p-1); prompts de apoyo en `backend/docs/figma-prompts-votachain.md` | Prototipos y artefactos UX |
-| Landing Page estática | Publicación de la página pública | [Repositorio landing](https://github.com/Morocoders-Arq-9056/votochain-web-landing); `landingpage/votochain-web-landing/` | `index.html`, `styles.css`, `app.js` y `terms.html` |
-| Trello | Seguimiento de backlog, tareas y coordinación de sprints | [Trello](https://trello.com/); se creará un tablero independiente cuando inicie cada sprint | Product Backlog, Sprint Planning, Sprint Backlog, seguimiento de tareas y retrospectiva |
+| Project Management / Requirements Management | **Trello**, SaaS | Organizar Product Backlog, Sprint Backlog, responsables y estado de las tareas; relacionar tarjetas con los identificadores US y TS del informe. El tablero correspondiente se creará cuando comience cada sprint; aún no hay URL de tablero disponible. | [Trello](https://trello.com/) |
+| Colaboración y revisión | **GitHub**, SaaS, y **Git**, local | Alojar los cuatro repositorios, revisar pull requests y conservar historial, ramas y etiquetas. | [Organización Morocoders](https://github.com/Morocoders-Arq-9056) · [Descargar Git](https://git-scm.com/downloads) |
+| Coordinación del equipo | **Discord**, SaaS / cliente local | Reuniones de planificación, coordinación y revisión de sprint, de acuerdo con el registro de Sprint Planning 1. Los acuerdos se trasladan al backlog y al informe. | [Discord](https://discord.com/) · [Descarga](https://discord.com/download) |
+| Product Design | **Figma**, SaaS | Herramienta de referencia para mantener wireframes, mock-ups y prototipos de la landing y de la aplicación. Los exports y vínculos al archivo fuente deberán corresponder a las versiones documentadas en 6.3–6.5. | [Archivo Figma de VotoChain](https://www.figma.com/design/LsF4ObetPmO1nxwnypwJjd/Untitled--Copy-?node-id=0-1&t=SqCFZGTWia1UKp4p-1) |
+| Modelado de dominio y arquitectura | **Miro**, SaaS; **Mermaid**, definición textual | Miro para talleres y mapas colaborativos; Mermaid para diagramas versionables incluidos en Markdown. El informe contiene evidencias y diagramas derivados de estas actividades. | [Miro](https://miro.com/) · [Mermaid](https://mermaid.js.org/) |
+| Software Documentation | **Markdown en GitHub**, SaaS; **Visual Studio Code** como IDE oficial | Redactar el informe, documentación por bounded context y guías; versionar imágenes dentro de `assets/` y revisar su representación en GitHub. | [Markdown en GitHub](https://docs.github.com/en/get-started/writing-on-github) · [Descargar VS Code](https://code.visualstudio.com/Download) |
 
-La tabla no afirma que todas las herramientas hayan sido utilizadas por todos los integrantes: registra la evidencia disponible y hace visibles los vacíos de configuración exigibles por el enunciado.
+#### **Herramientas de desarrollo, pruebas e integración**
 
-Las versiones declaradas o configuradas en el backend son las siguientes:
+Las versiones de bibliotecas se toman de `package.json` y de `pnpm-lock.yaml` de cada repositorio; no se presupone una versión común cuando los proyectos declaran rangos diferentes.
 
-| Componente | Versión o configuración verificable | Fuente |
+| Actividad | Producto / configuración identificada | Propósito y referencia |
 |---|---|---|
-| Backend VotoChain API | `0.0.1` | `package.json` |
-| NestJS | `12.0.1` para `@nestjs/common`, `@nestjs/core` y `@nestjs/platform-express` | `package.json` y `pnpm-lock.yaml` |
-| TypeScript | `6.0.2` | `package.json` |
-| TypeORM | `0.3.31` | `package.json` |
-| PostgreSQL | `16-alpine` para el entorno local | `docker-compose.yml` |
-| Redis | `7-alpine` para el entorno local | `docker-compose.yml` |
-| Prettier | `3.4.2` | `package.json` |
-| Oxlint | `1.58.0` | `package.json` |
-| Vitest | `4.1.2` | `package.json` |
-| BullMQ | `6.5.3` | `package.json` |
-| Ethers | `6.17.0` | `package.json` |
-| Solidity | `0.8.28` con optimizador habilitado y 200 ejecuciones | `contracts/hardhat.config.ts` |
-| Lockfile pnpm | `9.0` | `pnpm-lock.yaml` |
-| Frontend VotoChain | `0.1.0` | `frontend/votochain-web-frontend/package.json` |
-| Next.js | `16.4.2` | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
-| React / React DOM | `19.3.0` | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
-| TypeScript frontend | `5.9.3` resuelto en el lockfile | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
-| Vitest frontend | `5.0.5` resuelto en el lockfile | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
-| ESLint frontend | `9.39.5` resuelto en el lockfile | `frontend/votochain-web-frontend/package.json` y `pnpm-lock.yaml` |
-| pnpm frontend | `11.20.0` | Campo `packageManager` de `frontend/votochain-web-frontend/package.json` |
-| Node.js backend | `22.23.4` | `.nvmrc` y `engines` de `backend/votochain-api-backend/package.json` |
-| pnpm backend | `11.20.0` | Campo `packageManager` y `engines` de `backend/votochain-api-backend/package.json` |
+| Ejecución y dependencias | **Node.js y pnpm**. El backend fija Node.js `22.23.4` en `.nvmrc` y pnpm `11.20.0` en `packageManager` y `engines`; el frontend declara `pnpm@11.20.0`. | Ejecutar herramientas y resolver dependencias con sus lockfiles. [Node.js](https://nodejs.org/en/download) · [pnpm](https://pnpm.io/installation) |
+| Software Development — API | **TypeScript**, **NestJS 12**, **TypeORM 0.3** y **PostgreSQL 16** | Implementar los 11 bounded contexts, persistencia y migraciones. El backend declara TypeScript `^6.0.2`. [TypeScript](https://www.typescriptlang.org/download/) · [NestJS](https://docs.nestjs.com/) · [TypeORM](https://typeorm.io/) · [PostgreSQL](https://www.postgresql.org/download/) |
+| Software Development — aplicación | **Next.js 16.4.2**, **React 19.3.0**, **TypeScript ^5**, **Tailwind CSS 4**, **Base UI** y **Zod** | Aplicación responsive, componentes accesibles, tokens visuales y validación del dominio. [Next.js](https://nextjs.org/docs) · [React](https://react.dev/) · [Tailwind CSS](https://tailwindcss.com/) · [Base UI](https://base-ui.com/) · [Zod](https://zod.dev/) |
+| Software Development — landing | **HTML5, CSS3 y JavaScript** | Sitio estático con traducciones ES/EN y términos; no requiere compilación ni framework. [Referencia MDN](https://developer.mozilla.org/en-US/docs/Web) |
+| Servicios locales | **Docker Engine / Docker Desktop y Docker Compose** | Ejecutar PostgreSQL `16-alpine` y Redis `7-alpine` con volúmenes separados, según `docker-compose.yml` del backend. [Docker](https://docs.docker.com/get-started/get-docker/) |
+| Entrega asíncrona | **Redis 7 y BullMQ** | Cola y worker para entrega de transacciones, con estado y reintentos controlados. [Redis](https://redis.io/docs/latest/) · [BullMQ](https://docs.bullmq.io/) |
+| Identidad y documentos | **AWS Rekognition**, **Azure AI Document Intelligence**, servicios cloud | Adaptadores de biometría y OCR presentes en backend. Su uso requiere recursos y permisos del entorno; no se presume disponibilidad por tener instalado el SDK. [AWS Rekognition](https://aws.amazon.com/rekognition/) · [Azure Document Intelligence](https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence) |
+| Blockchain | **Solidity 0.8.28**, **Hardhat**, **ethers 6** y **Polygon Amoy** | Compilar contratos, ejecutar red local y preparar integración con la red de pruebas. Hardhat está configurado, pero su subproyecto no declara todavía las dependencias necesarias para reproducir la compilación. [Solidity](https://docs.soliditylang.org/) · [Hardhat](https://hardhat.org/docs) · [ethers](https://docs.ethers.org/v6/) · [Polygon](https://docs.polygon.technology/) |
+| Software Testing | **Vitest**, **Cucumber**, **Testing Library**, **jsdom**, **Supertest** y **Testcontainers** | Pruebas unitarias y de componentes; pruebas HTTP y de persistencia del backend. El backend incorpora tres archivos `.feature`, sus Steps y `pnpm run test:bdd`; ejecutarlos contra la API requiere datos y servicios configurados. [Vitest](https://vitest.dev/) · [Cucumber](https://cucumber.io/docs/) · [Testing Library](https://testing-library.com/) · [Supertest](https://github.com/forwardemail/supertest) · [Testcontainers](https://node.testcontainers.org/) |
+| Calidad y contratos | **ESLint**, **Oxlint**, **Prettier** y **Swagger/OpenAPI** | ESLint verifica el frontend y sus dependencias entre capas; Oxlint revisa backend; Prettier define su formato. Swagger documenta la API desde el código. [ESLint](https://eslint.org/) · [Oxlint](https://oxc.rs/docs/guide/usage/linter) · [Prettier](https://prettier.io/) · [OpenAPI en NestJS](https://docs.nestjs.com/openapi/introduction) |
+| Software Deployment | **Google Cloud**, plataforma objetivo del capítulo IV; **GitHub** para conservar revisiones y evidencias | Preparar ambientes y registrar versiones desplegadas. No se identificaron pipelines ni manifiestos que acrediten actualmente un despliegue automatizado en GCP. [Google Cloud](https://cloud.google.com/) |
 
-Las versiones con prefijo `^` en `package.json` representan rangos compatibles; el lockfile es la referencia de resolución concreta para una instalación reproducible. Node.js queda fijado en `22.23.4` y pnpm en `11.20.0` para el backend mediante `.nvmrc`, `packageManager` y `engines`.
+#### **Preparación reproducible del entorno**
 
-La configuración de compilación se encuentra en `tsconfig.json`, `tsconfig.build.json` y `nest-cli.json`. El código se compila como módulos Node `nodenext`, con destino ES2023, declaraciones y source maps, modo `strict` y salida en `dist`. El `rootDir` de compilación es `src` y se excluyen las pruebas unitarias del artefacto de producción. La aplicación se inicia desde `src/main.ts`, donde se establece el prefijo configurable `api/v1`, CORS, el filtro global de excepciones, `ValidationPipe` con `whitelist` y `transform`, Swagger y el puerto parametrizable.
-
-El entorno local de servicios auxiliares se declara en `docker-compose.yml`. Incluye contenedores de PostgreSQL 16 Alpine y Redis 7 Alpine, con volúmenes nombrados para conservar sus datos durante el ciclo local. Este archivo sirve para levantar dependencias de desarrollo; no constituye por sí solo una definición del despliegue productivo. Los valores sensibles no deben copiarse desde el compose ni desde un entorno real al informe. El archivo `.env.example` funciona como contrato de configuración: enumera variables para la aplicación, PostgreSQL, Swagger, OTP, OCR, reconocimiento facial, wallet, Polygon Amoy, Redis, colas, reintentos y procesos de barrido, pero no debe contener secretos efectivos.
-
-La validación de configuración se implementa mediante Joi en `src/shared/infrastructure/persistence/configuration/validation.schema.ts`. Entre las reglas verificables se encuentran la obligatoriedad de los parámetros de base de datos y `JWT_SECRET`, la longitud mínima del secreto JWT, los valores permitidos para los drivers de OCR, reconocimiento facial, wallet, cola y red del ledger, así como rangos para el umbral de comparación facial. En consecuencia, la configuración inválida debe fallar al inicio y no quedar como un error silencioso de ejecución.
-
-El ciclo local recomendado se expresa en los scripts existentes: `pnpm install`, levantamiento de PostgreSQL y Redis mediante Docker Compose, `pnpm run build` para compilación, `pnpm run lint` y `pnpm run format` para calidad, y `pnpm run test`, `pnpm run test:cov` o `pnpm run test:e2e` según el tipo de validación. Las migraciones TypeORM se invocan mediante los scripts `migration:generate`, `migration:run` y `migration:revert`. La configuración fija `DB_SYNCHRONIZE=false` como valor de ejemplo, coherente con el uso de migraciones trazables y con la restricción arquitectónica de no depender de una sincronización implícita del esquema.
+1. Clonar los repositorios de 7.1.2 e identificar la rama y el commit de trabajo. Instalar Git, un editor, Node.js compatible, pnpm y Docker cuando se requieran servicios locales o pruebas de persistencia.
+2. Ejecutar `pnpm install --frozen-lockfile` en backend y frontend por separado. Conservar sus lockfiles; cualquier actualización de dependencias se revisará como cambio explícito. Ambos proyectos fijan pnpm `11.20.0`; el backend fija además Node.js `22.23.4`.
+3. Crear la configuración local del backend a partir de `.env.example`, sin publicar archivos con credenciales. Ajustar la conexión a PostgreSQL a los valores del Compose y levantar las dependencias mediante `docker compose up -d postgres redis` desde el backend. Compose inicia estos servicios, no la API ni la aplicación.
+4. Ejecutar las migraciones con `pnpm migration:run` y arrancar la API con `pnpm start:dev`. Configurar `SERVER_PORT=4000` y `API_PREFIX=api/v1` para evitar colisión con el frontend, cuyo servidor local utiliza el puerto 3000.
+5. En el frontend, configurar `NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1` y `USE_MOCK_API=false` para integración HTTP; ejecutar `pnpm dev`. Con `USE_MOCK_API=true` se obtiene un prototipo con adaptadores simulados. Membresías conserva un adaptador simulado incluso en modo HTTP.
+6. Servir la landing con un servidor HTTP estático local y revisar navegación, cambio de idioma, términos y formulario. La validación del formulario no constituye evidencia de envío a un servicio.
+7. Registrar el resultado de lint, pruebas y compilación con el commit evaluado. Las rutas y puertos anteriores son la convención local adoptada; no representan URLs públicas de despliegue.
 
 ### **7.1.2. Source Code Management.**
 
-El repositorio del backend utiliza Git como sistema de control de versiones. La estrategia documentada para el informe es GitFlow: las contribuciones se realizan en ramas de funcionalidad por integrante, se integran en `develop` mediante revisión y posteriormente se consolida la versión estable en `main`. En el registro de colaboración del informe se identifican las ramas `feat/rios`, `feat/aliaga-v1`, `feat/paredes`, `feature/bueno` y `feature/rodriguez`, además de pull requests y commits asociados. Esta evidencia respalda el criterio de la rúbrica referido a un workflow colaborativo; no obstante, el cumplimiento operativo de una futura entrega debe comprobarse en el historial del repositorio correspondiente.
+#### **Repositorios y unidades de configuración**
 
-Los repositorios de los productos identificados son los siguientes:
+GitHub es la plataforma de colaboración y Git es el sistema de control de versiones. La organización mantiene un repositorio por unidad de entrega:
 
-| Producto | Repositorio | Evidencia local de SCM |
+| Unidad | Repositorio GitHub | Artefactos bajo control de versiones |
 |---|---|---|
-| Informe | [votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) | Registro de versiones, ramas y colaboración documentadas en el informe |
-| Backend | [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | Rama `develop`, historial de commits, pruebas y especificaciones Gherkin en `backend/votochain-api-backend/test/features/` |
-| Frontend | [votochain-web-frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend) | Rama `develop`, ramas remotas `feat/*` e historial de commits |
-| Landing Page | [votochain-web-landing](https://github.com/Morocoders-Arq-9056/votochain-web-landing) | Rama `main` e historial de commits |
-| Smart contract | [votochain-blockchain-contract](https://github.com/Morocoders-Arq-9056/votochain-blockchain-contract) | Remoto configurado, pero el clon local no contiene archivos fuente ni commits |
+| Informe del proyecto | [votochain-project-document](https://github.com/Morocoders-Arq-9056/votochain-project-document) | `README.md`, referencias, diagramas, imágenes y evidencias en `assets/`. |
+| Landing page | [votochain-web-landing](https://github.com/Morocoders-Arq-9056/votochain-web-landing) | `index.html`, `terms.html`, `styles.css`, `app.js` y recursos estáticos. |
+| Aplicación web | [votochain-web-frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend) | `app/`, `components/`, `lib/`, pruebas `*.test.ts(x)`, configuración y lockfile. |
+| Web Services y contratos blockchain | [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | `src/`, `test/`, `docs/`, migraciones, configuración y `contracts/`. Las especificaciones BDD se encuentran en `test/features/*.feature`, con Steps en `test/steps/`. |
 
-En el alcance del backend, el proyecto, sus archivos de pruebas y las especificaciones Gherkin se almacenan en el mismo repositorio. Las features `authentication.feature`, `community.feature` y `voting.feature` cubren escenarios de registro, autenticación, gestión de comunidades y voto idempotente. El backend incorpora el runner Cucumber mediante el script `pnpm run test:bdd` y los step definitions ubicados en `test/steps/api.steps.mjs`. La ejecución utiliza `BDD_BASE_URL` para seleccionar la instancia del API y requiere que los datos de prueba y servicios externos estén disponibles; por ello, la validación está automatizada, pero los resultados deben generarse contra un entorno configurado y no se presentan aquí como resultados ya ejecutados.
+**Estado de las pruebas de aceptación:** el backend contiene pruebas TypeScript `*.spec.ts` y `*.e2e-spec.ts`, además de `authentication.feature`, `community.feature` y `voting.feature`. Cucumber se invoca con `pnpm run test:bdd` y carga `test/steps/api.steps.mjs`. El reconocimiento de escenarios y Steps se verificó con `--dry-run`; aún no se dispone de resultados de ejecución funcional contra un ambiente configurado. La relación de escenarios con las US del sprint debe documentarse en 7.2.1.4.
 
-Los usuarios GitHub identificados para la colaboración del equipo son:
+#### **Workflow GitFlow y nomenclatura de ramas**
 
-| Integrante | Usuario GitHub |
-|---|---|
-| Aliaga Aguirre, Ethan Matias | [MatFragg](https://github.com/MatFragg) |
-| Rodriguez Macedo, Sebastian | [Shiftinnnnn](https://github.com/orgs/Morocoders-Arq-9056/people/Shiftinnnnn) |
-| Bueno Perales, Mathias Eduardo | [MathiasBueno](https://github.com/orgs/Morocoders-Arq-9056/people/MathiasBueno) |
-| Rios Pacheco, Héctor Javier | [Khafna09](https://github.com/Khafna09) |
-| Paredes Santos, Fabrizio Alberto | [psfa29](https://github.com/psfa29) |
+El equipo utiliza `main` y `develop`, además de ramas personales `feat/rios`, `feat/paredes`, `feat/aliaga-v1`, `feature/bueno` y `feature/rodriguez`. Estas se conservan como evidencia histórica; para el nuevo trabajo cada feature tendrá su propia rama. El equipo no ha utilizado ramas `release/*` ni `hotfix/*`.
 
-El historial observable del backend conserva una convención de commits basada en Conventional Commits. Se verifican tipos como `feat`, `fix`, `refactor`, `test`, `docs` y `chore`, seguidos de un alcance entre paréntesis y una descripción breve, por ejemplo: `feat(relay): polygon ledger gateway with bullmq delivery and contracts`. Esta práctica aporta trazabilidad entre una modificación y su intención, facilita la revisión por pares y permite distinguir cambios funcionales, correcciones, pruebas, documentación y mantenimiento.
+| Rama | Origen | Convención y ejemplo | Integración / propósito |
+|---|---|---|---|
+| `main` | Línea estable | Nombre permanente | Revisiones aprobadas para entrega; cada release se identifica mediante tag. |
+| `develop` | `main` | Nombre permanente | Integra incrementos revisados y sirve de base para nuevas features. |
+| Feature | `develop` | `feature/<story-id>-<short-description>`, por ejemplo `feature/us-05-email-verification` o `feature/ts-04-api-contracts` | Pull request hacia `develop`; una funcionalidad coherente por rama. |
 
-En el trabajo realizado, `main` representa la línea estable y `develop` integra los cambios. Para las funcionalidades se han utilizado ramas con los prefijos `feat/*` y `feature/*`, según el historial documentado. El equipo no ha utilizado ramas `release/*` ni `hotfix/*`; por tanto, estos prefijos no forman parte del flujo aplicado ni constituyen evidencia pendiente de esta entrega.
+Los identificadores y descripciones de ramas se escriben en inglés, en minúsculas y separados por guiones. Antes de integrar se actualiza la rama con la base compartida y se resuelven conflictos sin perder aportes de otros integrantes. No se reescribe una rama compartida mediante force push como parte del flujo ordinario.
 
-La unidad de cambio debe mantenerse acotada al bounded context, capa o configuración que se modifica. Antes de solicitar la integración, el autor debe actualizar su rama desde `develop`, ejecutar las verificaciones disponibles y documentar cualquier decisión que afecte contratos, migraciones o variables de entorno. La integración no debe incorporar secretos, archivos `.env` reales, `node_modules`, `dist`, coberturas, logs ni datos runtime; estas exclusiones están declaradas en `.gitignore`. Las migraciones se tratan como artefactos versionados y ordenados: una modificación persistente debe acompañarse de la migración correspondiente y de la actualización de los componentes que la consumen.
+Cada pull request indicará objetivo, US/TS, cambios, comandos de verificación, resultados y pendientes; requerirá revisión de otro integrante. Se adopta como política la protección de `main` y `develop` frente a cambios directos, pero la configuración efectiva de esas reglas en GitHub deberá evidenciarse. No se ha verificado su activación desde los archivos locales.
 
-La política de SCM queda resumida en la siguiente secuencia:
+#### **Versionado de releases**
 
-```text
-feature/<alcance> -> revisión y verificaciones -> develop -> validación de integración -> main
-```
+Se adopta [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html): `MAJOR.MINOR.PATCH`. A partir de una API estable, `MAJOR` comunica incompatibilidades; `MINOR`, nuevas capacidades compatibles; y `PATCH`, correcciones compatibles. Las versiones `0.y.z` corresponden al desarrollo inicial, con contratos aún sujetos a cambios. Se utilizarán tags `v0.2.0`, candidatos `v0.2.0-rc.1` y releases de GitHub con notas de cambios y limitaciones.
 
-La existencia del workflow y del historial no implica que todas las funcionalidades estén desplegadas. Por ello, la evidencia de un commit o una pull request sustenta control y colaboración, pero no sustituye la evidencia funcional de una prueba, una imagen publicada o un despliegue exitoso.
+Cada repositorio se versiona de forma independiente. Una entrega integrada registrará una matriz con repositorio, tag, SHA y ambiente para identificar exactamente qué API, frontend, landing e informe se evaluaron juntos. Las versiones declaradas actualmente (`0.0.1` en backend y `0.1.0` en frontend) son valores de sus manifiestos, no evidencia de releases publicadas. Las migraciones y revisiones de contratos forman parte de la compatibilidad de cada entrega.
+
+#### **Convenciones de mensajes de commit**
+
+Se adopta [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) con la estructura `<type>[optional scope][!]: <description>`. El mensaje se redacta en inglés, con una descripción breve en imperativo; el cuerpo explica la motivación y el pie enlaza la US/TS o registra `BREAKING CHANGE:` cuando corresponda.
+
+| Tipo | Uso | Ejemplo |
+|---|---|---|
+| `feat` | Nueva funcionalidad | `feat(verification): verify email with a single-use code` |
+| `fix` | Corrección de comportamiento | `fix(voting): exclude unconfirmed votes from tally` |
+| `docs` | Documentación y evidencias | `docs(configuration): define development and release conventions` |
+| `test` | Pruebas | `test(membership): cover suspended member eligibility` |
+| `refactor` | Reestructuración sin cambio funcional | `refactor(ui): extract receipt timeline projection` |
+| `style` | Formato sin alterar comportamiento | `style(iam): apply formatter rules` |
+| `build`, `ci`, `chore` | Dependencias, automatización y mantenimiento | `build(frontend): update dependency lockfile` |
+
+Un cambio incompatible se explicita, por ejemplo `feat(api)!: require password during account registration`, con su impacto y estrategia de actualización. Esta convención se aplica a los próximos commits; no implica renombrar el historial existente ni demostrar un pipeline automático de releases.
 
 ### **7.1.3. Source Code Style Guide & Conventions.**
 
-Las convenciones del backend se derivan de la configuración efectiva del repositorio y de la estructura por capas utilizada en los bounded contexts. El lenguaje de implementación es TypeScript; las clases, interfaces, tipos, comandos, consultas, eventos, agregados, servicios, repositorios, controladores y módulos emplean nomenclatura en inglés, mientras que la documentación académica mantiene el español. Los nombres de archivos siguen `kebab-case` y los sufijos semánticos distinguen, entre otros, `*.module.ts`, `*.controller.ts`, `*.service.ts`, `*.aggregate.ts`, `*.value-object.ts`, `*.orm-entity.ts`, `*.repository.ts`, `*.command.ts`, `*.query.ts` y `*.event.ts`.
+#### **Idioma y reglas transversales**
 
-Las referencias de estilo adoptadas para el código deben declararse de forma explícita: Google TypeScript Style Guide para TypeScript, las convenciones oficiales de Gherkin/Cucumber para archivos `.feature` y Conventional Commits para mensajes de Git. En el repositorio se evidencia TypeScript, Conventional Commits, especificaciones Gherkin en `test/features/` y un runner Cucumber con step definitions en `test/steps/`. La ejecución se realiza mediante `pnpm run test:bdd`; su resultado depende de la disponibilidad de la instancia del API indicada por `BDD_BASE_URL` y de los datos requeridos por cada escenario.
+Los nombres de archivos de código, clases, interfaces, funciones, variables, propiedades, tablas y escenarios automatizados se redactarán en **inglés**, respetando el lenguaje ubicuo: `Community`, `Membership`, `VoteAuthorization`, `EligibilitySnapshot`, `QuorumSnapshot` y `VoterReceipt`. El texto visible de la aplicación utiliza español del Perú y tratamiento de usted; la landing conserva sus traducciones ES/EN. Las rutas públicas existentes en español se consideran contratos de navegación y no se renombrarán sin revisar sus consumidores.
 
-La separación arquitectónica también funciona como convención de código: `domain/` contiene reglas y modelos del dominio; `application/` coordina casos de uso, comandos, consultas, eventos y puertos; `infrastructure/` implementa persistencia, proveedores, colas y gateways; e `interfaces/` expone REST y filtros. Las guías de implementación de los bounded contexts establecen que el dominio no importa `@nestjs/*`, TypeORM ni `class-validator`, evitando que las reglas centrales dependan del framework o de un adaptador concreto. La composición de NestJS y TypeORM se concentra en módulos e infraestructura, mientras que los proveedores externos se seleccionan mediante puertos y adaptadores configurables.
+Se utilizan UTF-8, sangría de dos espacios en TypeScript/JavaScript/JSON, nombres descriptivos, módulos explícitos y comentarios que expliquen reglas o decisiones. Las convenciones particulares del repositorio y sus herramientas prevalecen sobre preferencias individuales. Los cambios de formato masivo se separan de los cambios funcionales para facilitar la revisión.
 
-En el frontend, `AGENTS.md` y `eslint.config.mjs` documentan una convención adicional: identificadores, props, tipos, archivos y funciones en inglés; copy visible en español peruano centralizado en `lib/ui/copy.ts`; dependencias dirigidas hacia el dominio; componentes presentacionales sin acceso directo a infraestructura; y reglas `no-restricted-imports` para verificar los límites entre `app`, `components`, `lib/ui`, `lib/application`, `lib/infrastructure` y `lib/domain`. Asimismo, se adopta Atomic Design para atoms, molecules, organisms y templates, y se prohíben valores hexadecimales fuera de los tokens visuales definidos en `app/globals.css`.
+| Lenguaje / artefacto | Convenciones adoptadas | Referencia y aplicación |
+|---|---|---|
+| **TypeScript / JavaScript** | `PascalCase` para tipos y clases; `camelCase` para funciones, métodos, propiedades y variables; `UPPER_SNAKE_CASE` para constantes globales y tokens de inyección. Preferir `const`, usar `let` cuando exista reasignación, evitar `var` y tipos `any` sin justificación; validar datos en límites de entrada. | [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html), adaptada a los formatos y arquitectura locales. |
+| **Backend NestJS** | Archivos en `kebab-case` con sufijo de responsabilidad: `vote.aggregate.ts`, `cast-vote.command.ts`, `votes.controller.ts`, `vote.orm-entity.ts`. Clases en `PascalCase`. Mantener dominio, aplicación, interfaces e infraestructura por bounded context; acceder a otros contextos mediante sus fachadas/ACL. Conservar extensiones `.js` en imports ESM según el patrón existente. | Guías de implementación en `docs/Bounded Contexts/`; `.prettierrc` declara comillas simples y coma final; `oxlint.json` y `tsconfig*.json` definen las verificaciones reales. |
+| **React / TSX** | Componentes y archivos de componentes en `PascalCase`, hooks con prefijo `use`, props tipadas e imports directos sin barrels de componentes cliente. Separar Server Actions y composición de la presentación. | `AGENTS.md` del frontend y [React](https://react.dev/learn). Atomic Design: `atoms`, `molecules`, `organisms`, `templates`. |
+| **HTML5** | Elementos semánticos, títulos jerárquicos, atributos e IDs descriptivos en inglés para nuevo código; `label` asociado a cada control, botones para acciones y enlaces para navegación. ARIA complementa la semántica nativa. | [MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML). Conservar IDs existentes cuando sean destinos de enlaces. |
+| **CSS3 / Tailwind CSS** | Clases CSS en `kebab-case`, custom properties semánticas y estilos responsive. En frontend, los valores visuales se definen en los tokens de `app/globals.css` y se reutilizan desde los componentes. | VDS de 6.1 y [MDN CSS](https://developer.mozilla.org/en-US/docs/Web/CSS). Evitar colores y valores visuales arbitrarios fuera de los tokens. |
+| **Solidity** | Contratos, structs, eventos y errores en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`. Declarar licencia SPDX, pragma, visibilidad y NatSpec en interfaces públicas. | [Solidity Style Guide](https://docs.soliditylang.org/en/latest/style-guide.html). Compilador configurado: `0.8.28`. |
+| **SQL / TypeORM** | Tablas y columnas en `snake_case` mediante `SnakeNamingStrategy`; clases de entidad en `PascalCase`; cambios de esquema mediante migraciones versionadas con identificador temporal y descripción. No modificar una migración ya aplicada en un ambiente compartido. | Configuración TypeORM y migraciones de `src/migrations/`. |
+| **Gherkin** | Archivos `kebab-case.feature`, keywords y escenarios en inglés; una capacidad por `Feature` y un comportamiento por `Scenario`. Separar precondiciones (`Given`), acción (`When`) y resultado observable (`Then`). Usar `Scenario Outline` sólo para variantes con estructura común. | [Cucumber: Writing better Gherkin](https://cucumber.io/docs/bdd/better-gherkin/). El backend contiene tres features y Steps; la evidencia de ejecución funcional está pendiente. |
+| **Markdown / JSON / YAML** | Encabezados consistentes, enlaces relativos comprobables, imágenes con texto alternativo y recursos versionados. JSON válido sin comentarios; YAML con espacios, sin tabulaciones. | Convenciones del informe y configuración de cada repositorio. No incluir secretos ni evidencias con datos personales sin anonimizar. |
 
-La configuración de Prettier establece comillas simples y `trailingComma: 'all'`; el script `format` aplica esta herramienta a los archivos TypeScript de `src` y `test`. Oxlint se ejecuta mediante el script `lint` sobre `src` y `test`; su configuración mantiene explícitamente desactivada la regla `no-explicit-any` y reporta como advertencia `no-floating-promises`. Estas excepciones son parte de la configuración vigente y no deben reinterpretarse como cumplimiento absoluto de todas las reglas posibles. La compilación TypeScript se realiza con `strict: true`, aunque `strictPropertyInitialization` está desactivado en el `tsconfig`, por lo que ambas decisiones deben considerarse al revisar cambios.
+En frontend, `lib/domain` contiene reglas y tipos puros; `lib/application` depende de puertos del dominio; `lib/infrastructure` implementa adaptadores; `components` presenta datos y emite eventos; `app` realiza la composición. El copy de negocio se centraliza en `lib/ui/copy.ts`; Zod valida en dominio. ESLint restringe importaciones entre capas. Las sesiones se manejan mediante cookies HTTP-only, sin trasladar secretos a `localStorage`.
 
-En las APIs se conservan los principios RESTful documentados en los capítulos tácticos: recursos con URLs jerárquicas, verbos HTTP según la operación y DTOs validados en la frontera. `main.ts` aplica `ValidationPipe` con `whitelist` y `transform`, y `app.module.ts` centraliza la carga de configuración, TypeORM, el emisor de eventos y los módulos de los once bounded contexts. Las entidades de persistencia usan una estrategia de nombres `snake_case`, mientras que el código TypeScript utiliza identificadores en `camelCase` y las clases en `PascalCase`.
+En Voting se conserva la distinción entre intención y hecho confirmado: `SIGNED`, `QUEUED`, `SENT`, `CONFIRMED` y `FAILED` no se intercambian. Las revisiones deben comprobar que sólo los votos confirmados participen en el escrutinio y que las instantáneas congeladas no se reemplacen por políticas o membresías vivas.
 
-Como control de consistencia, una contribución debe conservar la convención de idioma y nomenclatura, pasar por el formateador y el linter configurados, mantener la independencia del dominio respecto de frameworks y registrar en el commit la razón del cambio. Cuando una decisión no esté respaldada por una regla automatizada —por ejemplo, la uniformidad del idioma de los comentarios o la calidad semántica de un nombre— debe verificarse durante la revisión por pares.
+Ejemplo de especificación BDD propuesta para `test/features/confirmed-vote-tally.feature`:
+
+```gherkin
+@US-27
+Feature: Tally confirmed votes
+  Scenario: Exclude a vote awaiting ledger confirmation
+    Given a closed proposal has one confirmed vote for "Approve"
+    And another vote for "Approve" is awaiting ledger confirmation
+    When the proposal tally is calculated
+    Then the count for "Approve" is 1
+```
+
+#### **Verificación de convenciones**
+
+| Repositorio | Comandos existentes que deben registrarse en la evidencia | Alcance |
+|---|---|---|
+| Backend | `pnpm lint`, `pnpm test`, `pnpm test:e2e`, `pnpm build` | Análisis estático, pruebas y compilación. Las E2E requieren los servicios y condiciones indicados por sus fixtures. `pnpm format` modifica archivos y se ejecuta antes de revisar el diff. |
+| Frontend | `pnpm lint`, `pnpm test`, `pnpm build` | Reglas de Next.js y capas, pruebas unitarias/de componentes y compilación; son los controles indicados por su `AGENTS.md`. |
+| Landing | `node --check app.js` y revisión manual en navegador | Sintaxis JavaScript y revisión responsive, i18n, teclado, contraste, enlaces y formulario. No existe un script de pruebas automatizadas del sitio. |
+| Informe | `git diff --check` y revisión de Markdown, tablas, referencias y recursos locales | Consistencia documental y ausencia de errores de whitespace; no sustituye la revisión de contenido. |
+
+Estos comandos definen controles reproducibles, no resultados ya obtenidos. No se encontró `.orchestrator/config.json` en los repositorios revisados; las comprobaciones anteriores se derivan de los scripts y reglas efectivamente versionados.
 
 ### **7.1.4. Software Deployment Configuration.**
 
-La arquitectura de despliegue registrada en la sección 4.3.4 propone Google Cloud Platform como plataforma del MVP, con región `southamerica-east1`, componentes contenerizados, Artifact Registry, HTTPS perimetral mediante Cloud Load Balancing y Cloud CDN, y secretos administrados en Secret Manager. La solución contempla un frontend Next.js, el API como monolito modular NestJS, PostgreSQL administrado, un worker de relay y las integraciones con la red blockchain, correo y proveedores de identidad. Esta sección 7.1 toma esa decisión como configuración objetivo, pero no la presenta como una ejecución comprobada.
+#### **Base del despliegue y decisiones pendientes**
 
-En el backend sí se verifican los parámetros necesarios para preparar una ejecución por ambiente. `ConfigModule.forRoot` carga `.env.local` y `.env`, valida las variables con Joi y registra configuraciones para aplicación, base de datos, Swagger, AWS, Azure, OCR, biometría, wallet, relay, IAM, idempotencia y verificación. La conexión TypeORM utiliza PostgreSQL, carga entidades automáticamente, mantiene `synchronize` parametrizable y declara las migraciones en `dist/migrations/*.js`; la configuración efectiva de ejemplo mantiene la sincronización desactivada. Swagger se expone bajo una ruta configurable y la aplicación bajo el prefijo configurable del API.
+El destino de infraestructura **Google Cloud Platform** procede del diseño de 4.3.4, que contempla Artifact Registry, Cloud Load Balancing, Cloud CDN y Secret Manager; 4.3 también identifica PostgreSQL 16 sobre Cloud SQL. La región `southamerica-east1` figura como sugerencia, no como recurso provisionado. Esta sección desarrolla el procedimiento necesario para materializar ese diseño con los repositorios actuales. No se dispone todavía de evidencia de una instalación pública completa.
 
-Para el ledger, el subproyecto `contracts` define Solidity 0.8.28 con optimización habilitada, redes Hardhat local, localhost y Polygon Amoy, y scripts separados para compilar y desplegar. El backend, a su vez, parametriza RPC, chain ID, dirección del ledger, payer, timeout de confirmación, driver de cola y número máximo de reintentos. Los valores operativos —claves, endpoints privados, direcciones generadas y secretos— deben inyectarse en el ambiente de ejecución o en un gestor de secretos; no se incluyen en este informe.
+La configuración actual introduce dos precisiones frente al diagrama previo: la landing es un sitio estático independiente de Next.js, y el proveedor OCR implementado es Azure Document Intelligence. Además, `DeliveryWorker` se registra en el módulo de relay importado por `AppModule`: actualmente comparte proceso con la API. Su despliegue como worker independiente requiere separar el arranque y no se considera una capacidad ya implementada. El diagrama siguiente representa estas condiciones sin elegir un servicio de cómputo que el proyecto todavía no ha concretado.
 
-La configuración de ejecución local y la configuración cloud tienen alcances distintos:
+#### **Deployment Diagram del C4 Model**
 
-| Ambiente | Artefactos verificables | Propósito | Evidencia faltante para declararlo operativo |
-|---|---|---|---|
-| Desarrollo | `docker-compose.yml`, `.env.example`, scripts pnpm y `contracts` | Ejecutar dependencias locales y validar el código | Resultado de una ejecución concreta, versión del runtime y evidencia de pruebas en el entorno |
-| Frontend preview/producción | Proyecto Next.js, `package.json`, `pnpm-lock.yaml` y documentación de despliegue en Vercel del README | Construir y publicar la Web Application | URL real del proyecto Vercel, configuración del proyecto y evidencia de build/publicación |
-| Landing Page | Archivos estáticos `index.html`, `styles.css`, `app.js` y `terms.html`; captura de *Settings → Pages* facilitada por el equipo y registro de [Actions](./assets/LandingPageDeploy.png) | Publicada en [GitHub Pages](https://morocoders-arq-9056.github.io/votochain-web-landing/) desde la rama `main`, carpeta `/(root)`, con HTTPS obligatorio | La captura de Actions acredita ejecuciones exitosas; no muestra el commit específico ni los logs de cada ejecución |
-| Integración/staging | Variables parametrizadas, migraciones, artefactos compilados y documentación de arquitectura | Validar integración entre API, persistencia, cola, proveedores y ledger | Pipeline, definición del servicio, imagen publicada, logs y URL de ambiente |
-| Producción objetivo | GCP, Artifact Registry, balanceador/CDN, Secret Manager y servicios administrados descritos en 4.3.4 | Operar la solución con separación de secretos y componentes escalables | Infraestructura como código, políticas de acceso, procedimiento de rollback, monitoreo y evidencia de despliegue |
+**Ambiente representado: integración objetivo en GCP, con Polygon Amoy como red de pruebas.** Los nodos cloud muestran la distribución prevista; no acreditan recursos activos. Se representan instancias de aplicaciones y sus nodos de ejecución, conforme al [C4 Deployment Diagram](https://c4model.com/diagrams/deployment).
 
-Por tanto, el estado verificable del SCM y de la configuración de desarrollo es suficiente para reproducir la preparación local del backend, pero el despliegue cloud permanece como una decisión arquitectónica y un pendiente de implementación/documentación. No se encontró en el backend revisado un `Dockerfile`, un pipeline CI/CD ni manifiestos de infraestructura que permitan probar una promoción automática entre ambientes. Estos artefactos deben incorporarse antes de afirmar cumplimiento completo del ciclo de deployment exigido por el logro del curso.
+![Diagrama C4 de despliegue objetivo de VotoChain en GCP, exportado desde Visual Paradigm](assets/architecture/votochain-deployment.png)
 
-El procedimiento reproducible que sí puede documentarse a partir del repositorio es el siguiente:
+**Figura 7.1.4-1.** Distribución de las unidades desplegables de VotoChain en el ambiente de integración objetivo. Artifact Registry y Secret Manager son servicios de soporte del diseño previo; su incorporación a la configuración ejecutable sigue pendiente.
 
-1. Clonar el repositorio del backend y entrar en `backend/votochain-api-backend`.
-2. Instalar dependencias con `pnpm install`, respetando `pnpm-lock.yaml`.
-3. Crear el archivo de entorno a partir de `.env.example` e inyectar valores válidos sin subir secretos.
-4. Levantar PostgreSQL y Redis para desarrollo mediante `docker compose up -d`.
-5. Ejecutar las migraciones TypeORM requeridas con `pnpm migration:run`.
-6. Ejecutar `pnpm run lint`, `pnpm run test`, `pnpm run test:e2e` y `pnpm run build`.
-7. Iniciar el servicio con `pnpm run start:prod`; Swagger queda bajo la ruta configurada y la API bajo el prefijo configurado.
-8. En el frontend, entrar en `frontend/votochain-web-frontend`, ejecutar `pnpm install`, `pnpm lint`, `pnpm test`, `pnpm build` y `pnpm start`; para Vercel, enlazar el repositorio, seleccionar pnpm y configurar las variables del cliente sin exponer secretos.
-9. La Landing Page se publica en [GitHub Pages](https://morocoders-arq-9056.github.io/votochain-web-landing/). Según la captura de configuración proporcionada por el equipo, en `Settings → Pages → Build and deployment` la fuente es `Deploy from a branch`, con rama `main` y carpeta `/(root)`; la opción `Enforce HTTPS` está activada. Los archivos `index.html`, `styles.css`, `app.js` y `terms.html` se encuentran en la raíz del repositorio, sin script de build. Al actualizar la rama fuente, GitHub Pages publica el contenido de esa carpeta mediante su flujo de compilación y despliegue ([GitHub, s. f.](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)).
-10. Para el contrato, el código verificable actualmente se encuentra en `backend/votochain-api-backend/contracts`; ejecutar `pnpm compile` y utilizar `pnpm deploy:local` o `pnpm deploy:amoy` únicamente después de configurar la red y las credenciales fuera del repositorio.
+La imagen corresponde a la exportación proporcionada desde Visual Paradigm. Las fuentes editables se conservan en [YAML](assets/architecture/votochain-deployment.yaml) y [PlantUML](assets/architecture/votochain-deployment.puml), con las declaraciones compatibles corregidas. El YAML es un modelo documental propio que incluye el código PlantUML; no es un manifiesto de GCP ni un esquema de importación C4 nativo verificado. Para editar el diagrama, abrir el [editor PlantUML / VPasCode](https://www.visual-paradigm.com/features/plantuml-editor/) y pegar el contenido del archivo `.puml`, que utiliza C4-PlantUML.
 
-La captura de [Actions del repositorio de la Landing Page](./assets/LandingPageDeploy.png) registra tres ejecuciones exitosas del workflow `pages-build-deployment` sobre `main`: una el 6 de octubre y dos el 8 de octubre de 2026. Constituye evidencia del proceso de publicación; la captura no expone los identificadores de commit ni el detalle de los logs.
+#### **Ambientes y estado de configuración**
 
-<p align="center">
-  <img src="./assets/LandingPageDeploy.png" alt="Ejecuciones exitosas de GitHub Pages para la Landing Page" width="900"/>
-</p>
+| Ambiente | Configuración y finalidad | Estado respaldado por los repositorios |
+|---|---|---|
+| Desarrollo local | Landing servida por HTTP; Next.js en 3000; API en 4000 con prefijo `/api/v1`; PostgreSQL 5432 y Redis 6379. | Existen scripts de arranque, Compose para datos/cola y variables de configuración. Los puertos 3000/4000 se coordinan según 7.1.1. |
+| Prototipo de interfaz | `USE_MOCK_API=true`, datos simulados y escenarios de demostración. | Hay adaptadores fake; este ambiente permite revisar UX y no acredita integración con servicios reales. |
+| Integración / staging | API y frontend con contratos compatibles, base separada, recursos de pruebas de AWS/Azure y ledger Polygon Amoy (`chainId=80002`). | Existen adaptadores y configuración; faltan evidencias completas de provisión, URLs, ejecución y despliegue integrado. |
+| Producción | Infraestructura objetivo GCP del capítulo IV, recursos aislados, HTTPS y versión aprobada. | Es arquitectura objetivo. No se identificaron Dockerfiles de aplicación, workflows de GitHub Actions ni manifiestos de despliegue que permitan afirmar automatización o disponibilidad productiva. |
 
-<p align="center"><em>Figura 7.1.4. Registro de publicación de la Landing Page en GitHub Actions.</em></p>
+El frontend requiere ejecución de Next.js por sus Server Actions y cookies de sesión; no se tratará como exportación estática. La landing se publica como archivos estáticos independientes. La API y el worker necesitan acceso a PostgreSQL y Redis. La asignación concreta de servicios de cómputo, dominios y recursos cloud deberá confirmarse y documentarse antes de presentar una URL como evidencia de entrega.
 
-Los pasos anteriores cubren el backend, el frontend, la Landing Page y el contrato con el nivel de evidencia actualmente disponible. El frontend tiene comandos de build y documentación de publicación en Vercel, pero no se encontró una URL de despliegue ni un pipeline versionado. Para la Landing Page, la URL pública, la captura de `Settings → Pages` y el registro de Actions sustentan la configuración y la ejecución exitosa de su publicación. El clon local del repositorio independiente del contrato no contiene fuente; por ello, la evidencia de compilación y despliegue del smart contract debe mantenerse vinculada al subproyecto `backend/votochain-api-backend/contracts` o completarse en el repositorio independiente. La publicación cloud prevista en la sección 4.3.4 requiere completar estas evidencias.
+#### **Parámetros y separación de configuración**
 
-<p align="center">
-  <img src="./assets/c4-deployment.png" alt="C4 Deployment GCP" width="700"/>
-</p>
+| Componente | Configuración que debe mantenerse por ambiente |
+|---|---|
+| API NestJS | `NODE_ENV`, `SERVER_PORT`, `API_PREFIX` y `CORS_ALLOWED_ORIGINS`. Permitir únicamente los orígenes previstos para la aplicación; conservar compatibilidad con peticiones con credenciales. |
+| Persistencia | `DB_HOST`, `DB_PORT`, `DB_USERNAME`, `DB_PASSWORD`, `DB_NAME`, `DB_LOGGING` y `DB_SYNCHRONIZE`. En ambientes compartidos usar `DB_SYNCHRONIZE=false` y aplicar migraciones explícitas; TypeORM declara `migrationsRun: false`. |
+| Aplicación web | `NEXT_PUBLIC_API_URL` incluye la URL base y el prefijo REST. Es un valor público, no un secreto; se fija al construir la aplicación. `USE_MOCK_API=false` selecciona adaptadores HTTP donde estén implementados. |
+| Proveedores de identidad | Región, endpoints y permisos de AWS/Azure según `.env.example` y los módulos de configuración. Las credenciales se suministran por mecanismos privados del ambiente. |
+| Ledger / cola | URL RPC, red, contrato desplegado, pagador, política de confirmación/reintentos y conexión Redis según la configuración del relay. En Hardhat, `AMOY_RPC_URL` y `AMOY_PAYER_KEY` parametrizan el despliegue de prueba. Nunca publicar claves ni semilla de custodia. |
+| OpenAPI | `SWAGGER_TITLE`, `SWAGGER_DESCRIPTION`, `SWAGGER_VERSION` y `SWAGGER_PATH`; ruta predeterminada `api/docs`. La versión documentada debe corresponder a la entrega evaluada. |
 
-**Figura. Deployment Diagram C4 de VotoChain.** La figura representa la configuración objetivo documentada para GCP. No debe interpretarse como evidencia de que el despliegue automatizado se haya ejecutado satisfactoriamente.
+El repositorio conserva plantillas y nombres de parámetros; los valores privados se gestionan fuera de Git. Las credenciales de servicios locales deben ser exclusivas para desarrollo y no reutilizarse en staging o producción. La publicación de evidencias ocultará correos, imágenes biométricas, claves y datos personales.
+
+#### **Procedimiento de preparación y publicación de una versión**
+
+1. Identificar los SHA de los repositorios y la release candidata. Revisar diferencias de contratos entre frontend y backend; actualmente el registro y login locales del backend requieren contraseña, mientras que sus adaptadores de frontend aún no la envían.
+2. Instalar con los lockfiles, ejecutar los controles de 7.1.3 y registrar sus resultados. Corregir incompatibilidades antes de declarar un incremento integrado.
+3. Preparar base y cola del ambiente, respaldo y migraciones. Ejecutar `pnpm migration:run` de forma controlada y verificar el esquema esperado. Compilar backend con `pnpm build`; el script de arranque disponible es `pnpm start:prod`, cuya ruta al artefacto deberá comprobarse contra la salida generada.
+4. Construir frontend con `pnpm build` usando la URL pública correcta de la API y ejecutarlo con `pnpm start`. La landing se publica en GitHub Pages desde `main` y `/(root)`; conservar rutas a assets y términos.
+5. Para una prueba blockchain, completar primero las dependencias y lockfile del subproyecto `contracts/`, compilar con su script `compile` y ejecutar `deploy:amoy` sólo en el ambiente autorizado. Registrar dirección del contrato, red y transacción; configurar el relay con esa misma revisión del contrato. La presencia de scripts no acredita que este paso se haya ejecutado.
+6. Verificar registro, OTP, sesión, identidad, elegibilidad, voto, confirmación y escrutinio con datos de prueba. El correo sigue usando un adaptador `LogOnly`, las sesiones de backend un ejecutor `Noop` y la prueba de identidad externa un servicio `Fake`; estos pendientes deben resolverse o delimitarse expresamente en la demostración.
+7. Incorporar en 7.2 las URLs verificadas, fecha, versiones, resultados y limitaciones; etiquetar la versión aprobada y publicar sus notas mediante revisión del equipo. Conservar la revisión anterior para reversión de aplicación. Una reversión de base requiere evaluar migraciones y respaldo; `migration:revert` no constituye por sí solo un rollback seguro.
+
+#### **Secuencia ejecutable desde los repositorios**
+
+La siguiente secuencia prepara los artefactos localmente; la publicación cloud requiere completar previamente la elección del runtime y los archivos de despliegue. Los comandos se ejecutan desde las carpetas indicadas y se detienen ante cualquier fallo.
+
+**API — carpeta `votochain-api-backend`:**
+
+```bash
+pnpm install --frozen-lockfile
+docker compose up -d postgres redis
+pnpm migration:run
+pnpm lint
+pnpm test
+pnpm test:e2e
+pnpm build
+pnpm start:prod
+```
+
+Antes de ejecutar, preparar `.env` desde `.env.example`, ajustar `DB_*` a los servicios levantados y configurar `SERVER_PORT=4000`, `API_PREFIX=api/v1`, `CORS_ALLOWED_ORIGINS=http://localhost:3000` y `DB_SYNCHRONIZE=false`. `tsconfig.build.json` define `src` como raíz y `dist` como salida; debe comprobarse la generación de `dist/main.js` y el arranque real del script. La documentación OpenAPI se espera en `http://localhost:4000/api/docs`, salvo modificación de `SWAGGER_PATH`. Para BullMQ se requiere `QUEUE_DRIVER=bullmq` y `REDIS_URL` válido; se debe comprobar el arranque del worker, porque el código captura errores de inicialización y puede continuar sin el consumidor de BullMQ.
+
+**Aplicación — carpeta `votochain-web-frontend`:**
+
+```bash
+pnpm install --frozen-lockfile
+pnpm lint
+pnpm test
+pnpm build
+pnpm start
+```
+
+Definir `NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1` y `USE_MOCK_API=false` antes de construir. Para publicación, sustituir la URL por la del ambiente de destino y reconstruir. Validar con el backend el registro y login con contraseña antes de aceptar este flujo como operativo. El panel de padrón y la selección de un adaptador fake para membresías deben constar como limitaciones del incremento evaluado.
+
+**Landing — carpeta `votochain-web-landing`:** comprobar `node --check app.js`, conservar `index.html`, `terms.html`, `styles.css`, `app.js` y `assets/` en la raíz de `main` y abrir [la URL publicada en GitHub Pages](https://morocoders-arq-9056.github.io/votochain-web-landing/) por HTTPS. La captura de `Settings → Pages` facilitada por el equipo muestra `Deploy from a branch`, `main`, `/(root)` y `Enforce HTTPS`; [Actions](./assets/LandingPageDeploy.png) registra tres ejecuciones exitosas de `pages-build-deployment` sobre `main` (6 y 8 de octubre de 2026). La publicación debe comprobar cambio de idioma, enlaces legales, carga de imágenes y navegación móvil. El enlace de ingreso todavía apunta a `#inicio` y deberá enlazarse con la aplicación publicada; el formulario requiere un mecanismo real de recepción antes de anunciar envío efectivo.
+
+![Tres ejecuciones exitosas del despliegue de la Landing Page en GitHub Actions](./assets/LandingPageDeploy.png)
+
+**Figura 7.1.4-2.** Registro de publicación de la Landing Page en GitHub Actions. La captura muestra el estado y la rama, pero no los SHA ni los logs de cada ejecución.
+
+**Contrato — carpeta `votochain-api-backend/contracts`:** completar las dependencias Hardhat y su lockfile como cambio de software independiente; después ejecutar `pnpm compile` y `pnpm deploy:amoy` con la cuenta de prueba autorizada. Registrar la dirección obtenida en `AMOY_LEDGER_ADDRESS`, así como `AMOY_RPC_URL`, `AMOY_CHAIN_ID=80002`, `AMOY_PAYER_ADDRESS` y la clave privada del pagador mediante configuración privada. La cadena del RPC, el contrato y el dominio de firma deben coincidir. Un hash de ejemplo no sustituye una transacción confirmada observable en la red.
+
+**Informe — carpeta `votochain-project-document`:** conservar el Markdown y las fuentes del diagrama en GitHub; comprobar que los enlaces relativos y las imágenes se muestran en la rama revisada. La publicación de una versión del informe se identifica mediante su SHA y, cuando el equipo apruebe una release, mediante su tag. No requiere desplegar un servidor de aplicación.
+
+#### **Paso de artefactos locales a infraestructura y evidencia de aceptación**
+
+Para materializar GCP deben completarse: elección de servicio de cómputo compatible con Next.js y el worker persistente, elección de alojamiento estático y Redis, Dockerfiles y contexto de build, creación de imágenes en Artifact Registry, aprovisionamiento de Cloud SQL, permisos y entrega de secretos, rutas de Load Balancing, certificado HTTPS y configuración de CDN. No se almacenarán en caché respuestas de sesión, datos personales ni resultados individualizados. Estos son requisitos de ejecución del diseño, no recursos creados por esta documentación.
+
+El cierre del despliegue exige registrar por producto: SHA/tag, URL pública o dirección del contrato, ambiente, fecha, responsable y resultado de smoke tests. Para el flujo integrado se comprobarán acceso, OTP con entrega real, identidad, membresía, autorización, voto, confirmación y escrutinio. Se conservarán logs anonimizados y evidencia de la transacción de Amoy. Para el informe y la landing se comprobarán enlaces y recursos. Las URLs, capturas y resultados se incorporarán en 7.2.1.5–7.2.1.7 cuando existan; no se completan con valores supuestos.
+
+Este procedimiento establece los pasos y condiciones de publicación de cada producto. El estado actual permite preparar artefactos y configurar integraciones, pero aún requiere resolver los bloqueos indicados y aportar evidencia antes de declarar satisfactorio el despliegue completo.
 
 ## **7.2. Solution Implementation.**
 
@@ -5450,7 +5552,265 @@ A continuacion se encuentra el sprint planning orientado a nuestro primer sprint
 
 #### **7.2.1.2. Sprint Backlog 1.**
 
+Para este primer Sprint, nuestro objetivo principal es desarrollar la **Landing Page de VotoChain** y desarrollar un avance del sistema base de la aplicación, asi como implementar las primeras funcionalidades. Para lograrlo, hemos creado tareas específicas para cada historia de usuario relacionada con la landing y algunas tecnicas relacionadas con el backend, las hemos asignado entre los integrantes del equipo. Además, para una mejor organización y seguimiento del Backlog, estamos utilizando la herramienta **Trello**  
+
+*Figura* <br>
+*Sprint 1 de VotoChain*
+<p align="center">
+  <img src="imgs/SprintBacklog1.png" alt="PB" width="850">
+</p>
+
+Sprint Backlog 1 en Trello: 
+
+| Sprint # | Sprint 1 |  |  |  |  |  |  |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+| User Story |  | Work Item/Task |  |  |  |  |  |
+| Id | Title | Id | Title | Description | Estimation (Hours) | Assigned To | Status |
+| US-01 | Conocer la propuesta de valor | T01 | Implementar sección Hero | Desarrollar el bloque hero de la landing con titular principal, subtítulo y botones de acción (CTA). | 3 | Paredes Santos, Fabrizio | Done |
+|  |  | T02 | Implementar barra de confianza | Desarrollar la franja con los tres pilares de VotoChain (identidad verificada, verificabilidad pública, accesibilidad). | 2 | Paredes Santos, Fabrizio | Done |
+| US-02 | Explorar funcionamiento, confianza y privacidad | T03 | Implementar sección "Cómo funciona" | Desarrollar el bloque de tres pasos que describe el flujo de registro, verificación, votación y comprobación. | 3 | Paredes Santos, Fabrizio | Done |
+|  |  | T04 | Implementar sección de seguridad y privacidad | Desarrollar el bloque de principios de seguridad por diseño con consentimiento, estados sin ambigüedad y minimización de datos. | 2 | Paredes Santos, Fabrizio | Done |
+| US-03 | Solicitar información o demostración | T05 | Implementar formulario de contacto | Desarrollar el formulario de solicitud de demo con validaciones de campos obligatorios, consentimiento de tratamiento de datos y confirmación de envío. | 4 | Paredes Santos, Fabrizio | Done |
+| US-04 | Registrar una cuenta | T06 | Implementar endpoint POST /users/signup | Crear el comando signUp en IAM: validar persona y correo únicos, crear usuario en estado REGISTERED y solicitar verificación de correo. | 4 | Aliaga Aguirre, Ethan | Done |
+|  |  | T07 | Implementar pantalla de registro en frontend | Desarrollar el formulario de creación de cuenta con validaciones inline y flujo de confirmación de registro. | 3 | Ríos Pacheco, Héctor | Done |
+| US-05 | Verificar el correo mediante OTP | T08 | Implementar endpoint POST /challenges | Crear el comando de solicitud de desafío OTP en Verification: generar código temporal de un solo uso y solicitar entrega por correo. | 4 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T09 | Implementar endpoint POST /challenges/{id}/answers | Crear el comando de validación del código OTP: confirmar desafío dentro de vigencia e intentos permitidos sin conservar el código legible. | 3 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T10 | Implementar pantalla de verificación de correo | Desarrollar las pantallas de ingreso y validación del código OTP con estados de éxito, error y reenvío. | 3 | Ríos Pacheco, Héctor | Done |
+| US-06 | Iniciar y cerrar sesión | T11 | Implementar endpoint POST /users/signin y /users/signout | Crear los comandos signIn y signOut en IAM: abrir sesión única con reemplazo controlado y cerrar sesión con registro de motivo. | 4 | Aliaga Aguirre, Ethan | Done |
+|  |  | T12 | Implementar pantallas de inicio y cierre de sesión | Desarrollar el formulario de login con manejo de errores de credenciales y estado suspendido, y el flujo de cierre de sesión. | 3 | Ríos Pacheco, Héctor | Done |
+| US-07 | Recuperar credenciales y actualizar correo | T13 | Implementar endpoint POST /users/{id}/secret y /email | Crear los comandos changeSecret y changeEmail en IAM: validar desafío de recuperación, actualizar secreto e invalidar sesión abierta. | 4 | Bueno Perales, Mathias | Done |
+|  |  | T14 | Implementar pantallas de recuperación de acceso | Desarrollar las pantallas de solicitud de código, ingreso de nuevo secreto y confirmación de cambio de correo. | 3 | Ríos Pacheco, Héctor | Done |
+| US-08 | Registrar y activar una comunidad | T15 | Implementar endpoint POST /communities y POST /communities/{id}/activate | Crear los comandos register y activate en Community Management: validar datos, crear comunidad en estado REGISTERED y activarla cuando tenga admin y política definida. | 5 | Rodriguez Macedo, Sebastian | Done |
+|  |  | T16 | Implementar pantalla de registro de comunidad | Desarrollar el formulario de alta de comunidad con campos de nombre, domicilio y contacto, y el flujo de confirmación de activación. | 3 | Ríos Pacheco, Héctor | Done |
+
 #### **7.2.1.3. Development Evidence for Sprint Review.**
+
+
+**Votochain Landing Page**
+
+| Repository  | Branch | Commit Id | Commit | Message Body | Commited on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Morocoders-Arq-9056/votochain-web-landing | main | cd15ec8 | feat: create VotoChain landing page | - | Oct 2, 2026 |
+| Morocoders-Arq-9056/votochain-web-landing | main | 9a5ea82 | feat(landing): implement interactive demo request form with Ley 29733 consent, pricing section, and complete SEO metadata | - | Oct 5, 2026 |
+| Morocoders-Arq-9056/votochain-web-landing | main | 9791502 | chore: updating colors of sections | - | Oct 8, 2026 |
+| Morocoders-Arq-9056/votochain-web-landing | main | 77f8a09 | chore: update colors palette | - | Oct 8, 2026 |
+
+
+**Votochain Backend**
+
+| Repository | Branch | Commit Id | Commit | Message Body | Committed on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 8f4777d | first commit | - | Sep 05, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9015f8f | feat: add base shared context scaffold. | - | Sep 05, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 343a5c3 | add base documentation for each bounded context. | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0e16bb5 | feat: set up vite config | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 27bd68a | chore(iam): fix iam implementation guide. | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0b9eb64 | chore: update impl guides | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 28aaff5 | add new documentation | - | Sep 09, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3468238 | refactor(docs): adopt ddd-guideliness v1.0.7 conventions | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9a64bb4 | feat(iam): add UserId PersonId ContactAddress VOs | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f8b6ef4 | feat(iam): add User aggregate with supersede logic | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | efc7b7a | feat(iam): add user commands queries events rejections | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 470b1fa | docs(iam): document as-const unions and parsers | - | Sep 10, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | b0a8a8c | feat(iam): add first iam version | - | Sep 11, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5c489ba | feat(iam): define command and query service contracts. | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 70ec1de | feat(iam): add user repository. | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 1497195 | chore(root): add postgres typeorm docker bootstrap chore(shared): add application infrastructure interceptors | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e02683a | chore(iam): update value objects file reference. | - | Sep 12, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 37faaa5 | refactor(iam): add new repository methods to find user by email and by person id. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5c99e5d | refactor(iam): add getters methods for user aggregate. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5c26709 | feat(iam): add user and system role assignment persistence entities. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 88ca439 | feat(iam): add user repository finders with assignments.. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5b73c97 | feat(iam): add user persistence assembler. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3c1cbd5 | feat(iam): add user persistence assembler. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e4bd31a | refactor(iam): modify the find by person id method param. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | a7385b9 | refactor(iam): comment the unused handle methods. | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e35aed8 | refactor(iam): move PersonId generation to domain signup factory | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | b27123f | docs(iam): sync signup contract after PersonId factory move | - | Sep 13, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 179996e | chore(iam): add auth0 authentication provider. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3827958 | chore(iam): add sign up resources, assemblers and controller. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | aac79b1 | chore(iam): add proof service. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f2ae29f | add auth 0 dependencies. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 94f0c4b | add auth 0 dependencies. | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 7ee476a | chore(iam): revert signin scope from signup slice | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ff4bf62 | fix(iam): enforce user repository contract, unique email, load assignments | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | d2fbdce | fix(iam): enforce user repository contract, unique email, load assignments | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ee9b55a | update bounded context documentation | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5278cf9 | refactor(shared): promote PersonId to shared kernel | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f27f2ba | refactor(iam): named service methods per skill v1.0.11 | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 89f5dfa | feat(iam): signup endpoint with UserResource and exception filter | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ee6d776 | test(iam): signup unit specs and e2e groundwork | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 245f102 | chore: ignore tsc build info | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 708352d | update bounded context documentation | - | Sep 15, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | de94e8c | update bounded context documentation | - | Sep 16, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5650fcf | feat(iam): complete domain services and simplify roles to SystemRole[] simple-array | - | Sep 17, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | cf3e8bf | feat(iam): full 12-command application services with ports, facade impl, handlers and Sprint-01 fakes | - | Sep 17, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 7f3accc | feat(iam): full REST surface with 12 use cases, published IAM_CONTEXT_FACADE and module wiring | - | Sep 17, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 7ae19ce | docs(chapter-4): write ADD and QAW scenarios. | - | Sep 19, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 2881de3 | rm documents | - | Sep 21, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 53002c9 | docs(community,verification): align impl-guides to ddd-guideliness skill | - | Sep 21, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 58e5ea3 | feat(verification): add ChallengeId Purpose AttemptCount VOs | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 74499f9 | feat(verification): add ValidityWindow InvalidationReason Standing VOs | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 44e335c | feat(verification): add challenge lifecycle events without secrets | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 408772b | feat(verification): add verification commands and queries | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ae01f47 | feat(verification): add VerificationChallenge aggregate with answer | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 83a992b | feat(verification): add verification domain rejections | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f70ff5b | feat(verification): define command query repository ports | - | Sep 22, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 174cd29 | refactor(verification): expose aggregate state for persistence | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 35286d9 | feat(verification): add challenge persistence adapter | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 965e79d | feat(verification): add verification outbound ports | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 71f0328 | feat(verification): implement verification command service | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0101fdd | feat(verification): implement verification queries and confirmed handler | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9dc1202 | feat(verification): add Sprint-01 fakes and module wiring | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 0c6541d | feat(verification): add verification REST surface | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | c96dc1a | feat(verification): add verification context facade | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e018aeb | feat(verification): wire verification module | - | Sep 23, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | cb9435c | feat(community): add community value objects | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | bcbd6f5 | feat(community): add community domain events | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3c000ec | feat(community): add community domain rejections | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 2496268 | feat(community): add Community aggregate with lifecycle | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5ae3ada | feat(community): define community command query repository ports | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9aca37e | feat(community): add community persistence adapter | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 35a6fcb | feat(community): add community outbound port | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | a47e888 | feat(community): implement community command service | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 5848b7e | feat(community): implement community queries and event logger | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | a1842a8 | feat(community): add community module wiring | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f2f5ef6 | feat(community): add community REST surface | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 42842e5 | feat(community): add community context facade | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | d531e74 | feat(community): wire community module | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3d49785 | test(community): prove community lifecycle e2e | - | Sep 24, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 2155208 | Merge branch 'feat/community-slice' into develop | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 9d62c94 | refactor(verification): resource-oriented challenge endpoints | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 07ca561 | refactor(community): standing patch plus correct collection statuses | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 3a2b46b | refactor(iam): resource-oriented identity endpoints | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 6ef516f | test(e2e): align specs to RESTful paths | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e54d14a | docs(rest): align endpoint references to resource-oriented paths | - | Sep 25, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 4603624 | refactor(iam): flat users resource, three controllers | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | f853ca5 | refactor(community): three resource controllers | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 8894a9a | refactor(verification): challenges and answers controllers | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 45c5a05 | refactor(api): missing sub-resource reads plus 400 on absent filters | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | d9242f7 | test(e2e): align specs to flat paths | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 50b4731 | docs(rest): resource controllers per bounded context | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | e5ce175 | feat(iam): email-based sign-in and sign-out under auth | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | ecb487b | test(e2e): auth flows by email | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 8f098ee | docs(rest): auth resource flows | - | Sep 26, 2026 |
+| Morocoders-Arq-9056/votochain-api-backend | develop | 4a03efb | feat(iam): add identity history query contract | - | Sep 28, 2026 |
+
+
+**Votochain Frontend**
+
+| Repository | Branch | Commit Id | Commit | Message Body | Committed on (Date) |
+| :---- | :---- | :---- | :---- | :---- | :---- |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ff23748 | Initial commit from Create Next App | - | Oct 22, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | a607da1 | chore(root): add design and test tooling deps | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 5aa81fd | chore(config): enforce domain boundaries with eslint | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 0dba74b | feat(ui): add button and badge atoms with theme tokens | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 13dc8df | feat(domain): add eligibility and membership value objects | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 9dca627 | test(voting): add unit tests for eligibility rules | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 9466264 | feat(infra): add api client with es-pe error mapping | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f60e9bf | feat(auth): add protected route shells and middleware | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 63dc8da | feat(ui): update home with design-system components | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 591a101 | feat(ui): add form and dialog action utilities | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 202cce0 | merge(feat): integrate votochain base shell into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1798d1f | feat(ui): add input atom with label and error states | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 52f7e42 | merge(feat): integrate input atom into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1e1cc22 | feat(ui): add shared field variants for form controls | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 995f6bc | fix(ui): keep visible focus ring on input atom | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 289d82f | feat(ui): add password input with visibility toggle | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ab9c49f | feat(ui): add select atom with error state | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f13cbbf | feat(ui): add textarea atom for reason input | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 009fb07 | feat(ui): add otp input atom for six-digit code | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | cb5b7d9 | feat(ui): add spinner atom | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 28f02ce | feat(ui): add ghost variant to button | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e83afea | feat(ui): add loading state to button | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e318827 | style(ui): fix badge line height to 15px | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 701281b | feat(ui): export new atoms from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 20a1aa8 | refactor(ui): reduce select atom to line budget | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c7c3452 | merge(feat): integrate ui atom library into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 33c9986 | chore(root): add component testing dependencies | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1a2fa4a | chore(config): configure vitest for component testing | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 0f07c74 | feat(auth): add otp box molecule with expiry timer | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 067f046 | feat(voting): add vote authorization checklist organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 57833ef | test(voting): add integration tests for authorization checklist | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4abf00f | merge(feat): integrate authorization ui into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 9d03c18 | feat(ui): add radio card atom for selection | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d35b356 | feat(voting): add vote form organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | b285f20 | test(voting): add integration tests for vote form | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4b64fc7 | feat(voting): add sign modal organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 88ad1d5 | test(voting): add integration tests for sign modal | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 741edce | feat(infra): add vote status labels for es-pe messages | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d925113 | style(ui): collapse export type statement in organisms barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4daddff | feat(ui): export sign modal and vote form from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ff9962d | merge(feat): integrate ballot ui into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1022777 | feat(ui): add step dot atom for receipt timeline | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 94d6854 | feat(voting): add vote receipt timeline organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 87f8492 | test(voting): add integration tests for receipt timeline | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1870a9e | feat(ui): export receipt timeline from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c50f881 | merge(feat): integrate receipt timeline into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 04c1a5e | feat(voting): add receipt value object | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c465b82 | refactor(voting): align step dot and receipt timeline with domain model | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f6ee8f0 | refactor(ui): rename radio card and vote form props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 71fce94 | refactor(voting): rename authorization checklist props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 39309de | refactor(auth): rename sign modal props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f3f2128 | refactor(auth): rename otp box props to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 7883016 | refactor(ui): rename input hint prop to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 8aaa4b4 | refactor(domain): rename consent record fields to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 0d8a4fe | refactor(domain): extract eligibility decision type with english reason | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c7b5b50 | refactor(infra): rename ui label constants to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 611abdb | refactor(ui): rename organism barrel exports to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | b8d96a1 | refactor(app): rename page components to english | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4fcf471 | refactor(app): import atoms directly instead of barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 557660a | feat(voting): add receipt application stub | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 948d5d8 | feat(ui): add receipt template | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c06d840 | feat(voting): render vote receipt page with async content | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ec27d40 | merge(feat): integrate receipt page and english ubiquitous language | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c4edb67 | feat(voting): add authorization case value object | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f2aba22 | refactor(voting): read checklist types from domain authorization model | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e012f64 | feat(ui): add bottom navigation organism | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f969c4f | test(ui): add integration tests for bottom navigation | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 655cce9 | feat(voting): add authorization application stub | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f443315 | feat(voting): add authorization flow with eligibility checklist | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 7f47995 | feat(voting): render authorization page with async content | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 076e560 | feat(voting): protect authorization route in middleware | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | b2394ed | feat(voting): add vote flow with signature modal | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4541400 | feat(voting): render vote page with async content | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 26ff119 | refactor(ui): export authorization types from domain module | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 85b2f70 | feat(ui): export bottom navigation from barrel | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | a7b60dd | merge(feat): integrate authorization flow into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 772c09d | feat(voting): add cast vote input value object | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | e375e33 | refactor(infra): throw typed api error with backend status | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 20a07be | feat(voting): add vote receipt mapper with es-pe error table | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4636dce | feat(voting): add voting api client with idempotent cast vote | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 3fbe8f7 | test(voting): add integration tests for voting api client | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4bda2f0 | merge(feat): integrate voting api client into develop | - | Oct 25, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4c0e4e3 | docs(root): add repository conventions for layered architecture | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | bc74aed | chore(config): enforce layer boundaries with restricted imports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d8db70f | chore(ui): remove shadcn theme from global styles | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 7f21528 | chore(root): drop unused styling and lint dependencies | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 3762c01 | feat(ui): add typography tokens for code and badges | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 2345c72 | feat(ui): add shared copy kernel with es-pe messages | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 6b1ac3f | feat(ui): add pet datetime formatter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | cd609ef | feat(ui): add timeline projection with visual states | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 699cc57 | feat(ui): add eligibility checklist projection | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | a6f1c68 | feat(voting): add eligibility snapshot value object | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 1f35f58 | feat(voting): add vote authorization outcome value objects | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | ee586c3 | feat(voting): add voter receipt value object with frozen journey | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | d4d4451 | feat(voting): add vote cast error codes | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 147ef92 | feat(voting): declare delivery and authorization ports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | f12d0e0 | feat(infra): add mock api switch to environment | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 5044160 | refactor(voting): implement delivery port with voting api adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 4a72598 | feat(voting): add authorization api adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 5fd3c7a | feat(voting): add fake delivery adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 2b0cc44 | feat(voting): add fake authorization adapter | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 61d0fa0 | feat(infra): add composition root for voting ports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | aec8216 | feat(voting): add cast vote application service | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | c7ee21a | feat(voting): add request authorization application service | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | bdfae25 | refactor(infra): make api error transport agnostic | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 14001c6 | chore(ui): remove component barrels in favor of direct imports | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 403672a | refactor(ui): use typography tokens in badge and otp input | - | Oct 27, 2026 |
+| Morocoders-Arq-9056/votochain-web-frontend | develop | 664a670 | refactor(ui): align select and textarea hint
+
+
 
 #### **7.2.1.4. Testing Suite Evidence for Sprint Review.**
 
@@ -5484,6 +5844,34 @@ A continuacion se encuentra el sprint planning orientado a nuestro primer sprint
 ## **7.3. Validation Interviews.**
 
 ### **7.3.1. Diseño de Entrevistas.**
+
+#### Segmento: Propietarios / socios votantes
+- ¿Qué tan fácil te resultó registrarte y entender para qué servía VotaChain como votante?
+- ¿Cómo fue tu experiencia al navegar desde el Landing hasta llegar a crear tu cuenta?
+- Al ver el aviso de “Te enviamos un código”, ¿entendiste para qué era y cuánto tiempo tenías?
+- ¿La pantalla de ingresar código de 6 dígitos te dejó claro cuántos intentos te quedaban?
+- ¿Pudiste usar sin problemas el botón Reenviar cuando el código no llegaba o se vencía?
+- ¿Entendiste la diferencia entre tener “Correo verificado” y poder votar en una comunidad?
+- ¿La pantalla de Login te pareció clara para entrar con tu correo?
+- ¿Entendiste qué pasa cuando dice “Se cerrará la sesión anterior” en otro dispositivo?
+- ¿La sección “Mi cuenta / Seguridad” te ayudó a ver tu estado, roles e historial?
+- ¿Sentiste que el diseño de registro y verificación era confiable y profesional desde el primer momento?
+- ¿Te sentiste cómodo verificando tu correo por internet directamente desde la plataforma?
+- ¿Qué cambiarías en la experiencia visual o funcional para que el registro y verificación sea aún más claro o rápido de usar?
+
+#### Segmento: Directivas y administradores de juntas de propietarios / cooperativas
+- ¿Tu comunidad ya tenía una forma de registrarse y organizarse? ¿Qué cambió con VotaChain?
+- ¿Te resultó fácil registrar tu comunidad con nombre, domicilio y contacto?
+- ¿El formulario de registro te pareció claro para saber qué sigue después: definir política y activar?
+- ¿La opción de definir Política de votación (umbral, base, mayoría) fue fácil de entender?
+- ¿Entendiste que los cambios de política solo aplican a futuras votaciones y no cambian las abiertas?
+- ¿Consideras útil ver el historial de versiones de la política directamente en la plataforma?
+- ¿VotaChain te permite tener control sobre activar, suspender y reactivar tu comunidad?
+- ¿Qué tan clara te parece la insignia de estado Registrada / Activa / Suspendida / Archivada?
+- ¿Entendiste que Archivada es terminal solo-lectura y Suspendida bloquea miembros y votaciones?
+- ¿La tabla de Administradores te pareció ágil para nombrar por correo y quitar con confirmación?
+- ¿Crees que el diseño transmite formalidad y confianza suficiente para una junta o asociación?
+- ¿Qué funcionalidades crees que le hacen falta a VotaChain para facilitarte la gestión como admin?
 
 ### **7.3.2. Registro de Entrevistas.**
 
@@ -5534,6 +5922,12 @@ Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfi
 
 | Referencia | Uso en el informe |
 |---|---|
+| Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/ | Workflow GitFlow, ramas feature, release y hotfix — 7.1.2. |
+| Preston-Werner, T. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/spec/v2.0.0.html | Versionado de releases y compatibilidad — 7.1.2. |
+| Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/ | Estructura y significado de mensajes de commit — 7.1.2. |
+| Google. (s. f.). *TypeScript Style Guide*. https://google.github.io/styleguide/tsguide.html | Nomenclatura y convenciones TypeScript/JavaScript adaptadas al proyecto — 7.1.3. |
+| Cucumber. (s. f.). *Writing better Gherkin*. https://cucumber.io/docs/bdd/better-gherkin/ | Convenciones para especificaciones de comportamiento legibles — 7.1.3. |
+| Solidity. (s. f.). *Style Guide*. https://docs.soliditylang.org/en/latest/style-guide.html | Convenciones de contratos Solidity — 7.1.3. |
 | Brown, S. (2022). *The C4 model for visualising software architecture*. https://c4model.com/ | Base conceptual para la continuidad posterior con diagramas C4. |
 | Clements, P., Kazman, R., & Klein, M. (2010). *Evaluating software architectures: Methods and case studies*. Addison-Wesley. | Base conceptual para relacionar decisiones arquitectónicas con atributos de calidad. |
 | ElectionBuddy. (s. f.). *Election audit*. https://electionbuddy.com/features/election-audit/ | Análisis competitivo. |
@@ -5550,10 +5944,5 @@ Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfi
 | NestJS. (s. f.). *Documentation*. https://docs.nestjs.com/ | Monolito modular — Cap IV–V. |
 | Google Cloud. (s. f.). *Document AI*. https://cloud.google.com/document-ai | OCR DNI — Cap IV–V. |
 | Amazon Web Services. (s. f.). *Rekognition*. https://aws.amazon.com/rekognition/ | Liveness/comparación — Cap IV–V. |
-| Cucumber. (s. f.). *Gherkin reference*. https://cucumber.io/docs/gherkin/reference/ | Convenciones para especificaciones `.feature` — Cap VII. |
-| Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/ | Fundamento del workflow GitFlow — Cap VII. |
-| Google. (s. f.). *TypeScript style guide*. https://google.github.io/styleguide/tsguide.html | Convenciones de código TypeScript — Cap VII. |
-| Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/ | Formato de mensajes de commit — Cap VII. |
-| Semantic Versioning. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/ | Convención de versionado de releases — Cap VII. |
 
 

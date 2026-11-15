@@ -5924,7 +5924,7 @@ La landing y las vistas de registro/login se revisaron localmente el 14/11/2026.
 
 #### **7.2.1.6. Services Documentation Evidence for Sprint Review.**
 
-La API dispone de configuración Swagger/OpenAPI en `src/shared/infrastructure/documentation/openapi/configuration/swagger.setup.ts`, con tags, DTOs y anotaciones en los controladores del sprint. El 14/11/2026 se verificó que la documentación generada abre localmente y se inspeccionaron capturas de grupos de endpoints presentadas para esta revisión. Estas imágenes acreditan navegación e inventario documentado, no ejecución de operaciones, y no se versionan conforme al alcance acordado. Algunos recursos de respuesta, como `ChallengeResource` y `CommunityResource`, no tienen propiedades anotadas con `@ApiProperty`; debe revisarse su representación real antes de declarar completos los esquemas. La declaración de Bearer en Swagger tampoco demuestra que exista un guard de autenticación aplicado.
+La API dispone de configuración Swagger/OpenAPI en `src/shared/infrastructure/documentation/openapi/configuration/swagger.setup.ts`, con tags, DTOs y anotaciones en los controladores del sprint. El 14/11/2026 se verificó que la documentación generada abre localmente y se inspeccionaron capturas de grupos de endpoints presentadas para esta revisión. Estas imágenes acreditan navegación e inventario documentado, no ejecución de operaciones. Algunos recursos de respuesta, como `ChallengeResource` y `CommunityResource`, no tienen propiedades anotadas con `@ApiProperty`; debe revisarse su representación real antes de declarar completos los esquemas. La declaración de Bearer en Swagger tampoco demuestra que exista un guard de autenticación aplicado.
 
 Repositorio: [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend). Base local propuesta en 7.1.1: `http://localhost:4000/api/v1`; [Swagger local](http://localhost:4000/api/docs). El puerto depende de `SERVER_PORT` y la documentación de `SWAGGER_PATH`; estas URLs son locales y no se ha verificado un despliegue público. En la tabla, `{id}` representa el identificador real devuelto por la operación previa; los cuerpos son JSON.
 
@@ -5979,7 +5979,17 @@ El alta identifica por separado al usuario técnico (`userId`) y a la persona (`
 | votochain-api-backend | develop | [2234b2a](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/2234b2a) | `feat(core): verification recovery, voting acl and cross-context fixes` | Sin cuerpo. Incluye cambios en los controladores de recuperación. | 10/11/2026 |
 | votochain-api-backend | develop | [c4e882e](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/c4e882e) | `refactor(community): extract standing command and harden persistence` | Extrae el comando de estado y centraliza parsing/persistencia. Resumen del cuerpo. | 02/10/2026 |
 
-**Verificación local de Swagger (14/11/2026):** `http://localhost:4000/api/docs` respondió correctamente usando un emulador local limitado para inicializar el servicio de Rekognition. No es un despliegue público ni habilita por sí solo todos los flujos de negocio. Las capturas revisadas muestran el inventario de usuarios, autenticación/notificaciones, consentimientos/desafíos, comunidades, membresías/propuestas, votos/biometría y billeteras/entregas. Son capturas de documentación generada, sin “Try it out” ni respuestas de operaciones; se descartaron y no se versionan conforme al alcance acordado.
+**Verificación local de Swagger (14/11/2026):** `http://localhost:4000/api/docs` respondió correctamente usando un emulador local limitado para inicializar el servicio de Rekognition. No es un despliegue público ni habilita por sí solo todos los flujos de negocio. Las capturas revisadas muestran el inventario de usuarios, autenticación/notificaciones, consentimientos/desafíos, comunidades, membresías/propuestas, votos/biometría y billeteras/entregas. Son capturas de documentación generada, sin “Try it out” ni respuestas de operaciones.
+
+Las siguientes capturas del Swagger local muestran los grupos de operaciones documentados; no representan ejecuciones de solicitudes:
+
+![Swagger: usuarios](assets/sprint-01-swagger-users.jpg)
+![Swagger: autenticación y notificaciones](assets/sprint-01-swagger-auth-notifications.jpg)
+![Swagger: consentimientos y desafíos](assets/sprint-01-swagger-consents-challenges.jpg)
+![Swagger: comunidades](assets/sprint-01-swagger-communities.jpg)
+![Swagger: membresías y propuestas](assets/sprint-01-swagger-memberships-proposals.jpg)
+![Swagger: votos y biometría](assets/sprint-01-swagger-votes-biometric.jpg)
+![Swagger: billeteras y entregas](assets/sprint-01-swagger-wallets-deliveries.jpg)
 
 **Interacciones aún pendientes:** usar “Try it out” con datos sintéticos para registrar evidencia de (1) alta y rechazo de correo duplicado, (2) login/logout, (3) creación/consulta/respuesta del desafío y (4) comunidad → política → activación. Cada captura debe mostrar método, URL, cuerpo, status y respuesta. Los ejemplos de esta sección son ilustrativos y no deben presentarse como respuestas capturadas. El arranque estándar también continúa condicionado por credenciales AWS; la verificación local del 14/11 utilizó un emulador limitado de `DescribeCollection`, sólo para inicializar Swagger.
 

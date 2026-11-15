@@ -5918,7 +5918,31 @@ Los wireframes y mock-ups de 6.4, incluidos `assets/wireframes_login.png` y `ass
 
 ##### **Capturas reales de ejecución local**
 
-La landing y las vistas de registro/login se revisaron localmente el 14/11/2026. El frontend se ejecutó con `USE_MOCK_API=true`, por lo que la revisión visual no demuestra integración ni autenticación real. Las capturas temporales se descartaron y no se incluyen en el repositorio; para reproducirlas, ejecutar las aplicaciones según 7.1.1 y capturar landing (portada, funcionamiento, contacto e inglés) y frontend (registro/login) en el navegador.
+Las capturas se tomaron localmente el 14/11/2026. El frontend se ejecutó con `USE_MOCK_API=true`, por lo que sus vistas no demuestran integración ni autenticación real.
+
+![Landing de VotoChain: portada y navegación](assets/sprint-01-landing-inicio.jpg)
+
+**Figura 7.2.1.5-1.** Portada y navegación de la landing (US-01).
+
+![Landing: sección cómo funciona](assets/sprint-01-landing-funcionamiento.jpg)
+
+**Figura 7.2.1.5-2.** Explicación del flujo propuesto (US-02).
+
+![Landing: formulario de contacto](assets/sprint-01-landing-contacto.jpg)
+
+**Figura 7.2.1.5-3.** Formulario de demostración (US-03); no acredita el envío de datos.
+
+![Aplicación: inicio de sesión en modo simulado](assets/sprint-01-app-login-mock.jpg)
+
+**Figura 7.2.1.5-4.** Inicio de sesión con adaptadores simulados (US-06).
+
+![Aplicación: registro en modo simulado](assets/sprint-01-app-registro-mock.jpg)
+
+**Figura 7.2.1.5-5.** Registro en modo simulado (US-04); no acredita creación de cuenta en backend.
+
+![Landing de VotoChain en inglés](assets/sprint-01-landing-ingles.jpg)
+
+**Figura 7.2.1.5-6.** Landing tras seleccionar el idioma inglés.
 
 **Preparación de la demostración:** servir la landing por HTTP; iniciar backend con `pnpm start:dev` y frontend con `pnpm dev` según 7.1.1. Para revisión visual aislada puede usarse `USE_MOCK_API=true`, identificando visiblemente que es un prototipo. El video del sprint deberá recorrer landing → registro → OTP → acceso/cuenta → comunidad/política, señalar los bloqueos y distinguir pasos simulados de respuestas reales. **Las capturas faltantes y la URL/duración del video siguen pendientes; no existe evidencia suficiente para declarar alcanzado todo el Sprint Goal.**
 

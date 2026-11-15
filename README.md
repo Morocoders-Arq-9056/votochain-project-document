@@ -1,4 +1,4 @@
-﻿
+
 <p align="center">
   <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
@@ -10,7 +10,7 @@
 <p align="center">
   <strong>Ingeniería de Software</strong> <br>
   <strong> CURSO: 1ASI0728 – ARQUITECTURAS DE SOFTWARE EMERGENTES </strong> <br>
-  <strong> NRC: 8056 </strong> <br>  
+  <strong> NRC: 9056 </strong> <br>
   <strong>PROFESOR(A): Valdivia Verde, Enrique Alejandro</strong> <br> <strong>
   INFORME DE TRABAJO FINAL </strong> <br>
   <strong> CICLO: 202620
@@ -83,19 +83,15 @@
 | 0.6 | 19/09/2026 | Rodriguez Macedo, Sebastian | Capítulo IV DDD: EventStorming, Candidate Discovery, Message Flows, Context Mapping. |
 | 0.7 | 02/10/2026 | Aliaga Aguirre, Ethan Matias | Correcciones forma TB1 + Student Outcome + control versiones GitFlow. |
 | 0.8 | 05-06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI UX: Information Architecture, wireframes/mock-ups landing desktop/mobile. |
-| 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad OTP/OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
-| 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (DSL C4, clases completas, REST, ER normalizado, standing unificado, parámetros por BC, pies Fig. 5.X.Y). PNG `assets/c5-*.png` pendientes de exportar. |
-| 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots `[Manual]` para mm:ss/edad/distrito/capturas. |
-| 1.0 | 06/10/2026 | Paredes Santos, Fabrizio Alberto | Capítulo V y Capítulo VI para TP1 (Tactical-Level Design, Guías de Estilo, Arquitectura de Información, Wireframes/Mock-ups Landing) e implementación de Landing Page mediante el merge de la PR #8 (`feat/paredes`). |
-| 0.9 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Levantamiento observaciones docente: trazabilidad ENT→US, Task Matrix As-Is, canvas ordenados, storytelling, granularidad  /OCR/Notifications, C4 único + Admin Cumplimiento, Conclusiones/Anexos. |
-| 0.10 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V táctico 5.1–5.11 (dominio, REST, aplicación, infraestructura, componentes y código). |
-| 0.11 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Trazabilidad US/Anexo B/Conclusiones, tablas auditables de Personas, 8 referencias nuevas, forma (ciclo, septiembre, código, alts, canvas, og-*, alcance Cap VII) y convención `Event` sin mención al backend. Elimina `foto-mathias copy.png`. Slots pendientes TF para mm:ss/edad/distrito/capturas. |
-| 1.0 | 06/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V para TP1: diseño táctico de la solución y documentación de sus componentes de software. |
-| 1.0 | 06/10/2026 | Rodriguez Macedo, Sebastian | Capítulo VI para TP1: elaboración de las guías de estilo de la aplicación. |
-| 1.0 | 06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI para TP1: definición de la arquitectura de información y elaboración de wireframes y mock-ups de la landing page. |
-| 1.0 | 06/10/2026 | Paredes Santos, Fabrizio Alberto | Capítulo V y Capítulo VI para TP1: contribución al diseño táctico, elaboración de wireframes y mock-ups de la landing page e implementación de la Landing Page mediante el merge de la PR #8 (`feat/paredes`). |
-| 1.1 | 14/11/2026 | Paredes Santos, Fabrizio Alberto | TB2: elaboración de la estructura de wireframes y corrección transversal del informe; documentación de evidencias de implementación y pruebas de Sprint 1; desarrollo de pruebas de aceptación BDD para autenticación, verificación, recuperación de cuenta y comunidades, con escenarios, pasos de API y fixtures. |
-| 1.1 | 14/11/2026 | Rodriguez Macedo, Sebastian | Avance TB2: documentación de los tres flujos del prototipo interactivo (6.5) con capturas, registro de la entrevista de validación VAL-03 (7.3.2), corrección de errores y ajustes de formato. |
+| 0.9 | 06/10/2026 | Aliaga Aguirre, Ethan Matias | Capítulo V para TP1: diseño táctico de la solución y documentación de sus componentes de software. |
+| 0.10 | 06/10/2026 | Rodriguez Macedo, Sebastian | Capítulo VI para TP1: elaboración de las guías de estilo de la aplicación. |
+| 0.11 | 06/10/2026 | Ríos Pacheco, Héctor Javier | Capítulo VI para TP1: arquitectura de información, wireframes y mock-ups de la landing page para escritorio y dispositivos móviles. |
+| 0.12 | 06/10/2026 | Paredes Santos, Fabrizio Alberto | Implementación de la Landing Page para TP1, integrada mediante la PR #8 (`feat/paredes`). |
+| 0.13 | 08/10/2026 | Aliaga Aguirre, Ethan Matias | Corrección de observaciones docentes: trazabilidad ENT→US, User Task Matrix As-Is, canvas, Domain Storytelling, granularidad de contextos, diagramas C4, conclusiones y anexos. |
+| 0.14 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Desarrollo del Capítulo V táctico (5.1–5.11): diagramas C4, clases, contratos REST, modelos de datos y componentes por bounded context. |
+| 0.15 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Actualización de trazabilidad de historias, anexos y conclusiones; revisión de tablas, referencias, convenciones y consistencia formal del informe. |
+| 0.16 | 14/11/2026 | Paredes Santos, Fabrizio Alberto | TB2: elaboración de la estructura de wireframes y corrección transversal del informe; documentación de evidencias de implementación y pruebas de Sprint 1; desarrollo de pruebas de aceptación BDD para autenticación, verificación, recuperación de cuenta y comunidades, con escenarios, pasos de API y fixtures. |
+| 0.17 | 14/11/2026 | Rodriguez Macedo, Sebastian | TB2: documentación de los tres flujos del prototipo interactivo (6.5) con sus capturas, registro de la entrevista de validación VAL-03 (7.3.2), corrección de errores y ajustes de formato. |
 
 
 
@@ -320,7 +316,7 @@ El modelo de negocio es de tipo **SaaS B2B2C**: la startup cobra una suscripció
 
 ### 1.2.1. Antecedentes y problemática
 
-**Antecedentes.** En Lima Metropolitana, la mayor parte de los edificios multifamiliares no cuenta con una junta de propietarios legalmente constituida e inscrita: se estima que alrededor del **95% de los edificios** no tiene su junta inscrita en Registros Públicos, en buena medida por el costo y la complejidad del trámite. Como consecuencia, cerca del **70% de los edificios multifamiliares** reporta conflictos de convivencia entre vecinos por falta de claridad en normas, deberes y derechos, y la morosidad llega a ser cercana al **40%** en los edificios donde la junta funciona de manera informal (Estudio Estrada, 2022; Alternativa SAC, 2020; Bienes Raíces, 2019). Incluso cuando la junta sí está constituida, el proceso de votación en asamblea (elección de directiva, aprobación de presupuesto y reglamento interno, autorización de obras, etc.) sigue apoyándose en mecanismos manuales: listas de asistencia en papel, actas físicas y conteo de votos a mano vigilado por la propia directiva.
+**Antecedentes.** Una publicación de la Sociedad Peruana de Bienes Raíces (2019) reporta que cerca del **95% de los edificios de Lima Metropolitana** no tenía una junta inscrita en Registros Públicos y que el **70% de los edificios multifamiliares** presentaba conflictos de convivencia. Rueda Arias (2020), al citar una estimación de un especialista del sector, señala que la morosidad alcanzaría el **40%** en edificios con juntas informales. Las publicaciones consultadas no describen una metodología de muestreo; por ello, estas cifras se presentan como estimaciones reportadas por sus fuentes, no como estadísticas representativas. Incluso cuando la junta sí está constituida, el proceso de votación en asamblea (elección de directiva, aprobación de presupuesto y reglamento interno, autorización de obras, etc.) sigue apoyándose en mecanismos manuales: listas de asistencia en papel, actas físicas y conteo de votos a mano vigilado por la propia directiva.
 
 **Problemática (5W + 2H).**
 
@@ -1700,6 +1696,8 @@ Este capítulo detalla el diseño táctico de los 11 bounded contexts: agregados
 | 5.10 | Verification (OTP) | Generic | `VerificationChallenge` | US-05/US-07, C-07 |
 | 5.11 | Notifications | Generic | `NotificationDispatch` | TS-03/US-26, D-16 |
 
+En la implementación del backend NestJS, los casos de uso de escritura se realizan mediante servicios de aplicación `*CommandServiceImpl` y las consultas mediante `*QueryServiceImpl`; no se utiliza el patrón de clases CQRS decoradas con `@CommandHandler`. Los manejadores de eventos se documentan donde existen en el código. En infraestructura se identifican los adaptadores de repositorio TypeORM y las implementaciones de los puertos para proveedores externos.
+
 ## **5.1. Voting & Verifiable Ledger (Core).**
 Responsabilidad: convertir intención verificable en hecho observado. Solo `CONFIRMED` cuenta. Trazabilidad: US-22..US-28.
 
@@ -1754,10 +1752,10 @@ Controladores delgados + `VotingExceptionFilter` (negocio→HTTP). Idempotencia 
 | `GET /proposals/{id}/receipt?voter=` | `—` | `200 recorrido propio` | `404` |
 
 ### **5.1.3. Application Layer.**
-Crear (`create`→`ProposalDraftedEvent`); Abrir (lee policy vía ACL, `open`→`Opened`); Solicitar auth (`request`+elegibilidad congelada+verified-now→`Granted/Denied`); Emitir (UoW atómica: valida vigencia+abierta+opción, `buildMessage`, pide firma a custodia, verifica firmante, consume auth+emite, publica tras commit→`VoteMessageBuilt/VoteCast/AuthorizationConsumed`, pide aviso); Entregar (ante `VoteCast`: `Queued→Sent` vía Relay); Tratar resultado (`Confirmed` cuenta / `Failed`+aviso); Cerrar (`close`+tally solo CONFIRMED→`Closed/Tallied/QuorumReached|NotReached`); Barrido (`Expired` periódico). Parámetros externos: `VOTE_AUTH_TTL, NETWORK_ID`.
+Los casos de uso se orquestan en `ProposalCommandServiceImpl`, `AuthorizationCommandServiceImpl` y `VoteCommandServiceImpl`; las consultas se atienden mediante `ProposalQueryServiceImpl`, `AuthorizationQueryServiceImpl` y `VoteQueryServiceImpl`. `VoteCastEventHandler` coordina la entrega del sufragio con Relay y `ProposalClosedEventHandler` procesa el cierre de la propuesta. El flujo de emisión valida autorización y elegibilidad, solicita la firma a Custodia y publica los eventos tras confirmar la unidad de trabajo; los resultados confirmados son los únicos que entran al escrutinio.
 
 ### **5.1.4. Infrastructure Layer.**
-Postgres esquema propio: `proposals/authorizations/votes + request_log(idempotencyKey→voteId)`. Unicidad parcial: un PENDING por (propuesta,votante), un CONFIRMED por pareja. VOs como JSONB. ACLs: Comunidad (policy), Padrón (elegibilidad), Presencia (veredicto), Custodia (firma), Relay (entrega), Avisos (recibo). Puertos `SignaturePolicy/QuorumPolicy` con variante operativa/prueba.
+La persistencia PostgreSQL se implementa con `ProposalRepositoryImpl`, `AuthorizationRepositoryImpl` y `VoteRepositoryImpl`, junto con `RequestLogIdempotencyAdapter` para la clave de idempotencia; las entidades ORM y ensambladores convierten entre el modelo de dominio y TypeORM. Los servicios de salida de la aplicación encapsulan las llamadas a Comunidad, Padrón, Presencia, Custodia, Relay y Notificaciones. Las restricciones de unicidad protegen las autorizaciones pendientes y los votos confirmados.
 
 ### **5.1.5. Component Level Diagrams.**
 <p align="center">
@@ -1965,9 +1963,9 @@ Responsabilidad: capacidad de firma por persona, efímera y con olvido. Nunca pa
 | `GET /wallets?person=, /wallets/{id}/history` | `200` | `404` |
 Filtro propio negocio→HTTP.
 ### **5.2.3. Application Layer.**
-Proveer (verifica persona+ausencia viva, reserva posición, crea); Firmar (UoW atómica: verifica habilitada+ningún abierto, reconstruye, firma, olvida, publica ambos); Rotar/Suspender/Retirar; consultas. Parámetro: `POSITION_SPACE`.
+`WalletCommandServiceImpl` coordina la provisión, firma, rotación, suspensión y retiro de wallets, invocando los puertos de identidad, consentimiento, derivación y custodia de claves; `WalletQueryServiceImpl` resuelve las consultas. `WalletRetiredEventHandler` atiende el evento de retiro para registrar su tratamiento. La firma se ejecuta dentro de una unidad de trabajo y aplica la política de una operación abierta por wallet.
 ### **5.2.4. Infrastructure Layer.**
-Tabla `wallets(personId, position UK, standing, openFor transitorio)` + `wallet_history`. Ejecutor firma tras puerto; ACL Avisos. Sin mezcla con pagadora (Relay).
+`WalletRepositoryImpl` implementa el repositorio sobre TypeORM, con `wallet.orm-entity.ts`, `wallet-event.orm-entity.ts` y `WalletPersistenceAssembler` para persistir el estado y su historial. La derivación y custodia de claves se conectan mediante sus puertos; la cuenta firmante de Custodia permanece separada de la cuenta pagadora de Relay.
 ### **5.2.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-02.png" alt="Fig. 5.2.5 - Wallet, componentes" width="700"/>
@@ -1975,66 +1973,25 @@ Tabla `wallets(personId, position UK, standing, openFor transitorio)` + `wallet_
 Fig. 5.2.5 – Wallet, componentes.
 ### **5.2.6. Code Level Diagrams.**
 #### **5.2.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class UserWallet {
-    -UserWalletId id
-    -PersonId personId
-    -DerivationPosition position
-    -WalletStanding standing
-    -SignedContentRef openFor
-    +UserWallet provision(UserWalletId id, PersonId personId, DerivationPosition position)$
-    +void reconstructForSigning(SignedContentRef content)
-    +void forget()
-    +void rotate(DerivationPosition next)
-    +void suspend(string reason)
-    +void retire()
-  }
-  class DerivationPosition {
-    -string value
-    +boolean equals(DerivationPosition other)
-  }
-  class WalletHistory {
-    -string fact
-    -date occurredAt
-  }
-  class SignedContentRef {
-    -string value
-  }
-  class WalletStanding {
-    PROVISIONED
-    SIGNING_OPEN
-    ROTATED
-    SUSPENDED
-    RETIRED
-  }
-  UserWallet "1" --> "1" DerivationPosition : ocupa
-  UserWallet "1" --> "*" WalletHistory : registra
-  UserWallet "1" --> "1" WalletStanding : clasifica en
-  UserWallet "1" --> "1" SignedContentRef : abre para
-```
-Fig. 5.2.6.1 – Clases Wallet.
+**Figura 5.2.6.1**
+
+*Diagrama de clases del contexto Wallet*
+
+<p align="center">
+  <img src="./assets/C5-02-clases.png" alt="Figura 5.2.6.1. diagrama de clases del contexto Wallet" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.2.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  WALLETS {
-    TEXT id PK
-    TEXT personId FK
-    TEXT position UK
-    TEXT standing
-    TEXT openFor
-    TIMESTAMPTZ createdAt
-    TIMESTAMPTZ updatedAt
-  }
-  WALLET_HISTORY {
-    TEXT id PK
-    TEXT walletId FK
-    TEXT fact
-    TIMESTAMPTZ occurredAt
-  }
-  WALLETS ||--o{ WALLET_HISTORY : registra
-```
-Fig. 5.2.6.2 – DB Wallet.
+**Figura 5.2.6.2**
+
+*Modelo de datos del contexto Wallet*
+
+<p align="center">
+  <img src="./assets/C5-02-base-datos.png" alt="Figura 5.2.6.2. diseño de base de datos del contexto Wallet" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.3. Biometric Identity Verification (Supporting).**
 Responsabilidad: presencia primero, luego comparación, veredicto binario fresco. Trazabilidad: US-19..21.
@@ -2070,9 +2027,9 @@ Responsabilidad: presencia primero, luego comparación, veredicto binario fresco
 | `POST /biometric/attempts/{id}/liveness|comparison|verdict` | `200` | `409 orden/expirado, 422 NO_MATCH` |
 | `GET /biometric/standing?person=` | `200 verified-now+motivo+frescura` | `—` |
 ### **5.3.3. Application Layer.**
-Inscribir (permiso+MATCH single-use); ciclo intento→veredicto; vencimiento por ventana; revocación cierra abiertos sin reescribir. Manejador erasure→revoca. Parámetros: `FRESHNESS_WINDOW, MATCH_TTL`.
+`BiometricCommandServiceImpl` coordina la inscripción y el ciclo de verificación, comprobando consentimiento y vigencia antes de solicitar la comparación; `BiometricQueryServiceImpl` atiende las consultas de perfil e intentos. `IdentityVerifiedEventHandler` procesa el resultado de identidad verificada. Los servicios de salida encapsulan las dependencias de Consent, OCR y comparación facial.
 ### **5.3.4. Infrastructure Layer.**
-`profiles/attempts` (viva única por persona). ACLs Permiso/Examen(MATCH consumible); ejecutores presencia/comparación tras puertos; ACL Avisos.
+`ProfileRepositoryImpl` y `AttemptRepositoryImpl` implementan la persistencia TypeORM de perfiles e intentos, con sus entidades y ensambladores. `RekognitionMatchingService` conecta la comparación facial con AWS Rekognition; `FakeMatchingService` ofrece un adaptador de sustitución para pruebas. La configuración selecciona el proveedor y mantiene los datos biométricos fuera de los eventos de dominio.
 ### **5.3.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-03.png" alt="Fig. 5.3.5 - Biometric, componentes" width="700"/>
@@ -2080,88 +2037,25 @@ Inscribir (permiso+MATCH single-use); ciclo intento→veredicto; vencimiento por
 Fig. 5.3.5 – Biometric, componentes.
 ### **5.3.6. Code Level Diagrams.**
 #### **5.3.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class BiometricProfile {
-    -BiometricProfileId id
-    -PersonId personId
-    -ProfileStanding standing
-    +BiometricProfile enroll(BiometricProfileId id, PersonId personId)$
-    +void revoke()
-  }
-  class VerificationAttempt {
-    -VerificationAttemptId id
-    -PersonId personId
-    -BiometricProfileId profileId
-    -AttemptStanding standing
-    -VerificationVerdict verdict
-    +VerificationAttempt start(VerificationAttemptId id, PersonId personId, BiometricProfileId profileId)$
-    +void completeLiveness(LivenessOutcome present)
-    +void requestComparison()
-    +void recordVerdict(boolean match)
-    +void expire()
-  }
-  class VerificationVerdict {
-    -string conclusion
-    -string reason
-    -FreshnessWindow freshness
-  }
-  class LivenessOutcome {
-    PRESENT
-    ABSENT
-  }
-  class FailureReason {
-    LIVENESS_NOT_OBSERVED
-    NO_MATCH
-    REFERENCE_ENDED
-    ATTEMPT_EXPIRED
-    CONSENT_WITHDRAWN
-  }
-  class FreshnessWindow {
-    -int seconds
-  }
-  class ProfileStanding {
-    ENROLLED
-    REVOKED
-  }
-  class AttemptStanding {
-    CHALLENGE_OPEN
-    LIVENESS_PASSED
-    LIVENESS_FAILED
-    COMPARISON_REQUESTED
-    VERIFIED
-    NOT_VERIFIED
-    EXPIRED
-  }
-  VerificationAttempt "1" --> "1" BiometricProfile : contra
-  BiometricProfile "1" --> "1" ProfileStanding : clasifica en
-  VerificationAttempt "1" --> "1" AttemptStanding : clasifica en
-  VerificationAttempt "1" --> "1" VerificationVerdict : concluye con
-  VerificationVerdict "1" --> "1" FreshnessWindow : autoriza durante
-  VerificationVerdict "1" --> "1" FailureReason : motiva con
-  VerificationVerdict "1" --> "1" LivenessOutcome : observa
-```
-Fig. 5.3.6.1 – Clases Biometric.
+**Figura 5.3.6.1**
+
+*Diagrama de clases del contexto Biometric*
+
+<p align="center">
+  <img src="./assets/C5-03-clases.png" alt="Figura 5.3.6.1. diagrama de clases del contexto Biometric" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.3.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  PROFILES {
-    TEXT id PK
-    TEXT personId FK
-    TEXT standing
-    TIMESTAMPTZ createdAt
-  }
-  ATTEMPTS {
-    TEXT id PK
-    TEXT personId FK
-    TEXT profileId FK
-    TEXT standing
-    JSONB verdict
-    TIMESTAMPTZ createdAt
-  }
-  PROFILES ||--o{ ATTEMPTS : juzga
-```
-Fig. 5.3.6.2 – DB Biometric.
+**Figura 5.3.6.2**
+
+*Modelo de datos del contexto Biometric*
+
+<p align="center">
+  <img src="./assets/C5-03-base-datos.png" alt="Figura 5.3.6.2. diseño de base de datos del contexto Biometric" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.4. Blockchain Relay & Transaction Delivery (Supporting).**
 Responsabilidad: llevar firmado a la red e informar. Nunca firma ni cuenta. Trazabilidad: TS-02.
@@ -2197,9 +2091,9 @@ Responsabilidad: llevar firmado a la red e informar. Nunca firma ni cuenta. Traz
 | `GET /deliveries?content=|{id}` | `200` | `404` |
 | `POST /deliveries/{id}/observations {result}` | `200 confirm/fail idempotente` | `404, 409 terminal` |
 ### **5.4.3. Application Layer.**
-Acepta→ordena (siguiente posición pagador)→envía→confirma/falla→reintenta si cota o abandona. Publica confirmación/fallo. Parámetros: `RETRY_BOUND, NETWORK_ID, COST_POLICY`.
+`DeliveryCommandServiceImpl` acepta y ordena entregas, solicita su envío, gestiona confirmaciones y fallos, y aplica reintentos limitados o abandono; `DeliveryQueryServiceImpl` expone su estado. `DeliveryConfirmedEventHandler`, `DeliveryFailedEventHandler` y `DeliveryAbandonedEventHandler` comunican cada resultado al contexto de Votación. Los puertos de cola y ledger aíslan la secuencia de envío de la lógica del caso de uso.
 ### **5.4.4. Infrastructure Layer.**
-`orders + attempts` (abierta única por contenido, secuencia por pagador). Adaptador red envío/observación; ACL Avisos. Costo descubierto = fallo, nunca espera silenciosa.
+`DeliveryOrderRepositoryImpl` persiste órdenes y transacciones con TypeORM. `PolygonAmoyGateway`, basado en `BaseLedgerGateway`, implementa la comunicación con el ledger de Polygon Amoy; los adaptadores de cola y red implementan los puertos de entrega y observación. La secuencia del pagador y la unicidad de órdenes abiertas se conservan en la persistencia.
 ### **5.4.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-04.png" alt="Fig. 5.4.5 - Relay, componentes" width="700"/>
@@ -2207,80 +2101,25 @@ Acepta→ordena (siguiente posición pagador)→envía→confirma/falla→reinte
 Fig. 5.4.5 – Relay, componentes.
 ### **5.4.6. Code Level Diagrams.**
 #### **5.4.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class DeliveryOrder {
-    -DeliveryOrderId id
-    -SignedContentRef contentRef
-    -PayerRef payerRef
-    -SendingOrderPosition position
-    -DeliveryStanding standing
-    +DeliveryOrder accept(DeliveryOrderId id, SignedContentRef content, PayerRef payer, SendingOrderPosition pos)$
-    +void order()
-    +void recordSending()
-    +void recordConfirmation()
-    +void recordFailure(FailureReason reason)
-    +void retry()
-    +void abandon(FailureReason reason)
-  }
-  class SendingAttempt {
-    -int number
-    -string outcome
-    -string reason
-  }
-  class PayerRef {
-    -string value
-  }
-  class SendingOrderPosition {
-    -int value
-  }
-  class SendingCost {
-    -int value
-  }
-  class FailureReason {
-    LEDGER_REJECTED
-    COST_EXHAUSTED
-    RETRY_LIMIT_REACHED
-    ORDER_SUPERSEDED
-  }
-  class DeliveryStanding {
-    ACCEPTED
-    ORDERED
-    SENT
-    CONFIRMED
-    FAILED
-    RETRIED
-    ABANDONED
-  }
-  DeliveryOrder "1" --> "*" SendingAttempt : intenta como
-  DeliveryOrder "1" --> "1" DeliveryStanding : clasifica en
-  DeliveryOrder "1" --> "1" PayerRef : paga con
-  DeliveryOrder "1" --> "1" SendingOrderPosition : ordena en
-  DeliveryOrder "1" --> "1" SendingCost : cuesta
-  DeliveryOrder "1" --> "1" FailureReason : falla con
-```
-Fig. 5.4.6.1 – Clases Relay.
+**Figura 5.4.6.1**
+
+*Diagrama de clases del contexto Relay*
+
+<p align="center">
+  <img src="./assets/C5-04-clases.png" alt="Figura 5.4.6.1. diagrama de clases del contexto Relay" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.4.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  ORDERS {
-    TEXT id PK
-    TEXT contentRef UK
-    TEXT payerRef FK
-    INTEGER position
-    TEXT standing
-    TIMESTAMPTZ createdAt
-  }
-  ATTEMPTS {
-    TEXT id PK
-    TEXT orderId FK
-    INTEGER number
-    TEXT outcome
-    TEXT reason
-  }
-  ORDERS ||--o{ ATTEMPTS : registra
-```
-Fig. 5.4.6.2 – DB Relay.
+**Figura 5.4.6.2**
+
+*Modelo de datos del contexto Relay*
+
+<p align="center">
+  <img src="./assets/C5-04-base-datos.png" alt="Figura 5.4.6.2. diseño de base de datos del contexto Relay" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.5. IAM (Supporting).**
 Responsabilidad: identidad técnica 1 por persona, sesión única, roles. Juzga, no ejecuta pruebas. Trazabilidad: US-04..07.
@@ -2315,9 +2154,9 @@ Responsabilidad: identidad técnica 1 por persona, sesión única, roles. Juzga,
 | `POST /users/{id}/secret|email|email/verify|outside|roles|suspend|restore` | `200` | `409 última-prueba/último-admin, 404` |
 | `GET /users/{id}/standing|history` | `200` | `404` |
 ### **5.5.3. Application Layer.**
-Comandos registro/acceso/secreto/dirección/enlace/roles/suspensión + consultas. Fallos repetidos (observados fuera) suspenden; cambio secreto/suspensión cierra sesión misma transición. Ante `ChallengeConfirmed` marca verificada vía fachada primitivas. Supuesto O8 documentado.
+`UserCommandServiceImpl` orquesta el registro, inicio y cierre de sesión, cambio de credenciales y correo, enlace de identidad, roles y suspensión; `UserQueryServiceImpl` atiende las consultas de usuario. `UserEventLogger` registra los eventos de usuario para observabilidad. El servicio de comandos integra verificación, notificaciones, hash de contraseñas, pruebas de identidad y artefactos de sesión mediante puertos.
 ### **5.5.4. Infrastructure Layer.**
-`users(personId UK, address UK, session columnas)` + `identity_history`. Puertos prueba/sesión con ejecutores externos; ACL Avisos; `ExistenceFacade(personExists)` primitivas, llamada BEFORE UoW.
+`UserRepositoryImpl` implementa la persistencia TypeORM mediante `user.orm-entity.ts` y `UserPersistenceAssembler`. `ScryptPasswordHasherService` proporciona el hash de credenciales; `FakeProofVerificationService` y `NoopSessionArtifactService` son adaptadores alternativos para prueba o ejecución sin el proveedor correspondiente. La fachada de existencia comprueba la identidad antes de iniciar la unidad de trabajo.
 ### **5.5.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-05.png" alt="Fig. 5.5.5 - IAM, componentes" width="700"/>
@@ -2325,77 +2164,25 @@ Comandos registro/acceso/secreto/dirección/enlace/roles/suspensión + consultas
 Fig. 5.5.5 – IAM, componentes.
 ### **5.5.6. Code Level Diagrams.**
 #### **5.5.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class User {
-    -UserId id
-    -PersonId personId
-    -AccessStanding standing
-    -SessionStanding session
-    -ContactAddress address
-    +User signup(ContactAddress contact)$
-    +void signIn(string proof)
-    +void signOut()
-    +void changeSecret()
-    +void changeEmail(ContactAddress next)
-    +void verifyEmail()
-    +void suspend(string reason)
-    +void restore()
-  }
-  class ContactAddress {
-    -string value
-    -boolean verified
-  }
-  class SystemRole {
-    -string value
-  }
-  class ProofKind {
-    LOCAL
-    OUTSIDE
-  }
-  class OutsideProverRef {
-    -string value
-  }
-  class AccessStanding {
-    REGISTERED
-    ACTIVE
-    SUSPENDED
-  }
-  class SessionStanding {
-    SESSION_CLOSED
-    SESSION_OPEN
-  }
-  User "1" --> "1" ContactAddress : localizable en
-  User "1" --> "*" SystemRole : posee
-  User "1" --> "1" AccessStanding : clasifica en
-  User "1" --> "1" SessionStanding : sesiona en
-  User "1" --> "1" ProofKind : prueba con
-  User "1" --> "1" OutsideProverRef : enlaza
-```
-Fig. 5.5.6.1 – Clases IAM.
+**Figura 5.5.6.1**
+
+*Diagrama de clases del contexto IAM*
+
+<p align="center">
+  <img src="./assets/C5-05-clases.png" alt="Figura 5.5.6.1. diagrama de clases del contexto IAM" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.5.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  USERS {
-    TEXT id PK
-    TEXT personId UK
-    TEXT standing
-    TEXT session
-    TEXT address UK
-    BOOLEAN addressVerified
-    JSONB roles
-    TEXT outsideProver
-    TIMESTAMPTZ createdAt
-  }
-  IDENTITY_HISTORY {
-    TEXT id PK
-    TEXT userId FK
-    TEXT fact
-    TIMESTAMPTZ occurredAt
-  }
-  USERS ||--o{ IDENTITY_HISTORY : registra
-```
-Fig. 5.5.6.2 – DB IAM.
+**Figura 5.5.6.2**
+
+*Modelo de datos del contexto IAM*
+
+<p align="center">
+  <img src="./assets/C5-05-base-datos.png" alt="Figura 5.5.6.2. diseño de base de datos del contexto IAM" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.6. Community Management (Supporting).**
 Responsabilidad: comunidad con configuración, regla y administradores; nunca contiene miembros. Trazabilidad: US-08..11.
@@ -2432,9 +2219,9 @@ Responsabilidad: comunidad con configuración, regla y administradores; nunca co
 | `POST /communities/{id}/suspend|reactivate|archive` | `200` | `410 terminal, 404` |
 | `GET /communities/{id}|policy|standing` | `200` | `404` |
 ### **5.6.3. Application Layer.**
-Comandos verifican standing y guardan; `answerStanding/answerPolicy` coherentes; publica para padrón/votación.
+`CommunityCommandServiceImpl` implementa los comandos de creación, activación, configuración, política, administración, suspensión y archivo, validando el estado antes de persistir. `CommunityQueryServiceImpl` resuelve las consultas de comunidades y `CommunityEventLogger` registra eventos para observabilidad. La fachada de contexto publica la situación y política que consultan Membresías y Votación.
 ### **5.6.4. Infrastructure Layer.**
-`communities + admins + policies(versiones)`. Sin tabla miembros. ACL Avisos. Fachada `situación+política` primitivas.
+`CommunityRepositoryImpl` implementa el repositorio con TypeORM, usando `community.orm-entity.ts` y `CommunityPersistenceAssembler`. La integración con IAM se realiza mediante el puerto de salida correspondiente; el contexto conserva comunidades, administradores y versiones de política sin duplicar el padrón de membresías.
 ### **5.6.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-06.png" alt="Fig. 5.6.5 - Community, componentes" width="700"/>
@@ -2442,71 +2229,25 @@ Comandos verifican standing y guardan; `answerStanding/answerPolicy` coherentes;
 Fig. 5.6.5 – Community, componentes.
 ### **5.6.6. Code Level Diagrams.**
 #### **5.6.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class Community {
-    -CommunityId id
-    -CommunityStanding standing
-    -CommunitySettings settings
-    -VotingPolicy policy
-    +Community register(CommunityId id, CommunitySettings settings, PersonId admin)$
-    +void activate()
-    +void definePolicy(VotingPolicy policy)
-    +void appointAdmin(PersonId person)
-    +void removeAdmin(PersonId person)
-    +void suspend(string reason)
-    +void archive(string reason)
-  }
-  class VotingPolicy {
-    -int threshold
-    -string basis
-    -string majority
-  }
-  class CommunitySettings {
-    -string name
-    -string domicile
-    -string contact
-  }
-  class CommunityAdmin {
-    -PersonId personId
-    -date entrustedAt
-  }
-  class CommunityStanding {
-    REGISTERED
-    ACTIVE
-    SUSPENDED
-    ARCHIVED
-  }
-  Community "1" --> "1" VotingPolicy : decide bajo
-  Community "1" --> "*" CommunityAdmin : administrada por
-  Community "1" --> "1" CommunityStanding : clasifica en
-  Community "1" --> "1" CommunitySettings : configura con
-```
-Fig. 5.6.6.1 – Clases Community.
+**Figura 5.6.6.1**
+
+*Diagrama de clases del contexto Community*
+
+<p align="center">
+  <img src="./assets/C5-06-clases.png" alt="Figura 5.6.6.1. diagrama de clases del contexto Community" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.6.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  COMMUNITIES {
-    TEXT id PK
-    TEXT standing
-    JSONB settings
-    TIMESTAMPTZ createdAt
-  }
-  ADMINS {
-    TEXT communityId FK
-    TEXT personId FK
-    TIMESTAMPTZ entrustedAt
-  }
-  POLICIES {
-    TEXT id PK
-    TEXT communityId FK
-    JSONB policy
-    TIMESTAMPTZ supersedes
-  }
-  COMMUNITIES ||--o{ ADMINS : administra
-  COMMUNITIES ||--o{ POLICIES : versiona
-```
-Fig. 5.6.6.2 – DB Community.
+**Figura 5.6.6.2**
+
+*Modelo de datos del contexto Community*
+
+<p align="center">
+  <img src="./assets/C5-06-base-datos.png" alt="Figura 5.6.6.2. diseño de base de datos del contexto Community" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.7. Membership (Supporting).**
 Responsabilidad: par persona-comunidad con standing; padrón es pregunta, elegibilidad se congela. Trazabilidad: US-12..15.
@@ -2542,9 +2283,9 @@ Responsabilidad: par persona-comunidad con standing; padrón es pregunta, elegib
 | `GET /memberships?community=ACTIVE|{id}` | `200` | `404` |
 Supuesto O2/O6: morosidad y frescura documentados en app.
 ### **5.7.3. Application Layer.**
-Verifica comunidad receptiva + libros para morosidad; puerta pide standing+policy sin cachear policy. UoW por comando.
+`MembershipCommandServiceImpl` coordina solicitudes, aprobación, rechazo, activación, suspensión y cambios de membresía; consulta la política vigente de Comunidad y la elegibilidad antes de confirmar cada operación. `MembershipQueryServiceImpl` atiende las consultas del padrón. `EligibilityJudgedEventHandler` registra y propaga el resultado de elegibilidad; los servicios ACL aíslan las consultas a IAM, Comunidad y Votación.
 ### **5.7.4. Infrastructure Layer.**
-`memberships` (viva única por par, índices comunidad/persona). ACLs existencia-persona, Comunidad (puerta), Avisos. Fachada `elegibilidad congelable`.
+`MembershipRepositoryImpl` implementa la persistencia TypeORM con `membership.orm-entity.ts` y `MembershipPersistenceAssembler`. `DefaultEligibilityPolicyService` y `FakeEligibilityPolicyService` proporcionan implementaciones seleccionables de la política de elegibilidad; las restricciones del repositorio impiden más de una membresía activa por comunidad y persona.
 ### **5.7.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-07.png" alt="Fig. 5.7.5 - Membership, componentes" width="700"/>
@@ -2552,61 +2293,25 @@ Verifica comunidad receptiva + libros para morosidad; puerta pide standing+polic
 Fig. 5.7.5 – Membership, componentes.
 ### **5.7.6. Code Level Diagrams.**
 #### **5.7.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class Membership {
-    -MembershipId id
-    -PersonId personId
-    -CommunityId communityId
-    -MembershipStatus standing
-    -CommunityRole role
-    -Unit unit
-    +Membership register(MembershipId id, PersonId personId, CommunityId communityId, Unit unit)$
-    +void activate()
-    +void markDelinquent()
-    +void clearDelinquency()
-    +void suspend(string reason)
-    +void terminate(string reason)
-    +EligibilitySnapshot judgeEligibility()
-  }
-  class Unit {
-    -string value
-  }
-  class CommunityRole {
-    -string value
-  }
-  class EligibilitySnapshot {
-    -string verdict
-    -string reason
-  }
-  class MembershipStatus {
-    REQUESTED
-    ACTIVE
-    DELINQUENT
-    SUSPENDED
-    TERMINATED
-  }
-  Membership "1" --> "1" Unit : ocupa
-  Membership "1" --> "1" EligibilitySnapshot : congela
-  Membership "1" --> "1" MembershipStatus : clasifica en
-  Membership "1" --> "1" CommunityRole : desempeña
-```
-Fig. 5.7.6.1 – Clases Membership.
+**Figura 5.7.6.1**
+
+*Diagrama de clases del contexto Membership*
+
+<p align="center">
+  <img src="./assets/C5-07-clases.png" alt="Figura 5.7.6.1. diagrama de clases del contexto Membership" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.7.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  MEMBERSHIPS {
-    TEXT id PK
-    TEXT personId FK
-    TEXT communityId FK
-    TEXT standing
-    TEXT role
-    TEXT unit
-    JSONB lastEligibility
-    TIMESTAMPTZ createdAt
-  }
-```
-Fig. 5.7.6.2 – DB Membership.
+**Figura 5.7.6.2**
+
+*Modelo de datos del contexto Membership*
+
+<p align="center">
+  <img src="./assets/C5-07-base-datos.png" alt="Figura 5.7.6.2. diseño de base de datos del contexto Membership" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.8. Consent & Compliance (Supporting).**
 Responsabilidad: permisos y coordinación de borrado (Ley 29733); nunca posee datos ajenos. Trazabilidad: US-16..18.
@@ -2624,9 +2329,9 @@ Responsabilidad: permisos y coordinación de borrado (Ley 29733); nunca posee da
 | `POST /retentions {category+terms}` | `201` | `422` |
 Puertas `may-process-now/may-contact-now` para otros BC.
 ### **5.8.3. Application Layer.**
-Otorga/revoca/define con reemplazo; pedido sin duplicar abierto; coordina un hecho por propietario; cierra con todas. Supuesto O5 (in-flight vs ledger inmutable) documentado.
+`ConsentCommandServiceImpl`, `ErasureCommandServiceImpl` y `RetentionCommandServiceImpl` gestionan consentimientos, solicitudes de borrado y políticas de retención; `ConsentQueryServiceImpl` y `ErasureQueryServiceImpl` atienden las consultas. `ErasureConfirmedEventHandler` y `RevocationConfirmedEventHandler` procesan confirmaciones de coordinación con otros contextos. Los servicios ACL dirigen las solicitudes a IAM, Membresías, Custodia, Biometría y Notificaciones.
 ### **5.8.4. Infrastructure Layer.**
-`consents(otorgado único por par) + requests(una abierta por persona) + confirmations + policies(vigente por categoría)`. Bus coordinación con lenguaje publicado. ACL Avisos.
+`ConsentRepositoryImpl`, `ErasureRepositoryImpl` y `RetentionRepositoryImpl` implementan los repositorios TypeORM, apoyados por sus entidades y `ConsentPersistenceAssembler`. Las restricciones de persistencia conservan un consentimiento vigente por persona y alcance, y evitan solicitudes de borrado duplicadas abiertas.
 ### **5.8.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-08.png" alt="Fig. 5.8.5 - Consent, componentes" width="700"/>
@@ -2634,93 +2339,25 @@ Otorga/revoca/define con reemplazo; pedido sin duplicar abierto; coordina un hec
 Fig. 5.8.5 – Consent, componentes.
 ### **5.8.6. Code Level Diagrams.**
 #### **5.8.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class ConsentRecord {
-    -ConsentRecordId id
-    -PersonId personId
-    -ConsentScope scope
-    -ConsentStanding standing
-    -PolicyVersion version
-    +ConsentRecord grant(ConsentRecordId id, PersonId personId, ConsentScope scope, PolicyVersion version)$
-    +void revoke()
-  }
-  class DataSubjectRequest {
-    -DataSubjectRequestId id
-    -PersonId personId
-    -ErasureStanding standing
-    +DataSubjectRequest submit(DataSubjectRequestId id, PersonId personId)$
-    +void confirm()
-    +void coordinateRevocation()
-    +void recordConfirmation(string owner)
-    +void complete()
-  }
-  class RetentionPolicy {
-    -RetentionPolicyId id
-    -DataCategory category
-    -RetentionTerms terms
-    +RetentionPolicy define(RetentionPolicyId id, DataCategory category, RetentionTerms terms)$
-  }
-  class ConsentScope {
-    -string value
-  }
-  class PolicyVersion {
-    -string value
-  }
-  class DataCategory {
-    -string value
-  }
-  class RetentionTerms {
-    -string value
-  }
-  class ConsentStanding {
-    GRANTED
-    REVOKED
-  }
-  class ErasureStanding {
-    REQUESTED
-    CONFIRMED
-    COORDINATED
-    AWAITING_CONFIRMATIONS
-    COMPLETED
-  }
-  DataSubjectRequest "1" --> "*" ConsentRecord : coordina
-  ConsentRecord "1" --> "1" ConsentStanding : clasifica en
-  ConsentRecord "1" --> "1" ConsentScope : autoriza
-  ConsentRecord "1" --> "1" PolicyVersion : rige por
-  DataSubjectRequest "1" --> "1" ErasureStanding : clasifica en
-  RetentionPolicy "1" --> "1" DataCategory : guarda
-  RetentionPolicy "1" --> "1" RetentionTerms : rige por
-```
-Fig. 5.8.6.1 – Clases Consent.
+**Figura 5.8.6.1**
+
+*Diagrama de clases del contexto Consent & Compliance*
+
+<p align="center">
+  <img src="./assets/C5-08-clases.png" alt="Figura 5.8.6.1. diagrama de clases del contexto Consent & Compliance" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.8.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  CONSENTS {
-    TEXT id PK
-    TEXT personId FK
-    TEXT scope
-    TEXT standing
-    TEXT policyVersion
-  }
-  REQUESTS {
-    TEXT id PK
-    TEXT personId FK
-    TEXT standing
-  }
-  CONFIRMATIONS {
-    TEXT requestId FK
-    TEXT owner
-    TEXT standing
-  }
-  POLICIES {
-    TEXT id PK
-    TEXT category UK
-    JSONB terms
-  }
-  REQUESTS ||--o{ CONFIRMATIONS : espera
-```
-Fig. 5.8.6.2 – DB Consent.
+**Figura 5.8.6.2**
+
+*Modelo de datos del contexto Consent & Compliance*
+
+<p align="center">
+  <img src="./assets/C5-08-base-datos.png" alt="Figura 5.8.6.2. diseño de base de datos del contexto Consent & Compliance" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.9. Document OCR & Face Match Provider (Generic).**
 Responsabilidad: examen único documental (MATCH/NO_MATCH/UNREADABLE), single-use hacia Biometric. Trazabilidad: US-19.
@@ -2733,9 +2370,9 @@ Responsabilidad: examen único documental (MATCH/NO_MATCH/UNREADABLE), single-us
 | `POST /examinations/{id}/extraction|comparison|verdict` | `200` | `410 ventana, 409 concluido, 404` |
 | `GET /examinations/standing?person=&doc=` | `200 MATCH utilizable o no` | `—` |
 ### **5.9.3. Application Layer.**
-Pide (pertenencia+permiso+sin abierto), registra vía ejecutores, concluye único, vence, reexamina como nuevo enlazado. Ningún hecho porta imágenes/puntajes. Parámetro: `EXAM_WINDOW`.
+`ExaminationCommandServiceImpl` verifica pertenencia y consentimiento, inicia y concluye exámenes, controla su vigencia y enlaza un nuevo examen cuando se requiere repetirlo; `ExaminationQueryServiceImpl` atiende las consultas. `ExaminationEventLogger` registra eventos operativos. Los puertos de evidencia y ejecución mantienen las imágenes y los resultados biométricos fuera de los eventos publicados.
 ### **5.9.4. Infrastructure Layer.**
-`examinations(abierto único por par) + history`; sin columnas imagen. Ejecutores lectura/comparación; ACL Avisos.
+`ExaminationRepositoryImpl` implementa la persistencia TypeORM con `examination.orm-entity.ts` y `ExaminationPersistenceAssembler`. `AzureDocumentIntelligenceExecutorService` integra el proveedor OCR configurado; `RekognitionExecutorService` y `GdocAiExecutorService` implementan adaptadores alternativos de ejecución documental. El repositorio conserva el estado y el historial del examen, no las imágenes fuente.
 ### **5.9.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-09.png" alt="Fig. 5.9.5 - OCR, componentes" width="700"/>
@@ -2743,72 +2380,25 @@ Pide (pertenencia+permiso+sin abierto), registra vía ejecutores, concluye únic
 Fig. 5.9.5 – OCR, componentes.
 ### **5.9.6. Code Level Diagrams.**
 #### **5.9.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class DocumentExamination {
-    -ExaminationId id
-    -PersonId personId
-    -DocumentRef doc
-    -ExaminationStanding standing
-    -ValidityWindow window
-    -Verdict verdict
-    +DocumentExamination request(ExaminationId id, PersonId personId, DocumentRef doc, ValidityWindow window)$
-    +void recordExtraction(boolean readable, UnreadableReason reason)
-    +void recordComparison(boolean holds)
-    +void recordVerdict()
-    +void expire()
-  }
-  class DocumentRef {
-    -string value
-  }
-  class ValidityWindow {
-    -date validUntil
-  }
-  class Verdict {
-    MATCH
-    NO_MATCH
-    UNREADABLE
-  }
-  class UnreadableReason {
-    BLURRY
-    GLARE
-    CROPPED
-    EXPIRED
-    MISMATCHED_TYPE
-  }
-  class ExaminationStanding {
-    OPEN
-    CONCLUDED
-    EXPIRED
-  }
-  DocumentExamination "1" --> "1" Verdict : concluye
-  DocumentExamination "1" --> "1" ExaminationStanding : clasifica en
-  DocumentExamination "1" --> "1" DocumentRef : examina
-  DocumentExamination "1" --> "1" ValidityWindow : vence en
-  Verdict "1" --> "1" UnreadableReason : detalla con
-```
-Fig. 5.9.6.1 – Clases OCR.
+**Figura 5.9.6.1**
+
+*Diagrama de clases del contexto Document OCR & Face Match Provider*
+
+<p align="center">
+  <img src="./assets/C5-09-clases.png" alt="Figura 5.9.6.1. diagrama de clases del contexto Document OCR & Face Match Provider" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.9.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  EXAMINATIONS {
-    TEXT id PK
-    TEXT personId FK
-    TEXT documentRef
-    TEXT standing
-    JSONB verdict
-    TIMESTAMPTZ requestedAt
-    TIMESTAMPTZ validUntil
-  }
-  EXAMINATION_HISTORY {
-    TEXT id PK
-    TEXT examinationId FK
-    TEXT fact
-    TIMESTAMPTZ occurredAt
-  }
-  EXAMINATIONS ||--o{ EXAMINATION_HISTORY : registra
-```
-Fig. 5.9.6.2 – DB OCR.
+**Figura 5.9.6.2**
+
+*Modelo de datos del contexto Document OCR & Face Match Provider*
+
+<p align="center">
+  <img src="./assets/C5-09-base-datos.png" alt="Figura 5.9.6.2. diseño de base de datos del contexto Document OCR & Face Match Provider" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.10. Verification (OTP) (Generic).**
 Responsabilidad: posesión de canal por (persona,motivo), 3 propósitos cerrados. Trazabilidad: US-05/07.
@@ -2821,9 +2411,9 @@ Responsabilidad: posesión de canal por (persona,motivo), 3 propósitos cerrados
 | `POST /challenges/{id}/answers {code}` | `200 CONFIRMED o fallido con restantes` | `409 invalidado, 410 expired, 404` |
 | `GET /challenges/standing?person=&purpose=` | `200 utilizable+restantes` | `—` |
 ### **5.10.3. Application Layer.**
-Pide (motivo+permiso, cierra anterior, instruye envío), responde (cuenta, confirma/falla/invalida), vence. Ante `Confirmed` llama fachada IAM primitivas. Parámetros: ` _TTL,  _MAX_ATTEMPTS`.
+`VerificationCommandServiceImpl` solicita y confirma códigos, controla intentos y vencimiento, invalida retos anteriores y notifica a IAM cuando se confirma el correo; `VerificationQueryServiceImpl` resuelve las consultas del reto. `ChallengeConfirmedEventHandler` atiende el evento de confirmación. Las dependencias de consentimiento, IAM, notificaciones y comparación de códigos se invocan mediante puertos de salida.
 ### **5.10.4. Infrastructure Layer.**
-`challenges(abierto único por par) + history(sin secretos)`. Ejecutores generación/comparación/envío; ACL Avisos vía Notifications (plantilla+dirección+motivo+clave).
+`ChallengeRepositoryImpl` implementa la persistencia TypeORM con `challenge.orm-entity.ts` y `ChallengePersistenceAssembler`; `HmacCodeCompareService` compara códigos mediante HMAC y `FakeCodeCompareService` sirve para pruebas. La entidad conserva el estado e historial del reto sin almacenar el código en claro.
 ### **5.10.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-10.png" alt="Fig. 5.10.5 - Verification (OTP), componentes" width="700"/>
@@ -2831,65 +2421,25 @@ Pide (motivo+permiso, cierra anterior, instruye envío), responde (cuenta, confi
 Fig. 5.10.5 – Verification (OTP), componentes.
 ### **5.10.6. Code Level Diagrams.**
 #### **5.10.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class VerificationChallenge {
-    -ChallengeId id
-    -PersonId personId
-    -Purpose purpose
-    -ChallengeStanding standing
-    -AttemptCount attempts
-    -ValidityWindow window
-    +VerificationChallenge request(ChallengeId id, PersonId personId, Purpose purpose, ValidityWindow window)$
-    +void answer(boolean holds)
-    +void expire()
-  }
-  class Purpose {
-    LOGIN
-    EMAIL_VERIFICATION
-    PASSWORD_RESET
-  }
-  class AttemptCount {
-    -int value
-    -int max
-  }
-  class ValidityWindow {
-    -date validUntil
-  }
-  class ChallengeStanding {
-    OPEN
-    CONFIRMED
-    INVALIDATED
-    EXPIRED
-  }
-  VerificationChallenge "1" --> "1" Purpose : para
-  VerificationChallenge "1" --> "1" ChallengeStanding : clasifica en
-  VerificationChallenge "1" --> "1" AttemptCount : intenta con
-  VerificationChallenge "1" --> "1" ValidityWindow : vence en
-```
-Fig. 5.10.6.1 – Clases OTP.
+**Figura 5.10.6.1**
+
+*Diagrama de clases del contexto Verification (OTP)*
+
+<p align="center">
+  <img src="./assets/C5-10-clases.png" alt="Figura 5.10.6.1. diagrama de clases del contexto Verification (OTP)" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.10.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  CHALLENGES {
-    TEXT id PK
-    TEXT personId FK
-    TEXT purpose
-    TEXT standing
-    INTEGER attempts
-    INTEGER maxAttempts
-    TIMESTAMPTZ requestedAt
-    TIMESTAMPTZ validUntil
-  }
-  CHALLENGE_HISTORY {
-    TEXT id PK
-    TEXT challengeId FK
-    TEXT fact
-    TIMESTAMPTZ occurredAt
-  }
-  CHALLENGES ||--o{ CHALLENGE_HISTORY : registra
-```
-Fig. 5.10.6.2 – DB OTP.
+**Figura 5.10.6.2**
+
+*Modelo de datos del contexto Verification (OTP)*
+
+<p align="center">
+  <img src="./assets/C5-10-base-datos.png" alt="Figura 5.10.6.2. diseño de base de datos del contexto Verification (OTP)" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 ## **5.11. Notifications (Generic).**
 Responsabilidad: intención de entrega email-only, idempotente. Trazabilidad: TS-03/US-26.
@@ -2902,9 +2452,9 @@ Responsabilidad: intención de entrega email-only, idempotente. Trazabilidad: TS
 | `POST /dispatches/{id}/confirm|fail|retry` | `200` | `409 terminal, 404` |
 | `GET /dispatches?key=|{id}` | `200 situación+intentos` | `404` |
 ### **5.11.3. Application Layer.**
-Recibe (resuelve plantilla, forma+permiso+clave fresca), instruye ejecutor, confirma/falla, reintenta anexando. API primitivas para todos los BC.
+`NotificationDispatchCommandServiceImpl` crea y reintenta despachos después de comprobar permiso y clave idempotente; `NotificationDispatchQueryServiceImpl` atiende las consultas. `DeliveryRequestedEventHandler` y `DeliveryRetriedEventHandler` reciben las solicitudes de entrega. `TemplateResolverService` y `EmailSendingService` encapsulan la resolución de plantilla y el envío.
 ### **5.11.4. Infrastructure Layer.**
-`dispatches(clave UK) + history`. Ejecutor correo tras puerto. Sin preferencias/dispositivos.
+`DispatchRepositoryImpl` implementa el repositorio TypeORM con `dispatch.orm-entity.ts` y `DispatchPersistenceAssembler`, conservando la unicidad de la clave de idempotencia. `SesEmailSendingAdapter`, `SendgridEmailSendingAdapter` y `LogOnlyEmailSendingAdapter` implementan el puerto de envío para proveedores y modos configurables. El adaptador activo depende de la configuración del entorno.
 ### **5.11.5. Component Level Diagrams.**
 <p align="center">
   <img src="./assets/componentes/C5-11.png" alt="Fig. 5.11.5 - Notifications, componentes" width="700"/>
@@ -2912,66 +2462,25 @@ Recibe (resuelve plantilla, forma+permiso+clave fresca), instruye ejecutor, conf
 Fig. 5.11.5 – Notifications, componentes.
 ### **5.11.6. Code Level Diagrams.**
 #### **5.11.6.1. Domain Layer Class Diagrams.**
-```mermaid
-classDiagram
-  class NotificationDispatch {
-    -DispatchId id
-    -IdempotencyKey key
-    -DeliveryAddress address
-    -ResolvedTemplate template
-    -DispatchStanding standing
-    +NotificationDispatch requestDelivery(DispatchId id, IdempotencyKey key, DeliveryAddress address, ResolvedTemplate template)$
-    +void confirmDelivered()
-    +void recordDeliveryFailure(string reason)
-    +void requestRetry()
-  }
-  class IdempotencyKey {
-    -string value
-  }
-  class DeliveryAddress {
-    -string value
-  }
-  class ResolvedTemplate {
-    -string key
-    -string body
-  }
-  class RefusalReason {
-    DUPLICATE
-    CONTACT_NOT_ALLOWED
-  }
-  class DispatchStanding {
-    REQUESTED
-    REFUSED
-    CONFIRMED
-    FAILED
-  }
-  NotificationDispatch "1" --> "1" IdempotencyKey : deduplica
-  NotificationDispatch "1" --> "1" DispatchStanding : clasifica en
-  NotificationDispatch "1" --> "1" DeliveryAddress : envía a
-  NotificationDispatch "1" --> "1" ResolvedTemplate : redacta con
-  NotificationDispatch "1" --> "1" RefusalReason : rechaza con
-```
-Fig. 5.11.6.1 – Clases Notifications.
+**Figura 5.11.6.1**
+
+*Diagrama de clases del contexto Notifications*
+
+<p align="center">
+  <img src="./assets/C5-11-clases.png" alt="Figura 5.11.6.1. diagrama de clases del contexto Notifications" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 #### **5.11.6.2. Database Design Diagram.**
-```mermaid
-erDiagram
-  DISPATCHES {
-    TEXT id PK
-    TEXT idempotencyKey UK
-    TEXT address
-    JSONB template
-    TEXT standing
-    TIMESTAMPTZ createdAt
-  }
-  DISPATCH_HISTORY {
-    TEXT id PK
-    TEXT dispatchId FK
-    TEXT fact
-    TIMESTAMPTZ occurredAt
-  }
-  DISPATCHES ||--o{ DISPATCH_HISTORY : registra
-```
-Fig. 5.11.6.2 – DB Notifications.
+**Figura 5.11.6.2**
+
+*Modelo de datos del contexto Notifications*
+
+<p align="center">
+  <img src="./assets/C5-11-base-datos.png" alt="Figura 5.11.6.2. diseño de base de datos del contexto Notifications" width="900"/>
+</p>
+
+*Nota.* Elaboración propia.
 
 # **Capítulo VI: Solution UX Design**
 
@@ -6352,9 +5861,8 @@ Finalmente, el proyecto logra un equilibrio óptimo entre seguridad criptográfi
 | POLYAS. (s. f.-a). *Secure online voting*. https://www.polyas.com/security | Análisis competitivo. |
 | POLYAS. (s. f.-b). *Secure authentication*. https://www.polyas.com/security/secure-authentication | Análisis competitivo. |
 | Simply Voting. (s. f.). *Security and reliability*. https://www.simplyvoting.com/security-reliability/ | Análisis competitivo. |
-| Estudio Estrada. (2022). *Situación de juntas de propietarios en Lima*. | Respaldo 95% sin inscripción — 1.2.1. |
-| Alternativa SAC. (2020). *Convivencia y conflictos vecinales*. | Respaldo 70% conflictos — 1.2.1/1.3. |
-| Bienes Raíces. (2019). *Morosidad en comunidades*. | Respaldo 40% morosidad — 1.2.1. |
+| Rueda Arias, L. (2020, 11 de enero). *Administración de edificios y condominios en Lima*. Alternativa S.A.C. https://www.alternativasac.com/administracion-de-condominios-lima/ | Fuente secundaria de la estimación de morosidad en edificios con juntas informales — 1.2.1. |
+| Sociedad Peruana de Bienes Raíces. (2019, 2 de enero). *Importancia de una junta de propietarios*. https://bienesraicess.com/blogs/conflictos-en-condominios | Estimaciones sobre inscripción de juntas y conflictos de convivencia — 1.2.1. |
 | Polygon Labs. (s. f.). *Polygon PoS docs*. https://docs.polygon.technology/ | Ledger público y relayer — Cap IV–V. |
 | Ethereum. (s. f.). *EIP-712: Typed structured data*. https://eips.ethereum.org/EIPS/eip-712 | Firma verificable con `ecrecover()` — Cap IV–V. |
 | NestJS. (s. f.). *Documentation*. https://docs.nestjs.com/ | Monolito modular — Cap IV–V. |

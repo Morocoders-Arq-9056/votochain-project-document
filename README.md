@@ -94,6 +94,7 @@
 | 0.17 | 14/11/2026 | Aliaga Aguirre, Ethan Matias | TB2: Diseño de las preguntas para las entrevistas de validación con nuestros usuarios enfoncandonos únicamente en lo desarrollado dentro del Sprint. |
 | 0.18 | 14/11/2026 | Rodriguez Macedo, Sebastian | TB2: documentación de los tres flujos del prototipo interactivo (6.5) con sus capturas, registro de la entrevista de validación VAL-03 (7.3.2), corrección de errores y ajustes de formato. |
 | 0.19 | 14/11/2026 | Bueno Perales, Mathias Eduardo | TB2: documentación del Sprint Planning 1, Sprint Backlog 1 y Development Evidence for Sprint Review; registro formal de entrevista de validación con perfil del entrevistado, hallazgos y relación con hipótesis Lean UX. |
+| 0.20 | 13-14/11/2026 | Ríos Pacheco, Héctor Javier | TB2: documentación de gestión de configuración del software (entorno, convenciones GitFlow y diagrama de despliegue); registro de evidencias de testing, ejecución local, capturas de Swagger/OpenAPI, Landing Page y aplicación del Sprint 1; registro de la entrevista de validación VAL-01 con captura de evidencia y actualización del Student Outcome. |
 
 
 

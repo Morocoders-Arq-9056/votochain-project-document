@@ -5812,9 +5812,176 @@ Sprint Backlog 1 en Trello:
 
 #### **7.2.1.4. Testing Suite Evidence for Sprint Review.**
 
+El Sprint 1 compromete US-01–US-08: descubrimiento en landing, contacto, registro, verificación de correo, sesión, recuperación y registro/activación de comunidad. La revisión del **14/11/2026** identifica pruebas implementadas en backend y frontend, pero su existencia no acredita resultados aprobados. La trazabilidad siguiente se obtiene leyendo sus aserciones, no sólo sus nombres. Los commits citados son evidencia histórica de incorporación o actualización de pruebas; no prueban su ejecución durante la ventana del sprint.
+
+Repositorios de testing: [backend — test/](https://github.com/Morocoders-Arq-9056/votochain-api-backend/tree/develop/test) y [frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend/tree/develop). No hay un repositorio de pruebas separado. El corte de código examinado es `f5cba27` en backend y `9cbcacb` en frontend, ambos en `develop`.
+
+##### **Relación de pruebas existentes y alcance**
+
+| Tipo / US | Archivo y clases relacionadas | Comportamiento comprobado por las aserciones | Límite de la evidencia |
+|---|---|---|---|
+| Unit Test backend / US-05 | `test/unit/verification/aggregates/verification-challenge.aggregate.spec.ts` — `VerificationChallenge` | Un desafío vencido pasa a `EXPIRED` y provoca `ChallengeElapsedError`; uno vigente permanece `OPEN` y utilizable. | Sólo cubre estos dos casos; no demuestra todo el ciclo de códigos e intentos. |
+| Integración HTTP backend / US-04, US-06, US-07 | `test/iam-signup.e2e-spec.ts` — controladores IAM, servicios y persistencia | Alta, correo duplicado, entrada inválida, contraseña débil, inicio/cierre de sesión, contraseña incorrecta, cambio de secreto/correo y consulta de usuario. | Levanta `AppModule` con Supertest; requiere base configurada. La preparación de usuario activo usa verificación directa, no demuestra entrega y confirmación de OTP extremo a extremo. |
+| Integración persistencia / US-04 | `test/iam-persistence.e2e-spec.ts` — `User`, `UserPersistenceAssembler`, `UserOrmEntity` | Round-trip de usuario/roles, rechazo de estado corrupto y unicidad del correo en PostgreSQL. | Activa `synchronize: true` y escribe datos; ejecutar exclusivamente sobre una base descartable. |
+| Integración HTTP backend / US-07 | `test/verification-recovery.e2e-spec.ts` — `ChallengesController` e IAM | Correo desconocido/malformado, apertura y consulta de recuperación, rechazo del cambio de secreto cuando el desafío sigue `OPEN`, rechazo de listado sin filtros. | No cubre recuperación exitosa tras un OTP confirmado; no presentarla como aceptación integral del flujo. |
+| Integración HTTP backend / US-08 | `test/community-lifecycle.e2e-spec.ts` — `Community`, `CommunitiesController`, `PoliciesController` | Registro con administrador fundador, política, activación, rechazo sin política, duplicados y consulta de estado. Incluye suspensión/archivo como regresión adicional. | Usa una referencia sintética de fundador; no valida el recorrido completo desde registro de persona hasta alta de comunidad. |
+| Unit Tests frontend / US-05 | `lib/domain/otp/otp.vo.test.ts` — `OtpChallengeSchema`, `isOtpExpired` | Desafío vencido y contador sin intentos. | También contiene invariantes de identidad fuera del Sprint 1; no atribuirlas al objetivo de este sprint. |
+| Adaptador HTTP simulado / US-05, US-07 | `lib/infrastructure/api/otp.client.test.ts` — `HttpOtpAdapter` | Mapeo de propósito, solicitud por persona/correo, desafío `OPEN`, errores 409/410 y cambio de secreto sólo con desafío `CONFIRMED`. | `fetch` simulado mediante Vitest; no es integración contra backend en ejecución. |
+| Adaptador HTTP simulado / US-07 | `lib/infrastructure/api/auth.client.test.ts` — `HttpAuthAdapter` | PATCH de `newSecret` y conversión del 404 a resultado fallido. | No contiene aceptación completa de registro/login; el nombre del archivo no implica esa cobertura. |
+| Unit Tests frontend / US-04, US-06 | `lib/infrastructure/api/access-error-mapping.test.ts` | Traducción de errores de red, credenciales, suspensión, identidad externa y correo duplicado/inválido. | Verifica funciones de mapeo, no autenticación real. |
+| Component Tests frontend / US-07 | `components/organisms/NewSecretForm.test.tsx` — `NewSecretForm` | Envío de la clave ingresada y presentación accesible del error del servidor. | Testing Library/jsdom; no es una captura ni una prueba de navegador completo. |
+| Componentes compartidos / US-01–US-07 | `components/atoms/{Button,Input,PasswordInput,OtpInput,ConsentCheckbox}.tsx` y tests existentes de Button, Input, PasswordInput y OtpInput | Controles reutilizados por formularios y accesibilidad en las pruebas disponibles. | No se identificó test específico de `ConsentCheckbox`; no se declara cobertura total de los formularios. |
+| Landing / US-01–US-03 | `app.js`, `index.html`, `terms.html` | Validación y traducciones implementadas; comprobación de sintaxis posible con Node.js. | No se identificó suite automatizada de aceptación; el formulario muestra éxito local y no envía una solicitud a un servicio. |
+
+##### **Acceptance Tests y BDD pendientes**
+
+No se encontraron archivos `.feature`, Steps ni configuración de Cucumber en los repositorios examinados. Los `describe`/`it` de Vitest y las pruebas Supertest no equivalen a archivos Gherkin ejecutables. Por ello, el requisito BDD de la rúbrica permanece pendiente: deben implementarse escenarios de US-04 (registro válido/duplicado), US-05 (OTP correcto, vencido y consumido), US-06 (sesión válida/inválida), US-07 (recuperación confirmada) y US-08 (activación con/sin política), con sus Steps y reporte real. No se incluye aquí código `.feature` ficticio como evidencia de una suite inexistente. La creación de esa suite supone trabajo de implementación adicional en backend.
+
+##### **Commits verificables relacionados con testing**
+
+| Repository | Branch examinada | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend) | develop | [81ef7f3](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/81ef7f3) | `feat(iam): classic-login with 10..16 policy and scrypt hash` | Sin cuerpo; actualiza pruebas IAM y persistencia junto con el cambio de autenticación. | 10/11/2026 |
+| votochain-api-backend | develop | [2234b2a](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/2234b2a) | `feat(core): verification recovery, voting acl and cross-context fixes` | Sin cuerpo; incorpora/actualiza pruebas de recuperación y flujos HTTP. | 10/11/2026 |
+| votochain-api-backend | develop | [6bd5288](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/6bd5288) | `feat(verification): challenge elapsed guard, consumer ACLs and real consent gate` | Incluye pruebas del agregado de desafío y su vencimiento, además del gate de consentimiento. Resumen del cuerpo. | 15/10/2026 |
+| votochain-api-backend | develop | [b9dcabf](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/b9dcabf) | `test(e2e): realign IAM persistence spec to the current model` | Ajusta el round-trip de roles al modelo persistido y retira la relación eliminada. Resumen del cuerpo. | 02/10/2026 |
+| [votochain-web-frontend](https://github.com/Morocoders-Arq-9056/votochain-web-frontend) | develop | [e30bbb6](https://github.com/Morocoders-Arq-9056/votochain-web-frontend/commit/e30bbb6) | `feat(auth): add login register otp domain and ports` | Sin cuerpo; incluye pruebas de invariantes OTP. | 10/11/2026 |
+| votochain-web-frontend | develop | [b1cd9ca](https://github.com/Morocoders-Arq-9056/votochain-web-frontend/commit/b1cd9ca) | `feat(infra): add auth otp http and fake adapters` | Sin cuerpo; incluye tests de adaptadores y mapeo de errores. | 10/11/2026 |
+| votochain-web-frontend | develop | [2c68754](https://github.com/Morocoders-Arq-9056/votochain-web-frontend/commit/2c68754) | `feat(ui): add auth identity voting templates organisms and design tokens` | Sin cuerpo; incluye pruebas del formulario de nuevo secreto y componentes. | 10/11/2026 |
+
+La columna Branch identifica la rama local donde se inspeccionó el commit; no presume el nombre de la rama original que lo creó.
+
+##### **Ejecución reproducible y capturas**
+
+Ejecutar en PowerShell, guardando para cada captura la fecha, SHA, comando y resumen completo de tests aprobados/fallidos/omitidos. Un fallo de instalación o arranque es un bloqueo de ambiente y no un resultado de las aserciones.
+
+**Backend — unitarias del Sprint 1:**
+
+```powershell
+Set-Location 'C:\Users\jhect\OneDrive\Documentos\GitHub\emergentes\votochain-api-backend'
+pnpm install --frozen-lockfile
+git rev-parse --short HEAD
+pnpm exec vitest run test/unit/verification/aggregates/verification-challenge.aggregate.spec.ts --reporter=verbose
+```
+
+**Backend — integración HTTP del sprint:** preparar primero una base de pruebas aislada con sus esquemas/migraciones, variables `DB_*` y los requisitos de `AppModule`. No utilizar la base productiva ni una base compartida con datos reales. La API no necesita estar iniciada en otra consola: estas suites crean su propia aplicación Nest.
+
+```powershell
+# Con .env apuntando EXCLUSIVAMENTE a la base descartable de pruebas:
+docker compose up -d postgres redis
+pnpm migration:run
+pnpm exec vitest run --config vitest.config.e2e.ts test/iam-signup.e2e-spec.ts test/verification-recovery.e2e-spec.ts test/community-lifecycle.e2e-spec.ts --reporter=verbose --no-file-parallelism
+# Captura separada: esta suite altera esquema y datos mediante synchronize:true.
+pnpm exec vitest run --config vitest.config.e2e.ts test/iam-persistence.e2e-spec.ts --reporter=verbose --no-file-parallelism
+```
+
+**Frontend — subconjunto relacionado con acceso y recuperación:**
+
+```powershell
+Set-Location 'C:\Users\jhect\OneDrive\Documentos\GitHub\emergentes\votochain-web-frontend'
+pnpm install --frozen-lockfile
+git rev-parse --short HEAD
+pnpm exec vitest run lib/domain/otp/otp.vo.test.ts lib/infrastructure/api/otp.client.test.ts lib/infrastructure/api/auth.client.test.ts lib/infrastructure/api/access-error-mapping.test.ts components/organisms/NewSecretForm.test.tsx --reporter=verbose
+# Suite completa como regresion; no atribuir todos sus tests al Sprint 1:
+pnpm test --reporter=verbose
+```
+
+Guardar capturas como `sprint-01-backend-unit.png`, `sprint-01-backend-http.png`, `sprint-01-backend-persistence.png` y `sprint-01-frontend-tests.png` dentro de `assets/` cuando se obtengan. Actualmente no se enlazan imágenes inexistentes. En la suite de persistencia, configurar también `DB_*` como variables de la consola: ese archivo consulta `process.env` directamente y no carga `.env` por sí mismo. El Compose usa su propia configuración; levantarlo no cambia automáticamente las variables de la consola.
+
+**Resultado observado el 14/11/2026:** la suite completa del frontend se ejecutó con Vitest 5.0.5: **35 archivos aprobados, 1 fallido; 146 tests aprobados y 1 fallido, de 147; duración 55,88 s**. El fallo corresponde a `components/atoms/Textarea.test.tsx`, caso “marca el estado inválido cuando hay error”, por timeout de 5000 ms. No se ha determinado su causa ni se modificó el test para ocultar el fallo. Las dependencias locales del frontend se instalaron automáticamente durante la preparación de esa ejecución, sin cambios en sus archivos versionados. El intento de backend terminó antes de ejecutar aserciones porque no existe `node_modules` y `vitest` no está disponible; su estado es **bloqueado por preparación del entorno**, no aprobado ni fallido funcionalmente.
+
+La ejecución separada del subconjunto indicado de frontend concluyó con **5 archivos y 27 tests aprobados, sin fallos, en 8,41 s** sobre `9cbcacb`. Se invocó `node node_modules/vitest/vitest.mjs run` con los mismos cinco paths y `--reporter=verbose` para utilizar Vitest ya instalado sin una nueva consulta de Corepack. Ese resultado incluye tres aserciones de identidad alojadas en `otp.vo.test.ts`; no significa 27 criterios exclusivos del Sprint 1 ni elimina el timeout observado en la suite completa.
+
+**Nueva ejecución, 14/11/2026:** una vez instaladas las dependencias del backend, la suite unitaria de expiración OTP terminó con **2 pruebas aprobadas**. El subconjunto del frontend volvió a concluir con **27 aprobadas**. Los comandos utilizados y resultados resumidos se registran aquí; no se conserva el log íntegro en este repositorio. Estos resultados no equivalen a evidencia de integración completa.
+
+La repetición de la suite completa del frontend terminó con **36 archivos y 147 pruebas aprobadas**, en 92,13 s. La primera ejecución tuvo un timeout y este resultado posterior no permite establecer su causa; no se conserva el log íntegro en el repositorio.
+
+Para backend se creó una base PostgreSQL 16 aislada en `127.0.0.1:55439`, sin usar datos reales. `migration:run` falló con `ColumnTypeUndefinedError` en `VoteOrmEntity#id` al cargar metadatos mediante `tsx`. Las tres suites HTTP no iniciaron sus 27 casos: `RekognitionFaceCollectionService.onModuleInit` no encontró credenciales AWS y también se registró la ausencia de `shared.outbox` por las migraciones no aplicadas. El resultado fue **3 suites fallidas y 27 tests omitidos**, no resultados funcionales. No se consultaron ni utilizaron credenciales personales ni se conserva el log íntegro en el repositorio.
+
+La suite de persistencia IAM inicialmente falló por ausencia del esquema `iam`. Tras crear sólo ese esquema en la base temporal, `synchronize: true` preparó su tabla y la repetición obtuvo **3 pruebas aprobadas**. Esta preparación parcial no equivale a ejecutar las migraciones completas ni habilita el resto de la API. El arranque normal de la API también terminó por la ausencia de credenciales AWS; Swagger se verificó posteriormente mediante un emulador local limitado, según se describe en 7.2.1.6.
+
 #### **7.2.1.5. Execution Evidence for Sprint Review.**
 
+El incremento implementado incluye la landing bilingüe con información, términos y validación de contacto, además de rutas frontend de registro, login, ingreso/verificación de código y cuenta. La API incorpora registro con contraseña, sesión, recuperación y registro/configuración de comunidades. La revisión estática identifica estos artefactos, pero no acredita todavía una demostración integrada de todo el Sprint Goal.
+
+| US / vista a evidenciar | Ruta o recurso implementado | Qué debe mostrar la captura de ejecución | Estado actual |
+|---|---|---|---|
+| US-01–US-02 / landing | `votochain-web-landing/index.html` | Hero, navegación, funcionamiento, privacidad y cambio ES/EN en navegador. | Capturas locales de portada, funcionamiento y cambio de idioma obtenidas; privacidad pendiente de captura. |
+| US-03 / contacto | `#contacto` | Validación de campos y consentimiento; mensaje final identificado como demostración local. | No existe transmisión efectiva de la solicitud; no afirmar recepción por el equipo. |
+| US-04 / registro | `/registro` | Datos de ejemplo, validación y transición posterior. | Frontend no envía la contraseña requerida por el backend actual; integración bloqueada hasta alinear contratos. |
+| US-05 / OTP | `/verificar-correo`, `/solicitar-codigo`, `/ingresar-codigo` | Desafío vigente, error recuperable y confirmación real. | Hay UI y adaptador; correo backend `LogOnly`, entrega real pendiente. |
+| US-06 / acceso y cuenta | `/login`, `/cuenta` | Sesión iniciada y estado de cuenta; cierre de sesión. | Login frontend sin contraseña en el contrato actual; sesiones backend con ejecutor `Noop`. |
+| US-07 / recuperación | Solicitud e ingreso de código y formulario de nuevo secreto | Cambio de secreto después de confirmar el desafío; errores visibles. | Pruebas parciales existentes; recorrido exitoso completo pendiente de demostración. |
+| US-08 / comunidad | API `/communities` y `/communities/{id}/policy` | Alta, política y cambio a `ACTIVE` mediante Swagger. | No se identificó ruta frontend de alta de comunidad entre las páginas actuales; mostrar API no sustituye la pantalla solicitada en T16. |
+
+Los wireframes y mock-ups de 6.4, incluidos `assets/wireframes_login.png` y `assets/RegistrarComunidadMockup1.png`, son evidencia de diseño y no se reutilizan como capturas de software ejecutándose. Tampoco se considera el video de entrega parcial del Anexo C evidencia del Sprint 1 sin comprobar su contenido y fecha.
+
+##### **Capturas reales de ejecución local**
+
+La landing y las vistas de registro/login se revisaron localmente el 14/11/2026. El frontend se ejecutó con `USE_MOCK_API=true`, por lo que la revisión visual no demuestra integración ni autenticación real. Las capturas temporales se descartaron y no se incluyen en el repositorio; para reproducirlas, ejecutar las aplicaciones según 7.1.1 y capturar landing (portada, funcionamiento, contacto e inglés) y frontend (registro/login) en el navegador.
+
+**Preparación de la demostración:** servir la landing por HTTP; iniciar backend con `pnpm start:dev` y frontend con `pnpm dev` según 7.1.1. Para revisión visual aislada puede usarse `USE_MOCK_API=true`, identificando visiblemente que es un prototipo. El video del sprint deberá recorrer landing → registro → OTP → acceso/cuenta → comunidad/política, señalar los bloqueos y distinguir pasos simulados de respuestas reales. **Las capturas faltantes y la URL/duración del video siguen pendientes; no existe evidencia suficiente para declarar alcanzado todo el Sprint Goal.**
+
 #### **7.2.1.6. Services Documentation Evidence for Sprint Review.**
+
+La API dispone de configuración Swagger/OpenAPI en `src/shared/infrastructure/documentation/openapi/configuration/swagger.setup.ts`, con tags, DTOs y anotaciones en los controladores del sprint. El 14/11/2026 se verificó que la documentación generada abre localmente y se inspeccionaron capturas de grupos de endpoints presentadas para esta revisión. Estas imágenes acreditan navegación e inventario documentado, no ejecución de operaciones, y no se versionan conforme al alcance acordado. Algunos recursos de respuesta, como `ChallengeResource` y `CommunityResource`, no tienen propiedades anotadas con `@ApiProperty`; debe revisarse su representación real antes de declarar completos los esquemas. La declaración de Bearer en Swagger tampoco demuestra que exista un guard de autenticación aplicado.
+
+Repositorio: [votochain-api-backend](https://github.com/Morocoders-Arq-9056/votochain-api-backend). Base local propuesta en 7.1.1: `http://localhost:4000/api/v1`; [Swagger local](http://localhost:4000/api/docs). El puerto depende de `SERVER_PORT` y la documentación de `SWAGGER_PATH`; estas URLs son locales y no se ha verificado un despliegue público. En la tabla, `{id}` representa el identificador real devuelto por la operación previa; los cuerpos son JSON.
+
+| US | Método y sintaxis de llamada | Parámetros / cuerpo de ejemplo | Respuesta y significado | Documentación |
+|---|---|---|---|---|
+| US-04 | `POST /api/v1/auth/sign-up` (también `POST /api/v1/users`) | `{"email":"demo@example.test","password":"S3gura-2026"}` | `201`, `UserResource`: identidad registrada, sin token ni contraseña; `400` validación y `409` duplicado. | [Swagger](http://localhost:4000/api/docs), tags `authentication` / `users` según configuración generada. |
+| US-06 | `POST /api/v1/auth/sign-in` | `{"email":"demo@example.test","password":"S3gura-2026","proofKind":"LOCAL"}` | `200`, usuario con `session: "SESSION_OPEN"`; `401` credenciales inválidas. Requiere estado de acceso habilitado. | [Swagger](http://localhost:4000/api/docs) |
+| US-06 | `POST /api/v1/auth/sign-out` | `{"email":"demo@example.test"}` | `204`, sin cuerpo; `404` usuario desconocido y `409` sin sesión abierta. | [Swagger](http://localhost:4000/api/docs) |
+| US-04–US-07 | `GET /api/v1/users/{id}` | Path `id=usr-…` | `200`, datos de usuario, correo verificado, roles y estado de sesión; `404` inexistente. | [Swagger](http://localhost:4000/api/docs) |
+| US-05 | `POST /api/v1/challenges` | `{"personId":"per-…","purpose":"email-verification"}` | `201`, desafío `OPEN`, intentos y vigencia; no devuelve código en claro. | [Swagger](http://localhost:4000/api/docs), tag `challenges`. |
+| US-07 | `POST /api/v1/challenges/by-email` | `{"email":"demo@example.test","purpose":"password-reset"}` | `201`, desafío; `404` correo desconocido, `400` formato inválido. | [Swagger](http://localhost:4000/api/docs) |
+| US-05, US-07 | `GET /api/v1/challenges/{id}` y `GET /api/v1/challenges?email=demo%40example.test&purpose=password-reset` | Path de desafío o query `purpose` y `email`/`personId`. | `200`, desafío o lista; `400` si faltan filtros del listado. | [Swagger](http://localhost:4000/api/docs) |
+| US-05 | `POST /api/v1/challenges/{id}/answers` | `{"code":"482913"}`; sustituir por el código de prueba vigente. | `200`, recurso de desafío con su estado real; `409` conflicto y `410` expiración según anotaciones del controlador. El ejemplo de código no es un OTP operativo. | [Swagger](http://localhost:4000/api/docs), tag `answers`. |
+| US-07 | `POST /api/v1/challenges/{id}/secret` | `{"newSecret":"N3ueva-2026"}`; desafío de recuperación `CONFIRMED`. | `200`, sin cuerpo útil; `404` si el desafío no permite recuperación. | [Swagger](http://localhost:4000/api/docs) |
+| US-07 | `PATCH /api/v1/users/{id}/secret` y `PATCH /api/v1/users/{id}/email` | `{"newSecret":"N3ueva-2026"}` o `{"newEmail":"otro@example.test"}`. | `200`; el cambio de correo deja pendiente su verificación. La vía PATCH directa no se documenta como si exigiera por sí misma el desafío de recuperación. | [Swagger](http://localhost:4000/api/docs) |
+| US-08 | `POST /api/v1/communities` | `{"name":"Comunidad Demo","domicile":"Lima, Peru","contact":"demo@example.test","adminPersonId":"per-…"}` | `201`, comunidad `REGISTERED` con administrador fundador y cabecera `Location`; `409` nombre duplicado. | [Swagger](http://localhost:4000/api/docs) |
+| US-08 | `PUT /api/v1/communities/{id}/policy` | `{"threshold":51,"basis":"members","majorityRule":"simple-majority"}` | `200`, comunidad con política; no cambia instantáneas de propuestas anteriores. | [Swagger](http://localhost:4000/api/docs), tag `policies`. |
+| US-08 | `PATCH /api/v1/communities/{id}/standing` | `{"standing":"ACTIVE"}` | `200`, comunidad activa; la suite espera `422` al activar sin política. Es la ruta actual de activación, no `POST .../activate` del backlog. | [Swagger](http://localhost:4000/api/docs) |
+| US-08 | `GET /api/v1/communities/{id}`, `GET .../{id}/policy`, `GET .../{id}/standing` | Path `id=com-…`. | `200`, comunidad, política o juicio de aceptación; `404` inexistente y política no definida según filtro del dominio. | [Swagger](http://localhost:4000/api/docs) |
+
+**Ejemplos de respuestas ilustrativas basados en los recursos, no capturados de una ejecución:**
+
+```json
+{
+  "userId": "usr-demo",
+  "personId": "per-demo",
+  "email": "demo@example.test",
+  "emailVerified": false,
+  "standing": "REGISTERED",
+  "session": "SESSION_CLOSED",
+  "roles": ["USER"],
+  "outsideProver": null
+}
+```
+
+El alta identifica por separado al usuario técnico (`userId`) y a la persona (`personId`). El estado de correo no equivale a elegibilidad comunitaria. Tras activar correctamente una comunidad, la consulta de estado puede devolver:
+
+```json
+{
+  "standing": "ACTIVE",
+  "acceptsMembers": true,
+  "acceptsProposals": true
+}
+```
+
+**Historial relacionado con la documentación de servicios:**
+
+| Repository | Branch examinada | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| votochain-api-backend | develop | [1497195](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/1497195) | `chore(root): add postgres typeorm docker bootstrap chore(shared): add application infrastructure interceptors` | Sin cuerpo. Contiene la configuración OpenAPI examinada; no es evidencia de Swagger desplegado. | 12/09/2026 |
+| votochain-api-backend | develop | [81ef7f3](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/81ef7f3) | `feat(iam): classic-login with 10..16 policy and scrypt hash` | Sin cuerpo. Actualiza contrato y anotaciones IAM relacionadas. | 10/11/2026 |
+| votochain-api-backend | develop | [2234b2a](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/2234b2a) | `feat(core): verification recovery, voting acl and cross-context fixes` | Sin cuerpo. Incluye cambios en los controladores de recuperación. | 10/11/2026 |
+| votochain-api-backend | develop | [c4e882e](https://github.com/Morocoders-Arq-9056/votochain-api-backend/commit/c4e882e) | `refactor(community): extract standing command and harden persistence` | Extrae el comando de estado y centraliza parsing/persistencia. Resumen del cuerpo. | 02/10/2026 |
+
+**Verificación local de Swagger (14/11/2026):** `http://localhost:4000/api/docs` respondió correctamente usando un emulador local limitado para inicializar el servicio de Rekognition. No es un despliegue público ni habilita por sí solo todos los flujos de negocio. Las capturas revisadas muestran el inventario de usuarios, autenticación/notificaciones, consentimientos/desafíos, comunidades, membresías/propuestas, votos/biometría y billeteras/entregas. Son capturas de documentación generada, sin “Try it out” ni respuestas de operaciones; se descartaron y no se versionan conforme al alcance acordado.
+
+**Interacciones aún pendientes:** usar “Try it out” con datos sintéticos para registrar evidencia de (1) alta y rechazo de correo duplicado, (2) login/logout, (3) creación/consulta/respuesta del desafío y (4) comunidad → política → activación. Cada captura debe mostrar método, URL, cuerpo, status y respuesta. Los ejemplos de esta sección son ilustrativos y no deben presentarse como respuestas capturadas. El arranque estándar también continúa condicionado por credenciales AWS; la verificación local del 14/11 utilizó un emulador limitado de `DescribeCollection`, sólo para inicializar Swagger.
 
 #### **7.2.1.7. Software Deployment Evidence for Sprint Review.**
 

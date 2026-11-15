@@ -1,4 +1,4 @@
-
+﻿
 <p align="center">
   <img src="./assets/upc-logo.png" alt="UPC Logo" width="200"/>
 </p>
@@ -93,6 +93,7 @@
 | 0.16 | 14/11/2026 | Paredes Santos, Fabrizio Alberto | TB2: elaboración de la estructura de wireframes y corrección transversal del informe; documentación de evidencias de implementación y pruebas de Sprint 1; desarrollo de pruebas de aceptación BDD para autenticación, verificación, recuperación de cuenta y comunidades, con escenarios, pasos de API y fixtures. |
 | 0.17 | 14/11/2026 | Aliaga Aguirre, Ethan Matias | TB2: Diseño de las preguntas para las entrevistas de validación con nuestros usuarios enfoncandonos únicamente en lo desarrollado dentro del Sprint. |
 | 0.18 | 14/11/2026 | Rodriguez Macedo, Sebastian | TB2: documentación de los tres flujos del prototipo interactivo (6.5) con sus capturas, registro de la entrevista de validación VAL-03 (7.3.2), corrección de errores y ajustes de formato. |
+| 0.19 | 14/11/2026 | Bueno Perales, Mathias Eduardo | TB2: documentación del Sprint Planning 1, Sprint Backlog 1 y Development Evidence for Sprint Review; registro formal de entrevista de validación con perfil del entrevistado, hallazgos y relación con hipótesis Lean UX. |
 
 
 
@@ -5802,6 +5803,109 @@ Las siguientes capturas del Swagger local muestran los grupos de operaciones doc
 *(Pendiente de incorporar las fichas y evidencias de validación correspondientes al segmento de directivas y administradores).*
 
 ### **7.3.3. Evaluaciones según heurísticas.**
+
+##### SITE o APP A EVALUAR: VotoChain
+
+##### TAREAS A EVALUAR:
+
+- Comprender la propuesta de valor de VotoChain desde la Landing Page
+- Navegar desde la Landing Page hasta el registro de una cuenta
+- Comprender el envío y la vigencia del código OTP
+- Identificar los intentos restantes para ingresar el código de verificación
+- Utilizar la opción de reenvío del código OTP
+- Comprender la diferencia entre verificar el correo y estar habilitado para votar en una comunidad
+- Iniciar sesión y comprender la política de sesión única por dispositivo
+- Consultar el estado de la cuenta, los roles y el historial de sesiones
+
+#### ESCALA DE SEVERIDAD
+
+| Nivel | Descripción                                                                                   |
+| ----- | --------------------------------------------------------------------------------------------- |
+| 1     | Problema superficial: fácilmente superado o poco frecuente. No requiere corrección inmediata. |
+| 2     | Problema menor: puede dificultar algo la experiencia. Se recomienda corregir pronto.          |
+| 3     | Problema mayor: frecuente o difícil de superar. Debe corregirse con prioridad.                |
+| 4     | Problema muy grave: impide el uso normal. Requiere solución inmediata.                        |
+
+#### TABLA RESUMEN DE HALLAZGOS HEURÍSTICOS
+
+| #  | Problema                                                                                                        | Severidad | Heurística violada                                                  |
+| -- | --------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- |
+| 1  | El temporizador de vigencia del código OTP tiene poca visibilidad.                                              | 3         | Visibilidad del estado del sistema (Nielsen #1)                     |
+| 2  | El indicador de intentos restantes pasa desapercibido.                                                          | 3         | Visibilidad del estado del sistema (Nielsen #1)                     |
+| 3  | El estado de espera para reenviar el código OTP no es suficientemente claro.                                    | 2         | Visibilidad del estado del sistema (Nielsen #1)                     |
+| 4  | No se explica claramente que verificar el correo no habilita automáticamente al usuario para votar.             | 3         | Correspondencia entre el sistema y el mundo real (Nielsen #2)       |
+| 5  | El campo de ingreso del código OTP podría facilitar más su reconocimiento y digitación.                         | 2         | Reconocimiento antes que recuerdo (Nielsen #6)                      |
+| 6  | El botón «Ingresar» de la Landing Page no dirige directamente al acceso o registro.                             | 2         | Consistencia y estándares (Nielsen #4)                              |
+
+<br>
+
+#### PROBLEMA #1: Baja visibilidad del temporizador de vigencia del código OTP
+
+- Severidad: 3 <br>
+- Heurística violada: Visibilidad del estado del sistema (Nielsen #1) <br>
+- Descripción:
+Durante las entrevistas VAL-02 y VAL-03, las participantes identificaron que el tiempo de vigencia del código OTP no destacaba lo suficiente en la pantalla de verificación. Aunque el temporizador estaba presente, era necesario prestar atención para reconocer cuánto tiempo quedaba antes de que el código expirara. Esta situación puede generar incertidumbre, especialmente en usuarios que necesitan más tiempo para leer o ingresar el código, como propietarios de mayor edad.
+- Recomendación:
+Incrementar el tamaño y contraste visual del temporizador, incorporando una cuenta regresiva claramente visible que permita identificar cuánto tiempo queda para utilizar el código OTP.
+
+#### PROBLEMA #2: Baja visibilidad del indicador de intentos restantes
+
+- Severidad: 3 <br>
+- Heurística violada: Visibilidad del estado del sistema (Nielsen #1) <br>
+- Descripción:
+En las entrevistas VAL-02 y VAL-03 se identificó que el indicador de intentos restantes no resulta suficientemente visible desde el inicio del proceso de verificación. En el caso de VAL-03, el participante señaló que recién notó esta información después de ingresar un dígito incorrecto y recibir un aviso. Esto dificulta que el usuario conozca anticipadamente cuántas oportunidades tiene para ingresar correctamente su código, lo que puede generar inseguridad durante el proceso.
+- Recomendación:
+Mantener el indicador de intentos restantes en una posición visible debajo de las casillas del código OTP, utilizando un tamaño de fuente y contraste adecuados para que el usuario pueda reconocer esta información sin necesidad de cometer un error.
+
+#### PROBLEMA #3: Estado de espera poco claro al reenviar el código OTP
+
+- Severidad: 2 <br>
+- Heurística violada: Visibilidad del estado del sistema (Nielsen #1) <br>
+- Descripción:
+Durante las entrevistas VAL-02 y VAL-03 se observó que el botón de reenvío del código OTP puede generar confusión mientras se encuentra activo el tiempo de espera. Aunque la funcionalidad opera correctamente, el usuario puede interpretar que el botón no responde cuando intenta solicitar un nuevo código. La ausencia de una indicación suficientemente explícita sobre el tiempo que debe esperar puede provocar intentos repetidos de interacción.
+- Recomendación:
+Mostrar un contador visible en el propio botón o junto a él, utilizando un mensaje contextual como «Reenviar en 30s». Una vez finalizado el tiempo de espera, el botón debe recuperar su estado habilitado y permitir solicitar un nuevo código.
+
+#### PROBLEMA #4: Falta de orientación sobre la habilitación para votar después de verificar el correo
+
+- Severidad: 3 <br>
+- Heurística violada: Correspondencia entre el sistema y el mundo real (Nielsen #2) <br>
+- Descripción:
+En las entrevistas VAL-02 y VAL-03 se identificó una confusión inicial entre verificar la titularidad del correo electrónico y obtener acceso a las votaciones de una comunidad. Los participantes interpretaron inicialmente que completar la verificación del correo les permitiría acceder directamente a las votaciones. Sin embargo, posteriormente comprendieron que también necesitan estar vinculados o aceptados en el padrón de propietarios de su comunidad por parte de la directiva o administrador. Esta diferencia no se comunica de manera suficientemente explícita durante el flujo, lo que puede generar expectativas incorrectas sobre el funcionamiento de la plataforma.
+- Recomendación:
+Incorporar un mensaje contextual después de verificar el correo que explique que este proceso confirma la titularidad de la cuenta, pero que para participar en las votaciones el propietario debe estar previamente vinculado o aceptado en el padrón de su comunidad. También se recomienda incluir una breve guía de dos pasos que explique qué debe ocurrir después de la verificación.
+
+#### PROBLEMA #5: Distribución poco optimizada del campo de ingreso del código OTP
+
+- Severidad: 2 <br>
+- Heurística violada: Reconocimiento antes que recuerdo (Nielsen #6) <br>
+- Descripción:
+Durante la entrevista VAL-01, el participante propuso dividir el campo de ingreso del código OTP de seis dígitos en seis casillas individuales. Esta observación evidencia una oportunidad para mejorar la legibilidad y facilitar el reconocimiento de cada dígito durante la verificación. Aunque el participante comprendió el funcionamiento del código, una distribución visual más clara podría hacer que el proceso resulte más intuitivo y reducir posibles errores de digitación.
+- Recomendación:
+Implementar seis casillas individuales para el ingreso del código OTP, manteniendo una distribución ordenada y permitiendo que el usuario identifique fácilmente los dígitos ingresados. Se recomienda incorporar el avance automático entre casillas y permitir pegar el código completo.
+
+#### PROBLEMA #6: Acceso indirecto desde el botón «Ingresar» de la Landing Page
+
+- Severidad: 2 <br>
+- Heurística violada: Consistencia y estándares (Nielsen #4) <br>
+- Descripción:
+Durante la entrevista VAL-01, el participante sugirió que el botón «Ingresar», ubicado en el menú principal de la Landing Page, debería dirigir directamente hacia las opciones de inicio de sesión o registro. Aunque la navegación general desde la Landing Page fue considerada clara y fluida, esta interacción representa una oportunidad para hacer más directo el acceso de los usuarios que ya conocen la plataforma o desean crear una cuenta.
+- Recomendación:
+Configurar el botón «Ingresar» para que redirija directamente a la pantalla de inicio de sesión, incorporando desde allí una opción claramente visible para registrarse si el usuario todavía no tiene una cuenta.
+
+<br>
+
+#### SÍNTESIS DE LA EVALUACIÓN
+
+Las entrevistas de validación muestran una percepción favorable de los flujos de acceso de VotoChain. Los tres participantes comprendieron la finalidad de la plataforma y valoraron positivamente la navegación, el diseño visual y la formalidad que transmite el proceso de registro.
+
+También se identificaron aspectos positivos importantes:
+- La propuesta de valor de VotoChain se comprende con facilidad.
+- La navegación desde la Landing Page hasta el registro resulta fluida.
+- El código OTP se percibe como un mecanismo familiar y seguro.
+- La política de sesión única por dispositivo transmite una mayor sensación de seguridad.
+- La sección «Mi cuenta / Seguridad» permite consultar información relevante sobre el estado de la cuenta.
+
 
 ## **7.4. Video About-the-Product.**
 

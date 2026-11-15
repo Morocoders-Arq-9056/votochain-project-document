@@ -122,11 +122,17 @@ Durante TB2, el equipo continuó el informe y los productos mediante cambios ver
 
 **Figura TB2-1. GitHub Insights – Pulse del repositorio del informe.**
 
-<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Document-Pulse.png -->
+<p align="center">
+  <img src="./assets/MoroCodersCollaborationInsightsTB2Pulse.png" alt="GitHub Insights - Pulse del repositorio" width="850"/>
+</p>
+
 
 **Figura TB2-2. GitHub Insights – Contributors del repositorio del informe.**
 
-<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Document-Contributors.png -->
+<p align="center">
+  <img src="./assets/CollaborationInsightsTB2-Document-Contributors.png" alt="GitHub Insights - Contribuitors TB2 Document" width="850"/>
+</p>
+
 
 **Figura TB2-3. GitHub Insights – actividad del backend.**
 

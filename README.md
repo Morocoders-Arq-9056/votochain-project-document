@@ -91,7 +91,8 @@
 | 0.14 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Desarrollo del Capítulo V táctico (5.1–5.11): diagramas C4, clases, contratos REST, modelos de datos y componentes por bounded context. |
 | 0.15 | 09/10/2026 | Aliaga Aguirre, Ethan Matias | Actualización de trazabilidad de historias, anexos y conclusiones; revisión de tablas, referencias, convenciones y consistencia formal del informe. |
 | 0.16 | 14/11/2026 | Paredes Santos, Fabrizio Alberto | TB2: elaboración de la estructura de wireframes y corrección transversal del informe; documentación de evidencias de implementación y pruebas de Sprint 1; desarrollo de pruebas de aceptación BDD para autenticación, verificación, recuperación de cuenta y comunidades, con escenarios, pasos de API y fixtures. |
-| 0.17 | 14/11/2026 | Rodriguez Macedo, Sebastian | TB2: documentación de los tres flujos del prototipo interactivo (6.5) con sus capturas, registro de la entrevista de validación VAL-03 (7.3.2), corrección de errores y ajustes de formato. |
+| 0.17 | 14/11/2026 | Aliaga Aguirre, Ethan Matias | TB2: Diseño de las preguntas para las entrevistas de validación con nuestros usuarios enfoncandonos únicamente en lo desarrollado dentro del Sprint. |
+| 0.18 | 14/11/2026 | Rodriguez Macedo, Sebastian | TB2: documentación de los tres flujos del prototipo interactivo (6.5) con sus capturas, registro de la entrevista de validación VAL-03 (7.3.2), corrección de errores y ajustes de formato. |
 
 
 

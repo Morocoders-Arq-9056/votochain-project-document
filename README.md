@@ -136,11 +136,17 @@ Durante TB2, el equipo continuó el informe y los productos mediante cambios ver
 
 **Figura TB2-3. GitHub Insights – actividad del backend.**
 
-<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Backend.png -->
+<p align="center">
+  <img src="./assets/CollaborationInsightsTB2-Backend.jpeg" alt="GitHub Insights - Contribuitors TB2 Backend" width="850"/>
+</p>
+
 
 **Figura TB2-4. GitHub Insights – actividad del frontend.**
 
-<!-- Espacio para imagen: ./assets/CollaborationInsightsTB2-Frontend.png -->
+<p align="center">
+  <img src="./assets/CollaborationInsightsTB2-Frontend.jpeg" alt="GitHub Insights - Contribuitors TB2 Frontend" width="850"/>
+</p>
+
 
 | URL del repositorio del reporte |
 | :-----------------------------------: |

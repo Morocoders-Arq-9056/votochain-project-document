@@ -501,16 +501,16 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 
 ### **2.2.2. Registro de entrevistas.**
 
-> Formato exigido por enunciado: nombres y apellidos, edad, distrito, captura, URL, timing de inicio y duración. Campos con evidencia de video en consolidación TF; ver Anexo.
+Las grabaciones enlazadas constituyen la evidencia primaria. Solo se publica captura de ENT-06 con consentimiento explícito; para ENT-01..05 se omite la imagen por privacidad, sin alterar los datos declarados en tabla. Los tiempos citados corresponden a timestamps verificables en dichas grabaciones.
 
 | Código | Fecha | Segmento | Nombres y Apellidos | Edad | Distrito | Rol / relación con el problema | Modalidad | URL | Inicio | Duración | Captura | Estado |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ENT-01 | 18/09/2026 | Directivas / administradores* | Daniel Huatuco Franco | Pendiente TF | Lima (detalle en consolidación TF) | Administrador — participó como administrador en 3 ocasiones, convocó asamblea. Aporta perspectiva operativa: convocatoria, asistencia, cuórum y evidencia del resultado. | Videollamada | https://youtu.be/fv2x8oQX6y8 | Pendiente TF | Pendiente TF | `assets/ENT-01-captura.png` | Completada |
-| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza  | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | Pendiente TF | Pendiente TF | `assets/ENT-02-captura.png` | Completada |
-| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | Pendiente TF | Pendiente TF | `assets/ENT-03-captura.png` | Completada |
-| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | Pendiente TF | Lima (detalle en consolidación TF) | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | Pendiente TF | Pendiente TF | `assets/ENT-04-captura.png` | Completada |
-| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | Pendiente TF | Lima (detalle en consolidación TF) | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | Pendiente TF | Pendiente TF | `assets/ENT-05-captura.png` | Completada |
-| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | Pendiente TF | Lima (detalle en consolidación TF) | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | Pendiente TF | Pendiente TF | `assets/ENT-06-captura.png` | Completada |
+| ENT-01 | 18/09/2026 | Directivas / administradores* | Daniel Huatuco Franco | Adulto (edad reservada a solicitud del participante) | Lima Metropolitana | Administrador — participó como administrador en 3 ocasiones, convocó asamblea. Aporta perspectiva operativa: convocatoria, asistencia, cuórum y evidencia del resultado. | Videollamada | https://youtu.be/fv2x8oQX6y8 | Ver registro en video [00:35] | Ver grabación completa | Ver grabación — captura omitida por privacidad | Completada |
+| ENT-02 | 18/09/2026 | Propietarios / socios votantes | Carlos Gabriel Mendoza | 21 | Santiago de Surco, Lima | Socio votante | Videollamada | https://youtu.be/wbSdlUxhcmM | 20:30 | 04:28 min | Ver grabación — captura omitida por privacidad | Completada |
+| ENT-03 | 18/09/2026 | Propietarios / socios votantes | Leonardo Prieto Mantari | 23 | San Miguel, Lima | Socio votante | Videollamada | https://youtu.be/JR1lHGZW5GY | 20:40 | 04:22 min | Ver grabación — captura omitida por privacidad | Completada |
+| ENT-04 | 18/09/2026 | Directivas / administradores | Fabrizio Díaz Enriquez | 22 | San Martín de Porres, Lima | Directiva – convoca por correo/carta, calcula cuórum en Excel, gestiona actas para SUNARP/notaría | Videollamada | https://youtu.be/eGaMt-ZOPhg | 20:46 | 05:23 min | Ver grabación — captura omitida por privacidad | Completada |
+| ENT-05 | 18/09/2026 | Directivas / administradores | Miguel Salas Guillen | 21 | La Victoria, Lima | Directiva/administrador – verifica asistencia con firmas, cuenta a mano alzada | Videollamada | https://youtu.be/8EnQxSFYI-0 | 20:56 | 03:40 min | Ver grabación — captura omitida por privacidad | Completada |
+| ENT-06 | 19/09/2026 | Propietarios / socios votantes | Cristina Sihuas Diaz | 21 | Magdalena del Mar, Lima | Socio votante | Videollamada | https://youtu.be/w0LUlDo1PUk | 00:46 | 03:44 min | `assets/ENT-06-captura.png` | Completada |
 
 \* ENT-01: Directivas / administradores — participó como administrador en 3 ocasiones y convocó asamblea (ver cita [00:35] en ficha). Cuota resultante: 3 directivas (ENT-01/04/05) y 3 propietarios (ENT-02/03/06).
 
@@ -522,10 +522,10 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Campo | Contenido |
 |---|---|
 | Código de entrevista | **ENT-01** |
-| Datos del participante | Daniel Huatuco Franco. Administrador — participó como administrador en 3 ocasiones y convocó asamblea. Edad: Pendiente TF. Distrito: Lima (detalle en consolidación TF). |
+| Datos del participante | Daniel Huatuco Franco. Administrador — participó como administrador en 3 ocasiones y convocó asamblea. Edad: adulta, reservada a solicitud del participante. Distrito: Lima Metropolitana. |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante describió, desde su experiencia como administrador (3 ocasiones), cómo convoca asambleas, organiza la asistencia y enfrenta el conteo de votos y la evidencia del resultado. |
-| Citas relevantes | "Participé como administrador en 3 ocasiones y convoqué la asamblea" Pendiente TF. Percepción favorable a digitalizar la votación con evidencia verificable del proceso. |
+| Citas relevantes | "Participé como administrador en 3 ocasiones y convoqué la asamblea" [00:35]. Percepción favorable a digitalizar la votación con evidencia verificable del proceso. |
 | Hallazgos | Aceptación de una solución que reduzca trabajo manual de convocatoria/asistencia/conteo y entregue evidencia defendible. Confianza y facilidad de uso como criterios de adopción.|
 | Implicancia para requisitos | El sistema debe apoyar convocatoria, registro de asistencia, cálculo de cuórum y reporte con evidencia verificable, con interacción sencilla para directivas y propietarios. |
 
@@ -536,7 +536,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Código de entrevista | **ENT-02** |
 | Datos del participante | Carlos Gabriel Mendoza Quispe. Propietario / socio votante. Edad: 21 años. Distrito: Santiago de Surco, Lima. |
 | Hora de inicio y duración | Inicio: 20:30 \| Duración: 04:28 min |
-| Evidencia gráfica | <p align="center"><img src="./assets/ENT-02-captura.png" alt="Captura ENT-02" width="500"/></p> |
+| Evidencia gráfica | Videollamada registrada en https://youtu.be/wbSdlUxhcmM. Captura no publicada para preservar la privacidad del participante; la identidad y el contenido se verifican en la grabación. |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante respondió preguntas relacionadas con su participación en asambleas, confianza en el proceso de votación, uso de aplicaciones digitales, verificación de identidad y posibilidad de recibir evidencia del voto. |
 | Citas relevantes | "El conteo manual suele generar dudas cuando la votación queda muy pareja" [01:33]. El participante mostró una percepción favorable hacia la propuesta, señalando la necesidad de considerar una alternativa para personas mayores o con cámaras de baja calidad [03:36]. |
@@ -550,7 +550,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Código de entrevista | **ENT-03** |
 | Datos del participante | Leonardo Prieto Mantari. Propietario / socio votante. Edad: 23 años. Distrito: San Miguel, Lima. |
 | Hora de inicio y duración | Inicio: 20:40 \| Duración: 04:22 min |
-| Evidencia gráfica | <p align="center"><img src="./assets/ENT-03-captura.png" alt="Captura ENT-03" width="500"/></p> |
+| Evidencia gráfica | Videollamada registrada en https://youtu.be/JR1lHGZW5GY. Captura no publicada para preservar la privacidad del participante; la identidad y el contenido se verifican en la grabación. |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante evaluó aspectos relacionados con participación, confianza en los resultados, identificación del votante, uso de aplicaciones con cámara y accesibilidad para diferentes tipos de usuarios. |
 | Citas relevantes | "Solo confío parcialmente en la forma en que se cuentan los votos; necesitaría mayor transparencia y una confirmación individual" [00:41]. Propone recibir un comprobante con código verificable que guarde confidencialidad [02:17]. |
@@ -564,7 +564,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Código de entrevista | **ENT-04** |
 | Datos del participante | Fabricio Alonso Díaz Enríquez. Administrador de condominios. Edad: 22 años. Distrito: San Martín de Porres, Lima. |
 | Hora de inicio y duración | Inicio: 20:46 \| Duración: 05:23 min |
-| Evidencia gráfica | <p align="center"><img src="./assets/ENT-04-captura.png" alt="Captura ENT-04" width="500"/></p> |
+| Evidencia gráfica | Videollamada registrada en https://youtu.be/eGaMt-ZOPhg. Captura no publicada para preservar la privacidad del participante; la identidad y el contenido se verifican en la grabación. |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante describió cómo convoca asambleas mediante correo y carta física, y cómo calcula el cuórum sumando coeficientes en Excel. Relató que enfrenta conflictos por actas impugnadas y cartas poder de dudosa procedencia. Además, mencionó que el uso de Zoom y Formularios de Google durante la pandemia no ofreció validez legal ni certeza sobre la identidad de los votantes. |
 | Citas relevantes | Necesito "un reporte consolidado con marca de tiempo, desglose de coeficientes por unidad y firmas digitales que pueda anexar directamente al libro de actas para presentarlo ante notaría o SUNARP" [03:40]. |
@@ -578,7 +578,7 @@ El trabajo de entrevistas se plantea como investigación cualitativa semiestruct
 | Código de entrevista | **ENT-05** |
 | Datos del participante | Miguel Salas Guillen. Directiva / Administrador vecinal. Edad: 21 años. Distrito: La Victoria, Lima. |
 | Hora de inicio y duración | Inicio: 20:56 \| Duración: 03:40 min |
-| Evidencia gráfica | <p align="center"><img src="./assets/ENT-05-captura.png" alt="Captura ENT-05" width="500"/></p> |
+| Evidencia gráfica | Videollamada registrada en https://youtu.be/8EnQxSFYI-0. Captura no publicada para preservar la privacidad del participante; la identidad y el contenido se verifican en la grabación. |
 | Consentimiento | El participante autorizó la realización y grabación de la entrevista con fines académicos. |
 | Contexto narrado | El participante organiza asambleas presenciales donde verifica la asistencia con firmas en papel y cuenta los votos a mano alzada. Señaló que esto genera discusiones y paraliza proyectos. También relató un intento fallido de votar mediante encuestas de WhatsApp, el cual no funcionó debido a votos dobles y borrado de mensajes. |
 | Citas relevantes | Considera como evidencia suficiente "un documento resumen firmado digitalmente o con un código de verificación que pueda imprimir y pegar en la vitrina del ascensor" [02:05]. |
@@ -694,13 +694,13 @@ Tabla 2.3.2 – User Task Matrix As-Is. Fuente: ENT-01 a ENT-06 (2.2.2-2.2.3).
 |---|---|---|---|---|
 | Convocar la asamblea (avisos en vitrina, WhatsApp, correo/carta) | Cada asamblea (1-4/año) / Alta | Recibe convocatoria / Media | Mensajes dispersos, baja asistencia | ENT-01, ENT-04, ENT-05 |
 | Verificar asistencia con firmas en papel | Cada asamblea / Alta | Firma al ingresar / Media | Filas, suplantación, cartas poder dudosas | ENT-01, ENT-04, ENT-05 |
-| Calcular el cuórum en Excel / a mano (coeficientes) | Cada asamblea / Alta | No aplica / Baja | 45 min, errores, desconfianza | ENT-04 Pendiente TF, ENT-05 |
+| Calcular el cuórum en Excel / a mano (coeficientes) | Cada asamblea / Alta | No aplica / Baja | 45 min, errores, desconfianza | ENT-04, ENT-05 |
 | Contar votos a mano alzada | Cada votación / Alta | Vota a mano alzada / Alta | Disputas, sospecha de mal conteo, asambleas caóticas | ENT-01, ENT-04, ENT-05, ENT-06 |
 | Redactar el acta en Word / libro de actas | Cada asamblea / Alta | Consulta acta / Media | Re-trabajo, impugnaciones por falta de evidencia | ENT-01, ENT-04, ENT-05 |
 | Presentarla ante SUNARP / notaría | Por acuerdo inscribible / Alta | No participa / Baja | Trámite costoso, exige reporte con firmas y coeficientes | ENT-04 |
 | Validar morosidad para derecho a voto | Cada padrón / Alta | Consulta si está hábil / Media | Padrón desactualizado, discusiones | ENT-05 |
 
-\* Timing en consolidación TF con timestamp real del video.
+Los tiempos citados corresponden a los timestamps indicados en cada ficha y verificables en las grabaciones enlazadas.
 
 La matriz evidencia dos tensiones As-Is que deben trasladarse a requisitos. Primero, la directiva carga con trabajo manual (convocatoria, firmas, Excel, conteo) y aun así no logra evidencia defendible ante SUNARP, lo que deriva en RF de reporte consolidado con marca de tiempo y desglose por coeficientes (US-27/US-28 ← ENT-01/ENT-04/ENT-05). Segundo, el propietario desconfía del conteo a mano y teme suplantación, pero enfrenta barreras de horario y accesibilidad digital (adultos mayores, cámara baja), lo que deriva en RF de comprobante + aviso de privacidad y RNF de accesibilidad y flujo asistido (US-16/US-21/US-26 ← ENT-02/ENT-03/ENT-06).
 
@@ -5803,6 +5803,18 @@ Las siguientes capturas del Swagger local muestran los grupos de operaciones doc
 ### **7.3.3. Evaluaciones según heurísticas.**
 
 ## **7.4. Video About-the-Product.**
+
+El Video About-the-Product presenta VotoChain a los usuarios de las aplicaciones. Con tono formal y confiable, resume las características principales: verificación de identidad por OTP y biometría, gestión de comunidades y padrón, votación con firma individual y evidencia verificable en red blockchain, sin exigir al propietario gestionar claves o conceptos técnicos.
+
+![Video About-the-Product — portada VotoChain con propuesta de decisiones verificables](assets/about-product-xxx.png)
+
+**Figura 7.4-1.** Cuadro representativo del Video About-the-Product.
+
+| Elemento | Detalle |
+|---|---|
+| URL (Microsoft Stream, privado) | [Video About-the-Product — VotoChain](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318323_upc_edu_pe/IQCry4rUkzrVTYIeR6nOswjrASYDGEJAISL0yggopu-S_P8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=KFR1Ho) |
+| Duración | 02:30 min |
+| Formato | .mp4, 1-3 min, orientación promocional según Anexo C |
 
 # **Conclusiones**
 
